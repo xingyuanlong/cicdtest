@@ -1,6 +1,6 @@
 {
   "name": "ant-design-vue",
-  "version": "3.2.11",
+  "version": "0.0.1",
   "title": "Ant Design Vue",
   "description": "An enterprise-class UI design language and Vue-based implementation",
   "keywords": [
@@ -71,17 +71,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vueComponent/ant-design-vue.git"
+    "url": "git+http://gitlab.wowjoy.com/platform/front-npm/pf-antd-vue.git"
   },
   "license": "MIT",
-  "funding": {
-    "type": "opencollective",
-    "url": "https://opencollective.com/ant-design-vue"
-  },
-  "bugs": {
-    "url": "https://github.com/vueComponent/ant-design-vue/issues"
-  },
-  "homepage": "https://www.antdv.com/",
   "peerDependencies": {
     "vue": ">=3.2.0"
   },
