@@ -82,13 +82,13 @@
   }
 
   &-inner-content {
-    padding: @padding-sm @popover-padding-horizontal;
+    padding: @padding-lg @popover-padding-horizontal 0 @popover-padding-horizontal;
     color: @popover-color;
   }
 
   &-message {
     position: relative;
-    padding: 4px 0 12px;
+    padding: 4px 0 18px;
     color: @popover-color;
     font-size: @font-size-base;
     > .@{iconfont-css-prefix} {
@@ -106,8 +106,8 @@
   }
 
   &-buttons {
-    margin-bottom: 4px;
-    text-align: right;
+    padding-bottom: 18px;
+    text-align: center;
 
     button {
       margin-left: 8px;

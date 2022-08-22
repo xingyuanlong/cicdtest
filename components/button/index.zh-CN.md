@@ -15,6 +15,7 @@ cover: https://gw.alipayobjects.com/zos/alicdn/fNUKzY1sk/Button.svg
 在 Ant Design Vue 中我们提供了五种按钮。
 
 - 主按钮：用于主行动点，一个操作区域只能有一个主按钮。
+- 二级按钮：比主按钮稍微弱点。
 - 默认按钮：用于没有主次之分的一组行动点。
 - 虚线按钮：常用于添加操作。
 - 文本按钮：用于最次级的行动点。
@@ -36,7 +37,7 @@ cover: https://gw.alipayobjects.com/zos/alicdn/fNUKzY1sk/Button.svg
 | 属性 | 说明 | 类型 | 默认值 | 版本 |
 | --- | --- | --- | --- | --- |
 | block | 将按钮宽度调整为其父宽度的选项 | boolean | `false` |  |
-| danger | 设置危险按钮 | boolean | `false` | 2.2.0 |
+| danger | 设置危险按钮 | boolean | `false` |  |
 | disabled | 按钮失效状态 | boolean | `false` |  |
 | ghost | 幽灵属性，使按钮背景透明 | boolean | `false` |  |
 | href | 点击跳转的地址，指定此属性 button 的行为和 a 链接一致 | string | - |  |
@@ -46,7 +47,7 @@ cover: https://gw.alipayobjects.com/zos/alicdn/fNUKzY1sk/Button.svg
 | shape | 设置按钮形状 | `default` \| `circle` \| `round` | 'default' |  |
 | size | 设置按钮大小 | `large` \| `middle` \| `small` | `middle` |  |
 | target | 相当于 a 链接的 target 属性，href 存在时生效 | string | - |  |
-| type | 设置按钮类型 | `primary` \| `ghost` \| `dashed` \| `link` \| `text` \| `default` | `default` |  |
+| type | 设置按钮类型 | `primary` \| `secondary` \| `ghost` \| `dashed` \| `link` \| `text` \| `default` | `default` |  |
 
 ### 事件
 
