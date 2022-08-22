@@ -10,13 +10,13 @@
 // An override for the html selector for theme prefixes
 @html-selector: html;
 
-@base-primary: @blue-6;
+@base-primary: @A1_1;
 
 html {
   // ========= Primary Color =========
   --@{ant-prefix}-primary-color: @base-primary;
-  --@{ant-prefix}-primary-color-hover: color(~`colorPalette('@{base-primary}', 5) `);
-  --@{ant-prefix}-primary-color-active: color(~`colorPalette('@{base-primary}', 7) `);
+  --@{ant-prefix}-primary-color-hover: @A1_2;
+  --@{ant-prefix}-primary-color-active: @A1_3;
   --@{ant-prefix}-primary-color-outline: fade(@base-primary, @outline-fade);
 
   // Legacy
@@ -242,6 +242,9 @@ html {
 @disabled-active-bg: tint(@black, 90%);
 @disabled-color-dark: fade(#fff, 35%);
 
+@btn-primary-disable-color: @C1;
+@btn-primary-disable-bg: fade(@base-primary, 30%);
+
 // Shadow
 @shadow-color: rgba(0, 0, 0, 0.15);
 @shadow-color-inverse: @component-background;
@@ -270,9 +273,30 @@ html {
 @btn-primary-color: #fff;
 @btn-primary-bg: @primary-color;
 
-@btn-default-color: @text-color;
-@btn-default-bg: @component-background;
-@btn-default-border: @border-color-base;
+// 默认按钮
+@btn-default-color: @E2;
+@btn-default-bg: @C6;
+@btn-default-border: @C9;
+
+@btn-secondary-color: @A1_1;
+@btn-secondary-bg: @C1;
+@btn-secondary-border: @A1_1;
+@btn-secondary-hover-color: @A1_4;
+@btn-secondary-active-color: @A1_5;
+
+@btn-secondary-disabled-color: fade(@btn-secondary-color, 30%);
+@btn-secondary-disabled-bg: fade(@btn-secondary-bg, 30%);
+@btn-secondary-disabled-border: fade(@btn-secondary-border, 30%);
+
+@btn-default-hover-color: @E2;
+@btn-default-hover-bg: @C1;
+@btn-default-hover-border: @E4;
+@btn-default-active-color: @E2;
+@btn-default-active-bg: @C12;
+@btn-default-active-border: @E4;
+@btn-default-disabled-color: @E4;
+@btn-default-disabled-bg: @C11;
+@btn-default-disabled-border: @C9;
 
 @btn-danger-color: #fff;
 @btn-danger-bg: @error-color;

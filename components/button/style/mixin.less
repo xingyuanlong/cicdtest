@@ -86,7 +86,7 @@
     }
   }
 
-  .button-disabled();
+  .button-disabled(@btn-primary-disable-color; @btn-primary-disable-bg; transparent);
 }
 
 .button-variant-other(@color; @background; @border) {
@@ -123,6 +123,44 @@
     }
   }
   .button-disabled();
+}
+
+.button-variant-default(@color; @background; @border) {
+  .button-color(@color; @background; @border);
+
+  &:hover,
+  &:focus {
+    & when (@theme = dark) {
+      .button-color(@primary-5; @background; @primary-5);
+    }
+
+    & when (not (@theme = dark) and not (@theme = variable)) {
+      .button-color(
+        ~`colorPalette('@{btn-primary-bg}', 5) `; @background;
+          ~`colorPalette('@{btn-primary-bg}', 5) `
+      );
+    }
+
+    & when (@theme = variable) {
+      .button-color( @btn-default-hover-color; @btn-default-hover-bg; @btn-default-hover-border);
+    }
+  }
+
+  &:active {
+    & when (@theme = dark) {
+      .button-color(@primary-7; @background; @primary-7);
+    }
+    & when (not (@theme = dark) and not (@theme = variable)) {
+      .button-color(
+        ~`colorPalette('@{btn-primary-bg}', 7) `; @background;
+          ~`colorPalette('@{btn-primary-bg}', 7) `
+      );
+    }
+    & when (@theme = variable) {
+      .button-color(@btn-default-active-color; @btn-default-active-bg; @btn-default-active-border);
+    }
+  }
+  .button-disabled(@btn-default-disabled-color, @btn-default-disabled-bg, @btn-default-disabled-border);
 }
 
 .button-variant-ghost(@color; @border; @borderHover: yellow; @borderActive: yellow) {
@@ -294,17 +332,68 @@
 .btn-primary() {
   .button-variant-primary(@btn-primary-color; @btn-primary-bg; @primary-color-hover; @primary-color-active);
 }
+
 // default button style
 .btn-default() {
-  .button-variant-other(@btn-default-color; @btn-default-bg; @btn-default-border; );
+  .button-variant-default(@btn-default-color; @btn-default-bg; @btn-default-border; );
 
   &:hover,
   &:focus,
   &:active {
     text-decoration: none;
-    background: @btn-default-bg;
   }
 }
+
+.button-variant-secondary(@color; @background; @border) {
+  .button-color(@color; @background; @border);
+
+  &:hover,
+  &:focus {
+    & when (@theme = dark) {
+      .button-color(@primary-5; @background; @primary-5);
+    }
+    & when (not (@theme = dark) and not (@theme = variable)) {
+      .button-color(
+        ~`colorPalette('@{btn-primary-bg}', 5) `; @background;
+          ~`colorPalette('@{btn-primary-bg}', 5) `
+      );
+    }
+
+    & when (@theme = variable) {
+      .button-color(@btn-secondary-color; @btn-secondary-hover-color; @btn-secondary-border);
+    }
+  }
+
+  &:active {
+    & when (@theme = dark) {
+      .button-color(@primary-7; @background; @primary-7);
+    }
+
+    & when (not (@theme = dark) and not (@theme = variable)) {
+      .button-color(
+        ~`colorPalette('@{btn-primary-bg}', 7) `; @background;
+          ~`colorPalette('@{btn-primary-bg}', 7) `
+      );
+    }
+
+    & when (@theme = variable) {
+      .button-color(@btn-secondary-color; @btn-secondary-active-color; @btn-secondary-border);
+    }
+  }
+
+  .button-disabled(@btn-secondary-disabled-color, @btn-secondary-disabled-bg, @btn-secondary-disabled-border);
+}
+
+.btn-secondary () {
+  .button-variant-secondary(@btn-secondary-color, @btn-secondary-bg, @btn-secondary-border);
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+  }
+}
+
 // ghost button style
 .btn-ghost() {
   .button-variant-other(@btn-ghost-color, @btn-ghost-bg, @btn-ghost-border);

@@ -8,11 +8,11 @@ title:
 
 ## zh-CN
 
-在 2.2.0 之后，危险成为一种按钮属性而不是按钮类型。
+危险属性是一种按钮属性而不是按钮类型。
 
 ## en-US
 
-danger is a property of button after antd 2.2.0.
+danger is a property of button.
 
 </docs>
 

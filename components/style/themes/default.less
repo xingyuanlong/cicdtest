@@ -186,6 +186,9 @@
 @disabled-active-bg: tint(@black, 90%);
 @disabled-color-dark: fade(#fff, 35%);
 
+@btn-primary-disable-color: @C1;
+@btn-primary-disable-bg: fade(@primary-color, 30%);
+
 // Shadow
 @shadow-color: rgba(0, 0, 0, 0.15);
 @shadow-color-inverse: @component-background;
@@ -217,6 +220,26 @@
 @btn-default-color: @text-color;
 @btn-default-bg: @component-background;
 @btn-default-border: @border-color-base;
+
+@btn-secondary-color: @A1_1;
+@btn-secondary-bg: @C1;
+@btn-secondary-border: @A1_1;
+@btn-secondary-hover-color: @A1_4;
+@btn-secondary-active-color: @A1_5;
+
+@btn-secondary-disabled-color: fade(@btn-secondary-color, 30%);
+@btn-secondary-disabled-bg: fade(@btn-secondary-bg, 30%);
+@btn-secondary-disabled-border: fade(@btn-secondary-border, 30%);
+
+@btn-default-hover-color: @E2;
+@btn-default-hover-bg: @C1;
+@btn-default-hover-border: @E4;
+@btn-default-active-color: @E2;
+@btn-default-active-bg: @C12;
+@btn-default-active-border: @E4;
+@btn-default-disabled-color: @E4;
+@btn-default-disabled-bg: @C11;
+@btn-default-disabled-border: @C9;
 
 @btn-danger-color: #fff;
 @btn-danger-bg: @error-color;

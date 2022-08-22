@@ -17,6 +17,7 @@ title:
 
 <template>
   <a-button type="primary" block>Primary</a-button>
+  <a-button type="secondary" block>Secondary</a-button>
   <a-button block>Default</a-button>
   <a-button type="dashed" block>Dashed</a-button>
   <a-button danger block>Danger</a-button>
