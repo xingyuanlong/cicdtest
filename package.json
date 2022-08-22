@@ -1,7 +1,7 @@
 {
-  "name": "ant-design-vue",
+  "name": "pf-antd-vue",
   "version": "0.0.1",
-  "title": "Ant Design Vue",
+  "title": "pf-antd-vue",
   "description": "An enterprise-class UI design language and Vue-based implementation",
   "keywords": [
     "vue",

@@ -37,6 +37,7 @@ export default [
   });
 
   const report = await engine.lintText(TEMPLATE);
+  console.log(report, '--report--');
 
   fs.writeFileSync('site/src/router/demoRoutes.js', report[0].output);
 })();

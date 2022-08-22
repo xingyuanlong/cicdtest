@@ -3,7 +3,7 @@ import PropTypes from '../_util/vue-types';
 import type { ExtractPropTypes, PropType } from 'vue';
 import type { SizeType } from '../config-provider';
 
-export type ButtonType = 'link' | 'default' | 'primary' | 'ghost' | 'dashed' | 'text';
+export type ButtonType = 'link' | 'default' | 'primary' | 'ghost' | 'dashed' | 'text' | 'secondary';
 export type ButtonShape = 'default' | 'circle' | 'round';
 
 export type ButtonHTMLType = 'submit' | 'button' | 'reset';

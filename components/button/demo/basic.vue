@@ -12,12 +12,13 @@ title:
 
 ## en-US
 
-There are `primary` button, `default` button, `dashed` button, `text` button and `link` button in antd.
+There are `primary` button, `secondary`, `default` button, `dashed` button, `text` button and `link` button in antd.
 
 </docs>
 
 <template>
   <a-button type="primary">Primary Button</a-button>
+  <a-button type="secondary">Secondary Button</a-button>
   <a-button>Default Button</a-button>
   <a-button type="dashed">Dashed Button</a-button>
   <a-button type="text">Text Button</a-button>

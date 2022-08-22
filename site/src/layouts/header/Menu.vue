@@ -12,10 +12,6 @@
       :default-value="antdVersion"
     >
       <a-select-option :value="antdVersion">{{ antdVersion }}</a-select-option>
-      <a-select-option value="2.x" @click="changeVersion('2x')">
-        2.x (Not Recommended)
-      </a-select-option>
-      <a-select-option value="1.x" @click="changeVersion('1x')">1.x (For Vue 2)</a-select-option>
     </a-select>
     <a-button
       key="lang-button"
@@ -25,16 +21,13 @@
     >
       {{ $t('app.header.lang') }}
     </a-button>
-    <More />
     <Github />
   </template>
 </template>
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
 import Github from './Github.vue';
-import More from './More.vue';
 import Navigation from './Navigation.vue';
-import Ecosystem from './Ecosystem.vue';
 import { version } from 'ant-design-vue';
 import { isZhCN, isLocalStorageNameSupported, getLocalizedPathname } from '../../utils/util';
 import { useRoute } from 'vue-router';
@@ -43,8 +36,6 @@ export default defineComponent({
   components: {
     Navigation,
     Github,
-    More,
-    Ecosystem,
   },
   props: ['isMobile'],
   setup() {

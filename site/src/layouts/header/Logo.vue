@@ -2,7 +2,7 @@
   <h1>
     <a id="logo" :href="isZhCN ? '/index-cn' : '/index'">
       <img alt="logo" :src="logo" />
-      Ant Design Vue
+      pf-antd-vue
     </a>
   </h1>
 </template>

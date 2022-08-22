@@ -1,5 +1,6 @@
 /* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
 @import '../color/colors';
+@import './com_style.less';
 
 @theme: variable;
 
@@ -287,13 +288,13 @@ html {
 
 @btn-font-size-lg: @font-size-lg;
 @btn-font-size-sm: @font-size-base;
-@btn-padding-horizontal-base: @padding-md - 1px;
-@btn-padding-horizontal-lg: @btn-padding-horizontal-base;
-@btn-padding-horizontal-sm: @padding-xs - 1px;
+@btn-padding-horizontal-base: @button-padding-md;
+@btn-padding-horizontal-lg: @button-padding-lg;
+@btn-padding-horizontal-sm: @button-padding-sm;
 
 @btn-height-base: @height-base;
-@btn-height-lg: @height-lg;
-@btn-height-sm: @height-sm;
+@btn-height-lg: @button-height-lg;
+@btn-height-sm: @button-height-sm;
 
 @btn-line-height: @line-height-base;
 
