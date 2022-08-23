@@ -218,11 +218,11 @@ const Drawer = defineComponent({
       }
       const val: CSSProperties = {};
       if (placement === 'left' || placement === 'right') {
-        const defaultWidth = size === 'large' ? 736 : 378;
+        const defaultWidth = size === 'large' ? 800 : 500;
         val.width = typeof width === 'undefined' ? defaultWidth : width;
         val.width = typeof val.width === 'string' ? val.width : `${val.width}px`;
       } else {
-        const defaultHeight = size === 'large' ? 736 : 378;
+        const defaultHeight = size === 'large' ? 800 : 500;
         val.height = typeof height === 'undefined' ? defaultHeight : height;
         val.height = typeof val.height === 'string' ? val.height : `${val.height}px`;
       }
@@ -256,11 +256,12 @@ const Drawer = defineComponent({
           })}
           style={headerStyle}
         >
+          <div class={`${prefixCls}-header-dot`} />
           <div class={`${prefixCls}-header-title`}>
-            {renderCloseIcon(prefixCls)}
             {title && <div class={`${prefixCls}-title`}>{title}</div>}
           </div>
           {extra && <div class={`${prefixCls}-extra`}>{extra}</div>}
+          {renderCloseIcon(prefixCls)}
         </div>
       );
     };

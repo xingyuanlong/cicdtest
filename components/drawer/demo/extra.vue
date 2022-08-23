@@ -33,7 +33,7 @@ Extra actions should be placed at corner of drawer in Ant Design, you can using 
   >
     <template #extra>
       <a-button style="margin-right: 8px" @click="onClose">Cancel</a-button>
-      <a-button type="primary" @click="onClose">Submit</a-button>
+      <a-button style="margin-right: 8px" type="primary" @click="onClose">Submit</a-button>
     </template>
     <p>Some contents...</p>
     <p>Some contents...</p>

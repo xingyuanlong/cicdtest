@@ -8,19 +8,19 @@ title:
 
 ## zh-CN
 
-抽屉的默认宽度为 `378px`，另外还提供一个大号抽屉 `736px`，可以用 size 属性来设置。
+抽屉的默认宽度为 `500px`，另外还提供一个大号抽屉 `800px`，可以用 size 属性来设置。
 
 ## en-US
 
-The default width (or height) of Drawer is `378px`, and there is a presetted large size `736px`.
+The default width (or height) of Drawer is `500px`, and there is a presetted large size `800px`.
 
 </docs>
 
 <template>
   <a-button type="primary" style="margin-right: 8px" @click="showDrawer('default')">
-    Open Default Size (378px)
+    Open Default Size (500px)
   </a-button>
-  <a-button type="primary" @click="showDrawer('large')">Open Large Size (736px)</a-button>
+  <a-button type="primary" @click="showDrawer('large')">Open Large Size (800px)</a-button>
   <a-drawer title="Basic Drawer" :size="size" :visible="visible" @close="onClose">
     <template #extra>
       <a-button style="margin-right: 8px" @click="onClose">Cancel</a-button>

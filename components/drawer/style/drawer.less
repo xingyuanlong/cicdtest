@@ -129,7 +129,16 @@
     pointer-events: auto;
   }
 
+  &-dot {
+    position: relative;
+    width: 2px;
+    height: 16px;
+    top: 3px;
+    background-color: @draw-title-before-color;
+  }
+
   &-title {
+    position: relative;
     flex: 1;
     margin: 0;
     color: @heading-color;
@@ -149,7 +158,6 @@
 
   &-close {
     display: inline-block;
-    margin-right: 12px;
     color: @modal-close-color;
     font-weight: 700;
     font-size: @font-size-lg;
