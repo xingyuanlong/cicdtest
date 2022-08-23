@@ -34,6 +34,7 @@ export default defineComponent({
       Modal.confirm({
         title: 'Do you Want to delete these items?',
         icon: createVNode(ExclamationCircleOutlined),
+        closable: true,
         content: createVNode('div', { style: 'color:red;' }, 'Some descriptions'),
         onOk() {
           console.log('OK');
@@ -48,6 +49,7 @@ export default defineComponent({
       Modal.confirm({
         title: 'Are you sure delete this task?',
         icon: createVNode(ExclamationCircleOutlined),
+        closable: true,
         content: 'Some descriptions',
         okText: 'Yes',
         okType: 'danger',
@@ -64,6 +66,7 @@ export default defineComponent({
       Modal.confirm({
         title: 'Are you sure delete this task?',
         icon: createVNode(ExclamationCircleOutlined),
+        closable: true,
         content: 'Some descriptions',
         okText: 'Yes',
         okType: 'danger',
@@ -84,6 +87,7 @@ export default defineComponent({
       Modal.confirm({
         title: 'Do you want to delete these items?',
         icon: createVNode(ExclamationCircleOutlined),
+        closable: true,
         content: 'When clicked the OK button, this dialog will be closed after 1 second',
         async onOk() {
           try {
