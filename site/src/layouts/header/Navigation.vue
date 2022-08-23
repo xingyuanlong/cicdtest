@@ -33,7 +33,7 @@
       </a-menu-item>
       <a-menu-item key="github">
         <a
-          href="http://gitlab.wowjoy.com/platform/front-npm/pf-antd-vue"
+          href="http://gitlab.wowjoy.com/platform/front-npm/pf-ui-vue"
           target="_blank"
           rel="noopener noreferrer"
         >

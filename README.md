@@ -5,7 +5,7 @@
 </p>
 
 <h1 align="center">
-  <a href="https://www.antdv.com/" target="_blank">pf-antd-vue</a>
+  <a href="https://www.antdv.com/" target="_blank">pf-ui-vue</a>
 </h1>
 
 <div align="center">
@@ -13,6 +13,7 @@
 An enterprise-class UI components based on Ant Design and Vue.
 
 ![test](https://github.com/vueComponent/ant-design-vue/workflows/test/badge.svg) [![codecov](https://img.shields.io/codecov/c/github/vueComponent/ant-design-vue/master.svg?style=flat-square)](https://codecov.io/gh/vueComponent/ant-design-vue) [![npm package](https://img.shields.io/npm/v/ant-design-vue.svg?style=flat-square)](https://www.npmjs.org/package/ant-design-vue)
+
 </div>
 
 [![](https://cdn-images-1.medium.com/max/2000/1*NIlj0-TdLMbo_hzSBP8tmg.png)](https://www.antdv.com/)
@@ -51,6 +52,7 @@ $ yarn add ant-design-vue
 If you are in a bad network environment，you can try other registries and tools like [cnpm](https://github.com/cnpm/cnpm).
 
 ## Links
+
 - [Vue](https://vuejs.org/)
 - [Ant Design Of React](http://ant.design/)
 
@@ -63,6 +65,3 @@ If you are in a bad network environment，you can try other registries and tools
 | [vue-cli-plugin-ant-design](https://github.com/vueComponent/vue-cli-plugin-ant-design) | Vue-cli 3 plugin to add ant-design-vue |
 | [vue-dash-event](https://github.com/vueComponent/vue-dash-event) | The library function, implemented in the DOM template, can use the custom event of the ant-design-vue component (camelCase) |
 | [@formily/antdv](https://github.com/formilyjs/antdv) | The Library with Formily and ant-design-vue |
-
-
-

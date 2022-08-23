@@ -1,7 +1,7 @@
 {
-  "name": "pf-antd-vue",
+  "name": "pf-ui-vue",
   "version": "0.0.1",
-  "title": "pf-antd-vue",
+  "title": "pf-ui-vue",
   "description": "An enterprise-class UI design language and Vue-based implementation",
   "keywords": [
     "vue",
@@ -71,7 +71,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+http://gitlab.wowjoy.com/platform/front-npm/pf-antd-vue.git"
+    "url": "git+http://gitlab.wowjoy.com/platform/front-npm/pf-ui-vue.git"
   },
   "license": "MIT",
   "peerDependencies": {
