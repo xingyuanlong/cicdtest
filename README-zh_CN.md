@@ -38,11 +38,11 @@ An enterprise-class UI components based on Ant Design and Vue 3.
 ### 使用 npm 或 yarn 安装
 
 ```bash
-$ npm install ant-design-vue --save
+$ npm install pf-ui-vue--save
 ```
 
 ```bash
-$ yarn add ant-design-vue
+$ yarn add pf-ui-vue
 ```
 
 如果你的网络环境不佳，推荐使用 [cnpm](https://github.com/cnpm/cnpm)。
@@ -52,13 +52,3 @@ $ yarn add ant-design-vue
 - [首页](https://www.antdv.com/)
 - [Vue 官方文档](https://cn.vuejs.org/)
 - [Ant Design Of React](http://ant.design/)
-
-## 生态
-
-| Project | Description |
-| --- | --- |
-| [vue-ref](https://github.com/vueComponent/vue-ref) | 您可以使用回调来获取组件的引用，类似 react |
-| [ant-design-vue-helper](https://marketplace.visualstudio.com/items?itemName=ant-design-vue.vscode-ant-design-vue-helper) | ant-design-vue 的 vscode 扩展 |
-| [vue-cli-plugin-ant-design](https://github.com/vueComponent/vue-cli-plugin-ant-design) | 使用 vue-cli3 快速使用 ant-design-vue 组件库 |
-| [vue-dash-event](https://github.com/vueComponent/vue-dash-event) | 在 DOM 模板中，您可以使用 ant-design-vue 组件的自定义事件（camelCase） |
-| [@formily/antdv](https://github.com/formilyjs/antdv) | 这是一个结合了 Formily 和 ant-design-vue 的组件库 |

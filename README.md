@@ -42,11 +42,11 @@ English | [简体中文](./README-zh_CN.md)
 **We recommend using npm or yarn to install**，it not only makes development easier，but also allow you to take advantage of the rich ecosystem of Javascript packages and tooling.
 
 ```bash
-$ npm install ant-design-vue --save
+$ npm install pf-ui-vue --save
 ```
 
 ```bash
-$ yarn add ant-design-vue
+$ yarn add pf-ui-vue
 ```
 
 If you are in a bad network environment，you can try other registries and tools like [cnpm](https://github.com/cnpm/cnpm).
@@ -55,13 +55,3 @@ If you are in a bad network environment，you can try other registries and tools
 
 - [Vue](https://vuejs.org/)
 - [Ant Design Of React](http://ant.design/)
-
-## Ecosystem
-
-| Project | Description |
-| --- | --- |
-| [vue-ref](https://github.com/vueComponent/vue-ref) | You can use the callback to get a reference like react |
-| [ant-design-vue-helper](https://marketplace.visualstudio.com/items?itemName=ant-design-vue.vscode-ant-design-vue-helper) | A vscode extension for ant-design-vue |
-| [vue-cli-plugin-ant-design](https://github.com/vueComponent/vue-cli-plugin-ant-design) | Vue-cli 3 plugin to add ant-design-vue |
-| [vue-dash-event](https://github.com/vueComponent/vue-dash-event) | The library function, implemented in the DOM template, can use the custom event of the ant-design-vue component (camelCase) |
-| [@formily/antdv](https://github.com/formilyjs/antdv) | The Library with Formily and ant-design-vue |
