@@ -23,7 +23,6 @@ Open a new drawer on top of an existing drawer to handle multi branch tasks.
     title="Multi-level drawer"
     width="520"
     :closable="false"
-    :footer-style="{ textAlign: 'right' }"
     @close="onClose"
   >
     <a-button type="primary" @click="showChildrenDrawer">Two-level drawer</a-button>
