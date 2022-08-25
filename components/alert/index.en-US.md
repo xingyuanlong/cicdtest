@@ -19,13 +19,13 @@ Alert component for feedback.
 | afterClose | Called when close animation is finished | () => void | - |  |
 | banner | Whether to show as banner | boolean | false |  |
 | closable | Whether Alert can be closed | boolean |  |  |
-| closeIcon | Custom close icon | slot | `<CloseOutlined />` | 3.0 |
+| closeIcon | Custom close icon | slot | `<CloseOutlined />` |  |
 | closeText | Close text to show | string\|slot | - |  |
 | description | Additional content of Alert | string\|slot | - |  |
 | icon | Custom icon, effective when `showIcon` is `true` | vnode \| slot | - |  |
 | message | Content of Alert | string\|slot | - |  |
 | showIcon | Whether to show icon | boolean | false,in `banner` mode default is true |  |
-| type | Type of Alert styles, options: `success`, `info`, `warning`, `error` | string | `info`,in `banner` mode default is `warning` |  |
+| type | Type of Alert styles, options: `success`, `info`, `warning`, `error`, `question` | string | `info`,in `banner` mode default is `warning` |  |
 
 ### events
 

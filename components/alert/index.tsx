@@ -9,6 +9,8 @@ import CheckCircleFilled from '@ant-design/icons-vue/CheckCircleFilled';
 import ExclamationCircleFilled from '@ant-design/icons-vue/ExclamationCircleFilled';
 import InfoCircleFilled from '@ant-design/icons-vue/InfoCircleFilled';
 import CloseCircleFilled from '@ant-design/icons-vue/CloseCircleFilled';
+import QuestionCircleOutlined from '@ant-design/icons-vue/QuestionCircleOutlined';
+import QuestionCircleFilled from '@ant-design/icons-vue/QuestionCircleFilled';
 import classNames from '../_util/classNames';
 import PropTypes from '../_util/vue-types';
 import { getTransitionProps, Transition } from '../_util/transition';
@@ -23,6 +25,7 @@ const iconMapFilled = {
   info: InfoCircleFilled,
   error: CloseCircleFilled,
   warning: ExclamationCircleFilled,
+  question: QuestionCircleFilled,
 };
 
 const iconMapOutlined = {
@@ -30,9 +33,10 @@ const iconMapOutlined = {
   info: InfoCircleOutlined,
   error: CloseCircleOutlined,
   warning: ExclamationCircleOutlined,
+  question: QuestionCircleOutlined,
 };
 
-const AlertTypes = tuple('success', 'info', 'warning', 'error');
+const AlertTypes = tuple('success', 'info', 'warning', 'error', 'question');
 
 export type AlertType = typeof AlertTypes[number];
 

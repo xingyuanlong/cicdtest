@@ -21,6 +21,7 @@ Decent icon make information more clear and more friendly.
   <a-alert message="Informational Notes" type="info" show-icon />
   <a-alert message="Warning" type="warning" show-icon />
   <a-alert message="Error" type="error" show-icon />
+  <a-alert message="Question" type="question" show-icon />
   <a-alert
     message="Success Tips"
     description="Detailed description and advices about successful copywriting."
@@ -43,6 +44,12 @@ Decent icon make information more clear and more friendly.
     message="Error"
     description="This is an error message about copywriting."
     type="error"
+    show-icon
+  />
+  <a-alert
+    message="Question"
+    description="This is an question message about copywriting."
+    type="question"
     show-icon
   />
 </template>

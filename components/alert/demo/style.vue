@@ -2,17 +2,17 @@
 ---
 order: 1
 title:
-  zh-CN: 四种样式
+  zh-CN: 五种样式
   en-US: More types
 ---
 
 ## zh-CN
 
-共有四种样式 `success`、`info`、`warning`、`error`。
+共有五种样式 `success`、`info`、`warning`、`error`、`question`。
 
 ## en-US
 
-There are 4 types of Alert: `success`, `info`, `warning`, `error`.
+There are 5 types of Alert: `success`, `info`, `warning`, `error`, `question`.
 
 </docs>
 
@@ -21,4 +21,5 @@ There are 4 types of Alert: `success`, `info`, `warning`, `error`.
   <a-alert message="Info Text" type="info" />
   <a-alert message="Warning Text" type="warning" />
   <a-alert message="Error Text" type="error" />
+  <a-alert message="Question Text" type="question" />
 </template>

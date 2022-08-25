@@ -26,7 +26,7 @@ cover: https://gw.alipayobjects.com/zos/alicdn/8emPa3fjl/Alert.svg
 | icon | 自定义图标，`showIcon` 为 `true` 时有效 | vnode\|slot | - |  |
 | message | 警告提示内容 | string\|slot | 无 |  |
 | showIcon | 是否显示辅助图标 | boolean | false,`banner` 模式下默认值为 true |  |
-| type | 指定警告提示的样式，有四种选择 `success`、`info`、`warning`、`error` | string | `info`,`banner` 模式下默认值为 `warning` |  |
+| type | 指定警告提示的样式，有五种选择 `success`、`info`、`warning`、`error`、`question` | string | `info`,`banner` 模式下默认值为 `warning` |  |
 
 ### 事件
 
