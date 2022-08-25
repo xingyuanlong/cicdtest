@@ -2,7 +2,6 @@
 @import '../../style/mixins/index';
 
 @card-prefix-cls: ~'@{ant-prefix}-card';
-@card-hoverable-hover-border: transparent;
 @card-action-icon-size: 16px;
 
 @gradient-min: fade(@card-skeleton-bg, 20%);
@@ -25,12 +24,17 @@
 
     &:hover {
       border-color: @card-hoverable-hover-border;
-      box-shadow: @card-shadow;
+      // box-shadow: @card-shadow;
+    }
+
+    &:focus {
+      border-color: @card-hoverable-hover-border;
+      box-shadow: 0 0 0 1px @card-hoverable-hover-border;
     }
   }
 
   &-bordered {
-    border: @border-width-base @border-style-base @border-color-split;
+    border: @border-width-base @border-style-base @card-border-color;
   }
 
   &-head {
@@ -41,7 +45,7 @@
     font-weight: 500;
     font-size: @card-head-font-size;
     background: @card-head-background;
-    border-bottom: @border-width-base @border-style-base @border-color-split;
+    border-bottom: @border-width-base @border-style-base @card-border-color;
     border-radius: @card-radius @card-radius 0 0;
     .clearfix();
 
@@ -74,7 +78,7 @@
       font-size: @font-size-base;
 
       &-bar {
-        border-bottom: @border-width-base @border-style-base @border-color-split;
+        border-bottom: @border-width-base @border-style-base @card-border-color;
       }
     }
   }
@@ -110,9 +114,9 @@
     padding: @card-padding-base;
     border: 0;
     border-radius: 0;
-    box-shadow: 1px 0 0 0 @border-color-split, 0 1px 0 0 @border-color-split,
-      1px 1px 0 0 @border-color-split, 1px 0 0 0 @border-color-split inset,
-      0 1px 0 0 @border-color-split inset;
+    box-shadow: 1px 0 0 0 @card-border-color, 0 1px 0 0 @card-border-color,
+      1px 1px 0 0 @card-border-color, 1px 0 0 0 @card-border-color inset,
+      0 1px 0 0 @card-border-color inset;
     transition: all 0.3s;
 
     .@{card-prefix-cls}-rtl & {
@@ -159,7 +163,7 @@
     padding: 0;
     list-style: none;
     background: @card-actions-background;
-    border-top: @border-width-base @border-style-base @border-color-split;
+    border-top: @border-width-base @border-style-base @card-border-color;
     .clearfix();
 
     & > li {
@@ -205,11 +209,11 @@
       }
 
       &:not(:last-child) {
-        border-right: @border-width-base @border-style-base @border-color-split;
+        border-right: @border-width-base @border-style-base @card-border-color;
 
         .@{card-prefix-cls}-rtl & {
           border-right: none;
-          border-left: @border-width-base @border-style-base @border-color-split;
+          border-left: @border-width-base @border-style-base @card-border-color;
         }
       }
     }

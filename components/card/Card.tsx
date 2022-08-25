@@ -190,7 +190,7 @@ const Card = defineComponent({
         actions && actions.length ? <ul class={`${pre}-actions`}>{getAction(actions)}</ul> : null;
 
       return (
-        <div class={classString} ref="cardContainerRef">
+        <div class={classString} ref="cardContainerRef" tabindex={0}>
           {head}
           {coverDom}
           {children && children.length ? body : null}
