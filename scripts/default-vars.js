@@ -10,8 +10,9 @@ const lessToJs = require('less-vars-to-js');
 const stylePath = path.join(__dirname, '..', 'components', 'style');
 const colorLess = fs.readFileSync(path.join(stylePath, 'color', 'colors.less'), 'utf8');
 const defaultLess = fs.readFileSync(path.join(stylePath, 'themes', 'default.less'), 'utf8');
+const comColorLess = fs.readFileSync(path.join(stylePath, 'color', 'com_color.less'), 'utf8');
 
-const defaultPaletteLess = lessToJs(`${colorLess}${defaultLess}`, {
+const defaultPaletteLess = lessToJs(`${colorLess}${defaultLess}${comColorLess}`, {
   stripPrefix: true,
   resolveVariables: false,
 });
