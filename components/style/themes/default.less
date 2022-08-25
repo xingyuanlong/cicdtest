@@ -173,7 +173,7 @@
 
 // Outline
 @outline-blur-size: 0;
-@outline-width: 2px;
+@outline-width: 1px;
 @outline-color: @primary-color; // No use anymore
 @outline-fade: 20%;
 
@@ -477,11 +477,12 @@
 @input-number-handler-bg: @component-background;
 @input-number-handler-border-color: @border-color-base;
 @input-addon-bg: @background-color-light;
-@input-hover-border-color: @primary-5;
+@input-hover-border-color: @D1;
 @input-disabled-bg: @disabled-bg;
 @input-outline-offset: 0 0;
 @input-icon-hover-color: fade(@black, 85%);
 @input-disabled-color: @disabled-color;
+@input-outline-color: fade(@input-hover-border-color, 50%);
 
 // Mentions
 // ---
@@ -511,6 +512,7 @@
 @select-multiple-disabled-background: @input-disabled-bg;
 @select-multiple-item-disabled-color: #bfbfbf;
 @select-multiple-item-disabled-border-color: @select-border-color;
+@select-selection-color: @E2;
 
 // Cascader
 // ---
