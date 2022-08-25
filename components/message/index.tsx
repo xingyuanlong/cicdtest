@@ -124,12 +124,15 @@ export interface MessageArgsProps {
   class?: string;
   appContext?: any;
   onClick?: (e: MouseEvent) => void;
+  closeable?: boolean;
 }
 
 function notice(args: MessageArgsProps): MessageType {
   const duration = args.duration !== undefined ? args.duration : defaultDuration;
 
   const target = args.key || getKeyThenIncreaseKey();
+  // todo
+  // const closeable = !!args.closeable
   const closePromise = new Promise(resolve => {
     const callback = () => {
       if (typeof args.onClose === 'function') {
@@ -141,6 +144,7 @@ function notice(args: MessageArgsProps): MessageType {
       instance.notice({
         key: target,
         duration,
+        // closeable,
         style: args.style || {},
         class: args.class,
         content: ({ prefixCls }) => {
@@ -154,6 +158,7 @@ function notice(args: MessageArgsProps): MessageType {
             <div class={messageClass}>
               {typeof args.icon === 'function' ? args.icon() : args.icon || iconNode}
               <span>{typeof args.content === 'function' ? args.content() : args.content}</span>
+              {/* {closeable ? <CloseOutlined  /> : null} */}
             </div>
           );
         },

@@ -20,26 +20,48 @@
 
   &-notice-content {
     display: inline-block;
-    padding: @message-notice-content-padding;
-    background: @message-notice-content-bg;
-    border-radius: @border-radius-base;
     box-shadow: @shadow-2;
     pointer-events: all;
   }
 
-  &-success .@{iconfont-css-prefix} {
-    color: @success-color;
+  &-success,
+  &-error,
+  &-warning,
+  &-info,
+  &-loading {
+    padding: @message-notice-content-padding;
+    border-radius: @message-border-radius;
+    color: @message-content-bg;
   }
 
-  &-error .@{iconfont-css-prefix} {
-    color: @error-color;
+  // success按钮样式调整
+  &-success {
+    background-color: @message-success-bg;
   }
 
-  &-warning .@{iconfont-css-prefix} {
-    color: @warning-color;
+  &-error {
+    background-color: @message-error-bg;
   }
 
+  &-warning {
+    background-color: @message-warning-bg;
+  }
+
+  &-info {
+    background-color: @message-info-bg;
+  }
+
+  &-loading {
+    color: @text-color;
+  }
+
+  &-success .@{iconfont-css-prefix},
   &-info .@{iconfont-css-prefix},
+  &-error .@{iconfont-css-prefix},
+  &-warning .@{iconfont-css-prefix} {
+    color: @message-content-bg;
+  }
+
   &-loading .@{iconfont-css-prefix} {
     color: @info-color;
   }

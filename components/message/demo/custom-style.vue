@@ -28,6 +28,7 @@ export default defineComponent({
       message.success({
         content: () => 'This is a prompt message with custom className and style',
         class: 'custom-class',
+        closeable: true,
         style: {
           marginTop: '20vh',
         },
