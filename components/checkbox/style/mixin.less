@@ -28,8 +28,8 @@
       border: 1px solid @checkbox-color;
       border-radius: @border-radius-base;
       visibility: hidden;
-      animation: antCheckboxEffect 0.36s ease-in-out;
-      animation-fill-mode: backwards;
+     // animation: antCheckboxEffect 0.36s ease-in-out;
+     // animation-fill-mode: backwards;
       content: '';
     }
 
@@ -47,25 +47,25 @@
       height: @checkbox-size;
       direction: ltr;
       background-color: @checkbox-check-bg;
-      border: @checkbox-border-width @border-style-base @border-color-base;
+      border: @checkbox-border-width @border-style-base @checkbox-border-color;
       border-radius: @checkbox-border-radius;
       // Fix IE checked style
       // https://github.com/ant-design/ant-design/issues/12597
       border-collapse: separate;
       transition: all 0.3s;
-
+      
       &::after {
         @check-width: (@checkbox-size / 14) * 5px;
-        @check-height: (@checkbox-size / 14) * 8px;
+        @check-height: (@checkbox-size / 14) * 9px;
 
         position: absolute;
-        top: 50%;
+        top: 36%;
         // https://github.com/ant-design/ant-design/pull/19452
         // https://github.com/ant-design/ant-design/pull/31726
-        left: 21.5%;
+        left: 14.5%;
         display: table;
-        width: @check-width;
-        height: @check-height;
+        width: 5.5px;
+        height: 10px;
         border: 2px solid @checkbox-check-color;
         border-top: 0;
         border-left: 0;
@@ -126,7 +126,7 @@
     }
 
     .@{checkbox-inner-prefix-cls} {
-      background-color: @input-disabled-bg;
+      background-color: @disabled-bg-color;
       border-color: @border-color-base !important;
 
       &::after {
@@ -150,6 +150,8 @@
 
   .@{checkbox-prefix-cls}-wrapper {
     .reset-component();
+
+    // color: #333;
     display: inline-flex;
     align-items: baseline;
     line-height: unset;
@@ -172,8 +174,8 @@
   }
 
   .@{checkbox-prefix-cls} + span {
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 10px;
+    padding-left: 10px;
   }
 
   .@{checkbox-prefix-cls}-group {
@@ -197,7 +199,7 @@
   .@{checkbox-prefix-cls}-indeterminate {
     .@{checkbox-inner-prefix-cls} {
       background-color: @checkbox-check-bg;
-      border-color: @border-color-base;
+      border-color: @checkbox-color;
     }
     .@{checkbox-inner-prefix-cls}::after {
       @indeterminate-width: @checkbox-size - 8px;
@@ -209,14 +211,16 @@
       height: @indeterminate-height;
       background-color: @checkbox-color;
       border: 0;
-      transform: translate(-50%, -50%) scale(1);
+      transform: translate(-50%, -50%);
+      width: 6px;
+      height: 2px;
       opacity: 1;
       content: ' ';
     }
 
     &.@{checkbox-prefix-cls}-disabled .@{checkbox-inner-prefix-cls}::after {
       background-color: @disabled-color;
-      border-color: @disabled-color;
+      border-color: @disabled-border-color;
     }
   }
 }

@@ -140,7 +140,7 @@ html {
   'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
   'Noto Color Emoji';
 @code-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
-@text-color: fade(@black, 85%);
+@text-color:  @E1;
 @text-color-secondary: fade(@black, 45%);
 @text-color-inverse: @white;
 @icon-color: inherit;
@@ -161,7 +161,7 @@ html {
 @heading-5-size: ceil(@font-size-base * 1.14);
 // https://github.com/ant-design/ant-design/issues/20210
 @line-height-base: 1.5715;
-@border-radius-base: 2px;
+@border-radius-base: 3px;
 @border-radius-sm: @border-radius-base;
 
 // vertical paddings
@@ -221,7 +221,7 @@ html {
 @ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1);
 
 // Border color
-@border-color-base: hsv(0, 0, 85%); // base border outline a component
+@border-color-base: @C14; // base border outline a component
 @border-color-split: hsv(0, 0, 94%); // split border inside a component
 @border-color-inverse: @white;
 @border-width-base: 1px; // width of the border for a component
@@ -237,7 +237,9 @@ html {
 @background-color-base: hsv(0, 0, 96%); // Default grey background color
 
 // Disabled states
-@disabled-color: fade(#000, 25%);
+@disabled-color: @E3;
+@disabled-border-color: @C14;
+@disabled-bg-color: @C11;
 @disabled-bg: @background-color-base;
 @disabled-active-bg: tint(@black, 90%);
 @disabled-color-dark: fade(#fff, 35%);
@@ -344,9 +346,10 @@ html {
 @checkbox-color: @primary-color;
 @checkbox-check-color: #fff;
 @checkbox-check-bg: @checkbox-check-color;
-@checkbox-border-width: @border-width-base;
+@checkbox-border-width: 2px;
+@checkbox-border-color: @C14;
 @checkbox-border-radius: @border-radius-base;
-@checkbox-group-item-margin-right: 8px;
+@checkbox-group-item-margin-right: 30px;
 
 // Descriptions
 @descriptions-bg: #fafafa;
