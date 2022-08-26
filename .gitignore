@@ -80,3 +80,4 @@ site/src/router/demoRoutes.js
 
 components/version/version.tsx
 ~component-api.json
+.history/

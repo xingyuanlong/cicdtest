@@ -26,6 +26,8 @@
 // 一般状态
 .@{radio-prefix-cls}-wrapper {
   .reset-component();
+
+  color: @radio-text-color;
   position: relative;
   display: inline-flex;
   align-items: baseline;
@@ -47,6 +49,7 @@
 .@{radio-prefix-cls} {
   .reset-component();
 
+  color: @radio-text-color;
   position: relative;
   top: @radio-top;
   display: inline-block;
@@ -60,7 +63,7 @@
   }
 
   &-input:focus + .@{radio-inner-prefix-cls} {
-    box-shadow: @radio-focus-shadow;
+   // box-shadow: @radio-focus-shadow;
   }
 
   &-checked::after {
@@ -72,8 +75,8 @@
     border: 1px solid @radio-dot-color;
     border-radius: 50%;
     visibility: hidden;
-    animation: antRadioEffect 0.36s ease-in-out;
-    animation-fill-mode: both;
+   // animation: antRadioEffect 0.36s ease-in-out;
+   // animation-fill-mode: both;
     content: '';
   }
 
@@ -108,8 +111,8 @@
     display: block;
     width: @radio-size;
     height: @radio-size;
-    background-color: @radio-button-bg;
-    border-color: @border-color-base;
+    background-color: @radio-blank-color;
+    border-color: @radio-border-color;
     border-style: solid;
     border-width: @radio-border-width;
     border-radius: 50%;
@@ -132,11 +135,13 @@
 .@{radio-prefix-cls}-checked {
   .@{radio-inner-prefix-cls} {
     border-color: @radio-dot-color;
+    background-color: @radio-dot-color;
 
     &::after {
       transform: scale((unit(@radio-dot-size) / unit(@radio-size)));
       opacity: 1;
       transition: all @radio-duration @ease-in-out-circ;
+      background-color: @radio-blank-color;
     }
   }
 }
@@ -145,12 +150,12 @@
   cursor: not-allowed;
 
   .@{radio-inner-prefix-cls} {
-    background-color: @input-disabled-bg;
-    border-color: @border-color-base !important;
+    background-color: @radio-fill-color;
+    border-color: @radio-border-color !important;
     cursor: not-allowed;
 
     &::after {
-      background-color: @radio-dot-disabled-color;
+      background-color: @radio-border-color;
     }
   }
 
@@ -159,14 +164,14 @@
   }
 
   & + span {
-    color: @disabled-color;
+    color: @radio-text-disabled-color;
     cursor: not-allowed;
   }
 }
 
 span.@{radio-prefix-cls} + * {
-  padding-right: 8px;
-  padding-left: 8px;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 
 .@{radio-prefix-cls}-button-wrapper {
@@ -185,7 +190,7 @@ span.@{radio-prefix-cls} + * {
   border-top-width: @border-width-base + 0.02px;
   border-left-width: 0;
   cursor: pointer;
-  transition: color 0.3s, background 0.3s, border-color 0.3s, box-shadow 0.3s;
+  // transition: color 0.3s, background 0.3s, border-color 0.3s, box-shadow 0.3s;
 
   a {
     color: @radio-button-color;
@@ -247,7 +252,7 @@ span.@{radio-prefix-cls} + * {
   }
 
   &:focus-within {
-    box-shadow: @radio-button-focus-shadow;
+   // box-shadow: @radio-button-focus-shadow;
   }
 
   .@{radio-prefix-cls}-inner,
@@ -292,7 +297,7 @@ span.@{radio-prefix-cls} + * {
     }
 
     &:focus-within {
-      box-shadow: @radio-button-focus-shadow;
+     // box-shadow: @radio-button-focus-shadow;
     }
   }
 
@@ -314,19 +319,19 @@ span.@{radio-prefix-cls} + * {
     }
 
     &:focus-within {
-      box-shadow: @radio-button-focus-shadow;
+     // box-shadow: @radio-button-focus-shadow;
     }
   }
 
   &-disabled {
-    color: @disabled-color;
+    color: @radio-text-disabled-color;
     background-color: @input-disabled-bg;
     border-color: @border-color-base;
     cursor: not-allowed;
 
     &:first-child,
     &:hover {
-      color: @disabled-color;
+      color: @radio-text-disabled-color;
       background-color: @input-disabled-bg;
       border-color: @border-color-base;
     }
