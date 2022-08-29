@@ -26,7 +26,7 @@ Use `fileList` for uploaded files when page init.
 <script lang="ts">
 import { UploadOutlined } from '@ant-design/icons-vue';
 import { defineComponent, ref } from 'vue';
-import type { UploadChangeParam, UploadProps } from 'ant-design-vue';
+import type { UploadChangeParam, UploadProps } from 'pf-ui-vue';
 
 export default defineComponent({
   components: {

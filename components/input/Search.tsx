@@ -19,7 +19,7 @@ export default defineComponent({
   props: {
     ...inputProps(),
     inputPrefixCls: String,
-    // 不能设置默认值 https://github.com/vueComponent/ant-design-vue/issues/1916
+    // 不能设置默认值 https://github.com/vueComponent/pf-ui-vue/issues/1916
     enterButton: PropTypes.any,
     onSearch: {
       type: Function as PropType<

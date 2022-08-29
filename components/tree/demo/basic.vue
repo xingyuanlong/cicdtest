@@ -30,7 +30,7 @@ The most basic usage, tell you how to use checkable, selectable, disabled, defau
   </a-tree>
 </template>
 <script lang="ts">
-import type { TreeProps } from 'ant-design-vue';
+import type { TreeProps } from 'pf-ui-vue';
 import { defineComponent, ref, watch } from 'vue';
 
 const treeData: TreeProps['treeData'] = [

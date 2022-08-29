@@ -28,7 +28,7 @@ The label of the selected item will be packed as an object for passing to the on
   ></a-select>
 </template>
 <script lang="ts">
-import type { SelectProps } from 'ant-design-vue';
+import type { SelectProps } from 'pf-ui-vue';
 import { defineComponent, ref } from 'vue';
 
 export default defineComponent({

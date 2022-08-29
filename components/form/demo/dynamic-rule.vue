@@ -44,7 +44,7 @@ Perform different check rules according to different situations.
 </template>
 <script lang="ts">
 import { defineComponent, reactive, ref, watch } from 'vue';
-import type { FormInstance } from 'ant-design-vue';
+import type { FormInstance } from 'pf-ui-vue';
 
 interface FormState {
   username: string;

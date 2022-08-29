@@ -22,7 +22,7 @@ title:
 <script lang="ts">
 import { ExclamationCircleOutlined } from '@ant-design/icons-vue';
 import { createVNode, defineComponent } from 'vue';
-import { Modal } from 'ant-design-vue';
+import { Modal } from 'pf-ui-vue';
 export default defineComponent({
   setup() {
     const showConfirm = () => {

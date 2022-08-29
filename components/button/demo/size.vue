@@ -65,7 +65,7 @@ If a large or small button is desired, set the `size` property to either `large`
 </template>
 <script lang="ts">
 import { DownloadOutlined } from '@ant-design/icons-vue';
-import type { SizeType } from 'ant-design-vue/es/config-provider';
+import type { SizeType } from 'pf-ui-vue/es/config-provider';
 import { defineComponent, ref } from 'vue';
 export default defineComponent({
   components: {

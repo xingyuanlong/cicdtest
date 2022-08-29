@@ -20,7 +20,7 @@ import Overflow from '../../vc-overflow';
 import devWarning from '../../vc-util/devWarning';
 import isValid from '../../_util/isValid';
 import type { MouseEventHandler } from '../../_util/EventInterface';
-import type { Key } from 'ant-design-vue/es/_util/type';
+import type { Key } from 'pf-ui-vue/es/_util/type';
 
 let indexGuid = 0;
 
@@ -302,7 +302,7 @@ export default defineComponent({
         );
       } else {
         // 包裹一层，保持结构一致，防止动画丢失
-        // https://github.com/vueComponent/ant-design-vue/issues/4325
+        // https://github.com/vueComponent/pf-ui-vue/issues/4325
         titleNode = () => <PopupTrigger v-slots={{ default: baseTitleNode }}></PopupTrigger>;
       }
       return (

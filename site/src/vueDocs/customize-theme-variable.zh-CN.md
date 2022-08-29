@@ -7,7 +7,7 @@ title: 动态主题（实验性）
 
 ## 注意事项
 
-- 该功能在 `ant-design-vue@3.1.0-beta.0` 版本起支持。
+- 该功能在 `pf-ui-vue@3.1.0-beta.0` 版本起支持。
 
 ## 如何使用
 
@@ -16,8 +16,8 @@ title: 动态主题（实验性）
 替换当前项目引入样式文件为 CSS Variable 版本：
 
 ```diff
--- import 'ant-design-vue/dist/antd.min.css';
-++ import 'ant-design-vue/dist/antd.variable.min.css';
+-- import 'pf-ui-vue/dist/antd.min.css';
+++ import 'pf-ui-vue/dist/antd.variable.min.css';
 ```
 
 注：如果你使用了 `babel-plugin-import`，需要将其去除。
@@ -27,7 +27,7 @@ title: 动态主题（实验性）
 调用 ConfigProvider 配置方法设置主题色：
 
 ```ts
-import { ConfigProvider } from 'ant-design-vue';
+import { ConfigProvider } from 'pf-ui-vue';
 
 ConfigProvider.config({
   theme: {
@@ -55,7 +55,7 @@ ConfigProvider.config({
 通过静态方法设置主题色以及对应 `prefixCls`：
 
 ```ts
-import { ConfigProvider } from 'ant-design-vue';
+import { ConfigProvider } from 'pf-ui-vue';
 ConfigProvider.config({
   prefixCls: 'custom',
   theme: {
@@ -69,7 +69,7 @@ ConfigProvider.config({
 由于前缀变更，你需要重新生成一份对应的 css 文件。
 
 ```bash
-lessc --js --modify-var="ant-prefix=custom" ant-design-vue/dist/antd.variable.less modified.css
+lessc --js --modify-var="ant-prefix=custom" pf-ui-vue/dist/antd.variable.less modified.css
 ```
 
 ### 相关变更

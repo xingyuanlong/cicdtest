@@ -27,8 +27,8 @@ Search and select options directly.
 </template>
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
-import type { CascaderProps } from 'ant-design-vue';
-import type { ShowSearchType } from 'ant-design-vue/es/cascader';
+import type { CascaderProps } from 'pf-ui-vue';
+import type { ShowSearchType } from 'pf-ui-vue/es/cascader';
 const options: CascaderProps['options'] = [
   {
     value: 'zhejiang',

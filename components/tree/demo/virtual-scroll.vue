@@ -31,7 +31,7 @@ Use virtual list through `height` prop.
   </a-tree>
 </template>
 <script lang="ts">
-import type { TreeProps } from 'ant-design-vue';
+import type { TreeProps } from 'pf-ui-vue';
 import { defineComponent, ref, watch } from 'vue';
 
 function dig(path = '0', level = 3) {

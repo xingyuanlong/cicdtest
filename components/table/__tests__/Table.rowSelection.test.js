@@ -143,7 +143,7 @@ describe('Table.rowSelection', () => {
     mount(Table, getTableOptions({ rowSelection }));
 
     expect(errorSpy).toHaveBeenCalledWith(
-      'Warning: [ant-design-vue: Table] Do not set `checked` or `defaultChecked` in `getCheckboxProps`. Please use `selectedRowKeys` instead.',
+      'Warning: [pf-ui-vue: Table] Do not set `checked` or `defaultChecked` in `getCheckboxProps`. Please use `selectedRowKeys` instead.',
     );
   });
 

@@ -16,7 +16,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import type { PropType } from 'vue';
-import { Form } from 'ant-design-vue';
+import { Form } from 'pf-ui-vue';
 
 export type Currency = 'rmb' | 'dollar';
 

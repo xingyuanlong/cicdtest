@@ -25,7 +25,7 @@ In the various types of information modal dialog, only one button to close dialo
   </a-space>
 </template>
 <script lang="ts">
-import { Modal } from 'ant-design-vue';
+import { Modal } from 'pf-ui-vue';
 import { defineComponent, h } from 'vue';
 export default defineComponent({
   setup() {

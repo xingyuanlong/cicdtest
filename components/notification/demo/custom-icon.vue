@@ -21,7 +21,7 @@ The icon can be customized to any vue node or (h) => vue node.
 </template>
 <script lang="ts">
 import { SmileOutlined } from '@ant-design/icons-vue';
-import { notification } from 'ant-design-vue';
+import { notification } from 'pf-ui-vue';
 import { defineComponent, h } from 'vue';
 
 export default defineComponent({

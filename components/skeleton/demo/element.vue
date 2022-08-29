@@ -60,7 +60,7 @@ Skeleton Button, Avatar, Input and Image.
 </template>
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
-import type { SkeletonButtonProps, SkeletonAvatarProps } from 'ant-design-vue';
+import type { SkeletonButtonProps, SkeletonAvatarProps } from 'pf-ui-vue';
 export default defineComponent({
   setup() {
     return {

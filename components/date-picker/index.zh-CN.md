@@ -27,14 +27,14 @@ cover: https://gw.alipayobjects.com/zos/alicdn/RT_USzA48/DatePicker.svg
 
 默认配置为 en-US，如果你需要设置其他语言，推荐在入口处使用我们提供的国际化组件，详见：[ConfigProvider 国际化](/components/config-provider-cn/)。
 
-如有特殊需求（仅修改单一组件的语言），请使用 locale 参数，参考：[默认配置](https://github.com/vueComponent/ant-design-vue/blob/main/components/date-picker/locale/example.json)。
+如有特殊需求（仅修改单一组件的语言），请使用 locale 参数，参考：[默认配置](https://github.com/vueComponent/pf-ui-vue/blob/main/components/date-picker/locale/example.json)。
 
 ```html
 <template>
   <a-date-picker v-model:value="value" :locale="locale" />
 </template>
 <script>
-  import locale from 'ant-design-vue/es/date-picker/locale/zh_CN';
+  import locale from 'pf-ui-vue/es/date-picker/locale/zh_CN';
   import { defineComponent } from 'vue';
   export default defineComponent({
     setup() {
@@ -57,7 +57,7 @@ cover: https://gw.alipayobjects.com/zos/alicdn/RT_USzA48/DatePicker.svg
   // 默认语言为 en-US，如果你需要设置其他语言，推荐在入口文件全局设置 locale
   import dayjs from 'dayjs';
   import 'dayjs/locale/zh-cn';
-  import locale from 'ant-design-vue/es/date-picker/locale/zh_CN';
+  import locale from 'pf-ui-vue/es/date-picker/locale/zh_CN';
   import { defineComponent } from 'vue';
   dayjs.locale('zh-cn');
   export default defineComponent({
@@ -87,7 +87,7 @@ cover: https://gw.alipayobjects.com/zos/alicdn/RT_USzA48/DatePicker.svg
 | dropdownClassName | 额外的弹出日历 className | string | - |  |
 | getPopupContainer | 定义浮层的容器，默认为 body 上新建 div | function(trigger) | - |  |
 | inputReadOnly | 设置输入框为只读（避免在移动设备上打开虚拟键盘） | boolean | false |  |
-| locale | 国际化配置 | object | [默认配置](https://github.com/vueComponent/ant-design-vue/blob/main/components/date-picker/locale/example.json) | - |
+| locale | 国际化配置 | object | [默认配置](https://github.com/vueComponent/pf-ui-vue/blob/main/components/date-picker/locale/example.json) | - |
 | mode | 日期面板的状态 | `time` \| `date` \| `month` \| `year` \| `decade` | - |  |
 | nextIcon | 自定义下一个图标 | slot | - | 3.0 |
 | open | 控制弹层是否展开 | boolean | - |  |

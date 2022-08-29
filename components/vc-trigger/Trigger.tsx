@@ -377,7 +377,7 @@ export default defineComponent({
         !this.hasPopupMouseDown
       ) {
         // https://github.com/vuejs/core/issues/4462
-        // vue 动画bug导致 https://github.com/vueComponent/ant-design-vue/issues/5259，
+        // vue 动画bug导致 https://github.com/vueComponent/pf-ui-vue/issues/5259，
         // 改成延时解决
         this.delaySetPopupVisible(false, 0.1);
       }

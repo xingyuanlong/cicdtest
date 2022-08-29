@@ -63,7 +63,7 @@ Because the width of label is not fixed, you may need to adjust it by customizin
 <script lang="ts">
 import { defineComponent, reactive, ref } from 'vue';
 import { DownOutlined, UpOutlined } from '@ant-design/icons-vue';
-import type { FormInstance } from 'ant-design-vue';
+import type { FormInstance } from 'pf-ui-vue';
 export default defineComponent({
   components: {
     DownOutlined,

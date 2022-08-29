@@ -48,7 +48,7 @@ When user visit a page with a list of items, and want to create a new item. The 
 </template>
 <script lang="ts">
 import { defineComponent, reactive, ref, toRaw } from 'vue';
-import type { FormInstance } from 'ant-design-vue';
+import type { FormInstance } from 'pf-ui-vue';
 
 interface Values {
   title: string;

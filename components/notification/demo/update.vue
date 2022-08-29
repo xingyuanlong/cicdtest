@@ -27,7 +27,7 @@ Update content with unique key, or use reactive data.
   </a-button>
 </template>
 <script lang="ts">
-import { notification } from 'ant-design-vue';
+import { notification } from 'pf-ui-vue';
 import { defineComponent, ref } from 'vue';
 const key = 'updatable';
 export default defineComponent({

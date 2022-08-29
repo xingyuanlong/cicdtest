@@ -61,9 +61,9 @@ Components which need localization support are listed here, you can toggle the l
   </a-config-provider>
 </template>
 <script>
-import { Modal } from 'ant-design-vue';
-import enUS from 'ant-design-vue/es/locale/en_US';
-import zhCN from 'ant-design-vue/es/locale/zh_CN';
+import { Modal } from 'pf-ui-vue';
+import enUS from 'pf-ui-vue/es/locale/en_US';
+import zhCN from 'pf-ui-vue/es/locale/zh_CN';
 import dayjs from 'dayjs';
 import 'dayjs/locale/zh-cn';
 import { defineComponent, ref, watch } from 'vue';

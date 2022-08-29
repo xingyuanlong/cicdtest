@@ -27,7 +27,7 @@ Responsive columns.
   </a-table>
 </template>
 <script lang="ts">
-import type { ColumnsType } from 'ant-design-vue/es/table/interface';
+import type { ColumnsType } from 'pf-ui-vue/es/table/interface';
 import { defineComponent } from 'vue';
 
 const columns: ColumnsType = [

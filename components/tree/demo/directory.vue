@@ -25,7 +25,7 @@ Built-in directory tree. `multiple` support `ctrl(Windows)` / `command(Mac)` sel
   ></a-directory-tree>
 </template>
 <script lang="ts">
-import type { TreeProps } from 'ant-design-vue';
+import type { TreeProps } from 'pf-ui-vue';
 import { defineComponent, ref } from 'vue';
 
 export default defineComponent({

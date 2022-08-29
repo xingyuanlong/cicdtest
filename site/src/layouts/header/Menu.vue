@@ -28,7 +28,7 @@
 import { defineComponent, ref } from 'vue';
 import Github from './Github.vue';
 import Navigation from './Navigation.vue';
-import { version } from 'ant-design-vue';
+import { version } from 'pf-ui-vue';
 import { isZhCN, isLocalStorageNameSupported, getLocalizedPathname } from '../../utils/util';
 import { useRoute } from 'vue-router';
 export default defineComponent({

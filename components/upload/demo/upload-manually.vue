@@ -37,9 +37,9 @@ Upload files manually after `beforeUpload` returns `false`.
 <script lang="ts">
 import request from 'umi-request';
 import { UploadOutlined } from '@ant-design/icons-vue';
-import { message } from 'ant-design-vue';
+import { message } from 'pf-ui-vue';
 import { defineComponent, ref } from 'vue';
-import type { UploadProps } from 'ant-design-vue';
+import type { UploadProps } from 'pf-ui-vue';
 
 export default defineComponent({
   components: {

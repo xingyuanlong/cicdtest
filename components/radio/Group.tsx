@@ -62,7 +62,7 @@ export default defineComponent({
       if (!('value' in props)) {
         stateValue.value = value;
       }
-      // nextTick for https://github.com/vueComponent/ant-design-vue/issues/1280
+      // nextTick for https://github.com/vueComponent/pf-ui-vue/issues/1280
       if (!updatingValue.value && value !== lastValue) {
         updatingValue.value = true;
         emit('update:value', value);

@@ -19,7 +19,7 @@ Use `rowSelection.selections` custom selections, default no select dropdown, sho
 </template>
 <script lang="ts">
 import { defineComponent, computed, ref, unref } from 'vue';
-import { Table } from 'ant-design-vue';
+import { Table } from 'pf-ui-vue';
 
 interface DataType {
   key: string | number;

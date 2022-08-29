@@ -33,7 +33,7 @@ Basic Usage
 </template>
 <script lang="ts">
 import { SmileOutlined, MehOutlined } from '@ant-design/icons-vue';
-import type { SelectProps } from 'ant-design-vue';
+import type { SelectProps } from 'pf-ui-vue';
 import { defineComponent, ref } from 'vue';
 
 export default defineComponent({

@@ -41,9 +41,9 @@ Allows for custom rendering of tags.
   </a-tree-select>
 </template>
 <script lang="ts">
-import type { TreeSelectProps } from 'ant-design-vue';
+import type { TreeSelectProps } from 'pf-ui-vue';
 import { defineComponent, ref, watch } from 'vue';
-import { TreeSelect } from 'ant-design-vue';
+import { TreeSelect } from 'pf-ui-vue';
 const SHOW_ALL = TreeSelect.SHOW_ALL;
 export default defineComponent({
   setup() {

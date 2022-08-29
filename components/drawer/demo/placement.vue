@@ -38,7 +38,7 @@ The Drawer can appear from any edge of the screen.
 </template>
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
-import type { DrawerProps } from 'ant-design-vue';
+import type { DrawerProps } from 'pf-ui-vue';
 export default defineComponent({
   setup() {
     const placement = ref<DrawerProps['placement']>('left');

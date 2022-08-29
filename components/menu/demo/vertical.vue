@@ -68,7 +68,7 @@ import {
   AppstoreOutlined,
   SettingOutlined,
 } from '@ant-design/icons-vue';
-import type { MenuProps } from 'ant-design-vue';
+import type { MenuProps } from 'pf-ui-vue';
 
 export default defineComponent({
   components: {

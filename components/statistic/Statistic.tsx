@@ -45,7 +45,7 @@ export default defineComponent({
       const suffix = props.suffix ?? slots.suffix?.();
       const formatter = props.formatter ?? slots.formatter;
       // data-for-update just for update component
-      // https://github.com/vueComponent/ant-design-vue/pull/3170
+      // https://github.com/vueComponent/pf-ui-vue/pull/3170
       let valueNode = (
         <StatisticNumber
           data-for-update={Date.now()}

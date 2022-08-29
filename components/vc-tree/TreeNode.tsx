@@ -335,7 +335,7 @@ export default defineComponent({
       syncLoadData();
     });
     onUpdated(() => {
-      // https://github.com/vueComponent/ant-design-vue/issues/4835
+      // https://github.com/vueComponent/pf-ui-vue/issues/4835
       syncLoadData();
     });
 

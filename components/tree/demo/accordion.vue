@@ -29,7 +29,7 @@ Nodes of the same level can only be expanded one
   </a-tree>
 </template>
 <script lang="ts">
-import type { TreeProps } from 'ant-design-vue';
+import type { TreeProps } from 'pf-ui-vue';
 import _ from 'lodash';
 import { defineComponent, ref, watch } from 'vue';
 

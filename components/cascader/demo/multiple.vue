@@ -27,7 +27,7 @@ Select multiple options
 </template>
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
-import type { CascaderProps } from 'ant-design-vue';
+import type { CascaderProps } from 'pf-ui-vue';
 const options: CascaderProps['options'] = [
   {
     label: 'Light',

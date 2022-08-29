@@ -33,7 +33,7 @@ The default width (or height) of Drawer is `500px`, and there is a presetted lar
 </template>
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
-import type { DrawerProps } from 'ant-design-vue';
+import type { DrawerProps } from 'pf-ui-vue';
 export default defineComponent({
   setup() {
     const visible = ref<boolean>(false);

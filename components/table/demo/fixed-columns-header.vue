@@ -33,7 +33,7 @@ A Solution for displaying large amounts of data with long columns.
   </a-table>
 </template>
 <script lang="ts">
-import type { TableColumnsType } from 'ant-design-vue';
+import type { TableColumnsType } from 'pf-ui-vue';
 import { defineComponent } from 'vue';
 
 const columns: TableColumnsType = [

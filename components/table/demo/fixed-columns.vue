@@ -34,7 +34,7 @@ To fix some columns and scroll inside other columns, and you must set `scroll.x`
   </a-table>
 </template>
 <script lang="ts">
-import type { TableColumnsType } from 'ant-design-vue';
+import type { TableColumnsType } from 'pf-ui-vue';
 import { defineComponent } from 'vue';
 
 const columns: TableColumnsType = [

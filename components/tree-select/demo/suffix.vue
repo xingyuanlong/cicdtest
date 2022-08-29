@@ -49,7 +49,7 @@ The most basic usage.
 </template>
 <script lang="ts">
 import { SmileOutlined } from '@ant-design/icons-vue';
-import type { TreeSelectProps } from 'ant-design-vue';
+import type { TreeSelectProps } from 'pf-ui-vue';
 import { defineComponent, ref, watch } from 'vue';
 
 export default defineComponent({

@@ -3,6 +3,7 @@ import classNames from '../_util/classNames';
 import LocaleReceiver from '../locale-provider/LocaleReceiver';
 import DefaultEmptyImg from './empty';
 import SimpleEmptyImg from './simple';
+import InfoEmptyImg from './infoEmpty'
 import { filterEmpty } from '../_util/props-util';
 import PropTypes from '../_util/vue-types';
 import type { VueNode } from '../_util/type';
@@ -11,6 +12,7 @@ import useConfigInject from '../_util/hooks/useConfigInject';
 
 const defaultEmptyImg = <DefaultEmptyImg />;
 const simpleEmptyImg = <SimpleEmptyImg />;
+const infoEmptyImg = <InfoEmptyImg />
 
 interface Locale {
   description?: string;
@@ -29,6 +31,7 @@ interface EmptyType extends FunctionalComponent<EmptyProps> {
   displayName: string;
   PRESENTED_IMAGE_DEFAULT: VueNode;
   PRESENTED_IMAGE_SIMPLE: VueNode;
+  PRESENTED_IMAGE_INFO: VueNode
 }
 
 const Empty: EmptyType = (props, { slots = {}, attrs }) => {
@@ -56,6 +59,7 @@ const Empty: EmptyType = (props, { slots = {}, attrs }) => {
         } else {
           imageNode = image;
         }
+        console.log(slots.default, '--slots.default--')
 
         return (
           <div
@@ -83,6 +87,7 @@ Empty.displayName = 'AEmpty';
 
 Empty.PRESENTED_IMAGE_DEFAULT = defaultEmptyImg;
 Empty.PRESENTED_IMAGE_SIMPLE = simpleEmptyImg;
+Empty.PRESENTED_IMAGE_INFO = infoEmptyImg
 Empty.inheritAttrs = false;
 Empty.props = {
   prefixCls: String,

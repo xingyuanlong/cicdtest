@@ -20,7 +20,7 @@ The `style` and `class` are available to customize Notification.
   <a-button type="primary" @click="openNotification">Open the notification box</a-button>
 </template>
 <script>
-import { notification } from 'ant-design-vue';
+import { notification } from 'pf-ui-vue';
 import { defineComponent } from 'vue';
 export default defineComponent({
   setup() {

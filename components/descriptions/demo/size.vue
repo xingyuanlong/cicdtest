@@ -67,7 +67,7 @@ Custom sizes to fit in a variety of containers.
 </template>
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
-import type { DescriptionsProps } from 'ant-design-vue';
+import type { DescriptionsProps } from 'pf-ui-vue';
 export default defineComponent({
   setup() {
     const size = ref<DescriptionsProps['size']>('default');

@@ -61,7 +61,7 @@ Add or remove form items dynamically.
 <script lang="ts">
 import { MinusCircleOutlined, PlusOutlined } from '@ant-design/icons-vue';
 import { defineComponent, reactive, ref } from 'vue';
-import type { FormInstance } from 'ant-design-vue';
+import type { FormInstance } from 'pf-ui-vue';
 
 interface Domain {
   value: string;

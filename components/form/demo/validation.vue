@@ -70,7 +70,7 @@ Just add the `rules` attribute for `Form` component, pass validation rules, and 
 import { Dayjs } from 'dayjs';
 import { defineComponent, reactive, ref, toRaw } from 'vue';
 import type { UnwrapRef } from 'vue';
-import type { Rule } from 'ant-design-vue/es/form';
+import type { Rule } from 'pf-ui-vue/es/form';
 
 interface FormState {
   name: string;

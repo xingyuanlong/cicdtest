@@ -20,7 +20,7 @@ Customize message display duration from default `3s` to `10s`.
   <a-button @click="success">Customized display duration</a-button>
 </template>
 <script lang="ts">
-import { message } from 'ant-design-vue';
+import { message } from 'pf-ui-vue';
 import { defineComponent } from 'vue';
 export default defineComponent({
   setup() {

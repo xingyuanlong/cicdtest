@@ -1,255 +1,255 @@
 /* eslint-disable @typescript-eslint/consistent-type-imports */
 declare module 'vue' {
   export interface GlobalComponents {
-    AAffix: typeof import('ant-design-vue')['Affix'];
+    AAffix: typeof import('pf-ui-vue')['Affix'];
 
-    AAlert: typeof import('ant-design-vue')['Alert'];
+    AAlert: typeof import('pf-ui-vue')['Alert'];
 
-    AAnchor: typeof import('ant-design-vue')['Anchor'];
+    AAnchor: typeof import('pf-ui-vue')['Anchor'];
 
-    AAnchorLink: typeof import('ant-design-vue')['AnchorLink'];
+    AAnchorLink: typeof import('pf-ui-vue')['AnchorLink'];
 
-    AAutoComplete: typeof import('ant-design-vue')['AutoComplete'];
+    AAutoComplete: typeof import('pf-ui-vue')['AutoComplete'];
 
-    AAutoCompleteOptGroup: typeof import('ant-design-vue')['AutoCompleteOptGroup'];
+    AAutoCompleteOptGroup: typeof import('pf-ui-vue')['AutoCompleteOptGroup'];
 
-    AAutoCompleteOption: typeof import('ant-design-vue')['AutoCompleteOption'];
+    AAutoCompleteOption: typeof import('pf-ui-vue')['AutoCompleteOption'];
 
-    AAvatar: typeof import('ant-design-vue')['Avatar'];
+    AAvatar: typeof import('pf-ui-vue')['Avatar'];
 
-    AAvatarGroup: typeof import('ant-design-vue')['AvatarGroup'];
+    AAvatarGroup: typeof import('pf-ui-vue')['AvatarGroup'];
 
-    ABackTop: typeof import('ant-design-vue')['BackTop'];
+    ABackTop: typeof import('pf-ui-vue')['BackTop'];
 
-    ABadge: typeof import('ant-design-vue')['Badge'];
+    ABadge: typeof import('pf-ui-vue')['Badge'];
 
-    ABadgeRibbon: typeof import('ant-design-vue')['BadgeRibbon'];
+    ABadgeRibbon: typeof import('pf-ui-vue')['BadgeRibbon'];
 
-    ABreadcrumb: typeof import('ant-design-vue')['Breadcrumb'];
+    ABreadcrumb: typeof import('pf-ui-vue')['Breadcrumb'];
 
-    ABreadcrumbItem: typeof import('ant-design-vue')['BreadcrumbItem'];
+    ABreadcrumbItem: typeof import('pf-ui-vue')['BreadcrumbItem'];
 
-    ABreadcrumbSeparator: typeof import('ant-design-vue')['BreadcrumbSeparator'];
+    ABreadcrumbSeparator: typeof import('pf-ui-vue')['BreadcrumbSeparator'];
 
-    AButton: typeof import('ant-design-vue')['Button'];
+    AButton: typeof import('pf-ui-vue')['Button'];
 
-    AButtonGroup: typeof import('ant-design-vue')['ButtonGroup'];
+    AButtonGroup: typeof import('pf-ui-vue')['ButtonGroup'];
 
-    ACalendar: typeof import('ant-design-vue')['Calendar'];
+    ACalendar: typeof import('pf-ui-vue')['Calendar'];
 
-    ACard: typeof import('ant-design-vue')['Card'];
+    ACard: typeof import('pf-ui-vue')['Card'];
 
-    ACardGrid: typeof import('ant-design-vue')['CardGrid'];
+    ACardGrid: typeof import('pf-ui-vue')['CardGrid'];
 
-    ACardMeta: typeof import('ant-design-vue')['CardMeta'];
+    ACardMeta: typeof import('pf-ui-vue')['CardMeta'];
 
-    ACarousel: typeof import('ant-design-vue')['Carousel'];
+    ACarousel: typeof import('pf-ui-vue')['Carousel'];
 
-    ACascader: typeof import('ant-design-vue')['Cascader'];
+    ACascader: typeof import('pf-ui-vue')['Cascader'];
 
-    ACheckableTag: typeof import('ant-design-vue')['CheckableTag'];
+    ACheckableTag: typeof import('pf-ui-vue')['CheckableTag'];
 
-    ACheckbox: typeof import('ant-design-vue')['Checkbox'];
+    ACheckbox: typeof import('pf-ui-vue')['Checkbox'];
 
-    ACheckboxGroup: typeof import('ant-design-vue')['CheckboxGroup'];
+    ACheckboxGroup: typeof import('pf-ui-vue')['CheckboxGroup'];
 
-    ACol: typeof import('ant-design-vue')['Col'];
+    ACol: typeof import('pf-ui-vue')['Col'];
 
-    ACollapse: typeof import('ant-design-vue')['Collapse'];
+    ACollapse: typeof import('pf-ui-vue')['Collapse'];
 
-    ACollapsePanel: typeof import('ant-design-vue')['CollapsePanel'];
+    ACollapsePanel: typeof import('pf-ui-vue')['CollapsePanel'];
 
-    AComment: typeof import('ant-design-vue')['Comment'];
+    AComment: typeof import('pf-ui-vue')['Comment'];
 
-    AConfigProvider: typeof import('ant-design-vue')['ConfigProvider'];
+    AConfigProvider: typeof import('pf-ui-vue')['ConfigProvider'];
 
-    ADatePicker: typeof import('ant-design-vue')['DatePicker'];
+    ADatePicker: typeof import('pf-ui-vue')['DatePicker'];
 
-    ADescriptions: typeof import('ant-design-vue')['Descriptions'];
+    ADescriptions: typeof import('pf-ui-vue')['Descriptions'];
 
-    ADescriptionsItem: typeof import('ant-design-vue')['DescriptionsItem'];
+    ADescriptionsItem: typeof import('pf-ui-vue')['DescriptionsItem'];
 
-    ADirectoryTree: typeof import('ant-design-vue')['DirectoryTree'];
+    ADirectoryTree: typeof import('pf-ui-vue')['DirectoryTree'];
 
-    ADivider: typeof import('ant-design-vue')['Divider'];
+    ADivider: typeof import('pf-ui-vue')['Divider'];
 
-    ADrawer: typeof import('ant-design-vue')['Drawer'];
+    ADrawer: typeof import('pf-ui-vue')['Drawer'];
 
-    ADropdown: typeof import('ant-design-vue')['Dropdown'];
+    ADropdown: typeof import('pf-ui-vue')['Dropdown'];
 
-    ADropdownButton: typeof import('ant-design-vue')['DropdownButton'];
+    ADropdownButton: typeof import('pf-ui-vue')['DropdownButton'];
 
-    AEmpty: typeof import('ant-design-vue')['Empty'];
+    AEmpty: typeof import('pf-ui-vue')['Empty'];
 
-    AForm: typeof import('ant-design-vue')['Form'];
+    AForm: typeof import('pf-ui-vue')['Form'];
 
-    AFormItem: typeof import('ant-design-vue')['FormItem'];
+    AFormItem: typeof import('pf-ui-vue')['FormItem'];
 
-    AFormItemRest: typeof import('ant-design-vue')['FormItemRest'];
+    AFormItemRest: typeof import('pf-ui-vue')['FormItemRest'];
 
-    AImage: typeof import('ant-design-vue')['Image'];
+    AImage: typeof import('pf-ui-vue')['Image'];
 
-    AImagePreviewGroup: typeof import('ant-design-vue')['ImagePreviewGroup'];
+    AImagePreviewGroup: typeof import('pf-ui-vue')['ImagePreviewGroup'];
 
-    AInput: typeof import('ant-design-vue')['Input'];
+    AInput: typeof import('pf-ui-vue')['Input'];
 
-    AInputGroup: typeof import('ant-design-vue')['InputGroup'];
+    AInputGroup: typeof import('pf-ui-vue')['InputGroup'];
 
-    AInputNumber: typeof import('ant-design-vue')['InputNumber'];
+    AInputNumber: typeof import('pf-ui-vue')['InputNumber'];
 
-    AInputPassword: typeof import('ant-design-vue')['InputPassword'];
+    AInputPassword: typeof import('pf-ui-vue')['InputPassword'];
 
-    AInputSearch: typeof import('ant-design-vue')['InputSearch'];
+    AInputSearch: typeof import('pf-ui-vue')['InputSearch'];
 
-    ALayout: typeof import('ant-design-vue')['Layout'];
+    ALayout: typeof import('pf-ui-vue')['Layout'];
 
-    ALayoutContent: typeof import('ant-design-vue')['LayoutContent'];
+    ALayoutContent: typeof import('pf-ui-vue')['LayoutContent'];
 
-    ALayoutFooter: typeof import('ant-design-vue')['LayoutFooter'];
+    ALayoutFooter: typeof import('pf-ui-vue')['LayoutFooter'];
 
-    ALayoutHeader: typeof import('ant-design-vue')['LayoutHeader'];
+    ALayoutHeader: typeof import('pf-ui-vue')['LayoutHeader'];
 
-    ALayoutSider: typeof import('ant-design-vue')['LayoutSider'];
+    ALayoutSider: typeof import('pf-ui-vue')['LayoutSider'];
 
-    AList: typeof import('ant-design-vue')['List'];
+    AList: typeof import('pf-ui-vue')['List'];
 
-    AListItem: typeof import('ant-design-vue')['ListItem'];
+    AListItem: typeof import('pf-ui-vue')['ListItem'];
 
-    AListItemMeta: typeof import('ant-design-vue')['ListItemMeta'];
+    AListItemMeta: typeof import('pf-ui-vue')['ListItemMeta'];
 
-    ALocaleProvider: typeof import('ant-design-vue')['LocaleProvider'];
+    ALocaleProvider: typeof import('pf-ui-vue')['LocaleProvider'];
 
-    AMentions: typeof import('ant-design-vue')['Mentions'];
+    AMentions: typeof import('pf-ui-vue')['Mentions'];
 
-    AMentionsOption: typeof import('ant-design-vue')['MentionsOption'];
+    AMentionsOption: typeof import('pf-ui-vue')['MentionsOption'];
 
-    AMenu: typeof import('ant-design-vue')['Menu'];
+    AMenu: typeof import('pf-ui-vue')['Menu'];
 
-    AMenuDivider: typeof import('ant-design-vue')['MenuDivider'];
+    AMenuDivider: typeof import('pf-ui-vue')['MenuDivider'];
 
-    AMenuItem: typeof import('ant-design-vue')['MenuItem'];
+    AMenuItem: typeof import('pf-ui-vue')['MenuItem'];
 
-    AMenuItemGroup: typeof import('ant-design-vue')['MenuItemGroup'];
+    AMenuItemGroup: typeof import('pf-ui-vue')['MenuItemGroup'];
 
-    AModal: typeof import('ant-design-vue')['Modal'];
+    AModal: typeof import('pf-ui-vue')['Modal'];
 
-    AMonthPicker: typeof import('ant-design-vue')['MonthPicker'];
+    AMonthPicker: typeof import('pf-ui-vue')['MonthPicker'];
 
-    APageHeader: typeof import('ant-design-vue')['PageHeader'];
+    APageHeader: typeof import('pf-ui-vue')['PageHeader'];
 
-    APagination: typeof import('ant-design-vue')['Pagination'];
+    APagination: typeof import('pf-ui-vue')['Pagination'];
 
-    APopconfirm: typeof import('ant-design-vue')['Popconfirm'];
+    APopconfirm: typeof import('pf-ui-vue')['Popconfirm'];
 
-    APopover: typeof import('ant-design-vue')['Popover'];
+    APopover: typeof import('pf-ui-vue')['Popover'];
 
-    AProgress: typeof import('ant-design-vue')['Progress'];
+    AProgress: typeof import('pf-ui-vue')['Progress'];
 
-    AQuarterPicker: typeof import('ant-design-vue')['QuarterPicker'];
+    AQuarterPicker: typeof import('pf-ui-vue')['QuarterPicker'];
 
-    ARadio: typeof import('ant-design-vue')['Radio'];
+    ARadio: typeof import('pf-ui-vue')['Radio'];
 
-    ARadioButton: typeof import('ant-design-vue')['RadioButton'];
+    ARadioButton: typeof import('pf-ui-vue')['RadioButton'];
 
-    ARadioGroup: typeof import('ant-design-vue')['RadioGroup'];
+    ARadioGroup: typeof import('pf-ui-vue')['RadioGroup'];
 
-    ARangePicker: typeof import('ant-design-vue')['RangePicker'];
+    ARangePicker: typeof import('pf-ui-vue')['RangePicker'];
 
-    ARate: typeof import('ant-design-vue')['Rate'];
+    ARate: typeof import('pf-ui-vue')['Rate'];
 
-    AResult: typeof import('ant-design-vue')['Result'];
+    AResult: typeof import('pf-ui-vue')['Result'];
 
-    ARow: typeof import('ant-design-vue')['Row'];
+    ARow: typeof import('pf-ui-vue')['Row'];
 
-    ASelect: typeof import('ant-design-vue')['Select'];
+    ASelect: typeof import('pf-ui-vue')['Select'];
 
-    ASelectOptGroup: typeof import('ant-design-vue')['SelectOptGroup'];
+    ASelectOptGroup: typeof import('pf-ui-vue')['SelectOptGroup'];
 
-    ASelectOption: typeof import('ant-design-vue')['SelectOption'];
+    ASelectOption: typeof import('pf-ui-vue')['SelectOption'];
 
-    ASkeleton: typeof import('ant-design-vue')['Skeleton'];
+    ASkeleton: typeof import('pf-ui-vue')['Skeleton'];
 
-    ASkeletonAvatar: typeof import('ant-design-vue')['SkeletonAvatar'];
+    ASkeletonAvatar: typeof import('pf-ui-vue')['SkeletonAvatar'];
 
-    ASkeletonButton: typeof import('ant-design-vue')['SkeletonButton'];
+    ASkeletonButton: typeof import('pf-ui-vue')['SkeletonButton'];
 
-    ASkeletonImage: typeof import('ant-design-vue')['SkeletonImage'];
+    ASkeletonImage: typeof import('pf-ui-vue')['SkeletonImage'];
 
-    ASkeletonInput: typeof import('ant-design-vue')['SkeletonInput'];
+    ASkeletonInput: typeof import('pf-ui-vue')['SkeletonInput'];
 
-    ASlider: typeof import('ant-design-vue')['Slider'];
+    ASlider: typeof import('pf-ui-vue')['Slider'];
 
-    ASpace: typeof import('ant-design-vue')['Space'];
+    ASpace: typeof import('pf-ui-vue')['Space'];
 
-    ASpin: typeof import('ant-design-vue')['Spin'];
+    ASpin: typeof import('pf-ui-vue')['Spin'];
 
-    AStatistic: typeof import('ant-design-vue')['Statistic'];
+    AStatistic: typeof import('pf-ui-vue')['Statistic'];
 
-    AStatisticCountdown: typeof import('ant-design-vue')['StatisticCountdown'];
+    AStatisticCountdown: typeof import('pf-ui-vue')['StatisticCountdown'];
 
-    AStep: typeof import('ant-design-vue')['Step'];
+    AStep: typeof import('pf-ui-vue')['Step'];
 
-    ASteps: typeof import('ant-design-vue')['Steps'];
+    ASteps: typeof import('pf-ui-vue')['Steps'];
 
-    ASubMenu: typeof import('ant-design-vue')['SubMenu'];
+    ASubMenu: typeof import('pf-ui-vue')['SubMenu'];
 
-    ASwitch: typeof import('ant-design-vue')['Switch'];
+    ASwitch: typeof import('pf-ui-vue')['Switch'];
 
-    ATabPane: typeof import('ant-design-vue')['TabPane'];
+    ATabPane: typeof import('pf-ui-vue')['TabPane'];
 
-    ATable: typeof import('ant-design-vue')['Table'];
+    ATable: typeof import('pf-ui-vue')['Table'];
 
-    ATableColumn: typeof import('ant-design-vue')['TableColumn'];
+    ATableColumn: typeof import('pf-ui-vue')['TableColumn'];
 
-    ATableColumnGroup: typeof import('ant-design-vue')['TableColumnGroup'];
+    ATableColumnGroup: typeof import('pf-ui-vue')['TableColumnGroup'];
 
-    ATableSummary: typeof import('ant-design-vue')['TableSummary'];
+    ATableSummary: typeof import('pf-ui-vue')['TableSummary'];
 
-    ATableSummaryCell: typeof import('ant-design-vue')['TableSummaryCell'];
+    ATableSummaryCell: typeof import('pf-ui-vue')['TableSummaryCell'];
 
-    ATableSummaryRow: typeof import('ant-design-vue')['TableSummaryRow'];
+    ATableSummaryRow: typeof import('pf-ui-vue')['TableSummaryRow'];
 
-    ATabs: typeof import('ant-design-vue')['Tabs'];
+    ATabs: typeof import('pf-ui-vue')['Tabs'];
 
-    ATag: typeof import('ant-design-vue')['Tag'];
+    ATag: typeof import('pf-ui-vue')['Tag'];
 
-    ATextarea: typeof import('ant-design-vue')['Textarea'];
+    ATextarea: typeof import('pf-ui-vue')['Textarea'];
 
-    ATimePicker: typeof import('ant-design-vue')['TimePicker'];
+    ATimePicker: typeof import('pf-ui-vue')['TimePicker'];
 
-    ATimeRangePicker: typeof import('ant-design-vue')['TimeRangePicker'];
+    ATimeRangePicker: typeof import('pf-ui-vue')['TimeRangePicker'];
 
-    ATimeline: typeof import('ant-design-vue')['Timeline'];
+    ATimeline: typeof import('pf-ui-vue')['Timeline'];
 
-    ATimelineItem: typeof import('ant-design-vue')['TimelineItem'];
+    ATimelineItem: typeof import('pf-ui-vue')['TimelineItem'];
 
-    ATooltip: typeof import('ant-design-vue')['Tooltip'];
+    ATooltip: typeof import('pf-ui-vue')['Tooltip'];
 
-    ATransfer: typeof import('ant-design-vue')['Transfer'];
+    ATransfer: typeof import('pf-ui-vue')['Transfer'];
 
-    ATree: typeof import('ant-design-vue')['Tree'];
+    ATree: typeof import('pf-ui-vue')['Tree'];
 
-    ATreeNode: typeof import('ant-design-vue')['TreeNode'];
+    ATreeNode: typeof import('pf-ui-vue')['TreeNode'];
 
-    ATreeSelect: typeof import('ant-design-vue')['TreeSelect'];
+    ATreeSelect: typeof import('pf-ui-vue')['TreeSelect'];
 
-    ATreeSelectNode: typeof import('ant-design-vue')['TreeSelectNode'];
+    ATreeSelectNode: typeof import('pf-ui-vue')['TreeSelectNode'];
 
-    ATypography: typeof import('ant-design-vue')['Typography'];
+    ATypography: typeof import('pf-ui-vue')['Typography'];
 
-    ATypographyLink: typeof import('ant-design-vue')['TypographyLink'];
+    ATypographyLink: typeof import('pf-ui-vue')['TypographyLink'];
 
-    ATypographyParagraph: typeof import('ant-design-vue')['TypographyParagraph'];
+    ATypographyParagraph: typeof import('pf-ui-vue')['TypographyParagraph'];
 
-    ATypographyText: typeof import('ant-design-vue')['TypographyText'];
+    ATypographyText: typeof import('pf-ui-vue')['TypographyText'];
 
-    ATypographyTitle: typeof import('ant-design-vue')['TypographyTitle'];
+    ATypographyTitle: typeof import('pf-ui-vue')['TypographyTitle'];
 
-    AUpload: typeof import('ant-design-vue')['Upload'];
+    AUpload: typeof import('pf-ui-vue')['Upload'];
 
-    AUploadDragger: typeof import('ant-design-vue')['UploadDragger'];
+    AUploadDragger: typeof import('pf-ui-vue')['UploadDragger'];
 
-    AWeekPicker: typeof import('ant-design-vue')['WeekPicker'];
+    AWeekPicker: typeof import('pf-ui-vue')['WeekPicker'];
   }
 }
 export {};

@@ -38,7 +38,7 @@ Setting `rowSelection.preserveSelectedRowKeys` to keep the `key` when enable sel
   </a-table>
 </template>
 <script lang="ts">
-import type { TableProps } from 'ant-design-vue';
+import type { TableProps } from 'pf-ui-vue';
 import { usePagination } from 'vue-request';
 import { computed, defineComponent } from 'vue';
 import axios from 'axios';

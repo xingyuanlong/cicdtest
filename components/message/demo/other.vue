@@ -24,7 +24,7 @@ Messages of success, error and warning types.
   </a-space>
 </template>
 <script lang="ts">
-import { message } from 'ant-design-vue';
+import { message } from 'pf-ui-vue';
 import { defineComponent } from 'vue';
 export default defineComponent({
   setup() {

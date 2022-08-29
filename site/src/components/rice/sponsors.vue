@@ -6,7 +6,7 @@
       </span>
       <ul>
         <!-- <li class="sponsorsItem">
-          <a href="https://tipe.io/?ref=ant-design-vue" target="_blank">
+          <a href="https://tipe.io/?ref=pf-ui-vue" target="_blank">
             <img height="51" src="https://cdn.tipe.io/tipe/tipe-cat-no-text.svg" alt="tipe" />
           </a>
         </li> -->
@@ -63,7 +63,7 @@ export default {
       if (this.isCN) {
         this.visible = true;
       } else {
-        window.open('https://opencollective.com/ant-design-vue#sponsor');
+        window.open('https://opencollective.com/pf-ui-vue#sponsor');
       }
     },
   },

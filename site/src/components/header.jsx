@@ -1,7 +1,7 @@
 import { isZhCN } from '../utils/util';
 import packageInfo from '../../../package.json';
 import logo from '../assets/logo.svg';
-import antDesignVue from '../assets/ant-design-vue.svg';
+import antDesignVue from '../assets/pf-ui-vue.svg';
 import { SearchOutlined } from '@ant-design/icons-vue';
 
 export default {
@@ -84,7 +84,7 @@ export default {
               />
             </div>
             <span id="github-btn" class="github-btn">
-              <a class="gh-btn" href="//github.com/vueComponent/ant-design-vue/" target="_blank">
+              <a class="gh-btn" href="//github.com/vueComponent/pf-ui-vue/" target="_blank">
                 <span class="gh-ico" aria-hidden="true"></span>
                 <span class="gh-text">Star</span>
               </a>
@@ -165,13 +165,13 @@ export default {
                 <a-menu-item key="vscode">
                   <a
                     target="_blank"
-                    href="https://marketplace.visualstudio.com/items?itemName=ant-design-vue.vscode-ant-design-vue-helper"
+                    href="https://marketplace.visualstudio.com/items?itemName=pf-ui-vue.vscode-pf-ui-vue-helper"
                   >
                     VS Code Extension
                   </a>
                 </a-menu-item>
                 <a-menu-item key="awesome">
-                  <a target="_blank" href="https://github.com/vueComponent/ant-design-vue-awesome">
+                  <a target="_blank" href="https://github.com/vueComponent/pf-ui-vue-awesome">
                     Awesome
                   </a>
                 </a-menu-item>

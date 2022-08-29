@@ -25,7 +25,7 @@ A notification box with a icon at the left side.
   </div>
 </template>
 <script lang="ts">
-import { notification } from 'ant-design-vue';
+import { notification } from 'pf-ui-vue';
 import { defineComponent } from 'vue';
 
 export default defineComponent({

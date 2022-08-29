@@ -29,7 +29,7 @@ customize collapse/expand icon of tree node
 <script lang="ts">
 import { DownOutlined } from '@ant-design/icons-vue';
 import { defineComponent, ref } from 'vue';
-import type { TreeProps } from 'ant-design-vue';
+import type { TreeProps } from 'pf-ui-vue';
 export default defineComponent({
   components: {
     DownOutlined,

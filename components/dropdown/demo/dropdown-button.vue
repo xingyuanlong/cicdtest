@@ -103,7 +103,7 @@ A button is on the left, and a related functional menu is on the right. You can 
 <script lang="ts">
 import { defineComponent } from 'vue';
 import { UserOutlined, DownOutlined } from '@ant-design/icons-vue';
-import type { MenuProps } from 'ant-design-vue';
+import type { MenuProps } from 'pf-ui-vue';
 
 export default defineComponent({
   components: {

@@ -17,14 +17,16 @@ You can choose another style of `image` by setting image to `Empty.PRESENTED_IMA
 </docs>
 <template>
   <a-empty :image="simpleImage" />
+  <a-empty :image="infoImage" />
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { Empty } from 'ant-design-vue';
+import { Empty } from 'pf-ui-vue';
 export default defineComponent({
   setup() {
     return {
       simpleImage: Empty.PRESENTED_IMAGE_SIMPLE,
+      infoImage: Empty.PRESENTED_IMAGE_INFO,
     };
   },
 });

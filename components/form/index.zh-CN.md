@@ -126,7 +126,7 @@ cover: https://gw.alipayobjects.com/zos/alicdn/ORmcdeaoO/Form.svg
 ```html
 <script>
   // 自定义组件
-  import { Form } from 'ant-design-vue';
+  import { Form } from 'pf-ui-vue';
   export default {
     setup() {
       const formItemContext = Form.useInjectFormItemContext();
@@ -196,10 +196,10 @@ Form.Item 会对唯一子元素进行劫持，并监听 `blur` 和 `change` 事�
 
 `useForm` 是一个可以独立 Form 组件运行的方法，它使用 Vue 响应式机制进行数据的监听和校验，并将校验结果返回，你可以将校验结果绑定到任何组件上，`Form.Item` 也仅仅是将结果展示。
 
-2.2 以下版本需要需要 @ant-design-vue/use 库单独提供，不建议继续使用，你应该尽快升级到 2.2+ 版本
+2.2 以下版本需要需要 @pf-ui-vue/use 库单独提供，不建议继续使用，你应该尽快升级到 2.2+ 版本
 
 ```ts
-import { Form } from 'ant-design-vue';
+import { Form } from 'pf-ui-vue';
 const useForm = Form.useForm;
 
 useForm(modelRef, ruleRef, [options]);

@@ -45,9 +45,9 @@ See more advanced usage at [async-validator](https://github.com/yiminghe/async-v
   </a-form>
 </template>
 <script lang="ts">
-import type { Rule } from 'ant-design-vue/es/form';
+import type { Rule } from 'pf-ui-vue/es/form';
 import { defineComponent, reactive, ref } from 'vue';
-import type { FormInstance } from 'ant-design-vue';
+import type { FormInstance } from 'pf-ui-vue';
 interface FormState {
   pass: string;
   checkPass: string;

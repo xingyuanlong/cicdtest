@@ -113,7 +113,7 @@ There are 12 `placement` options available. Use `arrowPointAtCenter` if you want
   </div>
 </template>
 <script>
-import { message } from 'ant-design-vue';
+import { message } from 'pf-ui-vue';
 import { defineComponent } from 'vue';
 export default defineComponent({
   setup() {

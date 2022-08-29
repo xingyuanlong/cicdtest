@@ -1,4 +1,4 @@
-import { message } from 'ant-design-vue';
+import { message } from 'pf-ui-vue';
 import { defineComponent } from 'vue';
 import CopyableIcon from './CopyableIcon.vue';
 

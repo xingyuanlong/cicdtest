@@ -6,7 +6,7 @@
           <div class="footer-center">
             <h2>Ant Design</h2>
             <div>
-              <a href="https://github.com/vueComponent/ant-design-vue" target="_blank ">
+              <a href="https://github.com/vueComponent/pf-ui-vue" target="_blank ">
                 <span>GitHub</span>
               </a>
               <span></span>
@@ -40,12 +40,12 @@
           <div class="footer-center">
             <h2>{{ isCN ? '社区' : 'Community' }}</h2>
             <div v-if="isCN">
-              <a href="https://zhuanlan.zhihu.com/ant-design-vue" target="_blank">
+              <a href="https://zhuanlan.zhihu.com/pf-ui-vue" target="_blank">
                 <span>知乎专栏</span>
               </a>
             </div>
             <div>
-              <a href="https://github.com/vueComponent/ant-design-vue/releases" target="_blank">
+              <a href="https://github.com/vueComponent/pf-ui-vue/releases" target="_blank">
                 <span>{{ isCN ? '更新记录' : 'Change Log' }}</span>
               </a>
             </div>

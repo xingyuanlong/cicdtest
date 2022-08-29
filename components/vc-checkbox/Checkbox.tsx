@@ -69,7 +69,7 @@ export default defineComponent({
         nativeEvent: e,
       };
 
-      // fix https://github.com/vueComponent/ant-design-vue/issues/3047
+      // fix https://github.com/vueComponent/pf-ui-vue/issues/3047
       // 受控模式下维持现有状态
       if (props.checked !== undefined) {
         inputRef.value.checked = !!props.checked;

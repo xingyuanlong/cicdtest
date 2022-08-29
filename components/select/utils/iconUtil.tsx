@@ -1,4 +1,4 @@
-import DownOutlined from '@ant-design/icons-vue/DownOutlined';
+import CaretDownOutlined from '@ant-design/icons-vue/CaretDownOutlined';
 import LoadingOutlined from '@ant-design/icons-vue/LoadingOutlined';
 import CheckOutlined from '@ant-design/icons-vue/CheckOutlined';
 import CloseOutlined from '@ant-design/icons-vue/CloseOutlined';
@@ -30,7 +30,7 @@ export default function getIcons(props: any, slots: any = {}) {
       if (open && showSearch) {
         return <SearchOutlined class={iconCls} />;
       }
-      return <DownOutlined class={iconCls} />;
+      return <CaretDownOutlined class={iconCls} />;
     };
   }
 

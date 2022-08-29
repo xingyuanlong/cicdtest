@@ -28,7 +28,7 @@ If a `sortOrder` or `defaultSortOrder` is specified with the value `ascend` or `
   <a-table :columns="columns" :data-source="data" @change="onChange" />
 </template>
 <script lang="ts">
-import type { TableColumnType, TableProps } from 'ant-design-vue';
+import type { TableColumnType, TableProps } from 'pf-ui-vue';
 import { defineComponent } from 'vue';
 
 type TableDataType = {

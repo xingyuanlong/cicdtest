@@ -33,7 +33,7 @@ Use slot for custom action icons of files.
 <script lang="ts">
 import { UploadOutlined, StarOutlined } from '@ant-design/icons-vue';
 import { defineComponent, ref } from 'vue';
-import type { UploadChangeParam, UploadProps } from 'ant-design-vue';
+import type { UploadChangeParam, UploadProps } from 'pf-ui-vue';
 
 export default defineComponent({
   components: {

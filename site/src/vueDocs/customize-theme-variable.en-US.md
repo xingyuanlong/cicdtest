@@ -7,7 +7,7 @@ Except [less customize theme](/docs/react/customize-theme), We also provide CSS 
 
 ## Caveats
 
-- This function requires at least `ant-design-vue@3.1.0-beta.0`.
+- This function requires at least `pf-ui-vue@3.1.0-beta.0`.
 
 ## How to use
 
@@ -16,8 +16,8 @@ Except [less customize theme](/docs/react/customize-theme), We also provide CSS 
 Replace your import style file with CSS Variable version:
 
 ```diff
--- import 'ant-design-vue/dist/antd.min.css';
-++ import 'ant-design-vue/dist/antd.variable.min.css';
+-- import 'pf-ui-vue/dist/antd.min.css';
+++ import 'pf-ui-vue/dist/antd.variable.min.css';
 ```
 
 Note: You need remove `babel-plugin-import` for the dynamic theme.
@@ -27,7 +27,7 @@ Note: You need remove `babel-plugin-import` for the dynamic theme.
 Call ConfigProvider static function to modify theme color:
 
 ```ts
-import { ConfigProvider } from 'ant-design-vue';
+import { ConfigProvider } from 'pf-ui-vue';
 
 ConfigProvider.config({
   theme: {
@@ -55,7 +55,7 @@ Modify `prefixCls` on the root of ConfigProvider:
 Also need call the static function to modify `prefixCls`:
 
 ```ts
-import { ConfigProvider } from 'ant-design-vue';
+import { ConfigProvider } from 'pf-ui-vue';
 ConfigProvider.config({
   prefixCls: 'custom',
   theme: {
@@ -69,7 +69,7 @@ ConfigProvider.config({
 Since prefix modified. Origin `antd.variable.css` should also be replaced:
 
 ```bash
-lessc --js --modify-var="ant-prefix=custom" ant-design-vue/dist/antd.variable.less modified.css
+lessc --js --modify-var="ant-prefix=custom" pf-ui-vue/dist/antd.variable.less modified.css
 ```
 
 ### Related changes

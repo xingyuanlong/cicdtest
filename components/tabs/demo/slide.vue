@@ -34,7 +34,7 @@ In order to fit in more tabs, they can slide left and right (or up and down).
 </template>
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
-import type { TabsProps } from 'ant-design-vue';
+import type { TabsProps } from 'pf-ui-vue';
 
 export default defineComponent({
   setup() {

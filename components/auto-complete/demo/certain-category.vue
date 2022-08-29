@@ -41,7 +41,7 @@ Lookup-Patterns - Certain Category.
         </template>
         <template v-else-if="item.value === 'all'">
           <a
-            href="https://www.google.com/search?q=ant-design-vue"
+            href="https://www.google.com/search?q=pf-ui-vue"
             target="_blank"
             rel="noopener noreferrer"
           >

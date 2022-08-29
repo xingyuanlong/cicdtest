@@ -31,7 +31,7 @@ There are 4 position options available.
 </template>
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
-import type { CarouselProps } from 'ant-design-vue';
+import type { CarouselProps } from 'pf-ui-vue';
 
 export default defineComponent({
   setup() {

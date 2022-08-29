@@ -290,7 +290,7 @@ export function getDataEvents(child) {
 }
 
 // use getListeners instead this.$listeners
-// https://github.com/vueComponent/ant-design-vue/issues/1705
+// https://github.com/vueComponent/pf-ui-vue/issues/1705
 export function getListeners(context) {
   return (context.$vnode ? context.$vnode.componentOptions.listeners : context.$listeners) || {};
 }

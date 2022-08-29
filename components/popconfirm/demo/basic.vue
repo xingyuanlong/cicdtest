@@ -29,7 +29,7 @@ The basic example.
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { message } from 'ant-design-vue';
+import { message } from 'pf-ui-vue';
 export default defineComponent({
   setup() {
     const confirm = (e: MouseEvent) => {

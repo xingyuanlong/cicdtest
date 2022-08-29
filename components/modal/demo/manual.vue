@@ -20,7 +20,7 @@ Manually updating and destroying a modal from `Modal.method`.
   <a-button @click="countDown">Open modal to close in 5s</a-button>
 </template>
 <script lang="ts">
-import { Modal } from 'ant-design-vue';
+import { Modal } from 'pf-ui-vue';
 import { defineComponent } from 'vue';
 export default defineComponent({
   setup() {

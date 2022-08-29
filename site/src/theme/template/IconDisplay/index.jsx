@@ -2,7 +2,7 @@ import Icon, * as AntdIcons from '@ant-design/icons-vue';
 import { categories } from './fields';
 import { FilledIcon, OutlinedIcon, TwoToneIcon } from './themeIcons';
 import Category from './Category';
-import { Radio } from 'ant-design-vue';
+import { Radio } from 'pf-ui-vue';
 import { defineComponent } from 'vue';
 
 const ThemeType = {

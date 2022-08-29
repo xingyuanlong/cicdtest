@@ -31,7 +31,7 @@ title:
 </template>
 <script lang="ts">
 import { defineComponent, reactive, toRaw } from 'vue';
-import { Form } from 'ant-design-vue';
+import { Form } from 'pf-ui-vue';
 
 const useForm = Form.useForm;
 export default defineComponent({

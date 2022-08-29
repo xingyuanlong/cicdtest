@@ -34,8 +34,8 @@ components: {
 
 const mainJs = `import { createApp } from "vue";
 import App from "./App.vue";
-import Antd from 'ant-design-vue';
-import 'ant-design-vue/dist/antd.css';
+import Antd from 'pf-ui-vue';
+import 'pf-ui-vue/dist/antd.css';
 
 const app = createApp(App).use(Antd);
 app.mount("#app");
@@ -64,7 +64,7 @@ export function getCodeSandboxParams(code: string, meta: Meta): string {
           dependencies: {
             ...getDeps(code),
             vue: 'next',
-            'ant-design-vue': packageInfo.version,
+            'pf-ui-vue': packageInfo.version,
           },
           devDependencies: {
             '@vue/cli-plugin-babel': '~4.5.0',

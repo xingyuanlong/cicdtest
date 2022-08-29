@@ -36,7 +36,7 @@ Make it pop up under some conditions.
   </div>
 </template>
 <script lang="ts">
-import { message } from 'ant-design-vue';
+import { message } from 'pf-ui-vue';
 import { ref, defineComponent } from 'vue';
 export default defineComponent({
   setup() {

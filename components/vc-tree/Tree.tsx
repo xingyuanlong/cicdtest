@@ -597,7 +597,7 @@ export default defineComponent({
 
       warning(
         !dropToChild,
-        "Can not drop to dragNode's children node. Maybe this is a bug of ant-design-vue. Please report an issue.",
+        "Can not drop to dragNode's children node. Maybe this is a bug of pf-ui-vue. Please report an issue.",
       );
 
       const posArr = posToArr(dropTargetPos);

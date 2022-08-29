@@ -302,7 +302,7 @@ describe('Progress', () => {
     const errorSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
     mount(<Progress percent={60} success={{ progress: 30 }} />);
     expect(errorSpy).toHaveBeenCalledWith(
-      'Warning: [ant-design-vue: Progress] `success.progress` is deprecated. Please use `success.percent` instead.',
+      'Warning: [pf-ui-vue: Progress] `success.progress` is deprecated. Please use `success.percent` instead.',
     );
   });
 
@@ -314,7 +314,7 @@ describe('Progress', () => {
       },
     });
     expect(errorSpy).toHaveBeenCalledWith(
-      'Warning: [ant-design-vue: Progress] `success.progress` is deprecated. Please use `success.percent` instead.',
+      'Warning: [pf-ui-vue: Progress] `success.progress` is deprecated. Please use `success.percent` instead.',
     );
   });
 });

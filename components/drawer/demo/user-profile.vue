@@ -109,7 +109,7 @@ Use Drawer to quickly preview details of an object, such as those in a list.
     <p :style="pStyle">Contacts</p>
     <a-row>
       <a-col :span="12">
-        <description-item title="Email" content="ant-design-vue@example.com" />
+        <description-item title="Email" content="pf-ui-vue@example.com" />
       </a-col>
       <a-col :span="12">
         <description-item title="Phone Number" content="+86 181 0000 0000" />
@@ -119,8 +119,8 @@ Use Drawer to quickly preview details of an object, such as those in a list.
       <a-col :span="24">
         <description-item title="Github">
           <template #content>
-            <a href="https://github.com/vueComponent/ant-design-vue">
-              github.com/vueComponent/ant-design-vue
+            <a href="https://github.com/vueComponent/pf-ui-vue">
+              github.com/vueComponent/pf-ui-vue
             </a>
           </template>
         </description-item>

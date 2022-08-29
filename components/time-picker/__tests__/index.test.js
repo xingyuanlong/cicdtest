@@ -42,7 +42,7 @@ describe('TimePicker', () => {
     await sleep();
     expect(document.getElementsByClassName('my-btn').length).toBeTruthy();
     expect(errorSpy).toHaveBeenCalledWith(
-      'Warning: [ant-design-vue: TimePicker] `addon` is deprecated. Please use `v-slot:renderExtraFooter` instead.',
+      'Warning: [pf-ui-vue: TimePicker] `addon` is deprecated. Please use `v-slot:renderExtraFooter` instead.',
     );
   });
 
