@@ -66,13 +66,18 @@ const Empty: EmptyType = (props, { slots = {}, attrs }) => {
             class={classNames(prefixCls, className, {
               [`${prefixCls}-normal`]: image === simpleEmptyImg,
               [`${prefixCls}-rtl`]: direction.value === 'rtl',
+
             })}
             {...restProps}
           >
-            <div class={`${prefixCls}-image`} style={imageStyle}>
-              {imageNode}
+            <div class={classNames(`${prefixCls}-info`, {
+              line: image === infoEmptyImg
+            })}>
+              <div class={`${prefixCls}-image`} style={imageStyle}>
+                {imageNode}
+              </div>
+              {des && <p class={`${prefixCls}-description`}>{des}</p>}
             </div>
-            {des && <p class={`${prefixCls}-description`}>{des}</p>}
             {slots.default && (
               <div class={`${prefixCls}-footer`}>{filterEmpty(slots.default())}</div>
             )}

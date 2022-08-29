@@ -8,11 +8,11 @@ title:
 
 ## zh-CN
 
-可以通过设置 `image` 为 `Empty.PRESENTED_IMAGE_SIMPLE` 选择另一种风格的图片。
+可以通过设置 `image` 为 `Empty.PRESENTED_IMAGE_SIMPLE`, `Empty.PRESENTED_IMAGE_INFO` 选择另外的图片风格。
 
 ## en-US
 
-You can choose another style of `image` by setting image to `Empty.PRESENTED_IMAGE_SIMPLE`.
+You can choose another style of `image` by setting image to `Empty.PRESENTED_IMAGE_SIMPLE` or `Empty.PRESENTED_IMAGE_INFO`.
 
 </docs>
 <template>
