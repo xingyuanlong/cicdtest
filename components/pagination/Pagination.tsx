@@ -5,6 +5,8 @@ import RightOutlined from '@ant-design/icons-vue/RightOutlined';
 import DoubleLeftOutlined from '@ant-design/icons-vue/DoubleLeftOutlined';
 import DoubleRightOutlined from '@ant-design/icons-vue/DoubleRightOutlined';
 import VcSelect from '../select';
+import Button from '../button';
+import Input from '../input';
 import MiniSelect from './MiniSelect';
 import { useLocaleReceiver } from '../locale-provider/LocaleReceiver';
 import VcPagination from '../vc-pagination';
@@ -13,6 +15,9 @@ import classNames from '../_util/classNames';
 import useConfigInject from '../_util/hooks/useConfigInject';
 import useBreakpoint from '../_util/hooks/useBreakpoint';
 
+// TODO: 沟通 mini 翻页样式
+// TODO: select 样式统一
+// TODO: icon 
 export const paginationProps = () => ({
   total: Number,
   defaultCurrent: Number,
@@ -36,6 +41,8 @@ export const paginationProps = () => ({
   selectPrefixCls: String,
   totalBoundaryShowSizeChanger: Number,
   selectComponentClass: String,
+  buttonComponentClass: String,
+  inputComponentClass: String,
   itemRender: Function as PropType<
     (opt: {
       page: number;
@@ -135,6 +142,8 @@ export default defineComponent({
         itemRender = slots.itemRender,
         buildOptionText = slots.buildOptionText,
         selectComponentClass,
+        buttonComponentClass,
+        inputComponentClass,
         responsive,
         ...restProps
       } = props;
@@ -146,6 +155,8 @@ export default defineComponent({
         prefixCls: prefixCls.value,
         selectPrefixCls: selectPrefixCls.value,
         selectComponentClass: selectComponentClass || (isSmall ? MiniSelect : VcSelect),
+        buttonComponentClass: buttonComponentClass || Button,
+        inputComponentClass: inputComponentClass || Input,
         locale: locale.value,
         buildOptionText,
         ...attrs,

@@ -43,6 +43,8 @@ export default defineComponent({
     showLessItems: { type: Boolean, default: false },
     // showSizeChange: PropTypes.func.def(noop),
     selectComponentClass: PropTypes.any,
+    buttonComponentClass: PropTypes.any,
+    inputComponentClass: PropTypes.any,
     showPrevNextJumpers: { type: Boolean, default: true },
     showQuickJumper: PropTypes.oneOfType([PropTypes.looseBool, PropTypes.object]).def(false),
     showTitle: { type: Boolean, default: true },
@@ -347,6 +349,8 @@ export default defineComponent({
       jumpPrevIcon,
       jumpNextIcon,
       selectComponentClass,
+      buttonComponentClass,
+      inputComponentClass,
       selectPrefixCls,
       pageSizeOptions,
     } = this.$props;
@@ -637,8 +641,7 @@ export default defineComponent({
           { [`${prefixCls}`]: true, [`${prefixCls}-disabled`]: disabled },
           className,
         )}
-      >
-        {totalText}
+      >  
         <li
           title={showTitle ? locale.prev_page : null}
           onClick={this.prev}
@@ -664,11 +667,14 @@ export default defineComponent({
         >
           {this.renderNext(nextPage)}
         </li>
+        {totalText}
         <Options
           disabled={disabled}
           locale={locale}
           rootPrefixCls={prefixCls}
           selectComponentClass={selectComponentClass}
+          buttonComponentClass={buttonComponentClass}
+          inputComponentClass={inputComponentClass}
           selectPrefixCls={selectPrefixCls}
           changeSize={this.getShowSizeChanger() ? this.changePageSize : null}
           current={stateCurrent}

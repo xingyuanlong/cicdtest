@@ -10,6 +10,8 @@ export default defineComponent({
     changeSize: Function,
     quickGo: Function,
     selectComponentClass: PropTypes.any,
+    buttonComponentClass: PropTypes.any,
+    inputComponentClass: PropTypes.any,
     current: Number,
     pageSizeOptions: PropTypes.array.def(['10', '20', '50', '100']),
     pageSize: Number,
@@ -110,6 +112,7 @@ export default defineComponent({
 
         changeSelect = (
           <Select
+            size="small"
             disabled={disabled}
             prefixCls={selectPrefixCls}
             showSearch={false}
@@ -124,16 +127,18 @@ export default defineComponent({
         );
       }
 
+     
       if (quickGo) {
         if (goButton) {
           gotoButton =
             typeof goButton === 'boolean' ? (
               <button
-                type="button"
+                // size="small"
+                // type="dashed"
                 onClick={go}
                 onKeyup={go}
                 disabled={disabled}
-                class={`${prefixCls}-quick-jumper-button`}
+                class={`ant-btn ${prefixCls}-quick-jumper-button`}
               >
                 {locale.jump_to_confirm}
               </button>

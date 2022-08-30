@@ -26,9 +26,10 @@
   &-total-text {
     display: inline-block;
     height: @pagination-item-size;
-    margin-right: 8px;
+    margin-left: 10px;
     line-height: @pagination-item-size - 2px;
     vertical-align: middle;
+    color: @text-color-secondary;
   }
 
   &-item {
@@ -42,7 +43,7 @@
     vertical-align: middle;
     list-style: none;
     background-color: @pagination-item-bg;
-    border: @border-width-base @border-style-base @border-color-base;
+    border: @border-width-base @border-style-base @pagination-item-border-color;
     border-radius: @border-radius-base;
     outline: 0;
     cursor: pointer;
@@ -51,7 +52,7 @@
     a {
       display: block;
       padding: 0 6px;
-      color: @text-color;
+      color: @text-color-secondary;
       transition: none;
 
       &:hover {
@@ -212,7 +213,7 @@
       font-size: 12px;
       text-align: center;
       background-color: @pagination-item-link-bg;
-      border: @border-width-base @border-style-base @border-color-base;
+      border: @border-width-base @border-style-base @pagination-item-border-color;
       border-radius: @border-radius-base;
       outline: none;
       transition: all 0.3s;
@@ -230,21 +231,25 @@
   }
 
   &-disabled {
+    
     &,
     &:hover {
       cursor: not-allowed;
       .@{pagination-prefix-cls}-item-link {
         color: @disabled-color;
-        border-color: @border-color-base;
+        border-color: @pagination-item-border-color;
         cursor: not-allowed;
       }
+    }
+    button {
+      background-color: @pagination-item-disabled-bg-active !important;
     }
 
     &:focus-visible {
       cursor: not-allowed;
       .@{pagination-prefix-cls}-item-link {
         color: @disabled-color;
-        border-color: @border-color-base;
+        border-color: @pagination-item-border-color;
         cursor: not-allowed;
       }
     }
@@ -256,7 +261,7 @@
 
   &-options {
     display: inline-block;
-    margin-left: 16px;
+    margin-left: 10px;
     vertical-align: middle;
 
     // IE11 css hack. `*::-ms-backdrop,` is a must have
@@ -271,21 +276,43 @@
       display: inline-block;
       width: auto;
     }
-
+    .ant-select-selection-item {
+      color: @text-color-secondary !important;
+    }
     &-quick-jumper {
       display: inline-block;
-      height: @input-height-base;
+      height: @input-height-sm;
       margin-left: @margin-xs;
-      line-height: @input-height-base;
+      line-height: @input-height-sm;
       vertical-align: top;
+      color: @text-color-secondary;
 
       input {
         .input();
 
         width: 50px;
-        height: @input-height-base;
+        height: @input-height-sm;
         margin: 0 8px;
       }
+
+      &-button {
+        margin-left: 10px;
+        padding: 0px 17px;
+        height: 24px;
+        color: #666;
+        font-size: 12px;
+        font-family: PingFangSC, PingFangSC-Regular;
+        font-weight: 400;
+
+        // span {
+        //   height: 24px;
+        //   line-height: 22px;
+        //   font-size: 12px;
+        //   font-family: PingFangSC, PingFangSC-Regular;
+        //   font-weight: 400;
+        // }
+      }
+      
     }
   }
 
@@ -402,12 +429,14 @@
         width: 44px;
         height: @input-height-sm;
       }
+
     }
   }
 
   // ============================ Disabled ============================
   &&-disabled {
     cursor: not-allowed;
+   
 
     .@{pagination-prefix-cls}-item {
       background: @disabled-bg;

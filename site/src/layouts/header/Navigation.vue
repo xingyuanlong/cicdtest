@@ -17,15 +17,15 @@
       </router-link>
     </a-menu-item>
     <a-menu-item v-if="isZhCN" key="surely-vue">
-      <a
+      <!-- <a
         href="https://www.surely.cool"
         target="_blank"
         rel="noopener noreferrer"
         style="position: relative"
-      >
-        高级组件
+      > </a> -->
+        业务组件
         <a-badge color="red" style="position: absolute; top: -35px; right: -15px" />
-      </a>
+     
     </a-menu-item>
     <template v-if="isMobile">
       <a-menu-item key="switch-lang" @click="$emit('langChange')">
