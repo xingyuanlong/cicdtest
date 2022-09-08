@@ -52,7 +52,6 @@
     height: @table-tr-height;
   }
 
-  &-tbody > tr > td,
   tfoot > tr > th,
   tfoot > tr > td {
     padding: 7.5px @table-padding-horizontal;
@@ -85,7 +84,7 @@
 
   // ============================ Title =============================
   &-title {
-    padding: @table-padding-vertical-sm @table-padding-horizontal;
+    padding: @table-padding-vertical-sm - 0.5 @table-padding-horizontal;
   }
 
   // ============================ Footer ============================
@@ -104,7 +103,7 @@
         font-weight: 500;
         text-align: left;
         background: @table-header-bg;
-        border-bottom: @border-width-base @border-style-base @table-border-color;
+        // border-bottom: @border-width-base @border-style-base @table-border-color;
         transition: background 0.3s ease;
         box-shadow: 0px -1px 0px 0px @table-header-box-shadow-color inset;
 
@@ -139,6 +138,7 @@
       > td {
         border-bottom: @border-width-base @border-style-base @table-border-color;
         transition: background 0.3s;
+        padding: 7.5px @table-padding-horizontal;
 
         // ========================= Nest Table ===========================
         > .@{table-prefix-cls}-wrapper:only-child,
@@ -158,6 +158,26 @@
           }
         }
       }
+      
+      &.@{table-prefix-cls}-row.striped {
+        td {
+          padding: 8px @table-padding-horizontal;
+          border-bottom: none;
+        }
+
+        &.table-striped {
+          background-color: @table-striped-color;
+        }
+
+        &:last-of-type:not(.table-striped) {
+          td {
+            padding-top: 7.5px;
+            padding-bottom: 7.5px;
+            border-bottom: @border-width-base @border-style-base @table-border-color;
+          }
+        }
+      }
+
 
       &.@{table-prefix-cls}-row:hover > td,
       > td.@{table-prefix-cls}-cell-row-hover {
@@ -174,6 +194,24 @@
           > td {
             background: @table-selected-row-hover-bg;
           }
+        }
+      }
+
+      &.line2 {
+        td {
+          padding: 4px @table-padding-horizontal;
+        }
+      }
+
+      &.line3 {
+        td {
+          padding: 3px @table-padding-horizontal;
+        }
+      }
+
+      &.bodyNoPadding {
+        td {
+          padding: 0px;
         }
       }
     }
