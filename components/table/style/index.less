@@ -23,7 +23,9 @@
 .@{table-prefix-cls} {
   .reset-component();
   position: relative;
+  color: @table-header-color;
   font-size: @table-font-size;
+  line-height: 16px;
   background: @table-bg;
   border-radius: @table-border-radius-base;
 
@@ -46,14 +48,14 @@
   }
 
   &-thead > tr > th {
-    padding: 0 @table-padding-vertical;
+    padding: 0 @table-padding-horizontal;
     height: @table-tr-height;
   }
 
   &-tbody > tr > td,
   tfoot > tr > th,
   tfoot > tr > td {
-    padding: @table-padding-vertical @table-padding-horizontal;
+    padding: 7.5px @table-padding-horizontal;
   }
 
   &-cell-ellipsis {
@@ -83,12 +85,12 @@
 
   // ============================ Title =============================
   &-title {
-    padding: @table-padding-vertical @table-padding-horizontal;
+    padding: @table-padding-vertical-sm @table-padding-horizontal;
   }
 
   // ============================ Footer ============================
   &-footer {
-    padding: @table-padding-vertical @table-padding-horizontal;
+    padding: @table-padding-vertical-sm - 0.5 @table-padding-horizontal;
     color: @table-footer-color;
     background: @table-footer-bg;
   }
@@ -104,6 +106,7 @@
         background: @table-header-bg;
         border-bottom: @border-width-base @border-style-base @table-border-color;
         transition: background 0.3s ease;
+        box-shadow: 0px -1px 0px 0px @table-header-box-shadow-color inset;
 
         &[colspan]:not([colspan='1']) {
           text-align: center;
