@@ -271,13 +271,13 @@
     cursor: pointer;
     transition: all 0.3s;
 
-    &:hover {
-      background: @table-header-sort-active-bg;
+    // &:hover {
+    //   background: @table-header-sort-active-bg;
 
-      &::before {
-        background-color: transparent !important;
-      }
-    }
+    //   &::before {
+    //     background-color: transparent !important;
+    //   }
+    // }
 
     // https://github.com/ant-design/ant-design/issues/30969
     &.@{table-prefix-cls}-cell-fix-left:hover,
@@ -286,17 +286,17 @@
     }
   }
 
-  &-thead th.@{table-prefix-cls}-column-sort {
-    background: @table-header-sort-bg;
+  // 先隐藏，不需要展示筛选的颜色变化---2022.9.9
+  // &-thead th.@{table-prefix-cls}-column-sort {
+  //   background: @table-header-sort-bg;
+  //   &::before {
+  //     background-color: transparent !important;
+  //   }
+  // }
 
-    &::before {
-      background-color: transparent !important;
-    }
-  }
-
-  td&-column-sort {
-    background: @table-body-sort-bg;
-  }
+  // td&-column-sort {
+  //   background: @table-body-sort-bg;
+  // }
 
   &-column-title {
     position: relative;

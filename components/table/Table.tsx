@@ -229,7 +229,7 @@ export const tableProps = () => {
     sortDirections: { type: Array as PropType<SortOrder[]>, default: undefined },
     showSorterTooltip: {
       type: [Boolean, Object] as PropType<boolean | TooltipProps>,
-      default: true,
+      default: false,
     },
     contextSlots: {
       type: Object as PropType<ContextSlots>,
