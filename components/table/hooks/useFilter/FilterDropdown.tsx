@@ -1,5 +1,5 @@
 import isEqual from 'lodash-es/isEqual';
-import FilterFilled from '@ant-design/icons-vue/FilterFilled';
+import CaretDownOutlined from '@ant-design/icons-vue/CaretDownOutlined';
 import Button from '../../../button';
 import Menu from '../../../menu';
 import Checkbox from '../../../checkbox';
@@ -489,7 +489,7 @@ export default defineComponent<FilterDropdownProps<any>>({
       } else if (filterIconRef.value) {
         filterIcon = filterIconRef.value;
       } else {
-        filterIcon = <FilterFilled />;
+        filterIcon = <CaretDownOutlined />;
       }
 
       return (

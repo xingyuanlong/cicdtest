@@ -161,18 +161,18 @@
       
       &.@{table-prefix-cls}-row.striped {
         td {
-          padding: 8px @table-padding-horizontal;
+          padding: @table-padding-vertical @table-padding-horizontal;
           border-bottom: none;
         }
 
-        &.table-striped {
+        &.ant-table-striped {
           background-color: @table-striped-color;
         }
 
-        &:last-of-type:not(.table-striped) {
+        &:last-of-type:not(.ant-table-striped) {
           td {
-            padding-top: 7.5px;
-            padding-bottom: 7.5px;
+            padding-top: @table-padding-vertical - 0.5;
+            padding-bottom: @table-padding-vertical - 0.5;
             border-bottom: @border-width-base @border-style-base @table-border-color;
           }
         }
@@ -301,7 +301,7 @@
   &-column-title {
     position: relative;
     z-index: 1;
-    flex: 1;
+    // flex: 1;
   }
 
   &-column-sorters {
@@ -355,7 +355,7 @@
   // ============================ Filter ============================
   &-filter-column {
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
   }
 
   &-filter-trigger {

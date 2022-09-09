@@ -110,7 +110,7 @@ export interface TableProps<RecordType = DefaultRecordType>
 }
 
 const defaultRowClassName = (record, index) => {
-  return (index % 2 === 1 ? 'table-striped' : undefined)
+  return (index % 2 === 1 ? 'ant-table-striped' : undefined)
 }
 
 export const tableProps = () => {
