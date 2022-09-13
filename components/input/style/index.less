@@ -48,9 +48,14 @@
   }
 
   &-textarea-show-count {
+    position: relative;
     // https://github.com/ant-design/ant-design/issues/33049
     > .@{input-prefix-cls} {
       height: 100%;
+    }
+
+    .ant-input {
+      padding: 8px 10px 26px 10px;
     }
 
     &::after {
@@ -59,6 +64,9 @@
       white-space: nowrap;
       content: attr(data-count);
       pointer-events: none;
+      position: absolute;
+      bottom: 4px;
+      right: 8px;
     }
   }
 }
