@@ -214,8 +214,8 @@ export default function generateSinglePicker<DateType, ExtraProps = {}>(
               generateConfig={generateConfig}
               prevIcon={slots.prevIcon?.() || <CaretLeftOutlined /> } // <span class={`${pre}-prev-icon`} />
               nextIcon={slots.nextIcon?.() || <CaretRightOutlined /> } // <span class={`${pre}-next-icon`} />
-              superPrevIcon={slots.superPrevIcon?.() || null} // <span class={`${pre}-super-prev-icon`} />
-              superNextIcon={slots.superNextIcon?.() || null} // <span class={`${pre}-super-next-icon`} />
+              superPrevIcon={slots.superPrevIcon?.() || <span class={`${pre}-super-prev-icon`} />}
+              superNextIcon={slots.superNextIcon?.() || <span class={`${pre}-super-next-icon`} />} // 
               components={Components}
               direction={direction.value}
               onChange={onChange}

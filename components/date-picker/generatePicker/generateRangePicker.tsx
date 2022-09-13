@@ -2,6 +2,9 @@ import CalendarOutlined from '@ant-design/icons-vue/CalendarOutlined';
 import ClockCircleOutlined from '@ant-design/icons-vue/ClockCircleOutlined';
 import CloseCircleFilled from '@ant-design/icons-vue/CloseCircleFilled';
 import SwapRightOutlined from '@ant-design/icons-vue/SwapRightOutlined';
+import CaretLeftOutlined from '@ant-design/icons-vue/CaretLeftOutlined'
+import CaretRightOutlined from '@ant-design/icons-vue/CaretRightOutlined'
+
 import { RangePicker as VCRangePicker } from '../../vc-picker';
 import type { GenerateConfig } from '../../vc-picker/generate/index';
 import enUS from '../locale/en_US';
@@ -194,8 +197,8 @@ export default function generateRangePicker<DateType, ExtraProps = {}>(
             prefixCls={pre}
             getPopupContainer={attrs.getCalendarContainer || getPopupContainer.value}
             generateConfig={generateConfig}
-            prevIcon={slots.prevIcon?.() || <span class={`${pre}-prev-icon`} />}
-            nextIcon={slots.nextIcon?.() || <span class={`${pre}-next-icon`} />}
+            prevIcon={slots.prevIcon?.() || <CaretLeftOutlined />}
+            nextIcon={slots.nextIcon?.() || <CaretRightOutlined />}
             superPrevIcon={slots.superPrevIcon?.() || <span class={`${pre}-super-prev-icon`} />}
             superNextIcon={slots.superNextIcon?.() || <span class={`${pre}-super-next-icon`} />}
             components={Components}
