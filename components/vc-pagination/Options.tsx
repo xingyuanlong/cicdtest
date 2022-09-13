@@ -30,7 +30,7 @@ export default defineComponent({
     });
 
     const defaultBuildOptionText = opt => {
-      return `${opt.value} ${props.locale.items_per_page}`;
+      return `${opt.value}${props.locale.items_per_page}`;
     };
     const handleChange: EventHandler = e => {
       const { value, composing } = e.target;
