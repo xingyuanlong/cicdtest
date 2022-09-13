@@ -1,0 +1,45 @@
+variables:
+  DOCKER_TLS_CERTDIR: ""
+  PROJECT_NAME: "pf-ui-vue"
+  GIT_CLEAN_FLAGS: "none"
+  IMAGE_ENV: "platform"
+  # IMAGE_ENV: "lichen"
+
+cache: 
+  key: $CI_PROJECT_ID
+  paths: 
+    - node_modules
+    
+
+stages: 
+  - install
+  - build
+  - docker
+
+install:
+  stage: install
+  rules:
+    - if $CI_COMMIT_BRANCH = develop
+  script: 
+    - npm ci
+
+build: 
+  stage: build
+  needs: 
+    - install
+  script: 
+    - npm run site
+    - cp  ./Dockerfile ./dist
+  artifacts:
+    - dist
+docker: 
+  dependencies: 
+    - build
+  before_script:
+  - mkdir -p $HOME/.docker
+  - echo $DOCKER_AUTH_CONFIG > $HOME/.docker/config.txt
+  script:
+    - docker build --build-arg ARGVAL=prod.gogos -t $APPLICATION_IP/$IMAGE_ENV/$PROJECT_NAME:$CI_COMMIT_REF_SLUG ./dist
+    - docker login --username=$HARBOR_USER_NAME --password-stdin < $HOME/.docker/config.txt $APPLICATION_IP
+    - docker push $APPLICATION_IP/$IMAGE_ENV/$PROJECT_NAME:$CI_COMMIT_REF_SLUG
+    - docker rmi $APPLICATION_IP/$IMAGE_ENV/$PROJECT_NAME:$CI_COMMIT_REF_SLUG
