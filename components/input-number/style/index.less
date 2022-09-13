@@ -49,6 +49,7 @@
     &:hover &-up-inner,
     &:hover &-down-inner {
       color: @input-number-handler-hover-bg;
+      
     }
   }
 
@@ -57,7 +58,7 @@
     .iconfont-mixin();
 
     position: absolute;
-    right: 4px;
+    right: 3px;
     width: 12px;
     height: 12px;
     color: @text-color-secondary;
@@ -96,7 +97,7 @@
 
   &-input {
     width: 100%;
-    height: @input-height-base - 2px;
+    height: @input-height-base;
     padding: 0 @control-padding-horizontal - 1px;
     text-align: left;
     background-color: transparent;
@@ -138,11 +139,11 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: 22px;
+    width: 20px;
     height: 100%;
     background: @input-number-handler-bg;
     border-radius: 0 @border-radius-base @border-radius-base 0;
-    opacity: 0;
+    // opacity: 0;
     transition: opacity 0.24s linear 0.1s;
 
     // Fix input number inside Menu makes icon too large
@@ -164,9 +165,16 @@
       border-left-width: 0;
     }
   }
+  &-handler-large &-handler-wrap{
+    width: 30px;
+  }
+  &-handler-large &-handler-wrap  &-handler-up-inner, &-handler-large &-handler-wrap &-handler-down-inner{
+    right: 7px;
+  }
 
   &-handler-wrap:hover &-handler {
     height: 40%;
+    
   }
 
   &:hover &-handler-wrap,
@@ -186,6 +194,9 @@
 
     &:hover {
       height: 60% !important;
+      background: #ecfbfb;
+      border-left: 1px solid @input-number-handler-hover-bg;
+      border-bottom: 1px solid @input-number-handler-hover-bg;
     }
   }
 
@@ -203,6 +214,9 @@
 
     &:hover {
       height: 60% !important;
+      background: #ecfbfb;
+      border-left: 1px solid @input-number-handler-hover-bg;
+      border-top: 1px solid @input-number-handler-hover-bg;
     }
     .@{input-number-prefix-cls}-borderless & {
       border-top-width: 0;

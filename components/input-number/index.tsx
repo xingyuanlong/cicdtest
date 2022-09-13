@@ -25,6 +25,7 @@ export const inputNumberProps = () => ({
   prefix: PropTypes.any,
   'onUpdate:value': baseProps.onChange,
   valueModifiers: Object,
+  handlerSize: String,
 });
 
 export type InputNumberProps = Partial<ExtractPropTypes<ReturnType<typeof inputNumberProps>>>;
@@ -84,6 +85,7 @@ const InputNumber = defineComponent({
         addonAfter = slots.addonAfter?.(),
         prefix = slots.prefix?.(),
         valueModifiers = {},
+        handlerSize,
         ...others
       } = { ...attrs, ...props } as InputNumberProps & HTMLAttributes;
 
@@ -97,6 +99,7 @@ const InputNumber = defineComponent({
           [`${preCls}-rtl`]: direction.value === 'rtl',
           [`${preCls}-readonly`]: readonly,
           [`${preCls}-borderless`]: !bordered,
+          [`${preCls}-handler-large`]: handlerSize === 'large',
         },
         className,
       );
@@ -114,6 +117,7 @@ const InputNumber = defineComponent({
           onBlur={handleBlur}
           onFocus={handleFocus}
           v-slots={{
+            // TODO: 替换svg
             upHandler: () => <UpOutlined class={`${preCls}-handler-up-inner`} />,
             downHandler: () => <DownOutlined class={`${preCls}-handler-down-inner`} />,
           }}
