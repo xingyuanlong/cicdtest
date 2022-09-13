@@ -15,6 +15,7 @@ export const spinProps = () => ({
   tip: PropTypes.any,
   delay: Number,
   indicator: PropTypes.any,
+  regularSpining: Boolean
 });
 
 export type SpinProps = Partial<ExtractPropTypes<ReturnType<typeof spinProps>>>;
@@ -122,6 +123,7 @@ export default defineComponent({
       prefixCls: customizePrefixCls,
       tip = this.$slots.tip?.(),
       wrapperClassName,
+      regularSpining,
     } = this.$props;
     const { class: cls, style, ...divProps } = this.$attrs;
     const { getPrefixCls, direction } = this.configProvider;
@@ -137,10 +139,10 @@ export default defineComponent({
       [`${prefixCls}-rtl`]: direction === 'rtl',
       [cls as string]: !!cls,
     };
-
+    // 新增一种loading类型
     const spinElement = (
       <div {...divProps} style={style} class={spinClassName}>
-        {this.renderIndicator(prefixCls)}
+        {regularSpining ? '' : this.renderIndicator(prefixCls)}
         {tip ? <div class={`${prefixCls}-text`}>{tip}</div> : null}
       </div>
     );

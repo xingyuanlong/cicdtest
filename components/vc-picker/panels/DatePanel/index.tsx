@@ -80,12 +80,12 @@ function DatePanel<DateType>(_props: DatePanelProps<DateType>) {
         value={value}
         viewDate={viewDate}
         // View Operation
-        onPrevYear={() => {
-          onYearChange(-1);
-        }}
-        onNextYear={() => {
-          onYearChange(1);
-        }}
+        // onPrevYear={() => {
+        //   onYearChange(-1);
+        // }}
+        // onNextYear={() => {
+        //   onYearChange(1);
+        // }}
         onPrevMonth={() => {
           onMonthChange(-1);
         }}
