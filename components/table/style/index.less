@@ -23,7 +23,9 @@
 .@{table-prefix-cls} {
   .reset-component();
   position: relative;
+  color: @table-header-color;
   font-size: @table-font-size;
+  line-height: 16px;
   background: @table-bg;
   border-radius: @table-border-radius-base;
 
@@ -37,13 +39,22 @@
   }
 
   // ============================= Cell =============================
-  &-thead > tr > th,
+  &-thead > tr > th 
   &-tbody > tr > td,
   tfoot > tr > th,
   tfoot > tr > td {
     position: relative;
-    padding: @table-padding-vertical @table-padding-horizontal;
     overflow-wrap: break-word;
+  }
+
+  &-thead > tr > th {
+    padding: 0 @table-padding-horizontal;
+    height: @table-tr-height;
+  }
+
+  tfoot > tr > th,
+  tfoot > tr > td {
+    padding: 7.5px @table-padding-horizontal;
   }
 
   &-cell-ellipsis {
@@ -73,12 +84,12 @@
 
   // ============================ Title =============================
   &-title {
-    padding: @table-padding-vertical @table-padding-horizontal;
+    padding: @table-padding-vertical-sm - 0.5 @table-padding-horizontal;
   }
 
   // ============================ Footer ============================
   &-footer {
-    padding: @table-padding-vertical @table-padding-horizontal;
+    padding: @table-padding-vertical-sm - 0.5 @table-padding-horizontal;
     color: @table-footer-color;
     background: @table-footer-bg;
   }
@@ -92,24 +103,25 @@
         font-weight: 500;
         text-align: left;
         background: @table-header-bg;
-        border-bottom: @border-width-base @border-style-base @table-border-color;
+        // border-bottom: @border-width-base @border-style-base @table-border-color;
         transition: background 0.3s ease;
+        box-shadow: 0px -1px 0px 0px @table-header-box-shadow-color inset;
 
         &[colspan]:not([colspan='1']) {
           text-align: center;
         }
-
-        &:not(:last-child):not(.@{table-prefix-cls}-selection-column):not(.@{table-prefix-cls}-row-expand-icon-cell):not([colspan])::before {
-          position: absolute;
-          top: 50%;
-          right: 0;
-          width: 1px;
-          height: 1.6em;
-          background-color: @table-header-cell-split-color;
-          transform: translateY(-50%);
-          transition: background-color 0.3s;
-          content: '';
-        }
+        // 暂时隐藏，不需要添加
+        // &:not(:last-child):not(.@{table-prefix-cls}-selection-column):not(.@{table-prefix-cls}-row-expand-icon-cell):not([colspan])::before {
+        //   position: absolute;
+        //   top: 50%;
+        //   right: 0;
+        //   width: 1px;
+        //   height: 1.6em;
+        //   background-color: @table-header-cell-split-color;
+        //   transform: translateY(-50%);
+        //   transition: background-color 0.3s;
+        //   content: '';
+        // }
       }
     }
 
@@ -126,6 +138,7 @@
       > td {
         border-bottom: @border-width-base @border-style-base @table-border-color;
         transition: background 0.3s;
+        padding: 7.5px @table-padding-horizontal;
 
         // ========================= Nest Table ===========================
         > .@{table-prefix-cls}-wrapper:only-child,
@@ -145,6 +158,26 @@
           }
         }
       }
+      
+      &.@{table-prefix-cls}-row.striped {
+        td {
+          padding: @table-padding-vertical @table-padding-horizontal;
+          border-bottom: none;
+        }
+
+        &.ant-table-striped {
+          background-color: @table-striped-color;
+        }
+
+        &:last-of-type:not(.ant-table-striped) {
+          td {
+            padding-top: @table-padding-vertical - 0.5;
+            padding-bottom: @table-padding-vertical - 0.5;
+            border-bottom: @border-width-base @border-style-base @table-border-color;
+          }
+        }
+      }
+
 
       &.@{table-prefix-cls}-row:hover > td,
       > td.@{table-prefix-cls}-cell-row-hover {
@@ -161,6 +194,24 @@
           > td {
             background: @table-selected-row-hover-bg;
           }
+        }
+      }
+
+      &.line2 {
+        td {
+          padding: 4px @table-padding-horizontal;
+        }
+      }
+
+      &.line3 {
+        td {
+          padding: 3px @table-padding-horizontal;
+        }
+      }
+
+      &.bodyNoPadding {
+        td {
+          padding: 0px;
         }
       }
     }
@@ -220,13 +271,13 @@
     cursor: pointer;
     transition: all 0.3s;
 
-    &:hover {
-      background: @table-header-sort-active-bg;
+    // &:hover {
+    //   background: @table-header-sort-active-bg;
 
-      &::before {
-        background-color: transparent !important;
-      }
-    }
+    //   &::before {
+    //     background-color: transparent !important;
+    //   }
+    // }
 
     // https://github.com/ant-design/ant-design/issues/30969
     &.@{table-prefix-cls}-cell-fix-left:hover,
@@ -235,22 +286,22 @@
     }
   }
 
-  &-thead th.@{table-prefix-cls}-column-sort {
-    background: @table-header-sort-bg;
+  // 先隐藏，不需要展示筛选的颜色变化---2022.9.9
+  // &-thead th.@{table-prefix-cls}-column-sort {
+  //   background: @table-header-sort-bg;
+  //   &::before {
+  //     background-color: transparent !important;
+  //   }
+  // }
 
-    &::before {
-      background-color: transparent !important;
-    }
-  }
-
-  td&-column-sort {
-    background: @table-body-sort-bg;
-  }
+  // td&-column-sort {
+  //   background: @table-body-sort-bg;
+  // }
 
   &-column-title {
     position: relative;
     z-index: 1;
-    flex: 1;
+    // flex: 1;
   }
 
   &-column-sorters {
@@ -304,7 +355,7 @@
   // ============================ Filter ============================
   &-filter-column {
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
   }
 
   &-filter-trigger {

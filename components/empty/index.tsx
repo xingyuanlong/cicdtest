@@ -59,7 +59,6 @@ const Empty: EmptyType = (props, { slots = {}, attrs }) => {
         } else {
           imageNode = image;
         }
-        console.log(slots.default, '--slots.default--')
 
         return (
           <div

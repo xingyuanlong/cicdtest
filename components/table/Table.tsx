@@ -103,6 +103,14 @@ export interface TableProps<RecordType = DefaultRecordType>
   };
   sortDirections?: SortOrder[];
   showSorterTooltip?: boolean | TooltipProps;
+  line2?: boolean,
+  line3?: boolean,
+  bodyNoPadding?: boolean
+  striped?:boolean
+}
+
+const defaultRowClassName = (record, index) => {
+  return (index % 2 === 1 ? 'ant-table-striped' : undefined)
 }
 
 export const tableProps = () => {
@@ -113,7 +121,7 @@ export const tableProps = () => {
     tableLayout: { type: String as PropType<TableProps['tableLayout']>, default: undefined },
     rowClassName: {
       type: [String, Function] as PropType<TableProps['rowClassName']>,
-      default: undefined,
+      default: undefined
     },
     title: { type: Function as PropType<TableProps['title']>, default: undefined },
     footer: { type: Function as PropType<TableProps['footer']>, default: undefined },
@@ -221,7 +229,7 @@ export const tableProps = () => {
     sortDirections: { type: Array as PropType<SortOrder[]>, default: undefined },
     showSorterTooltip: {
       type: [Boolean, Object] as PropType<boolean | TooltipProps>,
-      default: true,
+      default: false,
     },
     contextSlots: {
       type: Object as PropType<ContextSlots>,
@@ -229,6 +237,22 @@ export const tableProps = () => {
     transformCellText: {
       type: Function as PropType<TableProps['transformCellText']>,
     },
+    line2: {
+      type: Boolean,
+      default: false
+    },
+    line3: {
+      type: Boolean,
+      default: false
+    },
+    bodyNoPadding: {
+      type: Boolean,
+      default: false
+    },
+    striped: { // 条纹化
+      type: Boolean,
+      default: false
+    }
   };
 };
 
@@ -240,7 +264,7 @@ const InteralTable = defineComponent<
   name: 'InteralTable',
   inheritAttrs: false,
   props: initDefaultProps(tableProps(), {
-    rowKey: 'key',
+    rowKey: 'key'
   }) as any,
   // emits: ['expandedRowsChange', 'change', 'expand'],
   slots: [
@@ -535,7 +559,7 @@ const InteralTable = defineComponent<
 
     const internalRowClassName = (record: any, index: number, indent: number) => {
       let mergedRowClassName;
-      const { rowClassName } = props;
+      const { striped, rowClassName = striped ? defaultRowClassName : undefined, line2, line3, bodyNoPadding } = props;
       if (typeof rowClassName === 'function') {
         mergedRowClassName = classNames(rowClassName(record, index, indent));
       } else {
@@ -547,8 +571,12 @@ const InteralTable = defineComponent<
           [`${prefixCls.value}-row-selected`]: selectedKeySet.value.has(
             getRowKey.value(record, index),
           ),
+          line2: !!line2,
+          line3: !!line3,
+          bodyNoPadding: !!bodyNoPadding,
+          striped: !!striped
         },
-        mergedRowClassName,
+        mergedRowClassName
       );
     };
     expose({
