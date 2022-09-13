@@ -184,7 +184,7 @@ span.@{radio-prefix-cls} + * {
   font-size: @font-size-base;
   line-height: @btn-height-base - 2px;
   background: @radio-button-bg;
-  border: @border-width-base @border-style-base @border-color-base;
+  border: @border-width-base @border-style-base @radio-border-color-base;
   // strange align fix for chrome but works
   // https://gw.alipayobjects.com/zos/rmsportal/VFTfKXJuogBAXcvfAUWJ.gif
   border-top-width: @border-width-base + 0.02px;
@@ -227,14 +227,14 @@ span.@{radio-prefix-cls} + * {
       width: 1px;
       height: 100%;
       padding: @border-width-base 0;
-      background-color: @border-color-base;
+      background-color: @radio-border-color-base;
       transition: background-color 0.3s;
       content: '';
     }
   }
 
   &:first-child {
-    border-left: @border-width-base @border-style-base @border-color-base;
+    border-left: @border-width-base @border-style-base @radio-border-color-base;
     border-radius: @border-radius-base 0 0 @border-radius-base;
   }
 
@@ -326,25 +326,25 @@ span.@{radio-prefix-cls} + * {
   &-disabled {
     color: @radio-text-disabled-color;
     background-color: @input-disabled-bg;
-    border-color: @border-color-base;
+    border-color: @radio-border-color-base;
     cursor: not-allowed;
 
     &:first-child,
     &:hover {
       color: @radio-text-disabled-color;
       background-color: @input-disabled-bg;
-      border-color: @border-color-base;
+      border-color: @radio-border-color-base;
     }
 
     &:first-child {
-      border-left-color: @border-color-base;
+      border-left-color: @radio-border-color-base;
     }
   }
 
   &-disabled&-checked {
     color: @radio-disabled-button-checked-color;
     background-color: @radio-disabled-button-checked-bg;
-    border-color: @border-color-base;
+    border-color: @radio-border-color-base;
     box-shadow: none;
   }
 }
