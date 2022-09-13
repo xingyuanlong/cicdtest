@@ -91,10 +91,10 @@ function DateHeader<DateType>(_props: DateHeaderProps<DateType>) {
     <Header
       {...props}
       prefixCls={headerPrefixCls}
-      onSuperPrev={onPrevYear}
+      // onSuperPrev={onPrevYear}
       onPrev={onPrevMonth}
       onNext={onNextMonth}
-      onSuperNext={onNextYear}
+      // onSuperNext={onNextYear}
     >
       {monthYearNodes}
     </Header>
