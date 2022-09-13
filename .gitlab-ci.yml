@@ -5,34 +5,35 @@ variables:
   IMAGE_ENV: "platform"
   # IMAGE_ENV: "lichen"
 
-cache: 
-  key: $CI_PROJECT_ID
-  paths: 
-    - node_modules
-    
+default: 
+  tags:
+    - node
+  image: node:12
+
 
 stages: 
-  - install
   - build
   - docker
 
-install:
-  stage: install
-  rules:
-    - if $CI_COMMIT_BRANCH = develop
-  script: 
-    - npm ci
-
 build: 
   stage: build
-  needs: 
-    - install
+  only:
+    - tags
   script: 
+    - npm config set registry https://maven-hz.rubikstack.com/repository/npm-public
+    - npm install
     - npm run site
-    - cp  ./Dockerfile ./dist
+    - cp  ./Dockerfile ./site/dist
+    - cp  ./nginx.conf ./site/dist
   artifacts:
-    - dist
+    paths:
+      - dist
+
 docker: 
+  stage:  docker
+  image: docker:stable
+  only:
+    - tags  
   dependencies: 
     - build
   before_script:
@@ -43,3 +44,4 @@ docker:
     - docker login --username=$HARBOR_USER_NAME --password-stdin < $HOME/.docker/config.txt $APPLICATION_IP
     - docker push $APPLICATION_IP/$IMAGE_ENV/$PROJECT_NAME:$CI_COMMIT_REF_SLUG
     - docker rmi $APPLICATION_IP/$IMAGE_ENV/$PROJECT_NAME:$CI_COMMIT_REF_SLUG
+
