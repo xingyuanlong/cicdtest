@@ -8,7 +8,7 @@ variables:
 default: 
   tags:
     - node
-  image: node:12
+  image: node:16.16.0
 
 
 stages: 
