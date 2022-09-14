@@ -25,9 +25,9 @@ build:
     - npm run site
     - cp  ./Dockerfile ./site/dist
     - cp  ./nginx.conf ./site/dist
-  artifacts:
-    paths:
-      - dist
+  # artifacts:
+  #   paths:
+  #     - /site/dist
 
 docker: 
   stage:  docker
@@ -40,7 +40,7 @@ docker:
   - mkdir -p $HOME/.docker
   - echo $DOCKER_AUTH_CONFIG > $HOME/.docker/config.txt
   script:
-    - docker build --build-arg ARGVAL=prod.gogos -t $APPLICATION_IP/$IMAGE_ENV/$PROJECT_NAME:$CI_COMMIT_REF_SLUG ./dist
+    - docker build --build-arg ARGVAL=prod.gogos -t $APPLICATION_IP/$IMAGE_ENV/$PROJECT_NAME:$CI_COMMIT_REF_SLUG ./site/dist
     - docker login --username=$HARBOR_USER_NAME --password-stdin < $HOME/.docker/config.txt $APPLICATION_IP
     - docker push $APPLICATION_IP/$IMAGE_ENV/$PROJECT_NAME:$CI_COMMIT_REF_SLUG
     - docker rmi $APPLICATION_IP/$IMAGE_ENV/$PROJECT_NAME:$CI_COMMIT_REF_SLUG
