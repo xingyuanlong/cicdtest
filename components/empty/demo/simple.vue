@@ -17,6 +17,7 @@ You can choose another style of `image` by setting image to `Empty.PRESENTED_IMA
 </docs>
 <template>
   <a-empty :image="simpleImage" />
+  <hr />
   <a-empty :image="infoImage" />
 </template>
 <script lang="ts">

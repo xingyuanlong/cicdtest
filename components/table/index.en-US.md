@@ -274,12 +274,6 @@ return <Table rowKey="uid" />;
 return <Table rowKey={record => record.uid} />;
 ```
 
-## Migrate to v3
-
-Table deprecated `column.slots`, added `v-slot:bodyCell`, `v-slot:headerCell`, custom cells, and added `column.customFilterDropdown` `v-slot:customFilterDropdown`, custom filtering Menu, added `v-slot:customFilterIcon` custom filter button, but `column.slots` is still available, we will remove it in the next major version.
-
-Besides, the breaking change is changing `dataIndex` from nest string path like `user.age` to string array path like `['user', 'age']`. This help to resolve developer should additional work on the field which contains `.`.
-
 ## FAQ
 
 ### How to hide pagination when single page or no data?

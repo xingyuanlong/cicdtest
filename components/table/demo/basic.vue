@@ -16,7 +16,7 @@ Simple table with actions.
 </docs>
 
 <template>
-  <a-table :columns="columns" :data-source="data">
+  <a-table :columns="columns" :data-source="[]">
     <template #headerCell="{ column }">
       <template v-if="column.key === 'name'">
         <span>

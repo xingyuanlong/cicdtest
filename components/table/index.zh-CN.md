@@ -279,12 +279,6 @@ return <Table rowKey="uid" />;
 return <Table rowKey={record => record.uid} />;
 ```
 
-## 从 v1 / v2 升级到 v3
-
-Table 废弃了 `column.slots`, 新增 `v-slot:bodyCell`、`v-slot:headerCell`，自定义单元格，新增 `column.customFilterDropdown` `v-slot:customFilterDropdown`，自定义筛选菜单，新增了 `v-slot:customFilterIcon` 自定义筛选按钮，但 `column.slots` 还可用，我们会在下一个大版本时移除。
-
-此外，比较重大的改动为 `dataIndex` 从支持路径嵌套如 `user.age` 改成了数组路径如 `['user', 'age']`。以解决过去属性名带 `.` 需要额外的数据转化问题。
-
 ## FAQ
 
 ### 如何在没有数据或只有一页数据时隐藏分页栏

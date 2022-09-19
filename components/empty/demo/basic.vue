@@ -17,5 +17,17 @@ Simplest Usage.
 </docs>
 
 <template>
-  <a-empty />
+  <a-empty :description='noData' />
 </template>
+<script lang="ts">
+  import { defineComponent } from 'vue';
+  export default defineComponent({
+    setup() {
+      return {
+        noData: '暂无搜索数据'
+      };
+    },
+  });
+  
+  </script>
+

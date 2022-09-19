@@ -5,16 +5,20 @@ const Simple = () => {
   const prefixCls = getPrefixCls('empty-img-simple');
 
   return (
-    <svg class={prefixCls} width="64" height="41" viewBox="0 0 64 41">
-      <g transform="translate(0 1)" fill="none" fill-rule="evenodd">
-        <ellipse class={`${prefixCls}-ellipse`} fill="#F5F5F5" cx="32" cy="33" rx="32" ry="7" />
-        <g class={`${prefixCls}-g`} fill-rule="nonzero" stroke="#D9D9D9">
-          <path d="M55 12.76L44.854 1.258C44.367.474 43.656 0 42.907 0H21.093c-.749 0-1.46.474-1.947 1.257L9 12.761V22h46v-9.24z" />
-          <path
-            d="M41.613 15.931c0-1.605.994-2.93 2.227-2.931H55v18.137C55 33.26 53.68 35 52.05 35h-40.1C10.32 35 9 33.259 9 31.137V13h11.16c1.233 0 2.227 1.323 2.227 2.928v.022c0 1.605 1.005 2.901 2.237 2.901h14.752c1.232 0 2.237-1.308 2.237-2.913v-.007z"
-            fill="#FAFAFA"
-            class={`${prefixCls}-path`}
-          />
+    <svg class={prefixCls} viewBox="0 0 100 100" version="1.1">
+      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-365.000000, -1720.000000)" fill-rule="nonzero">
+          <g transform="translate(365.000000, 1720.000000)">
+            <rect fill-opacity="0" fill="#EFE9DE" x="0" y="0" width="100" height="100"></rect>
+            <g transform="translate(12.500000, 19.999951)">
+              <polygon id="Fill-1" fill="#C8C8C8" points="39.1672059 0 39.1672059 20.611278 65.6804412 10.1585064"></polygon>
+              <polygon id="Fill-2" fill="#D3D3D3" points="39.1672059 0 8.08877451 10.1585064 7.48289216 11.1390647 33.1603432 22.9810421 39.1672059 20.611278"></polygon>
+              <polygon id="Fill-3" fill="#F4F4F4" points="33.1601471 59.7906455 67.0086765 45.3579606 67.5107489 26.3788273 38.8562255 38.2066302 33.1601471 22.8078174"></polygon>
+              <polygon id="Fill-4" fill="#EAEAEA" points="32.7913235 23.128517 33.159951 23.6676774 38.8560294 38.2069235 74.6962255 24.0518842 65.6805392 10.1583597"></polygon>
+              <polygon id="Fill-5" fill="#DDDDDD" points="28.0377725 37.926606 7.5975 25.7013376 7.5975 44.8672904 33.1602451 59.4637275 33.1602451 22.8471323"></polygon>
+              <polygon id="Fill-6" fill="#EAEAEA" points="0 21.7062185 28.0455883 38.2148911 33.1602941 22.9810421 7.48284313 11.1390647"></polygon>
+            </g>
+          </g>
         </g>
       </g>
     </svg>

@@ -651,6 +651,7 @@ const InteralTable = defineComponent<
       if (typeof loading === 'boolean') {
         spinProps = {
           spinning: loading,
+          regularSpining: true
         };
       } else if (typeof loading === 'object') {
         spinProps = {
