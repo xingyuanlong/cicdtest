@@ -3,7 +3,7 @@ import { defineComponent } from 'vue';
 import CopyableIcon from './CopyableIcon.vue';
 
 const Category = defineComponent({
-  props: ['icons', 'title', 'newIcons', 'theme'],
+  props: ['icon', 'title', 'newIcons', 'name'],
   data() {
     return {
       justCopied: null,
@@ -23,27 +23,21 @@ const Category = defineComponent({
     },
   },
   render() {
-    const { icons, title, theme, newIcons } = this.$props;
-    const items = icons.map(name => {
-      return (
-        <CopyableIcon
-          key={name}
-          name={name}
-          type={name}
-          theme={theme}
-          isNew={newIcons.indexOf(name) >= 0}
-          justCopied={this.justCopied}
-          onCopied={this.onCopied}
-        />
-      );
-    });
+    const { icon, title, newIcons, name } = this.$props;
+    const items = (
+      <CopyableIcon
+        key={name}
+        name={name}
+        type={name}
+        isNew={newIcons.indexOf(name) >= 0}
+        justCopied={this.justCopied}
+        onCopied={this.onCopied}
+      />
+    );
     return (
-      <div>
-        <h3 style="margin: 1.6em 0 .6em;">
-          {this.$t(`app.docs.components.icon.category.${title}`)}
-        </h3>
-        <ul class={'anticons-list'}>{items}</ul>
-      </div>
+      <>
+        {items}
+      </>
     );
   },
 });

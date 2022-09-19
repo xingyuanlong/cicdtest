@@ -75,18 +75,18 @@ Create a reusable Vue component by using `Icon`. The property / slot `component`
       </template>
     </icon>
     <icon>
-      <template #component><HomeOutlined /></template>
+      <template #component><MenuFilled /></template>
     </icon>
-    <HomeOutlined />
+    <MenuFilled />
   </a-space>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
-import Icon, { HomeOutlined } from '@ant-design/icons-vue';
+import Icon, { MenuFilled } from 'pf-icons-vue';
 export default defineComponent({
   components: {
     Icon,
-    HomeOutlined,
+    MenuFilled,
   },
 });
 </script>

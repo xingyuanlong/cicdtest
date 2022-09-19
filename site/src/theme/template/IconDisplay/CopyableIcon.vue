@@ -13,7 +13,7 @@
   </li>
 </template>
 <script>
-import * as AntdIcons from '@ant-design/icons-vue';
+import * as AntdIcons from 'pf-icons-vue';
 import { Badge } from 'pf-ui-vue';
 import { defineComponent } from 'vue';
 
@@ -30,7 +30,7 @@ export default defineComponent({
   components: {
     'a-badge': Badge,
   },
-  props: ['name', 'type', 'isNew', 'theme', 'justCopied'],
+  props: ['name', 'type', 'isNew', 'justCopied'],
   data() {
     const kebabCasedName = kebabCase(this.name);
     const kebabCasedType = kebabCase(this.type);

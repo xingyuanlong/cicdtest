@@ -1,5 +1,4 @@
-import Icon, * as AntdIcons from '@ant-design/icons-vue';
-import { categories } from './fields';
+import Icon, * as AntdIcons from 'pf-icons-vue';
 import { FilledIcon, OutlinedIcon, TwoToneIcon } from './themeIcons';
 import Category from './Category';
 import { Radio } from 'pf-ui-vue';
@@ -14,7 +13,6 @@ const ThemeType = {
 const allIcons = AntdIcons;
 
 const IconDisplay = defineComponent({
-  cagetories: categories,
   components: {
     ARadio: Radio,
     ARadioGroup: Radio.Group,
@@ -27,31 +25,14 @@ const IconDisplay = defineComponent({
     };
   },
   methods: {
-    handleChangeTheme(e) {
-      this.theme = e.target.value;
-    },
 
     renderCategories() {
-      const { theme } = this;
-
-      return Object.keys(categories)
-        .map(key => {
-          let iconList = categories[key];
-
-          return {
-            category: key,
-            icons: iconList
-              .map(iconName => iconName + theme)
-              .filter(iconName => allIcons[iconName]),
-          };
-        })
-        .filter(({ icons }) => !!icons.length)
-        .map(({ category, icons }) => (
+      return Object.keys(allIcons)
+        .filter(icons => allIcons[icons].displayName && allIcons[icons].displayName !== "Icon")
+        .map((icons) => (
           <Category
-            key={category}
-            title={category}
-            theme={theme}
-            icons={icons}
+            name={icons}
+            icon={allIcons[icons]}
             newIcons={IconDisplay.newIconNames}
           />
         ));
@@ -62,18 +43,9 @@ const IconDisplay = defineComponent({
     return (
       <div>
         <h3 style="margin: 1.6em 0 .6em;">{this.$t('app.docs.components.icon.pick-theme')}</h3>
-        <a-radio-group value={this.theme} onChange={this.handleChangeTheme}>
-          <a-radio-button value={ThemeType.Outlined}>
-            <Icon component={OutlinedIcon} /> {this.$t('app.docs.components.icon.outlined')}
-          </a-radio-button>
-          <a-radio-button value={ThemeType.Filled}>
-            <Icon component={FilledIcon} /> {this.$t('app.docs.components.icon.filled')}
-          </a-radio-button>
-          <a-radio-button value={ThemeType.TwoTone}>
-            <Icon component={TwoToneIcon} /> {this.$t('app.docs.components.icon.two-tone')}
-          </a-radio-button>
-        </a-radio-group>
-        {this.renderCategories()}
+        <ul class={'anticons-list'}>
+          {this.renderCategories()}
+        </ul>
       </div>
     );
   },
