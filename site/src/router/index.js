@@ -103,7 +103,7 @@ const routes = [
     ],
   },
   { path: '/debugger', component: () => import('../../debugger') },
-  { path: '/:lang(.*)', redirect: '/components/overview' },
+  { path: '/:lang(.*)', redirect: '/components/overview-cn' },
 ];
 
 export default createRouter({
