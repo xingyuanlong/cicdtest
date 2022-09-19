@@ -17,7 +17,7 @@ Embedding content into `Spin` will alter it into loading state.
 </docs>
 
 <template>
-  <a-spin :spinning="spinning">
+  <a-spin :spinning="spinning" regularSpining>
     <a-alert
       message="Alert message title"
       description="Further details about the context of this alert."

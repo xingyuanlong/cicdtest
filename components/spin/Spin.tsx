@@ -1,6 +1,7 @@
 import type { VNode, ExtractPropTypes, PropType } from 'vue';
 import { inject, cloneVNode, isVNode, defineComponent, nextTick } from 'vue';
 import debounce from 'lodash-es/debounce';
+import { LoadingFilled } from 'pf-icons-vue'
 import PropTypes from '../_util/vue-types';
 import { getComponent, getSlot } from '../_util/props-util';
 import initDefaultProps from '../_util/props-util/initDefaultProps';
@@ -142,7 +143,7 @@ export default defineComponent({
     // 新增一种loading类型
     const spinElement = (
       <div {...divProps} style={style} class={spinClassName}>
-        {regularSpining ? '' : this.renderIndicator(prefixCls)}
+        {regularSpining ? <LoadingFilled class={`${prefixCls}-loading-icon`} /> : this.renderIndicator(prefixCls)}
         {tip ? <div class={`${prefixCls}-text`}>{tip}</div> : null}
       </div>
     );

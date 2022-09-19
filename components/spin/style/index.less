@@ -32,12 +32,21 @@
       width: 100%;
       height: 100%;
       max-height: 400px;
+      
       .@{spin-prefix-cls}-dot {
         position: absolute;
         top: 50%;
         left: 50%;
         margin: -(@spin-dot-size / 2);
       }
+
+      .@{spin-prefix-cls}-loading-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -30px;
+      }
+
       .@{spin-prefix-cls}-text {
         position: absolute;
         top: 50%;
@@ -171,6 +180,22 @@
   // ------------------------------
 
   // small
+  .@{spin-prefix-cls}-loading-icon {
+    font-size: 60px;
+  }
+
+  &-sm {
+    .@{spin-prefix-cls}-loading-icon {
+      font-size: 50px;
+    }
+  }
+
+  &-lg {
+    .@{spin-prefix-cls}-loading-icon {
+      font-size: 70px;
+    }
+  }
+
   &-sm &-dot {
     font-size: @spin-dot-size-sm;
 
