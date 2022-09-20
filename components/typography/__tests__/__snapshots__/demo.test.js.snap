@@ -165,31 +165,31 @@ exports[`renders ./components/typography/demo/suffix.vue correctly 1`] = `
 
 exports[`renders ./components/typography/demo/text.vue correctly 1`] = `
 <div class="ant-space ant-space-vertical">
-  <div class="ant-space-item" style="margin-bottom: 8px;"><span class="ant-typography">Ant Design Vue (default)<!----></span></div>
+  <div class="ant-space-item" style="margin-bottom: 8px;"><span class="ant-typography">pf-ui-vue(default)<!----></span></div>
   <!---->
-  <div class="ant-space-item" style="margin-bottom: 8px;"><span class="ant-typography ant-typography-secondary">Ant Design Vue (secondary)<!----></span></div>
+  <div class="ant-space-item" style="margin-bottom: 8px;"><span class="ant-typography ant-typography-secondary">pf-ui-vue (secondary)<!----></span></div>
   <!---->
-  <div class="ant-space-item" style="margin-bottom: 8px;"><span class="ant-typography ant-typography-success">Ant Design Vue (success)<!----></span></div>
+  <div class="ant-space-item" style="margin-bottom: 8px;"><span class="ant-typography ant-typography-success">pf-ui-vue (success)<!----></span></div>
   <!---->
-  <div class="ant-space-item" style="margin-bottom: 8px;"><span class="ant-typography ant-typography-warning">Ant Design Vue (warning)<!----></span></div>
+  <div class="ant-space-item" style="margin-bottom: 8px;"><span class="ant-typography ant-typography-warning">pf-ui-vue (warning)<!----></span></div>
   <!---->
-  <div class="ant-space-item" style="margin-bottom: 8px;"><span class="ant-typography ant-typography-danger">Ant Design Vue (danger)<!----></span></div>
+  <div class="ant-space-item" style="margin-bottom: 8px;"><span class="ant-typography ant-typography-danger">pf-ui-vue (danger)<!----></span></div>
   <!---->
-  <div class="ant-space-item" style="margin-bottom: 8px;"><span class="ant-typography ant-typography-disabled">Ant Design Vue (disabled)<!----></span></div>
+  <div class="ant-space-item" style="margin-bottom: 8px;"><span class="ant-typography ant-typography-disabled">pf-ui-vue (disabled)<!----></span></div>
   <!---->
-  <div class="ant-space-item" style="margin-bottom: 8px;"><span class="ant-typography"><mark>Ant Design Vue (mark)<!----></mark></span></div>
+  <div class="ant-space-item" style="margin-bottom: 8px;"><span class="ant-typography"><mark>pf-ui-vue (mark)<!----></mark></span></div>
   <!---->
-  <div class="ant-space-item" style="margin-bottom: 8px;"><span class="ant-typography"><code>Ant Design Vue (code)<!----></code></span></div>
+  <div class="ant-space-item" style="margin-bottom: 8px;"><span class="ant-typography"><code>pf-ui-vue (code)<!----></code></span></div>
   <!---->
-  <div class="ant-space-item" style="margin-bottom: 8px;"><span class="ant-typography"><kbd>Ant Design Vue (keyboard)<!----></kbd></span></div>
+  <div class="ant-space-item" style="margin-bottom: 8px;"><span class="ant-typography"><kbd>pf-ui-vue (keyboard)<!----></kbd></span></div>
   <!---->
-  <div class="ant-space-item" style="margin-bottom: 8px;"><span class="ant-typography"><u>Ant Design Vue (underline)<!----></u></span></div>
+  <div class="ant-space-item" style="margin-bottom: 8px;"><span class="ant-typography"><u>pf-ui-vue (underline)<!----></u></span></div>
   <!---->
-  <div class="ant-space-item" style="margin-bottom: 8px;"><span class="ant-typography"><del>Ant Design Vue (delete)<!----></del></span></div>
+  <div class="ant-space-item" style="margin-bottom: 8px;"><span class="ant-typography"><del>pf-ui-vue (delete)<!----></del></span></div>
   <!---->
-  <div class="ant-space-item" style="margin-bottom: 8px;"><span class="ant-typography"><strong>Ant Design Vue (strong)<!----></strong></span></div>
+  <div class="ant-space-item" style="margin-bottom: 8px;"><span class="ant-typography"><strong>pf-ui-vue (strong)<!----></strong></span></div>
   <!---->
-  <div class="ant-space-item"><a class="ant-typography" href="https://antdv.com" target="_blank" rel="noopener noreferrer"> Ant Design Vue (Link)
+  <div class="ant-space-item"><a class="ant-typography" href="https://antdv.com" target="_blank" rel="noopener noreferrer"> pf-ui-vue (Link)
       <!---->
     </a></div>
   <!---->
@@ -197,19 +197,19 @@ exports[`renders ./components/typography/demo/text.vue correctly 1`] = `
 `;
 
 exports[`renders ./components/typography/demo/title.vue correctly 1`] = `
-<h1 class="ant-typography">h1. Ant Design Vue
+<h1 class="ant-typography">h1. pf-ui-vue
   <!---->
 </h1>
-<h2 class="ant-typography">h2. Ant Design Vue
+<h2 class="ant-typography">h2. pf-ui-vue
   <!---->
 </h2>
-<h3 class="ant-typography">h3. Ant Design Vue
+<h3 class="ant-typography">h3. pf-ui-vue
   <!---->
 </h3>
-<h4 class="ant-typography">h4. Ant Design Vue
+<h4 class="ant-typography">h4. pf-ui-vue
   <!---->
 </h4>
-<h5 class="ant-typography">h5. Ant Design Vue
+<h5 class="ant-typography">h5. pf-ui-vue
   <!---->
 </h5>
 `;
