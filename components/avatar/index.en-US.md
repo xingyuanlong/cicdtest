@@ -20,11 +20,11 @@ Avatars can be used to represent people or objects. It supports images, `Icon`s,
 | icon | the `Icon` type for an icon avatar, see `Icon` Component | VNode \| slot | - |  |
 | loadError | handler when img load error, return false to prevent default fallback behavior | () => boolean | - |  |
 | shape | the shape of avatar | `circle` \| `square` | `circle` |  |
-| size | The size of the avatar | number \| `large` \| `small` \| `default` \| { xs: number, sm: number, ...} | `default` | 2.2.0 |
+| size | The size of the avatar | number \| `large` \| `small` \| `default` \| { xs: number, sm: number, ...} | `default` |  |
 | src | the address of the image for an image avatar | string | - |  |
 | srcset | a list of sources to use for different screen resolutions | string | - |  |
 
-### Avatar.Group (2.2.0)
+### Avatar.Group ()
 
 | Property | Description | Type | Default | Version |
 | --- | --- | --- | --- | --- |

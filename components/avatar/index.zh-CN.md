@@ -21,7 +21,7 @@ cover: https://gw.alipayobjects.com/zos/antfincdn/aBcnbw68hP/Avatar.svg
 | alt | 图像无法显示时的替代文本 | string | - |  |
 | crossOrigin | CORS 属性设置 | `'anonymous'` \| `'use-credentials'` \| `''` | - |  |
 | draggable | 图片是否允许拖动 | boolean \| `'true'` \| `'false'` | - |  |
-| gap | 字符类型距离左右两侧边界单位像素 | number | 4 | 2.2.0 |
+| gap | 字符类型距离左右两侧边界单位像素 | number | 4 |  |
 | icon | 设置头像的图标类型，可设为 Icon 的 `type` 或 VNode | VNode \| slot | - |  |
 | loadError | 图片加载失败的事件，返回 false 会关闭组件默认的 fallback 行为 | () => boolean | - |  |
 | shape | 指定头像的形状 | `circle` \| `square` | `circle` |  |
@@ -29,7 +29,7 @@ cover: https://gw.alipayobjects.com/zos/antfincdn/aBcnbw68hP/Avatar.svg
 | src | 图片类头像的资源地址 | string | - |  |
 | srcset | 设置图片类头像响应式资源地址 | string | - |  |
 
-### Avatar.Group (2.2.0)
+### Avatar.Group ()
 
 | 参数 | 说明 | 类型 | 默认值 | 版本 |
 | --- | --- | --- | --- | --- |
