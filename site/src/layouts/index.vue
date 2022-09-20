@@ -72,7 +72,7 @@
           </a-dropdown>
         </div>
         <PrevAndNext :menus="menus" :current-menu-index="currentMenuIndex" :is-zh-c-n="isZhCN" />
-        <Footer />
+        <!-- <Footer /> -->
       </a-col>
     </a-row>
   </div>
@@ -83,7 +83,7 @@ import { GLOBAL_CONFIG } from '../SymbolKey';
 import { defineComponent, inject, computed, ref, provide, watch } from 'vue';
 import { useRoute } from 'vue-router';
 import Header from './header/index.vue';
-import Footer from './Footer.vue';
+// import Footer from './Footer.vue';
 import Menu from './Menu.vue';
 import PrevAndNext from './PrevAndNext.vue';
 import Demo from './Demo.vue';
@@ -106,7 +106,6 @@ export default defineComponent({
     RightBottomAd,
     Demo,
     Header,
-    Footer,
     Menu,
     PrevAndNext,
     CloseOutlined,

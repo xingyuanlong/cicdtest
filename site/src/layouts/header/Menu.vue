@@ -4,15 +4,6 @@
     <Ecosystem />
   </template>
   <template v-else>
-    <a-select
-      key="version"
-      class="version"
-      size="small"
-      :dropdown-match-select-width="false"
-      :default-value="antdVersion"
-    >
-      <a-select-option :value="antdVersion">{{ antdVersion }}</a-select-option>
-    </a-select>
     <a-button
       key="lang-button"
       size="small"
@@ -21,26 +12,21 @@
     >
       {{ $t('app.header.lang') }}
     </a-button>
-    <Github />
   </template>
 </template>
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
-import Github from './Github.vue';
 import Navigation from './Navigation.vue';
 import { version } from 'pf-ui-vue';
 import { isZhCN, isLocalStorageNameSupported, getLocalizedPathname } from '../../utils/util';
-import { useRoute } from 'vue-router';
 export default defineComponent({
   name: 'HeaderMenu',
   components: {
     Navigation,
-    Github,
   },
   props: ['isMobile'],
   setup() {
     const antdVersion = ref(version);
-    const route = useRoute();
     const onLangChange = () => {
       const {
         location: { pathname },
@@ -60,13 +46,9 @@ export default defineComponent({
         );
     };
 
-    const changeVersion = v => {
-      location.href = `https://${v}.antdv.com${route.fullPath}`;
-    };
     return {
       onLangChange,
       antdVersion,
-      changeVersion,
     };
   },
 });

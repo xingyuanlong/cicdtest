@@ -1,15 +1,3 @@
-# 快速上手
-
-Ant Design Vue 致力于提供给程序员**愉悦**的开发体验。
-
-> 在开始之前，推荐先学习 [Vue](https://www.vuejs.org/) 和 [ES2015](http://babeljs.io/docs/learn-es2015/)，并正确安装和配置了 [Node.js](https://nodejs.org/) v8.9 或以上。官方指南假设你已了解关于 HTML、CSS 和 JavaScript 的中级知识，并且已经完全掌握了 Vue 的正确开发方式。如果你刚开始学习前端或者 Vue，将 UI 框架作为你的第一步可能不是最好的主意。
-
-## 在线演示
-
-最简单的使用方式参照以下 CodeSandbox 演示，也推荐 Fork 本例来进行 `Bug Report`。
-
-- [![Vue Antd Template](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/agitated-franklin-1w72v)
-
 ## 引入 pf-ui-vue
 
 ### 1. 安装脚手架工具
@@ -50,13 +38,13 @@ $ npm i --save pf-ui-vue
 
 ```jsx
 import { createApp } from 'vue';
-import Antd from 'pf-ui-vue';
+import PfUiVue from 'pf-ui-vue';
 import App from './App';
 import 'pf-ui-vue/dist/antd.css';
 
 const app = createApp(App);
 
-app.use(Antd).mount('#app');
+app.use(PfUiVue).mount('#app');
 ```
 
 以上代码便完成了 Antd 的全局注册。需要注意的是，样式文件需要单独引入。
@@ -97,11 +85,6 @@ app.config.globalProperties.$message = message;
 </script>
 ```
 
-## 兼容性
-
-Ant Design Vue 2.x+ 支持所有的现代浏览器。
-
-如果需要支持 IE9+，你可以使用 Ant Design Vue 1.x & Vue 2.x。
 
 ## 按需加载
 
@@ -128,7 +111,3 @@ import { Button } from 'pf-ui-vue';
 import { message } from 'pf-ui-vue';
 import 'pf-ui-vue/es/message/style/css'; //vite只能用 pf-ui-vue/es 而非 pf-ui-vue/lib
 ```
-
-## 配置主题和字体
-
-- [改变主题](/docs/vue/customize-theme-cn)

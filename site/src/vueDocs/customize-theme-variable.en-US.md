@@ -5,9 +5,6 @@ title: Dynamic Theme (Experimental)
 
 Except [less customize theme](/docs/react/customize-theme), We also provide CSS Variable version to enable dynamic theme. You can check on [ConfigProvider](/components/config-provider/#components-config-provider-demo-theme) demo.
 
-## Caveats
-
-- This function requires at least `pf-ui-vue@3.1.0-beta.0`.
 
 ## How to use
 

@@ -1,15 +1,3 @@
-# Getting Started
-
-Ant Design Vue is dedicated to providing a **good development experience** for programmers. Make sure that you had installed [Node.js](https://nodejs.org/)(> v8.9) correctly.
-
-> Before delving into Ant Design Vue, a good knowledge base of [Vue](https://www.vuejs.org/) and [JavaScript ES2015](http://babeljs.io/docs/learn-es2015/) is needed.
-
-## Playground
-
-The following CodeSandbox demo is the simplest use case, and it's also a good habit to fork this demo to provide a re-producible demo while reporting a bug.
-
-- [![Vue Antd Template](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/agitated-franklin-1w72v)
-
 ## Import pf-ui-vue
 
 ### 1. Installation
@@ -48,13 +36,13 @@ If you use Vue's default template syntax, you need to register components before
 
 ```jsx
 import { createApp } from 'vue';
-import Antd from 'pf-ui-vue';
+import PfUiVue from 'pf-ui-vue';
 import App from './App';
 import 'pf-ui-vue/dist/antd.css';
 
 const app = createApp(App);
 
-app.use(Antd).mount('#app');
+app.use(PfUiVue).mount('#app');
 ```
 
 The above imports Antd entirely. Note that CSS file needs to be imported separately.
@@ -95,14 +83,6 @@ In this way, component sub-components, such as Button and ButtonGroup, need to b
 </script>
 ```
 
-### 4. Component list
-
-[Component list](https://github.com/vueComponent/pf-ui-vue/blob/main/components/components.ts)
-
-## Compatibility
-
-Ant Design Vue 2.x supports all the modern browsers. If you want to use IE9+, you can use Ant Design Vue 1.x & Vue 2.x.
-
 ## Import on Demand
 
 we can import individual components on demand:
@@ -128,7 +108,3 @@ If you use Vite, you can use [unplugin-vue-components](https://github.com/antfu/
 import { message } from 'pf-ui-vue';
 import 'pf-ui-vue/es/message/style/css'; //use pf-ui-vue/es instead of pf-ui-vue/lib
 ```
-
-## Customization
-
-- [Customize Theme](/docs/vue/customize-theme)

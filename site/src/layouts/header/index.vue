@@ -1,21 +1,5 @@
 <template>
   <header id="header" :class="headerClassName">
-    <div v-if="visibleAdblockBanner" class="adblock-banner">
-      <template v-if="isZhCN">
-        我们检测到你可能使用了 AdBlock 或 Adblock
-        Plus，它会影响到正常功能的使用（如复制、展开代码等）。
-        <br />
-        你可以将 Ant Design Vue 加入白名单，以便我们更好地提供服务。
-      </template>
-      <template v-else>
-        We have detected that you may use AdBlock or Adblock Plus, which will affect the use of
-        normal functions (such as copying, expanding code, etc.)
-        <br />
-        You can add Ant Design Vue to the whitelist so that we can provide better services.
-      </template>
-
-      <CloseOutlined class="close-icon" @click="visibleAdblockBanner = false" />
-    </div>
     <a-popover
       v-model:visible="menuVisible"
       overlay-class-name="popover-menu"
@@ -48,7 +32,7 @@
 import type { GlobalConfig } from '../../App.vue';
 import { GLOBAL_CONFIG } from '../../SymbolKey';
 import { getLocalizedPathname } from '../../utils/util';
-import { computed, defineComponent, inject, onMounted, ref, watch } from 'vue';
+import { computed, defineComponent, inject, ref, watch } from 'vue';
 import { useRoute } from 'vue-router';
 import Logo from './Logo.vue';
 import Menu from './Menu.vue';
@@ -97,27 +81,6 @@ export default defineComponent({
     const onTriggerSearching = (value: boolean) => {
       searching.value = value;
     };
-    const initDocSearch = () => {
-      window.docsearch({
-        apiKey: '92003c1d1d07beef165b08446f4224a3',
-        indexName: 'antdv',
-        inputSelector: '#search-box input',
-        algoliaOptions: { facetFilters: [`tags:${globalConfig.isZhCN.value ? 'cn' : 'en'}`] },
-        transformData(hits: any[]) {
-          hits.forEach(hit => {
-            hit.url = hit.url.replace('www.antdv.com', window.location.host);
-            hit.url = hit.url.replace('https:', window.location.protocol);
-          });
-          return hits;
-        },
-        debug: false, // Set debug to true if you want to inspect the dropdown
-      });
-    };
-    onMounted(() => {
-      setTimeout(() => {
-        initDocSearch();
-      });
-    });
     const visibleAdblockBanner = ref(false);
     watch(globalConfig?.blocked, val => {
       visibleAdblockBanner.value = val;

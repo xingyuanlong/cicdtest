@@ -31,15 +31,6 @@
       <a-menu-item key="switch-lang" @click="$emit('langChange')">
         {{ $t('app.header.lang') }}
       </a-menu-item>
-      <a-menu-item key="github">
-        <a
-          href="http://gitlab.wowjoy.com/platform/front-npm/pf-ui-vue"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Gitlab
-        </a>
-      </a-menu-item>
     </template>
   </a-menu>
 </template>
