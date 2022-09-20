@@ -22,13 +22,13 @@ cover: https://gw.alipayobjects.com/zos/alicdn/xS9YEJhfe/Input.svg
 | addonAfter | 带标签的 input，设置后置标签 | string\|slot |  |  |
 | addonBefore | 带标签的 input，设置前置标签 | string\|slot |  |  |
 | allowClear | 可以点击清除图标删除内容 | boolean |  |  |
-| bordered | 是否有边框 | boolean | true | 3.0 |
+| bordered | 是否有边框 | boolean | true |  |
 | defaultValue | 输入框默认内容 | string |  |  |
 | disabled | 是否禁用状态，默认为 false | boolean | false |  |
 | id | 输入框的 id | string |  |  |
 | maxlength | 最大长度 | number |  | 1.5.0 |
 | prefix | 带有前缀图标的 input | string\|slot |  |  |
-| showCount | 是否展示字数 | boolean | false | 3.0 |
+| showCount | 是否展示字数 | boolean | false |  |
 | size | 控件大小。注：标准表单内的输入框大小限制为 `large`。可选 `large` `default` `small` | string | `default` |  |
 | suffix | 带有后缀图标的 input | string\|slot |  |  |
 | type | 声明 input 类型，同原生 input 标签的 type 属性，见：[MDN](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input#属性)(请直接使用 `<a-textarea />` 代替 `type="textarea"`)。 | string | `text` |  |

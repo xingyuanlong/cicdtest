@@ -27,10 +27,10 @@ cover: https://gw.alipayobjects.com/zos/alicdn/QAXskNI4G/Transfer.svg
 | footer | 可以设置为一个 作用域插槽 | slot="footer" slot-scope="props" |  |  |
 | listStyle | 两个穿梭框的自定义样式 | CSSProperties |  |  |
 | locale | 各种语言 | object | `{ itemUnit: '项', itemsUnit: '项', notFoundContent: '列表为空', searchPlaceholder: '请输入搜索内容' }` |  |
-| oneWay | 展示为单向样式 | boolean | false | 3.0.0 |
+| oneWay | 展示为单向样式 | boolean | false |  |
 | operations | 操作文案集合，顺序从上至下 | string\[] | \['>', '&lt;'] |  |
-| operationStyle | 操作栏的自定义样式 | CSSProperties | - | 3.0.0 |
-| pagination | 使用分页样式，自定义渲染列表下无效 | boolean \| { pageSize: number } | flase | 3.0.0 |
+| operationStyle | 操作栏的自定义样式 | CSSProperties | - |  |
+| pagination | 使用分页样式，自定义渲染列表下无效 | boolean \| { pageSize: number } | flase |  |
 | render | 每行数据渲染函数，该函数的入参为 `dataSource` 中的项，返回值为 element。或者返回一个普通对象，其中 `label` 字段为 element，`value` 字段为 title | Function(record)\| slot |  |  |
 | selectedKeys(v-model) | 设置哪些项应该被选中 | string\[] | \[] |  |
 | showSearch | 是否显示搜索框 | boolean | false |  |

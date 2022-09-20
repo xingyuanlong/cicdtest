@@ -70,7 +70,7 @@ Basic text writing, including headings, body text, lists, and more.
 | --- | --- | --- | --- | --- |
 | copyableIcon | Custom copy icon | `{ copied: boolean }` | `copied ? <CheckOutlined /> : <CopyOutlined />` |  |
 | copyableTooltip | Custom tooltip text, hide when `copyable.tooltip = false` | `{ copied: boolean }` | `copied ? 'Copied' : 'Copy'` |  |
-| editableEnterIcon | Custom "enter" icon in the edit field | `{className: string}` | `<EnterOutlined />` | 3.0 |
+| editableEnterIcon | Custom "enter" icon in the edit field | `{className: string}` | `<EnterOutlined />` |  |
 | editableIcon | Custom editable icon | - | &lt;EditOutlined /> |  |
 | editableTooltip | Custom tooltip text, hide when `editable.tooltip = false` | - | `Edit` |  |
 | ellipsisSymbol | Custom description of ellipsis | - | - |  |

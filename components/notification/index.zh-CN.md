@@ -51,7 +51,7 @@ config 参数如下：
 
 - `notification.config(options)`
 
-  > 当你使用 `ConfigProvider` 进行全局化配置时，系统会默认自动开启 RTL 模式。(3.0+)
+  > 当你使用 `ConfigProvider` 进行全局化配置时，系统会默认自动开启 RTL 模式。(+)
   >
   > 当你想单独使用，可通过如下设置开启 RTL 模式。
 
@@ -70,7 +70,7 @@ notification.config({
 | closeIcon | 自定义关闭图标 | VNode \| () => VNode | - |  |
 | duration | 默认自动关闭延时，单位秒 | number | 4.5 |  |
 | getContainer | 配置渲染节点的输出位置 | () => HTMLNode | () => document.body |  |
-| maxCount | 最大显示数, 超过限制时，最早的消息会被自动关闭 | number | - | 3.0 |
+| maxCount | 最大显示数, 超过限制时，最早的消息会被自动关闭 | number | - |  |
 | placement | 弹出位置，可选 `topLeft` `topRight` `bottomLeft` `bottomRight` | string | topRight |  |
-| rtl | 是否开启 RTL 模式 | boolean | false | 3.0 |
+| rtl | 是否开启 RTL 模式 | boolean | false |  |
 | top | 消息从顶部弹出时，距离顶部的位置，单位像素。 | string | `24px` |  |

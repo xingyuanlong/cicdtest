@@ -89,16 +89,16 @@ cover: https://gw.alipayobjects.com/zos/alicdn/RT_USzA48/DatePicker.svg
 | inputReadOnly | 设置输入框为只读（避免在移动设备上打开虚拟键盘） | boolean | false |  |
 | locale | 国际化配置 | object | [默认配置](https://github.com/vueComponent/pf-ui-vue/blob/main/components/date-picker/locale/example.json) | - |
 | mode | 日期面板的状态 | `time` \| `date` \| `month` \| `year` \| `decade` | - |  |
-| nextIcon | 自定义下一个图标 | slot | - | 3.0 |
+| nextIcon | 自定义下一个图标 | slot | - |  |
 | open | 控制弹层是否展开 | boolean | - |  |
 | picker | 设置选择器类型 | `date` \| `week` \| `month` \| `quarter` \| `year` | `date` | `quarter` |
 | placeholder | 输入框提示文字 | string \| \[string, string] | - |  |
 | popupStyle | 额外的弹出日历样式 | CSSProperties | {} |  |
-| prevIcon | 自定义上一个图标 | slot | - | 3.0 |
+| prevIcon | 自定义上一个图标 | slot | - |  |
 | size | 输入框大小，`large` 高度为 40px，`small` 为 24px，默认是 32px | `large` \| `middle` \| `small` | - |  |
 | suffixIcon | 自定义的选择框后缀图标 | v-slot:suffixIcon | - |  |
-| superNextIcon | 自定义 `<<` 切换图标 | slot | - | 3.0 |
-| superPrevIcon | 自定义 `>>` 切换图标 | slot | - | 3.0 |
+| superNextIcon | 自定义 `<<` 切换图标 | slot | - |  |
+| superPrevIcon | 自定义 `>>` 切换图标 | slot | - |  |
 | valueFormat | 可选，绑定值的格式，对 value、defaultValue、defaultPickerValue 起作用。不指定则绑定值为 dayjs 对象 | string，[具体格式](https://day.js.org/docs/zh-CN/display/format) | - |  |
 
 ### 共有的事件

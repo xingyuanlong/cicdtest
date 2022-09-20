@@ -48,23 +48,23 @@ Some components use dynamic style to support wave effect. You can config `csp` p
 | Property | Description | Type | Default | Version |
 | --- | --- | --- | --- | --- |
 | autoInsertSpaceInButton | Set `false` to remove space between 2 chinese characters on Button | boolean | true |  |
-| componentSize | Config antd component size | `small` \| `middle` \| `large` | - | 3.0 |
+| componentSize | Config antd component size | `small` \| `middle` \| `large` | - |  |
 | csp | Set [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) config | { nonce: string } | - |  |
-| direction | Set direction of layout. See [demo](#components-config-provider-demo-direction) | `ltr` \| `rtl` | `ltr` | 3.0 |
-| dropdownMatchSelectWidth | Determine whether the dropdown menu and the select input are the same width. Default set `min-width` same as input. Will ignore when value less than select width. `false` will disable virtual scroll | boolean \| number | - | 3.0 |
-| form | Set Form common props | { validateMessages?: [ValidateMessages](/components/form/#validateMessages), requiredMark?: boolean \| `optional` } | - | 3.0 |
+| direction | Set direction of layout. See [demo](#components-config-provider-demo-direction) | `ltr` \| `rtl` | `ltr` |  |
+| dropdownMatchSelectWidth | Determine whether the dropdown menu and the select input are the same width. Default set `min-width` same as input. Will ignore when value less than select width. `false` will disable virtual scroll | boolean \| number | - |  |
+| form | Set Form common props | { validateMessages?: [ValidateMessages](/components/form/#validateMessages), requiredMark?: boolean \| `optional` } | - |  |
 | getPopupContainer | to set the container of the popup element. The default is to create a `div` element in `body`. | Function(triggerNode, dialogContext) | `() => document.body` |  |
-| getTargetContainer | Config Affix, Anchor scroll target container | () => HTMLElement | () => window | 3.0 |
-| input | Set Input common props | { autocomplete?: string } | - | 3.0 |
+| getTargetContainer | Config Affix, Anchor scroll target container | () => HTMLElement | () => window |  |
+| input | Set Input common props | { autocomplete?: string } | - |  |
 | locale | language package setting, you can find the packages in [pf-ui-vue/es/locale](http://unpkg.com/pf-ui-vue/es/locale/) | object | - | 1.5.0 |
 | pageHeader | Unify the ghost of pageHeader ,Ref [pageHeader]\(&lt;(/components/page-header)> | { ghost:boolean } | 'true' | 1.5.0 |
 | prefixCls | set prefix class | string | ant |  |
 | renderEmpty | set empty content of components. Ref [Empty](/components/empty/) | slot-scope \| Function(componentName: string): ReactNode | - |  |
-| space | Set Space `size`, ref [Space](/components/space) | { size: `small` \| `middle` \| `large` \| `number` } | - | 3.0 |
+| space | Set Space `size`, ref [Space](/components/space) | { size: `small` \| `middle` \| `large` \| `number` } | - |  |
 | transformCellText | Table data can be changed again before rendering. The default configuration of general user empty data. | Function({ text, column, record, index }) => any | - | 1.5.4 |
-| virtual | Disable virtual scroll when set to false | boolean | true | 3.0 |
+| virtual | Disable virtual scroll when set to false | boolean | true |  |
 
-### ConfigProvider.config() `3.0.0+`
+### ConfigProvider.config() `.0+`
 
 Setting `Modal`、`Message`、`Notification` rootPrefixCls.
 

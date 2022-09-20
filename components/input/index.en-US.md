@@ -27,7 +27,7 @@ A basic widget for getting the user input is a text field. Keyboard and mouse ca
 | id | The ID for input | string |  |  |
 | maxlength | max length | number |  | 1.5.0 |
 | prefix | The prefix icon for the Input. | string\|slot |  |  |
-| showCount | Whether show text count | boolean | false | 3.0 |
+| showCount | Whether show text count | boolean | false |  |
 | size | The size of the input box. Note: in the context of a form, the `large` size is used. Available: `large` `default` `small` | string | `default` |  |
 | suffix | The suffix icon for the Input. | string\|slot |  |  |
 | type | The type of input, see: [MDN](https://developer.mozilla.org/docs/Web/HTML/Element/input#Form_%3Cinput%3E_types)(use `<a-textarea />` instead of `type="textarea"`) | string | `text` |  |

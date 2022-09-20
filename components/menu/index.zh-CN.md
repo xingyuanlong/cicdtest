@@ -106,7 +106,7 @@ Menu.ItemGroup 的子元素必须是 `MenuItem`.
 
 | 参数   | 说明     | 类型    | 默认值 | 版本 |
 | ------ | -------- | ------- | ------ | ---- |
-| dashed | 是否虚线 | boolean | false  | 3.0  |
+| dashed | 是否虚线 | boolean | false  |   |
 
 ## FAQ
 

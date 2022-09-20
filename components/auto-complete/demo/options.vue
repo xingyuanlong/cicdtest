@@ -8,11 +8,11 @@ title:
 
 ## zh-CN
 
-3.0 以上版本，可以传递 `v-slot:option` 来自定义 Option。
+也可以传递 `v-slot:option` 来自定义 Option。
 
 ## en-US
 
-For 3.0+, You could pass `v-slot:option` to custom option.
+You could also pass `v-slot:option` to custom option.
 </docs>
 
 <template>

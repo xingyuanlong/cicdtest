@@ -1,7 +1,7 @@
 <docs>
 ---
 order: 5.1
-version: 3.0.0
+version: 
 title:
   zh-CN: 多选
   en-US: Multiple

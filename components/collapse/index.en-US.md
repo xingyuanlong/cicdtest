@@ -21,11 +21,11 @@ A content area which can be collapsed and expanded.
 | accordion | If `true`, `Collapse` renders as `Accordion` | boolean | `false` |  |
 | activeKey(v-model) | Key of the active panel | string\[]\|string | No default value. In `accordion` mode, it's the key of the first panel. |  |
 | bordered | Toggles rendering of the border around the collapse block | boolean | `true` |  |
-| collapsible | Specify whether the panels of children be collapsible or the trigger area of collapsible | `header` \| `disabled` | - | 3.0 |
+| collapsible | Specify whether the panels of children be collapsible or the trigger area of collapsible | `header` \| `disabled` | - |  |
 | destroyInactivePanel | Destroy Inactive Panel | boolean | `false` |  |
 | expandIcon | allow to customize collapse icon | Function(props):VNode \| v-slot:expandIcon="props" |  |  |
 | expandIconPosition | Set expand icon position: `left`, `right` | `left` | - | 1.5.0 |
-| ghost | Make the collapse borderless and its background transparent | boolean | false | 3.0 |
+| ghost | Make the collapse borderless and its background transparent | boolean | false |  |
 
 ### events
 
@@ -37,7 +37,7 @@ A content area which can be collapsed and expanded.
 
 | Property | Description | Type | Default | Version |
 | --- | --- | --- | --- | --- |
-| collapsible | Specify whether the panel be collapsible or the trigger area of collapsible | `header` \| `disabled` | - | 3.0 |
+| collapsible | Specify whether the panel be collapsible or the trigger area of collapsible | `header` \| `disabled` | - |  |
 | disabled | If `true`, panel cannot be opened or closed | boolean | `false` |  |
 | extra | extra element in the corner | VNode \| slot | - | 1.5.0 |
 | forceRender | Forced render of content on panel, instead of lazy rending after clicking on header | boolean | `false` |  |

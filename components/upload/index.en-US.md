@@ -25,26 +25,26 @@ Uploading is the process of publishing information (web pages, text, pictures, v
 | customRequest | override for the default xhr behavior allowing for additional customization and ability to implement your own XMLHttpRequest | Function | - |  |  |
 | data | Uploading params or function which can return uploading params. | object\|function(file) | - |  |  |
 | directory | support upload whole directory ([caniuse](https://caniuse.com/#feat=input-file-directory)) | boolean | false |  |  |
-| directory | Support upload whole directory（[caniuse](https://caniuse.com/#feat=input-file-directory)） | boolean | false | 3.0 |  |
+| directory | Support upload whole directory（[caniuse](https://caniuse.com/#feat=input-file-directory)） | boolean | false |  |  |
 | disabled | disable upload button | boolean | false |  |  |
-| downloadIcon | custom download icon | v-slot:iconRender="{file: UploadFile}" | - | 3.0 |  |
+| downloadIcon | custom download icon | v-slot:iconRender="{file: UploadFile}" | - |  |  |
 | fileList | List of files that have been uploaded (controlled). Here is a common issue [#2423](https://github.com/ant-design/ant-design/issues/2423) when using it | object\[] | - |  |  |
 | headers | Set request headers, valid above IE10. | object | - |  |  |
-| iconRender | Custom show icon | v-slot:iconRender="{file: UploadFile, listType?: UploadListType}" | - | 3.0 |  |
-| isImageUrl | Customize if render &lt;img /> in thumbnail | (file: UploadFile) => boolean | - | 3.0 |  |
-| itemRender | Custom item of uploadList | v-slot:itemRender="{originNode: ReactElement, file: UploadFile, fileList: object\[], actions: { download: function, preview: function, remove: function }" | - | 3.0 |  |
+| iconRender | Custom show icon | v-slot:iconRender="{file: UploadFile, listType?: UploadListType}" | - |  |  |
+| isImageUrl | Customize if render &lt;img /> in thumbnail | (file: UploadFile) => boolean | - |  |  |
+| itemRender | Custom item of uploadList | v-slot:itemRender="{originNode: ReactElement, file: UploadFile, fileList: object\[], actions: { download: function, preview: function, remove: function }" | - |  |  |
 | listType | Built-in stylesheets, support for three types: `text`, `picture` or `picture-card` | string | `text` |  |  |
-| maxCount | Limit the number of uploaded files. Will replace current one when `maxCount` is `1` | number | - | 3.0 |  |
+| maxCount | Limit the number of uploaded files. Will replace current one when `maxCount` is `1` | number | - |  |  |
 | method | http method of upload request | string | `post` | 1.5.0 |  |
 | multiple | Whether to support selected multiple file. `IE10+` supported. You can select multiple files with CTRL holding down while multiple is set to be true | boolean | false |  |  |
 | name | The name of uploading file | string | `file` |  |  |
 | openFileDialogOnClick | click open file dialog | boolean | true |  |  |
-| openFileDialogOnClick | Click open file dialog | boolean | true | 3.0 |  |
+| openFileDialogOnClick | Click open file dialog | boolean | true |  |  |
 | previewFile | Customize preview file logic | (file: File \| Blob) => Promise&lt;dataURL: string> | - | 1.5.0 |  |
-| previewIcon | custom preview icon | v-slot:iconRender="{file: UploadFile}" | - | 3.0 |  |
-| progress | Custom progress bar | [ProgressProps](/components/progress/#API) (support `type="line"` only) | { strokeWidth: 2, showInfo: false } | 3.0 |  |
-| removeIcon | custom remove icon | v-slot:iconRender="{file: UploadFile}" | - | 3.0 |  |
-| showUploadList | Whether to show default upload list, could be an object to specify `showPreviewIcon`,  `showRemoveIcon` and `showDownloadIcon` individually | Boolean or { showPreviewIcon?: boolean, showRemoveIcon?: boolean, showDownloadIcon?: boolean } | true | showDownloadIcon(3.0) |  |
+| previewIcon | custom preview icon | v-slot:iconRender="{file: UploadFile}" | - |  |  |
+| progress | Custom progress bar | [ProgressProps](/components/progress/#API) (support `type="line"` only) | { strokeWidth: 2, showInfo: false } |  |  |
+| removeIcon | custom remove icon | v-slot:iconRender="{file: UploadFile}" | - |  |  |
+| showUploadList | Whether to show default upload list, could be an object to specify `showPreviewIcon`,  `showRemoveIcon` and `showDownloadIcon` individually | Boolean or { showPreviewIcon?: boolean, showRemoveIcon?: boolean, showDownloadIcon?: boolean } | true | showDownloadIcon() |  |
 | supportServerRender | Need to be turned on while the server side is rendering. | boolean | false |  |  |
 | withCredentials | ajax upload with cookie sent | boolean | false |  |  |
 
@@ -54,10 +54,10 @@ Uploading is the process of publishing information (web pages, text, pictures, v
 | --- | --- | --- | --- | --- |
 | change | A callback function, can be executed when uploading state is changing. See [change](#change) | Function | - |  |
 | download | Click the method to download the file, pass the method to perform the method logic, do not pass the default jump to the new TAB. | Function(file): void | Jump to new TAB | 1.5.0 |
-| drop | A callback function executed when files are dragged and dropped into upload area | (event: DragEvent) => void | - | 3.0 |
+| drop | A callback function executed when files are dragged and dropped into upload area | (event: DragEvent) => void | - |  |
 | preview | A callback function, will be executed when file link or preview icon is clicked. | Function(file) | - |  |
 | reject | A callback function, will be executed when drop files is not accept. | Function(fileList) | - |  |
-| remove   | A callback function, will be executed when removing file button is clicked, remove event will be prevented when return value is false or a Promise which resolve(false) or reject | function(file): boolean \| Promise | -   | 3.0 |
+| remove   | A callback function, will be executed when removing file button is clicked, remove event will be prevented when return value is false or a Promise which resolve(false) or reject | function(file): boolean \| Promise | -   |  |
 
 ### UploadFile
 
@@ -120,7 +120,7 @@ See <https://github.com/react-component/upload#customrequest>.
 
 ### Why will the `fileList` that's in control not trigger `change` `status` update when the file is not in the list?
 
-`change` only trigger when file in the list, it will ignore left events when removed from the list. Please note that there exist bug which makes event still trigger even the file is not in the list before `3.0.0-beta.10`.
+`change` only trigger when file in the list, it will ignore left events when removed from the list. Please note that there exist bug which makes event still trigger even the file is not in the list before `.0-beta.10`.
 
 ### Why does `change` sometimes return File object and other times return { originFileObj: File }?
 

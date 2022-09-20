@@ -21,7 +21,7 @@ To input a value in a range.
 | getTooltipPopupContainer | The DOM container of the Tooltip, the default behavior is to create a div element in body. | Function | () => document.body | 1.5.0 |
 | handleStyle | The style of slider handle | CSSProperties | - |  |
 | included | Make effect when `marks` not null，`true` means containment and `false` means coordinative | boolean | true |  |
-| mark | Custom tick mark of Slider, | v-slot:mark | { point: number, label: any } | 3.0 |
+| mark | Custom tick mark of Slider, | v-slot:mark | { point: number, label: any } |  |
 | marks | Tick mark of Slider, type of key must be `number`, and must in closed interval \[min, max], each mark can declare its own style. | object | { number: string\|VNode } or { number: { style: object, label: string\|VNode } } or { number: () => VNode } |  |
 | max | The maximum value the slider can slide to | number | 100 |  |
 | min | The minimum value the slider can slide to. | number | 0 |  |

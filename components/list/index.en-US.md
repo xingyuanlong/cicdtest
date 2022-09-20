@@ -48,7 +48,7 @@ More about pagination, please check [`Pagination`](https://www.antdv.com/compone
 | column | column of grid | number oneOf [ 1, 2, 3, 4, 6, 8, 12, 24] | - |  |
 | gutter | spacing between grid | number | 0 |  |
 | size | Size of list | `default` \| `middle` \| `small` | `default` |  |
-| xxxl | `≥2000px` column of grid | number | - | 3.0 |
+| xxxl | `≥2000px` column of grid | number | - |  |
 | xs | `<576px` column of grid | number | - |  |
 | sm | `≥576px` column of grid | number | - |  |
 | md | `≥768px` column of grid | number | - |  |

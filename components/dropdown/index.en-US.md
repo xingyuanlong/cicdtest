@@ -45,7 +45,7 @@ You should use [Menu](/components/menu/) as `overlay`. The menu items and divide
 | --- | --- | --- | --- | --- |
 | disabled | whether the dropdown menu is disabled | boolean | - |  |
 | icon | Icon (appears on the right) | vNode \| slot | - | 1.5.0 |
-| loading | Set the loading status of button | boolean \| { delay: number } | false | 3.0 |
+| loading | Set the loading status of button | boolean \| { delay: number } | false |  |
 | overlay(v-slot) | the dropdown menu | [Menu](/components/menu) | - |  |
 | placement | placement of pop menu: `bottomLeft` `bottom` `bottomRight` `topLeft` `top` `topRight` | String | `bottomLeft` |  |
 | size | size of the button, the same as [Button](/components/button) | string | `default` |  |

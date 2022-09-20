@@ -21,7 +21,7 @@ cover: https://gw.alipayobjects.com/zos/alicdn/HZ3meFc6W/Silder.svg
 | dots | 是否只能拖拽到刻度上 | boolean | false |  |
 | getTooltipPopupContainer | Tooltip 渲染父节点，默认渲染到 body 上。 | Function | () => document.body | 1.5.0 |
 | included | `marks` 不为空对象时有效，值为 true 时表示值为包含关系，false 表示并列 | boolean | true |  |
-| mark | 自定义刻度标记 | v-slot:mark | { point: number, label: any } | 3.0 |
+| mark | 自定义刻度标记 | v-slot:mark | { point: number, label: any } |  |
 | marks | 刻度标记，key 的类型必须为 `number` 且取值在闭区间 \[min, max] 内，每个标签可以单独设置样式 | object | { number: string\|VNode } or { number: { style: object, label: string\|VNode } } or { number: () => VNode } |  |
 | max | 最大值 | number | 100 |  |
 | min | 最小值 | number | 0 |  |

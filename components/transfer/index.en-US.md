@@ -26,10 +26,10 @@ One or more elements can be selected from either column, one click on the proper
 | footer | customize the progress dot by setting a scoped slot | slot="footer" slot-scope="props" |  |  |
 | listStyle | A custom CSS style used for rendering the transfer columns. | CSSProperties |  |  |
 | locale | i18n text including filter, empty text, item unit, etc | object | `{ itemUnit: 'item', itemsUnit: 'items', notFoundContent: 'The list is empty', searchPlaceholder: 'Search here' }` |  |
-| oneWay | Display as single direction style | boolean | false | 3.0.0 |
+| oneWay | Display as single direction style | boolean | false |  |
 | operations | A set of operations that are sorted from top to bottom. | string\[] | \['>', '&lt;'] |  |
-| operationStyle | A custom CSS style used for rendering the operations column | CSSProperties | - | 3.0.0 |
-| pagination | Use pagination. Not work in render props | boolean \| { pageSize: number } | false | 3.0.0 |
+| operationStyle | A custom CSS style used for rendering the operations column | CSSProperties | - |  |
+| pagination | Use pagination. Not work in render props | boolean \| { pageSize: number } | false |  |
 | render | The function to generate the item shown on a column. Based on an record (element of the dataSource array), this function should return a element which is generated from that record. Also, it can return a plain object with `value` and `label`, `label` is a element and `value` is for title | Function(record) \| slot |  |  |
 | selectedKeys(v-model) | A set of keys of selected items. | string\[] | \[] |  |
 | showSearch | If included, a search box is shown on each column. | boolean | false |  |

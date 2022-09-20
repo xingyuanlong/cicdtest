@@ -26,7 +26,7 @@ Almost anything can be represented in a tree structure. Examples include directo
 | disabled | whether disabled the tree | bool | false |  |
 | draggable | Specifies whether this Tree is draggable (IE > 8) | boolean | false |  |
 | expandedKeys(v-model) | (Controlled) Specifies the keys of the expanded treeNodes | string\[] \| number\[] | \[] |  |
-| fieldNames | Replace the title,key and children fields in treeNode with the corresponding fields in treeData | object | { children:'children', title:'title', key:'key' } | 3.0.0 |
+| fieldNames | Replace the title,key and children fields in treeNode with the corresponding fields in treeData | object | { children:'children', title:'title', key:'key' } | .0 |
 | filterTreeNode | Defines a function to filter (highlight) treeNodes. When the function returns `true`, the corresponding treeNode will be highlighted | function(node) | - |  |
 | loadData | Load data asynchronously | function(node) | - |  |
 | loadedKeys | (Controlled) Set loaded tree nodes. Need work with `loadData` | string\[] \| number\[] | \[] |  |
@@ -34,11 +34,11 @@ Almost anything can be represented in a tree structure. Examples include directo
 | selectable | whether can be selected | boolean | true |  |
 | selectedKeys(v-model) | (Controlled) Specifies the keys of the selected treeNodes | string\[] \| number\[] | - |  |
 | showIcon | Shows the icon before a TreeNode's title. There is no default style; you must set a custom style for it if set to `true` | boolean | false |  |
-| showLine | Shows a connecting line | boolean \| {showLeafIcon: boolean}(3.0+) | false |  |
+| showLine | Shows a connecting line | boolean \| {showLeafIcon: boolean}(+) | false |  |
 | switcherIcon | customize collapse/expand icon of tree node | v-slot:switcherIcon="{active, checked, expanded, loading, selected, halfChecked, title, key, children, dataRef, data, defaultIcon, switcherCls}" | - |  |
 | title | custom title | slot |  | 2.0.0 |
 | treeData | treeNode of tree, please use `treeNodes` before v1.1.4 | [TreeNode\[\]](#TreeNode) | - |  |
-| virtual | Disable virtual scroll when set to false | boolean | true | 3.0 |
+| virtual | Disable virtual scroll when set to false | boolean | true |  |
 
 ### Events
 

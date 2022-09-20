@@ -36,23 +36,23 @@ cover: https://gw.alipayobjects.com/zos/alicdn/ORmcdeaoO/Form.svg
 | hideRequiredMark | 隐藏所有表单项的必选标记 | Boolean | false |  |
 | labelAlign | label 标签的文本对齐方式 | 'left' \| 'right' | 'right' |  |
 | labelCol | label 标签布局，同 `<Col>` 组件，设置 `span` `offset` 值，如 `{span: 3, offset: 12}` 或 `sm: {span: 3, offset: 12}` | [object](/components/grid-cn/#Col) |  |  |
-| labelWrap | label 标签的文本换行方式 | boolean | false | 3.0 |
+| labelWrap | label 标签的文本换行方式 | boolean | false |  |
 | layout | 表单布局 | 'horizontal'\|'vertical'\|'inline' | 'horizontal' |  |
 | model | 表单数据对象 | object |  |  |
-| name | 表单名称，会作为表单字段 `id` 前缀使用 | string | - | 2.0.0 |
-| noStyle | 为 `true` 时不带样式，作为纯字段控件使用 | boolean | false | 3.0 |
+| name | 表单名称，会作为表单字段 `id` 前缀使用 | string | - |  |
+| noStyle | 为 `true` 时不带样式，作为纯字段控件使用 | boolean | false |  |
 | rules | 表单验证规则 | object |  |  |
-| scrollToFirstError | 提交失败自动滚动到第一个错误字段 | boolean \| [options](https://github.com/stipsan/scroll-into-view-if-needed/#options) | false | 2.0.0 |
+| scrollToFirstError | 提交失败自动滚动到第一个错误字段 | boolean \| [options](https://github.com/stipsan/scroll-into-view-if-needed/#options) | false |  |
 | validateOnRuleChange | 是否在 rules 属性改变后立即触发一次验证 | boolean | true |  |
-| validateTrigger | 统一设置字段校验规则 | string \| string\[] | `change` | 2.0.0 |
+| validateTrigger | 统一设置字段校验规则 | string \| string\[] | `change` |  |
 | wrapperCol | 需要为输入控件设置布局样式时，使用该属性，用法同 labelCol | [object](/components/grid-cn/#Col) |  |  |
 
 ### 事件
 
 | 事件名称 | 说明 | 回调参数 | 版本 |  |
 | --- | --- | --- | --- | --- |
-| finish | 提交表单且数据验证成功后回调事件 | function(values) | - | 2.0.0 |
-| finishFailed | 提交表单且数据验证失败后回调事件 | function({ values, errorFields, outOfDate }) | - | 2.0.0 |
+| finish | 提交表单且数据验证成功后回调事件 | function(values) | - |  |
+| finishFailed | 提交表单且数据验证失败后回调事件 | function({ values, errorFields, outOfDate }) | - |  |
 | submit | 数据验证成功后回调事件 | Function(e:Event) | ｜ |  |
 | validate | 任一表单项被校验后触发 | Function(name, status, errorMsgs) |  |  |
 
@@ -86,16 +86,16 @@ cover: https://gw.alipayobjects.com/zos/alicdn/ORmcdeaoO/Form.svg
 | name | 表单域 model 字段，在使用 validate、resetFields 方法的情况下，该属性是必填的 | string |  |  |
 | required | 是否必填，如不设置，则会根据校验规则自动生成 | boolean | false |  |
 | rules | 表单验证规则 | object \| array |  |  |
-| validateFirst | 当某一规则校验不通过时，是否停止剩下的规则的校验。 | boolean | false | 2.0.0 |
+| validateFirst | 当某一规则校验不通过时，是否停止剩下的规则的校验。 | boolean | false |  |
 | validateStatus | 校验状态，如不设置，则会根据校验规则自动生成，可选：'success' 'warning' 'error' 'validating' | string |  |  |
-| validateTrigger | 设置字段校验的时机 | string \| string\[] | `change` | 2.0.0 |
+| validateTrigger | 设置字段校验的时机 | string \| string\[] | `change` |  |
 | wrapperCol | 需要为输入控件设置布局样式时，使用该属性，用法同 labelCol | [object](/components/grid-cn/#Col) |  |  |
 
 ### 注意：
 
 #### 3.x
 
-自 3.0 版本以后，Form.Item 不再劫持子元素，而是通过 provider / inject 依赖注入的方式进行自动校验，这种方式可以提高组件性能，子元素也不会限制个数，同样子元素也可以是进一步封装的高级组件。你可以参考[自定义表单控件示例](#components-form-demo-customized-form-controls)
+自  版本以后，Form.Item 不再劫持子元素，而是通过 provider / inject 依赖注入的方式进行自动校验，这种方式可以提高组件性能，子元素也不会限制个数，同样子元素也可以是进一步封装的高级组件。你可以参考[自定义表单控件示例](#components-form-demo-customized-form-controls)
 
 但它同样会有一些缺点：
 

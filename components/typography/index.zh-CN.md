@@ -75,7 +75,7 @@ cover: https://gw.alipayobjects.com/zos/alicdn/GOM1KQ24O/Typography.svg
 | editableTooltip | 自定义提示文本，当 `editable.tooltip = false` 时关闭 | - | `编辑` |  |
 | ellipsisSymbol | 自定义展开描述文案 | - | - |  |
 | ellipsisTooltip | 省略时，展示提示信息 | - | - |  |
-| enterEnterIcon | 在编辑段中自定义“enter”图标 | `{className: string}` | `<EnterOutlined />` | 3.0 |
+| enterEnterIcon | 在编辑段中自定义“enter”图标 | `{className: string}` | `<EnterOutlined />` |  |
 
 ### copyable
 

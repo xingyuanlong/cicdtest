@@ -82,7 +82,6 @@ or use `tagRender` slot for custom rendering of tags.
         </a-tag>
       </template>
     </a-select>
-    <span>Note: v-slot:tagRender support from v3.0</span>
   </a-space>
 </template>
 <script lang="ts">

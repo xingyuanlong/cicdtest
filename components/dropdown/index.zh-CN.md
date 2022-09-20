@@ -21,7 +21,7 @@ cover: https://gw.alipayobjects.com/zos/alicdn/eedWN59yJ/Dropdown.svg
 
 | 参数 | 说明 | 类型 | 默认值 |  |
 | --- | --- | --- | --- | --- |
-| destroyPopupOnHide | 关闭后是否销毁 Dropdown | boolean | false | 3.0 |
+| destroyPopupOnHide | 关闭后是否销毁 Dropdown | boolean | false |  |
 | disabled | 菜单是否禁用 | boolean | - |  |
 | getPopupContainer | 菜单渲染父节点。默认渲染到 body 上，如果你遇到菜单滚动定位问题，试试修改为滚动的区域，并相对其定位。 | Function(triggerNode) | `() => document.body` |  |
 | overlay(v-slot) | 菜单 | [Menu](/components/menu-cn) | - |  |
@@ -49,7 +49,7 @@ cover: https://gw.alipayobjects.com/zos/alicdn/eedWN59yJ/Dropdown.svg
 | --- | --- | --- | --- | --- |
 | disabled | 菜单是否禁用 | boolean | - |  |
 | icon | 右侧的 icon | VNode \| slot | - | 1.5.0 |
-| loading | 设置按钮载入状态 | boolean \| { delay: number } | false | 3.0 |
+| loading | 设置按钮载入状态 | boolean \| { delay: number } | false |  |
 | overlay(v-slot) | 菜单 | [Menu](/components/menu-cn/) | - |  |
 | placement | 菜单弹出位置 | `bottomLeft` \| `bottom` \| `bottomRight` \| `topLeft` \| `top` \| `topRight` | `bottomLeft` |  |
 | size | 按钮大小，和 [Button](/components/button-cn/) 一致 | string | 'default' |  |

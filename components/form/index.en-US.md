@@ -35,11 +35,11 @@ A form consists of one or more form fields whose type includes input, textarea, 
 | hideRequiredMark | Hide required mark of all form items | Boolean | false |  |
 | labelAlign | text align of label of all items | 'left' \| 'right' | 'right' |  |
 | labelCol | The layout of label. You can set `span` `offset` to something like `{span: 3, offset: 12}` or `sm: {span: 3, offset: 12}` same as with `<Col>` | [object](/components/grid/#Col) |  |  |
-| labelWrap | whether label can be wrap | boolean | false | 3.0 |
+| labelWrap | whether label can be wrap | boolean | false |  |
 | layout | Define form layout | 'horizontal'\|'vertical'\|'inline' | 'horizontal' |  |
 | model | data of form component | object |  |  |
 | name | Form name. Will be the prefix of Field `id` | string | - | 2.0.0 |
-| noStyle | No style for `true`, used as a pure field control | boolean | false | 3.0 |
+| noStyle | No style for `true`, used as a pure field control | boolean | false |  |
 | rules | validation rules of form | object |  |  |
 | scrollToFirstError | Auto scroll to first failed field when submit | boolean \| [options](https://github.com/stipsan/scroll-into-view-if-needed/#options) | false | 2.0.0 |
 | validateOnRuleChange | whether to trigger validation when the `rules` prop is changed | boolean | true |  |
@@ -94,7 +94,7 @@ A form consists of one or more form fields whose type includes input, textarea, 
 
 #### 3.x
 
-Since version 3.0, Form.Item no longer hijacks child elements, but automatically checks through provider/inject dependency injection. This method can improve component performance, and there is no limit to the number of child elements. The same is true for child elements. It can be a high-level component that is further encapsulated.
+Since version , Form.Item no longer hijacks child elements, but automatically checks through provider/inject dependency injection. This method can improve component performance, and there is no limit to the number of child elements. The same is true for child elements. It can be a high-level component that is further encapsulated.
 
 You can reference [Customized Form Controls](#components-form-demo-customized-form-controls)
 

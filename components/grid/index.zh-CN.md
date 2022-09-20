@@ -47,7 +47,7 @@ cover: https://gw.alipayobjects.com/zos/alicdn/5rWLU27so/Grid.svg
 | pull | 栅格向左移动格数 | number | 0 |  |
 | push | 栅格向右移动格数 | number | 0 |  |
 | span | 栅格占位格数，为 0 时相当于 `display: none` | number | - |  |
-| xxxl | `≥2000px` 响应式栅格，可为栅格数或一个包含其他属性的对象 | number\|object | - | 3.0 |
+| xxxl | `≥2000px` 响应式栅格，可为栅格数或一个包含其他属性的对象 | number\|object | - |  |
 | xs | `<576px` 响应式栅格，可为栅格数或一个包含其他属性的对象 | number\|object | - |  |
 | sm | `≥576px` 响应式栅格，可为栅格数或一个包含其他属性的对象 | number\|object | - |  |
 | md | `≥768px` 响应式栅格，可为栅格数或一个包含其他属性的对象 | number\|object | - |  |

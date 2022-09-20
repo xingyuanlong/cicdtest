@@ -17,16 +17,16 @@ The difference with the 'confirm' modal dialog is that it's more lightweight tha
 
 | Param | Description | Type | Default value | Version |
 | --- | --- | --- | --- | --- |
-| cancelButton | custom render cancel button | slot | - | 3.0 |
+| cancelButton | custom render cancel button | slot | - |  |
 | cancelButtonProps | The cancel button props | [ButtonProps](/components/button/#API) | - |  |
 | cancelText | text of the Cancel button | string\|slot | `Cancel` |  |
 | disabled | is show popconfirm when click its childrenNode | boolean | false |  |
 | icon | customize icon of confirmation | vNode\|slot | &lt;Icon type="exclamation-circle" /> |  |
-| okButton | custom render confirm button | slot | - | 3.0 |
+| okButton | custom render confirm button | slot | - |  |
 | okButtonProps | The ok button props | [ButtonProps](/components/button/#API) | - |  |
 | okText | text of the Confirm button | string\|slot | `Confirm` |  |
 | okType | Button `type` of the Confirm button | string | `primary` |  |
-| showCancel | Show cancel button | boolean | true | 3.0 |
+| showCancel | Show cancel button | boolean | true |  |
 | title | title of the confirmation box | string\|slot | - |  |
 | visible (v-model) | hide or show | boolean | - |  |
 

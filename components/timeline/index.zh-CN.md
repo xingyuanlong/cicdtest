@@ -43,5 +43,5 @@ cover: https://gw.alipayobjects.com/zos/antfincdn/vJmo00mmgR/Timeline.svg
 | -------- | ----------------------------------------------- | ----------------- | ------ | ---- |
 | color    | 指定圆圈颜色 `blue, red, green`，或自定义的色值 | string            | blue   |      |
 | dot      | 自定义时间轴点                                  | string\|slot      | -      |      |
-| label    | 设置标签                                        | string \| slot    | -      | 3.0  |
+| label    | 设置标签                                        | string \| slot    | -      |   |
 | position | 自定义节点位置                                  | `left` \| `right` | -      |      |

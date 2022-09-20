@@ -88,16 +88,16 @@ The following APIs are shared by DatePicker, RangePicker.
 | inputReadOnly | Set the `readonly` attribute of the input tag (avoids virtual keyboard on touch devices) | boolean | false |  |
 | locale | Localization configuration | object | [default](https://github.com/vueComponent/pf-ui-vue/blob/main/components/date-picker/locale/example.json) |  |
 | mode | The picker panel mode | `time` \| `date` \| `month` \| `year` \| `decade` | - |  |
-| nextIcon | The custom next icon | slot | - | 3.0 |
+| nextIcon | The custom next icon | slot | - |  |
 | open | The open state of picker | boolean | - |  |
 | picker | Set picker type | `date` \| `week` \| `month` \| `quarter` \| `year` | `date` | `quarter` |
 | placeholder | The placeholder of date input | string \| \[string,string] | - |  |
 | popupStyle | To customize the style of the popup calendar | CSSProperties | {} |  |
-| prevIcon | The custom prev icon | slot | - | 3.0 |
+| prevIcon | The custom prev icon | slot | - |  |
 | size | To determine the size of the input box, the height of `large` and `small`, are 40px and 24px respectively, while default size is 32px | `large` \| `middle` \| `small` | - |  |
 | suffixIcon | The custom suffix icon | v-slot:suffixIcon | - |  |
-| superNextIcon | The custom super next icon | slot | - | 3.0 |
-| superPrevIcon | The custom super prev icon | slot | - | 3.0 |
+| superNextIcon | The custom super next icon | slot | - |  |
+| superPrevIcon | The custom super prev icon | slot | - |  |
 | valueFormat | optional, format of binding value. If not specified, the binding value will be a Date object | string，[date formats](https://day.js.org/docs/en/display/format) | - |  |
 
 ### Common Events

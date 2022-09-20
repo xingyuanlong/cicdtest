@@ -37,7 +37,7 @@ The differences with Select are:
 | dropdownMenuStyle | additional style applied to dropdown menu | object |  | 1.5.0 |
 | filterOption | If true, filter options by input, if function, filter options against it. The function will receive two arguments, `inputValue` and `option`, if the function returns `true`, the option will be included in the filtered set; Otherwise, it will be excluded. | boolean or function(inputValue, option) | true |  |
 | open | Controlled open state of dropdown | boolean | - |  |
-| option | custom render option by slot | v-slot:option="{value, label, [disabled, key, title]}" | - | 3.0 |
+| option | custom render option by slot | v-slot:option="{value, label, [disabled, key, title]}" | - |  |
 | options | Data source for autocomplete | [DataSourceItemType](https://github.com/vueComponent/pf-ui-vue/blob/724d53b907e577cf5880c1e6742d4c3f924f8f49/components/auto-complete/index.vue#L9)\[] |  |  |
 | placeholder | placeholder of input | string | - |  |
 | v-model:value | selected option | string\|string\[]\|{ key: string, label: string\|vNodes }\|Array&lt;{ key: string, label: string\|vNodes }> | - |  |
