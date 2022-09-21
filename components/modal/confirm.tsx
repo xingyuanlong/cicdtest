@@ -4,10 +4,7 @@ import type { ModalFuncProps } from './Modal';
 import { destroyFns } from './Modal';
 import ConfigProvider, { globalConfigForApi } from '../config-provider';
 import omit from '../_util/omit';
-import InfoCircleOutlined from '@ant-design/icons-vue/InfoCircleOutlined';
-import CheckCircleOutlined from '@ant-design/icons-vue/CheckCircleOutlined';
-import CloseCircleOutlined from '@ant-design/icons-vue/CloseCircleOutlined';
-import ExclamationCircleOutlined from '@ant-design/icons-vue/ExclamationCircleOutlined';
+import { InfoFilled, AlertFilled, SuccessFilled, ErrorFilled } from 'pf-icons-vue';
 
 type ConfigUpdate = ModalFuncProps | ((prevConfig: ModalFuncProps) => ModalFuncProps);
 
@@ -101,7 +98,7 @@ export default confirm;
 
 export function withWarn(props: ModalFuncProps): ModalFuncProps {
   return {
-    icon: () => <ExclamationCircleOutlined />,
+    icon: () => <AlertFilled />,
     okCancel: false,
     ...props,
     type: 'warning',
@@ -110,7 +107,7 @@ export function withWarn(props: ModalFuncProps): ModalFuncProps {
 
 export function withInfo(props: ModalFuncProps): ModalFuncProps {
   return {
-    icon: () => <InfoCircleOutlined />,
+    icon: () => <InfoFilled />,
     okCancel: false,
     ...props,
     type: 'info',
@@ -119,7 +116,7 @@ export function withInfo(props: ModalFuncProps): ModalFuncProps {
 
 export function withSuccess(props: ModalFuncProps): ModalFuncProps {
   return {
-    icon: () => <CheckCircleOutlined />,
+    icon: () => <SuccessFilled />,
     okCancel: false,
     ...props,
     type: 'success',
@@ -128,7 +125,7 @@ export function withSuccess(props: ModalFuncProps): ModalFuncProps {
 
 export function withError(props: ModalFuncProps): ModalFuncProps {
   return {
-    icon: () => <CloseCircleOutlined />,
+    icon: () => <ErrorFilled />,
     okCancel: false,
     ...props,
     type: 'error',
@@ -137,7 +134,7 @@ export function withError(props: ModalFuncProps): ModalFuncProps {
 
 export function withConfirm(props: ModalFuncProps): ModalFuncProps {
   return {
-    icon: () => <ExclamationCircleOutlined />,
+    icon: () => <AlertFilled />,
     okCancel: true,
     ...props,
     type: 'confirm',
