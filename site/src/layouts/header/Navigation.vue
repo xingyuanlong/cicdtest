@@ -17,15 +17,10 @@
       </router-link>
     </a-menu-item>
     <a-menu-item v-if="isZhCN" key="surely-vue">
-      <!-- <a
-        href="https://www.surely.cool"
-        target="_blank"
-        rel="noopener noreferrer"
-        style="position: relative"
-      > </a> -->
+      <a-tooltip title="规划中，敬请期待..." color="#06aea6">
         业务组件
         <a-badge color="red" style="position: absolute; top: -35px; right: -15px" />
-     
+      </a-tooltip>
     </a-menu-item>
     <template v-if="isMobile">
       <a-menu-item key="switch-lang" @click="$emit('langChange')">
@@ -40,6 +35,7 @@ import { GLOBAL_CONFIG } from '../../SymbolKey';
 import { getLocalizedPathname } from '../../utils/util';
 import { computed, defineComponent, inject, ref, watch } from 'vue';
 import { useRoute } from 'vue-router';
+
 export default defineComponent({
   emits: ['langChange'],
   setup() {
@@ -73,6 +69,8 @@ export default defineComponent({
       activeMenuItem,
     };
   },
+  methods: {
+  }
 });
 </script>
 <style lang="less">
@@ -107,12 +105,6 @@ export default defineComponent({
 
     & .ant-menu-submenu-title .anticon {
       margin: 0;
-    }
-
-    & > .ant-menu-item-selected {
-      a {
-        color: @primary-color;
-      }
     }
   }
 

@@ -1,7 +1,7 @@
 <template>
   <h1>
     <a id="logo" :href="isZhCN ? '/index-cn' : '/index'">
-      <LogoFilled class="logoIcon" />
+      <img :src="logo" alt="logo">
       pf-ui-vue
     </a>
   </h1>
@@ -11,14 +11,11 @@
 import type { GlobalConfig } from '../../App.vue';
 import { GLOBAL_CONFIG } from '../../SymbolKey';
 import { defineComponent, inject } from 'vue';
-import { LogoFilled } from 'pf-icons-vue'
+import logo from '../../assets/favicon.ico';
 
 export default defineComponent({
   setup() {
-    return { isZhCN: inject<GlobalConfig>(GLOBAL_CONFIG).isZhCN.value };
-  },
-  components: {
-    LogoFilled
+    return { logo, isZhCN: inject<GlobalConfig>(GLOBAL_CONFIG).isZhCN.value };
   }
 });
 </script>
@@ -51,8 +48,7 @@ export default defineComponent({
   }
 
   img {
-    position: relative;
-    top: -1.5px;
+    margin-top: 15px;
     height: 32px;
     margin-right: 16px;
 

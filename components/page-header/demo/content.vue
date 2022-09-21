@@ -39,17 +39,17 @@ Show all props provided by PageHeader.
           <template #overlay>
             <a-menu>
               <a-menu-item>
-                <a target="_blank" rel="noopener noreferrer" href="http://www.alipay.com/">
+                <a target="_blank" rel="noopener noreferrer" href="/">
                   1st menu item
                 </a>
               </a-menu-item>
               <a-menu-item>
-                <a target="_blank" rel="noopener noreferrer" href="http://www.taobao.com/">
+                <a target="_blank" rel="noopener noreferrer" href="/">
                   2nd menu item
                 </a>
               </a-menu-item>
               <a-menu-item>
-                <a target="_blank" rel="noopener noreferrer" href="http://www.tmall.com/">
+                <a target="_blank" rel="noopener noreferrer" href="/">
                   3rd menu item
                 </a>
               </a-menu-item>

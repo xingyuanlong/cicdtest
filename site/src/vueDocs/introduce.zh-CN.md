@@ -1,4 +1,4 @@
-# Ant Design of Vue
+# pf-ui-vue
 
 基于antd-design-vue二次开发，开发和服务于医疗企业级后台产品。
 

@@ -73,6 +73,7 @@
         </div>
         <PrevAndNext :menus="menus" :current-menu-index="currentMenuIndex" :is-zh-c-n="isZhCN" />
         <!-- <Footer /> -->
+        <div :style="{padding: '30px'}" />
       </a-col>
     </a-row>
   </div>
