@@ -5,12 +5,7 @@ import CheckCircleOutlined from '@ant-design/icons-vue/CheckCircleOutlined';
 import ExclamationCircleOutlined from '@ant-design/icons-vue/ExclamationCircleOutlined';
 import InfoCircleOutlined from '@ant-design/icons-vue/InfoCircleOutlined';
 import CloseCircleOutlined from '@ant-design/icons-vue/CloseCircleOutlined';
-import CheckCircleFilled from '@ant-design/icons-vue/CheckCircleFilled';
-import ExclamationCircleFilled from '@ant-design/icons-vue/ExclamationCircleFilled';
-import InfoCircleFilled from '@ant-design/icons-vue/InfoCircleFilled';
-import CloseCircleFilled from '@ant-design/icons-vue/CloseCircleFilled';
 import QuestionCircleOutlined from '@ant-design/icons-vue/QuestionCircleOutlined';
-import QuestionCircleFilled from '@ant-design/icons-vue/QuestionCircleFilled';
 import classNames from '../_util/classNames';
 import PropTypes from '../_util/vue-types';
 import { getTransitionProps, Transition } from '../_util/transition';
@@ -19,21 +14,25 @@ import { tuple, withInstall } from '../_util/type';
 import { cloneElement } from '../_util/vnode';
 import type { NodeMouseEventHandler } from '../vc-tree/contextTypes';
 import useConfigInject from '../_util/hooks/useConfigInject';
+import { 
+  InfoFilled, AlertFilled, SuccessFilled, ErrorFilled, QuestionFilled,
+  InfoOutlined, AlertOutlined, SuccessOutlined, ErrorOutlined, QuestionOutlined
+} from 'pf-icons-vue';
 
 const iconMapFilled = {
-  success: CheckCircleFilled,
-  info: InfoCircleFilled,
-  error: CloseCircleFilled,
-  warning: ExclamationCircleFilled,
-  question: QuestionCircleFilled,
+  success: SuccessFilled,
+  info: InfoFilled,
+  error: ErrorFilled,
+  warning: AlertFilled,
+  question: QuestionFilled,
 };
 
 const iconMapOutlined = {
-  success: CheckCircleOutlined,
-  info: InfoCircleOutlined,
-  error: CloseCircleOutlined,
-  warning: ExclamationCircleOutlined,
-  question: QuestionCircleOutlined,
+  success: SuccessOutlined,
+  info: InfoOutlined,
+  error: ErrorOutlined,
+  warning: AlertOutlined,
+  question: QuestionOutlined,
 };
 
 const AlertTypes = tuple('success', 'info', 'warning', 'error', 'question');
