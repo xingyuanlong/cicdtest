@@ -6,7 +6,7 @@
         <div :class="$style.header">
           <a to="/">
             <img alt="logo" :class="$style.logo" :src="logo" />
-            <span :class="$style.title">Ant Design Vue</span>
+            <span :class="$style.title">pf-ui-vue</span>
           </a>
         </div>
       </div>

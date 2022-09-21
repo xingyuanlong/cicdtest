@@ -6,7 +6,7 @@ Ant Design allows you to customize some basic design aspects in order to meet th
 
 ![](https://zos.alipayobjects.com/rmsportal/zTFoszBtDODhXfLAazfSpYbSLSEeytoG.png)
 
-## Ant Design Vue Less variables
+## pf-ui-vue Less variables
 
 We are using [Less](http://lesscss.org/) as the development language for styling. A set of less variables are defined for each design aspect that can be customized to your needs.
 
@@ -115,7 +115,7 @@ module.exports = {
 Another approach to customize theme is creating a `less` file within variables to override `antd.less`.
 
 ```css
-@import '~pf-ui-vue/dist/antd.less'; // Import Ant Design Vue styles by less entry
+@import '~pf-ui-vue/dist/antd.less'; // Import pf-ui-vue styles by less entry
 @import 'your-theme-file.less'; // variables to override above
 ```
 

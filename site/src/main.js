@@ -15,7 +15,7 @@ import store from './store/index.js';
 import clipboard from './directives/clipboard';
 import App from './App.vue';
 console.log('vue version: ', vueVersion);
-console.log('ant design vue version: ', Antd.version);
+console.log('pf-ui-vue version: ', Antd.version);
 const app = createApp(App);
 
 app.use(Antd);

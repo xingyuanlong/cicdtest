@@ -18,30 +18,23 @@ Import icons from `pf-icons-vue`, component name of icons with different theme i
 
 <template>
   <a-space>
-    <home-outlined />
-    <setting-filled />
-    <smile-outlined />
-    <sync-outlined spin />
-    <smile-outlined :rotate="180" />
-    <loading-outlined />
+    <loading-filled />
+    <add-filled />
+    <alert-filled />
   </a-space>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
 import {
-  HomeOutlined,
-  SettingFilled,
-  SmileOutlined,
-  SyncOutlined,
-  LoadingOutlined,
-} from '@ant-design/icons-vue';
+  LoadingFilled,
+  AddFilled,
+  AlertFilled
+} from 'pf-icons-vue';
 export default defineComponent({
   components: {
-    HomeOutlined,
-    SettingFilled,
-    SmileOutlined,
-    SyncOutlined,
-    LoadingOutlined,
+    LoadingFilled,
+    AddFilled,
+    AlertFilled
   },
 });
 </script>

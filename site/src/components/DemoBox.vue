@@ -130,8 +130,8 @@ export default defineComponent({
     const warning = () => {
       // Modal.warning({
       //   content: globalConfig.isZhCN
-      //     ? '我们检测到你可能使用了 AdBlock 或 Adblock Plus，它会影响到复制、展开代码等功能。 你可以将 Ant Design Vue 加入白名单，以便我们更好地提供服务。'
-      //     : 'We have detected that you may have used AdBlock or Adblock Plus, which will affect functions such as copying and expanding code. You can add Ant Design Vue to the whitelist so that we can provide better services.',
+      //     ? '我们检测到你可能使用了 AdBlock 或 Adblock Plus，它会影响到复制、展开代码等功能。 你可以将 pf-ui-vue 加入白名单，以便我们更好地提供服务。'
+      //     : 'We have detected that you may have used AdBlock or Adblock Plus, which will affect functions such as copying and expanding code. You can add pf-ui-vue to the whitelist so that we can provide better services.',
       // });
     };
     const iframeDemoKey = computed(() => {

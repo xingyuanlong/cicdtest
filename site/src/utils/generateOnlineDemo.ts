@@ -4,7 +4,7 @@ import packageInfo from '../../../package.json';
 const indexHtml = `<!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Ant Design Vue Demo</title>
+    <title>pf-ui-vue Demo</title>
     <style>
       body {
         padding: 20px;

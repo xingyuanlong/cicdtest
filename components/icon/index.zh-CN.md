@@ -50,7 +50,7 @@ npm install --save pf-icons-vue
   <message-outlined :style="{fontSize: '16px', color: '#08c'}" />
 </template>
 <script>
-  import { MessageOutlined } from '@ant-design/icons-vue';
+  import { MessageOutlined } from 'pf-ui-vue';
   import { defineComponent } from 'vue';
   export default defineComponent({
     components: {
