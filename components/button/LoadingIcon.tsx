@@ -24,20 +24,29 @@ const resetStyle = (node: HTMLSpanElement) => {
     node.style.transform = null;
   }
 };
+
+function DottedLoading(props, context) {
+  const { prefixCls } = props
+  return (
+    <span class={`${prefixCls}-loading-dotted`}>...</span>
+  )
+}
+
 export default defineComponent({
   name: 'LoadingIcon',
   props: {
     prefixCls: String,
     loading: [Boolean, Object],
     existIcon: Boolean,
+    dotted: Boolean
   },
   setup(props) {
     return () => {
-      const { existIcon, prefixCls, loading } = props;
+      const { existIcon, prefixCls, loading, dotted } = props;
       if (existIcon) {
         return (
           <span class={`${prefixCls}-loading-icon`}>
-            <LoadingOutlined />
+           { dotted ? <DottedLoading prefixCls={prefixCls} /> : <LoadingOutlined /> }
           </span>
         );
       }
@@ -58,7 +67,7 @@ export default defineComponent({
         >
           {visible ? (
             <span class={`${prefixCls}-loading-icon`}>
-              <LoadingOutlined />
+              { dotted ? <DottedLoading prefixCls={prefixCls} /> : <LoadingOutlined /> }
             </span>
           ) : null}
         </Transition>

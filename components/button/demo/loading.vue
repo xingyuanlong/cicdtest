@@ -16,6 +16,10 @@ A loading indicator can be added to a button by setting the `loading` property o
 </docs>
 
 <template>
+   <a-space style="width: 100%">
+    <a-button type="primary" :loading="{dotted: true}">Loading</a-button>
+    <a-button :loading="{dotted: true}">Loading</a-button>
+  </a-space>
   <a-space style="width: 100%">
     <a-button type="primary" loading>Loading</a-button>
     <a-button type="primary" size="small" loading>Loading</a-button>
@@ -34,6 +38,7 @@ A loading indicator can be added to a button by setting the `loading` property o
     <a-button type="primary" shape="circle" loading />
     <a-button danger shape="round" loading />
   </a-space>
+
 </template>
 <script lang="ts">
 import { defineComponent, ref } from 'vue';

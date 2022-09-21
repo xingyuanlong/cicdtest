@@ -26,7 +26,7 @@ export const buttonProps = () => ({
   },
   loading: {
     type: [Boolean, Object] as PropType<boolean | { delay?: number }>,
-    default: (): boolean | { delay?: number } => false,
+    default: (): boolean | Partial<{ delay: number, dotted: boolean}> => false,
   },
   disabled: { type: Boolean, default: undefined },
   ghost: { type: Boolean, default: undefined },

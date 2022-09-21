@@ -54,6 +54,8 @@ export default defineComponent({
         : !!props.loading,
     );
 
+    const dotted = computed(() => typeof props.loading === 'object' ? (props.loading.dotted || false) : false)
+
     watch(
       loadingOrDelay,
       val => {
@@ -177,6 +179,7 @@ export default defineComponent({
         ) : (
           <LoadingIcon
             existIcon={!!icon}
+            dotted={dotted.value}
             prefixCls={prefixCls.value}
             loading={!!innerLoading.value}
           />
@@ -197,8 +200,17 @@ export default defineComponent({
 
       const buttonNode = (
         <button {...buttonProps} ref={buttonNodeRef} type={htmlType}>
-          {iconNode}
-          {kids}
+          {dotted.value ? (
+            <>
+             {kids}
+             {iconNode}
+            </>
+          ) : (
+            <>
+              {iconNode}
+              {kids}
+           </>
+          )}
         </button>
       );
 
