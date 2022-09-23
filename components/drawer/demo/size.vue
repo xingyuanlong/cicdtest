@@ -22,9 +22,9 @@ The default width (or height) of Drawer is `500px`, and there is a presetted lar
   </a-button>
   <a-button type="primary" @click="showDrawer('large')">Open Large Size (800px)</a-button>
   <a-drawer title="Basic Drawer" :size="size" :visible="visible" @close="onClose">
-    <template #extra>
-      <a-button style="margin-right: 8px" @click="onClose">Cancel</a-button>
-      <a-button type="primary" @click="onClose">Submit</a-button>
+    <template #footer>
+      <a-button type="primary" @click="onClose" style="margin-right: 16px">Submit</a-button>
+      <a-button @click="onClose">Cancel</a-button>
     </template>
     <p>Some contents...</p>
     <p>Some contents...</p>

@@ -97,12 +97,12 @@ Use form in drawer with submit button.
         </a-col>
       </a-row>
     </a-form>
-    <template #extra>
-      <a-space>
-        <a-button @click="onClose">Cancel</a-button>
+    <a-row justify="center">
+      <a-space :size="16">
         <a-button type="primary" @click="onClose">Submit</a-button>
+        <a-button @click="onClose">Cancel</a-button>
       </a-space>
-    </template>
+    </a-row>
   </a-drawer>
 </template>
 <script lang="ts">

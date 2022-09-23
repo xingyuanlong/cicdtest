@@ -8,7 +8,7 @@ title:
 
 ## zh-CN
 
-在 Ant Design 规范中，操作按钮建议放在抽屉的右上角，可以使用 extra 属性来实现。
+内容较多时，操作按钮建议放在抽屉的底部，可以使用 footer 属性来实现，内容较少时，操作按钮建议放在内容下方。
 
 ## en-US
 
@@ -31,13 +31,13 @@ Extra actions should be placed at corner of drawer in Ant Design, you can using 
     :visible="visible"
     @close="onClose"
   >
-    <template #extra>
-      <a-button style="margin-right: 8px" @click="onClose">Cancel</a-button>
-      <a-button style="margin-right: 8px" type="primary" @click="onClose">Submit</a-button>
+    <p>Some contents...</p>
+    <p>Some contents...</p>
+    <p>Some contents...</p>
+    <template #footer>
+      <a-button style="margin-right: 16px" type="primary" @click="onClose">Submit</a-button>
+      <a-button @click="onClose">Cancel</a-button>
     </template>
-    <p>Some contents...</p>
-    <p>Some contents...</p>
-    <p>Some contents...</p>
   </a-drawer>
 </template>
 <script lang="ts">

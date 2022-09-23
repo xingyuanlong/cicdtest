@@ -14,7 +14,7 @@ import { getPropsSlot, initDefaultProps } from '../_util/props-util';
 import classnames from '../_util/classNames';
 import VcDrawer from '../vc-drawer';
 import PropTypes from '../_util/vue-types';
-import CloseOutlined from '@ant-design/icons-vue/CloseOutlined';
+import { CloseFilled } from 'pf-icons-vue'
 import useConfigInject from '../_util/hooks/useConfigInject';
 import { tuple, withInstall } from '../_util/type';
 import omit from '../_util/omit';
@@ -85,6 +85,7 @@ export const drawerProps = () => ({
   onAfterVisibleChange: Function as PropType<(visible: boolean) => void>,
   'onUpdate:visible': Function as PropType<(visible: boolean) => void>,
   onClose: Function as PropType<MouseEventHandler | KeyboardEventHandler>,
+  headerSize: { type: String as PropType<'large' | 'default'>, default: 'default' }
 });
 
 export type DrawerProps = Partial<ExtractPropTypes<ReturnType<typeof drawerProps>>>;
@@ -242,7 +243,7 @@ const Drawer = defineComponent({
     });
 
     const renderHeader = (prefixCls: string) => {
-      const { closable, headerStyle } = props;
+      const { closable, headerStyle, headerSize } = props;
       const extra = getPropsSlot(slots, props, 'extra');
       const title = getPropsSlot(slots, props, 'title');
       if (!title && !closable) {
@@ -253,6 +254,7 @@ const Drawer = defineComponent({
         <div
           class={classnames(`${prefixCls}-header`, {
             [`${prefixCls}-header-close-only`]: closable && !title && !extra,
+            [`${prefixCls}-header-lg`]: headerSize === 'large',
           })}
           style={headerStyle}
         >
@@ -272,7 +274,7 @@ const Drawer = defineComponent({
       return (
         closable && (
           <button key="closer" onClick={close} aria-label="Close" class={`${prefixCls}-close`}>
-            {$closeIcon === undefined ? <CloseOutlined></CloseOutlined> : $closeIcon}
+            {$closeIcon === undefined ? <CloseFilled></CloseFilled> : $closeIcon}
           </button>
         )
       );

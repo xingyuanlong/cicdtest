@@ -36,8 +36,8 @@ Open a new drawer on top of an existing drawer to handle multi branch tasks.
     </a-drawer>
 
     <template #footer>
-      <a-button style="margin-right: 8px" @click="onClose">Cancel</a-button>
-      <a-button type="primary" @click="onClose">Submit</a-button>
+      <a-button type="primary" @click="onClose" style="margin-right: 16px">Submit</a-button>
+      <a-button @click="onClose">Cancel</a-button>
     </template>
   </a-drawer>
 </template>

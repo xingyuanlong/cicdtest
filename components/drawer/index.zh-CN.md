@@ -46,6 +46,7 @@ cover: https://gw.alipayobjects.com/zos/alicdn/7z8NJQhFb/Drawer.svg
 | visible(v-model) | Drawer 是否可见 | boolean | - |  |
 | width | 宽度 | string \| number | 500 |  |
 | zIndex | 设置 Drawer 的 `z-index` | Number | 1000 |  |
+| headerSize | 预设抽屉header高度，default `50px` 和 large `64px` | `default` \| `large` | `default` |  |
 
 ## 事件
 

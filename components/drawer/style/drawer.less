@@ -152,7 +152,7 @@
     display: inline-block;
     color: @modal-close-color;
     font-weight: 700;
-    font-size: @font-size-lg;
+    font-size: @font-size-base;
     font-style: normal;
     line-height: 1;
     text-align: center;
@@ -180,13 +180,20 @@
     padding: @drawer-header-padding;
     color: @text-color;
     background: @drawer-bg;
-    border-bottom: @border-width-base @border-style-base @border-color-split;
-    border-radius: @border-radius-base @border-radius-base 0 0;
+    &::after {
+      position: absolute;
+      content: '';
+      bottom: 0;
+      left: 20px;
+      right: 20px;
+      height: 1px;
+      background-color: #CCCCCC;
+    }
 
     &-dot {
       position: relative;
-      margin-right: 4px;
-      width: 3.4px;
+      margin-right: 10px;
+      width: 4px;
       height: 16px;
       background-color: @draw-title-before-color;
     }
@@ -202,6 +209,14 @@
       padding-bottom: 0;
       border: none;
     }
+  }
+
+  &-header-lg {
+    padding: @drawer-header-padding-lg;
+  }
+
+  &-extra {
+    margin-right: 10px;
   }
 
   &-wrapper-body {
