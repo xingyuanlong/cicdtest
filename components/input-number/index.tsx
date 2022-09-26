@@ -1,8 +1,9 @@
 import type { PropType, ExtractPropTypes, HTMLAttributes, App } from 'vue';
 import { watch, defineComponent, ref } from 'vue';
 import classNames from '../_util/classNames';
-import UpOutlined from '@ant-design/icons-vue/UpOutlined';
-import DownOutlined from '@ant-design/icons-vue/DownOutlined';
+// import UpOutlined from '@ant-design/icons-vue/UpOutlined';
+// import DownOutlined from '@ant-design/icons-vue/DownOutlined';
+import { ArrowDownFilled } from 'pf-icons-vue';
 import VcInputNumber, { inputNumberProps as baseInputNumberProps } from './src/InputNumber';
 import type { SizeType } from '../config-provider';
 import { useInjectFormItemContext } from '../form/FormItemContext';
@@ -117,9 +118,8 @@ const InputNumber = defineComponent({
           onBlur={handleBlur}
           onFocus={handleFocus}
           v-slots={{
-            // TODO: 替换svg
-            upHandler: () => <UpOutlined class={`${preCls}-handler-up-inner`} />,
-            downHandler: () => <DownOutlined class={`${preCls}-handler-down-inner`} />,
+            upHandler: () => <ArrowDownFilled class={`${preCls}-handler-up-inner`} />,
+            downHandler: () => <ArrowDownFilled class={`${preCls}-handler-down-inner`} />,
           }}
         />
       );
