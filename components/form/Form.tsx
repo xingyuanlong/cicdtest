@@ -104,7 +104,7 @@ const Form = defineComponent({
   props: initDefaultProps(formProps(), {
     layout: 'horizontal',
     hideRequiredMark: false,
-    colon: true,
+    colon: false,
   }),
   Item: FormItem,
   useForm,
