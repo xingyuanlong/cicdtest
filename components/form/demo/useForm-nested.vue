@@ -23,7 +23,7 @@ title:
     <a-form-item label="Sub name" v-bind="validateInfos['sub.name']">
       <a-input v-model:value="modelRef.sub.name" />
     </a-form-item>
-    <a-form-item :wrapper-col="{ span: 14, offset: 4 }">
+    <a-form-item :wrapper-col="{ span: 14, offset: 4 }" style="margin-top: 24px;">
       <a-button type="primary" @click.prevent="onSubmit">Create</a-button>
       <a-button style="margin-left: 10px" @click="reset">Reset</a-button>
     </a-form-item>

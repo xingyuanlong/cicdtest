@@ -37,7 +37,7 @@ When requiring users to interact with the application, but without jumping to a 
 | okType | Button `type` of the OK button | string | `primary` |  |
 | title | The modal dialog's title | string\|slot | - |  |
 | visible | Whether the modal dialog is visible or not | boolean | false |  |
-| width | Width of the modal dialog | string\|number | 520 |  |
+| width | Width of the modal dialog, select from 300px, 400px, 560px, 720px, 800px, 1000px | string\|number | 560 |  |
 | wrapClassName | The class name of the container of the modal dialog | string | - |  |
 | zIndex | The `z-index` of the Modal | number | 1000 |  |
 
