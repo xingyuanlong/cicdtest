@@ -44,7 +44,7 @@ Basic Form data control. Includes layout, initial values, validation and submit.
       <a-checkbox v-model:checked="formState.remember">Remember me</a-checkbox>
     </a-form-item>
 
-    <a-form-item :wrapper-col="{ offset: 8, span: 16 }">
+    <a-form-item :wrapper-col="{ offset: 8, span: 16 }" style="margin-top: 24px;">
       <a-button type="primary" html-type="submit">Submit</a-button>
     </a-form-item>
   </a-form>

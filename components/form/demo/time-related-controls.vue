@@ -63,6 +63,7 @@ or use `valueFormat` to format.
         xs: { span: 24, offset: 0 },
         sm: { span: 16, offset: 8 },
       }"
+      style="margin-top: 24px;"
     >
       <a-button type="primary" html-type="submit">Submit</a-button>
     </a-form-item>
