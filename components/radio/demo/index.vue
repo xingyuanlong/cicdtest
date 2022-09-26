@@ -4,6 +4,7 @@
     <disabled />
     <radio-button />
     <radio-button-solid />
+    <radio-button-simple />
     <radio-group-more />
     <radio-group-options />
     <radio-group-with-name />
@@ -21,6 +22,7 @@ import RadioGroupOptions from './radioGroup-options.vue';
 import RadioGroupWithName from './radioGroup-with-name.vue';
 import RadioGroup from './radioGroup.vue';
 import RadioButtonSolid from './radioButton-solid.vue';
+import RadioButtonSimple from './radioButton-simple.vue';
 import Size from './size.vue';
 
 import CN from '../index.zh-CN.md';
@@ -35,6 +37,7 @@ export default defineComponent({
     Disabled,
     RadioButton,
     RadioButtonSolid,
+    RadioButtonSimple,
     RadioGroupMore,
     RadioGroupOptions,
     RadioGroupWithName,

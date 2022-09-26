@@ -20,7 +20,7 @@ cover: https://gw.alipayobjects.com/zos/alicdn/3StSdUlSH/Modal.svg
 | --- | --- | --- | --- | --- |
 | afterClose | Modal 完全关闭后的回调 | function | 无 |  |
 | bodyStyle | Modal body 样式 | object | {} |  |
-| cancelButtonProps | cancel 按钮 props | [ButtonProps](/components/button-cn/#API) | - |  |
+| cancelButtonProps | cancel 按钮 props | [ButtonProps](/components/button/#API) | - |  |
 | cancelText | 取消按钮文字 | string\| slot | 取消 |  |
 | centered | 垂直居中展示 Modal | boolean | `false` |  |
 | closable | 是否显示右上角的关闭按钮 | boolean | true |  |
@@ -36,16 +36,14 @@ cover: https://gw.alipayobjects.com/zos/alicdn/3StSdUlSH/Modal.svg
 | mask | 是否展示遮罩 | boolean | true |  |
 | maskClosable | 点击蒙层是否允许关闭 | boolean | true |  |
 | maskStyle | 遮罩样式 | object | {} |  |
-| okButtonProps | ok 按钮 props | [ButtonProps](/components/button-cn/#API) | - |  |
+| okButtonProps | ok 按钮 props | [ButtonProps](/components/button/#API) | - |  |
 | okText | 确认按钮文字 | string\|slot | 确定 |  |
 | okType | 确认按钮类型 | string | primary |  |
 | title | 标题 | string\|slot | 无 |  |
 | visible(v-model) | 对话框是否可见 | boolean | 无 |  |
-| width | 宽度，根据规范，请从300px、400px、560px、720px、800px、1000px中选择 | string\|number | 560 |  |
+| width | 宽度 | string\|number | 520 |  |
 | wrapClassName | 对话框外层容器的类名 | string | - |  |
 | zIndex | 设置 Modal 的 `z-index` | number | 1000 |  |
-| headerBg | header是否有背景色 | boolean | false |  |
-| maxHeight | 弹窗最大高度，超出最大高度内容区出现滚动 | string\|number | 600 |  |
 
 ### 事件
 

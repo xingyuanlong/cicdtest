@@ -64,7 +64,7 @@ This example demonstrates the case that a form contains multiple form controls.
         Add sights
       </a-button>
     </a-form-item>
-    <a-form-item style="margin-top: 24px;">
+    <a-form-item>
       <a-button type="primary" html-type="submit">Submit</a-button>
     </a-form-item>
   </a-form>

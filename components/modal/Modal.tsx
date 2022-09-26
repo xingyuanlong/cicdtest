@@ -4,7 +4,7 @@ import classNames from '../_util/classNames';
 import Dialog from '../vc-dialog';
 import PropTypes from '../_util/vue-types';
 import addEventListener from '../vc-util/Dom/addEventListener';
-import { CloseFilled } from 'pf-icons-vue';
+import CloseOutlined from '@ant-design/icons-vue/CloseOutlined';
 import Button from '../button';
 import type { ButtonProps as ButtonPropsType, LegacyButtonType } from '../button/buttonTypes';
 import { convertLegacyProps } from '../button/buttonTypes';
@@ -15,7 +15,6 @@ import type { VueNode } from '../_util/type';
 import { canUseDocElement } from '../_util/styleChecker';
 import useConfigInject from '../_util/hooks/useConfigInject';
 import { getTransitionName } from '../_util/transition';
-import { toPx } from '../_util/util';
 
 let mousePosition: { x: number; y: number } | null = null;
 // ref: https://github.com/ant-design/ant-design/issues/15795
@@ -40,7 +39,6 @@ export const modalProps = () => ({
   visible: { type: Boolean, default: undefined },
   confirmLoading: { type: Boolean, default: undefined },
   title: PropTypes.any,
-  headerBg: { type: Boolean, default: false },
   closable: { type: Boolean, default: undefined },
   closeIcon: PropTypes.any,
   onOk: Function as PropType<(e: MouseEvent) => void>,
@@ -77,8 +75,6 @@ export const modalProps = () => ({
   wrapProps: Object,
   focusTriggerAfterClose: { type: Boolean, default: undefined },
   modalRender: Function as PropType<(arg: { originVNode: VueNode }) => VueNode>,
-  maxHeight: [Number, String],
-  style: { type: Object as PropType<CSSProperties>, default: undefined as CSSProperties }
 });
 
 export type ModalProps = Partial<ExtractPropTypes<ReturnType<typeof modalProps>>>;
@@ -88,7 +84,6 @@ export interface ModalFuncProps {
   class?: string;
   visible?: boolean;
   title?: string | (() => VueNode) | VueNode;
-  headerBg?: boolean;
   closable?: boolean;
   content?: string | (() => VueNode) | VueNode;
   // TODO: find out exact types
@@ -110,7 +105,7 @@ export interface ModalFuncProps {
   maskClosable?: boolean;
   zIndex?: number;
   okCancel?: boolean;
-  style?: CSSProperties;
+  style?: CSSProperties | string;
   maskStyle?: CSSProperties;
   type?: 'info' | 'success' | 'error' | 'warn' | 'warning' | 'confirm';
   keyboard?: boolean;
@@ -127,7 +122,6 @@ export interface ModalFuncProps {
   /** @deprecated please use `appContext` instead */
   parentContext?: any;
   appContext?: any;
-  maxHeight?: number | string;
 }
 
 type getContainerFunc = () => HTMLElement;
@@ -149,7 +143,7 @@ export default defineComponent({
   name: 'AModal',
   inheritAttrs: false,
   props: initDefaultProps(modalProps(), {
-    width: 560,
+    width: 520,
     transitionName: 'zoom',
     maskTransitionName: 'fade',
     confirmLoading: false,
@@ -186,16 +180,11 @@ export default defineComponent({
             {...convertLegacyProps(okType)}
             loading={confirmLoading}
             onClick={handleOk}
-            class={`${prefixCls.value}-footer-btn`}
-            {...props.okButtonProps as PropType<ButtonPropsType>}
+            {...props.okButtonProps}
           >
             {okText || locale.value.okText}
           </Button>
-          <Button
-            onClick={handleCancel}
-            class={`${prefixCls.value}-footer-btn`}
-            {...props.cancelButtonProps as PropType<ButtonPropsType>}
-          >
+          <Button onClick={handleCancel} {...props.cancelButtonProps}>
             {cancelText || locale.value.cancelText}
           </Button>
         </>
@@ -210,8 +199,6 @@ export default defineComponent({
         getContainer,
         closeIcon = slots.closeIcon?.(),
         focusTriggerAfterClose = true,
-        maxHeight,
-        style,
         ...restProps
       } = props;
 
@@ -236,14 +223,13 @@ export default defineComponent({
             'fade',
             props.maskTransitionName,
           )}
-          style={{ ...style, [`--${prefixCls.value}-max-height`]: toPx(maxHeight) }}
           v-slots={{
             ...slots,
             footer: slots.footer || renderFooter,
             closeIcon: () => {
               return (
                 <span class={`${prefixCls.value}-close-x`}>
-                  {closeIcon || <CloseFilled class={`${prefixCls.value}-close-icon`} />}
+                  {closeIcon || <CloseOutlined class={`${prefixCls.value}-close-icon`} />}
                 </span>
               );
             },

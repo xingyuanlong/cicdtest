@@ -33,14 +33,6 @@ The combination of radio button style.
         <a-radio-button value="d">Chengdu</a-radio-button>
       </a-radio-group>
     </div>
-    <div :style="{ marginTop: '16px' }">
-      <a-radio-group v-model:value="value3" disabled>
-        <a-radio-button value="a">Hangzhou</a-radio-button>
-        <a-radio-button value="b">Shanghai</a-radio-button>
-        <a-radio-button value="c">Beijing</a-radio-button>
-        <a-radio-button value="d">Chengdu</a-radio-button>
-      </a-radio-group>
-    </div>
   </div>
 </template>
 <script lang="ts">
@@ -49,12 +41,10 @@ export default defineComponent({
   setup() {
     const value1 = ref<string>('a');
     const value2 = ref<string>('a');
-    const value3 = ref<string>('a');
 
     return {
       value1,
       value2,
-      value3,
     };
   },
 });

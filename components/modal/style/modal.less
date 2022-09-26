@@ -32,9 +32,6 @@
     border-radius: @border-radius-base;
     box-shadow: @shadow-2;
     pointer-events: auto;
-    display: flex;
-    flex-direction: column;
-    max-height:  ~'var(--@{dialog-prefix-cls}-max-height, 600px)';
   }
 
   &-close {
@@ -55,9 +52,9 @@
 
     &-x {
       display: block;
-      width: @modal-header-close-size + 8;
+      width: @modal-header-close-size;
       height: @modal-header-close-size;
-      font-size: @font-size-base;
+      font-size: @font-size-lg;
       font-style: normal;
       line-height: @modal-header-close-size;
       text-align: center;
@@ -76,27 +73,9 @@
     padding: @modal-header-padding;
     color: @text-color;
     background: @modal-header-bg;
-    position: relative;
-    &::after {
-      content: '';
-      position: absolute;
-      left: @modal-header-padding-horizontal;
-      right: @modal-header-padding-horizontal;
-      bottom: 0;
-      height: 1px;
-      background: @modal-header-bg-border-color;
-    }
-  }
-
-  &-header-bg {
-    background: @primary-color;
-    color: @C1;
-    &::after {
-      opacity: 0;
-    }
-  }
-  &-header-bg > &-title {
-    color: @modal-heading-color-bg;
+    border-bottom: @modal-header-border-width @modal-header-border-style
+      @modal-header-border-color-split;
+    border-radius: @border-radius-base @border-radius-base 0 0;
   }
 
   &-body {
@@ -104,21 +83,19 @@
     font-size: @font-size-base;
     line-height: @line-height-base;
     word-wrap: break-word;
-    flex: 1;
-    overflow: auto;
   }
 
   &-footer {
-    padding-bottom: @padding-lg;
+    padding: @modal-footer-padding-vertical @modal-footer-padding-horizontal;
     text-align: center;
+    background: @modal-footer-bg;
+    border-top: @modal-footer-border-width @modal-footer-border-style
+      @modal-footer-border-color-split;
+    border-radius: 0 0 @border-radius-base @border-radius-base;
 
     .@{ant-prefix}-btn + .@{ant-prefix}-btn:not(.@{ant-prefix}-dropdown-trigger) {
       margin-bottom: 0;
       margin-left: 8px;
-    }
-
-    &-btn {
-      min-width: 100px;
     }
   }
 

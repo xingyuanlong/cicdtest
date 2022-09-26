@@ -37,7 +37,7 @@ Perform different check rules according to different situations.
       <a-checkbox v-model:checked="formState.checkNick">Nickname is required</a-checkbox>
     </a-form-item>
 
-    <a-form-item v-bind="formTailLayout" style="margin-top: 24px;">
+    <a-form-item v-bind="formTailLayout">
       <a-button type="primary" @click="onCheck">Check</a-button>
     </a-form-item>
   </a-form>

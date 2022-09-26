@@ -54,7 +54,7 @@ Normal login form which can contain more elements.
       <a class="login-form-forgot" href="">Forgot password</a>
     </a-form-item>
 
-    <a-form-item style="margin-top: 24px;">
+    <a-form-item>
       <a-button :disabled="disabled" type="primary" html-type="submit" class="login-form-button">
         Log in
       </a-button>

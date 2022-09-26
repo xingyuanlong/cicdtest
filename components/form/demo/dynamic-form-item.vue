@@ -51,7 +51,7 @@ Add or remove form items dynamically.
         Add field
       </a-button>
     </a-form-item>
-    <a-form-item v-bind="formItemLayoutWithOutLabel" style="margin-top: 24px;">
+    <a-form-item v-bind="formItemLayoutWithOutLabel">
       <a-button type="primary" html-type="submit" @click="submitForm">Submit</a-button>
       <a-button style="margin-left: 10px" @click="resetForm">Reset</a-button>
     </a-form-item>

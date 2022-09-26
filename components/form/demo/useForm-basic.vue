@@ -33,7 +33,7 @@ use [`Form.useForm`](#useForm) provides form validation logic and status.
         <a-checkbox value="3" name="type">Offline</a-checkbox>
       </a-checkbox-group>
     </a-form-item>
-    <a-form-item :wrapper-col="{ span: 14, offset: 4 }" style="margin-top: 24px;">
+    <a-form-item :wrapper-col="{ span: 14, offset: 4 }">
       <a-button type="primary" @click.prevent="onSubmit">Create</a-button>
       <a-button style="margin-left: 10px" @click="resetFields">Reset</a-button>
     </a-form-item>

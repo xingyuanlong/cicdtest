@@ -47,7 +47,7 @@ In this case, submit button is in the Modal which is out of Form. You can use `f
       </template>
     </a-form-item>
 
-    <a-form-item v-bind="tailLayout" style="margin-top: 24px;">
+    <a-form-item v-bind="tailLayout">
       <a-button html-type="submit" type="primary">Submit</a-button>
       <a-button html-type="button" style="margin: 0 8px" @click="visible = true">Add User</a-button>
     </a-form-item>

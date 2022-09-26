@@ -345,6 +345,9 @@
 @radio-disabled-button-checked-bg: @disabled-active-bg;
 @radio-disabled-button-checked-color: @disabled-color;
 @radio-wrapper-margin-right: 30px;
+@radio-button-height: 34px;
+@radio-button-sm-height: 26px;
+@radio-but-simple-bg: @C3;
 
 // Media queries breakpoints
 // @screen-xs and @screen-xs-min is not used in Grid
@@ -441,9 +444,9 @@
 // Form
 // ---
 @label-required-color: @highlight-color;
-@label-color: @E2;
+@label-color: @heading-color;
 @form-warning-input-bg: @input-bg;
-@form-item-margin-bottom: 14px;
+@form-item-margin-bottom: 24px;
 @form-item-trailing-colon: true;
 @form-vertical-label-padding: 0 0 8px;
 @form-vertical-label-margin: 0;
@@ -452,7 +455,6 @@
 @form-item-label-colon-margin-right: 8px;
 @form-item-label-colon-margin-left: 2px;
 @form-error-input-bg: @input-bg;
-@form-item-extra-line-height: 24px;
 
 // Input
 // ---
@@ -585,21 +587,19 @@
 
 // Modal
 // --
-@modal-header-padding-vertical: @padding-sm;
-@modal-header-padding-horizontal: 10px;
-@modal-body-padding: @padding-lg @padding-lg - 4;
+@modal-header-padding-vertical: @padding-md;
+@modal-header-padding-horizontal: @padding-lg;
+@modal-body-padding: @padding-lg;
 @modal-header-bg: @component-background;
 @modal-header-padding: @modal-header-padding-vertical @modal-header-padding-horizontal;
 @modal-header-border-width: @border-width-base;
 @modal-header-border-style: @border-style-base;
-@modal-header-title-line-height: @modal-header-title-font-size;
-@modal-header-title-font-size: @font-size-base;
+@modal-header-title-line-height: 22px;
+@modal-header-title-font-size: @font-size-lg;
 @modal-header-border-color-split: @border-color-split;
-@modal-header-close-size: 38px;
-@modal-header-bg-border-color: #ebebeb;
+@modal-header-close-size: 56px;
 @modal-content-bg: @component-background;
 @modal-heading-color: @heading-color;
-@modal-heading-color-bg: @C1;
 @modal-close-color: @text-color-secondary;
 @modal-footer-bg: transparent;
 @modal-footer-border-color-split: @border-color-split;

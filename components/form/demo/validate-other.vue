@@ -153,7 +153,7 @@ Demonstration of validation configuration for form controls which are not shown 
       </a-form-item>
     </a-form-item>
 
-    <a-form-item :wrapper-col="{ span: 12, offset: 6 }" style="margin-top: 24px;">
+    <a-form-item :wrapper-col="{ span: 12, offset: 6 }">
       <a-button type="primary" html-type="submit">Submit</a-button>
     </a-form-item>
   </a-form>

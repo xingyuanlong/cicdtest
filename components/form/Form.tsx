@@ -24,7 +24,6 @@ import type {
   Callbacks,
   ValidateMessages,
   Rule,
-  FormLabelAlign
 } from './interface';
 import { useInjectSize } from '../_util/hooks/useSize';
 import useConfigInject from '../_util/hooks/useConfigInject';
@@ -105,7 +104,7 @@ const Form = defineComponent({
   props: initDefaultProps(formProps(), {
     layout: 'horizontal',
     hideRequiredMark: false,
-    colon: false,
+    colon: true,
   }),
   Item: FormItem,
   useForm,
@@ -351,7 +350,7 @@ const Form = defineComponent({
     useProvideForm({
       model: computed(() => props.model),
       name: computed(() => props.name),
-      labelAlign: computed(() => props.labelAlign as FormLabelAlign),
+      labelAlign: computed(() => props.labelAlign),
       labelCol: computed(() => props.labelCol),
       labelWrap: computed(() => props.labelWrap),
       wrapperCol: computed(() => props.wrapperCol),

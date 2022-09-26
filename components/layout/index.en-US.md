@@ -16,8 +16,8 @@ The first level navigation is inclined left near a logo, and the secondary menu 
 
 - Top Navigation (almost systems): the height of the first level navigation `64px`, the second level navigation `48px`.
 - Top Navigation(contents page): the height of the first level navigation `80px`, the second level navigation `56px`.
-- Height of the top navigation: `64px` or `50px`.
-- Width of the aside navigation: `180px`.
+- Calculation formula of a top navigation: `48+8n`.
+- Calculation formula of an aside navigation: `200+8n`.
 
 ### Interaction rules
 

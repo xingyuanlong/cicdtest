@@ -38,7 +38,7 @@ See more advanced usage at [async-validator](https://github.com/yiminghe/async-v
     <a-form-item has-feedback label="Age" name="age">
       <a-input-number v-model:value="formState.age" />
     </a-form-item>
-    <a-form-item :wrapper-col="{ span: 14, offset: 4 }" style="margin-top: 24px;">
+    <a-form-item :wrapper-col="{ span: 14, offset: 4 }">
       <a-button type="primary" html-type="submit">Submit</a-button>
       <a-button style="margin-left: 10px" @click="resetForm">Reset</a-button>
     </a-form-item>
