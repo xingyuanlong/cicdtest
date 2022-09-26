@@ -37,7 +37,7 @@ title:
     <a-form-item :name="['user', 'introduction']" label="Introduction">
       <a-textarea v-model:value="formState.user.introduction" />
     </a-form-item>
-    <a-form-item :wrapper-col="{ ...layout.wrapperCol, offset: 8 }">
+    <a-form-item :wrapper-col="{ ...layout.wrapperCol, offset: 8 }" style="margin-top: 24px;">
       <a-button type="primary" html-type="submit">Submit</a-button>
     </a-form-item>
   </a-form>
