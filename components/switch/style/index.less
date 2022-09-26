@@ -17,7 +17,7 @@
   height: @switch-height;
   line-height: @switch-height;
   vertical-align: middle;
-  background-color: @disabled-color;
+  background-color: @switch-f-bg;
   border: 0;
   border-radius: 100px;
   cursor: pointer;
@@ -26,7 +26,7 @@
 
   &:focus {
     outline: 0;
-    box-shadow: 0 0 0 2px fade(@disabled-color, 10%);
+    box-shadow: 0 0 0 2px fade(@switch-f-bg, 10%);
   }
 
   &-checked:focus {
