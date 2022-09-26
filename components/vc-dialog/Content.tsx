@@ -4,6 +4,7 @@ import type { MouseEventHandler } from '../_util/EventInterface';
 import Transition, { getTransitionProps } from '../_util/transition';
 import dialogPropTypes from './IDialogPropTypes';
 import { offset } from './util';
+import classNames from '../_util/classNames';
 const sentinelStyle = { width: 0, height: 0, overflow: 'hidden', outline: 'none' };
 
 export type ContentRef = {
@@ -86,6 +87,7 @@ export default defineComponent({
         modalRender = slots.modalRender,
         destroyOnClose,
         motionName,
+        headerBg
       } = props;
       let footerNode: any;
       if (footer) {
@@ -95,7 +97,9 @@ export default defineComponent({
       let headerNode: any;
       if (title) {
         headerNode = (
-          <div class={`${prefixCls}-header`}>
+          <div class={classNames(`${prefixCls}-header`, {
+            [`${prefixCls}-header-bg`]: headerBg
+          })}>
             <div class={`${prefixCls}-title`} id={ariaId}>
               {title}
             </div>
