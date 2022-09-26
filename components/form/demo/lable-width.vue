@@ -38,7 +38,7 @@ Set label width by labelCol.style
     <a-form-item label="Activity form">
       <a-input v-model:value="formState.desc" type="textarea" />
     </a-form-item>
-    <a-form-item :wrapper-col="{ span: 14, offset: 4 }">
+    <a-form-item :wrapper-col="{ span: 14, offset: 4 }" style="margin-top: 24px;">
       <a-button type="primary" @click="onSubmit">Create</a-button>
       <a-button style="margin-left: 10px">Cancel</a-button>
     </a-form-item>

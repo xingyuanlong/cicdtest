@@ -22,6 +22,7 @@ Render radios by configuring `options`.
     <a-radio-group v-model:value="value3" :options="plainOptions" disabled />
     <a-radio-group v-model:value="value1" option-type="button" :options="plainOptions" />
     <a-radio-group v-model:value="value2" option-type="button" :options="optionsWithDisabled" />
+    <a-radio-group v-model:value="value3" option-type="button" :options="plainOptions" disabled />
   </a-space>
 </template>
 <script lang="ts">

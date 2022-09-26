@@ -29,7 +29,7 @@ use [`Form.useForm`](#useForm) custom trigger to validation logic and status.
         <a-select-option value="beijing">Zone two</a-select-option>
       </a-select>
     </a-form-item>
-    <a-form-item :wrapper-col="{ span: 14, offset: 4 }">
+    <a-form-item :wrapper-col="{ span: 14, offset: 4 }" style="margin-top: 24px;">
       <a-button type="primary" @click.prevent="onSubmit">Create</a-button>
       <a-button style="margin-left: 10px" @click="resetFields">Reset</a-button>
     </a-form-item>

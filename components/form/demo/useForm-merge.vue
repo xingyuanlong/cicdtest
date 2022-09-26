@@ -33,7 +33,7 @@ use [`Form.useForm`](#useForm)  combined display form verification information.
         <a-checkbox value="3" name="type">Offline</a-checkbox>
       </a-checkbox-group>
     </a-form-item>
-    <a-form-item class="error-infos" :wrapper-col="{ span: 14, offset: 4 }" v-bind="errorInfos">
+    <a-form-item class="error-infos" :wrapper-col="{ span: 14, offset: 4 }" v-bind="errorInfos" style="margin-top: 24px;">
       <a-button type="primary" @click.prevent="onSubmit">Create</a-button>
       <a-button style="margin-left: 10px" @click="resetFields">Reset</a-button>
     </a-form-item>

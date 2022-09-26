@@ -12,8 +12,6 @@ cover: https://gw.alipayobjects.com/zos/alicdn/8cYb5seNB/Radio.svg
 
 - 用于在多个备选项中选中单个状态。
 - 和 Select 的区别是，Radio 所有选项默认可见，方便用户在比较中选择，因此选项不宜过多。
-- 也可以当作小tab使用。
-
 
 ## API
 
@@ -32,7 +30,7 @@ cover: https://gw.alipayobjects.com/zos/alicdn/8cYb5seNB/Radio.svg
 
 | 参数 | 说明 | 类型 | 默认值 | 版本 |
 | --- | --- | --- | --- | --- |
-| buttonStyle | RadioButton 的风格样式，目前有描边, 填色和简约三种风格 | `outline` \| `solid` \| `simple` | `outline` |  |
+| buttonStyle | RadioButton 的风格样式，目前有描边和填色两种风格 | `outline` \| `solid` | `outline` |  |
 | disabled | 禁选所有子单选器 | boolean | false |  |
 | name | RadioGroup 下所有 `input[type="radio"]` 的 `name` 属性 | string | - |  |
 | options | 以配置形式设置子元素 | string\[] \| number[] \| Array&lt;{ label: string value: string disabled?: boolean }> | - |  |

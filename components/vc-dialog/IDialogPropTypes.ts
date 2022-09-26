@@ -15,6 +15,7 @@ export function dialogPropTypes() {
       y: Number,
     }).loose,
     title: PropTypes.any,
+    headerBg: Boolean,
     footer: PropTypes.any,
     transitionName: String,
     maskTransitionName: String,
