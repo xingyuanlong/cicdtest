@@ -5,7 +5,7 @@ import classNames from '../_util/classNames';
 import Dropdown from './dropdown';
 import { initDefaultProps } from '../_util/props-util';
 import { dropdownButtonProps } from './props';
-import EllipsisOutlined from '@ant-design/icons-vue/EllipsisOutlined';
+import { ArrowDownFilled } from 'pf-icons-vue';
 import useConfigInject from '../_util/hooks/useConfigInject';
 const ButtonGroup = Button.Group;
 
@@ -45,7 +45,7 @@ export default defineComponent({
         placement = direction.value === 'rtl' ? 'bottomLeft' : 'bottomRight',
         href,
         title,
-        icon = slots.icon?.() || <EllipsisOutlined />,
+        icon = slots.icon?.() || <ArrowDownFilled />,
         mouseEnterDelay,
         mouseLeaveDelay,
         overlayClassName,

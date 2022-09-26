@@ -1,6 +1,6 @@
 import type { CSSProperties, ExtractPropTypes, PropType } from 'vue';
 import { defineComponent, ref } from 'vue';
-import CloseOutlined from '@ant-design/icons-vue/CloseOutlined';
+import { CloseFilled } from 'pf-icons-vue';
 import classNames from '../_util/classNames';
 import PropTypes from '../_util/vue-types';
 import { getTransitionProps, Transition } from '../_util/transition';
@@ -134,7 +134,7 @@ const Alert = defineComponent({
           {closeText ? (
             <span class={`${prefixClsValue}-close-text`}>{closeText}</span>
           ) : customCloseIcon === undefined ? (
-            <CloseOutlined />
+            <CloseFilled />
           ) : (
             customCloseIcon
           )}

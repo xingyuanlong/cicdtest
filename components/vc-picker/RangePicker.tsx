@@ -1259,14 +1259,15 @@ function RangerPicker<DateType>() {
                   autocomplete={autocomplete}
                 />
               </div>
-              <div
+              {/* 暂时隐藏2022-9-26 */}
+              {/* <div
                 class={`${prefixCls}-active-bar`}
                 style={{
                   ...activeBarPositionStyle,
                   width: `${activeBarWidth}px`,
                   position: 'absolute',
                 }}
-              />
+              /> */}
               {suffixNode}
               {clearNode}
               {getPortal()}

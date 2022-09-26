@@ -160,13 +160,6 @@ const Popconfirm = defineComponent({
             <div class={`${popoverPrefixCls.value}-message-title`}>{title}</div>
           </div>
           <div class={`${popoverPrefixCls.value}-buttons`}>
-            {showCancel ? (
-              cancelButton ? (
-                cancelButton(cancelProps)
-              ) : (
-                <Button {...cancelProps}>{cancelText || popconfirmLocale.value.cancelText}</Button>
-              )
-            ) : null}
             {okButton ? (
               okButton(okProps)
             ) : (
@@ -181,6 +174,13 @@ const Popconfirm = defineComponent({
                 {okText || popconfirmLocale.value.okText}
               </ActionButton>
             )}
+             {showCancel ? (
+              cancelButton ? (
+                cancelButton(cancelProps)
+              ) : (
+                <Button {...cancelProps}>{cancelText || popconfirmLocale.value.cancelText}</Button>
+              )
+            ) : null}
           </div>
         </div>
       );

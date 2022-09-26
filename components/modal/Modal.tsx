@@ -4,7 +4,7 @@ import classNames from '../_util/classNames';
 import Dialog from '../vc-dialog';
 import PropTypes from '../_util/vue-types';
 import addEventListener from '../vc-util/Dom/addEventListener';
-import CloseOutlined from '@ant-design/icons-vue/CloseOutlined';
+import { CloseFilled } from 'pf-icons-vue'
 import Button from '../button';
 import type { ButtonProps as ButtonPropsType, LegacyButtonType } from '../button/buttonTypes';
 import { convertLegacyProps } from '../button/buttonTypes';
@@ -229,7 +229,7 @@ export default defineComponent({
             closeIcon: () => {
               return (
                 <span class={`${prefixCls.value}-close-x`}>
-                  {closeIcon || <CloseOutlined class={`${prefixCls.value}-close-icon`} />}
+                  {closeIcon || <CloseFilled class={`${prefixCls.value}-close-icon`} />}
                 </span>
               );
             },
