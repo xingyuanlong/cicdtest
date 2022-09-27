@@ -18,6 +18,6 @@ cover: https://gw.alipayobjects.com/zos/alicdn/9nepwjaLa/Result.svg
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | extra | 操作区 | slot | - |  |  |  |  |  |  |
 | icon | 自定义 icon | slot | - |  |  |  |  |  |  |
-| status | 结果的状态,决定图标和颜色 | `success` \| `error` \| `info` \| `warning` \| `404` \| `403` \| `500` | 'info' |
+| status | 结果的状态,决定图标和颜色 | `success` \| `error` \| `info` \| `warning` \| `404` \| `403` \| `500` \| `empty` \| `noResult` \| `noNetwork` | 'info' |
 | subTitle | subTitle 文字 | string \| VNode \| slot | - |  |  |  |  |  |  |
 | title | title 文字 | string \| VNode \| slot | - |  |  |  |  |  |  |
