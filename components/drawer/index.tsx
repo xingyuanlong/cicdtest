@@ -14,7 +14,7 @@ import { getPropsSlot, initDefaultProps } from '../_util/props-util';
 import classnames from '../_util/classNames';
 import VcDrawer from '../vc-drawer';
 import PropTypes from '../_util/vue-types';
-import { CloseFilled } from 'pf-icons-vue'
+import CloseFilled from 'pf-icons-vue/CloseFilled'
 import useConfigInject from '../_util/hooks/useConfigInject';
 import { tuple, withInstall } from '../_util/type';
 import omit from '../_util/omit';

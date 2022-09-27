@@ -4,7 +4,7 @@ import type { ModalFuncProps } from './Modal';
 import { destroyFns } from './Modal';
 import ConfigProvider, { globalConfigForApi } from '../config-provider';
 import omit from '../_util/omit';
-import { InfoFilled, AlertFilled, SuccessFilled, ErrorFilled } from 'pf-icons-vue';
+import { InfoTwoTone, AlertTwoTone, SuccessTwoTone, ErrorFilled } from 'pf-icons-vue';
 
 type ConfigUpdate = ModalFuncProps | ((prevConfig: ModalFuncProps) => ModalFuncProps);
 
@@ -98,7 +98,7 @@ export default confirm;
 
 export function withWarn(props: ModalFuncProps): ModalFuncProps {
   return {
-    icon: () => <AlertFilled />,
+    icon: () => <AlertTwoTone />,
     okCancel: false,
     ...props,
     type: 'warning',
@@ -107,7 +107,7 @@ export function withWarn(props: ModalFuncProps): ModalFuncProps {
 
 export function withInfo(props: ModalFuncProps): ModalFuncProps {
   return {
-    icon: () => <InfoFilled />,
+    icon: () => <InfoTwoTone />,
     okCancel: false,
     ...props,
     type: 'info',
@@ -116,7 +116,7 @@ export function withInfo(props: ModalFuncProps): ModalFuncProps {
 
 export function withSuccess(props: ModalFuncProps): ModalFuncProps {
   return {
-    icon: () => <SuccessFilled />,
+    icon: () => <SuccessTwoTone />,
     okCancel: false,
     ...props,
     type: 'success',
@@ -134,7 +134,7 @@ export function withError(props: ModalFuncProps): ModalFuncProps {
 
 export function withConfirm(props: ModalFuncProps): ModalFuncProps {
   return {
-    icon: () => <AlertFilled />,
+    icon: () => <AlertTwoTone />,
     okCancel: true,
     ...props,
     type: 'confirm',

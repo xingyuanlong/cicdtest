@@ -1,7 +1,7 @@
 import type { VNode, ExtractPropTypes, PropType } from 'vue';
 import { inject, cloneVNode, isVNode, defineComponent, nextTick } from 'vue';
 import debounce from 'lodash-es/debounce';
-import { LoadingFilled } from 'pf-icons-vue'
+import LoadingFilled from 'pf-icons-vue/LoadingFilled'
 import PropTypes from '../_util/vue-types';
 import { getComponent, getSlot } from '../_util/props-util';
 import initDefaultProps from '../_util/props-util/initDefaultProps';

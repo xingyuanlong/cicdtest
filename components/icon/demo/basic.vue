@@ -20,7 +20,6 @@ Import icons from `pf-icons-vue`, component name of icons with different theme i
   <a-space>
     <loading-filled />
     <add-filled />
-    <alert-filled />
   </a-space>
 </template>
 <script lang="ts">
@@ -28,13 +27,11 @@ import { defineComponent } from 'vue';
 import {
   LoadingFilled,
   AddFilled,
-  AlertFilled
 } from 'pf-icons-vue';
 export default defineComponent({
   components: {
     LoadingFilled,
-    AddFilled,
-    AlertFilled
+    AddFilled
   },
 });
 </script>
