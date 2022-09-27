@@ -1,6 +1,6 @@
 import type { ShowSearchType, FieldNames, BaseOptionType, DefaultOptionType } from '../vc-cascader';
 import VcCascader, { cascaderProps as vcCascaderProps } from '../vc-cascader';
-import RightOutlined from '@ant-design/icons-vue/RightOutlined';
+import { RightArrowFilled } from 'pf-icons-vue';
 import LoadingOutlined from '@ant-design/icons-vue/LoadingOutlined';
 import LeftOutlined from '@ant-design/icons-vue/LeftOutlined';
 import getIcons from '../select/utils/iconUtil';
@@ -221,7 +221,7 @@ const Cascader = defineComponent({
       // ===================== Icon ======================
       let mergedExpandIcon = expandIcon;
       if (!expandIcon) {
-        mergedExpandIcon = isRtl.value ? <LeftOutlined /> : <RightOutlined />;
+        mergedExpandIcon = isRtl.value ? <LeftOutlined /> : <RightArrowFilled />;
       }
 
       const loadingIcon = (

@@ -74,7 +74,11 @@
       &-active:not(&-disabled) {
         &,
         &:hover {
-          font-weight: @select-item-selected-font-weight;
+          //font-weight: @select-item-selected-font-weight;
+          color: @cascader-item-selected-color;
+        }
+
+        .@{cascader-prefix-cls}-menu-item-expand-icon {
           color: @cascader-item-selected-color;
         }
       }
@@ -83,7 +87,7 @@
         flex: auto;
       }
 
-      &-expand &-expand-icon,
+      &-expand &-expand-icon,·
       &-loading-icon {
         margin-left: @padding-xss;
         color: @text-color-secondary;

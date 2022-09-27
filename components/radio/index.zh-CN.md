@@ -30,7 +30,7 @@ cover: https://gw.alipayobjects.com/zos/alicdn/8cYb5seNB/Radio.svg
 
 | 参数 | 说明 | 类型 | 默认值 | 版本 |
 | --- | --- | --- | --- | --- |
-| buttonStyle | RadioButton 的风格样式，目前有描边和填色两种风格 | `outline` \| `solid` | `outline` |  |
+| buttonStyle | RadioButton 的风格样式，目前有描边和填色两种风格 | `outline` \| `solid` \| `simple` | `outline` |  |
 | disabled | 禁选所有子单选器 | boolean | false |  |
 | name | RadioGroup 下所有 `input[type="radio"]` 的 `name` 属性 | string | - |  |
 | options | 以配置形式设置子元素 | string\[] \| number[] \| Array&lt;{ label: string value: string disabled?: boolean }> | - |  |

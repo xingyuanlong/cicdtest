@@ -1,10 +1,6 @@
 import type { CSSProperties } from 'vue';
 import Notification from '../vc-notification';
-import LoadingOutlined from '@ant-design/icons-vue/LoadingOutlined';
-import ExclamationCircleFilled from '@ant-design/icons-vue/ExclamationCircleFilled';
-import CloseCircleFilled from '@ant-design/icons-vue/CloseCircleFilled';
-import CheckCircleFilled from '@ant-design/icons-vue/CheckCircleFilled';
-import InfoCircleFilled from '@ant-design/icons-vue/InfoCircleFilled';
+import { LoadingFilled, InfoOutlined, AlertOutlined, SuccessOutlined, ErrorOutlined } from 'pf-icons-vue'
 import type { Key, VueNode } from '../_util/type';
 import type { NotificationInstance } from '../vc-notification/Notification';
 import classNames from '../_util/classNames';
@@ -99,11 +95,11 @@ export interface ThenableArgument {
 }
 
 const typeToIcon = {
-  info: InfoCircleFilled,
-  success: CheckCircleFilled,
-  error: CloseCircleFilled,
-  warning: ExclamationCircleFilled,
-  loading: LoadingOutlined,
+  info: InfoOutlined,
+  success: SuccessOutlined,
+  error: ErrorOutlined,
+  warning: AlertOutlined,
+  loading: LoadingFilled,
 };
 
 export interface MessageType extends PromiseLike<any> {

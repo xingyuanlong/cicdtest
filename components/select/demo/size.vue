@@ -45,6 +45,7 @@ The height of the input field for the select defaults to 32px. If size is set to
       :options="options"
       mode="tags"
       :size="size"
+      showArrow
       placeholder="Please select"
       style="width: 200px"
     ></a-select>

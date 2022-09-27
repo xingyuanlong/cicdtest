@@ -11,7 +11,6 @@
   align-items: center;
   padding: 6px 15px;
   word-wrap: break-word;
-  border-radius: @border-radius-base;
 
   &-content {
     flex: 1;
@@ -65,6 +64,10 @@
       margin: 0;
       padding: 0;
     }
+
+    .@{alert-prefix-cls}-message {
+      color: #f36969;
+    }
   }
 
   &-question {
@@ -89,6 +92,7 @@
     border: none;
     outline: none;
     cursor: pointer;
+    transform: scale(0.833);
 
     .@{iconfont-css-prefix}-close {
       color: @alert-close-color;
@@ -131,7 +135,8 @@
   }
 
   &-message {
-    color: @alert-message-color;
+    color: #666;
+    font-size: 12px;
   }
 
   &-with-description &-description {

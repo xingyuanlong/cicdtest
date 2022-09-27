@@ -29,6 +29,7 @@
 
   .@{select-prefix-cls}-focused:not(.@{select-prefix-cls}-disabled)& {
     .active();
+    color: #999;
   }
 
   .@{select-prefix-cls}-disabled& {
@@ -130,6 +131,7 @@
     line-height: 1;
     text-align: center;
     pointer-events: none;
+    transition: transform .5s ease-in-out;
 
     .@{iconfont-css-prefix} {
       vertical-align: top;
@@ -146,6 +148,10 @@
 
     .@{select-prefix-cls}-disabled & {
       cursor: not-allowed;
+    }
+
+    .@{select-prefix-cls}-open:not(.@{select-prefix-cls}-disabled):not(.@{select-prefix-cls}-show-search) & {
+      transform: rotate(180deg);
     }
   }
 

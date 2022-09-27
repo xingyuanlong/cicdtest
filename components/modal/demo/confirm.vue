@@ -36,6 +36,12 @@ export default defineComponent({
         icon: createVNode(ExclamationCircleOutlined),
         closable: true,
         content: createVNode('div', { style: 'color:red;' }, 'Some descriptions'),
+        cancelButtonProps: {
+          type: 'secondary'
+        },
+        okButtonProps: {
+          type: 'secondary'
+        },
         onOk() {
           console.log('OK');
         },

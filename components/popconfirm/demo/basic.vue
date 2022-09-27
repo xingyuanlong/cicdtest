@@ -26,6 +26,21 @@ The basic example.
   >
     <a href="#">Delete</a>
   </a-popconfirm>
+  <hr />
+  <a-popconfirm
+    ok-text="确定"
+    cancel-text="取消"
+    @confirm="confirm"
+    @cancel="cancel"
+    :okButtonProps="{type: 'secondary'}"
+    :cancelButtonProps="{type: 'secondary'}"
+  >
+    <template #title>
+      <p>Are you sure delete this task?</p>
+      <p>no thank!</p>
+    </template>
+    <a href="#">Delete</a>
+  </a-popconfirm>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
