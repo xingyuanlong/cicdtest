@@ -205,3 +205,24 @@
 .generator-tooltip-preset-color();
 
 @import './rtl';
+
+.@{tooltip-prefix-cls}-image-operation {
+  padding-top: 15px;
+
+  .@{tooltip-prefix-cls} {
+    &-arrow {
+      opacity: 0;
+    }
+
+    &-inner {
+      background: @white;
+      padding: 6px 14px;
+      box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.30);
+      color: @E1;
+      font-size: @font-size-sm;
+      line-height: 1.5;
+      min-height: 0;
+      min-width: 0;
+    }
+  }
+}

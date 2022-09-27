@@ -13,6 +13,7 @@
 
   display: flex;
   overflow: hidden;
+  color: @tabs-color;
 
   // ========================== Navigation ==========================
   > .@{tab-prefix-cls}-nav,
@@ -134,6 +135,7 @@
     border: 0;
     outline: none;
     cursor: pointer;
+    --tab-disabled-color: @E4;
 
     &-btn,
     &-remove {
@@ -175,7 +177,7 @@
     }
 
     &&-disabled {
-      color: @disabled-color;
+      color: var(--tab-disabled-color);
       cursor: not-allowed;
     }
 
