@@ -17,9 +17,9 @@ you are not authorized to access this page.
 </docs>
 
 <template>
-  <a-result status="403" title="403" sub-title="Sorry, you are not authorized to access this page.">
+  <a-result status="403">
     <template #extra>
-      <a-button type="primary">Back Home</a-button>
+      <a-button type="primary">回到首页</a-button>
     </template>
   </a-result>
 </template>

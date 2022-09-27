@@ -6,6 +6,9 @@
     <denied />
     <find-less />
     <server-error />
+    <empty />
+    <no-result />
+    <no-network />
     <error />
     <custom-icon />
   </demo-sort>
@@ -17,6 +20,9 @@ import Warning from './warning.vue';
 import Denied from './403.vue';
 import FindLess from './404.vue';
 import ServerError from './500.vue';
+import Empty from './empty.vue'
+import NoResult from './noResult.vue';
+import NoNetwork from './noNetwork.vue';
 import Error from './error.vue';
 import CustomIcon from './customIcon.vue';
 import CN from '../index.zh-CN.md';
@@ -32,6 +38,9 @@ export default defineComponent({
     Denied,
     FindLess,
     ServerError,
+    Empty,
+    NoResult,
+    NoNetwork,
     Error,
     CustomIcon,
   },

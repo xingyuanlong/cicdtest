@@ -17,9 +17,9 @@ The server is wrong.
 </docs>
 
 <template>
-  <a-result status="500" title="500" sub-title="Sorry, the server is wrong.">
+  <a-result status="500">
     <template #extra>
-      <a-button type="primary">Back Home</a-button>
+      <a-button type="primary">回到首页</a-button>
     </template>
   </a-result>
 </template>

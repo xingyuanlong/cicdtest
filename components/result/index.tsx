@@ -5,10 +5,11 @@ import CheckCircleFilled from '@ant-design/icons-vue/CheckCircleFilled';
 import CloseCircleFilled from '@ant-design/icons-vue/CloseCircleFilled';
 import ExclamationCircleFilled from '@ant-design/icons-vue/ExclamationCircleFilled';
 import WarningFilled from '@ant-design/icons-vue/WarningFilled';
+import useConfigInject from '../_util/hooks/useConfigInject';
+import renderPfResult, { PfExceptionStatusType, PfExceptionMap } from './pfResult'
 import noFound from './noFound';
 import serverError from './serverError';
 import unauthorized from './unauthorized';
-import useConfigInject from '../_util/hooks/useConfigInject';
 import classNames from '../_util/classNames';
 
 export const IconMap = {
@@ -18,17 +19,10 @@ export const IconMap = {
   warning: WarningFilled,
 };
 
-export const ExceptionMap = {
-  '404': noFound,
-  '500': serverError,
-  '403': unauthorized,
-};
-
-export type ExceptionStatusType = 403 | 404 | 500 | '403' | '404' | '500';
-export type ResultStatusType = ExceptionStatusType | keyof typeof IconMap;
+export type ResultStatusType = PfExceptionStatusType | keyof typeof IconMap;
 
 // ExceptionImageMap keys
-const ExceptionStatus = Object.keys(ExceptionMap);
+const PfExceptionStatus = Object.keys(PfExceptionMap);
 
 export const resultProps = () => ({
   prefixCls: String,
@@ -42,14 +36,6 @@ export const resultProps = () => ({
 export type ResultProps = Partial<ExtractPropTypes<ReturnType<typeof resultProps>>>;
 
 const renderIcon = (prefixCls: string, { status, icon }) => {
-  if (ExceptionStatus.includes(`${status}`)) {
-    const SVGComponent = ExceptionMap[status];
-    return (
-      <div class={`${prefixCls}-icon ${prefixCls}-image`}>
-        <SVGComponent />
-      </div>
-    );
-  }
   const IconComponent = IconMap[status];
   const iconNode = icon || <IconComponent />;
   return <div class={`${prefixCls}-icon`}>{iconNode}</div>;
@@ -75,6 +61,11 @@ const Result = defineComponent({
       const icon = props.icon ?? slots.icon?.();
       const extra = props.extra ?? slots.extra?.();
       const pre = prefixCls.value;
+
+      if (PfExceptionStatus.includes(`${props?.status}`)) {
+        return renderPfResult(pre, { status: props?.status, title, subTitle, extra })
+      }
+
       return (
         <div class={className.value}>
           {renderIcon(pre, { status: props.status, icon })}
@@ -89,9 +80,9 @@ const Result = defineComponent({
 });
 
 /* add resource */
-Result.PRESENTED_IMAGE_403 = ExceptionMap[403];
-Result.PRESENTED_IMAGE_404 = ExceptionMap[404];
-Result.PRESENTED_IMAGE_500 = ExceptionMap[500];
+Result.PRESENTED_IMAGE_403 = PfExceptionMap[403];
+Result.PRESENTED_IMAGE_404 = PfExceptionMap[404];
+Result.PRESENTED_IMAGE_500 = PfExceptionMap[500];
 
 /* istanbul ignore next */
 Result.install = function (app: App) {
