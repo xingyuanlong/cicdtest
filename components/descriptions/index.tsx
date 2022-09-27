@@ -205,6 +205,7 @@ const Descriptions = defineComponent({
             {
               [`${prefixCls.value}-${size}`]: size !== 'default',
               [`${prefixCls.value}-bordered`]: !!bordered,
+              [`${prefixCls.value}-bordered-falsy`]: !bordered,
               [`${prefixCls.value}-rtl`]: direction.value === 'rtl',
             },
           ]}
@@ -225,7 +226,7 @@ const Descriptions = defineComponent({
                     colon={colon}
                     prefixCls={prefixCls.value}
                     vertical={layout === 'vertical'}
-                    bordered={bordered}
+                    bordered={true}
                     row={row}
                   />
                 ))}

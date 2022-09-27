@@ -45,3 +45,8 @@ Descriptions with border and background color.
     </a-descriptions-item>
   </a-descriptions>
 </template>
+<style scoped>
+  .ant-descriptions-item-label {
+    text-align: start;
+  }
+</style>
