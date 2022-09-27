@@ -21,7 +21,8 @@
       position: absolute;
       top: 10px;
       left: 4px;
-      height: calc(100% - 10px);
+      height: calc(100% - 24px);
+      margin-top: 6px;
       border-left: @timeline-width solid @timeline-color;
     }
 
@@ -32,6 +33,10 @@
 
     &-pending &-tail {
       display: none;
+    }
+
+    &-blue-line  &-tail{
+      border-color: @primary-color;
     }
 
     &-head {
@@ -45,21 +50,42 @@
       &-blue {
         color: @primary-color;
         border-color: @primary-color;
+        font-size: 12px;
+        &:empty {
+          background-color: @primary-color;
+        }      
       }
 
       &-red {
         color: @error-color;
         border-color: @error-color;
+        &:empty {
+          background-color: @error-color;
+        }     
       }
 
       &-green {
         color: @success-color;
         border-color: @success-color;
+        &:empty {
+          background-color: @success-color;
+        }   
       }
 
       &-gray {
-        color: @disabled-color;
-        border-color: @disabled-color;
+        color: @timeline-dot-gray-color;
+        border-color: @timeline-dot-gray-color;
+        &:empty {
+          background-color: @timeline-dot-gray-color;
+        }         
+      }
+
+      &-yellow {
+        color: @timeline-dot-yellow-color;
+        border-color: @timeline-dot-yellow-color;
+        &:empty {
+          background-color: @timeline-dot-yellow-color;
+        }      
       }
     }
 
