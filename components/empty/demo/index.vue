@@ -2,6 +2,7 @@
   <demo-sort :cols="1">
     <basic />
     <simple />
+    <Info />
     <customize />
     <config-provider />
     <description />
@@ -13,6 +14,7 @@ import Simple from './simple.vue';
 import Customize from './customize.vue';
 import ConfigProvider from './config-provider.vue';
 import Description from './description.vue';
+import Info from './info.vue';
 import CN from '../index.zh-CN.md';
 import US from '../index.en-US.md';
 import { defineComponent } from 'vue';
@@ -25,6 +27,7 @@ export default defineComponent({
     Customize,
     ConfigProvider,
     Description,
+    Info,
   },
   setup() {
     return {};

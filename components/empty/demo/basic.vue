@@ -24,7 +24,7 @@ Simplest Usage.
   export default defineComponent({
     setup() {
       return {
-        noData: '暂无搜索数据'
+        noData: '无搜索结果'
       };
     },
   });

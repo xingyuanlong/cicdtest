@@ -16,9 +16,9 @@ const RenderEmpty = (props: RenderEmptyProps) => {
       case 'TreeSelect':
       case 'Cascader':
       case 'Select':
+      case 'Transfer':
         // return <Empty image={Empty.PRESENTED_IMAGE_SIMPLE} />;
         return <Empty image={Empty.PRESENTED_IMAGE_INFO} />;
-      case 'Transfer':
       case 'Mentions':
         return <Empty image={Empty.PRESENTED_IMAGE_SIMPLE} class={`${prefixCls.value}-small`} />;
 

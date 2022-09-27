@@ -1,6 +1,6 @@
 <docs>
 ---
-order: 3
+order: 5
 title:
   zh-CN: 选择图片
   en-US: Chose image
@@ -8,15 +8,15 @@ title:
 
 ## zh-CN
 
-可以通过设置 `image` 为 `Empty.PRESENTED_IMAGE_SIMPLE` 选择另外的图片风格。
+可以通过设置 `image` 为  `Empty.PRESENTED_IMAGE_INFO` 选择另外的图片风格.
 
 ## en-US
 
-You can choose another style of `image` by setting image to `Empty.PRESENTED_IMAGE_SIMPLE` .
+You can choose another style of `image` by setting image to `Empty.PRESENTED_IMAGE_INFO`.
 
 </docs>
 <template>
-  <a-empty :image="simpleImage" />
+  <a-empty :image="infoImage" />
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
@@ -24,9 +24,10 @@ import { Empty } from 'pf-ui-vue';
 export default defineComponent({
   setup() {
     return {
-      simpleImage: Empty.PRESENTED_IMAGE_SIMPLE
+      infoImage: Empty.PRESENTED_IMAGE_INFO,
     };
   },
 });
 </script>
 ```
+  
