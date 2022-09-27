@@ -10,7 +10,7 @@ import {
   watch,
   onDeactivated,
 } from 'vue';
-import VerticalAlignTopOutlined from '@ant-design/icons-vue/VerticalAlignTopOutlined';
+import TopFilled from 'pf-icons-vue/TopFilled'
 import addEventListener from '../vc-util/Dom/addEventListener';
 import getScroll from '../_util/getScroll';
 import { getTransitionProps, Transition } from '../_util/transition';
@@ -115,7 +115,7 @@ const BackTop = defineComponent({
       const defaultElement = (
         <div class={`${prefixCls.value}-content`}>
           <div class={`${prefixCls.value}-icon`}>
-            <VerticalAlignTopOutlined />
+            <TopFilled />
           </div>
         </div>
       );

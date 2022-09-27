@@ -1,9 +1,9 @@
 import CaretDownOutlined from '@ant-design/icons-vue/CaretDownOutlined';
 import LoadingOutlined from '@ant-design/icons-vue/LoadingOutlined';
 import CheckOutlined from '@ant-design/icons-vue/CheckOutlined';
-import CloseOutlined from '@ant-design/icons-vue/CloseOutlined';
 import CloseCircleFilled from '@ant-design/icons-vue/CloseCircleFilled';
 import SearchOutlined from 'pf-icons-vue/SearchOutlined'
+import CloseOutlined from 'pf-icons-vue/ErrorFilled'
 
 export default function getIcons(props: any, slots: any = {}) {
   const { loading, multiple, prefixCls } = props;

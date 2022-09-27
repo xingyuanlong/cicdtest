@@ -32,8 +32,8 @@ export default defineComponent({
   },
   props: ['name', 'type', 'isNew', 'justCopied'],
   data() {
-    const kebabCasedName = kebabCase(this.name);
-    const kebabCasedType = kebabCase(this.type);
+    const kebabCasedName = this.name;
+    const kebabCasedType = this.type;
 
     this.allIcons = allIcons;
 
