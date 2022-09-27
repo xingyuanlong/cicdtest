@@ -32,7 +32,7 @@
     align-items: center;
     justify-content: center;
     color: @text-color-inverse;
-    background: fade(@black, 50%);
+    background: fade(@black, 20%);
     cursor: pointer;
     opacity: 0;
     transition: opacity @animation-duration-slow;
@@ -42,13 +42,14 @@
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
-      .@{iconfont-css-prefix} {
-        margin-inline-end: @margin-xss;
-      }
     }
 
     &:hover {
       opacity: 1;
+    }
+
+    &-operation-icon {
+      font-size: 28px;
     }
   }
 

@@ -5,8 +5,9 @@ import { imageProps } from '../vc-image/src/Image';
 import defaultLocale from '../locale/en_US';
 import useConfigInject from '../_util/hooks/useConfigInject';
 import PreviewGroup, { icons } from './PreviewGroup';
-import EyeOutlined from '@ant-design/icons-vue/EyeOutlined';
+import ZoomFilled from 'pf-icons-vue/ZoomFilled';
 import { getTransitionName } from '../_util/transition';
+import ImageOperationTip from '../tooltip/ImageOperationTip';
 
 export type ImageProps = Partial<
   ExtractPropTypes<ReturnType<typeof imageProps>> &
@@ -43,8 +44,11 @@ const Image = defineComponent<ImageProps>({
       const imageLocale = configProvider.locale?.Image || defaultLocale.Image;
       const defaultPreviewMask = () => (
         <div class={`${prefixCls.value}-mask-info`}>
-          <EyeOutlined />
-          {imageLocale?.preview}
+          <ImageOperationTip
+            title={imageLocale?.preview}
+          >
+            <ZoomFilled class={`${prefixCls.value}-mask-operation-icon`} />
+          </ImageOperationTip>
         </div>
       );
       const { previewMask = slots.previewMask || defaultPreviewMask } = props;
