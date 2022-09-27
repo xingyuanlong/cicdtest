@@ -49,11 +49,11 @@
   }
 
   &-item-label {
-    color: @heading-color;
+    color: @label-color;
     font-weight: normal;
     font-size: @font-size-base;
     line-height: @line-height-base;
-    text-align: start;
+    text-align: right;
 
     &::after {
       & when (@descriptions-item-trailing-colon=true) {
@@ -154,6 +154,55 @@
 
     .@{descriptions-prefix-cls}-row {
       border-bottom: 1px solid @border-color-split;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    &.@{descriptions-prefix-cls}-middle {
+      .@{descriptions-prefix-cls}-item-label,
+      .@{descriptions-prefix-cls}-item-content {
+        padding: @descriptions-middle-padding;
+      }
+    }
+
+    &.@{descriptions-prefix-cls}-small {
+      .@{descriptions-prefix-cls}-item-label,
+      .@{descriptions-prefix-cls}-item-content {
+        padding: @descriptions-small-padding;
+      }
+    }
+  }
+  &-bordered-falsy {
+    .@{descriptions-prefix-cls}-view {
+
+      > table {
+        table-layout: auto;
+        border-collapse: collapse;
+      }
+    }
+
+    .@{descriptions-prefix-cls}-item-label,
+    .@{descriptions-prefix-cls}-item-content {
+      // padding: @descriptions-default-padding ;
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+
+    .@{descriptions-prefix-cls}-item-label {
+
+      &::after {
+        content: ":";
+        position: relative;
+        top: -0.5px;
+        margin: 0 8px 0 2px;
+      }
+    }
+
+    .@{descriptions-prefix-cls}-row {
 
       &:last-child {
         border-bottom: none;

@@ -1,10 +1,11 @@
 import { computed, defineComponent, onBeforeUnmount, onMounted, ref } from 'vue';
 import type { ExtractPropTypes, PropType, CSSProperties } from 'vue';
-import EyeOutlined from '@ant-design/icons-vue/EyeOutlined';
+import ZoomFilled from 'pf-icons-vue/ZoomFilled';
 import DeleteOutlined from '@ant-design/icons-vue/DeleteOutlined';
 import DownloadOutlined from '@ant-design/icons-vue/DownloadOutlined';
 import Tooltip from '../../tooltip';
 import Progress from '../../progress';
+import ImageOperationTip from '../../tooltip/ImageOperationTip';
 
 import type {
   ItemRender,
@@ -212,15 +213,21 @@ export default defineComponent({
           onClick={e => onPreview(file, e)}
           title={locale.previewFile}
         >
-          {customPreviewIcon ? customPreviewIcon({ file }) : <EyeOutlined />}
+          {customPreviewIcon ? customPreviewIcon({ file }) : <ZoomFilled />}
         </a>
       ) : null;
 
       const actions = listType === 'picture-card' && file.status !== 'uploading' && (
         <span class={`${prefixCls}-list-item-actions`}>
-          {previewIcon}
-          {file.status === 'done' && downloadIcon}
-          {removeIcon}
+          <ImageOperationTip title="预览">
+            {previewIcon}
+          </ImageOperationTip>
+          <ImageOperationTip title="下载">
+            {file.status === 'done' && downloadIcon}
+          </ImageOperationTip>
+          <ImageOperationTip title="删除">
+            {removeIcon}
+          </ImageOperationTip>
         </span>
       );
 
@@ -245,7 +252,7 @@ export default defineComponent({
             <Transition {...transitionProps.value}>
               <div v-show={file.status === 'uploading'} class={`${prefixCls}-list-item-progress`}>
                 {'percent' in file ? (
-                  <Progress {...progressProps} type="line" percent={file.percent} />
+                  <Progress {...progressProps as any} type="line" percent={file.percent} />
                 ) : null}
               </div>
             </Transition>
