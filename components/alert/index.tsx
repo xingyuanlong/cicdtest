@@ -10,16 +10,16 @@ import { cloneElement } from '../_util/vnode';
 import type { NodeMouseEventHandler } from '../vc-tree/contextTypes';
 import useConfigInject from '../_util/hooks/useConfigInject';
 import { 
-  InfoFilled, AlertFilled, SuccessFilled, ErrorFilled, QuestionFilled,
+  InfoTwoTone, AlertTwoTone, SuccessTwoTone, ErrorFilled, QuestionTwoTone,
   InfoOutlined, AlertOutlined, SuccessOutlined, ErrorOutlined, QuestionOutlined
 } from 'pf-icons-vue';
 
 const iconMapFilled = {
-  success: SuccessFilled,
-  info: InfoFilled,
+  success: SuccessTwoTone,
+  info: InfoTwoTone,
   error: ErrorFilled,
-  warning: AlertFilled,
-  question: QuestionFilled,
+  warning: AlertTwoTone,
+  question: QuestionTwoTone,
 };
 
 const iconMapOutlined = {
