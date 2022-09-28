@@ -34,6 +34,7 @@ Ant Design 依次提供了三级选项卡，分别用于不同的场景。
 | tabBarStyle | tab bar 的样式对象 | object | - |  |  |
 | tabPosition | 页签位置，可选值有 `top` `right` `bottom` `left` | string | `top` |  |  |
 | type | 页签的基本样式，可选 `line`、`card` `editable-card` 类型 | string | `line` |  |  |
+| tabMinWidth | 页签最小宽度，在tabPosition=`"top"` \| `"bottom"` 时有效 | string \| number | `100px` |  |  |
 
 ### Tabs 插槽
 

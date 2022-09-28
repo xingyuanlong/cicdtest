@@ -30,6 +30,7 @@ Ant Design has 3 types of Tabs for different situations.
 | tabBarStyle | Tab bar style object | object | - |  |
 | tabPosition | Position of tabs | `top` \| `right` \| `bottom` \| `left` | `top` |  |
 | type | Basic style of tabs | `line` \| `card` \| `editable-card` | `line` |  |
+| hideAdd | Minimum width of tab. Only works while tabPosition=`"top"` \| `"bottom"` | string \| number | `100px` | } |
 
 ### Tabs Slots
 

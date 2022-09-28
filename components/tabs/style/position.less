@@ -54,6 +54,11 @@
         }
       }
     }
+
+    .@{tab-prefix-cls}-tab {
+      min-width: ~'var(--@{tab-prefix-cls}-tab-minwidth)';
+      justify-content: center;
+    }
   }
 
   &-top {
@@ -140,7 +145,7 @@
 
       // >>>>>>>>>>> Ink Bar
       .@{tab-prefix-cls}-ink-bar {
-        width: 2px;
+        width: 3px;
 
         &-animated {
           transition: height @animation-duration-slow, top @animation-duration-slow;

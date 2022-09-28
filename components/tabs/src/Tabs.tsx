@@ -28,6 +28,7 @@ import pick from 'lodash-es/pick';
 import PropTypes from '../../_util/vue-types';
 import type { MouseEventHandler } from '../../_util/EventInterface';
 import omit from '../../_util/omit';
+import { toPx } from '../../_util/util';
 
 export type TabsType = 'line' | 'card' | 'editable-card';
 export type TabsPosition = 'top' | 'right' | 'bottom' | 'left';
@@ -48,6 +49,7 @@ export const tabsProps = () => {
     tabBarGutter: { type: Number },
     tabBarStyle: { type: Object as PropType<CSSProperties> },
     tabPosition: { type: String as PropType<TabPosition> },
+    tabMinWidth: [Number, String],
     destroyInactiveTabPane: { type: Boolean },
 
     hideAdd: Boolean,
@@ -120,6 +122,7 @@ const InternalTabs = defineComponent({
   props: {
     ...initDefaultProps(tabsProps(), {
       tabPosition: 'top',
+      tabMinWidth: 100,
       animated: {
         inkBar: true,
         tabPane: false,
@@ -314,6 +317,7 @@ const InternalTabs = defineComponent({
             },
             attrs.class,
           )}
+          style={{ ...(attrs.style as any), [`--${pre}-tab-minwidth`]: toPx(props.tabMinWidth) }}
         >
           {tabNavBar}
           <TabPanelList
@@ -332,6 +336,7 @@ export default defineComponent({
   inheritAttrs: false,
   props: initDefaultProps(tabsProps(), {
     tabPosition: 'top',
+    tabMinWidth: 100,
     animated: {
       inkBar: true,
       tabPane: false,
