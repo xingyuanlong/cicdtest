@@ -124,6 +124,12 @@
     pointer-events: none;
   }
 
+  &-ink-bar-fixed {
+    .@{tab-prefix-cls}-tab + .@{tab-prefix-cls}-tab {
+      margin: 0;
+    }
+  }
+
   // ============================= Tabs =============================
   &-tab {
     position: relative;
