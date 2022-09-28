@@ -8,7 +8,7 @@ title:
 
 ## zh-CN
 
-此处列出 pf-icons-vue 中需要国际化支持的组件，你可以在演示里切换语言。
+此处列出 @pf-ui/pf-icons-vue 中需要国际化支持的组件，你可以在演示里切换语言。
 
 ## en-US
 

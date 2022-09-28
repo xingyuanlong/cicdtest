@@ -4,7 +4,7 @@ import classNames from '../_util/classNames';
 import Dialog from '../vc-dialog';
 import PropTypes from '../_util/vue-types';
 import addEventListener from '../vc-util/Dom/addEventListener';
-import { CloseFilled } from 'pf-icons-vue';
+import { CloseFilled } from '@pf-ui/pf-icons-vue';
 import Button from '../button';
 import type { ButtonProps as ButtonPropsType, LegacyButtonType } from '../button/buttonTypes';
 import { convertLegacyProps } from '../button/buttonTypes';

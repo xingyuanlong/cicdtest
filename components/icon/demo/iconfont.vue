@@ -24,7 +24,7 @@ If you are using [iconfont.cn](http://iconfont.cn/), you can use the icons in yo
   </a-space>
 </template>
 <script>
-import { createFromIconfontCN} from 'pf-icons-vue';
+import { createFromIconfontCN} from '@pf-ui/pf-icons-vue';
 
 const IconFont = createFromIconfontCN({
   scriptUrl: '//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js',

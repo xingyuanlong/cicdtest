@@ -5,7 +5,7 @@ import PropTypes from '../_util/vue-types';
 import initDefaultProps from '../_util/props-util/initDefaultProps';
 import { tuple } from '../_util/type';
 import useConfigInject from '../_util/hooks/useConfigInject';
-import SuccessTwoTone from 'pf-icons-vue/SuccessTwoTone';
+import SuccessTwoTone from '@pf-ui/pf-icons-vue/SuccessTwoTone';
 
 export const timelineItemProps = () => ({
   prefixCls: String,

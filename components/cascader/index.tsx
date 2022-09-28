@@ -1,6 +1,6 @@
 import type { ShowSearchType, FieldNames, BaseOptionType, DefaultOptionType } from '../vc-cascader';
 import VcCascader, { cascaderProps as vcCascaderProps } from '../vc-cascader';
-import { RightArrowFilled } from 'pf-icons-vue';
+import { RightArrowFilled } from '@pf-ui/pf-icons-vue';
 import LoadingOutlined from '@ant-design/icons-vue/LoadingOutlined';
 import LeftOutlined from '@ant-design/icons-vue/LeftOutlined';
 import getIcons from '../select/utils/iconUtil';

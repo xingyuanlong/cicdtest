@@ -8,17 +8,17 @@ import { tuple, withInstall } from '../_util/type';
 import { cloneElement } from '../_util/vnode';
 import type { NodeMouseEventHandler } from '../vc-tree/contextTypes';
 import useConfigInject from '../_util/hooks/useConfigInject';
-import CloseFilled from 'pf-icons-vue/CloseFilled';
-import InfoTwoTone from 'pf-icons-vue/InfoTwoTone'
-import AlertTwoTone from 'pf-icons-vue/AlertTwoTone'
-import SuccessTwoTone from 'pf-icons-vue/SuccessTwoTone'
-import ErrorFilled from 'pf-icons-vue/ErrorFilled'
-import QuestionTwoTone from 'pf-icons-vue/QuestionTwoTone'
-import SuccessOutlined from 'pf-icons-vue/SuccessOutlined'
-import AlertOutlined from 'pf-icons-vue/AlertOutlined'
-import InfoOutlined from 'pf-icons-vue/InfoOutlined'
-import ErrorOutlined from 'pf-icons-vue/ErrorOutlined'
-import QuestionOutlined from 'pf-icons-vue/QuestionOutlined'
+import CloseFilled from '@pf-ui/pf-icons-vue/CloseFilled';
+import InfoTwoTone from '@pf-ui/pf-icons-vue/InfoTwoTone'
+import AlertTwoTone from '@pf-ui/pf-icons-vue/AlertTwoTone'
+import SuccessTwoTone from '@pf-ui/pf-icons-vue/SuccessTwoTone'
+import ErrorFilled from '@pf-ui/pf-icons-vue/ErrorFilled'
+import QuestionTwoTone from '@pf-ui/pf-icons-vue/QuestionTwoTone'
+import SuccessOutlined from '@pf-ui/pf-icons-vue/SuccessOutlined'
+import AlertOutlined from '@pf-ui/pf-icons-vue/AlertOutlined'
+import InfoOutlined from '@pf-ui/pf-icons-vue/InfoOutlined'
+import ErrorOutlined from '@pf-ui/pf-icons-vue/ErrorOutlined'
+import QuestionOutlined from '@pf-ui/pf-icons-vue/QuestionOutlined'
 
 const iconMapFilled = {
   success: SuccessTwoTone,

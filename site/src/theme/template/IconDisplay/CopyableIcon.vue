@@ -13,7 +13,7 @@
   </li>
 </template>
 <script>
-import * as AntdIcons from 'pf-icons-vue';
+import * as AntdIcons from '@pf-ui/pf-icons-vue';
 import { Badge } from 'pf-ui-vue';
 import { defineComponent } from 'vue';
 

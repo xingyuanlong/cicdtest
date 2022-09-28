@@ -6,10 +6,10 @@ subtitle: 图标
 cover: https://gw.alipayobjects.com/zos/alicdn/rrwbSt3FQ/Icon.svg
 ---
 
-语义化的矢量图形。使用图标组件，你需要安装 `pf-icons-vue` 图标组件包：
+语义化的矢量图形。使用图标组件，你需要安装 `@pf-ui/pf-icons-vue` 图标组件包：
 
 ```bash
-npm install --save pf-icons-vue
+npm install --save @pf-ui/pf-icons-vue
 ```
 
 
@@ -65,7 +65,7 @@ npm install --save pf-icons-vue
 我们提供了一个 `createFromIconfontCN` 方法，方便开发者调用在 [iconfont.cn](http://iconfont.cn/) 上自行管理的图标。
 
 ```jsx
-import { createFromIconfontCN } from 'pf-icons-vue';
+import { createFromIconfontCN } from '@pf-ui/pf-icons-vue';
 import { defineComponent } from 'vue';
 const MyIcon = createFromIconfontCN({
   scriptUrl: '//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js', // 在 iconfont.cn 上生成
@@ -110,7 +110,7 @@ module.exports = {
 
 ```jsx
 import { defineComponent } from 'vue';
-import Icon from 'pf-icons-vue';
+import Icon from '@pf-ui/pf-icons-vue';
 import MessageSvg from 'path/to/message.svg'; // '*.svg' 文件的路径
 
 export default defineComponent({

@@ -1,5 +1,5 @@
 import classNames from '../_util/classNames';
-import ErrorFilled from 'pf-icons-vue/ErrorFilled';
+import ErrorFilled from '@pf-ui/pf-icons-vue/ErrorFilled';
 import PropTypes from '../_util/vue-types';
 import { cloneElement } from '../_util/vnode';
 import type { CSSProperties, PropType, VNode } from 'vue';

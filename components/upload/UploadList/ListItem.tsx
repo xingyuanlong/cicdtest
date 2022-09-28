@@ -1,6 +1,6 @@
 import { computed, defineComponent, onBeforeUnmount, onMounted, ref } from 'vue';
 import type { ExtractPropTypes, PropType, CSSProperties } from 'vue';
-import ZoomFilled from 'pf-icons-vue/ZoomFilled';
+import ZoomFilled from '@pf-ui/pf-icons-vue/ZoomFilled';
 import DeleteOutlined from '@ant-design/icons-vue/DeleteOutlined';
 import DownloadOutlined from '@ant-design/icons-vue/DownloadOutlined';
 import Tooltip from '../../tooltip';
