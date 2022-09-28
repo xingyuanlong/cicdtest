@@ -1,7 +1,6 @@
 import CalendarOutlined from 'pf-icons-vue/CalendarOutlined'
 import ClockCircleOutlined from '@ant-design/icons-vue/ClockCircleOutlined';
-import CloseCircleFilled from '@ant-design/icons-vue/CloseCircleFilled';
-import SwapRightOutlined from '@ant-design/icons-vue/SwapRightOutlined';
+import CloseCircleFilled from 'pf-icons-vue/ErrorFilled'
 import CaretLeftOutlined from '@ant-design/icons-vue/CaretLeftOutlined'
 import CaretRightOutlined from '@ant-design/icons-vue/CaretRightOutlined'
 
@@ -167,7 +166,8 @@ export default function generateRangePicker<DateType, ExtraProps = {}>(
             separator={
               separator || (
                 <span aria-label="to" class={`${pre}-separator`}>
-                  <SwapRightOutlined />
+                  ~
+                  {/* <SwapRightOutlined /> */}
                 </span>
               )
             }

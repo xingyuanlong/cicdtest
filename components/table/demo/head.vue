@@ -70,7 +70,7 @@ const columns: TableColumnType<TableDataType>[] = [
     // here is that finding the name started with `value`
     onFilter: (value: string, record: TableDataType) => record.name.indexOf(value) === 0,
     sorter: (a: TableDataType, b: TableDataType) => a.name.length - b.name.length,
-    sortDirections: ['descend'],
+    sortDirections: ['descend', 'ascend'],
   },
   {
     title: 'Age',

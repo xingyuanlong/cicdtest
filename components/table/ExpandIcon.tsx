@@ -1,5 +1,6 @@
 import classNames from '../_util/classNames';
 import type { TableLocale } from './interface';
+import CollapseFilled from 'pf-icons-vue/CollapseFilled'
 
 interface DefaultExpandIconProps<RecordType> {
   prefixCls: string;
@@ -32,7 +33,9 @@ function renderExpandIcon(locale: TableLocale) {
           [`${iconPrefix}-collapsed`]: expandable && !expanded,
         })}
         aria-label={expanded ? locale.collapse : locale.expand}
-      />
+      >
+        <CollapseFilled />
+      </button>
     );
   };
 }

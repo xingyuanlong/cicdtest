@@ -526,13 +526,15 @@ const InteralTable = defineComponent<
       { flush: 'post' },
     );
 
-    const expandIconColumnIndex = computed(() => {
+    const expandIconColumnIndex = computed(() => { // mergedColumns
       if (props.showExpandColumn === false) return -1;
       // Adjust expand icon index, no overwrite expandIconColumnIndex if set.
       if (expandType.value === 'nest' && props.expandIconColumnIndex === undefined) {
         return props.rowSelection ? 1 : 0;
       } else if (props.expandIconColumnIndex! > 0 && props.rowSelection) {
         return props.expandIconColumnIndex - 1;
+      } else if(expandType.value === 'row') {
+        return Math.max(mergedColumns.value?.length, 0)
       }
       return props.expandIconColumnIndex;
     });
