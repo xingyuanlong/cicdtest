@@ -1,4 +1,4 @@
-import DownOutlined from '@ant-design/icons-vue/DownOutlined';
+import DownOutlined from '@pf-ui/pf-icons-vue/ArrowDownFilled';
 import type { DataNode } from '../../tree';
 import { INTERNAL_COL_DEFINE } from '../../vc-table';
 import type { FixedType } from '../../vc-table/interface';

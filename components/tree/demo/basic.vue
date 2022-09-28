@@ -21,6 +21,7 @@ The most basic usage, tell you how to use checkable, selectable, disabled, defau
     v-model:selectedKeys="selectedKeys"
     v-model:checkedKeys="checkedKeys"
     checkable
+    blockNode
     :tree-data="treeData"
   >
     <template #title="{ title, key }">

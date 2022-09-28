@@ -6,6 +6,8 @@
 @tree-node-padding: (@padding-xs / 2);
 @tree-node-hightlight-color: inherit;
 
+@tree-icon-width: @tree-title-height;
+
 .antTreeSwitcherIcon(@type: 'tree-default-open-icon') {
   .@{tree-prefix-cls}-switcher-icon,
   .@{select-tree-prefix-cls}-switcher-icon {
@@ -127,7 +129,7 @@
 
     &-unit {
       display: inline-block;
-      width: @tree-title-height;
+      width: @tree-icon-width;
     }
   }
 
@@ -150,12 +152,13 @@
     position: relative;
     flex: none;
     align-self: stretch;
-    width: @tree-title-height;
+    width: @tree-icon-width;
     margin: 0;
     line-height: @tree-title-height;
     text-align: center;
     cursor: pointer;
     user-select: none;
+    color: @E2;
 
     &-noop {
       cursor: default;
@@ -212,7 +215,7 @@
     z-index: auto;
     min-height: @tree-title-height;
     margin: 0;
-    padding: 0 4px;
+    padding: 0 4px 0 0;
     color: inherit;
     line-height: @tree-title-height;
     background: transparent;
@@ -274,7 +277,7 @@
         &::before {
           position: absolute;
           top: 0;
-          right: (@tree-title-height / 2);
+          right: (@tree-icon-width / 2);
           bottom: -@tree-node-padding;
           border-right: 1px solid @border-color-base;
           content: '';

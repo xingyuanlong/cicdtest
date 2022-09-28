@@ -40,6 +40,10 @@
       border-radius: 0;
       user-select: none;
 
+      .@{tree-prefix-cls}-iconEle {
+        color: #FFE28B;
+      }
+
       &:hover {
         background: transparent;
       }
@@ -54,7 +58,7 @@
     &-selected {
       &:hover::before,
       &::before {
-        background: @tree-directory-selected-bg;
+        color: @tree-directory-selected-bg;
       }
 
       // >>> Switcher
