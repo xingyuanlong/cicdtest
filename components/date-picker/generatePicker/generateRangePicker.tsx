@@ -1,6 +1,6 @@
 import CalendarOutlined from '@pf-ui/pf-icons-vue/CalendarOutlined'
 import ClockCircleOutlined from '@ant-design/icons-vue/ClockCircleOutlined';
-import CloseCircleFilled from 'pf-icons-vue/ErrorFilled'
+import CloseCircleFilled from '@pf-ui/pf-icons-vue/ErrorFilled'
 import CaretLeftOutlined from '@ant-design/icons-vue/CaretLeftOutlined'
 import CaretRightOutlined from '@ant-design/icons-vue/CaretRightOutlined'
 

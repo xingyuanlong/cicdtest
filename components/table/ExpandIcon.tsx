@@ -1,6 +1,6 @@
 import classNames from '../_util/classNames';
 import type { TableLocale } from './interface';
-import CollapseFilled from 'pf-icons-vue/CollapseFilled'
+import CollapseFilled from '@pf-ui/pf-icons-vue/CollapseFilled'
 
 interface DefaultExpandIconProps<RecordType> {
   prefixCls: string;

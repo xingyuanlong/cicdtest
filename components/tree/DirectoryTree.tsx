@@ -2,8 +2,8 @@ import type { ExtractPropTypes, PropType } from 'vue';
 import { nextTick, onUpdated, ref, watch, defineComponent, computed } from 'vue';
 import debounce from 'lodash-es/debounce';
 
-import FolderOpenFilled from 'pf-icons-vue/FolderOpenFilled';
-import FolderFilled from 'pf-icons-vue/FolderFilled';
+import FolderOpenFilled from '@pf-ui/pf-icons-vue/FolderOpenFilled';
+import FolderFilled from '@pf-ui/pf-icons-vue/FolderFilled';
 import classNames from '../_util/classNames';
 import type { AntdTreeNodeAttribute, TreeProps } from './Tree';
 import Tree, { treeProps } from './Tree';
