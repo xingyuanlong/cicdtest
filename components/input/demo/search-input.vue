@@ -28,6 +28,7 @@ Example of creating a search box by grouping a standard input with a search butt
       placeholder="input search text"
       enter-button
       @search="onSearch"
+      allowClear
     />
     <a-input-search
       v-model:value="value"

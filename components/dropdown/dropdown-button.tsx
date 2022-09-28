@@ -5,7 +5,7 @@ import classNames from '../_util/classNames';
 import Dropdown from './dropdown';
 import { initDefaultProps } from '../_util/props-util';
 import { dropdownButtonProps } from './props';
-import ArrowDownFilled from 'pf-icons-vue/ArrowDownFilled';
+import ArrowDownFilled from '@pf-ui/pf-icons-vue/ArrowDownFilled';
 import useConfigInject from '../_util/hooks/useConfigInject';
 const ButtonGroup = Button.Group;
 

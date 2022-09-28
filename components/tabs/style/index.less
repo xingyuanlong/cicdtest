@@ -13,6 +13,7 @@
 
   display: flex;
   overflow: hidden;
+  color: @tabs-color;
 
   // ========================== Navigation ==========================
   > .@{tab-prefix-cls}-nav,
@@ -123,6 +124,12 @@
     pointer-events: none;
   }
 
+  &-ink-bar-fixed {
+    .@{tab-prefix-cls}-tab + .@{tab-prefix-cls}-tab {
+      margin: 0;
+    }
+  }
+
   // ============================= Tabs =============================
   &-tab {
     position: relative;
@@ -134,6 +141,7 @@
     border: 0;
     outline: none;
     cursor: pointer;
+    --tab-disabled-color: @E4;
 
     &-btn,
     &-remove {
@@ -175,7 +183,7 @@
     }
 
     &&-disabled {
-      color: @disabled-color;
+      color: var(--tab-disabled-color);
       cursor: not-allowed;
     }
 
@@ -192,7 +200,7 @@
     }
 
     .@{iconfont-css-prefix} {
-      margin-right: @margin-sm;
+      margin-right: @tabs-icon-margin-right;
     }
   }
 

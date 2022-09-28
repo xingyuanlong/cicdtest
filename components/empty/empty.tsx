@@ -1,5 +1,5 @@
 import useConfigInject from '../_util/hooks/useConfigInject';
-import NoResultTwoTone from 'pf-icons-vue/NoResultTwoTone'
+import NoResultTwoTone from '@pf-ui/pf-icons-vue/NoResultTwoTone'
 
 const Empty = () => {
   const { getPrefixCls } = useConfigInject('empty', {});

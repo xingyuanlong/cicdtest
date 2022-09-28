@@ -28,9 +28,11 @@ import pick from 'lodash-es/pick';
 import PropTypes from '../../_util/vue-types';
 import type { MouseEventHandler } from '../../_util/EventInterface';
 import omit from '../../_util/omit';
+import { toPx } from '../../_util/util';
 
 export type TabsType = 'line' | 'card' | 'editable-card';
 export type TabsPosition = 'top' | 'right' | 'bottom' | 'left';
+export type InkBarWidth = 'contentWidth' | string | number
 
 // Used for accessibility
 let uuid = 0;
@@ -48,6 +50,7 @@ export const tabsProps = () => {
     tabBarGutter: { type: Number },
     tabBarStyle: { type: Object as PropType<CSSProperties> },
     tabPosition: { type: String as PropType<TabPosition> },
+    inkBarWidth:  { type: String as PropType<InkBarWidth> },
     destroyInactiveTabPane: { type: Boolean },
 
     hideAdd: Boolean,
@@ -120,6 +123,7 @@ const InternalTabs = defineComponent({
   props: {
     ...initDefaultProps(tabsProps(), {
       tabPosition: 'top',
+      inkBarWidth: '100px',
       animated: {
         inkBar: true,
         tabPane: false,
@@ -311,9 +315,11 @@ const InternalTabs = defineComponent({
               [`${pre}-mobile`]: mobile.value,
               [`${pre}-editable`]: type === 'editable-card',
               [`${pre}-rtl`]: rtl.value,
+              [`${pre}-ink-bar-fixed`]: props.inkBarWidth !== 'contentWidth'
             },
             attrs.class,
           )}
+          style={{ ...(attrs.style as any), [`--${pre}-tab-minwidth`]: props.inkBarWidth === 'contentWidth' ? undefined : toPx(props.inkBarWidth) }}
         >
           {tabNavBar}
           <TabPanelList
@@ -332,6 +338,7 @@ export default defineComponent({
   inheritAttrs: false,
   props: initDefaultProps(tabsProps(), {
     tabPosition: 'top',
+    inkBarWidth: '100px',
     animated: {
       inkBar: true,
       tabPane: false,

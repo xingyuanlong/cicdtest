@@ -1,7 +1,7 @@
 import { computed, defineComponent, onBeforeUnmount, onMounted, ref } from 'vue';
 import type { ExtractPropTypes, PropType, CSSProperties } from 'vue';
-import ZoomFilled from 'pf-icons-vue/ZoomFilled';
-import DeleteOutlined from '@ant-design/icons-vue/DeleteOutlined';
+import ZoomFilled from '@pf-ui/pf-icons-vue/ZoomFilled';
+import DeleteTwoTone from '@pf-ui/pf-icons-vue/DeleteTwoTone';
 import DownloadOutlined from '@ant-design/icons-vue/DownloadOutlined';
 import Tooltip from '../../tooltip';
 import Progress from '../../progress';
@@ -143,7 +143,7 @@ export default defineComponent({
 
       const removeIcon = showRemoveIcon
         ? actionIconRender({
-            customIcon: customRemoveIcon ? customRemoveIcon({ file }) : <DeleteOutlined />,
+            customIcon: customRemoveIcon ? customRemoveIcon({ file }) : <DeleteTwoTone style={{ color: `var(--${prefixCls}-list-item-card-actions-delete)` }} />,
             callback: () => onClose(file),
             prefixCls,
             title: locale.removeFile,

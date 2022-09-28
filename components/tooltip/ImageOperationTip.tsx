@@ -1,5 +1,5 @@
 import { defineComponent } from 'vue'
-import Tooltip from './tooltip'
+import Tooltip from './Tooltip'
 import useConfigInject from '../_util/hooks/useConfigInject'
 
 export interface ImageOperationTipProps {

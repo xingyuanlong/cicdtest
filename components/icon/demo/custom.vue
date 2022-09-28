@@ -82,7 +82,7 @@ Create a reusable Vue component by using `Icon`. The property / slot `component`
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
-import Icon, { MenuFilled } from 'pf-icons-vue';
+import Icon, { MenuFilled } from '@pf-ui/pf-icons-vue';
 export default defineComponent({
   components: {
     Icon,

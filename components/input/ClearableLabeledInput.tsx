@@ -1,5 +1,5 @@
 import classNames from '../_util/classNames';
-import CloseCircleFilled from '@ant-design/icons-vue/CloseCircleFilled';
+import ErrorFilled from '@pf-ui/pf-icons-vue/ErrorFilled';
 import PropTypes from '../_util/vue-types';
 import { cloneElement } from '../_util/vnode';
 import type { CSSProperties, PropType, VNode } from 'vue';
@@ -51,7 +51,8 @@ export default defineComponent({
       const needClear = !disabled && !readonly && value;
       const className = `${prefixCls}-clear-icon`;
       return (
-        <CloseCircleFilled
+        <ErrorFilled
+          style={{ color: '#b2b2b2'}}
           onClick={handleReset}
           // Do not trigger onBlur when clear input
           onMousedown={e => e.preventDefault()}

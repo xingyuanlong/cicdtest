@@ -2,7 +2,7 @@ import type { PropType } from 'vue';
 import { computed, ref, defineComponent } from 'vue';
 import classNames from '../_util/classNames';
 import Input from './Input';
-import SearchOutlined from '@ant-design/icons-vue/SearchOutlined';
+import SearchOutlined from '@pf-ui/pf-icons-vue/SearchOutlined';
 import inputProps from './inputProps';
 import Button from '../button';
 import { cloneElement } from '../_util/vnode';

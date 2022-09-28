@@ -1,6 +1,6 @@
 import type { CSSProperties } from 'vue';
 import Notification from '../vc-notification';
-import { LoadingFilled, InfoOutlined, AlertOutlined, SuccessOutlined, ErrorOutlined } from 'pf-icons-vue'
+import { LoadingFilled, InfoOutlined, AlertOutlined, SuccessOutlined, ErrorOutlined } from '@pf-ui/pf-icons-vue'
 import type { Key, VueNode } from '../_util/type';
 import type { NotificationInstance } from '../vc-notification/Notification';
 import classNames from '../_util/classNames';

@@ -4,7 +4,7 @@ import type { ModalFuncProps } from './Modal';
 import { destroyFns } from './Modal';
 import ConfigProvider, { globalConfigForApi } from '../config-provider';
 import omit from '../_util/omit';
-import { InfoTwoTone, AlertTwoTone, SuccessTwoTone, ErrorFilled } from 'pf-icons-vue';
+import { InfoTwoTone, AlertTwoTone, SuccessTwoTone, ErrorFilled } from '@pf-ui/pf-icons-vue';
 
 type ConfigUpdate = ModalFuncProps | ((prevConfig: ModalFuncProps) => ModalFuncProps);
 

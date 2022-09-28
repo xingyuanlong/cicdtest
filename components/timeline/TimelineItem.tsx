@@ -5,6 +5,7 @@ import PropTypes from '../_util/vue-types';
 import initDefaultProps from '../_util/props-util/initDefaultProps';
 import { tuple } from '../_util/type';
 import useConfigInject from '../_util/hooks/useConfigInject';
+import SuccessTwoTone from '@pf-ui/pf-icons-vue/SuccessTwoTone';
 
 export const timelineItemProps = () => ({
   prefixCls: String,
@@ -31,20 +32,21 @@ export default defineComponent({
       const itemClassName = classNames({
         [`${prefixCls.value}-item`]: true,
         [`${prefixCls.value}-item-pending`]: pending,
+        [`${prefixCls.value}-item-blue-line`]: color === 'blue',
       });
 
       const dotClassName = classNames({
         [`${prefixCls.value}-item-head`]: true,
-        [`${prefixCls.value}-item-head-custom`]: dot,
+        [`${prefixCls.value}-item-head-custom`]: dot || color === 'blue',
         [`${prefixCls.value}-item-head-${color}`]: true,
       });
-      const customColor = /blue|red|green|gray/.test(color || '') ? undefined : color;
+      const customColor = /blue|red|green|gray|yellow/.test(color || '') ? undefined : color;
       return (
         <li class={itemClassName}>
           {label && <div class={`${prefixCls.value}-item-label`}>{label}</div>}
           <div class={`${prefixCls.value}-item-tail`} />
           <div class={dotClassName} style={{ borderColor: customColor, color: customColor }}>
-            {dot}
+            {dot || (color === 'blue' && <SuccessTwoTone /> )}
           </div>
           <div class={`${prefixCls.value}-item-content`}>{slots.default?.()}</div>
         </li>

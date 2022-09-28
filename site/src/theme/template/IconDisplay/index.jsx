@@ -1,4 +1,4 @@
-import Icon, * as AntdIcons from 'pf-icons-vue';
+import Icon, * as AntdIcons from '@pf-ui/pf-icons-vue';
 import { FilledIcon, OutlinedIcon, TwoToneIcon } from './themeIcons';
 import Category from './Category';
 import { Radio } from 'pf-ui-vue';

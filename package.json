@@ -1,5 +1,5 @@
 {
-  "name": "pf-ui-vue",
+  "name": "@pf-ui/pf-ui-vue",
   "version": "0.0.1",
   "title": "pf-ui-vue",
   "description": "An enterprise-class UI design language and Vue-based implementation",
@@ -276,7 +276,7 @@
     "dom-scroll-into-view": "^2.0.0",
     "lodash": "^4.17.21",
     "lodash-es": "^4.17.15",
-    "pf-icons-vue": "^1.1.1",
+    "@pf-ui/pf-icons-vue": "^1.1.1",
     "resize-observer-polyfill": "^1.5.1",
     "scroll-into-view-if-needed": "^2.2.25",
     "shallow-equal": "^1.0.0",

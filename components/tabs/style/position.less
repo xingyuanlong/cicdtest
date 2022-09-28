@@ -15,12 +15,12 @@
         position: absolute;
         right: 0;
         left: 0;
-        border-bottom: @border-width-base @border-style-base @border-color-split;
+        border-bottom: @border-width-base @border-style-base @E4;
         content: '';
       }
 
       .@{tab-prefix-cls}-ink-bar {
-        height: 2px;
+        height: 3px;
 
         &-animated {
           transition: width @animation-duration-slow, left @animation-duration-slow,
@@ -53,6 +53,11 @@
           opacity: 1;
         }
       }
+    }
+
+    .@{tab-prefix-cls}-tab {
+      min-width: ~'var(--@{tab-prefix-cls}-tab-minwidth)';
+      justify-content: center;
     }
   }
 
@@ -140,7 +145,7 @@
 
       // >>>>>>>>>>> Ink Bar
       .@{tab-prefix-cls}-ink-bar {
-        width: 2px;
+        width: 3px;
 
         &-animated {
           transition: height @animation-duration-slow, top @animation-duration-slow;

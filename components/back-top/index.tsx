@@ -10,7 +10,7 @@ import {
   watch,
   onDeactivated,
 } from 'vue';
-import TopFilled from 'pf-icons-vue/TopFilled'
+import TopFilled from '@pf-ui/pf-icons-vue/TopFilled'
 import addEventListener from '../vc-util/Dom/addEventListener';
 import getScroll from '../_util/getScroll';
 import { getTransitionProps, Transition } from '../_util/transition';

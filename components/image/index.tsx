@@ -5,7 +5,7 @@ import { imageProps } from '../vc-image/src/Image';
 import defaultLocale from '../locale/en_US';
 import useConfigInject from '../_util/hooks/useConfigInject';
 import PreviewGroup, { icons } from './PreviewGroup';
-import ZoomFilled from 'pf-icons-vue/ZoomFilled';
+import ZoomFilled from '@pf-ui/pf-icons-vue/ZoomFilled';
 import { getTransitionName } from '../_util/transition';
 import ImageOperationTip from '../tooltip/ImageOperationTip';
 
