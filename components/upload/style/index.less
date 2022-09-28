@@ -151,6 +151,10 @@
     margin-top: @margin-xs;
     font-size: @font-size-base;
 
+    .anticon {
+      font-size: @font-size-lg;
+    }
+
     &-name {
       display: inline-block;
       width: 100%;
@@ -167,6 +171,7 @@
 
       &-btn {
         opacity: 0;
+        --@{upload-item}-card-actions-delete: @upload-actions-delete;
       }
       &-btn.@{ant-prefix}-btn-sm {
         height: 20px;
