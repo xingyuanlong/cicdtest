@@ -1,6 +1,7 @@
 // based on rc-checkbox 2.3.2
 import type { HTMLAttributes } from 'vue';
 import { defineComponent, ref, watch } from 'vue';
+import Right2Filled from '@pf-ui/pf-icons-vue/Right2Filled';
 import classNames from '../_util/classNames';
 import PropTypes from '../_util/vue-types';
 import { initDefaultProps } from '../_util/props-util';
@@ -141,7 +142,7 @@ export default defineComponent({
       return (
         <span class={classString}>
           <input ref={inputRef} {...inputProps} />
-          <span class={`${prefixCls}-inner`} />
+          <span class={`${prefixCls}-inner`}>{!!checked.value ? <Right2Filled /> : null}</span>
         </span>
       );
     };
