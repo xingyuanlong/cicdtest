@@ -22,7 +22,6 @@ Add border, title and footer for table.
         <a>{{ text }}</a>
       </template>
     </template>
-    <template #title>Header</template>
     <template #footer>Footer</template>
   </a-table>
 </template>
