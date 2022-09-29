@@ -292,7 +292,7 @@ function githubRelease(done) {
     return;
   }
   const github = new Octokit({
-    auth: process.env.GITHUB_TOKEN,
+    // auth: process.env.GITHUB_TOKEN,
   });
   const date = new Date();
   const { version } = packageJson;
@@ -308,7 +308,7 @@ function githubRelease(done) {
   ].join('\n');
   const [_, owner, repo] = execSync('git remote get-url origin') // eslint-disable-line
     .toString()
-    .match(/github.com[:/](.+)\/(.+)\.git/);
+    .match(/gitlab.wowjoy.com[:/](.+)\/(.+)\.git/);
   github.repos
     .createRelease({
       owner,
