@@ -103,6 +103,7 @@ function useColumns<RecordType>(
     expandColumnWidth,
     expandFixed,
     mergedChildrenColumnName,
+    expandableType,
   }: {
     prefixCls?: Ref<string>;
     columns?: Ref<ColumnsType<RecordType>>;
@@ -118,6 +119,7 @@ function useColumns<RecordType>(
     expandColumnWidth?: Ref<number | string>;
     expandFixed?: Ref<FixedType>;
     mergedChildrenColumnName?: Ref<string>
+    expandableType: Ref<string | boolean>
   },
   transformColumns: Ref<(columns: ColumnsType<RecordType>) => ColumnsType<RecordType>>,
 ): [ComputedRef<ColumnsType<RecordType>>, ComputedRef<readonly ColumnType<RecordType>[]>] {
@@ -187,10 +189,12 @@ function useColumns<RecordType>(
           const rowKey = getRowKey.value(record, index);
           const expanded = expandedKeysValue.has(rowKey);
           const recordExpandable = rowExpandableValue ? rowExpandableValue(record) : true;
-          const childrenName = mergedChildrenColumnName.value
-          const hasNestChildren = Array.isArray(record[childrenName]) ? !!record[childrenName].length : false
 
-          if(!hasNestChildren) return null;
+          if(expandableType.value === 'nest') {
+            const childrenName = mergedChildrenColumnName.value
+            const hasNestChildren = Array.isArray(record[childrenName]) ? !!record[childrenName].length : false
+            if(!hasNestChildren) return null
+          }
 
           const icon = expandIconValue({
             prefixCls: prefixClsValue,

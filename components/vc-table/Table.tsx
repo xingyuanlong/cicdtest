@@ -318,6 +318,7 @@ export default defineComponent<TableProps<DefaultRecordType>>({
         onTriggerExpand,
         expandIcon: mergedExpandIcon,
         mergedChildrenColumnName,
+        expandableType
       },
       computed(() => (props.internalHooks === INTERNAL_HOOKS ? props.transformColumns : null)),
     );
