@@ -265,16 +265,27 @@ function compile(modules) {
 function tag() {
   console.log('tagging');
   const { version } = packageJson;
-  execSync(`git config --global user.email ${process.env.GITHUB_USER_EMAIL}`);
-  execSync(`git config --global user.name ${process.env.GITHUB_USER_NAME}`);
+  // execSync(`git config --global user.email ${process.env.GITHUB_USER_EMAIL}`);
+  // execSync(`git config --global user.name ${process.env.GITHUB_USER_NAME}`);
   execSync(`git tag ${version}`);
-  // execSync(
-  //   `git push https://${process.env.GITHUB_TOKEN}@github.com/vueComponent/ant-design-vue.git ${version}:${version}`,
-  // );
+  execSync(
+    `git push origin ${version}:${version}`,
+  );
+  console.log('tagged');
+  try {
+    execSync(
+      `git push`,
+    );
+    console.log('push end');
+  } catch(e){
+    console.log(e);
+    console.log(`\n可能需要拉取代码~\n`);
+  }
+
   // execSync(
   //   `git push https://${process.env.GITHUB_TOKEN}@github.com/vueComponent/ant-design-vue.git master:master`,
   // );
-  console.log('tagged');
+  
 }
 
 function githubRelease(done) {
@@ -329,7 +340,7 @@ gulp.task(
   'tag',
   gulp.series(done => {
     tag();
-    githubRelease(done);
+    // githubRelease(done);
   }),
 );
 
@@ -359,9 +370,9 @@ function publish(tagString, done) {
   console.log('publishNpm', publishNpm, '\nargs',args, '');
   runCmd(publishNpm, args, code => {
     tag();
-    githubRelease(() => {
-      done(code);
-    });
+    // githubRelease(() => {
+    //   done(code);
+    // });
   });
 }
 
