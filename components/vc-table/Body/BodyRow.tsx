@@ -113,7 +113,6 @@ export default defineComponent<BodyRowProps<unknown>>({
         flattenColumns,
         expandedRowClassName,
         indentSize,
-        expandIcon,
         expandedRowRender,
         expandIconColumnIndex,
       } = bodyContext;
