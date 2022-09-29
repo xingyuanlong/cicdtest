@@ -1,6 +1,6 @@
 const NoNetwork = () => {
   return (
-    <svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" >
       <defs>
         <radialGradient cx="50%" cy="49.9796168%" fx="50%" fy="49.9796168%" r="92.1524664%" gradientTransform="translate(0.500000,0.499796),scale(1.000000,0.727273),rotate(-90.000000),translate(-0.500000,-0.499796)" id="radialGradient-1">
             <stop stop-color="#EAF0FF" offset="0%"></stop>
@@ -53,7 +53,7 @@ const NoNetwork = () => {
 
 export const NoNetworkTitle = () => {
   return (
-    <svg width="115px" height="28px" viewBox="0 0 115 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <svg width="115px" height="28px" viewBox="0 0 115 28" version="1.1" xmlns="http://www.w3.org/2000/svg" >
       <g id="8-通用信息" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="03-灰白款" transform="translate(-1191.000000, -1678.000000)" fill="#8F8F8F" fill-rule="nonzero">
             <g id="编组-18" transform="translate(1189.000000, 1678.000000)">

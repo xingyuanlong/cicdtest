@@ -30,8 +30,6 @@ function DateHeader<DateType>(_props: DateHeaderProps<DateType>) {
     viewDate,
     onNextMonth,
     onPrevMonth,
-    onNextYear,
-    onPrevYear,
     onYearClick,
     onMonthClick,
   } = props;

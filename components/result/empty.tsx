@@ -1,6 +1,6 @@
 const Empty = () => {
   return (
-    <svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
       <g id="8-通用信息" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
           <g id="03-灰白款" transform="translate(-974.000000, -1075.000000)">
               <g id="空备份" transform="translate(974.000000, 1075.000000)">

@@ -25,7 +25,7 @@ const resetStyle = (node: HTMLSpanElement) => {
   }
 };
 
-function DottedLoading(props, context) {
+function DottedLoading(props) {
   const { prefixCls } = props
   return (
     <span class={`${prefixCls}-loading-dotted`}>...</span>

@@ -2,7 +2,7 @@ import classNames from '../_util/classNames';
 import type { ModalFuncProps } from './Modal';
 import Dialog from './Modal';
 import ActionButton from '../_util/ActionButton';
-import { defineComponent } from 'vue';
+import { CSSProperties, defineComponent } from 'vue';
 import { useLocaleReceiver } from '../locale-provider/LocaleReceiver';
 import { getTransitionName } from '../_util/transition';
 
@@ -142,7 +142,7 @@ export default defineComponent<ConfirmDialogProps>({
           mask={mask}
           maskClosable={maskClosable}
           maskStyle={maskStyle}
-          style={style}
+          style={style as CSSProperties}
           bodyStyle={bodyStyle}
           width={width}
           zIndex={zIndex}

@@ -1,6 +1,6 @@
 const Unauthorized = () => {
   return (
-    <svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" >
       <g id="8-通用信息" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
           <g id="03-灰白款" transform="translate(-319.000000, -1097.000000)">
               <g id="没权限" transform="translate(319.000000, 1097.000000)">
@@ -158,7 +158,7 @@ const Unauthorized = () => {
 
 export const UnauthorizedTitle = () => {
   return (
-    <svg width="136px" height="50px" viewBox="0 0 136 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <svg width="136px" height="50px" viewBox="0 0 136 50" version="1.1" xmlns="http://www.w3.org/2000/svg">
       <g id="8-通用信息" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="03-灰白款" transform="translate(-539.000000, -1133.000000)" fill="#8F8F8F" fill-rule="nonzero">
             <g id="编组-12备份" transform="translate(539.000000, 1133.000000)">
