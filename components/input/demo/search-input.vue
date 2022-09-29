@@ -47,6 +47,11 @@ Example of creating a search box by grouping a standard input with a search butt
         <a-button>Custom</a-button>
       </template>
     </a-input-search>
+    <a-search-input
+      v-model:value="value"
+      placeholder="input search text"
+      @search="onSearch" 
+    />
   </a-space>
 </template>
 
