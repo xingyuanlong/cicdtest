@@ -1,6 +1,6 @@
 {
   "name": "@pf-ui/pf-ui-vue",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "title": "pf-ui-vue",
   "description": "An enterprise-class UI design language and Vue-based implementation",
   "keywords": [
@@ -305,5 +305,9 @@
       "czConfig": "./scripts/commitizen.js"
     }
   },
-  "web-types": "vetur/web-types.json"
+  "web-types": "vetur/web-types.json",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
 }
