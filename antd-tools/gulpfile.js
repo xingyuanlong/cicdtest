@@ -265,8 +265,8 @@ function compile(modules) {
 function tag() {
   console.log('tagging');
   const { version } = packageJson;
-  execSync(`git config --global user.email ${process.env.GITHUB_USER_EMAIL}`);
-  execSync(`git config --global user.name ${process.env.GITHUB_USER_NAME}`);
+  // execSync(`git config --global user.email ${process.env.GITHUB_USER_EMAIL}`);
+  // execSync(`git config --global user.name ${process.env.GITHUB_USER_NAME}`);
   execSync(`git tag ${version}`);
   execSync(
     `git push origin ${version}:${version}`,
