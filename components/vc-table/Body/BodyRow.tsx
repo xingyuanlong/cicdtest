@@ -63,9 +63,9 @@ export default defineComponent<BodyRowProps<unknown>>({
     );
     // Only when row is not expandable and `children` exist in record
     const nestExpandable = computed(() => bodyContext.expandableType === 'nest');
-    const hasNestChildren = computed(
-      () => props.childrenColumnName && props.record && props.record[props.childrenColumnName],
-    );
+    // const hasNestChildren = computed(
+    //   () => props.childrenColumnName && props.record && props.record[props.childrenColumnName],
+    // );
     const mergedExpandable = computed(() => rowSupportExpand.value || nestExpandable.value);
 
     const onInternalTriggerExpand = (record, event) => {
@@ -127,6 +127,7 @@ export default defineComponent<BodyRowProps<unknown>>({
             `${prefixCls}-row-level-${indent}`,
             computeRowClassName.value,
             additionalProps.value.class,
+            {isChildren : indent > 0 }
           )}
           style={{
             ...style,
@@ -152,13 +153,13 @@ export default defineComponent<BodyRowProps<unknown>>({
                     style={{ paddingLeft: `${indentSize * indent}px` }}
                     class={`${prefixCls}-row-indent indent-level-${indent}`}
                   />
-                  {expandIcon({
+                  {/* {expandIcon({
                     prefixCls,
                     expanded: expanded.value,
                     expandable: hasNestChildren.value,
                     record,
                     onExpand: onInternalTriggerExpand,
-                  })}
+                  })} */}
                 </>
               ) : null;
             return (

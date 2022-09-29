@@ -312,11 +312,12 @@ export default defineComponent<TableProps<DefaultRecordType>>({
         ...toRefs(props),
 
         // children,
-        expandable: computed(() => !!props.expandedRowRender),
+        expandable: computed(() => !!props.expandedRowRender || expandableType.value === 'nest'),
         expandedKeys: mergedExpandedKeys,
         getRowKey,
         onTriggerExpand,
         expandIcon: mergedExpandIcon,
+        mergedChildrenColumnName,
       },
       computed(() => (props.internalHooks === INTERNAL_HOOKS ? props.transformColumns : null)),
     );
