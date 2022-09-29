@@ -18,7 +18,7 @@ Showing more detailed info of every row.
 </docs>
 
 <template>
-  <a-table :columns="columns" :data-source="data" class="components-table-demo-nested">
+  <a-table :columns="columns" :data-source="data" class="components-table-demo-nested" expandRowByClick>
     <template #bodyCell="{ column }">
       <template v-if="column.key === 'operation'">
         <a>Publish</a>
