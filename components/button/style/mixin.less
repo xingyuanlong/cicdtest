@@ -33,7 +33,7 @@
   }
 }
 
-.button-disabled(@color: @btn-disable-color; @background: @btn-disable-bg; @border: @btn-disable-border) {
+.button-disabled(@color: @btn-default-disabled-color; @background: @btn-disable-bg; @border: @btn-disable-border) {
   &[disabled] {
     &,
     &:hover,
@@ -478,7 +478,7 @@
       .button-color(@error-color-active; transparent; transparent);
     }
   }
-  .button-disabled(@disabled-color; transparent; transparent);
+  .button-disabled(@btn-default-disabled-color; transparent; transparent);
 }
 // link button style
 .btn-link() {
@@ -494,7 +494,7 @@
   &:active {
     border-color: transparent;
   }
-  .button-disabled(@disabled-color; transparent; transparent);
+  .button-disabled(@btn-default-disabled-color; transparent; transparent);
 }
 // text button style
 .btn-text() {
@@ -514,7 +514,7 @@
     border-color: transparent;
   }
 
-  .button-disabled(@disabled-color; transparent; transparent);
+  .button-disabled(@btn-default-disabled-color; transparent; transparent);
 }
 .btn-danger-text() {
   .button-variant-other(@error-color, transparent, transparent);
@@ -544,7 +544,7 @@
       .button-color(@error-color-active; fadein(@btn-text-hover-bg, 1%); transparent);
     }
   }
-  .button-disabled(@disabled-color; transparent; transparent);
+  .button-disabled(@btn-default-disabled-color; transparent; transparent);
 }
 // round button
 .btn-round(@btnClassName: btn) {
