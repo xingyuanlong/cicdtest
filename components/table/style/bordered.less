@@ -2,7 +2,7 @@
 @import (reference) '../../style/themes/index';
 @table-prefix-cls: ~'@{ant-prefix}-table';
 
-@table-border: @border-width-base @border-style-base @table-border-color;
+@table-border: @border-width-base @border-style-base @C7;
 
 .@{table-prefix-cls}.@{table-prefix-cls}-bordered {
   // ============================ Title =============================
@@ -25,15 +25,20 @@
         > tbody > tr > td,
         > tfoot > tr > th,
         > tfoot > tr > td {
+          padding-left: 10px;
+          padding-right: 10px;
           border-right: @table-border;
         }
         // ============================ Header ============================
         > thead {
           > tr:not(:last-child) > th {
-            border-bottom: @border-width-base @border-style-base @table-border-color;
+            border-bottom: @border-width-base @border-style-base @C7;
           }
 
           > tr > th {
+            box-shadow: none;
+            border-color: @C7;
+            border-bottom: 1px solid @C14;
             &::before {
               background-color: transparent !important;
             }
@@ -45,13 +50,15 @@
         > tbody > tr,
         > tfoot > tr {
           > .@{table-prefix-cls}-cell-fix-right-first::after {
-            border-right: @table-border;
+            border-right: @C7;
           }
         }
       }
 
       // ========================== Expandable ==========================
       > table > tbody > tr > td {
+        border-color: @C7;
+
         > .@{table-prefix-cls}-expanded-row-fixed {
           margin: -@table-padding-vertical (-@table-padding-horizontal - @border-width-base);
 
