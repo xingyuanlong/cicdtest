@@ -268,12 +268,12 @@ function tag() {
   execSync(`git config --global user.email ${process.env.GITHUB_USER_EMAIL}`);
   execSync(`git config --global user.name ${process.env.GITHUB_USER_NAME}`);
   execSync(`git tag ${version}`);
-  execSync(
-    `git push https://${process.env.GITHUB_TOKEN}@github.com/vueComponent/ant-design-vue.git ${version}:${version}`,
-  );
-  execSync(
-    `git push https://${process.env.GITHUB_TOKEN}@github.com/vueComponent/ant-design-vue.git master:master`,
-  );
+  // execSync(
+  //   `git push https://${process.env.GITHUB_TOKEN}@github.com/vueComponent/ant-design-vue.git ${version}:${version}`,
+  // );
+  // execSync(
+  //   `git push https://${process.env.GITHUB_TOKEN}@github.com/vueComponent/ant-design-vue.git master:master`,
+  // );
   console.log('tagged');
 }
 
@@ -282,11 +282,11 @@ function githubRelease(done) {
     path.join(cwd, 'CHANGELOG.en-US.md'),
     path.join(cwd, 'CHANGELOG.zh-CN.md'),
   ];
-  console.log('creating release on GitHub');
-  if (!process.env.GITHUB_TOKEN) {
-    console.log('no GitHub token found, skip');
-    return;
-  }
+  console.log('creating release on Git');
+  // if (!process.env.GITHUB_TOKEN) {
+  //   console.log('no GitHub token found, skip');
+  //   return;
+  // }
   if (!changlogFiles.every(file => fs.existsSync(file))) {
     console.log('no changelog found, skip');
     return;
