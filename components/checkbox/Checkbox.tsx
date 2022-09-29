@@ -98,7 +98,7 @@ export default defineComponent({
           onMouseenter={onMouseenter as EventHandler}
           onMouseleave={onMouseleave as EventHandler}
         >
-          <VcCheckbox {...checkboxProps} class={checkboxClass} ref={checkboxRef} />
+          <VcCheckbox {...checkboxProps} class={checkboxClass} ref={checkboxRef}  showRight />
           {children.length ? <span>{children}</span> : null}
         </label>
       );

@@ -19,6 +19,7 @@ export const checkboxProps = {
   autofocus: Boolean,
   value: PropTypes.any,
   required: Boolean,
+  showRight: Boolean,
 };
 export default defineComponent({
   name: 'Checkbox',
@@ -95,6 +96,7 @@ export default defineComponent({
         autofocus,
         value,
         required,
+        showRight,
         ...others
       } = props;
       const {
@@ -138,11 +140,11 @@ export default defineComponent({
         onKeyup,
         required,
       };
-
+      console.log('showRight', showRight);
       return (
         <span class={classString}>
           <input ref={inputRef} {...inputProps} />
-          <span class={`${prefixCls}-inner`}>{!!checked.value ? <Right2Filled /> : null}</span>
+          <span class={`${prefixCls}-inner`}>{(!!checked.value && showRight) ? <Right2Filled /> : null}</span>
         </span>
       );
     };
