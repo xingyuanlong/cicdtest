@@ -351,11 +351,12 @@ gulp.task(
 );
 
 function publish(tagString, done) {
-  let args = ['publish', '--with-antd-tools'];
+  let args = ['publish', '--with-antd-tools' , '--access public'];
   if (tagString) {
     args = args.concat(['--tag', tagString]);
   }
   const publishNpm = process.env.PUBLISH_NPM_CLI || 'npm';
+  console.log('publishNpm', publishNpm, '\nargs',args, '');
   runCmd(publishNpm, args, code => {
     tag();
     githubRelease(() => {

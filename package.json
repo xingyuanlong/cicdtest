@@ -1,6 +1,6 @@
 {
   "name": "@pf-ui/pf-ui-vue",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "title": "pf-ui-vue",
   "description": "An enterprise-class UI design language and Vue-based implementation",
   "keywords": [
@@ -20,6 +20,7 @@
   "module": "es/index.js",
   "unpkg": "dist/antd.min.js",
   "typings": "lib/index.d.ts",
+  "private": "false",
   "files": [
     "dist",
     "lib",
