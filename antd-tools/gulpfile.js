@@ -272,13 +272,20 @@ function tag() {
     `git push origin ${version}:${version}`,
   );
   console.log('tagged');
-  execSync(
-    `git push`,
-  );
+  try {
+    execSync(
+      `git push`,
+    );
+    console.log('push end');
+  } catch(e){
+    console.log(e);
+    console.log(`\n可能需要拉取代码~\n`);
+  }
+
   // execSync(
   //   `git push https://${process.env.GITHUB_TOKEN}@github.com/vueComponent/ant-design-vue.git master:master`,
   // );
-  console.log('push end');
+  
 }
 
 function githubRelease(done) {
