@@ -109,6 +109,7 @@ export interface TableProps<RecordType = DefaultRecordType>
   striped?:boolean
 }
 
+// @ts-ignore
 const defaultRowClassName = (record, index) => {
   return (index % 2 === 1 ? 'ant-table-striped' : undefined)
 }

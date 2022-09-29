@@ -268,12 +268,12 @@ function tag() {
   execSync(`git config --global user.email ${process.env.GITHUB_USER_EMAIL}`);
   execSync(`git config --global user.name ${process.env.GITHUB_USER_NAME}`);
   execSync(`git tag ${version}`);
-  execSync(
-    `git push https://${process.env.GITHUB_TOKEN}@github.com/vueComponent/ant-design-vue.git ${version}:${version}`,
-  );
-  execSync(
-    `git push https://${process.env.GITHUB_TOKEN}@github.com/vueComponent/ant-design-vue.git master:master`,
-  );
+  // execSync(
+  //   `git push https://${process.env.GITHUB_TOKEN}@github.com/vueComponent/ant-design-vue.git ${version}:${version}`,
+  // );
+  // execSync(
+  //   `git push https://${process.env.GITHUB_TOKEN}@github.com/vueComponent/ant-design-vue.git master:master`,
+  // );
   console.log('tagged');
 }
 
@@ -282,17 +282,17 @@ function githubRelease(done) {
     path.join(cwd, 'CHANGELOG.en-US.md'),
     path.join(cwd, 'CHANGELOG.zh-CN.md'),
   ];
-  console.log('creating release on GitHub');
-  if (!process.env.GITHUB_TOKEN) {
-    console.log('no GitHub token found, skip');
-    return;
-  }
+  console.log('creating release on Git');
+  // if (!process.env.GITHUB_TOKEN) {
+  //   console.log('no GitHub token found, skip');
+  //   return;
+  // }
   if (!changlogFiles.every(file => fs.existsSync(file))) {
     console.log('no changelog found, skip');
     return;
   }
   const github = new Octokit({
-    auth: process.env.GITHUB_TOKEN,
+    // auth: process.env.GITHUB_TOKEN,
   });
   const date = new Date();
   const { version } = packageJson;
@@ -308,7 +308,7 @@ function githubRelease(done) {
   ].join('\n');
   const [_, owner, repo] = execSync('git remote get-url origin') // eslint-disable-line
     .toString()
-    .match(/github.com[:/](.+)\/(.+)\.git/);
+    .match(/gitlab.wowjoy.com[:/](.+)\/(.+)\.git/);
   github.repos
     .createRelease({
       owner,
@@ -351,11 +351,12 @@ gulp.task(
 );
 
 function publish(tagString, done) {
-  let args = ['publish', '--with-antd-tools'];
+  let args = ['publish', '--with-antd-tools' , '--access public'];
   if (tagString) {
     args = args.concat(['--tag', tagString]);
   }
   const publishNpm = process.env.PUBLISH_NPM_CLI || 'npm';
+  console.log('publishNpm', publishNpm, '\nargs',args, '');
   runCmd(publishNpm, args, code => {
     tag();
     githubRelease(() => {

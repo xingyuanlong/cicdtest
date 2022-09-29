@@ -1163,19 +1163,19 @@ function RangerPicker<DateType>() {
           size: getInputSize(picker, formatList.value[0], generateConfig),
         };
 
-        let activeBarLeft = 0;
-        let activeBarWidth = 0;
-        if (startInputDivRef.value && endInputDivRef.value && separatorRef.value) {
-          if (mergedActivePickerIndex.value === 0) {
-            activeBarWidth = startInputDivRef.value.offsetWidth;
-          } else {
-            activeBarLeft = arrowLeft;
-            activeBarWidth = endInputDivRef.value.offsetWidth;
-          }
-        }
-        const activeBarPositionStyle =
-          direction === 'rtl' ? { right: `${activeBarLeft}px` } : { left: `${activeBarLeft}px` };
-        // ============================ Return =============================
+        // let activeBarLeft = 0;
+        // let activeBarWidth = 0;
+        // if (startInputDivRef.value && endInputDivRef.value && separatorRef.value) {
+        //   if (mergedActivePickerIndex.value === 0) {
+        //     activeBarWidth = startInputDivRef.value.offsetWidth;
+        //   } else {
+        //     activeBarLeft = arrowLeft;
+        //     activeBarWidth = endInputDivRef.value.offsetWidth;
+        //   }
+        // }
+        // const activeBarPositionStyle =
+        //   direction === 'rtl' ? { right: `${activeBarLeft}px` } : { left: `${activeBarLeft}px` };
+        // // ============================ Return =============================
 
         return (
           <PickerTrigger

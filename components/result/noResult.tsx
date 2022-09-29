@@ -1,6 +1,6 @@
 const NoResult = () => {
   return (
-    <svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
       <g id="8-通用信息" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
           <g id="03-灰白款" transform="translate(-300.000000, -1631.000000)">
               <g id="没有搜素结果备份" transform="translate(300.000000, 1631.000000)">
@@ -88,7 +88,7 @@ const NoResult = () => {
 
 export const NoResultTitle = () => {
   return (
-    <svg width="119px" height="28px" viewBox="0 0 119 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <svg width="119px" height="28px" viewBox="0 0 119 28" version="1.1" xmlns="http://www.w3.org/2000/svg">
       <g id="8-通用信息" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="03-灰白款" transform="translate(-520.000000, -1701.000000)" fill="#8F8F8F" fill-rule="nonzero">
             <g id="编组-18" transform="translate(520.000000, 1701.000000)">
