@@ -43,7 +43,7 @@ export interface TreeContextProps {
   draggable: DraggableConfig;
   draggingNodeKey?: Key;
   checkable: boolean;
-  customCheckable: () => any;
+  customCheckable: (params: any) => any;
   checkStrictly: boolean;
   disabled: boolean;
   keyEntities: Record<Key, DataEntity<any>>;

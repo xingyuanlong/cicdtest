@@ -384,7 +384,7 @@ export default defineComponent({
           )}
           onClick={onCheck}
         >
-          {context.value.customCheckable?.()}
+          {context.value.customCheckable?.(checked.value)}
         </span>
       );
     };

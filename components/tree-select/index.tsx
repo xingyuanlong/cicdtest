@@ -1,5 +1,6 @@
 import type { App, ExtractPropTypes, PropType } from 'vue';
 import { computed, ref, watchEffect, defineComponent } from 'vue';
+import Right2Filled from '@pf-ui/pf-icons-vue/Right2Filled'
 import VcTreeSelect, {
   TreeNode,
   SHOW_ALL,
@@ -254,13 +255,21 @@ const TreeSelect = defineComponent({
           onTreeExpand={handleTreeExpand}
           v-slots={{
             ...slots,
-            treeCheckable: () => <span class={`${prefixCls.value}-tree-checkbox-inner`} />,
+            treeCheckable: (checked) => (
+              <span class={`${prefixCls.value}-tree-checkbox-inner`}>
+              {checked ? <Right2Filled /> : null}
+             </span>
+            ),
           }}
           {...otherProps}
           transitionName={transitionName.value}
           customSlots={{
             ...slots,
-            treeCheckable: () => <span class={`${prefixCls.value}-tree-checkbox-inner`} />,
+            treeCheckable: (checked) => (
+              <span class={`${prefixCls.value}-tree-checkbox-inner`}>
+               {checked ? <Right2Filled /> : null}
+              </span>
+            ),
           }}
           maxTagPlaceholder={props.maxTagPlaceholder || slots.maxTagPlaceholder}
         />

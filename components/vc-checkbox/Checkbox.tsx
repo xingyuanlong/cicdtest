@@ -140,7 +140,7 @@ export default defineComponent({
         onKeyup,
         required,
       };
-      console.log('showRight', showRight);
+
       return (
         <span class={classString}>
           <input ref={inputRef} {...inputProps} />

@@ -1,5 +1,6 @@
 import type { PropType, ExtractPropTypes } from 'vue';
 import { watchEffect, ref, defineComponent, computed } from 'vue';
+import Right2Filled from '@pf-ui/pf-icons-vue/Right2Filled'
 import classNames from '../_util/classNames';
 import VcTree from '../vc-tree';
 import PropTypes from '../_util/vue-types';
@@ -263,7 +264,11 @@ export default defineComponent({
           onDblclick={onDblclick || onDoubleclick}
           v-slots={{
             ...slots,
-            checkable: () => <span class={`${prefixCls.value}-checkbox-inner`} />,
+            checkable: (checked) => (
+              <span class={`${prefixCls.value}-checkbox-inner`}>
+                {checked ? <Right2Filled /> : null}
+              </span>
+            )
           }}
           children={children}
         ></VcTree>
