@@ -207,6 +207,7 @@ const Descriptions = defineComponent({
               [`${prefixCls.value}-bordered`]: !!bordered,
               [`${prefixCls.value}-bordered-falsy`]: !bordered,
               [`${prefixCls.value}-rtl`]: direction.value === 'rtl',
+              [`${prefixCls.value}-vertical`]: layout === 'vertical',
             },
           ]}
         >
