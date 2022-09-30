@@ -5,7 +5,7 @@
 </p>
 
 <h1 align="center">
-  <a href="https://www.antdv.com/" target="_blank">pf-ui-vue</a>
+  <a href="https://www.antdv.com/" target="_blank">@pf-ui/pf-ui-vue</a>
 </h1>
 
 <div align="center">
@@ -42,11 +42,11 @@ English | [简体中文](./README-zh_CN.md)
 **We recommend using npm or yarn to install**，it not only makes development easier，but also allow you to take advantage of the rich ecosystem of Javascript packages and tooling.
 
 ```bash
-$ npm install pf-ui-vue --save
+$ npm install @pf-ui/pf-ui-vue --save
 ```
 
 ```bash
-$ yarn add pf-ui-vue
+$ yarn add @pf-ui/pf-ui-vue
 ```
 
 If you are in a bad network environment，you can try other registries and tools like [cnpm](https://github.com/cnpm/cnpm).

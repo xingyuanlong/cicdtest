@@ -22,6 +22,12 @@
         <a-badge color="red" style="position: absolute; top: -35px; right: -15px" />
       </a-tooltip>
     </a-menu-item>
+    <a-menu-item  key="pf-doc">
+      <a href="https://platform-doc.rubikstack.com/" target="_blank">
+        平台中心文档
+      </a>
+      
+    </a-menu-item>
     <template v-if="isMobile">
       <a-menu-item key="switch-lang" @click="$emit('langChange')">
         {{ $t('app.header.lang') }}

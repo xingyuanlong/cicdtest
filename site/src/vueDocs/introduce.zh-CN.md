@@ -1,4 +1,4 @@
-# pf-ui-vue
+# @pf-ui/pf-ui-vue
 
 基于antd-design-vue二次开发，开发和服务于医疗企业级后台产品。
 
@@ -44,24 +44,24 @@
 **我们推荐使用 npm 或 yarn 的方式进行开发**，不仅可在开发环境轻松调试，也可放心地在生产环境打包部署使用，享受整个生态圈和工具链带来的诸多好处。
 
 ```bash
-$ npm install pf-ui-vue --save
+$ npm install @pf-ui/pf-ui-vue --save
 ```
 
 ```bash
-$ yarn add pf-ui-vue
+$ yarn add @pf-ui/pf-ui-vue
 ```
 
 ## 示例
 
 ```jsx
-import { DatePicker } from 'pf-ui-vue';
+import { DatePicker } from '@pf-ui/pf-ui-vue';
 app.use(DatePicker);
 ```
 
 引入样式：
 
 ```jsx
-import 'pf-ui-vue/dist/antd.css'; // or 'pf-ui-vue/dist/antd.less'
+import '@pf-ui/pf-ui-vue/dist/antd.variable.css'; // or '@pf-ui/pf-ui-vue/dist/antd.variable.less'
 ```
 
 ### 按需加载
@@ -74,26 +74,26 @@ import 'pf-ui-vue/dist/antd.css'; // or 'pf-ui-vue/dist/antd.less'
   // .babelrc or babel-loader option
   {
     "plugins": [
-      ["import", { "libraryName": "pf-ui-vue", "libraryDirectory": "es", "style": "css" }] // `style: true` 会加载 less 文件
+      ["import", { "libraryName": "@pf-ui/pf-ui-vue", "libraryDirectory": "es", "style": "css" }] // `style: true` 会加载 less 文件
     ]
   }
   ```
 
   > 注意：webpack 1 无需设置 `libraryDirectory`。
 
-  然后只需从 pf-ui-vue 引入模块即可，无需单独引入样式。等同于下面手动引入的方式。
+  然后只需从 @pf-ui/pf-ui-vue 引入模块即可，无需单独引入样式。等同于下面手动引入的方式。
 
   ```jsx
   // babel-plugin-import 会帮助你加载 JS 和 CSS
-  import { DatePicker } from 'pf-ui-vue';
+  import { DatePicker } from '@pf-ui/pf-ui-vue';
   ```
 
 - 手动引入
 
   ```jsx
-  import DatePicker from 'pf-ui-vue/lib/date-picker'; // 加载 JS
-  import 'pf-ui-vue/lib/date-picker/style/css'; // 加载 CSS
-  // import 'pf-ui-vue/lib/date-picker/style';         // 加载 LESS
+  import DatePicker from '@pf-ui/pf-ui-vue/lib/date-picker'; // 加载 JS
+  import '@pf-ui/pf-ui-vue/lib/date-picker/style/css'; // 加载 CSS
+  // import '@pf-ui/pf-ui-vue/lib/date-picker/style';         // 加载 LESS
   ```
 
 - Vite 按需

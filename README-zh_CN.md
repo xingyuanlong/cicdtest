@@ -5,7 +5,7 @@
 </p>
 
 <h1 align="center">
-  <a href="https://www.antdv.com/" target="_blank">pf-ui-vue</a>
+  <a href="https://www.antdv.com/" target="_blank">@pf-ui/pf-ui-vue</a>
 </h1>
 
 An enterprise-class UI components based on Ant Design and Vue 3.
@@ -38,11 +38,11 @@ An enterprise-class UI components based on Ant Design and Vue 3.
 ### 使用 npm 或 yarn 安装
 
 ```bash
-$ npm install pf-ui-vue--save
+$ npm install @pf-ui/pf-ui-vue--save
 ```
 
 ```bash
-$ yarn add pf-ui-vue
+$ yarn add @pf-ui/pf-ui-vue
 ```
 
 如果你的网络环境不佳，推荐使用 [cnpm](https://github.com/cnpm/cnpm)。

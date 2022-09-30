@@ -1,16 +1,16 @@
 # Customize Theme
 
-The structure and styles of pf-ui-vue are exactly the same as those of Antd. You can refer to the Antd React customization mode for configuration.
+The structure and styles of @pf-ui/pf-ui-vue are exactly the same as those of Antd. You can refer to the Antd React customization mode for configuration.
 
 Ant Design allows you to customize some basic design aspects in order to meet the needs of UI diversity from business and brand, including primary color, border radius, border color, etc.
 
 ![](https://zos.alipayobjects.com/rmsportal/zTFoszBtDODhXfLAazfSpYbSLSEeytoG.png)
 
-## pf-ui-vue Less variables
+## @pf-ui/pf-ui-vue Less variables
 
 We are using [Less](http://lesscss.org/) as the development language for styling. A set of less variables are defined for each design aspect that can be customized to your needs.
 
-There are some major variables below, all less variables could be found in [Default Variables](https://github.com/vueComponent/pf-ui-vue/blob/main/components/style/themes/default.less).
+There are some major variables below, all less variables could be found in [Default Variables](https://github.com/vueComponent/@pf-ui/pf-ui-vue/blob/main/components/style/themes/default.less).
 
 ```less
 @primary-color: #1890ff; // primary color for all components
@@ -115,7 +115,7 @@ module.exports = {
 Another approach to customize theme is creating a `less` file within variables to override `antd.less`.
 
 ```css
-@import '~pf-ui-vue/dist/antd.less'; // Import pf-ui-vue styles by less entry
+@import '~@pf-ui/pf-ui-vue/dist/antd.less'; // Import @pf-ui/pf-ui-vue styles by less entry
 @import 'your-theme-file.less'; // variables to override above
 ```
 
@@ -127,7 +127,7 @@ Runtime update theme color please [ref this doc](/docs/react/customize-theme-var
 
 ## How to avoid modifying global styles?
 
-Currently pf-ui-vue is designed as a whole experience and modify global styles (eg `body` etc). If you need to integrate pf-ui-vue as a part of an existing website, it's likely you want to prevent pf-ui-vue to override global styles.
+Currently @pf-ui/pf-ui-vue is designed as a whole experience and modify global styles (eg `body` etc). If you need to integrate @pf-ui/pf-ui-vue as a part of an existing website, it's likely you want to prevent @pf-ui/pf-ui-vue to override global styles.
 
 While there's no canonical way to do it, you can take one of the following paths :
 
@@ -136,9 +136,9 @@ While there's no canonical way to do it, you can take one of the following paths
 It's possible to configure webpack to load an alternate less file:
 
 ```js
-new webpack.NormalModuleReplacementPlugin( /node_modules\/pf-ui-vue\/lib\/style\/index\.less/, path.resolve(rootDir, 'src/myStylesReplacement.less') )
+new webpack.NormalModuleReplacementPlugin( /node_modules\/@pf-ui/pf-ui-vue\/lib\/style\/index\.less/, path.resolve(rootDir, 'src/myStylesReplacement.less') )
 
-#antd { @import '~pf-ui-vue/lib/style/core/index.less'; @import '~pf-ui-vue/lib/style/themes/default.less'; }
+#antd { @import '~@pf-ui/pf-ui-vue/lib/style/core/index.less'; @import '~@pf-ui/pf-ui-vue/lib/style/themes/default.less'; }
 ```
 
 Where the src/myStylesReplacement.less file loads the same files as the index.less file, but loads them within the scope of a top-level selector : the result is that all of the "global" styles are being applied with the #antd scope.
@@ -152,28 +152,28 @@ See an example of usage with gulp and [postcss-prefixwrap](https://github.com/db
 You must import styles as less format. A common mistake would be importing multiple copied of styles that some of them are css format to override the less styles.
 
 - If you import styles by specifying the `style` option of [babel-plugin-import](https://github.com/ant-design/babel-plugin-import), change it from `'css'` to `true`, which will import the `less` version of antd.
-- If you import styles from `'pf-ui-vue/dist/antd.css'`, change it to `pf-ui-vue/dist/antd.less`.
+- If you import styles from `'@pf-ui/pf-ui-vue/dist/antd.css'`, change it to `@pf-ui/pf-ui-vue/dist/antd.less`.
 
 ## Use dark theme
 
-Method 1: Import [antd.dark.less](https://unpkg.com/browse/pf-ui-vue@2.0.0/dist/antd.dark.less) in the style file:
+Method 1: Import [antd.dark.less](https://unpkg.com/browse/@pf-ui/pf-ui-vue@2.0.0/dist/antd.dark.less) in the style file:
 
 ```less
-@import '~pf-ui-vue/dist/antd.dark.less'; // Introduce the official dark less style entry file
+@import '~@pf-ui/pf-ui-vue/dist/antd.dark.less'; // Introduce the official dark less style entry file
 ```
 
-If the project does not use Less, you can import [antd.dark.css](https://unpkg.com/browse/pf-ui-vue@2.0.0/dist/antd.dark.css) in the CSS file:
+If the project does not use Less, you can import [antd.dark.css](https://unpkg.com/browse/@pf-ui/pf-ui-vue@2.0.0/dist/antd.dark.css) in the CSS file:
 
 ```css
-@import '~pf-ui-vue/dist/antd.dark.css';
+@import '~@pf-ui/pf-ui-vue/dist/antd.dark.css';
 ```
 
-> Note that you don't need to import `pf-ui-vue/dist/antd.less` or `pf-ui-vue/dist/antd.css` anymore, please remove it, and remove babel-plugin-import `style` config too. You can't enable two or more theme at the same time by this method.
+> Note that you don't need to import `@pf-ui/pf-ui-vue/dist/antd.less` or `@pf-ui/pf-ui-vue/dist/antd.css` anymore, please remove it, and remove babel-plugin-import `style` config too. You can't enable two or more theme at the same time by this method.
 
 Method 3: using [less-loader](https://github.com/webpack-contrib/less-loader) in `webpack.config.js` to introduce as needed:
 
 ```diff
-const { getThemeVariables } = require('pf-ui-vue/dist/theme');
+const { getThemeVariables } = require('@pf-ui/pf-ui-vue/dist/theme');
 
 // webpack.config.js
 module.exports = {

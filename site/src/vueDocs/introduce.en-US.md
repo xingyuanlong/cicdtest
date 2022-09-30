@@ -38,24 +38,24 @@ Following the Ant Design specification, we developed a Vue UI library `antd` tha
 **We recommend using npm or yarn to install**，it not only makes development easier，but also allow you to take advantage of the rich ecosystem of Javascript packages and tooling.
 
 ```bash
-$ npm install pf-ui-vue --save
+$ npm install @pf-ui/pf-ui-vue --save
 ```
 
 ```bash
-$ yarn add pf-ui-vue
+$ yarn add @pf-ui/pf-ui-vue
 ```
 
 ## Usage
 
 ```jsx
-import { DatePicker } from 'pf-ui-vue';
+import { DatePicker } from '@pf-ui/pf-ui-vue';
 app.use(DatePicker);
 ```
 
 And import stylesheets manually:
 
 ```jsx
-import 'pf-ui-vue/dist/antd.css'; // or 'pf-ui-vue/dist/antd.less'
+import '@pf-ui/pf-ui-vue/dist/antd.variable.css'; // or '@pf-ui/pf-ui-vue/dist/antd.less'
 ```
 
 ### Use modularized antd
@@ -66,7 +66,7 @@ import 'pf-ui-vue/dist/antd.css'; // or 'pf-ui-vue/dist/antd.less'
   // .babelrc or babel-loader option
   {
     "plugins": [
-      ["import", { "libraryName": "pf-ui-vue", "libraryDirectory": "es", "style": "css" }] // `style: true` for less
+      ["import", { "libraryName": "@pf-ui/pf-ui-vue", "libraryDirectory": "es", "style": "css" }] // `style: true` for less
     ]
   }
   ```
@@ -77,15 +77,15 @@ import 'pf-ui-vue/dist/antd.css'; // or 'pf-ui-vue/dist/antd.less'
 
   ```jsx
   // import js and css modularly, parsed by babel-plugin-import
-  import { DatePicker } from 'pf-ui-vue';
+  import { DatePicker } from '@pf-ui/pf-ui-vue';
   ```
 
 - Manually import
 
   ```jsx
-  import DatePicker from 'pf-ui-vue/lib/date-picker'; // for js
-  import 'pf-ui-vue/lib/date-picker/style/css'; // for css
-  // import 'pf-ui-vue/lib/date-picker/style';         // that will import less
+  import DatePicker from '@pf-ui/pf-ui-vue/lib/date-picker'; // for js
+  import '@pf-ui/pf-ui-vue/lib/date-picker/style/css'; // for css
+  // import '@pf-ui/pf-ui-vue/lib/date-picker/style';         // that will import less
   ```
 
 - For Vite

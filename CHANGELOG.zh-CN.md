@@ -1,6 +1,6 @@
 # 更新日志
 
-`pf-ui-vue` 严格遵循 [Semantic Versioning 2.0.0](http://semver.org/lang/zh-CN/) 语义化版本规范。
+`@pf-ui/pf-ui-vue` 严格遵循 [Semantic Versioning 2.0.0](http://semver.org/lang/zh-CN/) 语义化版本规范。
 
 #### 发布周期
 
@@ -9,6 +9,12 @@
 - 主版本号：含有破坏性更新和新特性，不在发布周期内。
 
 ---
+
+## 0.0.12
+
+`2022-9-30`
+
+- 🐞 发布0.0.11版本
 
 ## 0.0.1
 
