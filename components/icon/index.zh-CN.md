@@ -50,7 +50,7 @@ npm install --save @pf-ui/pf-icons-vue
   <message-outlined :style="{fontSize: '16px', color: '#08c'}" />
 </template>
 <script>
-  import { MessageOutlined } from 'pf-ui-vue';
+  import { MessageOutlined } from '@pf-ui/pf-icons-vue';
   import { defineComponent } from 'vue';
   export default defineComponent({
     components: {
