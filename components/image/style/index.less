@@ -63,6 +63,25 @@
     height: 100%;
     text-align: center;
 
+    &-close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 0 0 0 40px;
+      background-color: @image-preview-close-bg;
+      cursor: pointer;
+      pointer-events: auto;
+
+      &-icon {
+        position: absolute;
+        color: @white;
+        top: 8px;
+        right: 8px;
+      }
+    }
+
     &-body {
       .box();
       overflow: hidden;
@@ -107,76 +126,115 @@
     }
 
     &-operations {
-      .reset-component();
-      position: absolute;
-      top: 0;
-      right: 0;
       z-index: 1;
-      display: flex;
-      flex-direction: row-reverse;
-      align-items: center;
-      width: 100%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 3px;
+      height: 46px;
+      bottom: 0;
+      padding: 0 26px 0 21px;
+      background: @image-preview-operation-background;
       color: @image-preview-operation-color;
-      list-style: none;
-      background: fade(@modal-mask-bg, 10%);
+      transition: color .3s cubic-bezier(0.4, 0, 0.2, 1);
+      display: flex;
+      align-items: center;
       pointer-events: auto;
-
-      &-operation {
-        margin-left: @control-padding-horizontal;
-        padding: @control-padding-horizontal;
-        cursor: pointer;
-
-        &-disabled {
-          color: @image-preview-operation-disabled-color;
-          pointer-events: none;
-        }
-
-        &:last-of-type {
-          margin-left: 0;
-        }
-      }
 
       &-icon {
+        height: 1em;
+        width: 1em;
+        line-height: 1em;
+        text-align: center;
+        display: inline-block;
+        position: relative;
+        fill: currentColor;
+        transform: translateZ(0);
+        cursor: pointer;
         font-size: @image-preview-operation-size;
-      }
-    }
 
-    &-switch-left,
-    &-switch-right {
-      position: absolute;
-      top: 50%;
-      right: 10px;
-      z-index: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 44px;
-      height: 44px;
-      margin-top: -22px;
-      color: @image-preview-operation-color;
-      background: fade(@modal-mask-bg, 10%);
-      border-radius: 50%;
-      cursor: pointer;
-      pointer-events: auto;
-
-      &-disabled {
-        color: @image-preview-operation-disabled-color;
-        cursor: not-allowed;
-        > .@{iconfont-css-prefix} {
-          cursor: not-allowed;
+        &:hover {
+          color: @image-preview-operation-hover-color;
         }
       }
-      > .@{iconfont-css-prefix} {
-        font-size: 18px;
+
+      &-group-count {
+        user-select: none;
       }
-    }
 
-    &-switch-left {
-      left: 10px;
-    }
+      &-select {
+        width: 80px;
 
-    &-switch-right {
-      right: 10px;
+        &.@{ant-prefix}-select-single:not(.@{ant-prefix}-select-customize-input) .@{ant-prefix}-select-selector {
+          height: 30px;
+          background-color: @image-preview-operation-background;
+          border-color: @image-preview-operation-background;
+          color: @image-preview-operation-color;
+
+          .@{ant-prefix}-select-selection-search-input {
+            height: 28px;
+          }
+        }
+
+        .@{ant-prefix}-select-dropdown {
+          background-color: @image-preview-operation-select-dropdown-bg;
+        }
+
+        .@{ant-prefix}-select-arrow {
+          color: @image-preview-operation-color;
+        }
+
+        .@{ant-prefix}-select-item {
+          color: @image-preview-operation-color;
+        }
+
+        .@{ant-prefix}-select-item-option-active {
+          background-color: @image-preview-operation-selected-bg;
+        }
+
+        .@{ant-prefix}-select-item-option-selected {
+          color: @image-preview-operation-selected-color;
+          background-color: @image-preview-operation-selected-bg;
+        }
+      }
+
+      &-mr {
+        margin-right: 10px;
+      }
+
+      &-margin {
+        margin: 0 20px;
+      }
+
+      &-selection {
+        z-index: auto;
+        outline: none;
+        width: 100%;
+        position: relative;
+      }
+
+      &-divide {
+        width: 1px;
+        height: 30px;
+        background: #666666;
+        margin: 0 20px;
+      }
+
+      &-button, &-button:hover, &-button:focus {
+        margin-left: 20px;
+        width: 40px;
+        height: 20px;
+        font-size: 12px;
+        padding: 0;
+        background: rgba(0, 0, 0, 0);
+        color: @white;
+
+        &[disabled], &[disabled]:hover, &[disabled]:focus, &[disabled]:active {
+          color: @E3;
+          border-color: @E2;
+          background: rgba(0, 0, 0, 0);
+        }
+      }
     }
   }
 }

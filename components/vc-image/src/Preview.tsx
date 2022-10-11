@@ -6,7 +6,6 @@ import {
   reactive,
   ref,
   watch,
-  cloneVNode,
 } from 'vue';
 import type { VNode, PropType } from 'vue';
 
@@ -20,6 +19,8 @@ import { warning } from '../../vc-util/warning';
 import useFrameSetState from './hooks/useFrameSetState';
 import getFixScaleEleTransPosition from './getFixScaleEleTransPosition';
 import type { MouseEventHandler, WheelEventHandler } from '../../_util/EventInterface';
+import PreviewOperations from './PreviewOperations';
+import CloseFilled from '@pf-ui/pf-icons-vue/CloseFilled';
 
 import { context } from './PreviewGroup';
 
@@ -37,12 +38,17 @@ export interface PreviewProps extends Omit<IDialogChildProps, 'onClose' | 'mask'
     left?: VNode;
     right?: VNode;
   };
+  minScale?: number;
+  maxScale?: number;
 }
 
 const initialPosition = {
   x: 0,
   y: 0,
 };
+
+const ScaleRange = 0.08
+
 export const previewProps = {
   ...dialogPropTypes(),
   src: String,
@@ -52,6 +58,14 @@ export const previewProps = {
     type: Object as PropType<PreviewProps['icons']>,
     default: () => ({} as PreviewProps['icons']),
   },
+  minScale: {
+    type: Number,
+    default: 0.1
+  },
+  maxScale: {
+    type: Number,
+    default: 50
+  }
 };
 const Preview = defineComponent({
   name: 'Preview',
@@ -59,7 +73,6 @@ const Preview = defineComponent({
   props: previewProps,
   emits: ['close', 'afterClose'],
   setup(props, { emit, attrs }) {
-    const { rotateLeft, rotateRight, zoomIn, zoomOut, close, left, right } = reactive(props.icons);
 
     const scale = ref(1);
     const rotate = ref(0);
@@ -94,6 +107,8 @@ const Preview = defineComponent({
       () => isPreviewGroup.value && previewGroupCount.value > 1,
     );
     const lastWheelZoomDirection = ref({ wheelDirection: 0 });
+    const rotateMap = reactive({});
+    const rotateSaveDisabled = computed(() => rotate.value % 360 === (rotateMap[combinationSrc.value] || 0));
 
     const onAfterClose = () => {
       scale.value = 1;
@@ -102,13 +117,22 @@ const Preview = defineComponent({
       emit('afterClose');
     };
 
+    const setScale = (value: number) => {
+      scale.value = value;
+      setPosition(initialPosition);
+    };
+
     const onZoomIn = () => {
-      scale.value++;
+      if (scale.value < props.maxScale) {
+        const _scale = scale.value + ScaleRange;
+        scale.value = _scale > props.maxScale ? props.maxScale : _scale;
+      }
       setPosition(initialPosition);
     };
     const onZoomOut = () => {
-      if (scale.value > 1) {
-        scale.value--;
+      if (scale.value > props.minScale) {
+        const _scale = scale.value - ScaleRange;
+        scale.value = _scale > props.minScale ? _scale : props.minScale;
       }
       setPosition(initialPosition);
     };
@@ -120,57 +144,31 @@ const Preview = defineComponent({
     const onRotateLeft = () => {
       rotate.value -= 90;
     };
-    const onSwitchLeft: MouseEventHandler = event => {
-      event.preventDefault();
-      // Without this mask close will abnormal
-      event.stopPropagation();
-      if (currentPreviewIndex.value > 0) {
-        setCurrent(previewUrlsKeys.value[currentPreviewIndex.value - 1]);
-      }
+
+    const initRotateValue = () => {
+      rotate.value = rotateMap[combinationSrc.value] || 0
     };
 
-    const onSwitchRight: MouseEventHandler = event => {
-      event.preventDefault();
-      // Without this mask close will abnormal
-      event.stopPropagation();
-      if (currentPreviewIndex.value < previewGroupCount.value - 1) {
-        setCurrent(previewUrlsKeys.value[currentPreviewIndex.value + 1]);
-      }
+    const onRotateSave = () => {
+      const rotateValue = rotate.value % 360;
+      rotateMap[combinationSrc.value] = rotateValue;
+    };
+
+    const handleSwitchLeft = () => {
+      const nextIndex = currentPreviewIndex.value > 0 ? currentPreviewIndex.value - 1 : previewUrlsKeys.value.length - 1;
+      setCurrent(previewUrlsKeys.value[nextIndex]);
+      initRotateValue();
+    };
+
+    const handleSwitchRight = () => {
+      const nextIndex = currentPreviewIndex.value < previewGroupCount.value - 1 ? currentPreviewIndex.value + 1 : 0;
+      setCurrent(previewUrlsKeys.value[nextIndex]);
+      initRotateValue();
     };
 
     const wrapClassName = classnames({
       [`${props.prefixCls}-moving`]: isMoving.value,
     });
-    const toolClassName = `${props.prefixCls}-operations-operation`;
-    const iconClassName = `${props.prefixCls}-operations-icon`;
-    const tools = [
-      {
-        icon: close,
-        onClick: onClose,
-        type: 'close',
-      },
-      {
-        icon: zoomIn,
-        onClick: onZoomIn,
-        type: 'zoomIn',
-      },
-      {
-        icon: zoomOut,
-        onClick: onZoomOut,
-        type: 'zoomOut',
-        disabled: computed(() => scale.value === 1),
-      },
-      {
-        icon: rotateRight,
-        onClick: onRotateRight,
-        type: 'rotateRight',
-      },
-      {
-        icon: rotateLeft,
-        onClick: onRotateLeft,
-        type: 'rotateLeft',
-      },
-    ];
 
     const onMouseUp: MouseEventHandler = () => {
       if (props.visible && isMoving.value) {
@@ -227,13 +225,9 @@ const Preview = defineComponent({
 
       event.preventDefault();
       if (event.keyCode === KeyCode.LEFT) {
-        if (currentPreviewIndex.value > 0) {
-          setCurrent(previewUrlsKeys.value[currentPreviewIndex.value - 1]);
-        }
+        handleSwitchLeft();
       } else if (event.keyCode === KeyCode.RIGHT) {
-        if (currentPreviewIndex.value < previewGroupCount.value - 1) {
-          setCurrent(previewUrlsKeys.value[currentPreviewIndex.value + 1]);
-        }
+        handleSwitchRight();
       }
     };
 
@@ -252,7 +246,9 @@ const Preview = defineComponent({
     onMounted(() => {
       watch(
         [() => props.visible, isMoving],
-        () => {
+        ([newVisible]) => {
+          newVisible && initRotateValue();
+
           removeListeners();
           let onTopMouseUpListener: { remove: any };
           let onTopMouseMoveListener: { remove: any };
@@ -317,6 +313,7 @@ const Preview = defineComponent({
           transitionName="zoom"
           maskTransitionName="fade"
           closable={false}
+          maskClosable={false}
           keyboard
           prefixCls={prefixCls}
           onClose={onClose}
@@ -326,19 +323,9 @@ const Preview = defineComponent({
           rootClassName={rootClassName}
           getContainer={props.getContainer}
         >
-          <ul class={`${props.prefixCls}-operations`}>
-            {tools.map(({ icon: IconType, onClick, type, disabled }) => (
-              <li
-                class={classnames(toolClassName, {
-                  [`${props.prefixCls}-operations-operation-disabled`]: disabled && disabled?.value,
-                })}
-                onClick={onClick}
-                key={type}
-              >
-                {cloneVNode(IconType, { class: iconClassName })}
-              </li>
-            ))}
-          </ul>
+          <div class={`${props.prefixCls}-close`} onClick={onClose}>
+            <CloseFilled class={`${props.prefixCls}-close-icon`} />
+          </div>
           <div
             class={`${props.prefixCls}-img-wrapper`}
             style={{
@@ -357,27 +344,21 @@ const Preview = defineComponent({
               }}
             />
           </div>
-          {showLeftOrRightSwitches.value && (
-            <div
-              class={classnames(`${props.prefixCls}-switch-left`, {
-                [`${props.prefixCls}-switch-left-disabled`]: currentPreviewIndex.value <= 0,
-              })}
-              onClick={onSwitchLeft}
-            >
-              {left}
-            </div>
-          )}
-          {showLeftOrRightSwitches.value && (
-            <div
-              class={classnames(`${props.prefixCls}-switch-right`, {
-                [`${props.prefixCls}-switch-right-disabled`]:
-                  currentPreviewIndex.value >= previewGroupCount.value - 1,
-              })}
-              onClick={onSwitchRight}
-            >
-              {right}
-            </div>
-          )}
+          <PreviewOperations
+            prefixCls={props.prefixCls}
+            onScaleSelect={setScale}
+            onZoomIn={onZoomIn}
+            onZoomOut={onZoomOut}
+            onRotateRight={onRotateRight}
+            onRotateLeft={onRotateLeft}
+            onRotateSave={onRotateSave}
+            onSwitchLeft={handleSwitchLeft}
+            onSwitchRight={handleSwitchRight}
+            rotateSaveDisabled={rotateSaveDisabled.value}
+            isGroup={showLeftOrRightSwitches.value}
+            groupCount={previewGroupCount.value}
+            currentIndex={currentPreviewIndex.value}
+          />
         </Dialog>
       );
     };
