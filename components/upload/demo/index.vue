@@ -17,6 +17,7 @@
     <uploadPngOnlyVue />
     <customRenderVue />
     <Certificate />
+    <PfRenderItem />
   </demo-sort>
 </template>
 <script lang="ts">
@@ -37,6 +38,7 @@ import uploadCustomActionIconVue from './upload-custom-action-icon.vue';
 import uploadPngOnlyVue from './upload-png-only.vue';
 import customRenderVue from './custom-render.vue';
 import Certificate from './certificate.vue';
+import PfRenderItem from './pf-render-item.vue';
 import CN from '../index.zh-CN.md';
 import US from '../index.en-US.md';
 import { defineComponent } from 'vue';
@@ -61,7 +63,8 @@ export default defineComponent({
     uploadCustomActionIconVue,
     uploadPngOnlyVue,
     customRenderVue,
-    Certificate
+    Certificate,
+    PfRenderItem
   },
   setup() {
     return {};

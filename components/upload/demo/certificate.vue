@@ -31,8 +31,7 @@ title:
       >
         <div ref="uploadBtn">
           <loading-outlined v-if="loading"></loading-outlined>
-          <plus-outlined v-else></plus-outlined>
-          <div class="ant-upload-text">Upload</div>
+          <idcard-two-tone v-else class="certificate-upload-icon-idcard" />
         </div>
       </a-upload>
       <div class="certificate-img-container" v-if="imageUrl">
@@ -47,8 +46,12 @@ title:
           class="certificate-img"
         />
         <div class="certificate-img-mask">
-          <replace-filled  class="certificate-img-icon certificate-img-icon-replace" @click="handleReplace" />
-          <zoom-filled  class="certificate-img-icon" @click="handlePreview" />
+          <a-tooltip title="替换图片" placement="bottom" overlay-class-name="ant-tooltip-image-operation">
+            <replace-filled  class="certificate-img-icon certificate-img-icon-replace" @click="handleReplace" />
+          </a-tooltip>
+          <a-tooltip title="预览" placement="bottom" overlay-class-name="ant-tooltip-image-operation">
+            <zoom-filled  class="certificate-img-icon" @click="handlePreview" />
+          </a-tooltip>
           <error-filled class="certificate-img-icon certificate-img-icon-delete" @click="handleRemove" />
         </div>
       </div>
@@ -62,6 +65,7 @@ title:
   import ErrorFilled from '@pf-ui/pf-icons-vue/ErrorFilled';
   import ReplaceFilled from '@pf-ui/pf-icons-vue/ReplaceFilled';
   import ZoomFilled from '@pf-ui/pf-icons-vue/ZoomFilled';
+  import IdcardTwoTone from '@pf-ui/pf-icons-vue/IdcardTwoTone'
   
   function getBase64(img: Blob, callback: (base64Url: string) => void) {
     const reader = new FileReader();
@@ -74,7 +78,8 @@ title:
       PlusOutlined,
       ErrorFilled,
       ReplaceFilled,
-      ZoomFilled
+      ZoomFilled,
+      IdcardTwoTone
     },
     setup() {
       const fileList = ref([]);
@@ -146,6 +151,9 @@ title:
   });
   </script>
   <style>
+  .certificate-upload-icon-idcard {
+    font-size: 145px;
+  }
   .certificate-img-container {
     width: 300px;
     height: 200px;
@@ -194,9 +202,5 @@ title:
     color: #999;
   }
   
-  .ant-upload-select-picture-card .ant-upload-text {
-    margin-top: 8px;
-    color: #666;
-  }
   </style>
   

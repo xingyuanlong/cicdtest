@@ -169,6 +169,7 @@ export default defineComponent({
         progress,
         appendAction,
         itemRender,
+        itemPresetStyle,
         appendActionVisible,
       } = props;
       const appendActionDom = appendAction?.();
@@ -196,6 +197,7 @@ export default defineComponent({
                 previewIcon={previewIcon}
                 downloadIcon={downloadIcon}
                 itemRender={itemRender}
+                itemPresetStyle={itemPresetStyle}
                 v-slots={{
                   ...slots,
                   iconRender: internalIconRender,

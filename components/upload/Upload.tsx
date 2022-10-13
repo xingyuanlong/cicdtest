@@ -37,7 +37,7 @@ export default defineComponent({
     showUploadList: true,
     listType: 'text' as UploadListType, // or picture
     disabled: false,
-    supportServerRender: true,
+    supportServerRender: true
   }),
   setup(props, { slots, attrs, expose }) {
     const formItemContext = useInjectFormItemContext();
@@ -308,6 +308,7 @@ export default defineComponent({
         isImageUrl,
         progress,
         itemRender,
+        itemPresetStyle,
         iconRender,
         showUploadList,
       } = props;
@@ -332,6 +333,7 @@ export default defineComponent({
           isImageUrl={isImageUrl}
           progress={progress}
           itemRender={itemRender}
+          itemPresetStyle={itemPresetStyle}
           appendActionVisible={buttonVisible}
           appendAction={button}
           v-slots={{ ...slots }}

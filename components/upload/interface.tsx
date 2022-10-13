@@ -78,6 +78,11 @@ export type ItemRender<T = any> = (opt: {
     remove: () => void;
   };
 }) => VueNode;
+export type PresetItemRender<T = any> = (opt: {
+  prefixCls?: string;
+  message?: string
+} & Parameters<ItemRender<T>>[0]) => VueNode;
+export type ItemPresetStyle = 'pf-text';
 
 type PreviewFileHandler = (file: FileType | Blob) => PromiseLike<string>;
 type TransformFileHandler = (
@@ -145,6 +150,7 @@ function uploadProps<T = any>() {
     isImageUrl: Function as PropType<(file: UploadFile) => boolean>,
     progress: Object as PropType<UploadListProgressProps>,
     itemRender: Function as PropType<ItemRender<T>>,
+    itemPresetStyle: String as PropType<ItemPresetStyle>,
     /** Config max count of `fileList`. Will replace current one when `maxCount` is 1 */
     maxCount: Number,
     height: [Number, String],
@@ -185,6 +191,7 @@ function uploadListProps<T = any>() {
     appendAction: Function as PropType<() => VueNode>,
     appendActionVisible: { type: Boolean, default: undefined },
     itemRender: Function as PropType<ItemRender<T>>,
+    itemPresetStyle: String as PropType<ItemPresetStyle>,
   };
 }
 

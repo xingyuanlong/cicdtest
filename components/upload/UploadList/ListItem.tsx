@@ -9,6 +9,7 @@ import ImageOperationTip from '../../tooltip/ImageOperationTip';
 
 import type {
   ItemRender,
+  ItemPresetStyle,
   UploadFile,
   UploadListProgressProps,
   UploadListType,
@@ -17,6 +18,7 @@ import type {
 import type { VueNode } from '../../_util/type';
 import useConfigInject from '../../_util/hooks/useConfigInject';
 import Transition, { getTransitionProps } from '../../_util/transition';
+import PfTextItemRender from './PfTextItemRender';
 export const listItemProps = () => {
   return {
     prefixCls: String,
@@ -43,6 +45,7 @@ export const listItemProps = () => {
       }) => VueNode
     >,
     itemRender: Function as PropType<ItemRender>,
+    itemPresetStyle: String as PropType<ItemPresetStyle>,
     onPreview: Function as PropType<(file: UploadFile, e: Event) => void>,
     onClose: Function as PropType<(file: UploadFile) => void>,
     onDownload: Function as PropType<(file: UploadFile) => void>,
@@ -51,6 +54,11 @@ export const listItemProps = () => {
 };
 
 export type ListItemProps = Partial<ExtractPropTypes<ReturnType<typeof listItemProps>>>;
+
+const _PfTextItemRender = (_props: {
+  prefixCls?: string,
+  message?: string
+}) => (props) => PfTextItemRender({ ...props, ..._props })
 
 export default defineComponent({
   name: 'ListItem',
@@ -80,6 +88,7 @@ export default defineComponent({
         iconRender = slots.iconRender,
         actionIconRender = slots.actionIconRender,
         itemRender = slots.itemRender,
+        itemPresetStyle,
         isImgUrl,
         showPreviewIcon,
         showRemoveIcon,
@@ -272,10 +281,12 @@ export default defineComponent({
           dom
         );
 
+      const _itemRender = itemPresetStyle === 'pf-text' && listType === 'text' && !itemRender ? _PfTextItemRender({ prefixCls, message }) : itemRender;
+
       return (
         <div class={listContainerNameClass} style={style as CSSProperties} ref={ref}>
-          {itemRender
-            ? itemRender({
+          {_itemRender
+            ? _itemRender({
                 originNode: item,
                 file,
                 fileList: items,
