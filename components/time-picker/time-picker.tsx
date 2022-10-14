@@ -130,11 +130,11 @@ function createTimePicker<
         emit('ok', value);
       };
       return () => {
-        const { id = formItemContext.id.value, ...restProps } = props;
+        const { id = formItemContext.id.value } = props;
         return (
           <InternalTimePicker
             {...attrs}
-            {...omit(restProps, ['onUpdate:value', 'onUpdate:open'])}
+            {...omit(props, ['onUpdate:value', 'onUpdate:open'])}
             id={id}
             dropdownClassName={props.popupClassName}
             mode={undefined}
@@ -211,11 +211,11 @@ function createTimePicker<
         emit('calendarChange', values, dateStrings, info);
       };
       return () => {
-        const { id = formItemContext.id.value, ...restProps } = props;
+        const { id = formItemContext.id.value } = props;
         return (
           <InternalRangePicker
             {...attrs}
-            {...omit(restProps, ['onUpdate:open', 'onUpdate:value'])}
+            {...omit(props, ['onUpdate:open', 'onUpdate:value'] as any)}
             id={id}
             dropdownClassName={props.popupClassName}
             picker="time"
