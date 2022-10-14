@@ -1,6 +1,6 @@
 {
   "name": "@pf-ui/pf-ui-vue",
-  "version": "1.0.0-bate.2",
+  "version": "1.0.0-bate.3",
   "title": "pf-ui-vue",
   "description": "An enterprise-class UI design language and Vue-based implementation",
   "keywords": [
@@ -40,6 +40,7 @@
     "compile": "node antd-tools/cli/run.js compile",
     "generator-webtypes": "tsc -p antd-tools/generator-types/tsconfig.json && node antd-tools/generator-types/index.js",
     "pub": "npm run version && node --max_old_space_size=8192 antd-tools/cli/run.js pub",
+    "pub:latest": "npm run version && node --max_old_space_size=8192 --npm-tag=latest antd-tools/cli/run.js pub ",
     "pub-with-ci": "npm run version && node antd-tools/cli/run.js pub-with-ci",
     "prepublishOnly": "node antd-tools/cli/run.js guard",
     "pre-publish": "npm run generator-webtypes",
