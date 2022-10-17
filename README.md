@@ -12,7 +12,7 @@
 
 An enterprise-class UI components based on Ant Design and Vue.
 
-![test](https://github.com/vueComponent/ant-design-vue/workflows/test/badge.svg) [![codecov](https://img.shields.io/codecov/c/github/vueComponent/ant-design-vue/master.svg?style=flat-square)](https://codecov.io/gh/vueComponent/ant-design-vue) [![npm package](https://img.shields.io/npm/v/ant-design-vue.svg?style=flat-square)](https://www.npmjs.org/package/ant-design-vue)
+[![npm package](https://img.shields.io/npm/v/@pf-ui/pf-ui-vue.svg?style=flat-square)](https://www.npmjs.org/package/@pf-ui/pf-ui-vue)
 
 </div>
 
