@@ -4,6 +4,13 @@ variables:
   GIT_CLEAN_FLAGS: "none"
   IMAGE_ENV: "platform"
   # IMAGE_ENV: "lichen"
+  RANCHER_API: "https://192.168.10.227/v3"
+  RANCHER_TOKEN: "token-rgj97:jhwvzhjts2lbj76m8q6rrnd8wxl4nw99hx8b4htc8nwcjq9mggrpvz"
+  DEV_NAMESPACE: 'dev'
+  TEST_NAMESPACE: 'test'
+  DEV_CONTEXT: 'c-fxgnz:p-bbx57'
+  TEST_CONTEXT: 'c-fxgnz:p-9w4dg'
+
 
 default: 
   tags:
@@ -44,4 +51,26 @@ docker:
     - docker login --username=$HARBOR_USER_NAME --password-stdin < $HOME/.docker/config.txt $APPLICATION_IP
     - docker push $APPLICATION_IP/$IMAGE_ENV/$PROJECT_NAME:$CI_COMMIT_REF_SLUG
     - docker rmi $APPLICATION_IP/$IMAGE_ENV/$PROJECT_NAME:$CI_COMMIT_REF_SLUG
+
+deploy:
+  stage: deploy
+  image: registry-hz.rubikstack.com/lichen/ranchertool:v2.6.9
+  only:
+    - tags
+  tags:
+    - node
+  script:
+    - deploy_dev
+
+.auto_devops: &auto_devops |
+  function deploy_dev(){
+    echo '部署dev环境'
+    rancher login $RANCHER_API --token $RANCHER_TOKEN --skip-verify --context $DEV_CONTEXT
+    sed -i 's^${image_tag}^'"$APPLICATION_IP/$IMAGE_ENV/$PROJECT_NAME:$CI_COMMIT_REF_SLUG^g" "./dev.yaml"
+    echo 'dev.yaml修改完成'
+    rancher kubectl --namespace=$DEV_NAMESPACE apply -f ./dev.yaml
+  }
+
+before_script:
+  - *auto_devops
 
