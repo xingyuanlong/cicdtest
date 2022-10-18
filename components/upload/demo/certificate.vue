@@ -17,7 +17,7 @@ title:
   
   <template>
     <div>
-      <a-upload
+      <pf-upload
         v-model:file-list="fileList"
         name="certificate"
         list-type="picture-card"
@@ -33,9 +33,9 @@ title:
           <loading-outlined v-if="loading"></loading-outlined>
           <idcard-two-tone v-else class="certificate-upload-icon-idcard" />
         </div>
-      </a-upload>
+      </pf-upload>
       <div class="certificate-img-container" v-if="imageUrl">
-        <a-image
+        <pf-image
           :src="imageUrl"
           width="100%"
           height="100%"
@@ -46,12 +46,12 @@ title:
           class="certificate-img"
         />
         <div class="certificate-img-mask">
-          <a-tooltip title="替换图片" placement="bottom" overlay-class-name="ant-tooltip-image-operation">
+          <pf-tooltip title="替换图片" placement="bottom" overlay-class-name="ant-tooltip-image-operation">
             <replace-filled  class="certificate-img-icon certificate-img-icon-replace" @click="handleReplace" />
-          </a-tooltip>
-          <a-tooltip title="预览" placement="bottom" overlay-class-name="ant-tooltip-image-operation">
+          </pf-tooltip>
+          <pf-tooltip title="预览" placement="bottom" overlay-class-name="ant-tooltip-image-operation">
             <zoom-filled  class="certificate-img-icon" @click="handlePreview" />
-          </a-tooltip>
+          </pf-tooltip>
           <error-filled class="certificate-img-icon certificate-img-icon-delete" @click="handleRemove" />
         </div>
       </div>

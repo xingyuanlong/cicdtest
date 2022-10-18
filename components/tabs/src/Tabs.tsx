@@ -334,7 +334,7 @@ const InternalTabs = defineComponent({
 });
 
 export default defineComponent({
-  name: 'ATabs',
+  name: 'PfTabs',
   inheritAttrs: false,
   props: initDefaultProps(tabsProps(), {
     tabPosition: 'top',

@@ -19,7 +19,7 @@ export const popoverProps = () => ({
 export type PopoverProps = Partial<ExtractPropTypes<ReturnType<typeof popoverProps>>>;
 
 const Popover = defineComponent({
-  name: 'APopover',
+  name: 'PfPopover',
   props: initDefaultProps(popoverProps(), {
     ...tooltipDefaultProps(),
     trigger: 'hover',

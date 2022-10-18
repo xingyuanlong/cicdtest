@@ -17,25 +17,25 @@ We can use Checkbox and Grid Checkbox.group, to implement complex layout
 </docs>
 
 <template>
-  <a-checkbox-group v-model:value="value" style="width: 100%">
-    <a-row>
-      <a-col :span="8">
-        <a-checkbox value="A">A</a-checkbox>
-      </a-col>
-      <a-col :span="8">
-        <a-checkbox value="B">B</a-checkbox>
-      </a-col>
-      <a-col :span="8">
-        <a-checkbox value="C">C</a-checkbox>
-      </a-col>
-      <a-col :span="8">
-        <a-checkbox value="D">D</a-checkbox>
-      </a-col>
-      <a-col :span="8">
-        <a-checkbox value="E">E</a-checkbox>
-      </a-col>
-    </a-row>
-  </a-checkbox-group>
+  <pf-checkbox-group v-model:value="value" style="width: 100%">
+    <pf-row>
+      <pf-col :span="8">
+        <pf-checkbox value="A">A</pf-checkbox>
+      </pf-col>
+      <pf-col :span="8">
+        <pf-checkbox value="B">B</pf-checkbox>
+      </pf-col>
+      <pf-col :span="8">
+        <pf-checkbox value="C">C</pf-checkbox>
+      </pf-col>
+      <pf-col :span="8">
+        <pf-checkbox value="D">D</pf-checkbox>
+      </pf-col>
+      <pf-col :span="8">
+        <pf-checkbox value="E">E</pf-checkbox>
+      </pf-col>
+    </pf-row>
+  </pf-checkbox-group>
 </template>
 <script lang="ts">
 import { defineComponent, ref } from 'vue';

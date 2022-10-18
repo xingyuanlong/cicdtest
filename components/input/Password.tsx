@@ -17,7 +17,7 @@ const ActionMap = {
 const defaultIconRender = (visible: boolean) =>
   visible ? <EyeOutlined /> : <EyeInvisibleOutlined />;
 export default defineComponent({
-  name: 'AInputPassword',
+  name: 'PfInputPassword',
   inheritAttrs: false,
   props: {
     ...inputProps(),

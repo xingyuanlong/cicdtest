@@ -16,7 +16,7 @@ More pages.
 </docs>
 
 <template>
-  <a-pagination v-model:current="current" :total="500" />
+  <pf-pagination v-model:current="current" :total="500" />
 </template>
 
 <script lang="ts">

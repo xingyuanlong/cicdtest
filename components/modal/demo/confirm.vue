@@ -17,12 +17,12 @@ To use `confirm()` to show a confirmation modal dialog.
 </docs>
 
 <template>
-  <a-space wrap>
-    <a-button @click="showConfirm">Confirm</a-button>
-    <a-button @click="showPromiseConfirm">With promise</a-button>
-    <a-button type="dashed" @click="showDeleteConfirm">Delete</a-button>
-    <a-button type="dashed" @click="showPropsConfirm">With extra props</a-button>
-  </a-space>
+  <pf-space wrap>
+    <pf-button @click="showConfirm">Confirm</pf-button>
+    <pf-button @click="showPromiseConfirm">With promise</pf-button>
+    <pf-button type="dashed" @click="showDeleteConfirm">Delete</pf-button>
+    <pf-button type="dashed" @click="showPropsConfirm">With extra props</pf-button>
+  </pf-space>
 </template>
 <script lang="ts">
 import { ExclamationCircleOutlined } from '@ant-design/icons-vue';

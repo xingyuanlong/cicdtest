@@ -17,9 +17,9 @@ Show processing results.
 </docs>
 
 <template>
-  <a-result title="Your operation has been executed">
+  <pf-result title="Your operation has been executed">
     <template #extra>
-      <a-button key="console" type="primary">Go Console</a-button>
+      <pf-button key="console" type="primary">Go Console</pf-button>
     </template>
-  </a-result>
+  </pf-result>
 </template>

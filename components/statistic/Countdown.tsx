@@ -23,7 +23,7 @@ export const countdownProps = () => {
 
 export type CountdownProps = Partial<ExtractPropTypes<ReturnType<typeof countdownProps>>>;
 export default defineComponent({
-  name: 'AStatisticCountdown',
+  name: 'PfStatisticCountdown',
   props: initDefaultProps(countdownProps(), {
     format: 'HH:mm:ss',
   }),

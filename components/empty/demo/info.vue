@@ -16,7 +16,7 @@ You can choose another style of `image` by setting image to `Empty.PRESENTED_IMA
 
 </docs>
 <template>
-  <a-empty :image="infoImage" />
+  <pf-empty :image="infoImage" />
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';

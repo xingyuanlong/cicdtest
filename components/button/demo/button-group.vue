@@ -19,41 +19,41 @@ Debug usage
 <template>
   <div id="components-button-demo-button-group">
     <h4>Basic</h4>
-    <a-button-group>
-      <a-button>Cancel</a-button>
-      <a-button type="primary">OK</a-button>
-    </a-button-group>
-    <a-button-group>
-      <a-button disabled>L</a-button>
-      <a-button disabled>M</a-button>
-      <a-button disabled>R</a-button>
-    </a-button-group>
-    <a-button-group>
-      <a-button type="primary">L</a-button>
-      <a-button>M</a-button>
-      <a-button>M</a-button>
-      <a-button type="dashed">R</a-button>
-    </a-button-group>
+    <pf-button-group>
+      <pf-button>Cancel</pf-button>
+      <pf-button type="primary">OK</pf-button>
+    </pf-button-group>
+    <pf-button-group>
+      <pf-button disabled>L</pf-button>
+      <pf-button disabled>M</pf-button>
+      <pf-button disabled>R</pf-button>
+    </pf-button-group>
+    <pf-button-group>
+      <pf-button type="primary">L</pf-button>
+      <pf-button>M</pf-button>
+      <pf-button>M</pf-button>
+      <pf-button type="dashed">R</pf-button>
+    </pf-button-group>
 
     <h4>With Icon</h4>
-    <a-button-group>
-      <a-button type="primary">
+    <pf-button-group>
+      <pf-button type="primary">
         <LeftOutlined />
         Go back
-      </a-button>
-      <a-button type="primary">
+      </pf-button>
+      <pf-button type="primary">
         Go forward
         <RightOutlined />
-      </a-button>
-    </a-button-group>
-    <a-button-group>
-      <a-button type="primary">
+      </pf-button>
+    </pf-button-group>
+    <pf-button-group>
+      <pf-button type="primary">
         <template #icon><CloudOutlined /></template>
-      </a-button>
-      <a-button type="primary">
+      </pf-button>
+      <pf-button type="primary">
         <template #icon><CloudDownloadOutlined /></template>
-      </a-button>
-    </a-button-group>
+      </pf-button>
+    </pf-button-group>
   </div>
 </template>
 <script lang="ts">

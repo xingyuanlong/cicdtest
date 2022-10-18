@@ -17,7 +17,7 @@ A simple loading status.
 </docs>
 
 <template>
-  <a-spin regularSpining size="small" />
-  <a-spin regularSpining />
-  <a-spin regularSpining size="large" />
+  <pf-spin regularSpining size="small" />
+  <pf-spin regularSpining />
+  <pf-spin regularSpining size="large" />
 </template>

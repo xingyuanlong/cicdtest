@@ -17,9 +17,9 @@ you are not authorized to access this page.
 </docs>
 
 <template>
-  <a-result status="403">
+  <pf-result status="403">
     <template #extra>
-      <a-button type="primary">回到首页</a-button>
+      <pf-button type="primary">回到首页</pf-button>
     </template>
-  </a-result>
+  </pf-result>
 </template>

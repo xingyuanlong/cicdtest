@@ -16,7 +16,7 @@ Support select half star.
 
 </docs>
 <template>
-  <a-rate v-model:value="value" allow-half />
+  <pf-rate v-model:value="value" allow-half />
 </template>
 <script lang="ts">
 import { defineComponent, ref } from 'vue';

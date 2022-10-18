@@ -17,19 +17,19 @@ The default is to close the menu when you click on menu items, this feature can 
 </docs>
 
 <template>
-  <a-dropdown v-model:visible="visible">
+  <pf-dropdown v-model:visible="visible">
     <a class="ant-dropdown-link" @click.prevent>
       Hover me
       <DownOutlined />
     </a>
     <template #overlay>
-      <a-menu @click="handleMenuClick">
-        <a-menu-item key="1">Clicking me will not close the menu.</a-menu-item>
-        <a-menu-item key="2">Clicking me will not close the menu also.</a-menu-item>
-        <a-menu-item key="3">Clicking me will close the menu</a-menu-item>
-      </a-menu>
+      <pf-menu @click="handleMenuClick">
+        <pf-menu-item key="1">Clicking me will not close the menu.</pf-menu-item>
+        <pf-menu-item key="2">Clicking me will not close the menu also.</pf-menu-item>
+        <pf-menu-item key="3">Clicking me will close the menu</pf-menu-item>
+      </pf-menu>
     </template>
-  </a-dropdown>
+  </pf-dropdown>
 </template>
 <script lang="ts">
 import { defineComponent, ref } from 'vue';

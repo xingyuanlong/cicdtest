@@ -17,32 +17,32 @@ Customize the suffix icon through `suffixIcon`
 </docs>
 
 <template>
-  <a-space direction="vertical">
-    <a-date-picker @change="onChange">
+  <pf-space direction="vertical">
+    <pf-date-picker @change="onChange">
       <template #suffixIcon>
         <SmileOutlined />
       </template>
-    </a-date-picker>
-    <a-date-picker placeholder="Select month" picker="month" @change="onChange">
+    </pf-date-picker>
+    <pf-date-picker placeholder="Select month" picker="month" @change="onChange">
       <template #suffixIcon>
         <SmileOutlined />
       </template>
-    </a-date-picker>
-    <a-range-picker @change="onRangeChange">
+    </pf-date-picker>
+    <pf-range-picker @change="onRangeChange">
       <template #suffixIcon>
         <SmileOutlined />
       </template>
-    </a-range-picker>
-    <a-date-picker placeholder="Select week" picker="week" @change="onChange">
+    </pf-range-picker>
+    <pf-date-picker placeholder="Select week" picker="week" @change="onChange">
       <template #suffixIcon>
         <SmileOutlined />
       </template>
-    </a-date-picker>
-    <a-date-picker suffix-icon="ab" @change="onChange" />
-    <a-date-picker suffix-icon="ab" placeholder="Select month" picker="month" @change="onChange" />
-    <a-range-picker suffix-icon="ab" @change="onRangeChange" />
-    <a-date-picker suffix-icon="ab" placeholder="Select week" picker="week" @change="onChange" />
-  </a-space>
+    </pf-date-picker>
+    <pf-date-picker suffix-icon="ab" @change="onChange" />
+    <pf-date-picker suffix-icon="ab" placeholder="Select month" picker="month" @change="onChange" />
+    <pf-range-picker suffix-icon="ab" @change="onRangeChange" />
+    <pf-date-picker suffix-icon="ab" placeholder="Select week" picker="week" @change="onChange" />
+  </pf-space>
 </template>
 <script lang="ts">
 import { SmileOutlined } from '@ant-design/icons-vue';

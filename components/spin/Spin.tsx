@@ -34,7 +34,7 @@ export function setDefaultIndicator(Content: any) {
 }
 
 export default defineComponent({
-  name: 'ASpin',
+  name: 'PfSpin',
   inheritAttrs: false,
   props: initDefaultProps(spinProps(), {
     size: 'default',

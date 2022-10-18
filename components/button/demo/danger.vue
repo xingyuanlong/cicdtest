@@ -18,10 +18,10 @@ danger is a property of button.
 
 <template>
   <div>
-    <a-button type="primary" danger>Primary</a-button>
-    <a-button danger>Default</a-button>
-    <a-button type="dashed" danger>Dashed</a-button>
-    <a-button type="text" danger>Text</a-button>
-    <a-button type="link" danger>Link</a-button>
+    <pf-button type="primary" danger>Primary</pf-button>
+    <pf-button danger>Default</pf-button>
+    <pf-button type="dashed" danger>Dashed</pf-button>
+    <pf-button type="text" danger>Text</pf-button>
+    <pf-button type="link" danger>Link</pf-button>
   </div>
 </template>

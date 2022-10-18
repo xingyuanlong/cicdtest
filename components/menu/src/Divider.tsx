@@ -10,7 +10,7 @@ export const menuDividerProps = () => ({
 export type MenuDividerProps = Partial<ExtractPropTypes<ReturnType<typeof menuDividerProps>>>;
 
 export default defineComponent({
-  name: 'AMenuDivider',
+  name: 'PfMenuDivider',
   props: menuDividerProps(),
   setup(props) {
     const { prefixCls } = useConfigInject('menu', props);

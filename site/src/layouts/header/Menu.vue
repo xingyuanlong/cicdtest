@@ -4,14 +4,14 @@
     <Ecosystem />
   </template>
   <template v-else>
-    <a-button
+    <pf-button
       key="lang-button"
       size="small"
       class="header-button header-lang-button"
       @click="onLangChange"
     >
       {{ $t('app.header.lang') }}
-    </a-button>
+    </pf-button>
   </template>
 </template>
 <script lang="ts">

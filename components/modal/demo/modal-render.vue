@@ -17,8 +17,8 @@ Custom modal content render. use `vueuse` implements draggable.
 </docs>
 <template>
   <div>
-    <a-button type="primary" @click="showModal">Open Modal</a-button>
-    <a-modal
+    <pf-button type="primary" @click="showModal">Open Modal</pf-button>
+    <pf-modal
       ref="modalRef"
       v-model:visible="visible"
       :wrap-style="{ overflow: 'hidden' }"
@@ -35,7 +35,7 @@ Custom modal content render. use `vueuse` implements draggable.
           <component :is="originVNode" />
         </div>
       </template>
-    </a-modal>
+    </pf-modal>
   </div>
 </template>
 <script lang="ts">

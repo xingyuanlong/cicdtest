@@ -18,9 +18,9 @@ Use `type="vertical"` make it vertical.
 <template>
   <div>
     Text
-    <a-divider type="vertical" />
+    <pf-divider type="vertical" />
     <a href="#">Link</a>
-    <a-divider type="vertical" />
+    <pf-divider type="vertical" />
     <a href="#">Link</a>
   </div>
 </template>

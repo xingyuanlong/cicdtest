@@ -17,16 +17,16 @@ Responsive grid list. The size property is as same as [Layout Grid](https://www.
 </docs>
 
 <template>
-  <a-list
+  <pf-list
     :grid="{ gutter: 16, xs: 1, sm: 2, md: 4, lg: 4, xl: 6, xxl: 3, xxxl: 2 }"
     :data-source="data"
   >
     <template #renderItem="{ item }">
-      <a-list-item>
-        <a-card :title="item.title">Card content</a-card>
-      </a-list-item>
+      <pf-list-item>
+        <pf-card :title="item.title">Card content</pf-card>
+      </pf-list-item>
     </template>
-  </a-list>
+  </pf-list>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';

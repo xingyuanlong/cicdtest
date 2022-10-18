@@ -17,10 +17,10 @@ Basic slider. When `range` is `true`, display as dual thumb mode. When `disable`
 
 <template>
   <div>
-    <a-slider id="test" v-model:value="value1" :disabled="disabled" />
-    <a-slider v-model:value="value2" range :disabled="disabled" />
+    <pf-slider id="test" v-model:value="value1" :disabled="disabled" />
+    <pf-slider v-model:value="value2" range :disabled="disabled" />
     Disabled:
-    <a-switch v-model:checked="disabled" size="small" />
+    <pf-switch v-model:checked="disabled" size="small" />
   </div>
 </template>
 <script lang="ts">

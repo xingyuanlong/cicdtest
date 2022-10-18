@@ -17,40 +17,40 @@ Basic Usage
 </docs>
 
 <template>
-  <h2>use a-select-option</h2>
-  <a-space>
-    <a-select
+  <h2>use pf-select-option</h2>
+  <pf-space>
+    <pf-select
       ref="select"
       v-model:value="value1"
       style="width: 120px"
       @focus="focus"
       @change="handleChange"
     >
-      <a-select-option value="jack">Jack</a-select-option>
-      <a-select-option value="lucy">Lucy</a-select-option>
-      <a-select-option value="disabled" disabled>Disabled</a-select-option>
-      <a-select-option value="Yiminghe">yiminghe</a-select-option>
-    </a-select>
-    <a-select v-model:value="value2" style="width: 120px" disabled>
-      <a-select-option value="lucy">Lucy</a-select-option>
-    </a-select>
-    <a-select v-model:value="value3" style="width: 120px" loading>
-      <a-select-option value="lucy">Lucy</a-select-option>
-    </a-select>
-  </a-space>
+      <pf-select-option value="jack">Jack</pf-select-option>
+      <pf-select-option value="lucy">Lucy</pf-select-option>
+      <pf-select-option value="disabled" disabled>Disabled</pf-select-option>
+      <pf-select-option value="Yiminghe">yiminghe</pf-select-option>
+    </pf-select>
+    <pf-select v-model:value="value2" style="width: 120px" disabled>
+      <pf-select-option value="lucy">Lucy</pf-select-option>
+    </pf-select>
+    <pf-select v-model:value="value3" style="width: 120px" loading>
+      <pf-select-option value="lucy">Lucy</pf-select-option>
+    </pf-select>
+  </pf-space>
   <h2 style="margin-top: 10px">use options (recommend)</h2>
-  <a-space>
-    <a-select
+  <pf-space>
+    <pf-select
       ref="select"
       v-model:value="value1"
       style="width: 120px"
       :options="options1"
       @focus="focus"
       @change="handleChange"
-    ></a-select>
-    <a-select v-model:value="value2" style="width: 120px" disabled :options="options2"></a-select>
-    <a-select v-model:value="value3" style="width: 120px" loading :options="options3"></a-select>
-  </a-space>
+    ></pf-select>
+    <pf-select v-model:value="value2" style="width: 120px" disabled :options="options2"></pf-select>
+    <pf-select v-model:value="value3" style="width: 120px" loading :options="options3"></pf-select>
+  </pf-space>
 </template>
 <script lang="ts">
 import type { SelectProps } from 'pf-ui-vue';

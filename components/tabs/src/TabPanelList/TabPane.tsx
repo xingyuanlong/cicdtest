@@ -21,7 +21,7 @@ const tabPaneProps = () => ({
 export type TabPaneProps = Partial<ExtractPropTypes<ReturnType<typeof tabPaneProps>>>;
 
 export default defineComponent({
-  name: 'ATabPane',
+  name: 'PfTabPane',
   inheritAttrs: false,
   __ANT_TAB_PANE: true,
   props: tabPaneProps(),

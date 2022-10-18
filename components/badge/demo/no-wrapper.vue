@@ -18,8 +18,8 @@ Used in standalone when children is empty.
 </docs>
 
 <template>
-  <a-badge count="25" />
-  <a-badge
+  <pf-badge count="25" />
+  <pf-badge
     count="4"
     :number-style="{
       backgroundColor: '#fff',
@@ -27,5 +27,5 @@ Used in standalone when children is empty.
       boxShadow: '0 0 0 1px #d9d9d9 inset',
     }"
   />
-  <a-badge count="109" :number-style="{ backgroundColor: '#52c41a' }" />
+  <pf-badge count="109" :number-style="{ backgroundColor: '#52c41a' }" />
 </template>

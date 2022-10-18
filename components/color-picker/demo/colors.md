@@ -12,7 +12,7 @@ Set `config.swatches ` to customize the default color presets.
 
 ```vue
 <template>
-  <a-color-picker v-model="color" :config="config" />
+  <pf-color-picker v-model="color" :config="config" />
 </template>
 <script>
 export default {

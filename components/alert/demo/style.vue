@@ -17,9 +17,9 @@ There are 5 types of Alert: `success`, `info`, `warning`, `error`, `question`.
 </docs>
 
 <template>
-  <a-alert message="Success Text" type="success" />
-  <a-alert message="Info Text" type="info" />
-  <a-alert message="Warning Text" type="warning" />
-  <a-alert message="Error Text" type="error" />
-  <a-alert message="Question Text" type="question" />
+  <pf-alert message="Success Text" type="success" />
+  <pf-alert message="Info Text" type="info" />
+  <pf-alert message="Warning Text" type="warning" />
+  <pf-alert message="Error Text" type="error" />
+  <pf-alert message="Question Text" type="question" />
 </template>

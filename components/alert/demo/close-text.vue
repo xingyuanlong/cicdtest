@@ -17,5 +17,5 @@ Replace the default icon with customized text.
 </docs>
 
 <template>
-  <a-alert message="Info Text" type="info" close-text="Close Now" />
+  <pf-alert message="Info Text" type="info" close-text="Close Now" />
 </template>

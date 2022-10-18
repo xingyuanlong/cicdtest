@@ -11,7 +11,7 @@ import debounce from 'lodash-es/debounce';
 import { getOptionProps, findDOMNode } from '../_util/props-util';
 let colors = '#194d33';
 export default {
-  name: 'AColorPicker',
+  name: 'PfColorPicker',
   mixins: [BaseMixin],
   inject: {
     configProvider: { default: () => defaultConfigProvider },

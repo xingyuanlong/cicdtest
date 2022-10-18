@@ -31,7 +31,7 @@ function getActiveKeysArray(activeKey: Key | Key[]) {
 export { collapseProps };
 export type CollapseProps = Partial<ExtractPropTypes<ReturnType<typeof collapseProps>>>;
 export default defineComponent({
-  name: 'ACollapse',
+  name: 'PfCollapse',
   inheritAttrs: false,
   props: initDefaultProps(collapseProps(), {
     accordion: false,

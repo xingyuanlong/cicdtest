@@ -20,9 +20,9 @@ title:
 
 <template>
   <div>
-    <a-checkable-tag v-model:checked="checked1" @change="handleChange">Tag1</a-checkable-tag>
-    <a-checkable-tag v-model:checked="checked2" @change="handleChange">Tag2</a-checkable-tag>
-    <a-checkable-tag v-model:checked="checked3" @change="handleChange">Tag3</a-checkable-tag>
+    <pf-checkable-tag v-model:checked="checked1" @change="handleChange">Tag1</pf-checkable-tag>
+    <pf-checkable-tag v-model:checked="checked2" @change="handleChange">Tag2</pf-checkable-tag>
+    <pf-checkable-tag v-model:checked="checked3" @change="handleChange">Tag3</pf-checkable-tag>
   </div>
 </template>
 <script lang="ts">

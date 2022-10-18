@@ -1,21 +1,21 @@
 <template>
   <div>
-    <a-menu
+    <pf-menu
       v-model:selected-keys="selectedKeys"
       :open-keys="openKeys"
       style="width: 256px"
       mode="inline"
     >
-      <a-sub-menu key="sub1">
+      <pf-sub-menu key="sub1">
         <template #icon>
           <MailOutlined />
         </template>
         <template #title>Navigation One</template>
-        <a-menu-item key="3">Option 3</a-menu-item>
-        <a-menu-item key="4">Option 4</a-menu-item>
-      </a-sub-menu>
-    </a-menu>
-    <a-button @click="open">展开</a-button>
+        <pf-menu-item key="3">Option 3</pf-menu-item>
+        <pf-menu-item key="4">Option 4</pf-menu-item>
+      </pf-sub-menu>
+    </pf-menu>
+    <pf-button @click="open">展开</pf-button>
   </div>
 </template>
 <script>

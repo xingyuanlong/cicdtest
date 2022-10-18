@@ -17,5 +17,5 @@ Use time range picker with `TimeRangePicker`.
 </docs>
 
 <template>
-  <a-time-range-picker />
+  <pf-time-range-picker />
 </template>

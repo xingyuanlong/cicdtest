@@ -18,18 +18,18 @@ In order to fit in more tabs, they can slide left and right (or up and down).
 
 <template>
   <div>
-    <a-radio-group v-model:value="mode" :style="{ marginBottom: '8px' }">
-      <a-radio-button value="top">Horizontal</a-radio-button>
-      <a-radio-button value="left">Vertical</a-radio-button>
-    </a-radio-group>
-    <a-tabs
+    <pf-radio-group v-model:value="mode" :style="{ marginBottom: '8px' }">
+      <pf-radio-button value="top">Horizontal</pf-radio-button>
+      <pf-radio-button value="left">Vertical</pf-radio-button>
+    </pf-radio-group>
+    <pf-tabs
       v-model:activeKey="activeKey"
       :tab-position="mode"
       :style="{ height: '200px' }"
       @tabScroll="callback"
     >
-      <a-tab-pane v-for="i in 30" :key="i" :tab="`Tab-${i}`">Content of tab {{ i }}</a-tab-pane>
-    </a-tabs>
+      <pf-tab-pane v-for="i in 30" :key="i" :tab="`Tab-${i}`">Content of tab {{ i }}</pf-tab-pane>
+    </pf-tabs>
   </div>
 </template>
 <script lang="ts">

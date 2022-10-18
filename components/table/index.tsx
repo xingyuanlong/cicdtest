@@ -16,13 +16,13 @@ export type { ColumnProps } from './Column';
 export type { ColumnsType, ColumnType, ColumnGroupType } from './interface';
 export type { TableProps, TablePaginationConfig };
 
-const TableSummaryRow = defineComponent({ ...SummaryRow, name: 'ATableSummaryRow' });
-const TableSummaryCell = defineComponent({ ...SummaryCell, name: 'ATableSummaryCell' });
+const TableSummaryRow = defineComponent({ ...SummaryRow, name: 'PfTableSummaryRow' });
+const TableSummaryCell = defineComponent({ ...SummaryCell, name: 'PfTableSummaryCell' });
 
 const TableSummary = Object.assign(Summary, {
   Cell: TableSummaryCell,
   Row: TableSummaryRow,
-  name: 'ATableSummary',
+  name: 'PfTableSummary',
 });
 
 /* istanbul ignore next */

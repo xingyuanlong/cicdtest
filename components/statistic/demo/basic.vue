@@ -17,12 +17,12 @@ Simplest Usage.
 </docs>
 
 <template>
-  <a-row>
-    <a-col :span="12">
-      <a-statistic title="Active Users" :value="112893" style="margin-right: 50px" />
-    </a-col>
-    <a-col :span="12">
-      <a-statistic title="Account Balance (CNY)" :precision="2" :value="112893" />
-    </a-col>
-  </a-row>
+  <pf-row>
+    <pf-col :span="12">
+      <pf-statistic title="Active Users" :value="112893" style="margin-right: 50px" />
+    </pf-col>
+    <pf-col :span="12">
+      <pf-statistic title="Account Balance (CNY)" :precision="2" :value="112893" />
+    </pf-col>
+  </pf-row>
 </template>

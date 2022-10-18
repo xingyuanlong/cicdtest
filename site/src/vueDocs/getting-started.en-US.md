@@ -68,7 +68,7 @@ In this way, component sub-components, such as Button and ButtonGroup, need to b
 
 ```html
 <template>
-  <a-button>Add</a-button>
+  <pf-button>Add</pf-button>
 </template>
 <script>
   import { Button } from '@pf-ui/pf-ui-vue';

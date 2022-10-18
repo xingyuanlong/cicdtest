@@ -17,46 +17,46 @@ Skeleton Button, Avatar, Input and Image.
 </docs>
 
 <template>
-  <a-space>
-    <a-skeleton-button :active="active" :size="size" :shape="buttonShape" :block="block" />
-    <a-skeleton-avatar :active="active" :size="size" :shape="avatarShape" />
-    <a-skeleton-input style="width: 200px" :active="active" :size="size" />
-  </a-space>
+  <pf-space>
+    <pf-skeleton-button :active="active" :size="size" :shape="buttonShape" :block="block" />
+    <pf-skeleton-avatar :active="active" :size="size" :shape="avatarShape" />
+    <pf-skeleton-input style="width: 200px" :active="active" :size="size" />
+  </pf-space>
   <br />
   <br />
-  <a-skeleton-button :active="active" :size="size" :shape="buttonShape" :block="block" />
+  <pf-skeleton-button :active="active" :size="size" :shape="buttonShape" :block="block" />
   <br />
   <br />
-  <a-skeleton-image />
-  <a-divider />
-  <a-form layout="inline" style="margin: 16px 0">
-    <a-form-item label="Active">
-      <a-switch v-model:checked="active" />
-    </a-form-item>
-    <a-form-item label="Button Block">
-      <a-switch v-model:checked="block" />
-    </a-form-item>
-    <a-form-item label="Size">
-      <a-radio-group v-model:value="size">
-        <a-radio-button value="default">Default</a-radio-button>
-        <a-radio-button value="large">Large</a-radio-button>
-        <a-radio-button value="small">Small</a-radio-button>
-      </a-radio-group>
-    </a-form-item>
-    <a-form-item label="Button Shape">
-      <a-radio-group v-model:value="buttonShape">
-        <a-radio-button value="default">Default</a-radio-button>
-        <a-radio-button value="round">Round</a-radio-button>
-        <a-radio-button value="circle">Circle</a-radio-button>
-      </a-radio-group>
-    </a-form-item>
-    <a-form-item label="Avatar Shape">
-      <a-radio-group v-model:value="avatarShape">
-        <a-radio-button value="square">Square</a-radio-button>
-        <a-radio-button value="circle">Circle</a-radio-button>
-      </a-radio-group>
-    </a-form-item>
-  </a-form>
+  <pf-skeleton-image />
+  <pf-divider />
+  <pf-form layout="inline" style="margin: 16px 0">
+    <pf-form-item label="Active">
+      <pf-switch v-model:checked="active" />
+    </pf-form-item>
+    <pf-form-item label="Button Block">
+      <pf-switch v-model:checked="block" />
+    </pf-form-item>
+    <pf-form-item label="Size">
+      <pf-radio-group v-model:value="size">
+        <pf-radio-button value="default">Default</pf-radio-button>
+        <pf-radio-button value="large">Large</pf-radio-button>
+        <pf-radio-button value="small">Small</pf-radio-button>
+      </pf-radio-group>
+    </pf-form-item>
+    <pf-form-item label="Button Shape">
+      <pf-radio-group v-model:value="buttonShape">
+        <pf-radio-button value="default">Default</pf-radio-button>
+        <pf-radio-button value="round">Round</pf-radio-button>
+        <pf-radio-button value="circle">Circle</pf-radio-button>
+      </pf-radio-group>
+    </pf-form-item>
+    <pf-form-item label="Avatar Shape">
+      <pf-radio-group v-model:value="avatarShape">
+        <pf-radio-button value="square">Square</pf-radio-button>
+        <pf-radio-button value="circle">Circle</pf-radio-button>
+      </pf-radio-group>
+    </pf-form-item>
+  </pf-form>
 </template>
 <script lang="ts">
 import { defineComponent, ref } from 'vue';

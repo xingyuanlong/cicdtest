@@ -112,7 +112,7 @@ export interface CascaderRef {
 }
 
 const Cascader = defineComponent({
-  name: 'ACascader',
+  name: 'PfCascader',
   inheritAttrs: false,
   props: initDefaultProps(cascaderProps(), {
     bordered: true,

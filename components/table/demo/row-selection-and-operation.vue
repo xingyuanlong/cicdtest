@@ -19,16 +19,16 @@ To perform operations and clear selections after selecting some rows, use `rowSe
 <template>
   <div>
     <div style="margin-bottom: 16px">
-      <a-button type="primary" :disabled="!hasSelected" :loading="loading" @click="start">
+      <pf-button type="primary" :disabled="!hasSelected" :loading="loading" @click="start">
         Reload
-      </a-button>
+      </pf-button>
       <span style="margin-left: 8px">
         <template v-if="hasSelected">
           {{ `Selected ${selectedRowKeys.length} items` }}
         </template>
       </span>
     </div>
-    <a-table
+    <pf-table
       :row-selection="{ selectedRowKeys: selectedRowKeys, onChange: onSelectChange }"
       :columns="columns"
       :data-source="data"

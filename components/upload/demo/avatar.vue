@@ -20,7 +20,7 @@ Click to upload user's avatar, and validate size and format of picture with `bef
 </docs>
 
 <template>
-  <a-upload
+  <pf-upload
     v-model:file-list="fileList"
     name="avatar"
     list-type="picture-card"
@@ -36,7 +36,7 @@ Click to upload user's avatar, and validate size and format of picture with `bef
       <plus-outlined v-else></plus-outlined>
       <div class="ant-upload-text">Upload</div>
     </div>
-  </a-upload>
+  </pf-upload>
 </template>
 <script lang="ts">
 import { PlusOutlined, LoadingOutlined } from '@ant-design/icons-vue';

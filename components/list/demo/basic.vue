@@ -17,22 +17,22 @@ Basic list.
 </docs>
 
 <template>
-  <a-list item-layout="horizontal" :data-source="data">
+  <pf-list item-layout="horizontal" :data-source="data">
     <template #renderItem="{ item }">
-      <a-list-item>
-        <a-list-item-meta
+      <pf-list-item>
+        <pf-list-item-meta
           description="Ant Design, a design language for background applications, is refined by Ant UED Team"
         >
           <template #title>
             <a href="https://www.antdv.com/">{{ item.title }}</a>
           </template>
           <template #avatar>
-            <a-avatar src="https://joeschmoe.io/api/v1/random" />
+            <pf-avatar src="https://joeschmoe.io/api/v1/random" />
           </template>
-        </a-list-item-meta>
-      </a-list-item>
+        </pf-list-item-meta>
+      </pf-list-item>
     </template>
-  </a-list>
+  </pf-list>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';

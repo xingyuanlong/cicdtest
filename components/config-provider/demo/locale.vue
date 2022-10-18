@@ -18,47 +18,47 @@ Components which need localization support are listed here, you can toggle the l
 <template>
   <div class="change-locale">
     <span style="margin-right: 16px">Change locale of components:</span>
-    <a-radio-group v-model:value="locale">
-      <a-radio-button key="en" :value="enUS.locale">English</a-radio-button>
-      <a-radio-button key="cn" :value="zhCN.locale">中文</a-radio-button>
-    </a-radio-group>
+    <pf-radio-group v-model:value="locale">
+      <pf-radio-button key="en" :value="enUS.locale">English</pf-radio-button>
+      <pf-radio-button key="cn" :value="zhCN.locale">中文</pf-radio-button>
+    </pf-radio-group>
   </div>
-  <a-config-provider :locale="locale === 'en' ? enUS : zhCN">
+  <pf-config-provider :locale="locale === 'en' ? enUS : zhCN">
     <div class="locale-components">
       <div class="example">
-        <a-pagination :total="50" show-size-changer />
+        <pf-pagination :total="50" show-size-changer />
       </div>
       <div class="example">
-        <a-select show-search style="width: 200px">
-          <a-select-option value="jack">jack</a-select-option>
-          <a-select-option value="lucy">lucy</a-select-option>
-        </a-select>
-        <a-date-picker />
-        <a-time-picker />
-        <a-range-picker style="width: 200px" />
+        <pf-select show-search style="width: 200px">
+          <pf-select-option value="jack">jack</pf-select-option>
+          <pf-select-option value="lucy">lucy</pf-select-option>
+        </pf-select>
+        <pf-date-picker />
+        <pf-time-picker />
+        <pf-range-picker style="width: 200px" />
       </div>
       <div class="example">
-        <a-button type="primary" @click="visible = true">Show Modal</a-button>
-        <a-button @click="info">Show info</a-button>
-        <a-button @click="confirm">Show confirm</a-button>
-        <a-popconfirm title="Question?">
+        <pf-button type="primary" @click="visible = true">Show Modal</pf-button>
+        <pf-button @click="info">Show info</pf-button>
+        <pf-button @click="confirm">Show confirm</pf-button>
+        <pf-popconfirm title="Question?">
           <a href="#">Click to confirm</a>
-        </a-popconfirm>
+        </pf-popconfirm>
       </div>
       <div class="example">
-        <a-transfer :data-source="[]" show-search :target-keys="[]" :render="item => item.title" />
+        <pf-transfer :data-source="[]" show-search :target-keys="[]" :render="item => item.title" />
       </div>
       <div class="site-config-provider-calendar-wrapper">
-        <a-calendar :fullscreen="false" />
+        <pf-calendar :fullscreen="false" />
       </div>
       <div class="example">
-        <a-table :data-source="[]" :columns="columns" />
+        <pf-table :data-source="[]" :columns="columns" />
       </div>
-      <a-modal v-model:visible="visible" title="Locale Modal">
+      <pf-modal v-model:visible="visible" title="Locale Modal">
         <p>Locale Modal</p>
-      </a-modal>
+      </pf-modal>
     </div>
-  </a-config-provider>
+  </pf-config-provider>
 </template>
 <script>
 import { Modal } from 'pf-ui-vue';

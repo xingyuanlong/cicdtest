@@ -13,9 +13,9 @@ export const listItemMetaProps = () => ({
 export type ListItemMetaProps = Partial<ExtractPropTypes<ReturnType<typeof listItemMetaProps>>>;
 
 export default defineComponent({
-  name: 'AListItemMeta',
+  name: 'PfListItemMeta',
   props: listItemMetaProps(),
-  displayName: 'AListItemMeta', // 兼容历史函数式组件
+  displayName: 'PfListItemMeta', // 兼容历史函数式组件
   __ANT_LIST_ITEM_META: true,
   slots: ['avatar', 'description', 'title'],
   setup(props, { slots }) {
@@ -35,7 +35,7 @@ export default defineComponent({
       );
       return (
         <div class={classString}>
-          {avatar && <div class={`${prefixCls.value}-item-meta-avatar`}>{avatar}</div>}
+          {avatar && <div class={`${prefixCls.value}-item-metpf-avatar`}>{avatar}</div>}
           {(title || description) && content}
         </div>
       );

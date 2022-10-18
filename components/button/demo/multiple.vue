@@ -16,21 +16,21 @@ If you need several buttons, we recommend that you use 1 primary button + n seco
 </docs>
 
 <template>
-  <a-button type="primary">Primary</a-button>
-  <a-button>secondary</a-button>
-  <a-dropdown>
+  <pf-button type="primary">Primary</pf-button>
+  <pf-button>secondary</pf-button>
+  <pf-dropdown>
     <template #overlay>
-      <a-menu @click="handleMenuClick">
-        <a-menu-item key="1">1st item</a-menu-item>
-        <a-menu-item key="2">2nd item</a-menu-item>
-        <a-menu-item key="3">3rd item</a-menu-item>
-      </a-menu>
+      <pf-menu @click="handleMenuClick">
+        <pf-menu-item key="1">1st item</pf-menu-item>
+        <pf-menu-item key="2">2nd item</pf-menu-item>
+        <pf-menu-item key="3">3rd item</pf-menu-item>
+      </pf-menu>
     </template>
-    <a-button>
+    <pf-button>
       Actions
       <DownOutlined />
-    </a-button>
-  </a-dropdown>
+    </pf-button>
+  </pf-dropdown>
 </template>
 <script lang="ts">
 import { DownOutlined } from '@ant-design/icons-vue';

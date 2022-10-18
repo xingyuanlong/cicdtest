@@ -11,7 +11,7 @@ export type BreadcrumbSeparatorProps = Partial<
 >;
 
 export default defineComponent({
-  name: 'ABreadcrumbSeparator',
+  name: 'PfBreadcrumbSeparator',
   __ANT_BREADCRUMB_SEPARATOR: true,
   inheritAttrs: false,
   props: breadcrumbSeparatorProps(),

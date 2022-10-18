@@ -18,12 +18,12 @@ Use `width` to set the width of the modal dialog
 
 <template>
   <div>
-    <a-button type="primary" @click="showModal">Open Modal of 1000px width</a-button>
-    <a-modal v-model:visible="visible" width="1000px" title="Basic Modal" @ok="handleOk">
+    <pf-button type="primary" @click="showModal">Open Modal of 1000px width</pf-button>
+    <pf-modal v-model:visible="visible" width="1000px" title="Basic Modal" @ok="handleOk">
       <p>Some contents...</p>
       <p>Some contents...</p>
       <p>Some contents...</p>
-    </a-modal>
+    </pf-modal>
   </div>
 </template>
 <script lang="ts">

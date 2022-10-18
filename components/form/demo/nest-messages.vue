@@ -15,32 +15,32 @@ title:
 `name` prop support nest data structure. Customize validate message template with `validateMessages` or `message`. Ref [here](https://github.com/vueComponent/pf-ui-vue/blob/main/components/form/utils/messages.ts) about message template.
 </docs>
 <template>
-  <a-form
+  <pf-form
     :model="formState"
     v-bind="layout"
     name="nest-messages"
     :validate-messages="validateMessages"
     @finish="onFinish"
   >
-    <a-form-item :name="['user', 'name']" label="Name" :rules="[{ required: true }]">
-      <a-input v-model:value="formState.user.name" />
-    </a-form-item>
-    <a-form-item :name="['user', 'email']" label="Email" :rules="[{ type: 'email' }]">
-      <a-input v-model:value="formState.user.email" />
-    </a-form-item>
-    <a-form-item :name="['user', 'age']" label="Age" :rules="[{ type: 'number', min: 0, max: 99 }]">
-      <a-input-number v-model:value="formState.user.age" />
-    </a-form-item>
-    <a-form-item :name="['user', 'website']" label="Website">
-      <a-input v-model:value="formState.user.website" />
-    </a-form-item>
-    <a-form-item :name="['user', 'introduction']" label="Introduction">
-      <a-textarea v-model:value="formState.user.introduction" />
-    </a-form-item>
-    <a-form-item :wrapper-col="{ ...layout.wrapperCol, offset: 8 }" style="margin-top: 24px;">
-      <a-button type="primary" html-type="submit">Submit</a-button>
-    </a-form-item>
-  </a-form>
+    <pf-form-item :name="['user', 'name']" label="Name" :rules="[{ required: true }]">
+      <pf-input v-model:value="formState.user.name" />
+    </pf-form-item>
+    <pf-form-item :name="['user', 'email']" label="Email" :rules="[{ type: 'email' }]">
+      <pf-input v-model:value="formState.user.email" />
+    </pf-form-item>
+    <pf-form-item :name="['user', 'age']" label="Age" :rules="[{ type: 'number', min: 0, max: 99 }]">
+      <pf-input-number v-model:value="formState.user.age" />
+    </pf-form-item>
+    <pf-form-item :name="['user', 'website']" label="Website">
+      <pf-input v-model:value="formState.user.website" />
+    </pf-form-item>
+    <pf-form-item :name="['user', 'introduction']" label="Introduction">
+      <pf-textarea v-model:value="formState.user.introduction" />
+    </pf-form-item>
+    <pf-form-item :wrapper-col="{ ...layout.wrapperCol, offset: 8 }" style="margin-top: 24px;">
+      <pf-button type="primary" html-type="submit">Submit</pf-button>
+    </pf-form-item>
+  </pf-form>
 </template>
 <script lang="ts">
 import { defineComponent, reactive } from 'vue';

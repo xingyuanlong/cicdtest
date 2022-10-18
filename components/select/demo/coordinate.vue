@@ -19,18 +19,18 @@ Using the [Cascader](/components/cascader) component is strongly recommended ins
 </docs>
 
 <template>
-  <a-space>
-    <a-select
+  <pf-space>
+    <pf-select
       v-model:value="province"
       style="width: 120px"
       :options="provinceData.map(pro => ({ value: pro }))"
-    ></a-select>
-    <a-select
+    ></pf-select>
+    <pf-select
       v-model:value="secondCity"
       style="width: 120px"
       :options="cities.map(city => ({ value: city }))"
-    ></a-select>
-  </a-space>
+    ></pf-select>
+  </pf-space>
 </template>
 <script lang="ts">
 const provinceData = ['Zhejiang', 'Jiangsu'];

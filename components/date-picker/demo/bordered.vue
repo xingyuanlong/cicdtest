@@ -17,18 +17,18 @@ Bordered-less style component.
 </docs>
 
 <template>
-  <a-space direction="vertical" :size="12">
-    <a-date-picker v-model:value="value1" :bordered="false" />
-    <a-date-picker v-model:value="value2" picker="week" :bordered="false" />
-    <a-date-picker v-model:value="value3" picker="month" :bordered="false" />
-    <a-date-picker v-model:value="value4" picker="quarter" :bordered="false" />
-    <a-date-picker v-model:value="value5" picker="year" :bordered="false" />
+  <pf-space direction="vertical" :size="12">
+    <pf-date-picker v-model:value="value1" :bordered="false" />
+    <pf-date-picker v-model:value="value2" picker="week" :bordered="false" />
+    <pf-date-picker v-model:value="value3" picker="month" :bordered="false" />
+    <pf-date-picker v-model:value="value4" picker="quarter" :bordered="false" />
+    <pf-date-picker v-model:value="value5" picker="year" :bordered="false" />
 
-    <a-range-picker v-model:value="value6" :bordered="false" />
-    <a-range-picker v-model:value="value7" picker="week" :bordered="false" />
-    <a-range-picker v-model:value="value8" picker="month" :bordered="false" />
-    <a-range-picker v-model:value="value9" picker="year" :bordered="false" />
-  </a-space>
+    <pf-range-picker v-model:value="value6" :bordered="false" />
+    <pf-range-picker v-model:value="value7" picker="week" :bordered="false" />
+    <pf-range-picker v-model:value="value8" picker="month" :bordered="false" />
+    <pf-range-picker v-model:value="value9" picker="year" :bordered="false" />
+  </pf-space>
 </template>
 <script lang="ts">
 import { defineComponent, ref } from 'vue';

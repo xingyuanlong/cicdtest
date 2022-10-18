@@ -17,14 +17,14 @@ Complex error feedback.
 </docs>
 
 <template>
-  <a-result
+  <pf-result
     status="error"
     title="Submission Failed"
     sub-title="Please check and modify the following information before resubmitting."
   >
     <template #extra>
-      <a-button key="console" type="primary">Go Console</a-button>
-      <a-button key="buy">Buy Again</a-button>
+      <pf-button key="console" type="primary">Go Console</pf-button>
+      <pf-button key="buy">Buy Again</pf-button>
     </template>
 
     <div class="desc">
@@ -42,7 +42,7 @@ Complex error feedback.
         <a>Apply Unlock &gt;</a>
       </p>
     </div>
-  </a-result>
+  </pf-result>
 </template>
 <script lang="ts">
 import { CloseCircleOutlined } from '@ant-design/icons-vue';

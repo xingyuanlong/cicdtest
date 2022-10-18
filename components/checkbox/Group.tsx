@@ -6,7 +6,7 @@ import type { CheckboxOptionType } from './interface';
 import { CheckboxGroupContextKey, checkboxGroupProps } from './interface';
 
 export default defineComponent({
-  name: 'ACheckboxGroup',
+  name: 'PfCheckboxGroup',
   props: checkboxGroupProps(),
   // emits: ['change', 'update:value'],
   setup(props, { slots, emit, expose }) {

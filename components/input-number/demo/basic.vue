@@ -18,11 +18,11 @@ Numeric-only input box.
 
 <template>
   <div>
-    <a-input-number id="inputNumber" v-model:value="value1" :min="1" :max="10" />
+    <pf-input-number id="inputNumber" v-model:value="value1" :min="1" :max="10" />
     当前值：{{ value1 }}
     <br />
     <br />
-    <a-input-number id="inputNumber" v-model:value="value2" :min="1" :max="10"  handlerSize="large" />
+    <pf-input-number id="inputNumber" v-model:value="value2" :min="1" :max="10"  handlerSize="large" />
     当前值：{{ value2 }}
   </div>
 </template>

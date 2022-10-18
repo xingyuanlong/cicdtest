@@ -16,18 +16,18 @@ Classic mode. File selection dialog pops up when upload button is clicked.
 </docs>
 
 <template>
-  <a-upload
+  <pf-upload
     v-model:file-list="fileList"
     name="file"
     action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
     :headers="headers"
     @change="handleChange"
   >
-    <a-button>
+    <pf-button>
       <upload-outlined></upload-outlined>
       Click to Upload
-    </a-button>
-  </a-upload>
+    </pf-button>
+  </pf-upload>
 </template>
 <script lang="ts">
 import { message } from 'pf-ui-vue';

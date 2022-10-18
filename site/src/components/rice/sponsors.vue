@@ -16,13 +16,13 @@
           </a>
         </li>
         <li class="sponsorsItem" style="padding: 10px 0">
-          <a-button type="primary" ghost style="font-size: 12px" @click="handleClick">
+          <pf-button type="primary" ghost style="font-size: 12px" @click="handleClick">
             {{ isCN ? '成为赞助商' : 'Become a Sponsor' }}
-          </a-button>
+          </pf-button>
         </li>
       </ul>
     </div>
-    <a-modal v-model:visible="visible" title="成为赞助商" @ok="visible = false">
+    <pf-modal v-model:visible="visible" title="成为赞助商" @ok="visible = false">
       如果您有品牌推广、活动推广、招聘推广、社区合作等需求，欢迎联系我们，成为赞助商。
       <br />
       您的广告将出现在 And Design Vue 文档所有子页面及 GitHub Readme 等页面。
@@ -30,7 +30,7 @@
       咨询邮箱：
       <a href="mailto:antdv@foxmail.com">antdv@foxmail.com</a>
       <br />
-    </a-modal>
+    </pf-modal>
   </div>
 </template>
 <script>

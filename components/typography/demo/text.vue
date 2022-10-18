@@ -15,21 +15,21 @@ title:
 Provides multiple types of text and link.
 </docs>
 <template>
-  <a-space direction="vertical">
-    <a-typography-text>pf-ui-vue (default)</a-typography-text>
-    <a-typography-text type="secondary">pf-ui-vue (secondary)</a-typography-text>
-    <a-typography-text type="success">pf-ui-vue (success)</a-typography-text>
-    <a-typography-text type="warning">pf-ui-vue (warning)</a-typography-text>
-    <a-typography-text type="danger">pf-ui-vue (danger)</a-typography-text>
-    <a-typography-text disabled>pf-ui-vue (disabled)</a-typography-text>
-    <a-typography-text mark>pf-ui-vue (mark)</a-typography-text>
-    <a-typography-text code>pf-ui-vue (code)</a-typography-text>
-    <a-typography-text keyboard>pf-ui-vue (keyboard)</a-typography-text>
-    <a-typography-text underline>pf-ui-vue (underline)</a-typography-text>
-    <a-typography-text delete>pf-ui-vue (delete)</a-typography-text>
-    <a-typography-text strong>pf-ui-vue (strong)</a-typography-text>
-    <a-typography-link href="/" target="_blank">
+  <pf-space direction="vertical">
+    <pf-typography-text>pf-ui-vue (default)</pf-typography-text>
+    <pf-typography-text type="secondary">pf-ui-vue (secondary)</pf-typography-text>
+    <pf-typography-text type="success">pf-ui-vue (success)</pf-typography-text>
+    <pf-typography-text type="warning">pf-ui-vue (warning)</pf-typography-text>
+    <pf-typography-text type="danger">pf-ui-vue (danger)</pf-typography-text>
+    <pf-typography-text disabled>pf-ui-vue (disabled)</pf-typography-text>
+    <pf-typography-text mark>pf-ui-vue (mark)</pf-typography-text>
+    <pf-typography-text code>pf-ui-vue (code)</pf-typography-text>
+    <pf-typography-text keyboard>pf-ui-vue (keyboard)</pf-typography-text>
+    <pf-typography-text underline>pf-ui-vue (underline)</pf-typography-text>
+    <pf-typography-text delete>pf-ui-vue (delete)</pf-typography-text>
+    <pf-typography-text strong>pf-ui-vue (strong)</pf-typography-text>
+    <pf-typography-link href="/" target="_blank">
       pf-ui-vue (Link)
-    </a-typography-link>
-  </a-space>
+    </pf-typography-link>
+  </pf-space>
 </template>

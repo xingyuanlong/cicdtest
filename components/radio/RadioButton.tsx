@@ -5,7 +5,7 @@ import useConfigInject from '../_util/hooks/useConfigInject';
 import type { RadioGroupContext } from './interface';
 
 export default defineComponent({
-  name: 'ARadioButton',
+  name: 'PfRadioButton',
   props: radioProps(),
   setup(props, { slots }) {
     const { prefixCls } = useConfigInject('radio-button', props);

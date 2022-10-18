@@ -39,7 +39,7 @@ export const AutoCompleteOption = Option;
 export const AutoCompleteOptGroup = OptGroup;
 
 const AutoComplete = defineComponent({
-  name: 'AAutoComplete',
+  name: 'PfAutoComplete',
   inheritAttrs: false,
   props: autoCompleteProps(),
   // emits: ['change', 'select', 'focus', 'blur'],

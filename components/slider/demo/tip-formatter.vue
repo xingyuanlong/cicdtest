@@ -17,8 +17,8 @@ Use `tipFormatter` to format content of `Tooltip`. If `tipFormatter` is null, hi
 
 <template>
   <div>
-    <a-slider :tip-formatter="formatter" />
-    <a-slider :tip-formatter="null" />
+    <pf-slider :tip-formatter="formatter" />
+    <pf-slider :tip-formatter="null" />
   </div>
 </template>
 <script lang="ts">

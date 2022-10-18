@@ -16,23 +16,23 @@ Custom suffix icon
 
 </docs>
 <template>
-  <a-space>
-    <a-cascader
+  <pf-space>
+    <pf-cascader
       v-model:value="value1"
       style="margin-top: 1rem"
       :options="options"
       placeholder="Please select"
     >
       <template #suffixIcon><smile-outlined class="test" /></template>
-    </a-cascader>
-    <a-cascader
+    </pf-cascader>
+    <pf-cascader
       v-model:value="value2"
       suffix-icon="ab"
       style="margin-top: 1rem"
       :options="options"
       placeholder="Please select"
     />
-  </a-space>
+  </pf-space>
 </template>
 <script lang="ts">
 import { SmileOutlined } from '@ant-design/icons-vue';

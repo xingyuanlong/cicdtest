@@ -17,18 +17,18 @@ Usually used for reminders and notifications.
 
 <template>
   <span style="margin-right: 24px">
-    <a-badge :count="1">
-      <a-avatar shape="square">
+    <pf-badge :count="1">
+      <pf-avatar shape="square">
         <template #icon><UserOutlined /></template>
-      </a-avatar>
-    </a-badge>
+      </pf-avatar>
+    </pf-badge>
   </span>
   <span>
-    <a-badge dot>
-      <a-avatar shape="square">
+    <pf-badge dot>
+      <pf-avatar shape="square">
         <template #icon><UserOutlined /></template>
-      </a-avatar>
-    </a-badge>
+      </pf-avatar>
+    </pf-badge>
   </span>
 </template>
 

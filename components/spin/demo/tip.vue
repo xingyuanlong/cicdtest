@@ -17,10 +17,10 @@ Customized description content.
 </docs>
 
 <template>
-  <a-spin tip="Loading...">
-    <a-alert
+  <pf-spin tip="Loading...">
+    <pf-alert
       message="Alert message title"
       description="Further details about the context of this alert."
-    ></a-alert>
-  </a-spin>
+    ></pf-alert>
+  </pf-spin>
 </template>

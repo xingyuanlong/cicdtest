@@ -16,28 +16,28 @@ A loading indicator can be added to a button by setting the `loading` property o
 </docs>
 
 <template>
-   <a-space style="width: 100%">
-    <a-button type="primary" :loading="{dotted: true}">Loading</a-button>
-    <a-button :loading="{dotted: true}">Loading</a-button>
-  </a-space>
-  <a-space style="width: 100%">
-    <a-button type="primary" loading>Loading</a-button>
-    <a-button type="primary" size="small" loading>Loading</a-button>
-  </a-space>
-  <a-space style="width: 100%">
-    <a-button type="primary" :loading="loading" @mouseenter="loading = true">
+   <pf-space style="width: 100%">
+    <pf-button type="primary" :loading="{dotted: true}">Loading</pf-button>
+    <pf-button :loading="{dotted: true}">Loading</pf-button>
+  </pf-space>
+  <pf-space style="width: 100%">
+    <pf-button type="primary" loading>Loading</pf-button>
+    <pf-button type="primary" size="small" loading>Loading</pf-button>
+  </pf-space>
+  <pf-space style="width: 100%">
+    <pf-button type="primary" :loading="loading" @mouseenter="loading = true">
       mouseenter me!
-    </a-button>
-    <a-button type="primary" :loading="iconLoading" @click="enterIconLoading">
+    </pf-button>
+    <pf-button type="primary" :loading="iconLoading" @click="enterIconLoading">
       <template #icon><PoweroffOutlined /></template>
       延迟1s
-    </a-button>
-  </a-space>
-  <a-space style="width: 100%">
-    <a-button type="primary" loading />
-    <a-button type="primary" shape="circle" loading />
-    <a-button danger shape="round" loading />
-  </a-space>
+    </pf-button>
+  </pf-space>
+  <pf-space style="width: 100%">
+    <pf-button type="primary" loading />
+    <pf-button type="primary" shape="circle" loading />
+    <pf-button danger shape="round" loading />
+  </pf-space>
 
 </template>
 <script lang="ts">

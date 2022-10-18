@@ -18,15 +18,15 @@ A dynamic progress bar is better.
 
 <template>
   <div>
-    <a-progress type="circle" :percent="defaultPercent" />
-    <a-button-group>
-      <a-button @click="decline">
+    <pf-progress type="circle" :percent="defaultPercent" />
+    <pf-button-group>
+      <pf-button @click="decline">
         <template #icon><minus-outlined /></template>
-      </a-button>
-      <a-button @click="increase">
+      </pf-button>
+      <pf-button @click="increase">
         <template #icon><plus-outlined /></template>
-      </a-button>
-    </a-button-group>
+      </pf-button>
+    </pf-button-group>
   </div>
 </template>
 <script lang="ts">

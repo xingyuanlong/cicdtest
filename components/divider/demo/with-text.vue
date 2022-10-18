@@ -20,31 +20,31 @@ Divider with inner title, set `orientation="left/right"` to align it.
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista
     probare, quae sunt a te dicta? Refert tamen, quo modo.
   </p>
-  <a-divider>Text</a-divider>
+  <pf-divider>Text</pf-divider>
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista
     probare, quae sunt a te dicta? Refert tamen, quo modo.
   </p>
-  <a-divider orientation="left">Left Text</a-divider>
+  <pf-divider orientation="left">Left Text</pf-divider>
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista
     probare, quae sunt a te dicta? Refert tamen, quo modo.
   </p>
-  <a-divider orientation="right">Right Text</a-divider>
+  <pf-divider orientation="right">Right Text</pf-divider>
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista
     probare, quae sunt a te dicta? Refert tamen, quo modo.
   </p>
-  <a-divider orientation="left" orientation-margin="0px">
+  <pf-divider orientation="left" orientation-margin="0px">
     Left Text with 0 orientationMargin
-  </a-divider>
+  </pf-divider>
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista
     probare, quae sunt a te dicta? Refert tamen, quo modo.
   </p>
-  <a-divider orientation="right" orientation-margin="50px">
+  <pf-divider orientation="right" orientation-margin="50px">
     Right Text with 50px orientationMargin
-  </a-divider>
+  </pf-divider>
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista
     probare, quae sunt a te dicta? Refert tamen, quo modo.

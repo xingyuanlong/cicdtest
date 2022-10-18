@@ -17,7 +17,7 @@ The server is wrong.
 </docs>
 
 <template>
-  <a-result status="noResult">
-  </a-result>
+  <pf-result status="noResult">
+  </pf-result>
 </template>
   

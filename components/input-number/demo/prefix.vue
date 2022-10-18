@@ -17,17 +17,17 @@ Add a prefix inside input.
 </docs>
 
 <template>
-  <a-input-number v-model:value="value1" prefix="￥" style="width: 100%" />
+  <pf-input-number v-model:value="value1" prefix="￥" style="width: 100%" />
   <br />
   <br />
-  <a-input-number v-model:value="value2" prefix="￥" style="width: 100%">
+  <pf-input-number v-model:value="value2" prefix="￥" style="width: 100%">
     <template #addonBefore>
       <UserOutlined />
     </template>
-  </a-input-number>
+  </pf-input-number>
   <br />
   <br />
-  <a-input-number v-model:value="value3" prefix="￥" disabled style="width: 100%" />
+  <pf-input-number v-model:value="value3" prefix="￥" disabled style="width: 100%" />
 </template>
 <script lang="ts">
 import { defineComponent, ref } from 'vue';

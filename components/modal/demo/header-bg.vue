@@ -18,13 +18,13 @@ headerBg.
 
 <template>
   <div>
-    <a-button type="primary" @click="showModal">Open Modal</a-button>
-    <a-modal v-model:visible="visible" title="Basic Modal" @ok="handleOk" :header-bg="headerBg">
-      <a-radio-group v-model:value="headerBg" name="radioGroup">
-        <a-radio :value="true">有背景色</a-radio>
-        <a-radio :value="false">无背景色</a-radio>
-      </a-radio-group>
-    </a-modal>
+    <pf-button type="primary" @click="showModal">Open Modal</pf-button>
+    <pf-modal v-model:visible="visible" title="Basic Modal" @ok="handleOk" :header-bg="headerBg">
+      <pf-radio-group v-model:value="headerBg" name="radioGroup">
+        <pf-radio :value="true">有背景色</pf-radio>
+        <pf-radio :value="false">无背景色</pf-radio>
+      </pf-radio-group>
+    </pf-modal>
   </div>
 </template>
 <script lang="ts">

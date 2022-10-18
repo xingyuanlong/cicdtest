@@ -52,7 +52,7 @@ function defaultItemRender(opt: {
 }
 
 export default defineComponent({
-  name: 'ABreadcrumb',
+  name: 'PfBreadcrumb',
   props: breadcrumbProps(),
   slots: ['separator', 'itemRender'],
   setup(props, { slots }) {

@@ -18,16 +18,16 @@ Generating a set of Tags by array, you can add and remove dynamically.
 
 <template>
   <template v-for="(tag, index) in tags" :key="tag">
-    <a-tooltip v-if="tag.length > 20" :title="tag">
-      <a-tag :closable="index !== 0" @close="handleClose(tag)">
+    <pf-tooltip v-if="tag.length > 20" :title="tag">
+      <pf-tag :closable="index !== 0" @close="handleClose(tag)">
         {{ `${tag.slice(0, 20)}...` }}
-      </a-tag>
-    </a-tooltip>
-    <a-tag v-else :closable="index !== 0" @close="handleClose(tag)">
+      </pf-tag>
+    </pf-tooltip>
+    <pf-tag v-else :closable="index !== 0" @close="handleClose(tag)">
       {{ tag }}
-    </a-tag>
+    </pf-tag>
   </template>
-  <a-input
+  <pf-input
     v-if="inputVisible"
     ref="inputRef"
     v-model:value="inputValue"
@@ -37,10 +37,10 @@ Generating a set of Tags by array, you can add and remove dynamically.
     @blur="handleInputConfirm"
     @keyup.enter="handleInputConfirm"
   />
-  <a-tag v-else style="background: #fff; border-style: dashed" @click="showInput">
+  <pf-tag v-else style="background: #fff; border-style: dashed" @click="showInput">
     <plus-outlined />
     New Tag
-  </a-tag>
+  </pf-tag>
 </template>
 <script lang="ts">
 import { defineComponent, ref, reactive, toRefs, nextTick } from 'vue';

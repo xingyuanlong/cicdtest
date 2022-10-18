@@ -18,9 +18,9 @@ title:
 
 <template>
   <div>
-    <a-switch v-model:checked="checked1" />
+    <pf-switch v-model:checked="checked1" />
     <br />
-    <a-switch v-model:checked="checked2" size="small" />
+    <pf-switch v-model:checked="checked2" size="small" />
   </div>
 </template>
 

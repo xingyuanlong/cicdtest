@@ -17,7 +17,7 @@ Basic pagination.
 </docs>
 
 <template>
-  <a-pagination v-model:current="current" :total="50" show-less-items />
+  <pf-pagination v-model:current="current" :total="50" show-less-items />
 </template>
 <script lang="ts">
 import { defineComponent, ref } from 'vue';

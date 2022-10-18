@@ -18,13 +18,13 @@ You can control the order of the expand and select columns by using `Table.EXPAN
 </docs>
 
 <template>
-  <a-table :columns="columns" :data-source="data" :row-selection="{}">
+  <pf-table :columns="columns" :data-source="data" :row-selection="{}">
     <template #expandedRowRender="{ record }">
       <p style="margin: 0">
         {{ record.description }}
       </p>
     </template>
-  </a-table>
+  </pf-table>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';

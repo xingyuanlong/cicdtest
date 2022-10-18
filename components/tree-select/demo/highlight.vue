@@ -17,7 +17,7 @@ Search Value Hightlight
 </docs>
 
 <template>
-  <a-tree-select
+  <pf-tree-select
     v-model:value="value"
     v-model:searchValue="searchValue"
     show-search
@@ -47,7 +47,7 @@ Search Value Hightlight
         </template>
       </template>
     </template>
-  </a-tree-select>
+  </pf-tree-select>
 </template>
 <script lang="ts">
 import type { TreeSelectProps } from 'pf-ui-vue';

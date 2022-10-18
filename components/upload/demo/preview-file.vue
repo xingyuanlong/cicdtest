@@ -17,17 +17,17 @@ Customize local preview. Can handle with non-image format files such as video.
 
 <template>
   <div>
-    <a-upload
+    <pf-upload
       v-model:file-list="fileList"
       list-type="picture"
       action="//jsonplaceholder.typicode.com/posts/"
       :preview-file="previewFile"
     >
-      <a-button>
+      <pf-button>
         <upload-outlined></upload-outlined>
         Upload
-      </a-button>
-    </a-upload>
+      </pf-button>
+    </pf-upload>
   </div>
 </template>
 <script lang="ts">

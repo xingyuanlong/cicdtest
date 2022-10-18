@@ -20,47 +20,47 @@ If a large or small button is desired, set the `size` property to either `large`
 </docs>
 
 <template>
-  <a-radio-group v-model:value="size">
-    <a-radio-button value="large">Large</a-radio-button>
-    <a-radio-button value="default">Default</a-radio-button>
-    <a-radio-button value="small">Small</a-radio-button>
-  </a-radio-group>
+  <pf-radio-group v-model:value="size">
+    <pf-radio-button value="large">Large</pf-radio-button>
+    <pf-radio-button value="default">Default</pf-radio-button>
+    <pf-radio-button value="small">Small</pf-radio-button>
+  </pf-radio-group>
   <br />
   <br />
-  <a-button type="primary" :size="size">Primary</a-button>
-  <a-button type="secondary" :size="size">Secondary</a-button>
-  <a-button :size="size">Normal</a-button>
-  <a-button type="dashed" :size="size">Dashed</a-button>
-  <a-button danger :size="size">Danger</a-button>
-  <a-button type="link" :size="size">Link</a-button>
+  <pf-button type="primary" :size="size">Primary</pf-button>
+  <pf-button type="secondary" :size="size">Secondary</pf-button>
+  <pf-button :size="size">Normal</pf-button>
+  <pf-button type="dashed" :size="size">Dashed</pf-button>
+  <pf-button danger :size="size">Danger</pf-button>
+  <pf-button type="link" :size="size">Link</pf-button>
   <br />
-  <a-button type="primary" :size="size">
+  <pf-button type="primary" :size="size">
     <template #icon>
       <DownloadOutlined />
     </template>
-  </a-button>
-  <a-button type="primary" shape="circle" :size="size">
+  </pf-button>
+  <pf-button type="primary" shape="circle" :size="size">
     <template #icon>
       <DownloadOutlined />
     </template>
-  </a-button>
-  <a-button type="primary" shape="round" :size="size">
+  </pf-button>
+  <pf-button type="primary" shape="round" :size="size">
     <template #icon>
       <DownloadOutlined />
     </template>
     Download
-  </a-button>
-  <a-button type="primary" shape="round" :size="size">
+  </pf-button>
+  <pf-button type="primary" shape="round" :size="size">
     <template #icon>
       <DownloadOutlined />
     </template>
-  </a-button>
-  <a-button type="primary" :size="size">
+  </pf-button>
+  <pf-button type="primary" :size="size">
     <template #icon>
       <DownloadOutlined />
     </template>
     Download
-  </a-button>
+  </pf-button>
   <br />
 </template>
 <script lang="ts">

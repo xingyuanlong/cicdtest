@@ -8,7 +8,7 @@ title:
 
 ## zh-CN
 
-你可以通过 `:showArrow="false"` 隐藏 `a-collapse-panel` 组件的箭头图标。
+你可以通过 `:showArrow="false"` 隐藏 `pf-collapse-panel` 组件的箭头图标。
 
 ## en-US
 You can hide the arrow icon by passing `showArrow={false}` to `CollapsePanel` component.
@@ -16,14 +16,14 @@ You can hide the arrow icon by passing `showArrow={false}` to `CollapsePanel` co
 </docs>
 
 <template>
-  <a-collapse v-model:activeKey="activeKey">
-    <a-collapse-panel key="1" header="This is panel header with arrow icon">
+  <pf-collapse v-model:activeKey="activeKey">
+    <pf-collapse-panel key="1" header="This is panel header with arrow icon">
       <p>{{ text }}</p>
-    </a-collapse-panel>
-    <a-collapse-panel key="2" header="This is panel header with no arrow icon" :show-arrow="false">
+    </pf-collapse-panel>
+    <pf-collapse-panel key="2" header="This is panel header with no arrow icon" :show-arrow="false">
       <p>{{ text }}</p>
-    </a-collapse-panel>
-  </a-collapse>
+    </pf-collapse-panel>
+  </pf-collapse>
 </template>
 <script lang="ts">
 import { defineComponent, ref, watch } from 'vue';

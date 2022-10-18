@@ -21,19 +21,19 @@ Set the size to `large` and `middle` by setting size to large and middle respect
 
 <template>
   <div>
-    <a-radio-group v-model:value="size">
-      <a-radio value="small">Small</a-radio>
-      <a-radio value="middle">Middle</a-radio>
-      <a-radio value="large">Large</a-radio>
-    </a-radio-group>
+    <pf-radio-group v-model:value="size">
+      <pf-radio value="small">Small</pf-radio>
+      <pf-radio value="middle">Middle</pf-radio>
+      <pf-radio value="large">Large</pf-radio>
+    </pf-radio-group>
     <br />
     <br />
-    <a-space :size="size">
-      <a-button type="primary">Primary</a-button>
-      <a-button>Default</a-button>
-      <a-button type="dashed">Dashed</a-button>
-      <a-button type="link">Link</a-button>
-    </a-space>
+    <pf-space :size="size">
+      <pf-button type="primary">Primary</pf-button>
+      <pf-button>Default</pf-button>
+      <pf-button type="dashed">Dashed</pf-button>
+      <pf-button type="link">Link</pf-button>
+    </pf-space>
   </div>
 </template>
 <script>

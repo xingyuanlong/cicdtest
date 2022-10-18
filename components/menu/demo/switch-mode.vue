@@ -18,56 +18,56 @@ Show the dynamic switching mode (between `inline` and `vertical`).
 
 <template>
   <div>
-    <a-switch :checked="mode === 'vertical'" @change="changeMode" />
+    <pf-switch :checked="mode === 'vertical'" @change="changeMode" />
     Change Mode
     <span class="ant-divider" style="margin: 0 1em" />
-    <a-switch :checked="theme === 'dark'" @change="changeTheme" />
+    <pf-switch :checked="theme === 'dark'" @change="changeTheme" />
     Change Theme
     <br />
     <br />
-    <a-menu
+    <pf-menu
       v-model:openKeys="openKeys"
       v-model:selectedKeys="selectedKeys"
       style="width: 256px"
       :mode="mode"
       :theme="theme"
     >
-      <a-menu-item key="1">
+      <pf-menu-item key="1">
         <template #icon>
           <MailOutlined />
         </template>
         Navigation One
-      </a-menu-item>
-      <a-menu-item key="2">
+      </pf-menu-item>
+      <pf-menu-item key="2">
         <template #icon>
           <CalendarOutlined />
         </template>
         Navigation Two
-      </a-menu-item>
-      <a-sub-menu key="sub1">
+      </pf-menu-item>
+      <pf-sub-menu key="sub1">
         <template #icon>
           <AppstoreOutlined />
         </template>
         <template #title>Navigation Three</template>
-        <a-menu-item key="3">Option 3</a-menu-item>
-        <a-menu-item key="4">Option 4</a-menu-item>
-        <a-sub-menu key="sub1-2" title="Submenu">
-          <a-menu-item key="5">Option 5</a-menu-item>
-          <a-menu-item key="6">Option 6</a-menu-item>
-        </a-sub-menu>
-      </a-sub-menu>
-      <a-sub-menu key="sub2">
+        <pf-menu-item key="3">Option 3</pf-menu-item>
+        <pf-menu-item key="4">Option 4</pf-menu-item>
+        <pf-sub-menu key="sub1-2" title="Submenu">
+          <pf-menu-item key="5">Option 5</pf-menu-item>
+          <pf-menu-item key="6">Option 6</pf-menu-item>
+        </pf-sub-menu>
+      </pf-sub-menu>
+      <pf-sub-menu key="sub2">
         <template #icon>
           <SettingOutlined />
         </template>
 
         <template #title>Navigation Four</template>
-        <a-menu-item key="7">Option 7</a-menu-item>
-        <a-menu-item key="8">Option 8</a-menu-item>
-        <a-menu-item key="9">Option 9</a-menu-item>
-        <a-menu-item key="10">Option 10</a-menu-item>
-      </a-sub-menu>
-    </a-menu>
+        <pf-menu-item key="7">Option 7</pf-menu-item>
+        <pf-menu-item key="8">Option 8</pf-menu-item>
+        <pf-menu-item key="9">Option 9</pf-menu-item>
+        <pf-menu-item key="10">Option 10</pf-menu-item>
+      </pf-sub-menu>
+    </pf-menu>
   </div>
 </template>
 <script lang="ts">

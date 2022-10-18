@@ -3,7 +3,7 @@
     <login ref="login" :default-active-key="type" @submit="handleSubmit">
       <tab key="account" :tab="$t('userandlogin.login.tab-login-credentials')">
         <template v-if="status === 'error' && type === 'account' && !submitting">
-          <a-alert
+          <pf-alert
             style="margin-bottom: 24px"
             :message="$t('userandlogin.login.message-invalid-credentials')"
             type="error"
@@ -32,7 +32,7 @@
         />
       </tab>
       <div>
-        <!-- <a-checkbox :checked="autoLogin" @change="changeAutoLogin">自动登录</a-checkbox> -->
+        <!-- <pf-checkbox :checked="autoLogin" @change="changeAutoLogin">自动登录</pf-checkbox> -->
         <!-- <a style="float: right" href>忘记密码</a> -->
       </div>
       <submit :loading="submitting">

@@ -17,98 +17,98 @@ There are 12 `placement` options available. Use `arrowPointAtCenter` if you want
 </docs>
 
 <template>
-  <div id="components-a-popconfirm-demo-placement">
+  <div id="components-pf-popconfirm-demo-placement">
     <div :style="{ marginLeft: `${buttonWidth}px`, whiteSpace: 'nowrap' }">
-      <a-popconfirm placement="topLeft" ok-text="Yes" cancel-text="No" @confirm="confirm">
+      <pf-popconfirm placement="topLeft" ok-text="Yes" cancel-text="No" @confirm="confirm">
         <template #title>
           <p>{{ text }}</p>
           <p>{{ text }}</p>
         </template>
-        <a-button>TL</a-button>
-      </a-popconfirm>
-      <a-popconfirm placement="top" ok-text="Yes" cancel-text="No" @confirm="confirm">
+        <pf-button>TL</pf-button>
+      </pf-popconfirm>
+      <pf-popconfirm placement="top" ok-text="Yes" cancel-text="No" @confirm="confirm">
         <template #title>
           <p>{{ text }}</p>
           <p>{{ text }}</p>
         </template>
-        <a-button>Top</a-button>
-      </a-popconfirm>
-      <a-popconfirm placement="topRight" ok-text="Yes" cancel-text="No" @confirm="confirm">
+        <pf-button>Top</pf-button>
+      </pf-popconfirm>
+      <pf-popconfirm placement="topRight" ok-text="Yes" cancel-text="No" @confirm="confirm">
         <template #title>
           <p>{{ text }}</p>
           <p>{{ text }}</p>
         </template>
-        <a-button>TR</a-button>
-      </a-popconfirm>
+        <pf-button>TR</pf-button>
+      </pf-popconfirm>
     </div>
     <div :style="{ width: `${buttonWidth}px`, float: 'left' }">
-      <a-popconfirm placement="leftTop" ok-text="Yes" cancel-text="No" @confirm="confirm">
+      <pf-popconfirm placement="leftTop" ok-text="Yes" cancel-text="No" @confirm="confirm">
         <template #title>
           <p>{{ text }}</p>
           <p>{{ text }}</p>
         </template>
-        <a-button>LT</a-button>
-      </a-popconfirm>
-      <a-popconfirm placement="left" ok-text="Yes" cancel-text="No" @confirm="confirm">
+        <pf-button>LT</pf-button>
+      </pf-popconfirm>
+      <pf-popconfirm placement="left" ok-text="Yes" cancel-text="No" @confirm="confirm">
         <template #title>
           <p>{{ text }}</p>
           <p>{{ text }}</p>
         </template>
-        <a-button>Left</a-button>
-      </a-popconfirm>
-      <a-popconfirm placement="leftBottom" ok-text="Yes" cancel-text="No" @confirm="confirm">
+        <pf-button>Left</pf-button>
+      </pf-popconfirm>
+      <pf-popconfirm placement="leftBottom" ok-text="Yes" cancel-text="No" @confirm="confirm">
         <template #title>
           <p>{{ text }}</p>
           <p>{{ text }}</p>
         </template>
-        <a-button>LB</a-button>
-      </a-popconfirm>
+        <pf-button>LB</pf-button>
+      </pf-popconfirm>
     </div>
     <div :style="{ width: `${buttonWidth}px`, marginLeft: `${buttonWidth * 4 + 24}px` }">
-      <a-popconfirm placement="rightTop" ok-text="Yes" cancel-text="No" @confirm="confirm">
+      <pf-popconfirm placement="rightTop" ok-text="Yes" cancel-text="No" @confirm="confirm">
         <template #title>
           <p>{{ text }}</p>
           <p>{{ text }}</p>
         </template>
-        <a-button>RT</a-button>
-      </a-popconfirm>
-      <a-popconfirm placement="right" ok-text="Yes" cancel-text="No" @confirm="confirm">
+        <pf-button>RT</pf-button>
+      </pf-popconfirm>
+      <pf-popconfirm placement="right" ok-text="Yes" cancel-text="No" @confirm="confirm">
         <template #title>
           <p>{{ text }}</p>
           <p>{{ text }}</p>
         </template>
-        <a-button>Right</a-button>
-      </a-popconfirm>
-      <a-popconfirm placement="rightBottom" ok-text="Yes" cancel-text="No" @confirm="confirm">
+        <pf-button>Right</pf-button>
+      </pf-popconfirm>
+      <pf-popconfirm placement="rightBottom" ok-text="Yes" cancel-text="No" @confirm="confirm">
         <template #title>
           <p>{{ text }}</p>
           <p>{{ text }}</p>
         </template>
-        <a-button>RB</a-button>
-      </a-popconfirm>
+        <pf-button>RB</pf-button>
+      </pf-popconfirm>
     </div>
     <div :style="{ marginLeft: `${buttonWidth}px`, clear: 'both', whiteSpace: 'nowrap' }">
-      <a-popconfirm placement="bottomLeft" ok-text="Yes" cancel-text="No" @confirm="confirm">
+      <pf-popconfirm placement="bottomLeft" ok-text="Yes" cancel-text="No" @confirm="confirm">
         <template #title>
           <p>{{ text }}</p>
           <p>{{ text }}</p>
         </template>
-        <a-button>BL</a-button>
-      </a-popconfirm>
-      <a-popconfirm placement="bottom" ok-text="Yes" cancel-text="No" @confirm="confirm">
+        <pf-button>BL</pf-button>
+      </pf-popconfirm>
+      <pf-popconfirm placement="bottom" ok-text="Yes" cancel-text="No" @confirm="confirm">
         <template #title>
           <p>{{ text }}</p>
           <p>{{ text }}</p>
         </template>
-        <a-button>Bottom</a-button>
-      </a-popconfirm>
-      <a-popconfirm placement="bottomRight" ok-text="Yes" cancel-text="No" @confirm="confirm">
+        <pf-button>Bottom</pf-button>
+      </pf-popconfirm>
+      <pf-popconfirm placement="bottomRight" ok-text="Yes" cancel-text="No" @confirm="confirm">
         <template #title>
           <p>{{ text }}</p>
           <p>{{ text }}</p>
         </template>
-        <a-button>BR</a-button>
-      </a-popconfirm>
+        <pf-button>BR</pf-button>
+      </pf-popconfirm>
     </div>
   </div>
 </template>
@@ -133,7 +133,7 @@ export default defineComponent({
 });
 </script>
 <style scoped>
-#components-a-popconfirm-demo-placement .ant-btn {
+#components-pf-popconfirm-demo-placement .ant-btn {
   width: 70px;
   text-align: center;
   padding: 0;

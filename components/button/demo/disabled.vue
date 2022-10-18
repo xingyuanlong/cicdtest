@@ -16,36 +16,36 @@ To mark a button as disabled, add the `disabled` property to the `Button`.
 </docs>
 
 <template>
-  <a-button type="primary">Primary</a-button>
-  <a-button type="primary" disabled>Primary(disabled)</a-button>
+  <pf-button type="primary">Primary</pf-button>
+  <pf-button type="primary" disabled>Primary(disabled)</pf-button>
   <br />
-  <a-button type="secondary">Secondary</a-button>
-  <a-button type="secondary" disabled>Secondary(disabled)</a-button>
+  <pf-button type="secondary">Secondary</pf-button>
+  <pf-button type="secondary" disabled>Secondary(disabled)</pf-button>
   <br />
-  <a-button>Default</a-button>
-  <a-button disabled>Default(disabled)</a-button>
+  <pf-button>Default</pf-button>
+  <pf-button disabled>Default(disabled)</pf-button>
   <br />
-  <a-button type="dashed">Dashed</a-button>
-  <a-button type="dashed" disabled>Dashed(disabled)</a-button>
+  <pf-button type="dashed">Dashed</pf-button>
+  <pf-button type="dashed" disabled>Dashed(disabled)</pf-button>
   <br />
-  <a-button type="text">Text</a-button>
-  <a-button type="text" disabled>Text(disabled)</a-button>
+  <pf-button type="text">Text</pf-button>
+  <pf-button type="text" disabled>Text(disabled)</pf-button>
   <br />
-  <a-button type="link">Link</a-button>
-  <a-button type="link" disabled>Link(disabled)</a-button>
+  <pf-button type="link">Link</pf-button>
+  <pf-button type="link" disabled>Link(disabled)</pf-button>
   <br />
-  <a-button danger>Danger Default</a-button>
-  <a-button danger disabled>Danger Default(disabled)</a-button>
+  <pf-button danger>Danger Default</pf-button>
+  <pf-button danger disabled>Danger Default(disabled)</pf-button>
   <br />
-  <a-button type="text" danger>Danger Text</a-button>
-  <a-button type="text" danger disabled>Danger Text(disabled)</a-button>
+  <pf-button type="text" danger>Danger Text</pf-button>
+  <pf-button type="text" danger disabled>Danger Text(disabled)</pf-button>
   <br />
-  <a-button type="link" danger>Danger Link</a-button>
-  <a-button type="link" danger disabled>Danger Link(disabled)</a-button>
+  <pf-button type="link" danger>Danger Link</pf-button>
+  <pf-button type="link" danger disabled>Danger Link(disabled)</pf-button>
   <br />
 
   <div :style="{ padding: '8px 8px 0 8px', background: 'rgb(190, 200, 200)' }">
-    <a-button ghost>Ghost</a-button>
-    <a-button ghost disabled>Ghost(disabled)</a-button>
+    <pf-button ghost>Ghost</pf-button>
+    <pf-button ghost disabled>Ghost(disabled)</pf-button>
   </div>
 </template>

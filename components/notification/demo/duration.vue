@@ -19,7 +19,7 @@ the notification box will never close automatically.
 </docs>
 
 <template>
-  <a-button type="primary" @click="openNotification">Open the notification box</a-button>
+  <pf-button type="primary" @click="openNotification">Open the notification box</pf-button>
 </template>
 <script lang="ts">
 import { notification } from 'pf-ui-vue';

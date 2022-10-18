@@ -28,19 +28,19 @@ export default defineComponent({
       }
     });
     return (
-      <a-row gutter={16}>
-        <a-col
+      <pf-row gutter={16}>
+        <pf-col
           span={isSingleCol ? 24 : 12}
           class={isSingleCol ? 'code-boxes-col-1-1' : 'code-boxes-col-2-1'}
         >
           {leftChildren}
-        </a-col>
+        </pf-col>
         {isSingleCol ? null : (
-          <a-col class="code-boxes-col-2-1" span={12}>
+          <pf-col class="code-boxes-col-2-1" span={12}>
             {rightChildren}
-          </a-col>
+          </pf-col>
         )}
-      </a-row>
+      </pf-row>
     );
   },
 });

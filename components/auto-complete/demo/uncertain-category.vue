@@ -16,7 +16,7 @@ Lookup-Patterns - Uncertain Category.
 </docs>
 <template>
   <div class="global-search-wrapper" style="width: 300px">
-    <a-auto-complete
+    <pf-auto-complete
       v-model:value="value"
       :dropdown-match-select-width="252"
       style="width: 300px"
@@ -39,8 +39,8 @@ Lookup-Patterns - Uncertain Category.
           <span>{{ item.count }} results</span>
         </div>
       </template>
-      <a-input-search size="large" placeholder="input here" enter-button></a-input-search>
-    </a-auto-complete>
+      <pf-input-search size="large" placeholder="input here" enter-button></pf-input-search>
+    </pf-auto-complete>
   </div>
 </template>
 

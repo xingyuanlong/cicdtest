@@ -18,24 +18,24 @@ Custom sizes to fit in a variety of containers.
 
 <template>
   <div>
-    <a-radio-group v-model:value="size" @change="onChange">
-      <a-radio value="default">default</a-radio>
-      <a-radio value="middle">middle</a-radio>
-      <a-radio value="small">small</a-radio>
-    </a-radio-group>
+    <pf-radio-group v-model:value="size" @change="onChange">
+      <pf-radio value="default">default</pf-radio>
+      <pf-radio value="middle">middle</pf-radio>
+      <pf-radio value="small">small</pf-radio>
+    </pf-radio-group>
     <br />
     <br />
-    <a-descriptions bordered title="Custom Size" :size="size">
+    <pf-descriptions bordered title="Custom Size" :size="size">
       <template #extra>
-        <a-button type="primary">Edit</a-button>
+        <pf-button type="primary">Edit</pf-button>
       </template>
-      <a-descriptions-item label="Product">Cloud Database</a-descriptions-item>
-      <a-descriptions-item label="Billing">Prepaid</a-descriptions-item>
-      <a-descriptions-item label="Time">18:00:00</a-descriptions-item>
-      <a-descriptions-item label="Amount">$80.00</a-descriptions-item>
-      <a-descriptions-item label="Discount">$20.00</a-descriptions-item>
-      <a-descriptions-item label="Official">$60.00</a-descriptions-item>
-      <a-descriptions-item label="Config Info">
+      <pf-descriptions-item label="Product">Cloud Database</pf-descriptions-item>
+      <pf-descriptions-item label="Billing">Prepaid</pf-descriptions-item>
+      <pf-descriptions-item label="Time">18:00:00</pf-descriptions-item>
+      <pf-descriptions-item label="Amount">$80.00</pf-descriptions-item>
+      <pf-descriptions-item label="Discount">$20.00</pf-descriptions-item>
+      <pf-descriptions-item label="Official">$60.00</pf-descriptions-item>
+      <pf-descriptions-item label="Config Info">
         Data disk type: MongoDB
         <br />
         Database version: 3.4
@@ -48,21 +48,21 @@ Custom sizes to fit in a variety of containers.
         <br />
         Region: East China 1
         <br />
-      </a-descriptions-item>
-    </a-descriptions>
+      </pf-descriptions-item>
+    </pf-descriptions>
     <br />
     <br />
-    <a-descriptions title="Custom Size" :size="size">
+    <pf-descriptions title="Custom Size" :size="size">
       <template #extra>
-        <a-button type="primary">Edit</a-button>
+        <pf-button type="primary">Edit</pf-button>
       </template>
-      <a-descriptions-item label="Product">Cloud Database</a-descriptions-item>
-      <a-descriptions-item label="Billing">Prepaid</a-descriptions-item>
-      <a-descriptions-item label="Time">18:00:00</a-descriptions-item>
-      <a-descriptions-item label="Amount">$80.00</a-descriptions-item>
-      <a-descriptions-item label="Discount">$20.00</a-descriptions-item>
-      <a-descriptions-item label="Official">$60.00</a-descriptions-item>
-    </a-descriptions>
+      <pf-descriptions-item label="Product">Cloud Database</pf-descriptions-item>
+      <pf-descriptions-item label="Billing">Prepaid</pf-descriptions-item>
+      <pf-descriptions-item label="Time">18:00:00</pf-descriptions-item>
+      <pf-descriptions-item label="Amount">$80.00</pf-descriptions-item>
+      <pf-descriptions-item label="Discount">$20.00</pf-descriptions-item>
+      <pf-descriptions-item label="Official">$60.00</pf-descriptions-item>
+    </pf-descriptions>
   </div>
 </template>
 <script lang="ts">

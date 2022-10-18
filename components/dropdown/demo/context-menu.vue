@@ -17,7 +17,7 @@ The default trigger mode is `hover`, you can change it to `contextMenu`.
 </docs>
 
 <template>
-  <a-dropdown :trigger="['contextmenu']">
+  <pf-dropdown :trigger="['contextmenu']">
     <div
       :style="{
         textAlign: 'center',
@@ -30,11 +30,11 @@ The default trigger mode is `hover`, you can change it to `contextMenu`.
       Right Click on here
     </div>
     <template #overlay>
-      <a-menu>
-        <a-menu-item key="1">1st menu item</a-menu-item>
-        <a-menu-item key="2">2nd menu item</a-menu-item>
-        <a-menu-item key="3">3rd menu item</a-menu-item>
-      </a-menu>
+      <pf-menu>
+        <pf-menu-item key="1">1st menu item</pf-menu-item>
+        <pf-menu-item key="2">2nd menu item</pf-menu-item>
+        <pf-menu-item key="3">3rd menu item</pf-menu-item>
+      </pf-menu>
     </template>
-  </a-dropdown>
+  </pf-dropdown>
 </template>

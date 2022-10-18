@@ -17,7 +17,7 @@ Lookup-Patterns - Certain Category.
 
 <template>
   <div class="certain-category-search-wrapper" style="width: 250px">
-    <a-auto-complete
+    <pf-auto-complete
       v-model:value="value"
       class="certain-category-search"
       dropdown-class-name="certain-category-search-dropdown"
@@ -58,8 +58,8 @@ Lookup-Patterns - Certain Category.
           </div>
         </template>
       </template>
-      <a-input-search placeholder="input here" size="large"></a-input-search>
-    </a-auto-complete>
+      <pf-input-search placeholder="input here" size="large"></pf-input-search>
+    </pf-auto-complete>
   </div>
 </template>
 

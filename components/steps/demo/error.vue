@@ -15,9 +15,9 @@ title:
 By using `status` of `Steps`, you can specify the state for current step.
 </docs>
 <template>
-  <a-steps :current="1" status="error">
-    <a-step title="Finished" description="This is a description." />
-    <a-step title="In Progress" description="This is a description." />
-    <a-step title="Waiting" description="This is a description." />
-  </a-steps>
+  <pf-steps :current="1" status="error">
+    <pf-step title="Finished" description="This is a description." />
+    <pf-step title="In Progress" description="This is a description." />
+    <pf-step title="Waiting" description="This is a description." />
+  </pf-steps>
 </template>

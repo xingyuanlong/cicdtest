@@ -1,6 +1,6 @@
 <template>
   <header id="header" :class="headerClassName">
-    <a-popover
+    <pf-popover
       v-model:visible="menuVisible"
       overlay-class-name="popover-menu"
       placement="bottomRight"
@@ -11,12 +11,12 @@
       <template #content>
         <Menu :is-mobile="isMobile" />
       </template>
-    </a-popover>
-    <a-row :style="{ flexFlow: 'nowrap', height: 64 }">
-      <a-col v-bind="colProps[0]">
+    </pf-popover>
+    <pf-row :style="{ flexFlow: 'nowrap', height: 64 }">
+      <pf-col v-bind="colProps[0]">
         <Logo />
-      </a-col>
-      <a-col v-bind="colProps[1]" class="menu-row">
+      </pf-col>
+      <pf-col v-bind="colProps[1]" class="menu-row">
         <SearchBox
           key="search"
           :is-zh-c-n="isZhCN"
@@ -24,8 +24,8 @@
           @triggerFocus="onTriggerSearching"
         />
         <Menu v-if="!isMobile" />
-      </a-col>
-    </a-row>
+      </pf-col>
+    </pf-row>
   </header>
 </template>
 <script lang="ts">

@@ -16,48 +16,48 @@ Bind nested fields by array name.
 
 </docs>
 <template>
-  <a-form
+  <pf-form
     ref="formRef"
     name="dynamic_form_nest_item"
     :model="dynamicValidateForm"
     @finish="onFinish"
   >
-    <a-space
+    <pf-space
       v-for="(user, index) in dynamicValidateForm.users"
       :key="user.id"
       style="display: flex; margin-bottom: 8px"
       align="baseline"
     >
-      <a-form-item
+      <pf-form-item
         :name="['users', index, 'first']"
         :rules="{
           required: true,
           message: 'Missing first name',
         }"
       >
-        <a-input v-model:value="user.first" placeholder="First Name" />
-      </a-form-item>
-      <a-form-item
+        <pf-input v-model:value="user.first" placeholder="First Name" />
+      </pf-form-item>
+      <pf-form-item
         :name="['users', index, 'last']"
         :rules="{
           required: true,
           message: 'Missing last name',
         }"
       >
-        <a-input v-model:value="user.last" placeholder="Last Name" />
-      </a-form-item>
+        <pf-input v-model:value="user.last" placeholder="Last Name" />
+      </pf-form-item>
       <MinusCircleOutlined @click="removeUser(user)" />
-    </a-space>
-    <a-form-item>
-      <a-button type="dashed" block @click="addUser">
+    </pf-space>
+    <pf-form-item>
+      <pf-button type="dashed" block @click="addUser">
         <PlusOutlined />
         Add user
-      </a-button>
-    </a-form-item>
-    <a-form-item style="margin-top: 24px;">
-      <a-button type="primary" html-type="submit">Submit</a-button>
-    </a-form-item>
-  </a-form>
+      </pf-button>
+    </pf-form-item>
+    <pf-form-item style="margin-top: 24px;">
+      <pf-button type="primary" html-type="submit">Submit</pf-button>
+    </pf-form-item>
+  </pf-form>
 </template>
 
 <script lang="ts">

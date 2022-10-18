@@ -17,14 +17,14 @@ Extra actions should be placed at corner of drawer in Ant Design, you can using 
 </docs>
 
 <template>
-  <a-radio-group v-model:value="placement" style="margin-right: 8px">
-    <a-radio value="top">top</a-radio>
-    <a-radio value="right">right</a-radio>
-    <a-radio value="bottom">bottom</a-radio>
-    <a-radio value="left">left</a-radio>
-  </a-radio-group>
-  <a-button type="primary" @click="showDrawer">Open</a-button>
-  <a-drawer
+  <pf-radio-group v-model:value="placement" style="margin-right: 8px">
+    <pf-radio value="top">top</pf-radio>
+    <pf-radio value="right">right</pf-radio>
+    <pf-radio value="bottom">bottom</pf-radio>
+    <pf-radio value="left">left</pf-radio>
+  </pf-radio-group>
+  <pf-button type="primary" @click="showDrawer">Open</pf-button>
+  <pf-drawer
     :width="500"
     title="Basic Drawer"
     :placement="placement"
@@ -35,10 +35,10 @@ Extra actions should be placed at corner of drawer in Ant Design, you can using 
     <p>Some contents...</p>
     <p>Some contents...</p>
     <template #footer>
-      <a-button style="margin-right: 16px" type="primary" @click="onClose">Submit</a-button>
-      <a-button @click="onClose">Cancel</a-button>
+      <pf-button style="margin-right: 16px" type="primary" @click="onClose">Submit</pf-button>
+      <pf-button @click="onClose">Cancel</pf-button>
     </template>
-  </a-drawer>
+  </pf-drawer>
 </template>
 <script lang="ts">
 import { defineComponent, ref } from 'vue';

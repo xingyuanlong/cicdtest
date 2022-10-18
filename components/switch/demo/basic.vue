@@ -17,7 +17,7 @@ The most basic usage.
 </docs>
 
 <template>
-  <a-switch v-model:checked="checked" />
+  <pf-switch v-model:checked="checked" />
 </template>
 <script lang="ts">
 import { defineComponent, ref } from 'vue';

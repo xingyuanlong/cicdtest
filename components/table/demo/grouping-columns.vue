@@ -17,7 +17,7 @@ Group table head with `columns[n].children`.
 </docs>
 
 <template>
-  <a-table
+  <pf-table
     :columns="columns"
     :data-source="data"
     bordered

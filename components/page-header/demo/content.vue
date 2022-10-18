@@ -18,7 +18,7 @@ Show all props provided by PageHeader.
 
 <template>
   <div class="components-page-header-demo-content">
-    <a-page-header
+    <pf-page-header
       title="Title"
       class="site-page-header"
       sub-title="This is a subtitle"
@@ -26,38 +26,38 @@ Show all props provided by PageHeader.
       :breadcrumb="{ routes }"
     >
       <template #tags>
-        <a-tag color="blue">Running</a-tag>
+        <pf-tag color="blue">Running</pf-tag>
       </template>
       <template #extra>
-        <a-button key="3">Operation</a-button>
-        <a-button key="2">Operation</a-button>
-        <a-button key="1" type="primary">Primary</a-button>
-        <a-dropdown key="more">
-          <a-button :style="{ border: 'none', padding: 0 }">
+        <pf-button key="3">Operation</pf-button>
+        <pf-button key="2">Operation</pf-button>
+        <pf-button key="1" type="primary">Primary</pf-button>
+        <pf-dropdown key="more">
+          <pf-button :style="{ border: 'none', padding: 0 }">
             <EllipsisOutlined :style="{ fontSize: '20px', verticalAlign: 'top' }" />
-          </a-button>
+          </pf-button>
           <template #overlay>
-            <a-menu>
-              <a-menu-item>
+            <pf-menu>
+              <pf-menu-item>
                 <a target="_blank" rel="noopener noreferrer" href="/">
                   1st menu item
                 </a>
-              </a-menu-item>
-              <a-menu-item>
+              </pf-menu-item>
+              <pf-menu-item>
                 <a target="_blank" rel="noopener noreferrer" href="/">
                   2nd menu item
                 </a>
-              </a-menu-item>
-              <a-menu-item>
+              </pf-menu-item>
+              <pf-menu-item>
                 <a target="_blank" rel="noopener noreferrer" href="/">
                   3rd menu item
                 </a>
-              </a-menu-item>
-            </a-menu>
+              </pf-menu-item>
+            </pf-menu>
           </template>
-        </a-dropdown>
+        </pf-dropdown>
       </template>
-      <a-row class="content">
+      <pf-row class="content">
         <div style="flex: 1">
           <p>
             Ant Design interprets the color system into two levels: a system-level color system and
@@ -84,8 +84,8 @@ Show all props provided by PageHeader.
             style="width: 100%"
           />
         </div>
-      </a-row>
-    </a-page-header>
+      </pf-row>
+    </pf-page-header>
   </div>
 </template>
 

@@ -17,9 +17,9 @@ By using the `visible` prop, you can control the close state of Tag.
 </docs>
 
 <template>
-  <a-tag v-model:visible="visible" closable>Movies</a-tag>
+  <pf-tag v-model:visible="visible" closable>Movies</pf-tag>
   <br />
-  <a-button size="small" @click="visible = !visible">Toggle</a-button>
+  <pf-button size="small" @click="visible = !visible">Toggle</pf-button>
 </template>
 <script lang="ts">
 import { defineComponent, ref } from 'vue';

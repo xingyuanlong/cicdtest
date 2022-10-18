@@ -62,12 +62,12 @@ The link of Breadcrumb item targets `#` by default, you can use `itemRender` to 
 
 ```html
 <template>
-  <a-breadcrumb :routes="routes">
+  <pf-breadcrumb :routes="routes">
     <template #itemRender="{ route, params, routes, paths }">
       <span v-if="routes.indexOf(route) === routes.length - 1">{{route.breadcrumbName}}</span>
       <router-link v-else :to="paths.join('/')">{{route.breadcrumbName}}</router-link>
     </template>
-  </a-breadcrumb>
+  </pf-breadcrumb>
 </template>
 <script lang="ts">
   import { defineComponent, ref } from 'vue';

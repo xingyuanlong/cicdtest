@@ -17,25 +17,25 @@ Breadcrumbs support drop down menu.
 </docs>
 
 <template>
-  <a-breadcrumb>
-    <a-breadcrumb-item>Ant Design Vue</a-breadcrumb-item>
-    <a-breadcrumb-item><a href="">Component</a></a-breadcrumb-item>
-    <a-breadcrumb-item>
+  <pf-breadcrumb>
+    <pf-breadcrumb-item>Ant Design Vue</pf-breadcrumb-item>
+    <pf-breadcrumb-item><a href="">Component</a></pf-breadcrumb-item>
+    <pf-breadcrumb-item>
       <a href="">General</a>
       <template #overlay>
-        <a-menu>
-          <a-menu-item>
+        <pf-menu>
+          <pf-menu-item>
             <a target="_blank" rel="noopener noreferrer" href="http://www.alipay.com/">General</a>
-          </a-menu-item>
-          <a-menu-item>
+          </pf-menu-item>
+          <pf-menu-item>
             <a target="_blank" rel="noopener noreferrer" href="http://www.taobao.com/">Layout</a>
-          </a-menu-item>
-          <a-menu-item>
+          </pf-menu-item>
+          <pf-menu-item>
             <a target="_blank" rel="noopener noreferrer" href="http://www.tmall.com/">Navigation</a>
-          </a-menu-item>
-        </a-menu>
+          </pf-menu-item>
+        </pf-menu>
       </template>
-    </a-breadcrumb-item>
-    <a-breadcrumb-item>Button</a-breadcrumb-item>
-  </a-breadcrumb>
+    </pf-breadcrumb-item>
+    <pf-breadcrumb-item>Button</pf-breadcrumb-item>
+  </pf-breadcrumb>
 </template>

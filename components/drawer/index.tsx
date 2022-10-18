@@ -91,7 +91,7 @@ export const drawerProps = () => ({
 export type DrawerProps = Partial<ExtractPropTypes<ReturnType<typeof drawerProps>>>;
 
 const Drawer = defineComponent({
-  name: 'ADrawer',
+  name: 'PfDrawer',
   inheritAttrs: false,
   props: initDefaultProps(drawerProps(), {
     closable: true,

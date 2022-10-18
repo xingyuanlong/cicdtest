@@ -16,24 +16,24 @@ use [`Form.useForm`](#useForm) custom trigger to validation logic and status.
 </docs>
 
 <template>
-  <a-form :label-col="labelCol" :wrapper-col="wrapperCol">
-    <a-form-item label="Activity name" v-bind="validateInfos.name">
-      <a-input
+  <pf-form :label-col="labelCol" :wrapper-col="wrapperCol">
+    <pf-form-item label="Activity name" v-bind="validateInfos.name">
+      <pf-input
         v-model:value="modelRef.name"
         @blur="validate('name', { trigger: 'blur' }).catch(() => {})"
       />
-    </a-form-item>
-    <a-form-item label="Activity zone" v-bind="validateInfos.region">
-      <a-select v-model:value="modelRef.region" placeholder="please select your zone">
-        <a-select-option value="shanghai">Zone one</a-select-option>
-        <a-select-option value="beijing">Zone two</a-select-option>
-      </a-select>
-    </a-form-item>
-    <a-form-item :wrapper-col="{ span: 14, offset: 4 }" style="margin-top: 24px;">
-      <a-button type="primary" @click.prevent="onSubmit">Create</a-button>
-      <a-button style="margin-left: 10px" @click="resetFields">Reset</a-button>
-    </a-form-item>
-  </a-form>
+    </pf-form-item>
+    <pf-form-item label="Activity zone" v-bind="validateInfos.region">
+      <pf-select v-model:value="modelRef.region" placeholder="please select your zone">
+        <pf-select-option value="shanghai">Zone one</pf-select-option>
+        <pf-select-option value="beijing">Zone two</pf-select-option>
+      </pf-select>
+    </pf-form-item>
+    <pf-form-item :wrapper-col="{ span: 14, offset: 4 }" style="margin-top: 24px;">
+      <pf-button type="primary" @click.prevent="onSubmit">Create</pf-button>
+      <pf-button style="margin-left: 10px" @click="resetFields">Reset</pf-button>
+    </pf-form-item>
+  </pf-form>
 </template>
 <script lang="ts">
 import { defineComponent, reactive, toRaw } from 'vue';

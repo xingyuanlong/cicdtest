@@ -32,9 +32,9 @@ Render in current dom. custom container, check `getContainer`.
   >
     Render in this
     <div style="margin-top: 16px">
-      <a-button type="primary" @click="showDrawer">Open</a-button>
+      <pf-button type="primary" @click="showDrawer">Open</pf-button>
     </div>
-    <a-drawer
+    <pf-drawer
       title="Basic Drawer"
       placement="right"
       :closable="false"
@@ -44,7 +44,7 @@ Render in current dom. custom container, check `getContainer`.
       @close="onClose"
     >
       <p>Some contents...</p>
-    </a-drawer>
+    </pf-drawer>
   </div>
 </template>
 <script lang="ts">

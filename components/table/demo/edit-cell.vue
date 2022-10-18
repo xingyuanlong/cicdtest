@@ -17,13 +17,13 @@ Table with editable cells.
 </docs>
 
 <template>
-  <a-button class="editable-add-btn" style="margin-bottom: 8px" @click="handleAdd">Add</a-button>
-  <a-table bordered :data-source="dataSource" :columns="columns">
+  <pf-button class="editable-add-btn" style="margin-bottom: 8px" @click="handleAdd">Add</pf-button>
+  <pf-table bordered :data-source="dataSource" :columns="columns">
     <template #bodyCell="{ column, text, record }">
       <template v-if="column.dataIndex === 'name'">
         <div class="editable-cell">
           <div v-if="editableData[record.key]" class="editable-cell-input-wrapper">
-            <a-input v-model:value="editableData[record.key].name" @pressEnter="save(record.key)" />
+            <pf-input v-model:value="editableData[record.key].name" @pressEnter="save(record.key)" />
             <check-outlined class="editable-cell-icon-check" @click="save(record.key)" />
           </div>
           <div v-else class="editable-cell-text-wrapper">
@@ -33,16 +33,16 @@ Table with editable cells.
         </div>
       </template>
       <template v-else-if="column.dataIndex === 'operation'">
-        <a-popconfirm
+        <pf-popconfirm
           v-if="dataSource.length"
           title="Sure to delete?"
           @confirm="onDelete(record.key)"
         >
           <a>Delete</a>
-        </a-popconfirm>
+        </pf-popconfirm>
       </template>
     </template>
-  </a-table>
+  </pf-table>
 </template>
 <script lang="ts">
 import { computed, defineComponent, reactive, ref } from 'vue';

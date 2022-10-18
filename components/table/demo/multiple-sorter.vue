@@ -17,7 +17,7 @@ title:
 </docs>
 
 <template>
-  <a-table :columns="columns" :data-source="data" @change="onChange" />
+  <pf-table :columns="columns" :data-source="data" @change="onChange" />
 </template>
 
 <script lang="ts">

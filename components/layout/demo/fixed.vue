@@ -17,32 +17,32 @@ Fixed Header is generally used to fix the top navigation to facilitate page swit
 
 </docs>
 <template>
-  <a-layout>
-    <a-layout-header :style="{ position: 'fixed', zIndex: 1, width: '100%' }">
+  <pf-layout>
+    <pf-layout-header :style="{ position: 'fixed', zIndex: 1, width: '100%' }">
       <div class="logo" />
-      <a-menu
+      <pf-menu
         v-model:selectedKeys="selectedKeys"
         theme="dark"
         mode="horizontal"
         :style="{ lineHeight: '64px' }"
       >
-        <a-menu-item key="1">nav 1</a-menu-item>
-        <a-menu-item key="2">nav 2</a-menu-item>
-        <a-menu-item key="3">nav 3</a-menu-item>
-      </a-menu>
-    </a-layout-header>
-    <a-layout-content :style="{ padding: '0 50px', marginTop: '64px' }">
-      <a-breadcrumb :style="{ margin: '16px 0' }">
-        <a-breadcrumb-item>Home</a-breadcrumb-item>
-        <a-breadcrumb-item>List</a-breadcrumb-item>
-        <a-breadcrumb-item>App</a-breadcrumb-item>
-      </a-breadcrumb>
+        <pf-menu-item key="1">nav 1</pf-menu-item>
+        <pf-menu-item key="2">nav 2</pf-menu-item>
+        <pf-menu-item key="3">nav 3</pf-menu-item>
+      </pf-menu>
+    </pf-layout-header>
+    <pf-layout-content :style="{ padding: '0 50px', marginTop: '64px' }">
+      <pf-breadcrumb :style="{ margin: '16px 0' }">
+        <pf-breadcrumb-item>Home</pf-breadcrumb-item>
+        <pf-breadcrumb-item>List</pf-breadcrumb-item>
+        <pf-breadcrumb-item>App</pf-breadcrumb-item>
+      </pf-breadcrumb>
       <div :style="{ background: '#fff', padding: '24px', minHeight: '380px' }">Content</div>
-    </a-layout-content>
-    <a-layout-footer :style="{ textAlign: 'center' }">
+    </pf-layout-content>
+    <pf-layout-footer :style="{ textAlign: 'center' }">
       Ant Design ©2018 Created by Ant UED
-    </a-layout-footer>
-  </a-layout>
+    </pf-layout-footer>
+  </pf-layout>
 </template>
 <script lang="ts">
 import { defineComponent, ref } from 'vue';

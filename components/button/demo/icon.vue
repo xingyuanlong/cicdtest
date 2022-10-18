@@ -20,81 +20,81 @@ If you want specific control over the positioning and placement of the `Icon`, t
 </docs>
 
 <template>
-  <a-button type="primary" shape="circle">
+  <pf-button type="primary" shape="circle">
     <template #icon><SearchOutlined /></template>
-  </a-button>
-  <a-button type="primary" shape="circle">A</a-button>
-  <a-button type="primary">
-    <template #icon><SearchOutlined /></template>
-    Search
-  </a-button>
-  <a-button shape="circle">
-    <template #icon><SearchOutlined /></template>
-  </a-button>
-  <a-button>
+  </pf-button>
+  <pf-button type="primary" shape="circle">A</pf-button>
+  <pf-button type="primary">
     <template #icon><SearchOutlined /></template>
     Search
-  </a-button>
-  <a-button shape="circle">
+  </pf-button>
+  <pf-button shape="circle">
     <template #icon><SearchOutlined /></template>
-  </a-button>
-  <a-button>
-    <template #icon><SearchOutlined /></template>
-    Search
-  </a-button>
-  <a-button type="dashed" shape="circle">
-    <template #icon><SearchOutlined /></template>
-  </a-button>
-  <a-button type="dashed">
+  </pf-button>
+  <pf-button>
     <template #icon><SearchOutlined /></template>
     Search
-  </a-button>
-  <a-button href="https://www.google.com">
+  </pf-button>
+  <pf-button shape="circle">
     <template #icon><SearchOutlined /></template>
-  </a-button>
+  </pf-button>
+  <pf-button>
+    <template #icon><SearchOutlined /></template>
+    Search
+  </pf-button>
+  <pf-button type="dashed" shape="circle">
+    <template #icon><SearchOutlined /></template>
+  </pf-button>
+  <pf-button type="dashed">
+    <template #icon><SearchOutlined /></template>
+    Search
+  </pf-button>
+  <pf-button href="https://www.google.com">
+    <template #icon><SearchOutlined /></template>
+  </pf-button>
   <br />
   <br />
-  <a-tooltip title="search">
-    <a-button type="primary" shape="circle" size="large">
+  <pf-tooltip title="search">
+    <pf-button type="primary" shape="circle" size="large">
       <template #icon><SearchOutlined /></template>
-    </a-button>
-  </a-tooltip>
-  <a-button type="primary" shape="circle" size="large">A</a-button>
-  <a-button type="primary" size="large">
+    </pf-button>
+  </pf-tooltip>
+  <pf-button type="primary" shape="circle" size="large">A</pf-button>
+  <pf-button type="primary" size="large">
     <template #icon><SearchOutlined /></template>
     Search
-  </a-button>
-  <a-tooltip title="search">
-    <a-button shape="circle" size="large">
+  </pf-button>
+  <pf-tooltip title="search">
+    <pf-button shape="circle" size="large">
       <template #icon><SearchOutlined /></template>
-    </a-button>
-  </a-tooltip>
-  <a-button size="large">
+    </pf-button>
+  </pf-tooltip>
+  <pf-button size="large">
     <template #icon><SearchOutlined /></template>
     Search
-  </a-button>
+  </pf-button>
   <br />
-  <a-tooltip title="search">
-    <a-button shape="circle" size="large">
+  <pf-tooltip title="search">
+    <pf-button shape="circle" size="large">
       <template #icon><SearchOutlined /></template>
-    </a-button>
-  </a-tooltip>
-  <a-button size="large">
+    </pf-button>
+  </pf-tooltip>
+  <pf-button size="large">
     <template #icon><SearchOutlined /></template>
     Search
-  </a-button>
-  <a-tooltip title="search">
-    <a-button type="dashed" shape="circle" size="large">
+  </pf-button>
+  <pf-tooltip title="search">
+    <pf-button type="dashed" shape="circle" size="large">
       <template #icon><SearchOutlined /></template>
-    </a-button>
-  </a-tooltip>
-  <a-button type="dashed" size="large">
+    </pf-button>
+  </pf-tooltip>
+  <pf-button type="dashed" size="large">
     <template #icon><SearchOutlined /></template>
     Search
-  </a-button>
-  <a-button size="large" href="https://www.google.com">
+  </pf-button>
+  <pf-button size="large" href="https://www.google.com">
     <template #icon><SearchOutlined /></template>
-  </a-button>
+  </pf-button>
 </template>
 <script>
 import { SearchOutlined } from '@ant-design/icons-vue';

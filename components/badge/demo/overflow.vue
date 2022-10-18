@@ -17,16 +17,16 @@ title:
 </docs>
 
 <template>
-  <a-badge :count="99">
-    <a-avatar shape="square" size="large" />
-  </a-badge>
-  <a-badge :count="100">
-    <a-avatar shape="square" size="large" />
-  </a-badge>
-  <a-badge :count="99" :overflow-count="10">
-    <a-avatar shape="square" size="large" />
-  </a-badge>
-  <a-badge :count="1000" :overflow-count="999">
-    <a-avatar shape="square" size="large" />
-  </a-badge>
+  <pf-badge :count="99">
+    <pf-avatar shape="square" size="large" />
+  </pf-badge>
+  <pf-badge :count="100">
+    <pf-avatar shape="square" size="large" />
+  </pf-badge>
+  <pf-badge :count="99" :overflow-count="10">
+    <pf-avatar shape="square" size="large" />
+  </pf-badge>
+  <pf-badge :count="1000" :overflow-count="999">
+    <pf-avatar shape="square" size="large" />
+  </pf-badge>
 </template>

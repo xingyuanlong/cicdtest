@@ -16,7 +16,7 @@ A long list can be divided into several pages using `Pagination`, and only one p
 ## API
 
 ```html
-<a-pagination @change="onChange" :total="50" />
+<pf-pagination @change="onChange" :total="50" />
 ```
 
 | Property | Description | Type | Default | Version |

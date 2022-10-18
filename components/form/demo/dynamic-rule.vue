@@ -16,31 +16,31 @@ Perform different check rules according to different situations.
 
 </docs>
 <template>
-  <a-form ref="formRef" :model="formState" name="dynamic_rule" v-bind="formItemLayout">
-    <a-form-item
+  <pf-form ref="formRef" :model="formState" name="dynamic_rule" v-bind="formItemLayout">
+    <pf-form-item
       label="Username"
       name="username"
       :rules="[{ required: true, message: 'Please input your username!' }]"
     >
-      <a-input v-model:value="formState.username" />
-    </a-form-item>
+      <pf-input v-model:value="formState.username" />
+    </pf-form-item>
 
-    <a-form-item
+    <pf-form-item
       label="Nickname"
       name="nickname"
       :rules="[{ required: formState.checkNick, message: 'Please input your nickname!' }]"
     >
-      <a-input v-model:value="formState.nickname" />
-    </a-form-item>
+      <pf-input v-model:value="formState.nickname" />
+    </pf-form-item>
 
-    <a-form-item name="checkNick" v-bind="formTailLayout">
-      <a-checkbox v-model:checked="formState.checkNick">Nickname is required</a-checkbox>
-    </a-form-item>
+    <pf-form-item name="checkNick" v-bind="formTailLayout">
+      <pf-checkbox v-model:checked="formState.checkNick">Nickname is required</pf-checkbox>
+    </pf-form-item>
 
-    <a-form-item v-bind="formTailLayout" style="margin-top: 24px;">
-      <a-button type="primary" @click="onCheck">Check</a-button>
-    </a-form-item>
-  </a-form>
+    <pf-form-item v-bind="formTailLayout" style="margin-top: 24px;">
+      <pf-button type="primary" @click="onCheck">Check</pf-button>
+    </pf-form-item>
+  </pf-form>
 </template>
 <script lang="ts">
 import { defineComponent, reactive, ref, watch } from 'vue';

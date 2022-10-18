@@ -8,38 +8,38 @@ title:
 
 ## zh-CN
 
-通过 `summary` 设置总结栏。使用 `a-table-summary-cell` 同步 Column 的固定状态。你可以通过配置 `a-table-summary` 的 `fixed` 属性使其固定。
+通过 `summary` 设置总结栏。使用 `pf-table-summary-cell` 同步 Column 的固定状态。你可以通过配置 `pf-table-summary` 的 `fixed` 属性使其固定。
 
 ## en-US
 
-Set summary content by `summary` prop. Sync column fixed status with `a-table-summary-cell`. You can fixed it by set `a-table-summary` `fixed` prop.
+Set summary content by `summary` prop. Sync column fixed status with `pf-table-summary-cell`. You can fixed it by set `pf-table-summary` `fixed` prop.
 
 </docs>
 
 <template>
-  <a-table :columns="columns" :data-source="data" :pagination="false" bordered>
+  <pf-table :columns="columns" :data-source="data" :pagination="false" bordered>
     <template #summary>
-      <a-table-summary-row>
-        <a-table-summary-cell>Total</a-table-summary-cell>
-        <a-table-summary-cell>
-          <a-typography-text type="danger">{{ totals.totalBorrow }}</a-typography-text>
-        </a-table-summary-cell>
-        <a-table-summary-cell>
-          <a-typography-text>{{ totals.totalRepayment }}</a-typography-text>
-        </a-table-summary-cell>
-      </a-table-summary-row>
-      <a-table-summary-row>
-        <a-table-summary-cell>Balance</a-table-summary-cell>
-        <a-table-summary-cell :col-span="2">
-          <a-typography-text type="danger">
+      <pf-table-summary-row>
+        <pf-table-summary-cell>Total</pf-table-summary-cell>
+        <pf-table-summary-cell>
+          <pf-typography-text type="danger">{{ totals.totalBorrow }}</pf-typography-text>
+        </pf-table-summary-cell>
+        <pf-table-summary-cell>
+          <pf-typography-text>{{ totals.totalRepayment }}</pf-typography-text>
+        </pf-table-summary-cell>
+      </pf-table-summary-row>
+      <pf-table-summary-row>
+        <pf-table-summary-cell>Balance</pf-table-summary-cell>
+        <pf-table-summary-cell :col-span="2">
+          <pf-typography-text type="danger">
             {{ totals.totalBorrow - totals.totalRepayment }}
-          </a-typography-text>
-        </a-table-summary-cell>
-      </a-table-summary-row>
+          </pf-typography-text>
+        </pf-table-summary-cell>
+      </pf-table-summary-row>
     </template>
-  </a-table>
+  </pf-table>
   <br />
-  <a-table
+  <pf-table
     :columns="fixedColumns"
     :data-source="fixedData"
     :pagination="false"
@@ -47,14 +47,14 @@ Set summary content by `summary` prop. Sync column fixed status with `a-table-su
     bordered
   >
     <template #summary>
-      <a-table-summary fixed>
-        <a-table-summary-row>
-          <a-table-summary-cell :index="0">Summary</a-table-summary-cell>
-          <a-table-summary-cell :index="1">This is a summary content</a-table-summary-cell>
-        </a-table-summary-row>
-      </a-table-summary>
+      <pf-table-summary fixed>
+        <pf-table-summary-row>
+          <pf-table-summary-cell :index="0">Summary</pf-table-summary-cell>
+          <pf-table-summary-cell :index="1">This is a summary content</pf-table-summary-cell>
+        </pf-table-summary-row>
+      </pf-table-summary>
     </template>
-  </a-table>
+  </pf-table>
 </template>
 
 <script lang="ts">

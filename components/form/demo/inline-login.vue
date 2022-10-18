@@ -16,7 +16,7 @@ Inline login form is often used in navigation bar.
 
 </docs>
 <template>
-  <a-form
+  <pf-form
     :model="formState"
     name="horizontal_login"
     layout="inline"
@@ -24,34 +24,34 @@ Inline login form is often used in navigation bar.
     @finish="onFinish"
     @finishFailed="onFinishFailed"
   >
-    <a-form-item
+    <pf-form-item
       label="Username"
       name="username"
       :rules="[{ required: true, message: 'Please input your username!' }]"
     >
-      <a-input v-model:value="formState.username">
+      <pf-input v-model:value="formState.username">
         <template #prefix>
           <UserOutlined class="site-form-item-icon" />
         </template>
-      </a-input>
-    </a-form-item>
+      </pf-input>
+    </pf-form-item>
 
-    <a-form-item
+    <pf-form-item
       label="Password"
       name="password"
       :rules="[{ required: true, message: 'Please input your password!' }]"
     >
-      <a-input-password v-model:value="formState.password">
+      <pf-input-password v-model:value="formState.password">
         <template #prefix>
           <LockOutlined class="site-form-item-icon" />
         </template>
-      </a-input-password>
-    </a-form-item>
+      </pf-input-password>
+    </pf-form-item>
 
-    <a-form-item>
-      <a-button :disabled="disabled" type="primary" html-type="submit">Log in</a-button>
-    </a-form-item>
-  </a-form>
+    <pf-form-item>
+      <pf-button :disabled="disabled" type="primary" html-type="submit">Log in</pf-button>
+    </pf-form-item>
+  </pf-form>
 </template>
 <script lang="ts">
 import { defineComponent, reactive, computed } from 'vue';

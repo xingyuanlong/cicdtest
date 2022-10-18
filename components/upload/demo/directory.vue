@@ -16,12 +16,12 @@ You can select and upload a whole directory.
 </docs>
 
 <template>
-  <a-upload action="https://www.mocky.io/v2/5cc8019d300000980a055e76" directory>
-    <a-button>
+  <pf-upload action="https://www.mocky.io/v2/5cc8019d300000980a055e76" directory>
+    <pf-button>
       <upload-outlined></upload-outlined>
       Upload Directory
-    </a-button>
-  </a-upload>
+    </pf-button>
+  </pf-upload>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';

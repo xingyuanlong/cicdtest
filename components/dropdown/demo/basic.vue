@@ -17,25 +17,25 @@ The most basic dropdown menu.
 </docs>
 
 <template>
-  <a-dropdown>
+  <pf-dropdown>
     <a class="ant-dropdown-link" @click.prevent>
       Hover me
       <DownOutlined />
     </a>
     <template #overlay>
-      <a-menu>
-        <a-menu-item>
+      <pf-menu>
+        <pf-menu-item>
           <a href="javascript:;">1st menu item</a>
-        </a-menu-item>
-        <a-menu-item>
+        </pf-menu-item>
+        <pf-menu-item>
           <a href="javascript:;">2nd menu item</a>
-        </a-menu-item>
-        <a-menu-item>
+        </pf-menu-item>
+        <pf-menu-item>
           <a href="javascript:;">3rd menu item</a>
-        </a-menu-item>
-      </a-menu>
+        </pf-menu-item>
+      </pf-menu>
     </template>
-  </a-dropdown>
+  </pf-dropdown>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';

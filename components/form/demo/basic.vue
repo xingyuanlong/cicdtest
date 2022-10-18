@@ -15,7 +15,7 @@ title:
 Basic Form data control. Includes layout, initial values, validation and submit.
 </docs>
 <template>
-  <a-form
+  <pf-form
     :model="formState"
     name="basic"
     :label-col="{ span: 8 }"
@@ -24,30 +24,30 @@ Basic Form data control. Includes layout, initial values, validation and submit.
     @finish="onFinish"
     @finishFailed="onFinishFailed"
   >
-    <a-form-item
+    <pf-form-item
       label="Username"
       name="username"
       :rules="[{ required: true, message: 'Please input your username!' }]"
     >
-      <a-input v-model:value="formState.username" />
-    </a-form-item>
+      <pf-input v-model:value="formState.username" />
+    </pf-form-item>
 
-    <a-form-item
+    <pf-form-item
       label="Password"
       name="password"
       :rules="[{ required: true, message: 'Please input your password!' }]"
     >
-      <a-input-password v-model:value="formState.password" />
-    </a-form-item>
+      <pf-input-password v-model:value="formState.password" />
+    </pf-form-item>
 
-    <a-form-item name="remember" :wrapper-col="{ offset: 8, span: 16 }">
-      <a-checkbox v-model:checked="formState.remember">Remember me</a-checkbox>
-    </a-form-item>
+    <pf-form-item name="remember" :wrapper-col="{ offset: 8, span: 16 }">
+      <pf-checkbox v-model:checked="formState.remember">Remember me</pf-checkbox>
+    </pf-form-item>
 
-    <a-form-item :wrapper-col="{ offset: 8, span: 16 }" style="margin-top: 24px;">
-      <a-button type="primary" html-type="submit">Submit</a-button>
-    </a-form-item>
-  </a-form>
+    <pf-form-item :wrapper-col="{ offset: 8, span: 16 }" style="margin-top: 24px;">
+      <pf-button type="primary" html-type="submit">Submit</pf-button>
+    </pf-form-item>
+  </pf-form>
 </template>
 <script lang="ts">
 import { defineComponent, reactive } from 'vue';

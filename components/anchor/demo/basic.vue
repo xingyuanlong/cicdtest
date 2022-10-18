@@ -16,17 +16,17 @@ The simplest usage.
 </docs>
 
 <template>
-  <a-anchor>
-    <a-anchor-link href="#components-anchor-demo-basic" title="Basic demo" />
-    <a-anchor-link href="#components-anchor-demo-static" title="Static demo" />
-    <a-anchor-link
+  <pf-anchor>
+    <pf-anchor-link href="#components-anchor-demo-basic" title="Basic demo" />
+    <pf-anchor-link href="#components-anchor-demo-static" title="Static demo" />
+    <pf-anchor-link
       href="#components-anchor-demo-basic"
       title="Basic demo with Target"
       target="_blank"
     />
-    <a-anchor-link href="#API" title="API">
-      <a-anchor-link href="#Anchor-Props" title="Anchor Props" />
-      <a-anchor-link href="#Link-Props" title="Link Props" />
-    </a-anchor-link>
-  </a-anchor>
+    <pf-anchor-link href="#API" title="API">
+      <pf-anchor-link href="#Anchor-Props" title="Anchor Props" />
+      <pf-anchor-link href="#Link-Props" title="Link Props" />
+    </pf-anchor-link>
+  </pf-anchor>
 </template>

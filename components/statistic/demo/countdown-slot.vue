@@ -17,22 +17,22 @@ Countdown component slots.
 </docs>
 
 <template>
-  <a-row :gutter="16">
-    <a-col :span="12">
-      <a-statistic-countdown :value="deadline" style="margin-right: 50px" @finish="onFinish">
+  <pf-row :gutter="16">
+    <pf-col :span="12">
+      <pf-statistic-countdown :value="deadline" style="margin-right: 50px" @finish="onFinish">
         <template #title>
           <span>Countdown</span>
-          <a-tooltip placement="right">
+          <pf-tooltip placement="right">
             <template #title>
               <span>hurry up!</span>
             </template>
             <question-circle-two-tone style="margin-left: 5px" />
-          </a-tooltip>
+          </pf-tooltip>
         </template>
-      </a-statistic-countdown>
-    </a-col>
-    <a-col :span="24" style="margin-top: 32px">
-      <a-statistic-countdown
+      </pf-statistic-countdown>
+    </pf-col>
+    <pf-col :span="24" style="margin-top: 32px">
+      <pf-statistic-countdown
         title="Million Seconds countdown"
         :value="deadline"
         format="HH:mm:ss:SSS"
@@ -44,9 +44,9 @@ Countdown component slots.
         <template #suffix>
           <span>left for the end.</span>
         </template>
-      </a-statistic-countdown>
-    </a-col>
-  </a-row>
+      </pf-statistic-countdown>
+    </pf-col>
+  </pf-row>
 </template>
 <script lang="ts">
 import { QuestionCircleTwoTone } from '@ant-design/icons-vue';

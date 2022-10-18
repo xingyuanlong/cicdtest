@@ -15,28 +15,28 @@ title:
 You can use your own custom icons by setting the property `icon` for `Steps.Step`.
 </docs>
 <template>
-  <a-steps>
-    <a-step status="finish" title="Login">
+  <pf-steps>
+    <pf-step status="finish" title="Login">
       <template #icon>
         <user-outlined />
       </template>
-    </a-step>
-    <a-step status="finish" title="Verification">
+    </pf-step>
+    <pf-step status="finish" title="Verification">
       <template #icon>
         <solution-outlined />
       </template>
-    </a-step>
-    <a-step status="process" title="Pay">
+    </pf-step>
+    <pf-step status="process" title="Pay">
       <template #icon>
         <loading-outlined />
       </template>
-    </a-step>
-    <a-step status="wait" title="Done">
+    </pf-step>
+    <pf-step status="wait" title="Done">
       <template #icon>
         <smile-outlined />
       </template>
-    </a-step>
-  </a-steps>
+    </pf-step>
+  </pf-steps>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';

@@ -31,7 +31,7 @@ cover: https://gw.alipayobjects.com/zos/alicdn/RT_USzA48/DatePicker.svg
 
 ```html
 <template>
-  <a-date-picker v-model:value="value" :locale="locale" />
+  <pf-date-picker v-model:value="value" :locale="locale" />
 </template>
 <script>
   import locale from 'pf-ui-vue/es/date-picker/locale/zh_CN';
@@ -49,9 +49,9 @@ cover: https://gw.alipayobjects.com/zos/alicdn/RT_USzA48/DatePicker.svg
 
 ```html
 <template>
-  <a-config-provider :locale="locale">
-    <a-date-picker v-model:value="value" />
-  </a-config-provider>
+  <pf-config-provider :locale="locale">
+    <pf-date-picker v-model:value="value" />
+  </pf-config-provider>
 </template>
 <script>
   // 默认语言为 en-US，如果你需要设置其他语言，推荐在入口文件全局设置 locale

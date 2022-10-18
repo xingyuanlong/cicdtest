@@ -17,13 +17,13 @@ selection happens when clicking checkbox defaultly. You can see https://codesand
 </docs>
 
 <template>
-  <a-table :row-selection="rowSelection" :columns="columns" :data-source="data">
+  <pf-table :row-selection="rowSelection" :columns="columns" :data-source="data">
     <template #bodyCell="{ column, text }">
       <template v-if="column.dataIndex === 'name'">
         <a>{{ text }}</a>
       </template>
     </template>
-  </a-table>
+  </pf-table>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';

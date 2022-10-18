@@ -16,21 +16,21 @@ Use `rowClassName` Customize the table with Striped.
 </docs>
 
 <template>
-  <a-table
+  <pf-table
     class="ant-table-striped"
     :columns="columns"
     :data-source="data"
     striped
   />
 
-  <a-table
+  <pf-table
     class="ant-table-striped"
     :columns="columns"
     :data-source="data1"
     striped
   />
 
-  <a-table
+  <pf-table
     class="ant-table-striped"
     :columns="columns"
     :data-source="data"

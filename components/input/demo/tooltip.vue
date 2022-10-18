@@ -16,21 +16,21 @@ You can use the Input in conjunction with [Tooltip](/components/tooltip/) compon
 
 </docs>
 <template>
-  <a-tooltip :trigger="['focus']" placement="topLeft" overlay-class-name="numeric-input">
+  <pf-tooltip :trigger="['focus']" placement="topLeft" overlay-class-name="numeric-input">
     <template v-if="inputValue" #title>
       <span class="numeric-input-title">
         {{ formatValue }}
       </span>
     </template>
 
-    <a-input
+    <pf-input
       v-model:value="inputValue"
       placeholder="Input a number"
       :max-length="25"
       style="width: 120px"
       @blur="onBlur"
     />
-  </a-tooltip>
+  </pf-tooltip>
 </template>
 <script lang="ts">
 import { computed, defineComponent, ref, watch } from 'vue';

@@ -17,13 +17,13 @@ The simplest usage.
 </docs>
 
 <template>
-  <a-affix :offset-top="top">
-    <a-button type="primary" @click="top += 10">Affix top</a-button>
-  </a-affix>
+  <pf-affix :offset-top="top">
+    <pf-button type="primary" @click="top += 10">Affix top</pf-button>
+  </pf-affix>
   <br />
-  <a-affix :offset-bottom="bottom">
-    <a-button type="primary" @click="bottom += 10">Affix bottom</a-button>
-  </a-affix>
+  <pf-affix :offset-bottom="bottom">
+    <pf-button type="primary" @click="bottom += 10">Affix bottom</pf-button>
+  </pf-affix>
 </template>
 
 <script lang="ts">

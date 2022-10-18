@@ -8,7 +8,7 @@ export const cardGridProps = () => ({
 });
 export type CardGridProps = Partial<ExtractPropTypes<ReturnType<typeof cardGridProps>>>;
 export default defineComponent({
-  name: 'ACardGrid',
+  name: 'PfCardGrid',
   __ANT_CARD_GRID: true,
   props: cardGridProps(),
   setup(props, { slots }) {

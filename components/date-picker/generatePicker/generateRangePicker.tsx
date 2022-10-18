@@ -26,7 +26,7 @@ export default function generateRangePicker<DateType, ExtraProps = {}>(
   extraProps: ExtraProps,
 ) {
   const RangePicker = defineComponent({
-    name: 'ARangePicker',
+    name: 'PfRangePicker',
     inheritAttrs: false,
     props: {
       ...commonProps<DateType>(),

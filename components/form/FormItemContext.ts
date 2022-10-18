@@ -52,7 +52,7 @@ export const useProvideFormItemContext = (
           ]
             .map(v => `\`${v.name}\``)
             .join(', ')} ${formItemFields.value.size} field items.
-        You can set not need to be collected fields into \`a-form-item-rest\``,
+        You can set not need to be collected fields into \`pf-form-item-rest\``,
         );
         let cur = instance;
         while (cur.parent) {
@@ -94,7 +94,7 @@ export const useInjectFormItemContext = () => {
 };
 
 export default defineComponent({
-  name: 'AFormItemRest',
+  name: 'PfFormItemRest',
   setup(_, { slots }) {
     provide(InternalContextKey, defaultInternalContext);
     provide(ContextKey, defaultContext);

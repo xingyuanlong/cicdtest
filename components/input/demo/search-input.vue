@@ -16,43 +16,43 @@ Example of creating a search box by grouping a standard input with a search butt
 
 </docs>
 <template>
-  <a-space direction="vertical">
-    <a-input-search
+  <pf-space direction="vertical">
+    <pf-input-search
       v-model:value="value"
       placeholder="input search text"
       style="width: 200px"
       @search="onSearch"
     />
-    <a-input-search
+    <pf-input-search
       v-model:value="value"
       placeholder="input search text"
       enter-button
       @search="onSearch"
       allowClear
     />
-    <a-input-search
+    <pf-input-search
       v-model:value="value"
       placeholder="input search text"
       enter-button="Search"
       size="large"
       @search="onSearch"
     />
-    <a-input-search
+    <pf-input-search
       v-model:value="value"
       placeholder="input search text"
       size="large"
       @search="onSearch"
     >
       <template #enterButton>
-        <a-button>Custom</a-button>
+        <pf-button>Custom</pf-button>
       </template>
-    </a-input-search>
-    <a-search-input
+    </pf-input-search>
+    <pf-search-input
       v-model:value="value"
       placeholder="input search text"
       @search="onSearch" 
     />
-  </a-space>
+  </pf-space>
 </template>
 
 <script lang="ts">

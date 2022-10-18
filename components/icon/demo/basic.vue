@@ -17,10 +17,10 @@ Import icons from `@pf-ui/pf-icons-vue`, component name of icons with different 
 </docs>
 
 <template>
-  <a-space>
+  <pf-space>
     <loading-filled />
     <add-filled />
-  </a-space>
+  </pf-space>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';

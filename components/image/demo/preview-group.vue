@@ -17,10 +17,10 @@ Click the left and right switch buttons to preview multiple images.
 </docs>
 
 <template>
-  <a-image-preview-group>
-    <a-image :width="200" src="https://aliyuncdn.antdv.com/vue.png" />
-    <a-image :width="200" src="https://aliyuncdn.antdv.com/logo.png" />
-  </a-image-preview-group>
+  <pf-image-preview-group>
+    <pf-image :width="200" src="https://aliyuncdn.antdv.com/vue.png" />
+    <pf-image :width="200" src="https://aliyuncdn.antdv.com/logo.png" />
+  </pf-image-preview-group>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';

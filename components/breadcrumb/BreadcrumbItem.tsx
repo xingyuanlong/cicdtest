@@ -17,7 +17,7 @@ export const breadcrumbItemProps = () => ({
 
 export type BreadcrumbItemProps = Partial<ExtractPropTypes<ReturnType<typeof breadcrumbItemProps>>>;
 export default defineComponent({
-  name: 'ABreadcrumbItem',
+  name: 'PfBreadcrumbItem',
   inheritAttrs: false,
   __ANT_BREADCRUMB_ITEM: true,
   props: breadcrumbItemProps(),

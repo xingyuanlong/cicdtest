@@ -16,7 +16,7 @@ No border.
 
 </docs>
 <template>
-  <a-input v-model:value="value" :bordered="false" placeholder="Borderless" />
+  <pf-input v-model:value="value" :bordered="false" placeholder="Borderless" />
 </template>
 <script lang="ts">
 import { defineComponent, ref } from 'vue';

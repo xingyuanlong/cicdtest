@@ -16,13 +16,13 @@ Cascade selection box of different sizes.
 
 </docs>
 <template>
-  <a-cascader v-model:value="value" placeholder="Please select" size="large" :options="options" />
+  <pf-cascader v-model:value="value" placeholder="Please select" size="large" :options="options" />
   <br />
   <br />
-  <a-cascader v-model:value="value" placeholder="Please select" :options="options" />
+  <pf-cascader v-model:value="value" placeholder="Please select" :options="options" />
   <br />
   <br />
-  <a-cascader v-model:value="value" placeholder="Please select" size="small" :options="options" />
+  <pf-cascader v-model:value="value" placeholder="Please select" size="small" :options="options" />
   <br />
   <br />
 </template>

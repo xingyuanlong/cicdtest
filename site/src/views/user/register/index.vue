@@ -3,16 +3,16 @@
     <h3>
       {{ $t('userandregister.register.register') }}
     </h3>
-    <a-form :form="form" @submit="handleSubmit">
-      <a-form-item>
-        <a-input
+    <pf-form :form="form" @submit="handleSubmit">
+      <pf-form-item>
+        <pf-input
           v-decorator="formConfig.mail"
           size="large"
           :placeholder="$t('userandregister.email.placeholder')"
         />
-      </a-form-item>
-      <a-form-item :help="help">
-        <a-popover
+      </pf-form-item>
+      <pf-form-item :help="help">
+        <pf-popover
           :get-popup-container="getPopupContainer"
           :overlay-style="{ width: '240px' }"
           placement="right"
@@ -32,7 +32,7 @@
                     {{ $t('userandregister.strength.short') }}
                   </div>
                   <div v-if="password && password.length" :class="`progress-${status}`">
-                    <a-progress
+                    <pf-progress
                       :status="passwordProgressMap[status]"
                       class="progress"
                       :stroke-width="6"
@@ -47,24 +47,24 @@
               </div>
             </div>
           </template>
-          <a-input
+          <pf-input
             v-decorator="formConfig.password"
             size="large"
             type="password"
             :placeholder="$t('userandregister.password.placeholder')"
           />
-        </a-popover>
-      </a-form-item>
-      <a-form-item>
-        <a-input
+        </pf-popover>
+      </pf-form-item>
+      <pf-form-item>
+        <pf-input
           v-decorator="formConfig.confirm"
           size="large"
           type="password"
           :placeholder="$t('userandregister.confirm-password.placeholder')"
         />
-      </a-form-item>
-      <a-form-item>
-        <a-button
+      </pf-form-item>
+      <pf-form-item>
+        <pf-button
           size="large"
           :loading="submitting"
           class="submit"
@@ -72,12 +72,12 @@
           html-type="submit"
         >
           {{ $t('userandregister.register.register') }}
-        </a-button>
+        </pf-button>
         <router-link class="login" to="/user/login">
           {{ $t('userandregister.register.sign-in') }}
         </router-link>
-      </a-form-item>
-    </a-form>
+      </pf-form-item>
+    </pf-form>
   </div>
 </template>
 <script>

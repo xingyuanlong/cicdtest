@@ -45,7 +45,7 @@ function setTriggerValue(
 }
 
 export default defineComponent({
-  name: 'ATextarea',
+  name: 'PfTextarea',
   inheritAttrs: false,
   props: textAreaProps(),
   setup(props, { attrs, expose, emit }) {

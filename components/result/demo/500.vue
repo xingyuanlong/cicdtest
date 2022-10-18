@@ -17,9 +17,9 @@ The server is wrong.
 </docs>
 
 <template>
-  <a-result status="500">
+  <pf-result status="500">
     <template #extra>
-      <a-button type="primary">回到首页</a-button>
+      <pf-button type="primary">回到首页</pf-button>
     </template>
-  </a-result>
+  </pf-result>
 </template>

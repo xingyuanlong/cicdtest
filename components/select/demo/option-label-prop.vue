@@ -20,33 +20,33 @@ or use `tagRender` slot for custom rendering of tags.
 </docs>
 
 <template>
-  <a-space direction="vertical" style="width: 100%">
-    <a-select
+  <pf-space direction="vertical" style="width: 100%">
+    <pf-select
       v-model:value="value"
       mode="multiple"
       style="width: 100%"
       placeholder="select one country"
       option-label-prop="children"
     >
-      <a-select-option value="china" label="China">
+      <pf-select-option value="china" label="China">
         <span role="img" aria-label="China">🇨🇳</span>
         &nbsp;&nbsp;China (中国)
-      </a-select-option>
-      <a-select-option value="usa" label="USA">
+      </pf-select-option>
+      <pf-select-option value="usa" label="USA">
         <span role="img" aria-label="USA">🇺🇸</span>
         &nbsp;&nbsp;USA (美国)
-      </a-select-option>
-      <a-select-option value="japan" label="Japan">
+      </pf-select-option>
+      <pf-select-option value="japan" label="Japan">
         <span role="img" aria-label="Japan">🇯🇵</span>
         &nbsp;&nbsp;Japan (日本)
-      </a-select-option>
-      <a-select-option value="korea" label="Korea">
+      </pf-select-option>
+      <pf-select-option value="korea" label="Korea">
         <span role="img" aria-label="Korea">🇰🇷</span>
         &nbsp;&nbsp;Korea (韩国)
-      </a-select-option>
-    </a-select>
+      </pf-select-option>
+    </pf-select>
 
-    <a-select
+    <pf-select
       v-model:value="value"
       mode="multiple"
       style="width: 100%"
@@ -58,13 +58,13 @@ or use `tagRender` slot for custom rendering of tags.
         <span role="img" :aria-label="val">{{ icon }}</span>
         &nbsp;&nbsp;{{ label }}
       </template>
-    </a-select>
+    </pf-select>
     <span>Note: v-slot:option support from v2.2.5</span>
-  </a-space>
+  </pf-space>
   <br />
   <br />
-  <a-space direction="vertical" style="width: 100%">
-    <a-select
+  <pf-space direction="vertical" style="width: 100%">
+    <pf-select
       v-model:value="value"
       mode="multiple"
       style="width: 100%"
@@ -76,13 +76,13 @@ or use `tagRender` slot for custom rendering of tags.
         &nbsp;&nbsp;{{ label }}
       </template>
       <template #tagRender="{ value: val, label, closable, onClose, option }">
-        <a-tag :closable="closable" style="margin-right: 3px" @close="onClose">
+        <pf-tag :closable="closable" style="margin-right: 3px" @close="onClose">
           {{ label }}&nbsp;&nbsp;
           <span role="img" :aria-label="val">{{ option.icon }}</span>
-        </a-tag>
+        </pf-tag>
       </template>
-    </a-select>
-  </a-space>
+    </pf-select>
+  </pf-space>
 </template>
 <script lang="ts">
 import { defineComponent, ref, watch } from 'vue';

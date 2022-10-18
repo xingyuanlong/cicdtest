@@ -17,21 +17,21 @@ It can be placed inside the ordinary card to display the information of the mult
 </docs>
 
 <template>
-  <a-card title="Card title">
+  <pf-card title="Card title">
     <p style="font-size: 14px; color: rgba(0, 0, 0, 0.85); margin-bottom: 16px; font-weight: 500">
       Group title
     </p>
-    <a-card title="Inner card title">
+    <pf-card title="Inner card title">
       <template #extra>
         <a href="#">More</a>
       </template>
       Inner Card content
-    </a-card>
-    <a-card title="Inner card title" :style="{ marginTop: '16px' }">
+    </pf-card>
+    <pf-card title="Inner card title" :style="{ marginTop: '16px' }">
       <template #extra>
         <a href="#">More</a>
       </template>
       Inner Card content
-    </a-card>
-  </a-card>
+    </pf-card>
+  </pf-card>
 </template>

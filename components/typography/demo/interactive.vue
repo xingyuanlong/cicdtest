@@ -15,49 +15,49 @@ title:
 Provide additional interactive capacity of editable and copyable.
 </docs>
 <template>
-  <a-typography-paragraph v-model:content="editableStr" editable />
-  <a-typography-paragraph v-model:content="customIconStr" editable>
+  <pf-typography-paragraph v-model:content="editableStr" editable />
+  <pf-typography-paragraph v-model:content="customIconStr" editable>
     <template #editableIcon><HighlightOutlined /></template>
     <template #editableTooltip>click to edit text</template>
-  </a-typography-paragraph>
+  </pf-typography-paragraph>
   Trigger edit with:&nbsp;&nbsp;
-  <a-radio-group
+  <pf-radio-group
     :value="stateToRadio()"
     @change="e => (chooseTrigger = radioToState(e.target.value))"
   >
-    <a-radio value="icon">icon</a-radio>
-    <a-radio value="text">text</a-radio>
-    <a-radio value="both">both</a-radio>
-  </a-radio-group>
-  <a-typography-paragraph
+    <pf-radio value="icon">icon</pf-radio>
+    <pf-radio value="text">text</pf-radio>
+    <pf-radio value="both">both</pf-radio>
+  </pf-radio-group>
+  <pf-typography-paragraph
     v-model:content="clickTriggerStr"
     :editable="{ triggerType: chooseTrigger }"
   >
     <template #editableTooltip>click to edit text</template>
-  </a-typography-paragraph>
-  <a-typography-paragraph v-model:content="customEnterIconStr" editable>
+  </pf-typography-paragraph>
+  <pf-typography-paragraph v-model:content="customEnterIconStr" editable>
     <template #editableIcon><HighlightOutlined /></template>
     <template #editableTooltip>click to edit text</template>
     <template #editableEnterIcon="{ className }">
       <CheckOutlined :class="className" />
     </template>
-  </a-typography-paragraph>
-  <a-typography-paragraph v-model:content="noEnterIconStr" editable>
+  </pf-typography-paragraph>
+  <pf-typography-paragraph v-model:content="noEnterIconStr" editable>
     <template #editableIcon><HighlightOutlined /></template>
     <template #editableTooltip>click to edit text</template>
     <template #editableEnterIcon>{{ null }}</template>
-  </a-typography-paragraph>
-  <a-typography-paragraph v-model:content="hideTooltipStr" :editable="{ tooltip: false }" />
-  <a-typography-paragraph
+  </pf-typography-paragraph>
+  <pf-typography-paragraph v-model:content="hideTooltipStr" :editable="{ tooltip: false }" />
+  <pf-typography-paragraph
     v-model:content="lengthLimitedStr"
     :editable="{ maxlength: 50, autoSize: { maxRows: 5, minRows: 3 } }"
   />
 
-  <a-typography-paragraph copyable>This is a copyable text.</a-typography-paragraph>
-  <a-typography-paragraph :copyable="{ text: 'Hello, Ant Design!' }">
+  <pf-typography-paragraph copyable>This is a copyable text.</pf-typography-paragraph>
+  <pf-typography-paragraph :copyable="{ text: 'Hello, Ant Design!' }">
     Replace copy text.
-  </a-typography-paragraph>
-  <a-typography-paragraph copyable content="Custom Copy icon and replace tooltips text.">
+  </pf-typography-paragraph>
+  <pf-typography-paragraph copyable content="Custom Copy icon and replace tooltips text.">
     <template #copyableIcon="{ copied }">
       <SmileOutlined v-if="!copied" key="copy-icon" />
       <SmileFilled v-else key="copied-icon" />
@@ -66,10 +66,10 @@ Provide additional interactive capacity of editable and copyable.
       <span v-if="!copied" key="copy-tooltip">click here</span>
       <span v-else key="copied-tooltip">you clicked!!</span>
     </template>
-  </a-typography-paragraph>
-  <a-typography-paragraph :copyable="{ tooltip: false }">
+  </pf-typography-paragraph>
+  <pf-typography-paragraph :copyable="{ tooltip: false }">
     Hide Copy tooltips.
-  </a-typography-paragraph>
+  </pf-typography-paragraph>
 </template>
 <script lang="ts">
 import { defineComponent, ref, watch } from 'vue';

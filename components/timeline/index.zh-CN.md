@@ -16,12 +16,12 @@ cover: https://gw.alipayobjects.com/zos/antfincdn/vJmo00mmgR/Timeline.svg
 ## API
 
 ```html
-<a-timeline>
-  <a-timeline-item>创建服务现场 2015-09-01</a-timeline-item>
-  <a-timeline-item>初步排除网络异常 2015-09-01</a-timeline-item>
-  <a-timeline-item>技术测试异常 2015-09-01</a-timeline-item>
-  <a-timeline-item>网络异常正在修复 2015-09-01</a-timeline-item>
-</a-timeline>
+<pf-timeline>
+  <pf-timeline-item>创建服务现场 2015-09-01</pf-timeline-item>
+  <pf-timeline-item>初步排除网络异常 2015-09-01</pf-timeline-item>
+  <pf-timeline-item>技术测试异常 2015-09-01</pf-timeline-item>
+  <pf-timeline-item>网络异常正在修复 2015-09-01</pf-timeline-item>
+</pf-timeline>
 ```
 
 ### Timeline

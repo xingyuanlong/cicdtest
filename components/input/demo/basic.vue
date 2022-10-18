@@ -16,9 +16,9 @@ Basic usage example.
 
 </docs>
 <template>
-  <a-input v-model:value="value" placeholder="Basic usage" />
+  <pf-input v-model:value="value" placeholder="Basic usage" />
   <div style="margin: 24px 0" />
-  <a-input disabled placeholder="Basic usage disable" value="你好" />
+  <pf-input disabled placeholder="Basic usage disable" value="你好" />
 </template>
 <script lang="ts">
 import { defineComponent, ref } from 'vue';

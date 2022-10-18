@@ -17,7 +17,7 @@ title:
 </docs>
 
 <template>
-  <a-button @click="success">Display a sequence of message</a-button>
+  <pf-button @click="success">Display a sequence of message</pf-button>
 </template>
 <script lang="ts">
 import { message } from 'pf-ui-vue';

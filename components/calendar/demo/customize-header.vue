@@ -18,19 +18,19 @@ Customize Calendar header content.
 
 <template>
   <div style="width: 300px; border: 1px solid #d9d9d9; border-radius: 4px">
-    <a-calendar v-model:value="value" :fullscreen="false" @panelChange="onPanelChange">
+    <pf-calendar v-model:value="value" :fullscreen="false" @panelChange="onPanelChange">
       <template #headerRender="{ value: current, type, onChange, onTypeChange }">
         <div style="padding: 10px">
           <div style="margin-bottom: 10px">Custom header</div>
-          <a-row type="flex" justify="space-between">
-            <a-col>
-              <a-radio-group size="small" :value="type" @change="e => onTypeChange(e.target.value)">
-                <a-radio-button value="month">Month</a-radio-button>
-                <a-radio-button value="year">Year</a-radio-button>
-              </a-radio-group>
-            </a-col>
-            <a-col>
-              <a-select
+          <pf-row type="flex" justify="space-between">
+            <pf-col>
+              <pf-radio-group size="small" :value="type" @change="e => onTypeChange(e.target.value)">
+                <pf-radio-button value="month">Month</pf-radio-button>
+                <pf-radio-button value="year">Year</pf-radio-button>
+              </pf-radio-group>
+            </pf-col>
+            <pf-col>
+              <pf-select
                 size="small"
                 :dropdown-match-select-width="false"
                 class="my-year-select"
@@ -41,17 +41,17 @@ Customize Calendar header content.
                   }
                 "
               >
-                <a-select-option
+                <pf-select-option
                   v-for="val in getYears(current)"
                   :key="String(val)"
                   class="year-item"
                 >
                   {{ val }}
-                </a-select-option>
-              </a-select>
-            </a-col>
-            <a-col>
-              <a-select
+                </pf-select-option>
+              </pf-select>
+            </pf-col>
+            <pf-col>
+              <pf-select
                 size="small"
                 :dropdown-match-select-width="false"
                 :value="String(current.month())"
@@ -61,19 +61,19 @@ Customize Calendar header content.
                   }
                 "
               >
-                <a-select-option
+                <pf-select-option
                   v-for="(val, index) in getMonths(current)"
                   :key="String(index)"
                   class="month-item"
                 >
                   {{ val }}
-                </a-select-option>
-              </a-select>
-            </a-col>
-          </a-row>
+                </pf-select-option>
+              </pf-select>
+            </pf-col>
+          </pf-row>
         </div>
       </template>
-    </a-calendar>
+    </pf-calendar>
   </div>
 </template>
 <script lang="ts">

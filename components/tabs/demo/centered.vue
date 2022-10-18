@@ -17,11 +17,11 @@ Centered tabs.
 </docs>
 
 <template>
-  <a-tabs v-model:activeKey="activeKey" centered>
-    <a-tab-pane key="1" tab="Tab 1">Content of Tab Pane 1</a-tab-pane>
-    <a-tab-pane key="2" tab="Tab 2" force-render>Content of Tab Pane 2</a-tab-pane>
-    <a-tab-pane key="3" tab="Tab 3">Content of Tab Pane 3</a-tab-pane>
-  </a-tabs>
+  <pf-tabs v-model:activeKey="activeKey" centered>
+    <pf-tab-pane key="1" tab="Tab 1">Content of Tab Pane 1</pf-tab-pane>
+    <pf-tab-pane key="2" tab="Tab 2" force-render>Content of Tab Pane 2</pf-tab-pane>
+    <pf-tab-pane key="3" tab="Tab 3">Content of Tab Pane 3</pf-tab-pane>
+  </pf-tabs>
 </template>
 <script lang="ts">
 import { defineComponent, ref } from 'vue';

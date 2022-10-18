@@ -17,27 +17,27 @@ Countdown component.
 </docs>
 
 <template>
-  <a-row :gutter="16">
-    <a-col :span="12">
-      <a-statistic-countdown
+  <pf-row :gutter="16">
+    <pf-col :span="12">
+      <pf-statistic-countdown
         title="Countdown"
         :value="deadline"
         style="margin-right: 50px"
         @finish="onFinish"
       />
-    </a-col>
-    <a-col :span="12">
-      <a-statistic-countdown
+    </pf-col>
+    <pf-col :span="12">
+      <pf-statistic-countdown
         title="Million Seconds"
         :value="deadline"
         format="HH:mm:ss:SSS"
         style="margin-right: 50px"
       />
-    </a-col>
-    <a-col :span="24" style="margin-top: 32px">
-      <a-statistic-countdown title="Day Level" :value="deadline" format="D 天 H 时 m 分 s 秒" />
-    </a-col>
-  </a-row>
+    </pf-col>
+    <pf-col :span="24" style="margin-top: 32px">
+      <pf-statistic-countdown title="Day Level" :value="deadline" format="D 天 H 时 m 分 s 秒" />
+    </pf-col>
+  </pf-row>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';

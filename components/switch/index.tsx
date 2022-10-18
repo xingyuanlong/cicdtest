@@ -55,7 +55,7 @@ export const switchProps = () => ({
 export type SwitchProps = Partial<ExtractPropTypes<ReturnType<typeof switchProps>>>;
 
 const Switch = defineComponent({
-  name: 'ASwitch',
+  name: 'PfSwitch',
   __ANT_SWITCH: true,
   inheritAttrs: false,
   props: switchProps(),

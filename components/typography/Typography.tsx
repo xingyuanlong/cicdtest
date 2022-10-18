@@ -19,7 +19,7 @@ export const typographyProps = () => ({
   component: String,
 });
 const Typography = defineComponent<InternalTypographyProps>({
-  name: 'ATypography',
+  name: 'PfTypography',
   inheritAttrs: false,
   props: typographyProps() as any,
   setup(props, { slots, attrs }) {

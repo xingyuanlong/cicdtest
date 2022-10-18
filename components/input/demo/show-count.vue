@@ -16,10 +16,10 @@ Show character counting.
 
 </docs>
 <template>
-  <a-input v-model:value="value1" show-count :maxlength="20" />
+  <pf-input v-model:value="value1" show-count :maxlength="20" />
   <br />
   <br />
-  <a-textarea v-model:value="value2" show-count :maxlength="100" />
+  <pf-textarea v-model:value="value2" show-count :maxlength="100" />
 </template>
 <script lang="ts">
 import { defineComponent, ref } from 'vue';

@@ -21,7 +21,7 @@ The differences with Select are:
 ## API
 
 ```html
-<a-auto-complete v-model:value="value" :options="options" />
+<pf-auto-complete v-model:value="value" :options="options" />
 ```
 
 | Property | Description | Type | Default | Version |

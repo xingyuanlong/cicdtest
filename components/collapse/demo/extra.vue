@@ -17,26 +17,26 @@ More than one panel can be expanded at a time, the first panel is initialized to
 </docs>
 
 <template>
-  <a-collapse v-model:activeKey="activeKey" :expand-icon-position="expandIconPosition">
-    <a-collapse-panel key="1" header="This is panel header 1">
+  <pf-collapse v-model:activeKey="activeKey" :expand-icon-position="expandIconPosition">
+    <pf-collapse-panel key="1" header="This is panel header 1">
       <p>{{ text }}</p>
       <template #extra><setting-outlined @click="handleClick" /></template>
-    </a-collapse-panel>
-    <a-collapse-panel key="2" header="This is panel header 2">
+    </pf-collapse-panel>
+    <pf-collapse-panel key="2" header="This is panel header 2">
       <p>{{ text }}</p>
       <template #extra><setting-outlined @click="handleClick" /></template>
-    </a-collapse-panel>
-    <a-collapse-panel key="3" header="This is panel header 3" collapsible="disabled">
+    </pf-collapse-panel>
+    <pf-collapse-panel key="3" header="This is panel header 3" collapsible="disabled">
       <p>{{ text }}</p>
       <template #extra><setting-outlined @click="handleClick" /></template>
-    </a-collapse-panel>
-  </a-collapse>
+    </pf-collapse-panel>
+  </pf-collapse>
   <br />
   <span>Expand Icon Position:</span>
-  <a-select v-model:value="expandIconPosition">
-    <a-select-option value="left">left</a-select-option>
-    <a-select-option value="right">right</a-select-option>
-  </a-select>
+  <pf-select v-model:value="expandIconPosition">
+    <pf-select-option value="left">left</pf-select-option>
+    <pf-select-option value="right">right</pf-select-option>
+  </pf-select>
 </template>
 <script lang="ts">
 import { SettingOutlined } from '@ant-design/icons-vue';

@@ -17,7 +17,7 @@ Try to copy `Lucy,Jack` to the input. Only available in tags and multiple mode.
 </docs>
 
 <template>
-  <a-select
+  <pf-select
     v-model:value="value"
     mode="tags"
     style="width: 100%"
@@ -25,7 +25,7 @@ Try to copy `Lucy,Jack` to the input. Only available in tags and multiple mode.
     placeholder="Automatic tokenization"
     :options="options"
     @change="handleChange"
-  ></a-select>
+  ></pf-select>
 </template>
 <script lang="ts">
 import { defineComponent, ref, watch } from 'vue';

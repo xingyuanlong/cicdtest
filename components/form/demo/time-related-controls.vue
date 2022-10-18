@@ -19,55 +19,55 @@ The `value` of time-related components is a `dayjs` object, which we need to pre
 or use `valueFormat` to format.
 </docs>
 <template>
-  <a-form
+  <pf-form
     :model="formState"
     name="time_related_controls"
     v-bind="formItemLayout"
     @finish="onFinish"
     @finishFailed="onFinishFailed"
   >
-    <a-form-item name="date-picker" label="DatePicker" v-bind="config">
-      <a-date-picker v-model:value="formState['date-picker']" value-format="YYYY-MM-DD" />
-    </a-form-item>
-    <a-form-item name="date-time-picker" label="DatePicker[showTime]" v-bind="config">
-      <a-date-picker
+    <pf-form-item name="date-picker" label="DatePicker" v-bind="config">
+      <pf-date-picker v-model:value="formState['date-picker']" value-format="YYYY-MM-DD" />
+    </pf-form-item>
+    <pf-form-item name="date-time-picker" label="DatePicker[showTime]" v-bind="config">
+      <pf-date-picker
         v-model:value="formState['date-time-picker']"
         show-time
         format="YYYY-MM-DD HH:mm:ss"
         value-format="YYYY-MM-DD HH:mm:ss"
       />
-    </a-form-item>
-    <a-form-item name="month-picker" label="MonthPicker" v-bind="config">
-      <a-date-picker
+    </pf-form-item>
+    <pf-form-item name="month-picker" label="MonthPicker" v-bind="config">
+      <pf-date-picker
         v-model:value="formState['month-picker']"
         value-format="YYYY-MM"
         picker="month"
       />
-    </a-form-item>
-    <a-form-item name="range-picker" label="RangePicker" v-bind="rangeConfig">
-      <a-range-picker v-model:value="formState['range-picker']" value-format="YYYY-MM-DD" />
-    </a-form-item>
-    <a-form-item name="range-time-picker" label="RangePicker[showTime]" v-bind="rangeConfig">
-      <a-range-picker
+    </pf-form-item>
+    <pf-form-item name="range-picker" label="RangePicker" v-bind="rangeConfig">
+      <pf-range-picker v-model:value="formState['range-picker']" value-format="YYYY-MM-DD" />
+    </pf-form-item>
+    <pf-form-item name="range-time-picker" label="RangePicker[showTime]" v-bind="rangeConfig">
+      <pf-range-picker
         v-model:value="formState['range-time-picker']"
         show-time
         format="YYYY-MM-DD HH:mm:ss"
         value-format="YYYY-MM-DD HH:mm:ss"
       />
-    </a-form-item>
-    <a-form-item name="time-picker" label="TimePicker" v-bind="config">
-      <a-time-picker v-model:value="formState['time-picker']" value-format="HH:mm:ss" />
-    </a-form-item>
-    <a-form-item
+    </pf-form-item>
+    <pf-form-item name="time-picker" label="TimePicker" v-bind="config">
+      <pf-time-picker v-model:value="formState['time-picker']" value-format="HH:mm:ss" />
+    </pf-form-item>
+    <pf-form-item
       :wrapper-col="{
         xs: { span: 24, offset: 0 },
         sm: { span: 16, offset: 8 },
       }"
       style="margin-top: 24px;"
     >
-      <a-button type="primary" html-type="submit">Submit</a-button>
-    </a-form-item>
-  </a-form>
+      <pf-button type="primary" html-type="submit">Submit</pf-button>
+    </pf-form-item>
+  </pf-form>
 </template>
 <script lang="ts">
 import { defineComponent, reactive } from 'vue';

@@ -17,18 +17,18 @@ Steps with progress dot style.
 
 <template>
   <div>
-    <a-steps progress-dot :current="1">
-      <a-step title="Finished" description="This is a description." />
-      <a-step title="In Progress" description="This is a description." />
-      <a-step title="Waiting" description="This is a description." />
-    </a-steps>
-    <a-divider />
-    <a-steps progress-dot :current="1" direction="vertical">
-      <a-step title="Finished" description="This is a description. This is a description." />
-      <a-step title="Finished" description="This is a description. This is a description." />
-      <a-step title="In Progress" description="This is a description. This is a description." />
-      <a-step title="Waiting" description="This is a description." />
-      <a-step title="Waiting" description="This is a description." />
-    </a-steps>
+    <pf-steps progress-dot :current="1">
+      <pf-step title="Finished" description="This is a description." />
+      <pf-step title="In Progress" description="This is a description." />
+      <pf-step title="Waiting" description="This is a description." />
+    </pf-steps>
+    <pf-divider />
+    <pf-steps progress-dot :current="1" direction="vertical">
+      <pf-step title="Finished" description="This is a description. This is a description." />
+      <pf-step title="Finished" description="This is a description. This is a description." />
+      <pf-step title="In Progress" description="This is a description. This is a description." />
+      <pf-step title="Waiting" description="This is a description." />
+      <pf-step title="Waiting" description="This is a description." />
+    </pf-steps>
   </div>
 </template>

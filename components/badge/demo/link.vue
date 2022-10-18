@@ -17,8 +17,8 @@ The badge can be wrapped with `a` tag to make it linkable.
 
 <template>
   <a href="#">
-    <a-badge count="5">
-      <a-avatar shape="square" size="large" />
-    </a-badge>
+    <pf-badge count="5">
+      <pf-avatar shape="square" size="large" />
+    </pf-badge>
   </a>
 </template>

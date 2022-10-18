@@ -15,57 +15,57 @@ title:
 Demonstration of validation configuration for form controls which are not shown in the demos above.
 </docs>
 <template>
-  <a-form
+  <pf-form
     :model="formState"
     name="validate_other"
     v-bind="formItemLayout"
     @finishFailed="onFinishFailed"
     @finish="onFinish"
   >
-    <a-form-item label="Plain Text">
+    <pf-form-item label="Plain Text">
       <span class="ant-form-text">China</span>
-    </a-form-item>
-    <a-form-item
+    </pf-form-item>
+    <pf-form-item
       name="select"
       label="Select"
       has-feedback
       :rules="[{ required: true, message: 'Please select your country!' }]"
     >
-      <a-select v-model:value="formState.select" placeholder="Please select a country">
-        <a-select-option value="china">China</a-select-option>
-        <a-select-option value="usa">U.S.A</a-select-option>
-      </a-select>
-    </a-form-item>
+      <pf-select v-model:value="formState.select" placeholder="Please select a country">
+        <pf-select-option value="china">China</pf-select-option>
+        <pf-select-option value="usa">U.S.A</pf-select-option>
+      </pf-select>
+    </pf-form-item>
 
-    <a-form-item
+    <pf-form-item
       name="select-multiple"
       label="Select[multiple]"
       :rules="[{ required: true, message: 'Please select your favourite colors!', type: 'array' }]"
     >
-      <a-select
+      <pf-select
         v-model:value="formState['select-multiple']"
         mode="multiple"
         placeholder="Please select favourite colors"
       >
-        <a-select-option value="red">Red</a-select-option>
-        <a-select-option value="green">Green</a-select-option>
-        <a-select-option value="blue">Blue</a-select-option>
-      </a-select>
-    </a-form-item>
+        <pf-select-option value="red">Red</pf-select-option>
+        <pf-select-option value="green">Green</pf-select-option>
+        <pf-select-option value="blue">Blue</pf-select-option>
+      </pf-select>
+    </pf-form-item>
 
-    <a-form-item label="InputNumber">
-      <a-form-item name="input-number" no-style>
-        <a-input-number v-model:value="formState['input-number']" :min="1" :max="10" />
-      </a-form-item>
+    <pf-form-item label="InputNumber">
+      <pf-form-item name="input-number" no-style>
+        <pf-input-number v-model:value="formState['input-number']" :min="1" :max="10" />
+      </pf-form-item>
       <span class="ant-form-text">machines</span>
-    </a-form-item>
+    </pf-form-item>
 
-    <a-form-item name="switch" label="Switch">
-      <a-switch v-model:checked="formState.switch" />
-    </a-form-item>
+    <pf-form-item name="switch" label="Switch">
+      <pf-switch v-model:checked="formState.switch" />
+    </pf-form-item>
 
-    <a-form-item name="slider" label="Slider">
-      <a-slider
+    <pf-form-item name="slider" label="Slider">
+      <pf-slider
         v-model:value="formState.slider"
         :marks="{
           0: 'A',
@@ -76,87 +76,87 @@ Demonstration of validation configuration for form controls which are not shown 
           100: 'F',
         }"
       />
-    </a-form-item>
+    </pf-form-item>
 
-    <a-form-item name="radio-group" label="Radio.Group">
-      <a-radio-group v-model:value="formState['radio-group']">
-        <a-radio value="a">item 1</a-radio>
-        <a-radio value="b">item 2</a-radio>
-        <a-radio value="c">item 3</a-radio>
-      </a-radio-group>
-    </a-form-item>
+    <pf-form-item name="radio-group" label="Radio.Group">
+      <pf-radio-group v-model:value="formState['radio-group']">
+        <pf-radio value="a">item 1</pf-radio>
+        <pf-radio value="b">item 2</pf-radio>
+        <pf-radio value="c">item 3</pf-radio>
+      </pf-radio-group>
+    </pf-form-item>
 
-    <a-form-item
+    <pf-form-item
       name="radio-button"
       label="Radio.Button"
       :rules="[{ required: true, message: 'Please pick an item!' }]"
     >
-      <a-radio-group v-model:value="formState['radio-button']">
-        <a-radio-button value="a">item 1</a-radio-button>
-        <a-radio-button value="b">item 2</a-radio-button>
-        <a-radio-button value="c">item 3</a-radio-button>
-      </a-radio-group>
-    </a-form-item>
+      <pf-radio-group v-model:value="formState['radio-button']">
+        <pf-radio-button value="a">item 1</pf-radio-button>
+        <pf-radio-button value="b">item 2</pf-radio-button>
+        <pf-radio-button value="c">item 3</pf-radio-button>
+      </pf-radio-group>
+    </pf-form-item>
 
-    <a-form-item name="checkbox-group" label="Checkbox.Group">
-      <a-checkbox-group v-model:value="formState['checkbox-group']">
-        <a-row>
-          <a-col :span="8">
-            <a-checkbox value="A" style="line-height: 32px">A</a-checkbox>
-          </a-col>
-          <a-col :span="8">
-            <a-checkbox value="B" style="line-height: 32px" disabled>B</a-checkbox>
-          </a-col>
-          <a-col :span="8">
-            <a-checkbox value="C" style="line-height: 32px">C</a-checkbox>
-          </a-col>
-          <a-col :span="8">
-            <a-checkbox value="D" style="line-height: 32px">D</a-checkbox>
-          </a-col>
-          <a-col :span="8">
-            <a-checkbox value="E" style="line-height: 32px">E</a-checkbox>
-          </a-col>
-          <a-col :span="8">
-            <a-checkbox value="F" style="line-height: 32px">F</a-checkbox>
-          </a-col>
-        </a-row>
-      </a-checkbox-group>
-    </a-form-item>
+    <pf-form-item name="checkbox-group" label="Checkbox.Group">
+      <pf-checkbox-group v-model:value="formState['checkbox-group']">
+        <pf-row>
+          <pf-col :span="8">
+            <pf-checkbox value="A" style="line-height: 32px">A</pf-checkbox>
+          </pf-col>
+          <pf-col :span="8">
+            <pf-checkbox value="B" style="line-height: 32px" disabled>B</pf-checkbox>
+          </pf-col>
+          <pf-col :span="8">
+            <pf-checkbox value="C" style="line-height: 32px">C</pf-checkbox>
+          </pf-col>
+          <pf-col :span="8">
+            <pf-checkbox value="D" style="line-height: 32px">D</pf-checkbox>
+          </pf-col>
+          <pf-col :span="8">
+            <pf-checkbox value="E" style="line-height: 32px">E</pf-checkbox>
+          </pf-col>
+          <pf-col :span="8">
+            <pf-checkbox value="F" style="line-height: 32px">F</pf-checkbox>
+          </pf-col>
+        </pf-row>
+      </pf-checkbox-group>
+    </pf-form-item>
 
-    <a-form-item name="rate" label="Rate">
-      <a-rate v-model:value="formState.rate" allow-half />
-    </a-form-item>
+    <pf-form-item name="rate" label="Rate">
+      <pf-rate v-model:value="formState.rate" allow-half />
+    </pf-form-item>
 
-    <a-form-item name="upload" label="Upload" extra="longgggggggggggggggggggggggggggggggggg">
-      <a-upload
+    <pf-form-item name="upload" label="Upload" extra="longgggggggggggggggggggggggggggggggggg">
+      <pf-upload
         v-model:fileList="formState.upload"
         name="logo"
         action="/upload.do"
         list-type="picture"
       >
-        <a-button>
+        <pf-button>
           <template #icon><UploadOutlined /></template>
           Click to upload
-        </a-button>
-      </a-upload>
-    </a-form-item>
+        </pf-button>
+      </pf-upload>
+    </pf-form-item>
 
-    <a-form-item label="Dragger">
-      <a-form-item name="dragger" no-style>
-        <a-upload-dragger v-model:fileList="formState.dragger" name="files" action="/upload.do">
+    <pf-form-item label="Dragger">
+      <pf-form-item name="dragger" no-style>
+        <pf-upload-dragger v-model:fileList="formState.dragger" name="files" action="/upload.do">
           <p class="ant-upload-drag-icon">
             <InboxOutlined />
           </p>
           <p class="ant-upload-text">Click or drag file to this area to upload</p>
           <p class="ant-upload-hint">Support for a single or bulk upload.</p>
-        </a-upload-dragger>
-      </a-form-item>
-    </a-form-item>
+        </pf-upload-dragger>
+      </pf-form-item>
+    </pf-form-item>
 
-    <a-form-item :wrapper-col="{ span: 12, offset: 6 }" style="margin-top: 24px;">
-      <a-button type="primary" html-type="submit">Submit</a-button>
-    </a-form-item>
-  </a-form>
+    <pf-form-item :wrapper-col="{ span: 12, offset: 6 }" style="margin-top: 24px;">
+      <pf-button type="primary" html-type="submit">Submit</pf-button>
+    </pf-form-item>
+  </pf-form>
 </template>
 <script lang="ts">
 import { defineComponent, reactive } from 'vue';

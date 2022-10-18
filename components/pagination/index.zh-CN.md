@@ -12,7 +12,7 @@ cover: https://gw.alipayobjects.com/zos/alicdn/1vqv2bj68/Pagination.svg
 ## API
 
 ```html
-<a-pagination @change="onChange" :total="50" />
+<pf-pagination @change="onChange" :total="50" />
 ```
 
 | 参数 | 说明 | 类型 | 默认值 | 版本 |

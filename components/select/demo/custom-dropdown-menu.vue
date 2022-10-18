@@ -17,14 +17,14 @@ Customize the dropdown menu via `dropdownRender`.
 </docs>
 
 <template>
-  <a-select
+  <pf-select
     v-model:value="value"
     style="width: 120px"
     :options="items.map(item => ({ value: item }))"
   >
     <template #dropdownRender="{ menuNode: menu }">
       <v-nodes :vnodes="menu" />
-      <a-divider style="margin: 4px 0" />
+      <pf-divider style="margin: 4px 0" />
       <div
         style="padding: 4px 8px; cursor: pointer"
         @mousedown="e => e.preventDefault()"
@@ -34,7 +34,7 @@ Customize the dropdown menu via `dropdownRender`.
         Add item
       </div>
     </template>
-  </a-select>
+  </pf-select>
 </template>
 <script lang="ts">
 import { PlusOutlined } from '@ant-design/icons-vue';

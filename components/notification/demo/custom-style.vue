@@ -17,7 +17,7 @@ The `style` and `class` are available to customize Notification.
 </docs>
 
 <template>
-  <a-button type="primary" @click="openNotification">Open the notification box</a-button>
+  <pf-button type="primary" @click="openNotification">Open the notification box</pf-button>
 </template>
 <script>
 import { notification } from 'pf-ui-vue';

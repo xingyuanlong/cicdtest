@@ -105,7 +105,7 @@ export const transferProps = () => ({
 export type TransferProps = Partial<ExtractPropTypes<ReturnType<typeof transferProps>>>;
 
 const Transfer = defineComponent({
-  name: 'ATransfer',
+  name: 'PfTransfer',
   inheritAttrs: false,
   props: transferProps(),
   slots: [

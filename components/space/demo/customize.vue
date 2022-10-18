@@ -17,15 +17,15 @@ Custom spacing size.
 
 <template>
   <div>
-    <a-slider v-model:value="size" />
+    <pf-slider v-model:value="size" />
     <br />
     <br />
-    <a-space :size="size">
-      <a-button type="primary">Primary</a-button>
-      <a-button>Default</a-button>
-      <a-button type="dashed">Dashed</a-button>
-      <a-button type="link">Link</a-button>
-    </a-space>
+    <pf-space :size="size">
+      <pf-button type="primary">Primary</pf-button>
+      <pf-button>Default</pf-button>
+      <pf-button type="dashed">Dashed</pf-button>
+      <pf-button type="link">Link</pf-button>
+    </pf-space>
   </div>
 </template>
 <script lang="ts">

@@ -17,12 +17,12 @@ Update message content with unique `key`，or use reactive data.
 </docs>
 
 <template>
-  <a-button type="primary" @click="openMessage">Open the message box (update by key)</a-button>
+  <pf-button type="primary" @click="openMessage">Open the message box (update by key)</pf-button>
   <br />
   <br />
-  <a-button type="primary" @click="openMessage2">
+  <pf-button type="primary" @click="openMessage2">
     Open the message box (update by reactive)
-  </a-button>
+  </pf-button>
 </template>
 <script lang="ts">
 import { message } from 'pf-ui-vue';

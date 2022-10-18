@@ -5,7 +5,7 @@ import type { FocusEventHandler, MouseEventHandler } from '../_util/EventInterfa
 import useConfigInject from '../_util/hooks/useConfigInject';
 
 export default defineComponent({
-  name: 'AInputGroup',
+  name: 'PfInputGroup',
   props: {
     prefixCls: String,
     size: { type: String as PropType<SizeType> },

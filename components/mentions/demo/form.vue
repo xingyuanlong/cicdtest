@@ -16,42 +16,42 @@ to work with `Form`.
 </docs>
 
 <template>
-  <a-form layout="horizontal">
-    <a-form-item
+  <pf-form layout="horizontal">
+    <pf-form-item
       label="Top coders"
       :label-col="{ span: 6 }"
       :wrapper-col="{ span: 18 }"
       name="coders"
       v-bind="validateInfos.coders"
     >
-      <a-mentions v-model:value="modelRef.coders" rows="1">
-        <a-mentions-option value="afc163">afc163</a-mentions-option>
-        <a-mentions-option value="zombieJ">zombieJ</a-mentions-option>
-        <a-mentions-option value="yesmeck">yesmeck</a-mentions-option>
-      </a-mentions>
-    </a-form-item>
-    <a-form-item
+      <pf-mentions v-model:value="modelRef.coders" rows="1">
+        <pf-mentions-option value="afc163">afc163</pf-mentions-option>
+        <pf-mentions-option value="zombieJ">zombieJ</pf-mentions-option>
+        <pf-mentions-option value="yesmeck">yesmeck</pf-mentions-option>
+      </pf-mentions>
+    </pf-form-item>
+    <pf-form-item
       label="Bio"
       :label-col="{ span: 6 }"
       :wrapper-col="{ span: 18 }"
       name="bio"
       v-bind="validateInfos.bio"
     >
-      <a-mentions
+      <pf-mentions
         v-model:value="modelRef.bio"
         rows="3"
         placeholder="You can use @ to ref user here"
       >
-        <a-mentions-option value="afc163">afc163</a-mentions-option>
-        <a-mentions-option value="zombieJ">zombieJ</a-mentions-option>
-        <a-mentions-option value="yesmeck">yesmeck</a-mentions-option>
-      </a-mentions>
-    </a-form-item>
-    <a-form-item :wrapper-col="{ span: 12, offset: 5 }">
-      <a-button type="primary" @click="handleSubmit">Submit</a-button>
-      <a-button style="margin-left: 8px" @click="resetFields">Reset</a-button>
-    </a-form-item>
-  </a-form>
+        <pf-mentions-option value="afc163">afc163</pf-mentions-option>
+        <pf-mentions-option value="zombieJ">zombieJ</pf-mentions-option>
+        <pf-mentions-option value="yesmeck">yesmeck</pf-mentions-option>
+      </pf-mentions>
+    </pf-form-item>
+    <pf-form-item :wrapper-col="{ span: 12, offset: 5 }">
+      <pf-button type="primary" @click="handleSubmit">Submit</pf-button>
+      <pf-button style="margin-left: 8px" @click="resetFields">Reset</pf-button>
+    </pf-form-item>
+  </pf-form>
 </template>
 <script>
 import { Mentions, Form } from 'pf-ui-vue';

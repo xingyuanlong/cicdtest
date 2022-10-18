@@ -15,13 +15,13 @@ title:
 Add or remove form items dynamically.
 </docs>
 <template>
-  <a-form
+  <pf-form
     ref="formRef"
     name="dynamic_form_item"
     :model="dynamicValidateForm"
     v-bind="formItemLayoutWithOutLabel"
   >
-    <a-form-item
+    <pf-form-item
       v-for="(domain, index) in dynamicValidateForm.domains"
       :key="domain.key"
       v-bind="index === 0 ? formItemLayout : {}"
@@ -33,7 +33,7 @@ Add or remove form items dynamically.
         trigger: 'change',
       }"
     >
-      <a-input
+      <pf-input
         v-model:value="domain.value"
         placeholder="please input domain"
         style="width: 60%; margin-right: 8px"
@@ -44,18 +44,18 @@ Add or remove form items dynamically.
         :disabled="dynamicValidateForm.domains.length === 1"
         @click="removeDomain(domain)"
       />
-    </a-form-item>
-    <a-form-item v-bind="formItemLayoutWithOutLabel">
-      <a-button type="dashed" style="width: 60%" @click="addDomain">
+    </pf-form-item>
+    <pf-form-item v-bind="formItemLayoutWithOutLabel">
+      <pf-button type="dashed" style="width: 60%" @click="addDomain">
         <PlusOutlined />
         Add field
-      </a-button>
-    </a-form-item>
-    <a-form-item v-bind="formItemLayoutWithOutLabel" style="margin-top: 24px;">
-      <a-button type="primary" html-type="submit" @click="submitForm">Submit</a-button>
-      <a-button style="margin-left: 10px" @click="resetForm">Reset</a-button>
-    </a-form-item>
-  </a-form>
+      </pf-button>
+    </pf-form-item>
+    <pf-form-item v-bind="formItemLayoutWithOutLabel" style="margin-top: 24px;">
+      <pf-button type="primary" html-type="submit" @click="submitForm">Submit</pf-button>
+      <pf-button style="margin-left: 10px" @click="resetForm">Reset</pf-button>
+    </pf-form-item>
+  </pf-form>
 </template>
 
 <script lang="ts">

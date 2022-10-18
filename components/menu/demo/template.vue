@@ -16,11 +16,11 @@ Use the single file method to recursively generate menus.
 
 <template>
   <div style="width: 256px">
-    <a-button type="primary" style="margin-bottom: 16px" @click="toggleCollapsed">
+    <pf-button type="primary" style="margin-bottom: 16px" @click="toggleCollapsed">
       <MenuUnfoldOutlined v-if="collapsed" />
       <MenuFoldOutlined v-else />
-    </a-button>
-    <a-menu
+    </pf-button>
+    <pf-menu
       v-model:openKeys="openKeys"
       v-model:selectedKeys="selectedKeys"
       mode="inline"
@@ -29,18 +29,18 @@ Use the single file method to recursively generate menus.
     >
       <template v-for="item in list" :key="item.key">
         <template v-if="!item.children">
-          <a-menu-item :key="item.key">
+          <pf-menu-item :key="item.key">
             <template #icon>
               <PieChartOutlined />
             </template>
             {{ item.title }}
-          </a-menu-item>
+          </pf-menu-item>
         </template>
         <template v-else>
           <sub-menu :key="item.key" :menu-info="item" />
         </template>
       </template>
-    </a-menu>
+    </pf-menu>
   </div>
 </template>
 <script lang="ts">
@@ -62,23 +62,23 @@ const SubMenu = {
     },
   },
   template: `
-    <a-sub-menu :key="menuInfo.key">
+    <pf-sub-menu :key="menuInfo.key">
       <template #icon><MailOutlined /></template>
       <template #title>{{ menuInfo.title }}</template>
       <template v-for="item in menuInfo.children" :key="item.key">
         <template v-if="!item.children">
-          <a-menu-item :key="item.key">
+          <pf-menu-item :key="item.key">
             <template #icon>
               <PieChartOutlined />
             </template>
             {{ item.title }}
-          </a-menu-item>
+          </pf-menu-item>
         </template>
         <template v-else>
           <sub-menu :menu-info="item" :key="item.key" />
         </template>
       </template>
-    </a-sub-menu>
+    </pf-sub-menu>
   `,
   components: {
     PieChartOutlined,

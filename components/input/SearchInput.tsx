@@ -15,7 +15,7 @@ const ActionMap = {
 };
 const defaultIconRender = () => <SearchOutlined />;
 export default defineComponent({
-  name: 'ASearchInput',
+  name: 'PfSearchInput',
   inheritAttrs: false,
   props: {
     ...inputProps(),

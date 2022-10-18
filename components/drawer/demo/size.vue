@@ -17,19 +17,19 @@ The default width (or height) of Drawer is `500px`, and there is a presetted lar
 </docs>
 
 <template>
-  <a-button type="primary" style="margin-right: 8px" @click="showDrawer('default')">
+  <pf-button type="primary" style="margin-right: 8px" @click="showDrawer('default')">
     Open Default Size (500px)
-  </a-button>
-  <a-button type="primary" @click="showDrawer('large')">Open Large Size (800px)</a-button>
-  <a-drawer title="Basic Drawer" :size="size" :visible="visible" @close="onClose">
+  </pf-button>
+  <pf-button type="primary" @click="showDrawer('large')">Open Large Size (800px)</pf-button>
+  <pf-drawer title="Basic Drawer" :size="size" :visible="visible" @close="onClose">
     <template #footer>
-      <a-button type="primary" @click="onClose" style="margin-right: 16px">Submit</a-button>
-      <a-button @click="onClose">Cancel</a-button>
+      <pf-button type="primary" @click="onClose" style="margin-right: 16px">Submit</pf-button>
+      <pf-button @click="onClose">Cancel</pf-button>
     </template>
     <p>Some contents...</p>
     <p>Some contents...</p>
     <p>Some contents...</p>
-  </a-drawer>
+  </pf-drawer>
 </template>
 <script lang="ts">
 import { defineComponent, ref } from 'vue';

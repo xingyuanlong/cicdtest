@@ -17,47 +17,47 @@ Config component default size.
 </docs>
 
 <template>
-  <a-radio-group v-model:value="componentSize">
-    <a-radio-button value="small">Small</a-radio-button>
-    <a-radio-button value="middle">Middle</a-radio-button>
-    <a-radio-button value="large">Large</a-radio-button>
-  </a-radio-group>
-  <a-divider />
-  <a-config-provider :component-size="componentSize">
+  <pf-radio-group v-model:value="componentSize">
+    <pf-radio-button value="small">Small</pf-radio-button>
+    <pf-radio-button value="middle">Middle</pf-radio-button>
+    <pf-radio-button value="large">Large</pf-radio-button>
+  </pf-radio-group>
+  <pf-divider />
+  <pf-config-provider :component-size="componentSize">
     <div class="example">
-      <a-input />
+      <pf-input />
     </div>
     <div class="example">
-      <a-tabs>
-        <a-tab-pane key="1" tab="Tab 1">Content of Tab Pane 1</a-tab-pane>
-        <a-tab-pane key="2" tab="Tab 2">Content of Tab Pane 2</a-tab-pane>
-        <a-tab-pane key="3" tab="Tab 3">Content of Tab Pane 3</a-tab-pane>
-      </a-tabs>
+      <pf-tabs>
+        <pf-tab-pane key="1" tab="Tab 1">Content of Tab Pane 1</pf-tab-pane>
+        <pf-tab-pane key="2" tab="Tab 2">Content of Tab Pane 2</pf-tab-pane>
+        <pf-tab-pane key="3" tab="Tab 3">Content of Tab Pane 3</pf-tab-pane>
+      </pf-tabs>
     </div>
     <div class="example">
-      <a-input-search allow-clear />
+      <pf-input-search allow-clear />
     </div>
     <div class="example">
-      <a-textarea allow-clear />
+      <pf-textarea allow-clear />
     </div>
     <div class="example">
-      <a-select style="width: 100px" placeholder="select value" :options="[{ value: 'demo' }]" />
+      <pf-select style="width: 100px" placeholder="select value" :options="[{ value: 'demo' }]" />
     </div>
     <div class="example">
       <a-datePicker />
     </div>
     <div class="example">
-      <a-range-picker />
+      <pf-range-picker />
     </div>
     <div class="example">
-      <a-button>Button</a-button>
+      <pf-button>Button</pf-button>
     </div>
     <div class="example">
-      <a-card title="Card">
-        <a-table :columns="columns" :data-source="dataSource" />
-      </a-card>
+      <pf-card title="Card">
+        <pf-table :columns="columns" :data-source="dataSource" />
+      </pf-card>
     </div>
-  </a-config-provider>
+  </pf-config-provider>
 </template>
 <script>
 import { defineComponent, ref } from 'vue';

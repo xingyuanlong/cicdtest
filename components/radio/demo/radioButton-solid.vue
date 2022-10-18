@@ -18,20 +18,20 @@ Solid radio button style.
 <template>
   <div>
     <div>
-      <a-radio-group v-model:value="value1" button-style="solid">
-        <a-radio-button value="a">Hangzhou</a-radio-button>
-        <a-radio-button value="b">Shanghai</a-radio-button>
-        <a-radio-button value="c">Beijing</a-radio-button>
-        <a-radio-button value="d">Chengdu</a-radio-button>
-      </a-radio-group>
+      <pf-radio-group v-model:value="value1" button-style="solid">
+        <pf-radio-button value="a">Hangzhou</pf-radio-button>
+        <pf-radio-button value="b">Shanghai</pf-radio-button>
+        <pf-radio-button value="c">Beijing</pf-radio-button>
+        <pf-radio-button value="d">Chengdu</pf-radio-button>
+      </pf-radio-group>
     </div>
     <div :style="{ marginTop: '16px' }">
-      <a-radio-group v-model:value="value2" button-style="solid">
-        <a-radio-button value="a">Hangzhou</a-radio-button>
-        <a-radio-button value="b" disabled>Shanghai</a-radio-button>
-        <a-radio-button value="c">Beijing</a-radio-button>
-        <a-radio-button value="d">Chengdu</a-radio-button>
-      </a-radio-group>
+      <pf-radio-group v-model:value="value2" button-style="solid">
+        <pf-radio-button value="a">Hangzhou</pf-radio-button>
+        <pf-radio-button value="b" disabled>Shanghai</pf-radio-button>
+        <pf-radio-button value="c">Beijing</pf-radio-button>
+        <pf-radio-button value="d">Chengdu</pf-radio-button>
+      </pf-radio-group>
     </div>
   </div>
 </template>

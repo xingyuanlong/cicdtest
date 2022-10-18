@@ -18,11 +18,11 @@ Only card type Tabs support adding & closable.
 </docs>
 
 <template>
-  <a-tabs v-model:activeKey="activeKey" type="editable-card" @edit="onEdit">
-    <a-tab-pane v-for="pane in panes" :key="pane.key" :tab="pane.title" :closable="pane.closable">
+  <pf-tabs v-model:activeKey="activeKey" type="editable-card" @edit="onEdit">
+    <pf-tab-pane v-for="pane in panes" :key="pane.key" :tab="pane.title" :closable="pane.closable">
       {{ pane.content }}
-    </a-tab-pane>
-  </a-tabs>
+    </pf-tab-pane>
+  </pf-tabs>
 </template>
 <script lang="ts">
 import { defineComponent, ref } from 'vue';

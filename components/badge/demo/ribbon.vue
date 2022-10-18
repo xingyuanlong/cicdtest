@@ -16,28 +16,28 @@ Use ribbon badge.
 </docs>
 
 <template>
-  <a-badge-ribbon text="Hippies">
-    <a-card title="Pushes open the window" size="small">and raises the spyglass.</a-card>
-  </a-badge-ribbon>
-  <a-badge-ribbon text="Hippies" color="pink">
-    <a-card title="Pushes open the window" size="small">and raises the spyglass.</a-card>
-  </a-badge-ribbon>
-  <a-badge-ribbon text="Hippies" color="red">
-    <a-card title="Pushes open the window" size="small">and raises the spyglass.</a-card>
-  </a-badge-ribbon>
-  <a-badge-ribbon text="Hippies" color="cyan">
-    <a-card title="Pushes open the window" size="small">and raises the spyglass.</a-card>
-  </a-badge-ribbon>
-  <a-badge-ribbon text="Hippies" color="green">
-    <a-card title="Pushes open the window" size="small">and raises the spyglass.</a-card>
-  </a-badge-ribbon>
-  <a-badge-ribbon text="Hippies" color="purple">
-    <a-card title="Pushes open the window" size="small">and raises the spyglass.</a-card>
-  </a-badge-ribbon>
-  <a-badge-ribbon text="Hippies" color="volcano">
-    <a-card title="Pushes open the window" size="small">and raises the spyglass.</a-card>
-  </a-badge-ribbon>
-  <a-badge-ribbon text="Hippies" color="magenta">
-    <a-card title="Pushes open the window" size="small">and raises the spyglass.</a-card>
-  </a-badge-ribbon>
+  <pf-badge-ribbon text="Hippies">
+    <pf-card title="Pushes open the window" size="small">and raises the spyglass.</pf-card>
+  </pf-badge-ribbon>
+  <pf-badge-ribbon text="Hippies" color="pink">
+    <pf-card title="Pushes open the window" size="small">and raises the spyglass.</pf-card>
+  </pf-badge-ribbon>
+  <pf-badge-ribbon text="Hippies" color="red">
+    <pf-card title="Pushes open the window" size="small">and raises the spyglass.</pf-card>
+  </pf-badge-ribbon>
+  <pf-badge-ribbon text="Hippies" color="cyan">
+    <pf-card title="Pushes open the window" size="small">and raises the spyglass.</pf-card>
+  </pf-badge-ribbon>
+  <pf-badge-ribbon text="Hippies" color="green">
+    <pf-card title="Pushes open the window" size="small">and raises the spyglass.</pf-card>
+  </pf-badge-ribbon>
+  <pf-badge-ribbon text="Hippies" color="purple">
+    <pf-card title="Pushes open the window" size="small">and raises the spyglass.</pf-card>
+  </pf-badge-ribbon>
+  <pf-badge-ribbon text="Hippies" color="volcano">
+    <pf-card title="Pushes open the window" size="small">and raises the spyglass.</pf-card>
+  </pf-badge-ribbon>
+  <pf-badge-ribbon text="Hippies" color="magenta">
+    <pf-card title="Pushes open the window" size="small">and raises the spyglass.</pf-card>
+  </pf-badge-ribbon>
 </template>

@@ -16,38 +16,38 @@ Classic page layouts.
 
 </docs>
 <template>
-  <a-layout>
-    <a-layout-header>Header</a-layout-header>
-    <a-layout-content>Content</a-layout-content>
-    <a-layout-footer>Footer</a-layout-footer>
-  </a-layout>
+  <pf-layout>
+    <pf-layout-header>Header</pf-layout-header>
+    <pf-layout-content>Content</pf-layout-content>
+    <pf-layout-footer>Footer</pf-layout-footer>
+  </pf-layout>
 
-  <a-layout>
-    <a-layout-header>Header</a-layout-header>
-    <a-layout>
-      <a-layout-sider>Sider</a-layout-sider>
-      <a-layout-content>Content</a-layout-content>
-    </a-layout>
-    <a-layout-footer>Footer</a-layout-footer>
-  </a-layout>
+  <pf-layout>
+    <pf-layout-header>Header</pf-layout-header>
+    <pf-layout>
+      <pf-layout-sider>Sider</pf-layout-sider>
+      <pf-layout-content>Content</pf-layout-content>
+    </pf-layout>
+    <pf-layout-footer>Footer</pf-layout-footer>
+  </pf-layout>
 
-  <a-layout>
-    <a-layout-header>Header</a-layout-header>
-    <a-layout>
-      <a-layout-content>Content</a-layout-content>
-      <a-layout-sider>Sider</a-layout-sider>
-    </a-layout>
-    <a-layout-footer>Footer</a-layout-footer>
-  </a-layout>
+  <pf-layout>
+    <pf-layout-header>Header</pf-layout-header>
+    <pf-layout>
+      <pf-layout-content>Content</pf-layout-content>
+      <pf-layout-sider>Sider</pf-layout-sider>
+    </pf-layout>
+    <pf-layout-footer>Footer</pf-layout-footer>
+  </pf-layout>
 
-  <a-layout>
-    <a-layout-sider>Sider</a-layout-sider>
-    <a-layout>
-      <a-layout-header>Header</a-layout-header>
-      <a-layout-content>Content</a-layout-content>
-      <a-layout-footer>Footer</a-layout-footer>
-    </a-layout>
-  </a-layout>
+  <pf-layout>
+    <pf-layout-sider>Sider</pf-layout-sider>
+    <pf-layout>
+      <pf-layout-header>Header</pf-layout-header>
+      <pf-layout-content>Content</pf-layout-content>
+      <pf-layout-footer>Footer</pf-layout-footer>
+    </pf-layout>
+  </pf-layout>
 </template>
 
 <style>

@@ -17,19 +17,19 @@ Add prefix or suffix icons inside input.
 </docs>
 <template>
   <div class="components-input-demo-presuffix">
-    <a-input v-model:value="userName" placeholder="Basic usage">
+    <pf-input v-model:value="userName" placeholder="Basic usage">
       <template #prefix>
         <user-outlined type="user" />
       </template>
       <template #suffix>
-        <a-tooltip title="Extra information">
+        <pf-tooltip title="Extra information">
           <info-circle-outlined style="color: rgba(0, 0, 0, 0.45)" />
-        </a-tooltip>
+        </pf-tooltip>
       </template>
-    </a-input>
+    </pf-input>
     <br />
     <br />
-    <a-input prefix="￥" suffix="RMB" />
+    <pf-input prefix="￥" suffix="RMB" />
   </div>
 </template>
 

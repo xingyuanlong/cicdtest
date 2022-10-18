@@ -17,7 +17,7 @@ Allows for custom rendering of tags.
 </docs>
 
 <template>
-  <a-tree-select
+  <pf-tree-select
     v-model:value="value"
     show-search
     style="width: 100%"
@@ -30,15 +30,15 @@ Allows for custom rendering of tags.
     :tree-data="treeData"
   >
     <template #tagRender="{ label, closable, onClose, option }">
-      <a-tag :closable="closable" :color="option.color" style="margin-right: 3px" @close="onClose">
+      <pf-tag :closable="closable" :color="option.color" style="margin-right: 3px" @close="onClose">
         {{ label }}&nbsp;&nbsp;
-      </a-tag>
+      </pf-tag>
     </template>
     <template #title="{ value: val, title }">
       <b v-if="val === 'parent 1-1'" style="color: #08c">{{ val }}</b>
       <template v-else>{{ title }}</template>
     </template>
-  </a-tree-select>
+  </pf-tree-select>
 </template>
 <script lang="ts">
 import type { TreeSelectProps } from 'pf-ui-vue';

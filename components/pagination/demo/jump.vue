@@ -16,9 +16,9 @@ Jump to a page directly.
 </docs>
 <template>
   <div>
-    <a-pagination v-model:current="current1" :show-quick-jumper={goButton:true} :total="500" @change="onChange" />
+    <pf-pagination v-model:current="current1" :show-quick-jumper={goButton:true} :total="500" @change="onChange" />
     <br />
-    <a-pagination
+    <pf-pagination
       v-model:current="current2"
       show-quick-jumper
       :total="500"

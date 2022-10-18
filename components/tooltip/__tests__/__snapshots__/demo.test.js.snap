@@ -31,7 +31,7 @@ exports[`renders ./components/tooltip/demo/auto-adjust-overflow.vue correctly 1`
 exports[`renders ./components/tooltip/demo/basic.vue correctly 1`] = `<span> Tooltip will show when mouse enter. </span>`;
 
 exports[`renders ./components/tooltip/demo/color.vue correctly 1`] = `
-<div id="components-a-tooltip-demo-color">
+<div id="components-pf-tooltip-demo-color">
   <div class="ant-divider ant-divider-horizontal ant-divider-with-text ant-divider-with-text-left" role="separator"><span class="ant-divider-inner-text">Presets</span></div>
   <div>
     <!----><button class="ant-btn" type="button">
@@ -93,7 +93,7 @@ exports[`renders ./components/tooltip/demo/color.vue correctly 1`] = `
 `;
 
 exports[`renders ./components/tooltip/demo/placement.vue correctly 1`] = `
-<div id="components-a-tooltip-demo-placement">
+<div id="components-pf-tooltip-demo-placement">
   <div style="margin-left: 70px; white-space: nowrap;">
     <!----><button class="ant-btn" type="button">
       <!----><span>TL</span>

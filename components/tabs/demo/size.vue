@@ -17,16 +17,16 @@ Large size tabs are usally used in page header, and small size could be used in 
 
 <template>
   <div>
-    <a-radio-group v-model:value="size" style="margin-bottom: 16px">
-      <a-radio-button value="small">Small</a-radio-button>
-      <a-radio-button value="default">Default</a-radio-button>
-      <a-radio-button value="large">Large</a-radio-button>
-    </a-radio-group>
-    <a-tabs v-model:activeKey="activeKey" :size="size">
-      <a-tab-pane key="1" tab="Tab 1">Content of tab 1</a-tab-pane>
-      <a-tab-pane key="2" tab="Tab 2">Content of tab 2</a-tab-pane>
-      <a-tab-pane key="3" tab="Tab 3">Content of tab 3</a-tab-pane>
-    </a-tabs>
+    <pf-radio-group v-model:value="size" style="margin-bottom: 16px">
+      <pf-radio-button value="small">Small</pf-radio-button>
+      <pf-radio-button value="default">Default</pf-radio-button>
+      <pf-radio-button value="large">Large</pf-radio-button>
+    </pf-radio-group>
+    <pf-tabs v-model:activeKey="activeKey" :size="size">
+      <pf-tab-pane key="1" tab="Tab 1">Content of tab 1</pf-tab-pane>
+      <pf-tab-pane key="2" tab="Tab 2">Content of tab 2</pf-tab-pane>
+      <pf-tab-pane key="3" tab="Tab 3">Content of tab 3</pf-tab-pane>
+    </pf-tabs>
   </div>
 </template>
 <script lang="ts">

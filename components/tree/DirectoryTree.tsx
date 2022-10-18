@@ -37,7 +37,7 @@ function getIcon(props: AntdTreeNodeAttribute) {
 }
 
 export default defineComponent({
-  name: 'ADirectoryTree',
+  name: 'PfDirectoryTree',
   inheritAttrs: false,
   props: initDefaultProps(directoryTreeProps(), {
     showIcon: true,
@@ -56,7 +56,7 @@ export default defineComponent({
   //   'click',
   // ],
   setup(props, { attrs, slots, emit, expose }) {
-    // convertTreeToData 兼容 a-tree-node 历史写法，未来a-tree-node移除后，删除相关代码，不要再render中调用 treeData，否则死循环
+    // convertTreeToData 兼容 pf-tree-node 历史写法，未来pf-tree-node移除后，删除相关代码，不要再render中调用 treeData，否则死循环
     const treeData = ref<DataNode[]>(
       props.treeData || convertTreeToData(filterEmpty(slots.default?.())),
     );

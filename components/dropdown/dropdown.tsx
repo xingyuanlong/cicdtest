@@ -15,7 +15,7 @@ import getPlacements from '../tooltip/placements';
 export type DropdownProps = Partial<ExtractPropTypes<ReturnType<typeof dropdownProps>>>;
 
 const Dropdown = defineComponent({
-  name: 'ADropdown',
+  name: 'PfDropdown',
   inheritAttrs: false,
   props: initDefaultProps(dropdownProps(), {
     mouseEnterDelay: 0.15,

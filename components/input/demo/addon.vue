@@ -16,36 +16,36 @@ Using pre & post tabs example.
 
 </docs>
 <template>
-  <a-space direction="vertical">
-    <a-input v-model:value="value1" addon-before="Http://" addon-after=".com" />
-    <a-input v-model:value="value2">
+  <pf-space direction="vertical">
+    <pf-input v-model:value="value1" addon-before="Http://" addon-after=".com" />
+    <pf-input v-model:value="value2">
       <template #addonBefore>
-        <a-select v-model:value="value3" style="width: 90px">
-          <a-select-option value="Http://">Http://</a-select-option>
-          <a-select-option value="Https://">Https://</a-select-option>
-        </a-select>
+        <pf-select v-model:value="value3" style="width: 90px">
+          <pf-select-option value="Http://">Http://</pf-select-option>
+          <pf-select-option value="Https://">Https://</pf-select-option>
+        </pf-select>
       </template>
       <template #addonAfter>
-        <a-select v-model:value="value4" style="width: 80px">
-          <a-select-option value=".com">.com</a-select-option>
-          <a-select-option value=".jp">.jp</a-select-option>
-          <a-select-option value=".cn">.cn</a-select-option>
-          <a-select-option value=".org">.org</a-select-option>
-        </a-select>
+        <pf-select v-model:value="value4" style="width: 80px">
+          <pf-select-option value=".com">.com</pf-select-option>
+          <pf-select-option value=".jp">.jp</pf-select-option>
+          <pf-select-option value=".cn">.cn</pf-select-option>
+          <pf-select-option value=".org">.org</pf-select-option>
+        </pf-select>
       </template>
-    </a-input>
-    <a-input v-model:value="value5">
+    </pf-input>
+    <pf-input v-model:value="value5">
       <template #addonAfter>
         <setting-outlined />
       </template>
-    </a-input>
+    </pf-input>
 
-    <a-input v-model:value="value6">
+    <pf-input v-model:value="value6">
       <template #addonBefore>
-        <a-cascader placeholder="cascader" style="width: 150px" />
+        <pf-cascader placeholder="cascader" style="width: 150px" />
       </template>
-    </a-input>
-  </a-space>
+    </pf-input>
+  </pf-space>
 </template>
 
 <script lang="ts">

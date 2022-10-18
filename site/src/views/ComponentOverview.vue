@@ -11,8 +11,8 @@
         }}
       </p>
     </section>
-    <a-divider></a-divider>
-    <a-input
+    <pf-divider></pf-divider>
+    <pf-input
       ref="inputRef"
       v-model:value="search"
       :placeholder="$t('app.components.overview.search')"
@@ -22,19 +22,19 @@
       <template #suffix>
         <SearchOutlined />
       </template>
-    </a-input>
-    <a-divider></a-divider>
+    </pf-input>
+    <pf-divider></pf-divider>
     <template v-for="group in menuItems" :key="group.title">
       <div class="components-overview">
         <h2 class="ant-typography components-overview-group-title">
-          <a-space align="center">
+          <pf-space align="center">
             {{ isZhCN ? group.title : group.enTitle }}
-            <a-tag style="display: block">{{ group.children.length }}</a-tag>
-          </a-space>
+            <pf-tag style="display: block">{{ group.children.length }}</pf-tag>
+          </pf-space>
         </h2>
-        <a-row :gutter="[24, 24]">
+        <pf-row :gutter="[24, 24]">
           <template v-for="component in group.children" :key="component.title">
-            <a-col :xs="24" :sm="12" :lg="8" :xl="6">
+            <pf-col :xs="24" :sm="12" :lg="8" :xl="6">
               <component
                 :is="component.target ? 'a' : 'router-link'"
                 v-bind="
@@ -43,7 +43,7 @@
                     : { to: getLocalizedPathname(component.path, isZhCN) }
                 "
               >
-                <a-card size="small" class="components-overview-card">
+                <pf-card size="small" class="components-overview-card">
                   <template #title>
                     <div class="components-overview-title">
                       {{ component.title }}
@@ -53,11 +53,11 @@
                   <div class="components-overview-img">
                     <img :src="component.cover" :alt="component.title" />
                   </div>
-                </a-card>
+                </pf-card>
               </component>
-            </a-col>
+            </pf-col>
           </template>
-        </a-row>
+        </pf-row>
       </div>
     </template>
   </section>

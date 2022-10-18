@@ -55,7 +55,7 @@ export type SelectProps = Partial<ExtractPropTypes<ReturnType<typeof selectProps
 
 const SECRET_COMBOBOX_MODE_DO_NOT_USE = 'SECRET_COMBOBOX_MODE_DO_NOT_USE';
 const Select = defineComponent({
-  name: 'ASelect',
+  name: 'PfSelect',
   Option,
   OptGroup,
   inheritAttrs: false,

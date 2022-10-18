@@ -1,9 +1,9 @@
 <template>
   <Header />
   <div class="main-wrapper">
-    <a-row>
+    <pf-row>
       <template v-if="isMobile">
-        <a-drawer
+        <pf-drawer
           key="mobile-menu"
           :closable="false"
           placement="left"
@@ -19,19 +19,19 @@
               <MenuOutlined v-else :style="iconStyle" />
             </div>
           </template>
-        </a-drawer>
+        </pf-drawer>
       </template>
       <template v-else>
-        <a-col :xxxl="4" :xxl="4" :xl="5" :lg="6" :md="6" :sm="24" :xs="24" class="main-menu">
-          <a-affix>
+        <pf-col :xxxl="4" :xxl="4" :xl="5" :lg="6" :md="6" :sm="24" :xs="24" class="main-menu">
+          <pf-affix>
             <section class="main-menu-inner">
               <!-- <Sponsors :is-c-n="isZhCN" /> -->
               <Menu :menus="dataSource" :active-menu-item="activeMenuItem" :is-zh-c-n="isZhCN" />
             </section>
-          </a-affix>
-        </a-col>
+          </pf-affix>
+        </pf-col>
       </template>
-      <a-col :xxxl="20" :xxl="20" :xl="19" :lg="18" :md="18" :sm="24" :xs="24">
+      <pf-col :xxxl="20" :xxl="20" :xl="19" :lg="18" :md="18" :sm="24" :xs="24">
         <section :class="mainContainerClass">
           <!-- <TopAd :is-c-n="isZhCN" /> -->
           <WWAdsVue v-if="isZhCN" />
@@ -39,9 +39,9 @@
             <component :is="matchCom" />
           </Demo>
           <router-view v-else />
-          <a-affix v-if="headers.length" class="toc-affix" :offset-top="20">
-            <a-anchor>
-              <a-anchor-link
+          <pf-affix v-if="headers.length" class="toc-affix" :offset-top="20">
+            <pf-anchor>
+              <pf-anchor-link
                 v-for="h in headers"
                 :key="h.title"
                 :href="h.href || `#${slugifyTitle(h.title)}`"
@@ -51,31 +51,31 @@
                   <LinkOutlined v-if="h.target" />
                   {{ isZhCN ? h.title : h.enTitle || h.title }}
                 </template>
-              </a-anchor-link>
-            </a-anchor>
-          </a-affix>
+              </pf-anchor-link>
+            </pf-anchor>
+          </pf-affix>
         </section>
         <div class="fixed-widgets" :style="isZhCN ? { bottom: '175px' } : {}">
-          <a-dropdown placement="top">
+          <pf-dropdown placement="top">
             <template #overlay>
-              <a-menu
+              <pf-menu
                 :selected-keys="[themeMode.theme.value]"
                 @click="({ key }) => themeMode.changeTheme(key)"
               >
-                <a-menu-item key="default">{{ $t('app.theme.switch.default') }}</a-menu-item>
-                <a-menu-item key="dark">{{ $t('app.theme.switch.dark') }}</a-menu-item>
-              </a-menu>
+                <pf-menu-item key="default">{{ $t('app.theme.switch.default') }}</pf-menu-item>
+                <pf-menu-item key="dark">{{ $t('app.theme.switch.dark') }}</pf-menu-item>
+              </pf-menu>
             </template>
-            <a-avatar class="fixed-widgets-avatar" :size="44">
+            <pf-avatar class="fixed-widgets-avatar" :size="44">
               <template #icon><ThemeIcon /></template>
-            </a-avatar>
-          </a-dropdown>
+            </pf-avatar>
+          </pf-dropdown>
         </div>
         <PrevAndNext :menus="menus" :current-menu-index="currentMenuIndex" :is-zh-c-n="isZhCN" />
         <!-- <Footer /> -->
         <div :style="{padding: '30px'}" />
-      </a-col>
-    </a-row>
+      </pf-col>
+    </pf-row>
   </div>
 </template>
 <script lang="ts">

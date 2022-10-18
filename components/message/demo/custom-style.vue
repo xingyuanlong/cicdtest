@@ -17,7 +17,7 @@ The `style` and `class` are available to customize Message.
 </docs>
 
 <template>
-  <a-button @click="success">Customized style</a-button>
+  <pf-button @click="success">Customized style</pf-button>
 </template>
 <script lang="ts">
 import { message } from 'pf-ui-vue';

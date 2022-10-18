@@ -17,19 +17,19 @@ Basic Usage
 </docs>
 
 <template>
-  <a-space>
-    <a-select
+  <pf-space>
+    <pf-select
       v-model:value="value1"
       style="width: 120px"
       :options="options1"
       @change="handleChange"
     >
       <template #suffixIcon><smile-outlined class="ant-select-suffix" /></template>
-    </a-select>
-    <a-select v-model:value="value2" style="width: 120px" disabled :options="options2">
+    </pf-select>
+    <pf-select v-model:value="value2" style="width: 120px" disabled :options="options2">
       <template #suffixIcon><meh-outlined class="ant-select-suffix" /></template>
-    </a-select>
-  </a-space>
+    </pf-select>
+  </pf-space>
 </template>
 <script lang="ts">
 import { SmileOutlined, MehOutlined } from '@ant-design/icons-vue';

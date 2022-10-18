@@ -17,86 +17,86 @@ There are 12 placement options available.
 </docs>
 
 <template>
-  <div id="components-a-tooltip-demo-placement">
+  <div id="components-pf-tooltip-demo-placement">
     <div :style="{ marginLeft: `${buttonWidth}px`, whiteSpace: 'nowrap' }">
-      <a-tooltip placement="topLeft">
+      <pf-tooltip placement="topLeft">
         <template #title>
           <span>prompt text</span>
         </template>
-        <a-button>TL</a-button>
-      </a-tooltip>
-      <a-tooltip placement="top">
+        <pf-button>TL</pf-button>
+      </pf-tooltip>
+      <pf-tooltip placement="top">
         <template #title>
           <span>prompt text</span>
         </template>
-        <a-button>Top</a-button>
-      </a-tooltip>
-      <a-tooltip placement="topRight">
+        <pf-button>Top</pf-button>
+      </pf-tooltip>
+      <pf-tooltip placement="topRight">
         <template #title>
           <span>prompt text</span>
         </template>
-        <a-button>TR</a-button>
-      </a-tooltip>
+        <pf-button>TR</pf-button>
+      </pf-tooltip>
     </div>
     <div :style="{ width: `${buttonWidth}px`, float: 'left' }">
-      <a-tooltip placement="leftTop">
+      <pf-tooltip placement="leftTop">
         <template #title>
           <span>prompt text</span>
         </template>
-        <a-button>LT</a-button>
-      </a-tooltip>
-      <a-tooltip placement="left">
+        <pf-button>LT</pf-button>
+      </pf-tooltip>
+      <pf-tooltip placement="left">
         <template #title>
           <span>prompt text</span>
         </template>
-        <a-button>Left</a-button>
-      </a-tooltip>
-      <a-tooltip placement="leftBottom">
+        <pf-button>Left</pf-button>
+      </pf-tooltip>
+      <pf-tooltip placement="leftBottom">
         <template #title>
           <span>prompt text</span>
         </template>
-        <a-button>LB</a-button>
-      </a-tooltip>
+        <pf-button>LB</pf-button>
+      </pf-tooltip>
     </div>
     <div :style="{ width: `${buttonWidth}px`, marginLeft: `${buttonWidth * 4 + 24}px` }">
-      <a-tooltip placement="rightTop">
+      <pf-tooltip placement="rightTop">
         <template #title>
           <span>prompt text</span>
         </template>
-        <a-button>RT</a-button>
-      </a-tooltip>
-      <a-tooltip placement="right">
+        <pf-button>RT</pf-button>
+      </pf-tooltip>
+      <pf-tooltip placement="right">
         <template #title>
           <span>prompt text</span>
         </template>
-        <a-button>Right</a-button>
-      </a-tooltip>
-      <a-tooltip placement="rightBottom">
+        <pf-button>Right</pf-button>
+      </pf-tooltip>
+      <pf-tooltip placement="rightBottom">
         <template #title>
           <span>prompt text</span>
         </template>
-        <a-button>RB</a-button>
-      </a-tooltip>
+        <pf-button>RB</pf-button>
+      </pf-tooltip>
     </div>
     <div :style="{ marginLeft: `${buttonWidth}px`, clear: 'both', whiteSpace: 'nowrap' }">
-      <a-tooltip placement="bottomLeft">
+      <pf-tooltip placement="bottomLeft">
         <template #title>
           <span>prompt text</span>
         </template>
-        <a-button>BL</a-button>
-      </a-tooltip>
-      <a-tooltip placement="bottom">
+        <pf-button>BL</pf-button>
+      </pf-tooltip>
+      <pf-tooltip placement="bottom">
         <template #title>
           <span>prompt text</span>
         </template>
-        <a-button>Bottom</a-button>
-      </a-tooltip>
-      <a-tooltip placement="bottomRight">
+        <pf-button>Bottom</pf-button>
+      </pf-tooltip>
+      <pf-tooltip placement="bottomRight">
         <template #title>
           <span>prompt text</span>
         </template>
-        <a-button>BR</a-button>
-      </a-tooltip>
+        <pf-button>BR</pf-button>
+      </pf-tooltip>
     </div>
   </div>
 </template>
@@ -111,7 +111,7 @@ export default defineComponent({
 });
 </script>
 <style scoped>
-#components-a-tooltip-demo-placement .ant-btn {
+#components-pf-tooltip-demo-placement .ant-btn {
   width: 70px;
   text-align: center;
   padding: 0;

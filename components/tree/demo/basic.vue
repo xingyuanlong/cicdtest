@@ -16,7 +16,7 @@ The most basic usage, tell you how to use checkable, selectable, disabled, defau
 
 </docs>
 <template>
-  <a-tree
+  <pf-tree
     v-model:expandedKeys="expandedKeys"
     v-model:selectedKeys="selectedKeys"
     v-model:checkedKeys="checkedKeys"
@@ -28,7 +28,7 @@ The most basic usage, tell you how to use checkable, selectable, disabled, defau
       <span v-if="key === '0-0-1-0'" style="color: #1890ff">{{ title }}</span>
       <template v-else>{{ title }}</template>
     </template>
-  </a-tree>
+  </pf-tree>
 </template>
 <script lang="ts">
 import type { TreeProps } from 'pf-ui-vue';

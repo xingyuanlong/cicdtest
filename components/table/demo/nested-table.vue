@@ -18,18 +18,18 @@ Showing more detailed info of every row.
 </docs>
 
 <template>
-  <a-table :columns="columns" :data-source="data" class="components-table-demo-nested" expandRowByClick>
+  <pf-table :columns="columns" :data-source="data" class="components-table-demo-nested" expandRowByClick>
     <template #bodyCell="{ column }">
       <template v-if="column.key === 'operation'">
         <a>Publish</a>
       </template>
     </template>
     <template #expandedRowRender>
-      <a-table :columns="innerColumns" :data-source="innerData" :pagination="false">
+      <pf-table :columns="innerColumns" :data-source="innerData" :pagination="false">
         <template #bodyCell="{ column }">
           <template v-if="column.key === 'state'">
             <span>
-              <a-badge status="success" />
+              <pf-badge status="success" />
               Finished
             </span>
           </template>
@@ -37,24 +37,24 @@ Showing more detailed info of every row.
             <span class="table-operation">
               <a>Pause</a>
               <a>Stop</a>
-              <a-dropdown>
+              <pf-dropdown>
                 <template #overlay>
-                  <a-menu>
-                    <a-menu-item>Action 1</a-menu-item>
-                    <a-menu-item>Action 2</a-menu-item>
-                  </a-menu>
+                  <pf-menu>
+                    <pf-menu-item>Action 1</pf-menu-item>
+                    <pf-menu-item>Action 2</pf-menu-item>
+                  </pf-menu>
                 </template>
                 <a>
                   More
                   <down-outlined />
                 </a>
-              </a-dropdown>
+              </pf-dropdown>
             </span>
           </template>
         </template>
-      </a-table>
+      </pf-table>
     </template>
-  </a-table>
+  </pf-table>
 </template>
 <script lang="ts">
 import { DownOutlined } from '@ant-design/icons-vue';

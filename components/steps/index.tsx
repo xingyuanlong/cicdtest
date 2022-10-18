@@ -49,7 +49,7 @@ export type StepsProps = Partial<ExtractPropTypes<ReturnType<typeof stepsProps>>
 export type StepProps = Partial<ExtractPropTypes<ReturnType<typeof stepProps>>>;
 
 const Steps = defineComponent({
-  name: 'ASteps',
+  name: 'PfSteps',
   inheritAttrs: false,
   props: initDefaultProps(stepsProps(), {
     current: 0,
@@ -129,7 +129,7 @@ const Steps = defineComponent({
 /* istanbul ignore next */
 export const Step = defineComponent({
   ...VcStep,
-  name: 'AStep',
+  name: 'PfStep',
   props: VcStepProps(),
 });
 export default Object.assign(Steps, {

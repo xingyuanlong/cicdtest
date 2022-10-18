@@ -17,7 +17,7 @@ When there's too much information to show and the table can't display all at onc
 </docs>
 
 <template>
-  <a-table :columns="columns" :data-source="data" :scroll="{ x: 2000 }">
+  <pf-table :columns="columns" :data-source="data" :scroll="{ x: 2000 }">
     <template #bodyCell="{ column }">
       <template v-if="column.key === 'action'">
         <a>Delete</a>
@@ -28,7 +28,7 @@ When there's too much information to show and the table can't display all at onc
         {{ record.description }}
       </p>
     </template>
-  </a-table>
+  </pf-table>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';

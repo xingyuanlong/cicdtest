@@ -17,13 +17,13 @@ Upload files manually after `beforeUpload` returns `false`.
 
 <template>
   <div class="clearfix">
-    <a-upload :file-list="fileList" :before-upload="beforeUpload" @remove="handleRemove">
-      <a-button>
+    <pf-upload :file-list="fileList" :before-upload="beforeUpload" @remove="handleRemove">
+      <pf-button>
         <upload-outlined></upload-outlined>
         Select File
-      </a-button>
-    </a-upload>
-    <a-button
+      </pf-button>
+    </pf-upload>
+    <pf-button
       type="primary"
       :disabled="fileList.length === 0"
       :loading="uploading"
@@ -31,7 +31,7 @@ Upload files manually after `beforeUpload` returns `false`.
       @click="handleUpload"
     >
       {{ uploading ? 'Uploading' : 'Start Upload' }}
-    </a-button>
+    </pf-button>
   </div>
 </template>
 <script lang="ts">

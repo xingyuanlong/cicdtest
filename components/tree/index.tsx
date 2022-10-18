@@ -26,7 +26,7 @@ export type {
 
 /* istanbul ignore next */
 
-const TreeNode = defineComponent({ ...VcTreeNode, name: 'ATreeNode', props: treeNodeProps });
+const TreeNode = defineComponent({ ...VcTreeNode, name: 'PfTreeNode', props: treeNodeProps });
 
 export { DirectoryTree, TreeNode };
 

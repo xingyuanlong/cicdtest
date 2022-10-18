@@ -19,28 +19,28 @@ Support 6 placements.
 <template>
   <div id="components-dropdown-demo-placement">
     <template v-for="(placement, index) in placements" :key="placement">
-      <a-dropdown :placement="placement">
-        <a-button>{{ placement }}</a-button>
+      <pf-dropdown :placement="placement">
+        <pf-button>{{ placement }}</pf-button>
         <template #overlay>
-          <a-menu>
-            <a-menu-item>
+          <pf-menu>
+            <pf-menu-item>
               <a target="_blank" rel="noopener noreferrer" href="http://www.alipay.com/">
                 1st menu item
               </a>
-            </a-menu-item>
-            <a-menu-item>
+            </pf-menu-item>
+            <pf-menu-item>
               <a target="_blank" rel="noopener noreferrer" href="http://www.taobao.com/">
                 2nd menu item
               </a>
-            </a-menu-item>
-            <a-menu-item>
+            </pf-menu-item>
+            <pf-menu-item>
               <a target="_blank" rel="noopener noreferrer" href="http://www.tmall.com/">
                 3rd menu item
               </a>
-            </a-menu-item>
-          </a-menu>
+            </pf-menu-item>
+          </pf-menu>
         </template>
-      </a-dropdown>
+      </pf-dropdown>
       <br v-if="index === 2" />
     </template>
   </div>

@@ -17,9 +17,9 @@ The page you visited does not exist.
 </docs>
 
 <template>
-  <a-result status="404">
+  <pf-result status="404">
     <template #extra>
-      <a-button type="primary">回到首页</a-button>
+      <pf-button type="primary">回到首页</pf-button>
     </template>
-  </a-result>
+  </pf-result>
 </template>

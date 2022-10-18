@@ -19,13 +19,13 @@ The label of the selected item will be packed as an object for passing to the on
 </docs>
 
 <template>
-  <a-select
+  <pf-select
     v-model:value="value"
     label-in-value
     style="width: 120px"
     :options="options"
     @change="handleChange"
-  ></a-select>
+  ></pf-select>
 </template>
 <script lang="ts">
 import type { SelectProps } from 'pf-ui-vue';

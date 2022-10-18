@@ -67,7 +67,7 @@ export const alertProps = () => ({
 export type AlertProps = Partial<ExtractPropTypes<ReturnType<typeof alertProps>>>;
 
 const Alert = defineComponent({
-  name: 'AAlert',
+  name: 'PfAlert',
   inheritAttrs: false,
   props: alertProps(),
   setup(props, { slots, emit, attrs, expose }) {

@@ -12,7 +12,7 @@ import type { CheckboxChangeEvent, CheckboxProps } from './interface';
 import { CheckboxGroupContextKey, checkboxProps } from './interface';
 
 export default defineComponent({
-  name: 'ACheckbox',
+  name: 'PfCheckbox',
   inheritAttrs: false,
   __ANT_CHECKBOX: true,
   props: checkboxProps(),

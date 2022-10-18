@@ -17,18 +17,18 @@ Responsive configuration enables perfect presentation on small screen devices.
 </docs>
 
 <template>
-  <a-descriptions
+  <pf-descriptions
     title="Responsive Descriptions"
     bordered
     :column="{ xxl: 4, xl: 3, lg: 3, md: 3, sm: 2, xs: 1 }"
   >
-    <a-descriptions-item label="Product">Cloud Database</a-descriptions-item>
-    <a-descriptions-item label="Billing">Prepaid</a-descriptions-item>
-    <a-descriptions-item label="Time">18:00:00</a-descriptions-item>
-    <a-descriptions-item label="Amount">$80.00</a-descriptions-item>
-    <a-descriptions-item label="Discount">$20.00</a-descriptions-item>
-    <a-descriptions-item label="Official">$60.00</a-descriptions-item>
-    <a-descriptions-item label="Config Info">
+    <pf-descriptions-item label="Product">Cloud Database</pf-descriptions-item>
+    <pf-descriptions-item label="Billing">Prepaid</pf-descriptions-item>
+    <pf-descriptions-item label="Time">18:00:00</pf-descriptions-item>
+    <pf-descriptions-item label="Amount">$80.00</pf-descriptions-item>
+    <pf-descriptions-item label="Discount">$20.00</pf-descriptions-item>
+    <pf-descriptions-item label="Official">$60.00</pf-descriptions-item>
+    <pf-descriptions-item label="Config Info">
       Data disk type: MongoDB
       <br />
       Database version: 3.4
@@ -40,6 +40,6 @@ Responsive configuration enables perfect presentation on small screen devices.
       Replication factor: 3
       <br />
       Region: East China 1
-    </a-descriptions-item>
-  </a-descriptions>
+    </pf-descriptions-item>
+  </pf-descriptions>
 </template>

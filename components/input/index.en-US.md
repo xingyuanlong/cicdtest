@@ -30,7 +30,7 @@ A basic widget for getting the user input is a text field. Keyboard and mouse ca
 | showCount | Whether show text count | boolean | false |  |
 | size | The size of the input box. Note: in the context of a form, the `large` size is used. Available: `large` `default` `small` | string | `default` |  |
 | suffix | The suffix icon for the Input. | string\|slot |  |  |
-| type | The type of input, see: [MDN](https://developer.mozilla.org/docs/Web/HTML/Element/input#Form_%3Cinput%3E_types)(use `<a-textarea />` instead of `type="textarea"`) | string | `text` |  |
+| type | The type of input, see: [MDN](https://developer.mozilla.org/docs/Web/HTML/Element/input#Form_%3Cinput%3E_types)(use `<pf-textarea />` instead of `type="textarea"`) | string | `text` |  |
 | value(v-model) | The input content value | string |  |  |
 
 ### Input Events
@@ -83,10 +83,10 @@ Supports all props of `Input`.
 | size | The size of `Input.Group` specifies the size of the included `Input` fields. Available: `large` `default` `small` | string | `default` |
 
 ```html
-<a-input-group>
-  <a-input />
-  <a-input />
-</a-input-group>
+<pf-input-group>
+  <pf-input />
+  <pf-input />
+</pf-input-group>
 ```
 
 #### Input.Password (Added in 1.14.0)

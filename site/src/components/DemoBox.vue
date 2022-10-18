@@ -19,13 +19,13 @@
       </div>
       <div class="code-box-description" v-html="docHtml"></div>
       <div class="code-box-actions">
-        <a-tooltip :title="$t('app.demo.codesandbox')">
+        <pf-tooltip :title="$t('app.demo.codesandbox')">
           <CodeSandboxOutlined
             class="code-box-code-copy code-box-code-action"
             @click="handleCodeSandbox"
           />
-        </a-tooltip>
-        <a-tooltip :title="$t(`app.demo.type.${type === 'JS' ? 'js' : 'ts'}`)">
+        </pf-tooltip>
+        <pf-tooltip :title="$t(`app.demo.type.${type === 'JS' ? 'js' : 'ts'}`)">
           <span
             class="code-expand-icon code-box-code-action"
             style="width: auto"
@@ -33,8 +33,8 @@
           >
             {{ type }}
           </span>
-        </a-tooltip>
-        <a-tooltip
+        </pf-tooltip>
+        <pf-tooltip
           v-if="!blocked"
           :title="$t(`app.demo.${copied ? 'copied' : 'copy'}`)"
           :visible="copyTooltipVisible"
@@ -47,11 +47,11 @@
             v-clipboard:success="handleCodeCopied"
             class="code-box-code-copy code-box-code-action"
           />
-        </a-tooltip>
-        <a-tooltip v-else :title="$t('app.demo.copy')">
+        </pf-tooltip>
+        <pf-tooltip v-else :title="$t('app.demo.copy')">
           <SnippetsOutlined class="code-box-code-copy code-box-code-action" @click="warning" />
-        </a-tooltip>
-        <a-tooltip :title="$t(`app.demo.code.${codeExpand ? 'hide' : 'show'}`)">
+        </pf-tooltip>
+        <pf-tooltip :title="$t(`app.demo.code.${codeExpand ? 'hide' : 'show'}`)">
           <span class="code-expand-icon code-box-code-action">
             <img
               alt="expand code"
@@ -74,7 +74,7 @@
               @click="handleCodeExpand"
             />
           </span>
-        </a-tooltip>
+        </pf-tooltip>
       </div>
     </section>
     <section :class="highlightClass">

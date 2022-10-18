@@ -18,10 +18,10 @@ A notification box with a icon at the left side.
 
 <template>
   <div>
-    <a-button @click="() => openNotificationWithIcon('success')">Success</a-button>
-    <a-button @click="() => openNotificationWithIcon('info')">Info</a-button>
-    <a-button @click="() => openNotificationWithIcon('warning')">Warning</a-button>
-    <a-button @click="() => openNotificationWithIcon('error')">Error</a-button>
+    <pf-button @click="() => openNotificationWithIcon('success')">Success</pf-button>
+    <pf-button @click="() => openNotificationWithIcon('info')">Info</pf-button>
+    <pf-button @click="() => openNotificationWithIcon('warning')">Warning</pf-button>
+    <pf-button @click="() => openNotificationWithIcon('error')">Error</pf-button>
   </div>
 </template>
 <script lang="ts">

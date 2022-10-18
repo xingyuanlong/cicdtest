@@ -17,7 +17,7 @@ Additional description for alert message.
 </docs>
 
 <template>
-  <a-alert message="Success Text" type="success">
+  <pf-alert message="Success Text" type="success">
     <template #description>
       <p>
         Success Description
@@ -25,18 +25,18 @@ Additional description for alert message.
         Description Success Description
       </p>
     </template>
-  </a-alert>
-  <a-alert
+  </pf-alert>
+  <pf-alert
     message="Info Text"
     description="Info Description Info Description Info Description Info Description"
     type="info"
   />
-  <a-alert
+  <pf-alert
     message="Warning Text"
     description="Warning Description Warning Description Warning Description Warning Description"
     type="warning"
   />
-  <a-alert
+  <pf-alert
     message="Error Text"
     description="Error Description Error Description Error Description Error Description"
     type="error"

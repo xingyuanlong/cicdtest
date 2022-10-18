@@ -19,31 +19,31 @@ Under different screen sizes, there should be different performance
 
 <template>
   <div class="components-page-header-demo-responsive" style="border: 1px solid rgb(235, 237, 240)">
-    <a-page-header title="Title" sub-title="This is a subtitle" @back="() => $router.go(-1)">
+    <pf-page-header title="Title" sub-title="This is a subtitle" @back="() => $router.go(-1)">
       <template #extra>
-        <a-button key="3">Operation</a-button>
-        <a-button key="2">Operation</a-button>
-        <a-button key="1" type="primary">Primary</a-button>
+        <pf-button key="3">Operation</pf-button>
+        <pf-button key="2">Operation</pf-button>
+        <pf-button key="1" type="primary">Primary</pf-button>
       </template>
       <template #footer>
-        <a-tabs>
-          <a-tab-pane key="1" tab="Details" />
-          <a-tab-pane key="2" tab="Rule" />
-        </a-tabs>
+        <pf-tabs>
+          <pf-tab-pane key="1" tab="Details" />
+          <pf-tab-pane key="2" tab="Rule" />
+        </pf-tabs>
       </template>
       <div class="content">
         <div class="main">
-          <a-descriptions size="small" :column="2">
-            <a-descriptions-item label="Created">Lili Qu</a-descriptions-item>
-            <a-descriptions-item label="Association">
+          <pf-descriptions size="small" :column="2">
+            <pf-descriptions-item label="Created">Lili Qu</pf-descriptions-item>
+            <pf-descriptions-item label="Association">
               <a>421421</a>
-            </a-descriptions-item>
-            <a-descriptions-item label="Creation Time">2017-01-10</a-descriptions-item>
-            <a-descriptions-item label="Effective Time">2017-10-10</a-descriptions-item>
-            <a-descriptions-item label="Remarks">
+            </pf-descriptions-item>
+            <pf-descriptions-item label="Creation Time">2017-01-10</pf-descriptions-item>
+            <pf-descriptions-item label="Effective Time">2017-10-10</pf-descriptions-item>
+            <pf-descriptions-item label="Remarks">
               Gonghu Road, Xihu District, Hangzhou, Zhejiang, China
-            </a-descriptions-item>
-          </a-descriptions>
+            </pf-descriptions-item>
+          </pf-descriptions>
         </div>
         <div class="extra">
           <div
@@ -53,18 +53,18 @@ Under different screen sizes, there should be different performance
               justifyContent: 'flex-end',
             }"
           >
-            <a-statistic
+            <pf-statistic
               title="Status"
               value="Pending"
               :style="{
                 marginRight: '32px',
               }"
             />
-            <a-statistic title="Price" prefix="$" :value="568.08" />
+            <pf-statistic title="Price" prefix="$" :value="568.08" />
           </div>
         </div>
       </div>
-    </a-page-header>
+    </pf-page-header>
   </div>
 </template>
 <style>

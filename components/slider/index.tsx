@@ -78,7 +78,7 @@ export type SliderProps = Partial<ExtractPropTypes<ReturnType<typeof sliderProps
 export type Visibles = { [index: number]: boolean };
 
 const Slider = defineComponent({
-  name: 'ASlider',
+  name: 'PfSlider',
   inheritAttrs: false,
   props: sliderProps(),
   // emits: ['update:value', 'change', 'afterChange', 'blur'],

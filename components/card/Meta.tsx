@@ -12,7 +12,7 @@ export const cardMetaProps = () => ({
 });
 export type CardGridProps = Partial<ExtractPropTypes<ReturnType<typeof cardMetaProps>>>;
 export default defineComponent({
-  name: 'ACardMeta',
+  name: 'PfCardMeta',
   props: cardMetaProps(),
   slots: ['title', 'description', 'avatar'],
   setup(props, { slots }) {
@@ -26,7 +26,7 @@ export default defineComponent({
       const description = getPropsSlot(slots, props, 'description');
 
       const avatarDom = avatar ? (
-        <div class={`${prefixCls.value}-meta-avatar`}>{avatar}</div>
+        <div class={`${prefixCls.value}-metpf-avatar`}>{avatar}</div>
       ) : null;
       const titleDom = title ? <div class={`${prefixCls.value}-meta-title`}>{title}</div> : null;
       const descriptionDom = description ? (

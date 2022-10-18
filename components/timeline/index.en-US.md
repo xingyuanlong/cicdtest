@@ -15,12 +15,12 @@ Vertical display timeline.
 ## API
 
 ```html
-<a-timeline>
-  <a-timeline-item>step1 2015-09-01</a-timeline-item>
-  <a-timeline-item>step2 2015-09-01</a-timeline-item>
-  <a-timeline-item>step3 2015-09-01</a-timeline-item>
-  <a-timeline-item>step4 2015-09-01</a-timeline-item>
-</a-timeline>
+<pf-timeline>
+  <pf-timeline-item>step1 2015-09-01</pf-timeline-item>
+  <pf-timeline-item>step2 2015-09-01</pf-timeline-item>
+  <pf-timeline-item>step3 2015-09-01</pf-timeline-item>
+  <pf-timeline-item>step4 2015-09-01</pf-timeline-item>
+</pf-timeline>
 ```
 
 ### Timeline

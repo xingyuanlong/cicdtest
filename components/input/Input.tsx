@@ -105,7 +105,7 @@ export function triggerFocus(
 }
 
 export default defineComponent({
-  name: 'AInput',
+  name: 'PfInput',
   inheritAttrs: false,
   props: inputProps(),
   setup(props, { slots, attrs, expose, emit }) {

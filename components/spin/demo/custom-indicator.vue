@@ -17,7 +17,7 @@ Use custom loading indicator.
 </docs>
 
 <template>
-  <a-spin :indicator="indicator" />
+  <pf-spin :indicator="indicator" />
 </template>
 <script lang="ts">
 import { LoadingOutlined } from '@ant-design/icons-vue';

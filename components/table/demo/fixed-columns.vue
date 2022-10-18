@@ -25,13 +25,13 @@ To fix some columns and scroll inside other columns, and you must set `scroll.x`
 </docs>
 
 <template>
-  <a-table :columns="columns" :data-source="data" :scroll="{ x: 1300, y: 1000 }">
+  <pf-table :columns="columns" :data-source="data" :scroll="{ x: 1300, y: 1000 }">
     <template #bodyCell="{ column }">
       <template v-if="column.key === 'operation'">
         <a>action</a>
       </template>
     </template>
-  </a-table>
+  </pf-table>
 </template>
 <script lang="ts">
 import type { TableColumnsType } from 'pf-ui-vue';

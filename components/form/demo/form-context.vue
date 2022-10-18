@@ -16,52 +16,52 @@ In this case, submit button is in the Modal which is out of Form. You can use `f
 
 </docs>
 <template>
-  <a-form ref="formRef" :model="formState" name="form_context" v-bind="layout" @finish="onFinish">
-    <a-form-item
+  <pf-form ref="formRef" :model="formState" name="form_context" v-bind="layout" @finish="onFinish">
+    <pf-form-item
       name="group"
       label="Group Name"
       :rules="[{ required: true, message: 'Please input group name!' }]"
     >
-      <a-input v-model:value="formState.group" />
-    </a-form-item>
+      <pf-input v-model:value="formState.group" />
+    </pf-form-item>
 
-    <a-form-item label="User List">
+    <pf-form-item label="User List">
       <template v-if="formState.users.length">
         <ul>
           <template v-for="user in formState.users" :key="user.key">
             <li class="user">
-              <a-avatar>
+              <pf-avatar>
                 <template #icon><UserOutlined /></template>
-              </a-avatar>
+              </pf-avatar>
               {{ user.name }} - {{ user.age }}
             </li>
           </template>
         </ul>
       </template>
       <template v-else>
-        <a-typography-text class="ant-form-text" type="secondary">
+        <pf-typography-text class="ant-form-text" type="secondary">
           (
           <SmileOutlined />
           No user yet. )
-        </a-typography-text>
+        </pf-typography-text>
       </template>
-    </a-form-item>
+    </pf-form-item>
 
-    <a-form-item v-bind="tailLayout" style="margin-top: 24px;">
-      <a-button html-type="submit" type="primary">Submit</a-button>
-      <a-button html-type="button" style="margin: 0 8px" @click="visible = true">Add User</a-button>
-    </a-form-item>
-  </a-form>
-  <a-modal v-model:visible="visible" title="Basic Drawer" @ok="onOk">
-    <a-form ref="modalFormRef" :model="modalFormState" layout="vertical" name="userForm">
-      <a-form-item name="name" label="User Name" :rules="[{ required: true }]">
-        <a-input v-model:value="modalFormState.name" />
-      </a-form-item>
-      <a-form-item name="age" label="User Age" :rules="[{ required: true }]">
-        <a-input-number v-model:value="modalFormState.age" />
-      </a-form-item>
-    </a-form>
-  </a-modal>
+    <pf-form-item v-bind="tailLayout" style="margin-top: 24px;">
+      <pf-button html-type="submit" type="primary">Submit</pf-button>
+      <pf-button html-type="button" style="margin: 0 8px" @click="visible = true">Add User</pf-button>
+    </pf-form-item>
+  </pf-form>
+  <pf-modal v-model:visible="visible" title="Basic Drawer" @ok="onOk">
+    <pf-form ref="modalFormRef" :model="modalFormState" layout="vertical" name="userForm">
+      <pf-form-item name="name" label="User Name" :rules="[{ required: true }]">
+        <pf-input v-model:value="modalFormState.name" />
+      </pf-form-item>
+      <pf-form-item name="age" label="User Age" :rules="[{ required: true }]">
+        <pf-input-number v-model:value="modalFormState.age" />
+      </pf-form-item>
+    </pf-form>
+  </pf-modal>
 </template>
 <script lang="ts">
 import { defineComponent, reactive, ref, watch, toRaw } from 'vue';

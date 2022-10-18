@@ -10,7 +10,7 @@ Set the property `alpha` true, to select a color with alpha channel.
 
 ```vue
 <template>
-  <a-color-picker v-model="color" :alpha="true" />
+  <pf-color-picker v-model="color" :alpha="true" />
 </template>
 <script>
 export default {

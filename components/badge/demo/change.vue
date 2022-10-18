@@ -17,23 +17,23 @@ The count will be animated as it changes.
 
 <template>
   <div>
-    <a-badge :count="count">
-      <a-avatar shape="square" size="large" />
-    </a-badge>
-    <a-button-group>
-      <a-button @click="decline">
+    <pf-badge :count="count">
+      <pf-avatar shape="square" size="large" />
+    </pf-badge>
+    <pf-button-group>
+      <pf-button @click="decline">
         <minus-outlined />
-      </a-button>
-      <a-button @click="increase">
+      </pf-button>
+      <pf-button @click="increase">
         <plus-outlined />
-      </a-button>
-    </a-button-group>
+      </pf-button>
+    </pf-button-group>
   </div>
-  <a-divider />
-  <a-badge :dot="show">
-    <a-avatar shape="square" size="large" />
-  </a-badge>
-  <a-switch v-model:checked="show" />
+  <pf-divider />
+  <pf-badge :dot="show">
+    <pf-avatar shape="square" size="large" />
+  </pf-badge>
+  <pf-switch v-model:checked="show" />
 </template>
 <script lang="ts">
 import { defineComponent, ref } from 'vue';

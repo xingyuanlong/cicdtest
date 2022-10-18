@@ -17,12 +17,12 @@ In the various types of information modal dialog, only one button to close dialo
 </docs>
 
 <template>
-  <a-space wrap>
-    <a-button @click="info">Info</a-button>
-    <a-button @click="success">Success</a-button>
-    <a-button @click="error">Error</a-button>
-    <a-button @click="warning">Warning</a-button>
-  </a-space>
+  <pf-space wrap>
+    <pf-button @click="info">Info</pf-button>
+    <pf-button @click="success">Success</pf-button>
+    <pf-button @click="error">Error</pf-button>
+    <pf-button @click="warning">Warning</pf-button>
+  </pf-space>
 </template>
 <script lang="ts">
 import { Modal } from 'pf-ui-vue';

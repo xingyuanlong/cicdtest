@@ -18,8 +18,8 @@ By setting `strokeLinecap="square"`, you can change the linecaps from round to s
 
 <template>
   <div>
-    <a-progress stroke-linecap="square" :percent="75" />
-    <a-progress stroke-linecap="square" :percent="75" type="circle" />
-    <a-progress stroke-linecap="square" :percent="75" type="dashboard" />
+    <pf-progress stroke-linecap="square" :percent="75" />
+    <pf-progress stroke-linecap="square" :percent="75" type="circle" />
+    <pf-progress stroke-linecap="square" :percent="75" type="dashboard" />
   </div>
 </template>

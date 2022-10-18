@@ -16,7 +16,7 @@ Vertical menu with inline submenus.
 
 </docs>
 <template>
-  <a-menu
+  <pf-menu
     id="dddddd"
     v-model:openKeys="openKeys"
     v-model:selectedKeys="selectedKeys"
@@ -24,47 +24,47 @@ Vertical menu with inline submenus.
     mode="inline"
     @click="handleClick"
   >
-    <a-sub-menu key="sub1" @titleClick="titleClick">
+    <pf-sub-menu key="sub1" @titleClick="titleClick">
       <template #icon>
         <MailOutlined />
       </template>
       <template #title>Navigation One</template>
-      <a-menu-item-group key="g1">
+      <pf-menu-item-group key="g1">
         <template #icon>
           <QqOutlined />
         </template>
         <template #title>Item 1</template>
-        <a-menu-item key="1">Option 1</a-menu-item>
-        <a-menu-item key="2">Option 2</a-menu-item>
-      </a-menu-item-group>
-      <a-menu-item-group key="g2" title="Item 2">
-        <a-menu-item key="3">Option 3</a-menu-item>
-        <a-menu-item key="4">Option 4</a-menu-item>
-      </a-menu-item-group>
-    </a-sub-menu>
-    <a-sub-menu key="sub2" @titleClick="titleClick">
+        <pf-menu-item key="1">Option 1</pf-menu-item>
+        <pf-menu-item key="2">Option 2</pf-menu-item>
+      </pf-menu-item-group>
+      <pf-menu-item-group key="g2" title="Item 2">
+        <pf-menu-item key="3">Option 3</pf-menu-item>
+        <pf-menu-item key="4">Option 4</pf-menu-item>
+      </pf-menu-item-group>
+    </pf-sub-menu>
+    <pf-sub-menu key="sub2" @titleClick="titleClick">
       <template #icon>
         <AppstoreOutlined />
       </template>
       <template #title>Navigation Two</template>
-      <a-menu-item key="5">Option 5</a-menu-item>
-      <a-menu-item key="6">Option 6</a-menu-item>
-      <a-sub-menu key="sub3" title="Submenu">
-        <a-menu-item key="7">Option 7</a-menu-item>
-        <a-menu-item key="8">Option 8</a-menu-item>
-      </a-sub-menu>
-    </a-sub-menu>
-    <a-sub-menu key="sub4">
+      <pf-menu-item key="5">Option 5</pf-menu-item>
+      <pf-menu-item key="6">Option 6</pf-menu-item>
+      <pf-sub-menu key="sub3" title="Submenu">
+        <pf-menu-item key="7">Option 7</pf-menu-item>
+        <pf-menu-item key="8">Option 8</pf-menu-item>
+      </pf-sub-menu>
+    </pf-sub-menu>
+    <pf-sub-menu key="sub4">
       <template #icon>
         <SettingOutlined />
       </template>
       <template #title>Navigation Three</template>
-      <a-menu-item key="9">Option 9</a-menu-item>
-      <a-menu-item key="10">Option 10</a-menu-item>
-      <a-menu-item key="11">Option 11</a-menu-item>
-      <a-menu-item key="12">Option 12</a-menu-item>
-    </a-sub-menu>
-  </a-menu>
+      <pf-menu-item key="9">Option 9</pf-menu-item>
+      <pf-menu-item key="10">Option 10</pf-menu-item>
+      <pf-menu-item key="11">Option 11</pf-menu-item>
+      <pf-menu-item key="12">Option 12</pf-menu-item>
+    </pf-sub-menu>
+  </pf-menu>
 </template>
 <script lang="ts">
 import { defineComponent, ref, watch } from 'vue';

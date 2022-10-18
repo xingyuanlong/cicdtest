@@ -17,13 +17,13 @@ The separator can be customized by setting the separator property: `Breadcrumb.S
 </docs>
 
 <template>
-  <a-breadcrumb separator="">
-    <a-breadcrumb-item>Location</a-breadcrumb-item>
-    <a-breadcrumb-separator>:</a-breadcrumb-separator>
-    <a-breadcrumb-item href="">Application Center</a-breadcrumb-item>
-    <a-breadcrumb-separator />
-    <a-breadcrumb-item href="">Application List</a-breadcrumb-item>
-    <a-breadcrumb-separator />
-    <a-breadcrumb-item>An Application</a-breadcrumb-item>
-  </a-breadcrumb>
+  <pf-breadcrumb separator="">
+    <pf-breadcrumb-item>Location</pf-breadcrumb-item>
+    <pf-breadcrumb-separator>:</pf-breadcrumb-separator>
+    <pf-breadcrumb-item href="">Application Center</pf-breadcrumb-item>
+    <pf-breadcrumb-separator />
+    <pf-breadcrumb-item href="">Application List</pf-breadcrumb-item>
+    <pf-breadcrumb-separator />
+    <pf-breadcrumb-item>An Application</pf-breadcrumb-item>
+  </pf-breadcrumb>
 </template>

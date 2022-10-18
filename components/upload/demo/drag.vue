@@ -20,7 +20,7 @@ We can upload serveral files at once by giving the input the `multiple` attribut
 </docs>
 
 <template>
-  <a-upload-dragger
+  <pf-upload-dragger
     v-model:fileList="fileList"
     name="file"
     :multiple="true"
@@ -36,7 +36,7 @@ We can upload serveral files at once by giving the input the `multiple` attribut
       Support for a single or bulk upload. Strictly prohibit from uploading company data or other
       band files
     </p>
-  </a-upload-dragger>
+  </pf-upload-dragger>
 </template>
 <script lang="ts">
 import { InboxOutlined } from '@ant-design/icons-vue';

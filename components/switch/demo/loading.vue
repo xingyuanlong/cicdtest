@@ -17,9 +17,9 @@ Mark a pending state of switch.
 </docs>
 <template>
   <div>
-    <a-switch v-model:checked="checked1" loading />
+    <pf-switch v-model:checked="checked1" loading />
     <br />
-    <a-switch v-model:checked="checked2" size="small" loading />
+    <pf-switch v-model:checked="checked2" size="small" loading />
   </div>
 </template>
 

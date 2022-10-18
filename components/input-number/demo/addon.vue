@@ -17,33 +17,33 @@ Using pre & post tabs example.
 </docs>
 
 <template>
-  <a-space direction="vertical">
-    <a-input-number v-model:value="value1" addon-before="+" addon-after="$"></a-input-number>
-    <a-input-number v-model:value="value2">
+  <pf-space direction="vertical">
+    <pf-input-number v-model:value="value1" addon-before="+" addon-after="$"></pf-input-number>
+    <pf-input-number v-model:value="value2">
       <template #addonBefore>
-        <a-select v-model:value="addonBeforeValue" style="width: 60px">
-          <a-select-option value="add">+</a-select-option>
-          <a-select-option value="minus">-</a-select-option>
-        </a-select>
+        <pf-select v-model:value="addonBeforeValue" style="width: 60px">
+          <pf-select-option value="add">+</pf-select-option>
+          <pf-select-option value="minus">-</pf-select-option>
+        </pf-select>
       </template>
       <template #addonAfter>
-        <a-select v-model:value="addonAfterValue" style="width: 60px">
-          <a-select-option value="USD">$</a-select-option>
-          <a-select-option value="EUR">€</a-select-option>
-          <a-select-option value="GBP">£</a-select-option>
-          <a-select-option value="CNY">¥</a-select-option>
-        </a-select>
+        <pf-select v-model:value="addonAfterValue" style="width: 60px">
+          <pf-select-option value="USD">$</pf-select-option>
+          <pf-select-option value="EUR">€</pf-select-option>
+          <pf-select-option value="GBP">£</pf-select-option>
+          <pf-select-option value="CNY">¥</pf-select-option>
+        </pf-select>
       </template>
-    </a-input-number>
-    <a-input-number v-model:value="value3">
+    </pf-input-number>
+    <pf-input-number v-model:value="value3">
       <template #addonAfter><SettingOutlined /></template>
-    </a-input-number>
-    <a-input-number v-model:value="value4">
+    </pf-input-number>
+    <pf-input-number v-model:value="value4">
       <template #addonAfter>
-        <a-cascader placeholder="cascader" style="width: 150px" />
+        <pf-cascader placeholder="cascader" style="width: 150px" />
       </template>
-    </a-input-number>
-  </a-space>
+    </pf-input-number>
+  </pf-space>
 </template>
 <script lang="ts">
 import { defineComponent, ref } from 'vue';

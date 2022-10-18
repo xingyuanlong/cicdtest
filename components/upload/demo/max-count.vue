@@ -16,30 +16,30 @@ Limit files with `maxCount`. Will replace current one when `maxCount` is `1`.
 </docs>
 
 <template>
-  <a-space direction="vertical" style="width: 100%" size="large">
-    <a-upload
+  <pf-space direction="vertical" style="width: 100%" size="large">
+    <pf-upload
       v-model:file-list="fileList"
       list-type="picture"
       :max-count="1"
       action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
     >
-      <a-button>
+      <pf-button>
         <upload-outlined></upload-outlined>
         Upload (Max: 1)
-      </a-button>
-    </a-upload>
-    <a-upload
+      </pf-button>
+    </pf-upload>
+    <pf-upload
       v-model:file-list="fileList2"
       list-type="picture"
       :max-count="3"
       action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
     >
-      <a-button>
+      <pf-button>
         <upload-outlined></upload-outlined>
         Upload (Max: 3)
-      </a-button>
-    </a-upload>
-  </a-space>
+      </pf-button>
+    </pf-upload>
+  </pf-space>
 </template>
 <script lang="ts">
 import { UploadOutlined } from '@ant-design/icons-vue';

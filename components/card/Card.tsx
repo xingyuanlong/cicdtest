@@ -49,7 +49,7 @@ export const cardProps = () => ({
 export type CardProps = Partial<ExtractPropTypes<ReturnType<typeof cardProps>>>;
 
 const Card = defineComponent({
-  name: 'ACard',
+  name: 'PfCard',
   props: cardProps(),
   slots: ['title', 'extra', 'tabBarExtraContent', 'actions', 'cover', 'customTab'],
   setup(props, { slots }) {

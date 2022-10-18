@@ -17,12 +17,12 @@ Built-in directory tree. `multiple` support `ctrl(Windows)` / `command(Mac)` sel
 </docs>
 
 <template>
-  <a-directory-tree
+  <pf-directory-tree
     v-model:expandedKeys="expandedKeys"
     v-model:selectedKeys="selectedKeys"
     multiple
     :tree-data="treeData"
-  ></a-directory-tree>
+  ></pf-directory-tree>
 </template>
 <script lang="ts">
 import type { TreeProps } from 'pf-ui-vue';

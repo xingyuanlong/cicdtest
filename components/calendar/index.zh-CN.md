@@ -20,7 +20,7 @@ cover: https://gw.alipayobjects.com/zos/antfincdn/dPQmLq08DI/Calendar.svg
 // 默认语言为 en-US，所以如果需要使用其他语言，推荐在入口文件全局设置 locale // import dayjs from
 'dayjs'; // import 'dayjs/locale/zh-cn'; // dayjs.locale('zh-cn');
 
-<a-calendar v-model:value="value" @panelChange="onPanelChange" @select="onSelect"></a-calendar>
+<pf-calendar v-model:value="value" @panelChange="onPanelChange" @select="onSelect"></pf-calendar>
 ```
 
 | 参数 | 说明 | 类型 | 默认值 | 版本 |

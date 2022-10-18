@@ -16,7 +16,7 @@ Responsive columns.
 </docs>
 
 <template>
-  <a-table :columns="columns" :row-key="record => record.key" :data-source="data">
+  <pf-table :columns="columns" :row-key="record => record.key" :data-source="data">
     <template #bodyCell="{ column, record }">
       <template v-if="column.key === 'name'">
         <a>
@@ -24,7 +24,7 @@ Responsive columns.
         </a>
       </template>
     </template>
-  </a-table>
+  </pf-table>
 </template>
 <script lang="ts">
 import type { ColumnsType } from 'pf-ui-vue/es/table/interface';

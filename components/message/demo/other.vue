@@ -17,11 +17,11 @@ Messages of success, error and warning types.
 </docs>
 
 <template>
-  <a-space>
-    <a-button @click="success">Success</a-button>
-    <a-button @click="error">Error</a-button>
-    <a-button @click="warning">Warning</a-button>
-  </a-space>
+  <pf-space>
+    <pf-button @click="success">Success</pf-button>
+    <pf-button @click="error">Error</pf-button>
+    <pf-button @click="warning">Warning</pf-button>
+  </pf-space>
 </template>
 <script lang="ts">
 import { message } from 'pf-ui-vue';

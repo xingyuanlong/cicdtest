@@ -20,14 +20,14 @@ Can set `width: 100%` to fill a row.
 </docs>
 
 <template>
-  <a-space direction="vertical">
-    <a-card title="Card" style="width: 300px">
+  <pf-space direction="vertical">
+    <pf-card title="Card" style="width: 300px">
       <p>Card content</p>
       <p>Card content</p>
-    </a-card>
-    <a-card title="Card" style="width: 300px">
+    </pf-card>
+    <pf-card title="Card" style="width: 300px">
       <p>Card content</p>
       <p>Card content</p>
-    </a-card>
-  </a-space>
+    </pf-card>
+  </pf-space>
 </template>

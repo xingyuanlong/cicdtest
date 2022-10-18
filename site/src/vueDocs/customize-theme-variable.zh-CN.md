@@ -43,9 +43,9 @@ ConfigProvider.config({
 
 ```html
 <template>
-  <a-config-provider prefix-cls="custom">
+  <pf-config-provider prefix-cls="custom">
     <my-app />
-  </a-config-provider>
+  </pf-config-provider>
 </template>
 ```
 

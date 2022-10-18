@@ -16,7 +16,7 @@ Customize dropdown options such as adding all options
 </docs>
 
 <template>
-  <a-pagination
+  <pf-pagination
     v-model:current="current"
     v-model:page-size="pageSize"
     :page-size-options="pageSizeOptions"
@@ -28,7 +28,7 @@ Customize dropdown options such as adding all options
       <span v-if="props.value !== '50'">{{ props.value }}条/页</span>
       <span v-else>全部</span>
     </template>
-  </a-pagination>
+  </pf-pagination>
 </template>
 <script lang="ts">
 import { defineComponent, ref } from 'vue';

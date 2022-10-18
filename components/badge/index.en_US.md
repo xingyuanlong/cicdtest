@@ -14,13 +14,13 @@ Badge normally appears in proximity to notifications or user avatars with eye-ca
 ## API
 
 ```html
-<a-badge :count="5">
+<pf-badge :count="5">
   <a href="#" class="head-example" />
-</a-badge>
+</pf-badge>
 ```
 
 ```html
-<a-badge :count="5" />
+<pf-badge :count="5" />
 ```
 
 ### Badge

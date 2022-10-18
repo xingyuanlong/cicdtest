@@ -26,7 +26,7 @@ import { useInjectFormItemContext } from '../form';
 export const LIST_IGNORE = `__LIST_IGNORE_${Date.now()}__`;
 
 export default defineComponent({
-  name: 'AUpload',
+  name: 'PfUpload',
   inheritAttrs: false,
   props: initDefaultProps(uploadProps(), {
     type: 'select' as UploadType,

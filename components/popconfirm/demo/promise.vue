@@ -18,9 +18,9 @@ Asynchronously close a popconfirm when the OK button is pressed. For example, yo
 </docs>
 
 <template>
-  <a-popconfirm title="Title" @confirm="confirm" @cancel="cancel">
-    <a-button type="primary">Open Popconfirm with Promise</a-button>
-  </a-popconfirm>
+  <pf-popconfirm title="Title" @confirm="confirm" @cancel="cancel">
+    <pf-button type="primary">Open Popconfirm with Promise</pf-button>
+  </pf-popconfirm>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';

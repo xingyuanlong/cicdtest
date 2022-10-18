@@ -15,9 +15,9 @@ Select component to select value from options.
 ## API
 
 ```html
-<a-select>
-  <a-select-option value="lucy">lucy</a-select-option>
-</a-select>
+<pf-select>
+  <pf-select-option value="lucy">lucy</pf-select-option>
+</pf-select>
 ```
 
 ### Select props
@@ -42,7 +42,7 @@ Select component to select value from options.
 | filterSort | Sort function for search options sorting, see [Array.sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)'s compareFunction | (optionA: Option, optionB: Option) => number | - |  |
 | firstActiveValue | Value of action option by default | string\|string\[] | - |  |
 | getPopupContainer | Parent Node which the selector should be rendered to. Default to `body`. When position issues happen, try to modify it into scrollable content and position it relative. | function(triggerNode) | () => document.body |  |
-| labelInValue | whether to embed label in value, turn the format of value from `string` to `{key: string, label: vNodes, originLabel: any}`, originLabel (3.1) maintains the original type. If the node is constructed through a-select-option children, the value is a function (the default slot of a-select-option) | boolean | false |  |
+| labelInValue | whether to embed label in value, turn the format of value from `string` to `{key: string, label: vNodes, originLabel: any}`, originLabel (3.1) maintains the original type. If the node is constructed through pf-select-option children, the value is a function (the default slot of pf-select-option) | boolean | false |  |
 | listHeight | Config popup height | number | 256 |  |
 | loading | indicate loading state | Boolean | false |  |
 | maxTagCount | Max tag count to show | number | - |  |

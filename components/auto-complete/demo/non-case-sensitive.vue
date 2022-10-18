@@ -16,7 +16,7 @@ A non-case-sensitive AutoComplete.
 </docs>
 
 <template>
-  <a-auto-complete
+  <pf-auto-complete
     v-model:value="value"
     :options="options"
     style="width: 200px"

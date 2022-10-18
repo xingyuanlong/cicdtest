@@ -17,7 +17,7 @@ To customize the style or font of the close button.
 </docs>
 
 <template>
-  <a-button type="primary" @click="openNotification">Open the notification box</a-button>
+  <pf-button type="primary" @click="openNotification">Open the notification box</pf-button>
 </template>
 
 <script lang="ts">

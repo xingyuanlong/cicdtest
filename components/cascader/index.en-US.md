@@ -16,7 +16,7 @@ Cascade selection box.
 ## API
 
 ```html
-<a-cascader :options="options" v-model:value="value" />
+<pf-cascader :options="options" v-model:value="value" />
 ```
 
 | Property | Description | Type | Default | Version |

@@ -3,7 +3,7 @@ import type { ColumnType } from './interface';
 
 export type ColumnProps<RecordType = unknown> = ColumnType<RecordType>;
 export default defineComponent<ColumnProps>({
-  name: 'ATableColumn',
+  name: 'PfTableColumn',
   slots: ['title', 'filterIcon'],
   render() {
     return null;

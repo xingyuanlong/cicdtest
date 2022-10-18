@@ -17,52 +17,52 @@ We preset five different colors, you can set color property such as `success`,`p
 </docs>
 
 <template>
-  <a-divider orientation="left">Without icon</a-divider>
+  <pf-divider orientation="left">Without icon</pf-divider>
   <div>
-    <a-tag color="success">success</a-tag>
-    <a-tag color="processing">processing</a-tag>
-    <a-tag color="error">error</a-tag>
-    <a-tag color="warning">warning</a-tag>
-    <a-tag color="default">default</a-tag>
+    <pf-tag color="success">success</pf-tag>
+    <pf-tag color="processing">processing</pf-tag>
+    <pf-tag color="error">error</pf-tag>
+    <pf-tag color="warning">warning</pf-tag>
+    <pf-tag color="default">default</pf-tag>
   </div>
-  <a-divider orientation="left">With icon</a-divider>
+  <pf-divider orientation="left">With icon</pf-divider>
   <div>
-    <a-tag color="success">
+    <pf-tag color="success">
       <template #icon>
         <check-circle-outlined />
       </template>
       success
-    </a-tag>
-    <a-tag color="processing">
+    </pf-tag>
+    <pf-tag color="processing">
       <template #icon>
         <sync-outlined :spin="true" />
       </template>
       processing
-    </a-tag>
-    <a-tag color="error">
+    </pf-tag>
+    <pf-tag color="error">
       <template #icon>
         <close-circle-outlined />
       </template>
       error
-    </a-tag>
-    <a-tag color="warning">
+    </pf-tag>
+    <pf-tag color="warning">
       <template #icon>
         <exclamation-circle-outlined />
       </template>
       warning
-    </a-tag>
-    <a-tag color="default">
+    </pf-tag>
+    <pf-tag color="default">
       <template #icon>
         <clock-circle-outlined />
       </template>
       waiting
-    </a-tag>
-    <a-tag color="default">
+    </pf-tag>
+    <pf-tag color="default">
       <template #icon>
         <minus-circle-outlined />
       </template>
       stop
-    </a-tag>
+    </pf-tag>
   </div>
 </template>
 <script lang="ts">

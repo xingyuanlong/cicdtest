@@ -16,13 +16,13 @@ Render radios by configuring `options`.
 
 </docs>
 <template>
-  <a-space direction="vertical">
-    <a-radio-group v-model:value="value1" :options="plainOptions" />
-    <a-radio-group v-model:value="value2" :options="optionsWithDisabled" />
-    <a-radio-group v-model:value="value3" :options="plainOptions" disabled />
-    <a-radio-group v-model:value="value1" option-type="button" :options="plainOptions" />
-    <a-radio-group v-model:value="value2" option-type="button" :options="optionsWithDisabled" />
-  </a-space>
+  <pf-space direction="vertical">
+    <pf-radio-group v-model:value="value1" :options="plainOptions" />
+    <pf-radio-group v-model:value="value2" :options="optionsWithDisabled" />
+    <pf-radio-group v-model:value="value3" :options="plainOptions" disabled />
+    <pf-radio-group v-model:value="value1" option-type="button" :options="plainOptions" />
+    <pf-radio-group v-model:value="value2" option-type="button" :options="optionsWithDisabled" />
+  </pf-space>
 </template>
 <script lang="ts">
 import { defineComponent, ref } from 'vue';

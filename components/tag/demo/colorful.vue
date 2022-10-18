@@ -19,19 +19,19 @@ We preset a series of colorful tag styles for use in different situations. You c
 <template>
   <h4 style="margin-bottom: 16px">Presets:</h4>
   <div>
-    <a-tag color="pink">pink</a-tag>
-    <a-tag color="red">red</a-tag>
-    <a-tag color="orange">orange</a-tag>
-    <a-tag color="green">green</a-tag>
-    <a-tag color="cyan">cyan</a-tag>
-    <a-tag color="blue">blue</a-tag>
-    <a-tag color="purple">purple</a-tag>
+    <pf-tag color="pink">pink</pf-tag>
+    <pf-tag color="red">red</pf-tag>
+    <pf-tag color="orange">orange</pf-tag>
+    <pf-tag color="green">green</pf-tag>
+    <pf-tag color="cyan">cyan</pf-tag>
+    <pf-tag color="blue">blue</pf-tag>
+    <pf-tag color="purple">purple</pf-tag>
   </div>
   <h4 style="margin: '16px 0'">Custom:</h4>
   <div>
-    <a-tag color="#f50">#f50</a-tag>
-    <a-tag color="#2db7f5">#2db7f5</a-tag>
-    <a-tag color="#87d068">#87d068</a-tag>
-    <a-tag color="#108ee9">#108ee9</a-tag>
+    <pf-tag color="#f50">#f50</pf-tag>
+    <pf-tag color="#2db7f5">#2db7f5</pf-tag>
+    <pf-tag color="#87d068">#87d068</pf-tag>
+    <pf-tag color="#108ee9">#108ee9</pf-tag>
   </div>
 </template>

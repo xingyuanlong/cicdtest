@@ -231,12 +231,12 @@ export default function generateSinglePicker<DateType, ExtraProps = {}>(
     });
   }
 
-  const DatePicker = getPicker(undefined, 'ADatePicker');
-  const WeekPicker = getPicker('week', 'AWeekPicker');
-  const MonthPicker = getPicker('month', 'AMonthPicker');
-  const YearPicker = getPicker('year', 'AYearPicker');
+  const DatePicker = getPicker(undefined, 'PfDatePicker');
+  const WeekPicker = getPicker('week', 'PfWeekPicker');
+  const MonthPicker = getPicker('month', 'PfMonthPicker');
+  const YearPicker = getPicker('year', 'PfYearPicker');
   const TimePicker = getPicker('time', 'TimePicker'); // 给独立组件 TimePicker 使用，此处名称不用更改
-  const QuarterPicker = getPicker('quarter', 'AQuarterPicker');
+  const QuarterPicker = getPicker('quarter', 'PfQuarterPicker');
 
   return {
     DatePicker,

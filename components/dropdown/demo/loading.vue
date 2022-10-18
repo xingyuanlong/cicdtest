@@ -12,47 +12,47 @@ title:
 
 ## en-US
 
-A loading indicator can be added to a button by setting the `loading` property on the `a-dropdown-button`.
+A loading indicator can be added to a button by setting the `loading` property on the `pf-dropdown-button`.
 
 
 </docs>
 
 <template>
-  <a-space direction="vertical">
-    <a-dropdown-button type="primary" loading>
+  <pf-space direction="vertical">
+    <pf-dropdown-button type="primary" loading>
       <template #overlay>
-        <a-menu>
-          <a-menu-item key="1">Submit and continue</a-menu-item>
-        </a-menu>
+        <pf-menu>
+          <pf-menu-item key="1">Submit and continue</pf-menu-item>
+        </pf-menu>
       </template>
       Submit
-    </a-dropdown-button>
-    <a-dropdown-button type="primary" size="small" loading>
+    </pf-dropdown-button>
+    <pf-dropdown-button type="primary" size="small" loading>
       <template #overlay>
-        <a-menu>
-          <a-menu-item key="1">Submit and continue</a-menu-item>
-        </a-menu>
+        <pf-menu>
+          <pf-menu-item key="1">Submit and continue</pf-menu-item>
+        </pf-menu>
       </template>
       Submit
-    </a-dropdown-button>
-    <a-dropdown-button type="primary" :loading="loading1" @click="enterLoading1">
+    </pf-dropdown-button>
+    <pf-dropdown-button type="primary" :loading="loading1" @click="enterLoading1">
       <template #overlay>
-        <a-menu>
-          <a-menu-item key="1">Submit and continue</a-menu-item>
-        </a-menu>
+        <pf-menu>
+          <pf-menu-item key="1">Submit and continue</pf-menu-item>
+        </pf-menu>
       </template>
       Submit
-    </a-dropdown-button>
-    <a-dropdown-button :loading="loading2" @click="enterLoading2">
+    </pf-dropdown-button>
+    <pf-dropdown-button :loading="loading2" @click="enterLoading2">
       Submit
       <template #overlay>
-        <a-menu>
-          <a-menu-item key="1">Submit and continue</a-menu-item>
-        </a-menu>
+        <pf-menu>
+          <pf-menu-item key="1">Submit and continue</pf-menu-item>
+        </pf-menu>
       </template>
       <template #icon><DownOutlined /></template>
-    </a-dropdown-button>
-  </a-space>
+    </pf-dropdown-button>
+  </pf-space>
 </template>
 <script lang="ts">
 import { defineComponent, Ref, ref } from 'vue';

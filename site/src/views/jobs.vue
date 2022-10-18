@@ -2,16 +2,16 @@
   <div>
     <h1>
       如果您正在寻找顶级的 Vue.js 开发者，请联系
-      <a-tooltip title="发送邮件到：antdv@foxmail.com">
+      <pf-tooltip title="发送邮件到：antdv@foxmail.com">
         <a href="mailto:antdv@foxmail.com">我们</a>
-      </a-tooltip>
+      </pf-tooltip>
       ！！！
     </h1>
     <div style="margin-top: 30px">
-      <a-list item-layout="vertical" size="large" :data-source="list">
+      <pf-list item-layout="vertical" size="large" :data-source="list">
         <template #renderItem="item">
-          <a-list-item v-show="isEffective(item.effectiveTime)">
-            <a-list-item-meta>
+          <pf-list-item v-show="isEffective(item.effectiveTime)">
+            <pf-list-item-meta>
               <template #description>
                 <div>
                   <p>工作地点：{{ item.location }}</p>
@@ -27,23 +27,23 @@
                   </h2>
                 </div>
               </template>
-            </a-list-item-meta>
+            </pf-list-item-meta>
             <template #actions>
               <div>
-                <a-tooltip title="发送邮件到：antdv@foxmail.com">
+                <pf-tooltip title="发送邮件到：antdv@foxmail.com">
                   <a :href="`mailto:antdv@foxmail.com?subject=应聘 ${item.id} 职位`">
                     <a-icon type="link" style="margin-right: 8px" />
                     立刻申请
                   </a>
-                </a-tooltip>
+                </pf-tooltip>
 
                 <span>注：邮件中请注明投递岗位 ID</span>
               </div>
             </template>
             <p v-html="item.condition" />
-          </a-list-item>
+          </pf-list-item>
         </template>
-      </a-list>
+      </pf-list>
     </div>
   </div>
 </template>

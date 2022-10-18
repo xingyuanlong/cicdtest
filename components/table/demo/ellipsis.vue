@@ -19,13 +19,13 @@ Ellipsis cell content via setting `column.ellipsis`.
 </docs>
 
 <template>
-  <a-table :columns="columns" :data-source="data">
+  <pf-table :columns="columns" :data-source="data">
     <template #bodyCell="{ column, text }">
       <template v-if="column.dataIndex === 'name'">
         <a>{{ text }}</a>
       </template>
     </template>
-  </a-table>
+  </pf-table>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';

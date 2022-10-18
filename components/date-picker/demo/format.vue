@@ -17,14 +17,14 @@ We can set the date format by `format`.
 </docs>
 
 <template>
-  <a-space direction="vertical" :size="12">
-    <a-date-picker v-model:value="value1" :format="dateFormat" />
-    <a-date-picker v-model:value="value2" :format="dateFormatList" />
-    <a-date-picker v-model:value="value3" :format="monthFormat" picker="month" />
-    <a-range-picker v-model:value="value4" :format="dateFormat" />
-    <a-date-picker v-model:value="value5" :format="customFormat" />
-    <a-date-picker v-model:value="value6" :format="customWeekStartEndFormat" picker="week" />
-  </a-space>
+  <pf-space direction="vertical" :size="12">
+    <pf-date-picker v-model:value="value1" :format="dateFormat" />
+    <pf-date-picker v-model:value="value2" :format="dateFormatList" />
+    <pf-date-picker v-model:value="value3" :format="monthFormat" picker="month" />
+    <pf-range-picker v-model:value="value4" :format="dateFormat" />
+    <pf-date-picker v-model:value="value5" :format="customFormat" />
+    <pf-date-picker v-model:value="value6" :format="customWeekStartEndFormat" picker="week" />
+  </pf-space>
 </template>
 <script lang="ts">
 import dayjs, { Dayjs } from 'dayjs';

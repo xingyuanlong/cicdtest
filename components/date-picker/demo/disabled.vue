@@ -17,12 +17,12 @@ A disabled state of the `DatePicker`.
 </docs>
 
 <template>
-  <a-space direction="vertical">
-    <a-date-picker v-model:value="value1" />
-    <a-date-picker v-model:value="value2" disabled picker="month" />
-    <a-range-picker v-model:value="value3" disabled />
-    <a-range-picker v-model:value="value4" :disabled="[false, true]" />
-  </a-space>
+  <pf-space direction="vertical">
+    <pf-date-picker v-model:value="value1" />
+    <pf-date-picker v-model:value="value2" disabled picker="month" />
+    <pf-range-picker v-model:value="value3" disabled />
+    <pf-range-picker v-model:value="value4" :disabled="[false, true]" />
+  </pf-space>
 </template>
 <script lang="ts">
 import dayjs, { Dayjs } from 'dayjs';

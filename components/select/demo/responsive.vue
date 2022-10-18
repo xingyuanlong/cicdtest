@@ -20,14 +20,14 @@ Set a number and automatically fold after exceeding.
 </docs>
 
 <template>
-  <a-space direction="vertical" style="width: 100%">
-    <a-space>
-      <a-button type="primary" @click="maxTagCount++">maxTagCount++</a-button>
-      <a-button type="primary" @click="maxTagCount--">maxTagCount--</a-button>
-    </a-space>
+  <pf-space direction="vertical" style="width: 100%">
+    <pf-space>
+      <pf-button type="primary" @click="maxTagCount++">maxTagCount++</pf-button>
+      <pf-button type="primary" @click="maxTagCount--">maxTagCount--</pf-button>
+    </pf-space>
 
     <h2>maxTagCount: {{ maxTagCount }}</h2>
-    <a-select
+    <pf-select
       v-model:value="value"
       mode="multiple"
       style="width: 100%"
@@ -38,30 +38,30 @@ Set a number and automatically fold after exceeding.
       <template #maxTagPlaceholder="omittedValues">
         <span style="color: red">+ {{ omittedValues.length }} ...</span>
       </template>
-    </a-select>
+    </pf-select>
     <h2>maxTagCount: responsive</h2>
-    <a-select
+    <pf-select
       v-model:value="value"
       mode="multiple"
       style="width: 100%"
       placeholder="Select Item..."
       max-tag-count="responsive"
       :options="options"
-    ></a-select>
-    <a-space>
-      <a-button type="primary" @click="maxTagTextLength++">maxTagTextLength++</a-button>
-      <a-button type="primary" @click="maxTagTextLength--">maxTagTextLength--</a-button>
-    </a-space>
+    ></pf-select>
+    <pf-space>
+      <pf-button type="primary" @click="maxTagTextLength++">maxTagTextLength++</pf-button>
+      <pf-button type="primary" @click="maxTagTextLength--">maxTagTextLength--</pf-button>
+    </pf-space>
     <h2>maxTagTextLength: {{ maxTagTextLength }}</h2>
-    <a-select
+    <pf-select
       v-model:value="value"
       mode="multiple"
       style="width: 100%"
       placeholder="Select Item..."
       :max-tag-text-length="maxTagTextLength"
       :options="options"
-    ></a-select>
-  </a-space>
+    ></pf-select>
+  </pf-space>
 </template>
 <script lang="ts">
 import type { SelectProps } from 'pf-ui-vue';

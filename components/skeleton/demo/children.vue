@@ -18,7 +18,7 @@ Skeleton contains sub component.
 
 <template>
   <div class="article">
-    <a-skeleton :loading="loading">
+    <pf-skeleton :loading="loading">
       <div>
         <h4>Ant Design Vue, a design language</h4>
         <p>
@@ -27,8 +27,8 @@ Skeleton contains sub component.
           and efficiently.
         </p>
       </div>
-    </a-skeleton>
-    <a-button :disabled="loading" @click="showSkeleton">Show Skeleton</a-button>
+    </pf-skeleton>
+    <pf-button :disabled="loading" @click="showSkeleton">Show Skeleton</pf-button>
   </div>
 </template>
 <script lang="ts">

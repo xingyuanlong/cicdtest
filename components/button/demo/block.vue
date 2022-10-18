@@ -16,10 +16,10 @@ title:
 </docs>
 
 <template>
-  <a-button type="primary" block>Primary</a-button>
-  <a-button type="secondary" block>Secondary</a-button>
-  <a-button block>Default</a-button>
-  <a-button type="dashed" block>Dashed</a-button>
-  <a-button danger block>Danger</a-button>
-  <a-button type="link" block>Link</a-button>
+  <pf-button type="primary" block>Primary</pf-button>
+  <pf-button type="secondary" block>Secondary</pf-button>
+  <pf-button block>Default</pf-button>
+  <pf-button type="dashed" block>Dashed</pf-button>
+  <pf-button danger block>Danger</pf-button>
+  <pf-button type="link" block>Link</pf-button>
 </template>

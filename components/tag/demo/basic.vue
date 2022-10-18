@@ -17,10 +17,10 @@ Usage of basic Tag, and it could be closable by set `closable` property. Closabl
 
 <template>
   <div>
-    <a-tag>Tag 1</a-tag>
-    <a-tag><a href="https://github.com/vueComponent/ant-design">Link</a></a-tag>
-    <a-tag closable @close="log">Tag 2</a-tag>
-    <a-tag closable @close.prevent>Prevent Default</a-tag>
+    <pf-tag>Tag 1</pf-tag>
+    <pf-tag><a href="https://github.com/vueComponent/ant-design">Link</a></pf-tag>
+    <pf-tag closable @close="log">Tag 2</pf-tag>
+    <pf-tag closable @close.prevent>Prevent Default</pf-tag>
   </div>
 </template>
 <script lang="ts">

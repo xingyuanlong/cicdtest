@@ -58,7 +58,7 @@ const generateId = (() => {
 })();
 
 export default defineComponent({
-  name: 'ALayoutSider',
+  name: 'PfLayoutSider',
   inheritAttrs: false,
   props: initDefaultProps(siderProps(), {
     collapsible: false,

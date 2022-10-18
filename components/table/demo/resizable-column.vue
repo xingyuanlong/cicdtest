@@ -18,7 +18,7 @@ set resizable for drag column
 </docs>
 
 <template>
-  <a-table :columns="columns" :data-source="data" @resizeColumn="handleResizeColumn">
+  <pf-table :columns="columns" :data-source="data" @resizeColumn="handleResizeColumn">
     <template #headerCell="{ column }">
       <template v-if="column.key === 'name'">
         <span>
@@ -36,21 +36,21 @@ set resizable for drag column
       </template>
       <template v-else-if="column.key === 'tags'">
         <span>
-          <a-tag
+          <pf-tag
             v-for="tag in record.tags"
             :key="tag"
             :color="tag === 'loser' ? 'volcano' : tag.length > 5 ? 'geekblue' : 'green'"
           >
             {{ tag.toUpperCase() }}
-          </a-tag>
+          </pf-tag>
         </span>
       </template>
       <template v-else-if="column.key === 'action'">
         <span>
           <a>Invite 一 {{ record.name }}</a>
-          <a-divider type="vertical" />
+          <pf-divider type="vertical" />
           <a>Delete</a>
-          <a-divider type="vertical" />
+          <pf-divider type="vertical" />
           <a class="ant-dropdown-link">
             More actions
             <down-outlined />
@@ -58,7 +58,7 @@ set resizable for drag column
         </span>
       </template>
     </template>
-  </a-table>
+  </pf-table>
 </template>
 <script lang="ts">
 import { SmileOutlined, DownOutlined } from '@ant-design/icons-vue';

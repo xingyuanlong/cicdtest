@@ -16,7 +16,7 @@ title:
 </docs>
 
 <template>
-  <a-upload
+  <pf-upload
     v-model:file-list="fileList"
     name="file"
     item-preset-style="pf-text"
@@ -24,11 +24,11 @@ title:
     :headers="headers"
     @change="handleChange"
   >
-    <a-button>
+    <pf-button>
       <upload-outlined></upload-outlined>
       Click to Upload
-    </a-button>
-  </a-upload>
+    </pf-button>
+  </pf-upload>
 </template>
 <script lang="ts">
 import { UploadOutlined } from '@ant-design/icons-vue';

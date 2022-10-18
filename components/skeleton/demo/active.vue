@@ -17,5 +17,5 @@ Display active animation.
 </docs>
 
 <template>
-  <a-skeleton active />
+  <pf-skeleton active />
 </template>

@@ -18,17 +18,17 @@ Configurate disabled and readonly.
 <template>
   <div>
     <div style="margin-bottom: 10px">
-      <a-mentions v-model:value="value1" placeholder="this is disabled Mentions" disabled>
-        <a-mentions-option v-for="value in options" :key="value" :value="value">
+      <pf-mentions v-model:value="value1" placeholder="this is disabled Mentions" disabled>
+        <pf-mentions-option v-for="value in options" :key="value" :value="value">
           {{ value }}
-        </a-mentions-option>
-      </a-mentions>
+        </pf-mentions-option>
+      </pf-mentions>
     </div>
-    <a-mentions v-model:value="value2" placeholder="this is readOnly a-mentions" readonly>
-      <a-mentions-option v-for="value in options" :key="value" :value="value">
+    <pf-mentions v-model:value="value2" placeholder="this is readOnly pf-mentions" readonly>
+      <pf-mentions-option v-for="value in options" :key="value" :value="value">
         {{ value }}
-      </a-mentions-option>
-    </a-mentions>
+      </pf-mentions-option>
+    </pf-mentions>
   </div>
 </template>
 <script lang="ts">

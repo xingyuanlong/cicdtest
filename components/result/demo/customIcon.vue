@@ -17,14 +17,14 @@ Custom icon.
 </docs>
 
 <template>
-  <a-result title="Great, we have done all the operations!">
+  <pf-result title="Great, we have done all the operations!">
     <template #icon>
       <smile-twoTone />
     </template>
     <template #extra>
-      <a-button type="primary">Next</a-button>
+      <pf-button type="primary">Next</pf-button>
     </template>
-  </a-result>
+  </pf-result>
 </template>
 <script lang="ts">
 import { SmileTwoTone } from '@ant-design/icons-vue';

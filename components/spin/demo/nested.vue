@@ -17,15 +17,15 @@ Embedding content into `Spin` will alter it into loading state.
 </docs>
 
 <template>
-  <a-spin :spinning="spinning" regularSpining>
-    <a-alert
+  <pf-spin :spinning="spinning" regularSpining>
+    <pf-alert
       message="Alert message title"
       description="Further details about the context of this alert."
-    ></a-alert>
-  </a-spin>
+    ></pf-alert>
+  </pf-spin>
   <div class="spin-state">
     Loading state：
-    <a-switch v-model:checked="spinning" />
+    <pf-switch v-model:checked="spinning" />
   </div>
 </template>
 <script lang="ts">

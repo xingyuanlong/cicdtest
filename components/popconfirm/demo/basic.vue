@@ -17,7 +17,7 @@ The basic example.
 </docs>
 
 <template>
-  <a-popconfirm
+  <pf-popconfirm
     title="Are you sure delete this task?"
     ok-text="Yes"
     cancel-text="No"
@@ -25,9 +25,9 @@ The basic example.
     @cancel="cancel"
   >
     <a href="#">Delete</a>
-  </a-popconfirm>
+  </pf-popconfirm>
   <hr />
-  <a-popconfirm
+  <pf-popconfirm
     ok-text="确定"
     cancel-text="取消"
     @confirm="confirm"
@@ -40,7 +40,7 @@ The basic example.
       <p>no thank!</p>
     </template>
     <a href="#">Delete</a>
-  </a-popconfirm>
+  </pf-popconfirm>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';

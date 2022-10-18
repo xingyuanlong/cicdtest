@@ -17,9 +17,9 @@ The server is wrong.
 </docs>
 
 <template>
-  <a-result status="noNetwork">
+  <pf-result status="noNetwork">
     <template #extra>
-      <a-button type="primary">刷新页面</a-button>
+      <pf-button type="primary">刷新页面</pf-button>
     </template>
-  </a-result>
+  </pf-result>
 </template>

@@ -40,7 +40,7 @@ export const rateProps = () => ({
 export type RateProps = Partial<ExtractPropTypes<ReturnType<typeof rateProps>>>;
 
 const Rate = defineComponent({
-  name: 'ARate',
+  name: 'PfRate',
   inheritAttrs: false,
   props: initDefaultProps(rateProps(), {
     value: 0,

@@ -17,7 +17,7 @@ The most basic usage.
 </docs>
 
 <template>
-  <a-tree-select
+  <pf-tree-select
     v-model:value="value"
     show-search
     style="width: 100%"
@@ -31,7 +31,7 @@ The most basic usage.
       <b v-if="val === 'parent 1-1'" style="color: #08c">sss</b>
       <template v-else>{{ title }}</template>
     </template>
-  </a-tree-select>
+  </pf-tree-select>
 </template>
 <script lang="ts">
 import type { TreeSelectProps } from 'pf-ui-vue';

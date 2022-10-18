@@ -82,7 +82,7 @@ export interface PaginationLocale {
 }
 
 export default defineComponent({
-  name: 'APagination',
+  name: 'PfPagination',
   inheritAttrs: false,
   props: paginationProps(),
   // emits: ['change', 'showSizeChange', 'update:current', 'update:pageSize'],

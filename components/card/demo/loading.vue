@@ -17,8 +17,8 @@ Shows a loading indirector while the contents of the card is being featched
 </docs>
 
 <template>
-  <a-card :loading="loading" title="Card title">whatever content</a-card>
-  <a-button style="margin-top: 16px" @click="handleClick">Toggle loading</a-button>
+  <pf-card :loading="loading" title="Card title">whatever content</pf-card>
+  <pf-button style="margin-top: 16px" @click="handleClick">Toggle loading</pf-button>
 </template>
 <script lang="ts">
 import { defineComponent, ref } from 'vue';

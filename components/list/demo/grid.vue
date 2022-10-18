@@ -17,13 +17,13 @@ Creating a grid list by setting the `grid` property of List
 </docs>
 
 <template>
-  <a-list :grid="{ gutter: 16, column: 4 }" :data-source="data">
+  <pf-list :grid="{ gutter: 16, column: 4 }" :data-source="data">
     <template #renderItem="{ item }">
-      <a-list-item>
-        <a-card :title="item.title">Card content</a-card>
-      </a-list-item>
+      <pf-list-item>
+        <pf-card :title="item.title">Card content</pf-card>
+      </pf-list-item>
     </template>
-  </a-list>
+  </pf-list>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';

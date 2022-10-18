@@ -16,7 +16,7 @@ Input type of password.
 
 </docs>
 <template>
-  <a-input-password v-model:value="value" placeholder="input password" />
+  <pf-input-password v-model:value="value" placeholder="input password" />
 </template>
 <script lang="ts">
 import { defineComponent, ref } from 'vue';

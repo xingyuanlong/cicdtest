@@ -14,9 +14,9 @@ This component provides a configuration to all Vue components underneath itself 
 
 ```html
 <template>
-  <a-config-provider :getPopupContainer="getPopupContainer">
+  <pf-config-provider :getPopupContainer="getPopupContainer">
     <app />
-  </a-config-provider>
+  </pf-config-provider>
 </template>
 <script>
   export default {
@@ -38,9 +38,9 @@ This component provides a configuration to all Vue components underneath itself 
 Some components use dynamic style to support wave effect. You can config `csp` prop if Content Security Policy (CSP) is enabled:
 
 ```html
-<a-config-provider :csp="{ nonce: 'YourNonceCode' }">
-  <a-button>My Button</a-button>
-</a-config-provider>
+<pf-config-provider :csp="{ nonce: 'YourNonceCode' }">
+  <pf-button>My Button</pf-button>
+</pf-config-provider>
 ```
 
 ## API

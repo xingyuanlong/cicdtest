@@ -17,21 +17,21 @@ The height of the input field for the select defaults to 32px. If size is set to
 </docs>
 
 <template>
-  <a-radio-group v-model:value="size">
-    <a-radio-button value="large">Large</a-radio-button>
-    <a-radio-button value="middle">Middle</a-radio-button>
-    <a-radio-button value="small">Small</a-radio-button>
-  </a-radio-group>
+  <pf-radio-group v-model:value="size">
+    <pf-radio-button value="large">Large</pf-radio-button>
+    <pf-radio-button value="middle">Middle</pf-radio-button>
+    <pf-radio-button value="small">Small</pf-radio-button>
+  </pf-radio-group>
   <br />
   <br />
-  <a-space direction="vertical">
-    <a-select
+  <pf-space direction="vertical">
+    <pf-select
       v-model:value="value1"
       :size="size"
       style="width: 200px"
       :options="options"
-    ></a-select>
-    <a-select
+    ></pf-select>
+    <pf-select
       v-model:value="value2"
       :options="options"
       mode="multiple"
@@ -39,8 +39,8 @@ The height of the input field for the select defaults to 32px. If size is set to
       placeholder="Please select"
       style="width: 200px"
       @popupScroll="popupScroll"
-    ></a-select>
-    <a-select
+    ></pf-select>
+    <pf-select
       v-model:value="value3"
       :options="options"
       mode="tags"
@@ -48,8 +48,8 @@ The height of the input field for the select defaults to 32px. If size is set to
       showArrow
       placeholder="Please select"
       style="width: 200px"
-    ></a-select>
-  </a-space>
+    ></pf-select>
+  </pf-space>
 </template>
 <script lang="ts">
 import type { SelectProps } from 'pf-ui-vue';

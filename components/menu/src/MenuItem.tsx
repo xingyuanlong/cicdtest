@@ -31,7 +31,7 @@ export const menuItemProps = () => ({
 export type MenuItemProps = Partial<ExtractPropTypes<ReturnType<typeof menuItemProps>>>;
 
 export default defineComponent({
-  name: 'AMenuItem',
+  name: 'PfMenuItem',
   inheritAttrs: false,
   props: menuItemProps(),
   // emits: ['mouseenter', 'mouseleave', 'click', 'keydown', 'focus'],

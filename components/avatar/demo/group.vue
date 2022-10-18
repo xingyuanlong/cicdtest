@@ -16,33 +16,33 @@ Avatar group display.
 </docs>
 
 <template>
-  <a-avatar-group>
-    <a-avatar src="https://joeschmoe.io/api/v1/random" />
-    <a-avatar style="background-color: #f56a00">K</a-avatar>
-    <a-tooltip title="Ant User" placement="top">
-      <a-avatar style="background-color: #87d068">
+  <pf-avatar-group>
+    <pf-avatar src="https://joeschmoe.io/api/v1/random" />
+    <pf-avatar style="background-color: #f56a00">K</pf-avatar>
+    <pf-tooltip title="Ant User" placement="top">
+      <pf-avatar style="background-color: #87d068">
         <template #icon><UserOutlined /></template>
-      </a-avatar>
-    </a-tooltip>
-    <a-avatar style="background-color: #1890ff">
+      </pf-avatar>
+    </pf-tooltip>
+    <pf-avatar style="background-color: #1890ff">
       <template #icon><UserOutlined /></template>
-    </a-avatar>
-  </a-avatar-group>
-  <a-divider />
-  <a-avatar-group :max-count="2" :max-style="{ color: '#f56a00', backgroundColor: '#fde3cf' }">
-    <a-avatar src="https://joeschmoe.io/api/v1/random" />
-    <a-avatar style="background-color: #1890ff">K</a-avatar>
-    <a-tooltip title="Ant User" placement="top">
-      <a-avatar style="background-color: #87d068">
+    </pf-avatar>
+  </pf-avatar-group>
+  <pf-divider />
+  <pf-avatar-group :max-count="2" :max-style="{ color: '#f56a00', backgroundColor: '#fde3cf' }">
+    <pf-avatar src="https://joeschmoe.io/api/v1/random" />
+    <pf-avatar style="background-color: #1890ff">K</pf-avatar>
+    <pf-tooltip title="Ant User" placement="top">
+      <pf-avatar style="background-color: #87d068">
         <template #icon><UserOutlined /></template>
-      </a-avatar>
-    </a-tooltip>
-    <a-avatar style="background-color: #1890ff">
+      </pf-avatar>
+    </pf-tooltip>
+    <pf-avatar style="background-color: #1890ff">
       <template #icon><UserOutlined /></template>
-    </a-avatar>
-  </a-avatar-group>
-  <a-divider />
-  <a-avatar-group
+    </pf-avatar>
+  </pf-avatar-group>
+  <pf-divider />
+  <pf-avatar-group
     :max-count="2"
     size="large"
     :max-style="{
@@ -50,17 +50,17 @@ Avatar group display.
       backgroundColor: '#fde3cf',
     }"
   >
-    <a-avatar src="https://joeschmoe.io/api/v1/random" />
-    <a-avatar style="background-color: #1890ff">K</a-avatar>
-    <a-tooltip title="Ant User" placement="top">
-      <a-avatar style="background-color: #87d068">
+    <pf-avatar src="https://joeschmoe.io/api/v1/random" />
+    <pf-avatar style="background-color: #1890ff">K</pf-avatar>
+    <pf-tooltip title="Ant User" placement="top">
+      <pf-avatar style="background-color: #87d068">
         <template #icon><UserOutlined /></template>
-      </a-avatar>
-    </a-tooltip>
-    <a-avatar style="background-color: #1890ff">
+      </pf-avatar>
+    </pf-tooltip>
+    <pf-avatar style="background-color: #1890ff">
       <template #icon><UserOutlined /></template>
-    </a-avatar>
-  </a-avatar-group>
+    </pf-avatar>
+  </pf-avatar-group>
 </template>
 
 <script lang="ts">

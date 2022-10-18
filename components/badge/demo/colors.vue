@@ -20,17 +20,17 @@ New feature after 3.16.0. We preset a series of colorful Badge styles for use in
   <h4 style="margin-bottom: 16px">Presets:</h4>
   <div>
     <div v-for="color in colors" :key="color">
-      <a-badge :color="color" :text="color" />
+      <pf-badge :color="color" :text="color" />
     </div>
   </div>
-  <a-divider orientation="left">Custom</a-divider>
-  <a-badge color="#f50" text="#f50" />
+  <pf-divider orientation="left">Custom</pf-divider>
+  <pf-badge color="#f50" text="#f50" />
   <br />
-  <a-badge color="#2db7f5" text="#2db7f5" />
+  <pf-badge color="#2db7f5" text="#2db7f5" />
   <br />
-  <a-badge color="#87d068" text="#87d068" />
+  <pf-badge color="#87d068" text="#87d068" />
   <br />
-  <a-badge color="#108ee9" text="#108ee9" />
+  <pf-badge color="#108ee9" text="#108ee9" />
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';

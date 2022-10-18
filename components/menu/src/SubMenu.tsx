@@ -42,7 +42,7 @@ export const subMenuProps = () => ({
 export type SubMenuProps = Partial<ExtractPropTypes<ReturnType<typeof subMenuProps>>>;
 
 export default defineComponent({
-  name: 'ASubMenu',
+  name: 'PfSubMenu',
   inheritAttrs: false,
   props: subMenuProps(),
   slots: ['icon', 'title', 'expandIcon'],

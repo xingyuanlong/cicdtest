@@ -14,7 +14,7 @@ import omit from '../_util/omit';
 import isMobile from '../_util/isMobile';
 
 export default defineComponent({
-  name: 'AInputSearch',
+  name: 'PfInputSearch',
   inheritAttrs: false,
   props: {
     ...inputProps(),

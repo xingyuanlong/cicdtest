@@ -11,11 +11,11 @@ cover: https://gw.alipayobjects.com/zos/antfincdn/UZYqMizXHaj/Steps.svg
 ## API
 
 ```jsx
-<a-steps>
-  <a-step title="first step" />
-  <a-step title="second step" />
-  <a-step title="third step" />
-</a-steps>
+<pf-steps>
+  <pf-step title="first step" />
+  <pf-step title="second step" />
+  <pf-step title="third step" />
+</pf-steps>
 ```
 
 ### Steps

@@ -88,7 +88,7 @@ export const mentionsProps = () => ({
 export type MentionsProps = Partial<ExtractPropTypes<ReturnType<typeof mentionsProps>>>;
 
 const Mentions = defineComponent({
-  name: 'AMentions',
+  name: 'PfMentions',
   inheritAttrs: false,
   props: mentionsProps(),
   slots: ['notFoundContent', 'option'],
@@ -205,7 +205,7 @@ const Mentions = defineComponent({
 /* istanbul ignore next */
 export const MentionsOption = defineComponent({
   ...Option,
-  name: 'AMentionsOption',
+  name: 'PfMentionsOption',
   props: optionProps,
 });
 

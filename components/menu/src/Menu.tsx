@@ -84,7 +84,7 @@ export type MenuProps = Partial<ExtractPropTypes<ReturnType<typeof menuProps>>>;
 
 const EMPTY_LIST: string[] = [];
 export default defineComponent({
-  name: 'AMenu',
+  name: 'PfMenu',
   inheritAttrs: false,
   props: menuProps(),
   slots: ['expandIcon', 'overflowedIndicator'],

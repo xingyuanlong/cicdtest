@@ -17,20 +17,20 @@ Display value within it's situation with `formatter`, and we usually use `parser
 </docs>
 
 <template>
-  <a-space>
-    <a-input-number
+  <pf-space>
+    <pf-input-number
       v-model:value="value1"
       :formatter="value => `$ ${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, ',')"
       :parser="value => value.replace(/\$\s?|(,*)/g, '')"
     />
-    <a-input-number
+    <pf-input-number
       v-model:value="value2"
       :min="0"
       :max="100"
       :formatter="value => `${value}%`"
       :parser="value => value.replace('%', '')"
     />
-  </a-space>
+  </pf-space>
 </template>
 <script lang="ts">
 import { defineComponent, ref } from 'vue';

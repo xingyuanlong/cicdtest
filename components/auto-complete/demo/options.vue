@@ -16,7 +16,7 @@ You could also pass `v-slot:option` to custom option.
 </docs>
 
 <template>
-  <a-auto-complete
+  <pf-auto-complete
     v-model:value="value"
     style="width: 200px"
     placeholder="input here"
@@ -27,7 +27,7 @@ You could also pass `v-slot:option` to custom option.
       {{ val.split('@')[0] }} @
       <span style="font-weight: bold">{{ val.split('@')[1] }}</span>
     </template>
-  </a-auto-complete>
+  </pf-auto-complete>
 </template>
 
 <script lang="ts">

@@ -17,7 +17,7 @@ After users upload picture, the thumbnail will be shown in list. The upload butt
 
 <template>
   <div class="clearfix">
-    <a-upload
+    <pf-upload
       v-model:file-list="fileList"
       action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
       list-type="picture-card"
@@ -27,10 +27,10 @@ After users upload picture, the thumbnail will be shown in list. The upload butt
         <plus-outlined />
         <div style="margin-top: 8px">Upload</div>
       </div>
-    </a-upload>
-    <a-modal :visible="previewVisible" :title="previewTitle" :footer="null" @cancel="handleCancel">
+    </pf-upload>
+    <pf-modal :visible="previewVisible" :title="previewTitle" :footer="null" @cancel="handleCancel">
       <img alt="example" style="width: 100%" :src="previewImage" />
-    </a-modal>
+    </pf-modal>
   </div>
 </template>
 <script lang="ts">

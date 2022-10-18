@@ -6,9 +6,9 @@
   >
     <component :is="allIcons[name]"></component>
     <span class="anticon-class">
-      <a-badge :dot="isNew">
+      <pf-badge :dot="isNew">
         {{ kebabCasedType }}
-      </a-badge>
+      </pf-badge>
     </span>
   </li>
 </template>
@@ -28,7 +28,7 @@ const kebabCase = function kebabCase(str) {
 
 export default defineComponent({
   components: {
-    'a-badge': Badge,
+    'pf-badge': Badge,
   },
   props: ['name', 'type', 'isNew', 'justCopied'],
   data() {

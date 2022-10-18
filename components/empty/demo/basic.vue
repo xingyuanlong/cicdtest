@@ -17,7 +17,7 @@ Simplest Usage.
 </docs>
 
 <template>
-  <a-empty :description='noData' />
+  <pf-empty :description='noData' />
 </template>
 <script lang="ts">
   import { defineComponent } from 'vue';

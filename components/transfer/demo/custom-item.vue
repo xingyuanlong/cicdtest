@@ -17,7 +17,7 @@ Custom each Transfer Item, and in this way you can render a complex datasource.
 </docs>
 
 <template>
-  <a-transfer
+  <pf-transfer
     v-model:target-keys="targetKeys"
     :data-source="mockData"
     :list-style="{
@@ -29,7 +29,7 @@ Custom each Transfer Item, and in this way you can render a complex datasource.
     <template #render="item">
       <span class="custom-item" style="color: red">{{ item.title }} - {{ item.description }}</span>
     </template>
-  </a-transfer>
+  </pf-transfer>
 </template>
 <script lang="ts">
 import { defineComponent, ref, onMounted } from 'vue';

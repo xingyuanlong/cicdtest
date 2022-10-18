@@ -21,7 +21,7 @@ A simple playground for column count and gutter.
     <div style="margin-bottom: 16px">
       <span style="margin-right: 6px">Horizontal Gutter (px):</span>
       <div style="width: 50%">
-        <a-slider
+        <pf-slider
           v-model:value="gutterKey"
           :min="0"
           :max="Object.keys(gutters).length - 1"
@@ -31,7 +31,7 @@ A simple playground for column count and gutter.
       </div>
       <span style="margin-right: 6px">Vertical Gutter (px):</span>
       <div style="width: 50%">
-        <a-slider
+        <pf-slider
           v-model:value="vgutterKey"
           :min="0"
           :max="Object.keys(vgutters).length - 1"
@@ -41,7 +41,7 @@ A simple playground for column count and gutter.
       </div>
       <span style="margin-right: 6px">Column Count:</span>
       <div style="width: 50%">
-        <a-slider
+        <pf-slider
           v-model:value="colCountKey"
           :min="0"
           :max="Object.keys(colCounts).length - 1"
@@ -50,23 +50,23 @@ A simple playground for column count and gutter.
         />
       </div>
     </div>
-    <a-row :gutter="[gutters[gutterKey], vgutters[vgutterKey]]">
-      <a-col
+    <pf-row :gutter="[gutters[gutterKey], vgutters[vgutterKey]]">
+      <pf-col
         v-for="item in colCounts[colCountKey]"
         :key="item.toString()"
         :span="24 / colCounts[colCountKey]"
       >
         <div>Column</div>
-      </a-col>
+      </pf-col>
 
-      <a-col
+      <pf-col
         v-for="item in colCounts[colCountKey]"
         :key="item.toString()"
         :span="24 / colCounts[colCountKey]"
       >
         <div>Column</div>
-      </a-col>
-    </a-row>
+      </pf-col>
+    </pf-row>
     <pre>{{ rowColHtml }}</pre>
     <br />
     <pre>{{ rowColHtml }}</pre>
@@ -103,12 +103,12 @@ export default defineComponent({
     const rowColHtml = computed(() => {
       const colCount = state.colCounts[state.colCountKey];
       const getter = [state.gutters[state.gutterKey], state.vgutters[state.vgutterKey]];
-      let colCode = '<a-row :gutter="[' + getter + ']">\n';
+      let colCode = '<pf-row :gutter="[' + getter + ']">\n';
       for (let i = 0; i < colCount; i++) {
         const spanNum = 24 / colCount;
-        colCode += '  <a-col :span="' + spanNum + '"/>\n';
+        colCode += '  <pf-col :span="' + spanNum + '"/>\n';
       }
-      colCode += '</a-row>';
+      colCode += '</pf-row>';
       return colCode;
     });
     return {

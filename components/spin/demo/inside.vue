@@ -18,7 +18,7 @@ Spin in a container.
 
 <template>
   <div class="example">
-    <a-spin />
+    <pf-spin />
   </div>
 </template>
 <style scoped>

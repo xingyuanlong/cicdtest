@@ -26,11 +26,11 @@ Control filters and sorters by `filteredValue` and `sortOrder`.
 <template>
   <div>
     <div class="table-operations">
-      <a-button @click="setAgeSort">Sort age</a-button>
-      <a-button @click="clearFilters">Clear filters</a-button>
-      <a-button @click="clearAll">Clear filters and sorters</a-button>
+      <pf-button @click="setAgeSort">Sort age</pf-button>
+      <pf-button @click="clearFilters">Clear filters</pf-button>
+      <pf-button @click="clearAll">Clear filters and sorters</pf-button>
     </div>
-    <a-table :columns="columns" :data-source="data" @change="handleChange" />
+    <pf-table :columns="columns" :data-source="data" @change="handleChange" />
   </div>
 </template>
 <script lang="ts">

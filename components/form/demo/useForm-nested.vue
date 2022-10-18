@@ -16,18 +16,18 @@ title:
 </docs>
 
 <template>
-  <a-form :label-col="labelCol" :wrapper-col="wrapperCol">
-    <a-form-item label="Activity name" v-bind="validateInfos.name">
-      <a-input v-model:value="modelRef.name" />
-    </a-form-item>
-    <a-form-item label="Sub name" v-bind="validateInfos['sub.name']">
-      <a-input v-model:value="modelRef.sub.name" />
-    </a-form-item>
-    <a-form-item :wrapper-col="{ span: 14, offset: 4 }" style="margin-top: 24px;">
-      <a-button type="primary" @click.prevent="onSubmit">Create</a-button>
-      <a-button style="margin-left: 10px" @click="reset">Reset</a-button>
-    </a-form-item>
-  </a-form>
+  <pf-form :label-col="labelCol" :wrapper-col="wrapperCol">
+    <pf-form-item label="Activity name" v-bind="validateInfos.name">
+      <pf-input v-model:value="modelRef.name" />
+    </pf-form-item>
+    <pf-form-item label="Sub name" v-bind="validateInfos['sub.name']">
+      <pf-input v-model:value="modelRef.sub.name" />
+    </pf-form-item>
+    <pf-form-item :wrapper-col="{ span: 14, offset: 4 }" style="margin-top: 24px;">
+      <pf-button type="primary" @click.prevent="onSubmit">Create</pf-button>
+      <pf-button style="margin-left: 10px" @click="reset">Reset</pf-button>
+    </pf-form-item>
+  </pf-form>
 </template>
 <script lang="ts">
 import { defineComponent, reactive, toRaw } from 'vue';

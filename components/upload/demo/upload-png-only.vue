@@ -17,17 +17,17 @@ title:
 </docs>
 
 <template>
-  <a-upload
+  <pf-upload
     v-model:file-list="fileList"
     action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
     :before-upload="beforeUpload"
     @change="handleChange"
   >
-    <a-button>
+    <pf-button>
       <upload-outlined></upload-outlined>
       Upload png only
-    </a-button>
-  </a-upload>
+    </pf-button>
+  </pf-upload>
 </template>
 <script lang="ts">
 import { UploadOutlined } from '@ant-design/icons-vue';

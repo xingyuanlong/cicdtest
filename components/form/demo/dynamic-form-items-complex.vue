@@ -16,22 +16,22 @@ This example demonstrates the case that a form contains multiple form controls.
 
 </docs>
 <template>
-  <a-form
+  <pf-form
     ref="formRef"
     name="dynamic_form_nest_item"
     :model="dynamicValidateForm"
     @finish="onFinish"
   >
-    <a-form-item name="area" label="Area" :rules="[{ required: true, message: 'Missing area' }]">
-      <a-select v-model:value="dynamicValidateForm.area" :options="areas" />
-    </a-form-item>
-    <a-space
+    <pf-form-item name="area" label="Area" :rules="[{ required: true, message: 'Missing area' }]">
+      <pf-select v-model:value="dynamicValidateForm.area" :options="areas" />
+    </pf-form-item>
+    <pf-space
       v-for="(sight, index) in dynamicValidateForm.sights"
       :key="sight.id"
       style="display: flex; margin-bottom: 8px"
       align="baseline"
     >
-      <a-form-item
+      <pf-form-item
         :name="['sights', index, 'value']"
         label="Sight"
         :rules="{
@@ -39,14 +39,14 @@ This example demonstrates the case that a form contains multiple form controls.
           message: 'Missing sight',
         }"
       >
-        <a-select
+        <pf-select
           v-model:value="sight.value"
           :disabled="!dynamicValidateForm.area"
           :options="(sights[dynamicValidateForm.area] || []).map(a => ({ value: a }))"
           style="width: 130px"
-        ></a-select>
-      </a-form-item>
-      <a-form-item
+        ></pf-select>
+      </pf-form-item>
+      <pf-form-item
         label="Price"
         :name="['sights', index, 'price']"
         :rules="{
@@ -54,20 +54,20 @@ This example demonstrates the case that a form contains multiple form controls.
           message: 'Missing price',
         }"
       >
-        <a-input v-model:value="sight.price" />
-      </a-form-item>
+        <pf-input v-model:value="sight.price" />
+      </pf-form-item>
       <MinusCircleOutlined @click="removeSight(sight)" />
-    </a-space>
-    <a-form-item>
-      <a-button type="dashed" block @click="addSight">
+    </pf-space>
+    <pf-form-item>
+      <pf-button type="dashed" block @click="addSight">
         <PlusOutlined />
         Add sights
-      </a-button>
-    </a-form-item>
-    <a-form-item style="margin-top: 24px;">
-      <a-button type="primary" html-type="submit">Submit</a-button>
-    </a-form-item>
-  </a-form>
+      </pf-button>
+    </pf-form-item>
+    <pf-form-item style="margin-top: 24px;">
+      <pf-button type="primary" html-type="submit">Submit</pf-button>
+    </pf-form-item>
+  </pf-form>
 </template>
 
 <script lang="ts">

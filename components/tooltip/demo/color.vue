@@ -17,18 +17,18 @@ We preset a series of colorful Tooltip styles for use in different situations.
 </docs>
 
 <template>
-  <div id="components-a-tooltip-demo-color">
-    <a-divider orientation="left">Presets</a-divider>
+  <div id="components-pf-tooltip-demo-color">
+    <pf-divider orientation="left">Presets</pf-divider>
     <div>
-      <a-tooltip v-for="color in colors" :key="color" title="prompt text" :color="color">
-        <a-button>{{ color }}</a-button>
-      </a-tooltip>
+      <pf-tooltip v-for="color in colors" :key="color" title="prompt text" :color="color">
+        <pf-button>{{ color }}</pf-button>
+      </pf-tooltip>
     </div>
-    <a-divider orientation="left">Custom</a-divider>
+    <pf-divider orientation="left">Custom</pf-divider>
     <div>
-      <a-tooltip v-for="color in customColors" :key="color" title="prompt text" :color="color">
-        <a-button>{{ color }}</a-button>
-      </a-tooltip>
+      <pf-tooltip v-for="color in customColors" :key="color" title="prompt text" :color="color">
+        <pf-button>{{ color }}</pf-button>
+      </pf-tooltip>
     </div>
   </div>
 </template>
@@ -62,7 +62,7 @@ export default defineComponent({
 </script>
 
 <style scoped>
-#components-a-tooltip-demo-color .ant-btn {
+#components-pf-tooltip-demo-color .ant-btn {
   margin-right: 8px;
   margin-bottom: 8px;
 }

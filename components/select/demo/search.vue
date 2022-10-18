@@ -17,7 +17,7 @@ Search the options while expanded.
 </docs>
 
 <template>
-  <a-select
+  <pf-select
     v-model:value="value"
     show-search
     placeholder="Select a person"
@@ -28,7 +28,7 @@ Search the options while expanded.
     @focus="handleFocus"
     @blur="handleBlur"
     @change="handleChange"
-  ></a-select>
+  ></pf-select>
 </template>
 <script lang="ts">
 import type { SelectProps } from 'pf-ui-vue';

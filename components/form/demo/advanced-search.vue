@@ -21,30 +21,30 @@ Because the width of label is not fixed, you may need to adjust it by customizin
 </docs>
 <template>
   <div>
-    <a-form
+    <pf-form
       ref="formRef"
       name="advanced_search"
       class="ant-advanced-search-form"
       :model="formState"
       @finish="onFinish"
     >
-      <a-row :gutter="24">
+      <pf-row :gutter="24">
         <template v-for="i in 10" :key="i">
-          <a-col v-show="expand || i <= 6" :span="8">
-            <a-form-item
+          <pf-col v-show="expand || i <= 6" :span="8">
+            <pf-form-item
               :name="`field-${i}`"
               :label="`field-${i}`"
               :rules="[{ required: true, message: 'input something' }]"
             >
-              <a-input v-model:value="formState[`field-${i}`]" placeholder="placeholder"></a-input>
-            </a-form-item>
-          </a-col>
+              <pf-input v-model:value="formState[`field-${i}`]" placeholder="placeholder"></pf-input>
+            </pf-form-item>
+          </pf-col>
         </template>
-      </a-row>
-      <a-row>
-        <a-col :span="24" style="text-align: right">
-          <a-button type="primary" html-type="submit">Search</a-button>
-          <a-button style="margin: 0 8px" @click="() => formRef.resetFields()">Clear</a-button>
+      </pf-row>
+      <pf-row>
+        <pf-col :span="24" style="text-align: right">
+          <pf-button type="primary" html-type="submit">Search</pf-button>
+          <pf-button style="margin: 0 8px" @click="() => formRef.resetFields()">Clear</pf-button>
           <a style="font-size: 12px" @click="expand = !expand">
             <template v-if="expand">
               <UpOutlined />
@@ -54,9 +54,9 @@ Because the width of label is not fixed, you may need to adjust it by customizin
             </template>
             Collapse
           </a>
-        </a-col>
-      </a-row>
-    </a-form>
+        </pf-col>
+      </pf-row>
+    </pf-form>
     <div class="search-result-list">Search Result List</div>
   </div>
 </template>

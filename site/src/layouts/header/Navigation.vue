@@ -1,39 +1,39 @@
 <template>
-  <a-menu
+  <pf-menu
     id="nav"
     class="menu-site"
     :mode="menuMode"
     :selected-keys="[activeMenuItem]"
     disabled-overflow
   >
-    <a-menu-item key="docs/vue">
+    <pf-menu-item key="docs/vue">
       <router-link :to="getLocalizedPathname('/docs/vue/introduce', isZhCN)">
         {{ $t('app.header.menu.documentation') }}
       </router-link>
-    </a-menu-item>
-    <a-menu-item key="components">
+    </pf-menu-item>
+    <pf-menu-item key="components">
       <router-link :to="getLocalizedPathname('/components/overview/', isZhCN)">
         {{ $t('app.header.menu.components') }}
       </router-link>
-    </a-menu-item>
-    <a-menu-item v-if="isZhCN" key="surely-vue">
-      <a-tooltip title="规划中，敬请期待..." color="#06aea6">
+    </pf-menu-item>
+    <pf-menu-item v-if="isZhCN" key="surely-vue">
+      <pf-tooltip title="规划中，敬请期待..." color="#06aea6">
         业务组件
-        <a-badge color="red" style="position: absolute; top: -35px; right: -15px" />
-      </a-tooltip>
-    </a-menu-item>
-    <a-menu-item  key="pf-doc">
+        <pf-badge color="red" style="position: absolute; top: -35px; right: -15px" />
+      </pf-tooltip>
+    </pf-menu-item>
+    <pf-menu-item  key="pf-doc">
       <a href="https://platform-doc.rubikstack.com/" target="_blank">
         平台中心文档
       </a>
       
-    </a-menu-item>
+    </pf-menu-item>
     <template v-if="isMobile">
-      <a-menu-item key="switch-lang" @click="$emit('langChange')">
+      <pf-menu-item key="switch-lang" @click="$emit('langChange')">
         {{ $t('app.header.lang') }}
-      </a-menu-item>
+      </pf-menu-item>
     </template>
-  </a-menu>
+  </pf-menu>
 </template>
 <script lang="ts">
 import type { GlobalConfig } from '../../App.vue';

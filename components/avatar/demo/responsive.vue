@@ -16,11 +16,11 @@ Avatar size can be automatically adjusted based on the screen size.
 </docs>
 
 <template>
-  <a-avatar :size="{ xs: 24, sm: 32, md: 40, lg: 64, xl: 80, xxl: 100 }">
+  <pf-avatar :size="{ xs: 24, sm: 32, md: 40, lg: 64, xl: 80, xxl: 100 }">
     <template #icon>
       <AntDesignOutlined />
     </template>
-  </a-avatar>
+  </pf-avatar>
 </template>
 
 <script lang="ts">

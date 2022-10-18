@@ -17,13 +17,13 @@ Use ConfigProvider set global Empty style.
 </docs>
 
 <template>
-  <a-switch
+  <pf-switch
     v-model:checked="customize"
     un-checked-children="default"
     checked-children="customize"
   />
-  <a-divider />
-  <a-config-provider>
+  <pf-divider />
+  <pf-config-provider>
     <template v-if="customize" #renderEmpty>
       <div style="text-align: center">
         <smile-outlined style="font-size: 20px" />
@@ -32,23 +32,23 @@ Use ConfigProvider set global Empty style.
     </template>
     <div class="config-provider">
       <h3>Select</h3>
-      <a-select :style="style" :options="[]" />
+      <pf-select :style="style" :options="[]" />
 
       <h3>TreeSelect</h3>
-      <a-tree-select :style="style" :tree-data="[]" />
+      <pf-tree-select :style="style" :tree-data="[]" />
 
       <h3>Cascader</h3>
-      <a-cascader :style="style" :options="[]" :show-search="true" />
+      <pf-cascader :style="style" :options="[]" :show-search="true" />
 
       <h3>Transfer</h3>
-      <a-transfer :data-source="[]" />
+      <pf-transfer :data-source="[]" />
 
       <h3>Table</h3>
-      <a-table style="margin-top: 8px" :columns="columns" :data-source="[]" />
+      <pf-table style="margin-top: 8px" :columns="columns" :data-source="[]" />
       <h3>List</h3>
-      <a-list :data-source="[]" />
+      <pf-list :data-source="[]" />
     </div>
-  </a-config-provider>
+  </pf-config-provider>
 </template>
 <script lang="ts">
 import { SmileOutlined } from '@ant-design/icons-vue';

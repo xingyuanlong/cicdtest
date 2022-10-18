@@ -73,7 +73,7 @@ export interface AnchorState {
 }
 
 export default defineComponent({
-  name: 'AAnchor',
+  name: 'PfAnchor',
   inheritAttrs: false,
   props: anchorProps(),
   setup(props, { emit, attrs, slots, expose }) {

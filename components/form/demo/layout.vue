@@ -16,24 +16,24 @@ There are three layout for form: `horizontal`, `vertical`, `inline`.
 </docs>
 
 <template>
-  <a-form :layout="formState.layout" :model="formState" v-bind="formItemLayout">
-    <a-form-item label="Form Layout">
-      <a-radio-group v-model:value="formState.layout">
-        <a-radio-button value="horizontal">Horizontal</a-radio-button>
-        <a-radio-button value="vertical">Vertical</a-radio-button>
-        <a-radio-button value="inline">Inline</a-radio-button>
-      </a-radio-group>
-    </a-form-item>
-    <a-form-item label="Field A">
-      <a-input v-model:value="formState.fieldA" placeholder="input placeholder" />
-    </a-form-item>
-    <a-form-item label="Field B">
-      <a-input v-model:value="formState.fieldB" placeholder="input placeholder" />
-    </a-form-item>
-    <a-form-item :wrapper-col="buttonItemLayout.wrapperCol" style="margin-top: 24px;">
-      <a-button type="primary">Submit</a-button>
-    </a-form-item>
-  </a-form>
+  <pf-form :layout="formState.layout" :model="formState" v-bind="formItemLayout">
+    <pf-form-item label="Form Layout">
+      <pf-radio-group v-model:value="formState.layout">
+        <pf-radio-button value="horizontal">Horizontal</pf-radio-button>
+        <pf-radio-button value="vertical">Vertical</pf-radio-button>
+        <pf-radio-button value="inline">Inline</pf-radio-button>
+      </pf-radio-group>
+    </pf-form-item>
+    <pf-form-item label="Field A">
+      <pf-input v-model:value="formState.fieldA" placeholder="input placeholder" />
+    </pf-form-item>
+    <pf-form-item label="Field B">
+      <pf-input v-model:value="formState.fieldB" placeholder="input placeholder" />
+    </pf-form-item>
+    <pf-form-item :wrapper-col="buttonItemLayout.wrapperCol" style="margin-top: 24px;">
+      <pf-button type="primary">Submit</pf-button>
+    </pf-form-item>
+  </pf-form>
 </template>
 <script lang="ts">
 import { computed, defineComponent, reactive } from 'vue';

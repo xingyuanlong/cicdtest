@@ -87,7 +87,7 @@ function generateCalendar<
   }
 
   const Calendar = defineComponent<Props>({
-    name: 'ACalendar',
+    name: 'PfCalendar',
     inheritAttrs: false,
     props: [
       'prefixCls',

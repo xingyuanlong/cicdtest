@@ -17,9 +17,9 @@ There are three sizes of an Input box: `large` (40px)、`default` (32px) and `sm
 </docs>
 <template>
   <div class="components-input-demo-size">
-    <a-input v-model:value="value" size="large" placeholder="large size" />
-    <a-input v-model:value="value" placeholder="default size" />
-    <a-input v-model:value="value" size="small" placeholder="small size" />
+    <pf-input v-model:value="value" size="large" placeholder="large size" />
+    <pf-input v-model:value="value" placeholder="default size" />
+    <pf-input v-model:value="value" size="small" placeholder="small size" />
   </div>
 </template>
 <script lang="ts">

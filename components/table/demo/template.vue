@@ -25,33 +25,33 @@ Using template style API.
 </docs>
 
 <template>
-  <a-table :data-source="data">
-    <a-table-column-group>
+  <pf-table :data-source="data">
+    <pf-table-column-group>
       <template #title><span style="color: #1890ff">Name</span></template>
-      <a-table-column key="firstName" data-index="firstName">
+      <pf-table-column key="firstName" data-index="firstName">
         <template #title><span style="color: #1890ff">First Name</span></template>
-      </a-table-column>
-      <a-table-column key="lastName" title="Last Name" data-index="lastName" />
-    </a-table-column-group>
-    <a-table-column key="age" title="Age" data-index="age" />
-    <a-table-column key="address" title="Address" data-index="address" />
-    <a-table-column key="tags" title="Tags" data-index="tags">
+      </pf-table-column>
+      <pf-table-column key="lastName" title="Last Name" data-index="lastName" />
+    </pf-table-column-group>
+    <pf-table-column key="age" title="Age" data-index="age" />
+    <pf-table-column key="address" title="Address" data-index="address" />
+    <pf-table-column key="tags" title="Tags" data-index="tags">
       <template #default="{ text: tags }">
         <span>
-          <a-tag v-for="tag in tags" :key="tag" color="blue">{{ tag }}</a-tag>
+          <pf-tag v-for="tag in tags" :key="tag" color="blue">{{ tag }}</pf-tag>
         </span>
       </template>
-    </a-table-column>
-    <a-table-column key="action" title="Action">
+    </pf-table-column>
+    <pf-table-column key="action" title="Action">
       <template #default="{ record }">
         <span>
           <a>Action 一 {{ record.firstName }}</a>
-          <a-divider type="vertical" />
+          <pf-divider type="vertical" />
           <a>Delete</a>
         </span>
       </template>
-    </a-table-column>
-  </a-table>
+    </pf-table-column>
+  </pf-table>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';

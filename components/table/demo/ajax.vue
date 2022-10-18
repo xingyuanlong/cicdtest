@@ -24,7 +24,7 @@ Setting `rowSelection.preserveSelectedRowKeys` to keep the `key` when enable sel
 </docs>
 
 <template>
-  <a-table
+  <pf-table
     :columns="columns"
     :row-key="record => record.login.uuid"
     :data-source="dataSource"
@@ -35,7 +35,7 @@ Setting `rowSelection.preserveSelectedRowKeys` to keep the `key` when enable sel
     <template #bodyCell="{ column, text }">
       <template v-if="column.dataIndex === 'name'">{{ text.first }} {{ text.last }}</template>
     </template>
-  </a-table>
+  </pf-table>
 </template>
 <script lang="ts">
 import type { TableProps } from 'pf-ui-vue';

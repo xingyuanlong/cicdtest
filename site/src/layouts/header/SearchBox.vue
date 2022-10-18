@@ -1,12 +1,12 @@
 <template>
   <div id="search-box" :class="{ 'narrow-mode': responsive, focused: !!focused }">
     <SearchOutlined />
-    <a-input
+    <pf-input
       ref="inputRef"
       :placeholder="searchPlaceholder"
       @focus="triggerFocus(true)"
       @blue="triggerFocus(false)"
-    ></a-input>
+    ></pf-input>
   </div>
 </template>
 <script lang="ts">

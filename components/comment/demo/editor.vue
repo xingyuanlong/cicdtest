@@ -17,38 +17,38 @@ Comment can be used as editor, user can customize the editor component.
 </docs>
 
 <template>
-  <a-list
+  <pf-list
     v-if="comments.length"
     :data-source="comments"
     :header="`${comments.length} ${comments.length > 1 ? 'replies' : 'reply'}`"
     item-layout="horizontal"
   >
     <template #renderItem="{ item }">
-      <a-list-item>
-        <a-comment
+      <pf-list-item>
+        <pf-comment
           :author="item.author"
           :avatar="item.avatar"
           :content="item.content"
           :datetime="item.datetime"
         />
-      </a-list-item>
+      </pf-list-item>
     </template>
-  </a-list>
-  <a-comment>
+  </pf-list>
+  <pf-comment>
     <template #avatar>
-      <a-avatar src="https://joeschmoe.io/api/v1/random" alt="Han Solo" />
+      <pf-avatar src="https://joeschmoe.io/api/v1/random" alt="Han Solo" />
     </template>
     <template #content>
-      <a-form-item>
-        <a-textarea v-model:value="value" :rows="4" />
-      </a-form-item>
-      <a-form-item>
-        <a-button html-type="submit" :loading="submitting" type="primary" @click="handleSubmit">
+      <pf-form-item>
+        <pf-textarea v-model:value="value" :rows="4" />
+      </pf-form-item>
+      <pf-form-item>
+        <pf-button html-type="submit" :loading="submitting" type="primary" @click="handleSubmit">
           Add Comment
-        </a-button>
-      </a-form-item>
+        </pf-button>
+      </pf-form-item>
     </template>
-  </a-comment>
+  </pf-comment>
 </template>
 <script lang="ts">
 import { defineComponent, ref } from 'vue';

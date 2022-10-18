@@ -17,9 +17,9 @@ The server is wrong.
 </docs>
 
 <template>
-  <a-result status="empty">
+  <pf-result status="empty">
     <template #extra>
-      <a-button type="primary">新增</a-button>
+      <pf-button type="primary">新增</pf-button>
     </template>
-  </a-result>
+  </pf-result>
 </template>

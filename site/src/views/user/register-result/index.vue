@@ -8,14 +8,14 @@
     </div>
     <div class="actions">
       <!-- <a href="">
-        <a-button size="large" type="primary">
+        <pf-button size="large" type="primary">
           {{ $t('userandregister-result.register-result.view-mailbox') }}
-        </a-button>
+        </pf-button>
       </a> -->
       <router-link to="/">
-        <a-button size="large">
+        <pf-button size="large">
           {{ $t('userandregister-result.register-result.back-home') }}
-        </a-button>
+        </pf-button>
       </router-link>
     </div>
   </div>

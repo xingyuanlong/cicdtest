@@ -17,7 +17,7 @@ Normal message for information.
 </docs>
 
 <template>
-  <a-button type="primary" @click="info">Display normal message</a-button>
+  <pf-button type="primary" @click="info">Display normal message</pf-button>
 </template>
 <script lang="ts">
 import { message } from 'pf-ui-vue';

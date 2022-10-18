@@ -17,10 +17,10 @@ There are `primary` button, `secondary`, `default` button, `dashed` button, `tex
 </docs>
 
 <template>
-  <a-button type="primary">Primary Button</a-button>
-  <a-button type="secondary">Secondary Button</a-button>
-  <a-button>Default Button</a-button>
-  <a-button type="dashed">Dashed Button</a-button>
-  <a-button type="text">Text Button</a-button>
-  <a-button type="link">Link Button</a-button>
+  <pf-button type="primary">Primary Button</pf-button>
+  <pf-button type="secondary">Secondary Button</pf-button>
+  <pf-button>Default Button</pf-button>
+  <pf-button type="dashed">Dashed Button</pf-button>
+  <pf-button type="text">Text Button</pf-button>
+  <pf-button type="link">Link Button</pf-button>
 </template>

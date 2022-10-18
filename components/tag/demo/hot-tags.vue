@@ -19,12 +19,12 @@ Select your favourite topics.
 <template>
   <span :style="{ marginRight: '8px' }">Categories:</span>
   <template v-for="tag in tags" :key="tag">
-    <a-checkable-tag
+    <pf-checkable-tag
       :checked="selectedTags.indexOf(tag) > -1"
       @change="checked => handleChange(tag, checked)"
     >
       {{ tag }}
-    </a-checkable-tag>
+    </pf-checkable-tag>
   </template>
 </template>
 <script lang="ts">

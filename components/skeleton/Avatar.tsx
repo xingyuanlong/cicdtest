@@ -15,7 +15,7 @@ export const avatarProps = () => {
 export type SkeletonAvatarProps = Partial<ExtractPropTypes<ReturnType<typeof avatarProps>>>;
 
 const SkeletonAvatar = defineComponent({
-  name: 'ASkeletonAvatar',
+  name: 'PfSkeletonAvatar',
   props: initDefaultProps(avatarProps(), {
     size: 'default',
     shape: 'circle',

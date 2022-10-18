@@ -18,23 +18,23 @@ A notification box can pop up from `topRight` or `bottomRight` or `bottomLeft` o
 
 <template>
   <div>
-    <a-button type="primary" @click="openNotification('topLeft')">
+    <pf-button type="primary" @click="openNotification('topLeft')">
       <radius-upleft-outlined />
       topLeft
-    </a-button>
-    <a-button type="primary" @click="openNotification('topRight')">
+    </pf-button>
+    <pf-button type="primary" @click="openNotification('topRight')">
       <radius-upright-outlined />
       topRight
-    </a-button>
-    <a-divider />
-    <a-button type="primary" @click="openNotification('bottomLeft')">
+    </pf-button>
+    <pf-divider />
+    <pf-button type="primary" @click="openNotification('bottomLeft')">
       <radius-bottomleft-outlined />
       bottomLeft
-    </a-button>
-    <a-button type="primary" @click="openNotification('bottomRight')">
+    </pf-button>
+    <pf-button type="primary" @click="openNotification('bottomRight')">
       <radius-bottomright-outlined />
       bottomRight
-    </a-button>
+    </pf-button>
   </div>
 </template>
 <script lang="ts">

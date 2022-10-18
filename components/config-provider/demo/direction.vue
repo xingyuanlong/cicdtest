@@ -18,26 +18,26 @@ Components which support rtl direction are listed here, you can toggle the direc
 
 <template>
   <span style="margin-right: 16px">Change direction of components:</span>
-  <a-radio-group v-model:value="state.direction">
-    <a-radio-button value="ltr">LTR</a-radio-button>
-    <a-radio-button value="rtl">RTL</a-radio-button>
-  </a-radio-group>
-  <a-divider />
-  <a-config-provider :direction="state.direction">
+  <pf-radio-group v-model:value="state.direction">
+    <pf-radio-button value="ltr">LTR</pf-radio-button>
+    <pf-radio-button value="rtl">RTL</pf-radio-button>
+  </pf-radio-group>
+  <pf-divider />
+  <pf-config-provider :direction="state.direction">
     <div class="direction-components">
-      <a-row>
-        <a-col :span="24">
-          <a-divider orientation="left">Cascader example</a-divider>
-          <a-cascader
+      <pf-row>
+        <pf-col :span="24">
+          <pf-divider orientation="left">Cascader example</pf-divider>
+          <pf-cascader
             :options="cascaderOptions"
             placeholder="یک مورد انتخاب کنید"
             :placement="state.popupPlacement"
             @change="onCascaderChange"
           >
             <template #suffixIcon><SearchIcon /></template>
-          </a-cascader>
+          </pf-cascader>
           &nbsp;&nbsp;&nbsp;&nbsp; With search:
-          <a-cascader
+          <pf-cascader
             :options="cascaderOptions"
             placeholder="Select an item"
             :placement="state.popupPlacement"
@@ -45,71 +45,71 @@ Components which support rtl direction are listed here, you can toggle the direc
             @change="onCascaderChange"
           >
             <template #suffixIcon><SmileOutlined /></template>
-          </a-cascader>
-        </a-col>
-      </a-row>
+          </pf-cascader>
+        </pf-col>
+      </pf-row>
       <br />
-      <a-row>
-        <a-col :span="12">
-          <a-divider orientation="left">Switch example</a-divider>
+      <pf-row>
+        <pf-col :span="12">
+          <pf-divider orientation="left">Switch example</pf-divider>
           &nbsp;&nbsp;
-          <a-switch default-checked />
+          <pf-switch default-checked />
           &nbsp;&nbsp;
-          <a-switch loading default-checked />
+          <pf-switch loading default-checked />
           &nbsp;&nbsp;
-          <a-switch size="small" loading />
-        </a-col>
-        <a-col :span="12">
-          <a-divider orientation="left">Radio Group example</a-divider>
+          <pf-switch size="small" loading />
+        </pf-col>
+        <pf-col :span="12">
+          <pf-divider orientation="left">Radio Group example</pf-divider>
 
-          <a-radio-group default-value="c" button-style="solid">
-            <a-radio-button value="a">تهران</a-radio-button>
-            <a-radio-button value="b" disabled>اصفهان</a-radio-button>
-            <a-radio-button value="c">فارس</a-radio-button>
-            <a-radio-button value="d">خوزستان</a-radio-button>
-          </a-radio-group>
-        </a-col>
-      </a-row>
+          <pf-radio-group default-value="c" button-style="solid">
+            <pf-radio-button value="a">تهران</pf-radio-button>
+            <pf-radio-button value="b" disabled>اصفهان</pf-radio-button>
+            <pf-radio-button value="c">فارس</pf-radio-button>
+            <pf-radio-button value="d">خوزستان</pf-radio-button>
+          </pf-radio-group>
+        </pf-col>
+      </pf-row>
       <br />
-      <a-row>
-        <a-col :span="12">
-          <a-divider orientation="left">Button example</a-divider>
+      <pf-row>
+        <pf-col :span="12">
+          <pf-divider orientation="left">Button example</pf-divider>
           <div class="button-demo">
-            <a-button type="primary">
+            <pf-button type="primary">
               <template #icon><DownloadOutlined /></template>
-            </a-button>
-            <a-button type="primary" shape="circle">
+            </pf-button>
+            <pf-button type="primary" shape="circle">
               <template #icon><DownloadOutlined /></template>
-            </a-button>
-            <a-button type="primary" shape="round">
+            </pf-button>
+            <pf-button type="primary" shape="round">
               <template #icon><DownloadOutlined /></template>
-            </a-button>
-            <a-button type="primary" shape="round">
-              <template #icon><DownloadOutlined /></template>
-              Download
-            </a-button>
-            <a-button type="primary">
+            </pf-button>
+            <pf-button type="primary" shape="round">
               <template #icon><DownloadOutlined /></template>
               Download
-            </a-button>
+            </pf-button>
+            <pf-button type="primary">
+              <template #icon><DownloadOutlined /></template>
+              Download
+            </pf-button>
             <br />
-            <a-button-group>
-              <a-button type="primary">
+            <pf-button-group>
+              <pf-button type="primary">
                 <LeftOutlined />
                 Backward
-              </a-button>
-              <a-button type="primary">
+              </pf-button>
+              <pf-button type="primary">
                 Forward
                 <RightOutlined />
-              </a-button>
-            </a-button-group>
-            <a-button type="primary" loading>Loading</a-button>
-            <a-button type="primary" size="small" loading>Loading</a-button>
+              </pf-button>
+            </pf-button-group>
+            <pf-button type="primary" loading>Loading</pf-button>
+            <pf-button type="primary" size="small" loading>Loading</pf-button>
           </div>
-        </a-col>
-        <a-col :span="12">
-          <a-divider orientation="left">Tree example</a-divider>
-          <a-tree
+        </pf-col>
+        <pf-col :span="12">
+          <pf-divider orientation="left">Tree example</pf-divider>
+          <pf-tree
             v-model:expandedKeys="expandedKeys"
             v-model:selectedKeys="selectedKeys"
             v-model:checkedKeys="checkedKeys"
@@ -121,76 +121,76 @@ Components which support rtl direction are listed here, you can toggle the direc
               <span v-if="key === '0-0-1-0'" style="color: #1890ff">{{ title }}</span>
               <template v-else>{{ title }}</template>
             </template>
-          </a-tree>
-        </a-col>
-      </a-row>
+          </pf-tree>
+        </pf-col>
+      </pf-row>
       <br />
-      <a-row>
-        <a-col :span="24">
-          <a-divider orientation="left">Input (Input Group) example</a-divider>
-          <a-input-group size="large">
-            <a-row :gutter="8">
-              <a-col :span="5">
-                <a-input default-value="0571" />
-              </a-col>
-              <a-col :span="8">
-                <a-input default-value="26888888" />
-              </a-col>
-            </a-row>
-          </a-input-group>
+      <pf-row>
+        <pf-col :span="24">
+          <pf-divider orientation="left">Input (Input Group) example</pf-divider>
+          <pf-input-group size="large">
+            <pf-row :gutter="8">
+              <pf-col :span="5">
+                <pf-input default-value="0571" />
+              </pf-col>
+              <pf-col :span="8">
+                <pf-input default-value="26888888" />
+              </pf-col>
+            </pf-row>
+          </pf-input-group>
           <br />
-          <a-input-group compact>
-            <a-input style="width: 20%" default-value="0571" />
-            <a-input style="width: 30%" default-value="26888888" />
-          </a-input-group>
+          <pf-input-group compact>
+            <pf-input style="width: 20%" default-value="0571" />
+            <pf-input style="width: 30%" default-value="26888888" />
+          </pf-input-group>
           <br />
-          <a-input-group compact>
-            <a-select default-value="Option1">
-              <a-select-option value="Option1">Option1</a-select-option>
-              <a-select-option value="Option2">Option2</a-select-option>
-            </a-select>
-            <a-input style="width: 50%" default-value="input content" />
-            <a-inputNumber />
-          </a-input-group>
+          <pf-input-group compact>
+            <pf-select default-value="Option1">
+              <pf-select-option value="Option1">Option1</pf-select-option>
+              <pf-select-option value="Option2">Option2</pf-select-option>
+            </pf-select>
+            <pf-input style="width: 50%" default-value="input content" />
+            <pf-inputNumber />
+          </pf-input-group>
           <br />
-          <a-input-search placeholder="input search text" enter-button="Search" size="large" />
+          <pf-input-search placeholder="input search text" enter-button="Search" size="large" />
           <br />
           <br />
           <div style="margin-bottom: 16px">
-            <a-input default-value="mysite">
+            <pf-input default-value="mysite">
               <template #selectBefore>
-                <a-select default-value="Http://" style="width: 90px">
-                  <a-select-option value="Http://">Http://</a-select-option>
-                  <a-select-option value="Https://">Https://</a-select-option>
-                </a-select>
+                <pf-select default-value="Http://" style="width: 90px">
+                  <pf-select-option value="Http://">Http://</pf-select-option>
+                  <pf-select-option value="Https://">Https://</pf-select-option>
+                </pf-select>
               </template>
               <template #selectAfter>
-                <a-select default-value=".com" style="width: 80px">
-                  <a-select-option value=".com">.com</a-select-option>
-                  <a-select-option value=".jp">.jp</a-select-option>
-                  <a-select-option value=".cn">.cn</a-select-option>
-                  <a-select-option value=".org">.org</a-select-option>
-                </a-select>
+                <pf-select default-value=".com" style="width: 80px">
+                  <pf-select-option value=".com">.com</pf-select-option>
+                  <pf-select-option value=".jp">.jp</pf-select-option>
+                  <pf-select-option value=".cn">.cn</pf-select-option>
+                  <pf-select-option value=".org">.org</pf-select-option>
+                </pf-select>
               </template>
-            </a-input>
+            </pf-input>
           </div>
           <br />
-          <a-row>
-            <a-col :span="12">
-              <a-divider orientation="left">Select example</a-divider>
-              <a-select mode="multiple" default-value="مورچه" style="width: 120px">
-                <a-select-option value="jack">Jack</a-select-option>
-                <a-select-option value="مورچه">مورچه</a-select-option>
-                <a-select-option value="disabled" disabled>Disabled</a-select-option>
-                <a-select-option value="Yiminghe">yiminghe</a-select-option>
-              </a-select>
-              <a-select default-value="مورچه" style="width: 120px" disabled>
-                <a-select-option value="مورچه">مورچه</a-select-option>
-              </a-select>
-              <a-select default-value="مورچه" style="width: 120px" loading>
-                <a-select-option value="مورچه">مورچه</a-select-option>
-              </a-select>
-              <a-select
+          <pf-row>
+            <pf-col :span="12">
+              <pf-divider orientation="left">Select example</pf-divider>
+              <pf-select mode="multiple" default-value="مورچه" style="width: 120px">
+                <pf-select-option value="jack">Jack</pf-select-option>
+                <pf-select-option value="مورچه">مورچه</pf-select-option>
+                <pf-select-option value="disabled" disabled>Disabled</pf-select-option>
+                <pf-select-option value="Yiminghe">yiminghe</pf-select-option>
+              </pf-select>
+              <pf-select default-value="مورچه" style="width: 120px" disabled>
+                <pf-select-option value="مورچه">مورچه</pf-select-option>
+              </pf-select>
+              <pf-select default-value="مورچه" style="width: 120px" loading>
+                <pf-select-option value="مورچه">مورچه</pf-select-option>
+              </pf-select>
+              <pf-select
                 show-search
                 style="width: 200px"
                 placeholder="Select a person"
@@ -200,15 +200,15 @@ Components which support rtl direction are listed here, you can toggle the direc
                     option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
                 "
               >
-                <a-select-option value="jack">Jack</a-select-option>
-                <a-select-option value="سعید">سعید</a-select-option>
-                <a-select-option value="tom">Tom</a-select-option>
-              </a-select>
-            </a-col>
-            <a-col :span="12">
-              <a-divider orientation="left">TreeSelect example</a-divider>
+                <pf-select-option value="jack">Jack</pf-select-option>
+                <pf-select-option value="سعید">سعید</pf-select-option>
+                <pf-select-option value="tom">Tom</pf-select-option>
+              </pf-select>
+            </pf-col>
+            <pf-col :span="12">
+              <pf-divider orientation="left">TreeSelect example</pf-divider>
               <div>
-                <a-tree-select
+                <pf-tree-select
                   show-search
                   style="width: 100%"
                   :dropdown-style="{ maxHeight: '400px', overflow: 'auto' }"
@@ -216,121 +216,121 @@ Components which support rtl direction are listed here, you can toggle the direc
                   allow-clear
                   tree-default-expand-all
                   :tree-data="treeSelectData"
-                ></a-tree-select>
+                ></pf-tree-select>
               </div>
-            </a-col>
-          </a-row>
+            </pf-col>
+          </pf-row>
           <br />
-          <a-row>
-            <a-col :span="24">
-              <a-divider orientation="left">Modal example</a-divider>
+          <pf-row>
+            <pf-col :span="24">
+              <pf-divider orientation="left">Modal example</pf-divider>
               <div>
-                <a-button type="primary" @click="showModal">Open Modal</a-button>
-                <a-modal v-model:visible="state.modalVisible" title="پنچره ساده">
+                <pf-button type="primary" @click="showModal">Open Modal</pf-button>
+                <pf-modal v-model:visible="state.modalVisible" title="پنچره ساده">
                   <p>نگاشته‌های خود را اینجا قراردهید</p>
                   <p>نگاشته‌های خود را اینجا قراردهید</p>
                   <p>نگاشته‌های خود را اینجا قراردهید</p>
-                </a-modal>
+                </pf-modal>
               </div>
-            </a-col>
-          </a-row>
+            </pf-col>
+          </pf-row>
           <br />
-          <a-row>
-            <a-col :span="24">
-              <a-divider orientation="left">Steps example</a-divider>
+          <pf-row>
+            <pf-col :span="24">
+              <pf-divider orientation="left">Steps example</pf-divider>
               <div>
-                <a-steps progress-dot :current="state.currentStep">
-                  <a-step title="Finished" description="This is a description." />
-                  <a-step title="In Progress" description="This is a description." />
-                  <a-step title="Waiting" description="This is a description." />
-                </a-steps>
+                <pf-steps progress-dot :current="state.currentStep">
+                  <pf-step title="Finished" description="This is a description." />
+                  <pf-step title="In Progress" description="This is a description." />
+                  <pf-step title="Waiting" description="This is a description." />
+                </pf-steps>
                 <br />
-                <a-steps :current="state.currentStep" @change="onStepsChange">
-                  <a-step title="Step 1" description="This is a description." />
-                  <a-step title="Step 2" description="This is a description." />
-                  <a-step title="Step 3" description="This is a description." />
-                </a-steps>
+                <pf-steps :current="state.currentStep" @change="onStepsChange">
+                  <pf-step title="Step 1" description="This is a description." />
+                  <pf-step title="Step 2" description="This is a description." />
+                  <pf-step title="Step 3" description="This is a description." />
+                </pf-steps>
               </div>
-            </a-col>
-          </a-row>
+            </pf-col>
+          </pf-row>
           <br />
-          <a-row>
-            <a-col :span="12">
-              <a-divider orientation="left">Rate example</a-divider>
+          <pf-row>
+            <pf-col :span="12">
+              <pf-divider orientation="left">Rate example</pf-divider>
               <div>
-                <a-rate v-model:value="rateValue" />
+                <pf-rate v-model:value="rateValue" />
                 <br />
                 <strong>* Note:</strong>
                 Half star not implemented in RTL direction.
               </div>
-            </a-col>
-            <a-col :span="12">
-              <a-divider orientation="left">Badge example</a-divider>
+            </pf-col>
+            <pf-col :span="12">
+              <pf-divider orientation="left">Badge example</pf-divider>
               <div>
                 <div>
-                  <a-badge :count="state.badgeCount">
+                  <pf-badge :count="state.badgeCount">
                     <a href="#" class="head-example" />
-                  </a-badge>
-                  <a-button-group>
-                    <a-button @click="declineBadge">
+                  </pf-badge>
+                  <pf-button-group>
+                    <pf-button @click="declineBadge">
                       <MinusOutlined />
-                    </a-button>
-                    <a-button @click="increaseBadge">
+                    </pf-button>
+                    <pf-button @click="increaseBadge">
                       <PlusOutlined />
-                    </a-button>
-                  </a-button-group>
+                    </pf-button>
+                  </pf-button-group>
                 </div>
                 <div style="margin-top: 10px">
-                  <a-badge :dot="state.showBadge">
+                  <pf-badge :dot="state.showBadge">
                     <a href="#" class="head-example" />
-                  </a-badge>
-                  <a-switch :checked="state.showBadge" @change="onChangeBadge" />
+                  </pf-badge>
+                  <pf-switch :checked="state.showBadge" @change="onChangeBadge" />
                 </div>
               </div>
-            </a-col>
-          </a-row>
-        </a-col>
-      </a-row>
+            </pf-col>
+          </pf-row>
+        </pf-col>
+      </pf-row>
 
       <br />
       <br />
-      <a-row>
-        <a-col :span="24">
-          <a-divider orientation="left">Pagination example</a-divider>
-          <a-pagination show-size-changer :default-current="3" :total="500" />
-        </a-col>
-      </a-row>
+      <pf-row>
+        <pf-col :span="24">
+          <pf-divider orientation="left">Pagination example</pf-divider>
+          <pf-pagination show-size-changer :default-current="3" :total="500" />
+        </pf-col>
+      </pf-row>
       <br />
-      <a-row>
-        <a-col :span="24">
-          <a-divider orientation="left">Grid System example</a-divider>
+      <pf-row>
+        <pf-col :span="24">
+          <pf-divider orientation="left">Grid System example</pf-divider>
           <div class="grid-demo">
             <div class="code-box-demo">
               <p>
                 <strong>* Note:</strong>
                 Every calculation in RTL grid system is from right side (offset, push, etc.)
               </p>
-              <a-row>
-                <a-col :span="8">col-8</a-col>
-                <a-col :span="8" :offset="8">col-8</a-col>
-              </a-row>
-              <a-row>
-                <a-col :span="6" :offset="6">col-6 col-offset-6</a-col>
-                <a-col :span="6" :offset="6">col-6 col-offset-6</a-col>
-              </a-row>
-              <a-row>
-                <a-col :span="12" :offset="6">col-12 col-offset-6</a-col>
-              </a-row>
-              <a-row>
-                <a-col :span="18" :push="6">col-18 col-push-6</a-col>
-                <a-col :span="6" :pull="18">col-6 col-pull-18</a-col>
-              </a-row>
+              <pf-row>
+                <pf-col :span="8">col-8</pf-col>
+                <pf-col :span="8" :offset="8">col-8</pf-col>
+              </pf-row>
+              <pf-row>
+                <pf-col :span="6" :offset="6">col-6 col-offset-6</pf-col>
+                <pf-col :span="6" :offset="6">col-6 col-offset-6</pf-col>
+              </pf-row>
+              <pf-row>
+                <pf-col :span="12" :offset="6">col-12 col-offset-6</pf-col>
+              </pf-row>
+              <pf-row>
+                <pf-col :span="18" :push="6">col-18 col-push-6</pf-col>
+                <pf-col :span="6" :pull="18">col-6 col-pull-18</pf-col>
+              </pf-row>
             </div>
           </div>
-        </a-col>
-      </a-row>
+        </pf-col>
+      </pf-row>
     </div>
-  </a-config-provider>
+  </pf-config-provider>
 </template>
 <script lang="ts">
 import { defineComponent, reactive, watch, ref } from 'vue';

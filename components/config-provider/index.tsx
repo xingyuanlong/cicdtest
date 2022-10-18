@@ -105,7 +105,7 @@ export const globalConfig = () => ({
 });
 
 const ConfigProvider = defineComponent({
-  name: 'AConfigProvider',
+  name: 'PfConfigProvider',
   inheritAttrs: false,
   props: configProviderProps(),
   setup(props, { slots }) {

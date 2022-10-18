@@ -85,7 +85,7 @@ exports[`renders ./components/mentions/demo/readonly.vue correctly 1`] = `
       <!---->
     </div>
   </div>
-  <div class="ant-mentions"><textarea rows="1" placeholder="this is readOnly a-mentions" readonly=""></textarea>
+  <div class="ant-mentions"><textarea rows="1" placeholder="this is readOnly pf-mentions" readonly=""></textarea>
     <!---->
   </div>
 </div>

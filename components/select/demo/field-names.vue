@@ -10,18 +10,18 @@ title:
 
 方便数据结构转换。
 
-仅支持 options 传递，不支持 a-select-option 构造节点。
+仅支持 options 传递，不支持 pf-select-option 构造节点。
 
 ## en-US
 
 Easy data structure conversion.
 
-Only options passing is supported, a-select-option construction node is not supported.
+Only options passing is supported, pf-select-option construction node is not supported.
 
 </docs>
 
 <template>
-  <a-select
+  <pf-select
     ref="select"
     v-model:value="value"
     style="width: 120px"
@@ -29,7 +29,7 @@ Only options passing is supported, a-select-option construction node is not supp
     :field-names="{ label: 'name', value: 'id', options: 'children' }"
     @focus="focus"
     @change="handleChange"
-  ></a-select>
+  ></pf-select>
 </template>
 <script lang="ts">
 import type { SelectProps } from 'pf-ui-vue';

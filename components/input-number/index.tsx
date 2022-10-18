@@ -32,7 +32,7 @@ export const inputNumberProps = () => ({
 export type InputNumberProps = Partial<ExtractPropTypes<ReturnType<typeof inputNumberProps>>>;
 
 const InputNumber = defineComponent({
-  name: 'AInputNumber',
+  name: 'PfInputNumber',
   inheritAttrs: false,
   props: inputNumberProps(),
   // emits: ['focus', 'blur', 'change', 'input', 'update:value'],

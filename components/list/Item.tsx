@@ -20,7 +20,7 @@ export const listItemProps = () => ({
 
 export type ListItemProps = Partial<ExtractPropTypes<ReturnType<typeof listItemProps>>>;
 export default defineComponent({
-  name: 'AListItem',
+  name: 'PfListItem',
   inheritAttrs: false,
   Meta: ItemMeta,
   props: listItemProps(),

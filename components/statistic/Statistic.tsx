@@ -28,7 +28,7 @@ export const statisticProps = () => ({
 export type StatisticProps = Partial<ExtractPropTypes<ReturnType<typeof statisticProps>>>;
 
 export default defineComponent({
-  name: 'AStatistic',
+  name: 'PfStatistic',
   props: initDefaultProps(statisticProps(), {
     decimalSeparator: '.',
     groupSeparator: ',',

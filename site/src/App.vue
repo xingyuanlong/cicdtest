@@ -1,7 +1,7 @@
 <template>
-  <a-config-provider :locale="locale">
+  <pf-config-provider :locale="locale">
     <router-view />
-  </a-config-provider>
+  </pf-config-provider>
 </template>
 
 <script lang="ts">

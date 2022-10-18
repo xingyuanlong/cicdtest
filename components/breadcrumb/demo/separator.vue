@@ -18,17 +18,17 @@ The separator can be customized by setting the separator preperty: separator=">"
 </docs>
 
 <template>
-  <a-breadcrumb separator=">">
-    <a-breadcrumb-item>Home</a-breadcrumb-item>
-    <a-breadcrumb-item href="">Application Center</a-breadcrumb-item>
-    <a-breadcrumb-item href="">Application List</a-breadcrumb-item>
-    <a-breadcrumb-item>An Application</a-breadcrumb-item>
-  </a-breadcrumb>
-  <a-breadcrumb>
+  <pf-breadcrumb separator=">">
+    <pf-breadcrumb-item>Home</pf-breadcrumb-item>
+    <pf-breadcrumb-item href="">Application Center</pf-breadcrumb-item>
+    <pf-breadcrumb-item href="">Application List</pf-breadcrumb-item>
+    <pf-breadcrumb-item>An Application</pf-breadcrumb-item>
+  </pf-breadcrumb>
+  <pf-breadcrumb>
     <template #separator><span style="color: red">></span></template>
-    <a-breadcrumb-item>Home</a-breadcrumb-item>
-    <a-breadcrumb-item href="">Application Center</a-breadcrumb-item>
-    <a-breadcrumb-item href="">Application List</a-breadcrumb-item>
-    <a-breadcrumb-item>An Application</a-breadcrumb-item>
-  </a-breadcrumb>
+    <pf-breadcrumb-item>Home</pf-breadcrumb-item>
+    <pf-breadcrumb-item href="">Application Center</pf-breadcrumb-item>
+    <pf-breadcrumb-item href="">Application List</pf-breadcrumb-item>
+    <pf-breadcrumb-item>An Application</pf-breadcrumb-item>
+  </pf-breadcrumb>
 </template>

@@ -19,13 +19,13 @@ Hide default plus icon, and bind event for customized trigger.
 <template>
   <div>
     <div :style="{ marginBottom: '16px' }">
-      <a-button @click="add">ADD</a-button>
+      <pf-button @click="add">ADD</pf-button>
     </div>
-    <a-tabs v-model:activeKey="activeKey" hide-add type="editable-card" @edit="onEdit">
-      <a-tab-pane v-for="pane in panes" :key="pane.key" :tab="pane.title" :closable="pane.closable">
+    <pf-tabs v-model:activeKey="activeKey" hide-add type="editable-card" @edit="onEdit">
+      <pf-tab-pane v-for="pane in panes" :key="pane.key" :tab="pane.title" :closable="pane.closable">
         {{ pane.content }}
-      </a-tab-pane>
-    </a-tabs>
+      </pf-tab-pane>
+    </pf-tabs>
   </div>
 </template>
 <script lang="ts">

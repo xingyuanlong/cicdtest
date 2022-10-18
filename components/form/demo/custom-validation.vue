@@ -19,7 +19,7 @@ See more advanced usage at [async-validator](https://github.com/yiminghe/async-v
 </docs>
 
 <template>
-  <a-form
+  <pf-form
     ref="formRef"
     name="custom-validation"
     :model="formState"
@@ -29,20 +29,20 @@ See more advanced usage at [async-validator](https://github.com/yiminghe/async-v
     @validate="handleValidate"
     @finishFailed="handleFinishFailed"
   >
-    <a-form-item has-feedback label="Password" name="pass">
-      <a-input v-model:value="formState.pass" type="password" autocomplete="off" />
-    </a-form-item>
-    <a-form-item has-feedback label="Confirm" name="checkPass">
-      <a-input v-model:value="formState.checkPass" type="password" autocomplete="off" />
-    </a-form-item>
-    <a-form-item has-feedback label="Age" name="age">
-      <a-input-number v-model:value="formState.age" />
-    </a-form-item>
-    <a-form-item :wrapper-col="{ span: 14, offset: 4 }" style="margin-top: 24px;">
-      <a-button type="primary" html-type="submit">Submit</a-button>
-      <a-button style="margin-left: 10px" @click="resetForm">Reset</a-button>
-    </a-form-item>
-  </a-form>
+    <pf-form-item has-feedback label="Password" name="pass">
+      <pf-input v-model:value="formState.pass" type="password" autocomplete="off" />
+    </pf-form-item>
+    <pf-form-item has-feedback label="Confirm" name="checkPass">
+      <pf-input v-model:value="formState.checkPass" type="password" autocomplete="off" />
+    </pf-form-item>
+    <pf-form-item has-feedback label="Age" name="age">
+      <pf-input-number v-model:value="formState.age" />
+    </pf-form-item>
+    <pf-form-item :wrapper-col="{ span: 14, offset: 4 }" style="margin-top: 24px;">
+      <pf-button type="primary" html-type="submit">Submit</pf-button>
+      <pf-button style="margin-left: 10px" @click="resetForm">Reset</pf-button>
+    </pf-form-item>
+  </pf-form>
 </template>
 <script lang="ts">
 import type { Rule } from 'pf-ui-vue/es/form';

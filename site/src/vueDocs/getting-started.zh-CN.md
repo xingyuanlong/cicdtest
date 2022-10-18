@@ -70,7 +70,7 @@ app.config.globalProperties.$message = message;
 
 ```html
 <template>
-  <a-button>Add</a-button>
+  <pf-button>Add</pf-button>
 </template>
 <script>
   import { Button } from '@pf-ui/pf-ui-vue';

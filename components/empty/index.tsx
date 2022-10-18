@@ -87,7 +87,7 @@ const Empty: EmptyType = (props, { slots = {}, attrs }) => {
   );
 };
 
-Empty.displayName = 'AEmpty';
+Empty.displayName = 'PfEmpty';
 
 Empty.PRESENTED_IMAGE_DEFAULT = defaultEmptyImg;
 Empty.PRESENTED_IMAGE_SIMPLE = simpleEmptyImg;

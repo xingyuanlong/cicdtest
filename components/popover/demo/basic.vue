@@ -16,11 +16,11 @@ The most basic example. The size of the floating layer depends on the contents r
 
 </docs>
 <template>
-  <a-popover title="Title">
+  <pf-popover title="Title">
     <template #content>
       <p>Content</p>
       <p>Content</p>
     </template>
-    <a-button type="primary">Hover me</a-button>
-  </a-popover>
+    <pf-button type="primary">Hover me</pf-button>
+  </pf-popover>
 </template>

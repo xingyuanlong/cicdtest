@@ -72,7 +72,7 @@ export type AffixExpose = {
 
 export type AffixInstance = ComponentPublicInstance<AffixProps, AffixExpose>;
 const Affix = defineComponent({
-  name: 'AAffix',
+  name: 'PfAffix',
   props: affixProps(),
   setup(props, { slots, emit, expose }) {
     const placeholderNode = ref();

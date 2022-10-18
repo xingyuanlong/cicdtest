@@ -31,7 +31,7 @@ export const rowProps = () => ({
 export type RowProps = Partial<ExtractPropTypes<ReturnType<typeof rowProps>>>;
 
 const ARow = defineComponent({
-  name: 'ARow',
+  name: 'PfRow',
   props: rowProps(),
   setup(props, { slots }) {
     const { prefixCls, direction } = useConfigInject('row', props);

@@ -12,7 +12,7 @@ const ButtonGroup = Button.Group;
 export type DropdownButtonProps = Partial<ExtractPropTypes<ReturnType<typeof dropdownButtonProps>>>;
 
 export default defineComponent({
-  name: 'ADropdownButton',
+  name: 'PfDropdownButton',
   inheritAttrs: false,
   __ANT_BUTTON: true,
   props: initDefaultProps(dropdownButtonProps(), {

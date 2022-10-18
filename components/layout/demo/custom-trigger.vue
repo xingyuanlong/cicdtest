@@ -16,40 +16,40 @@ If you want to use a customized trigger, you can hide the default one by setting
 
 </docs>
 <template>
-  <a-layout>
-    <a-layout-sider v-model:collapsed="collapsed" :trigger="null" collapsible>
+  <pf-layout>
+    <pf-layout-sider v-model:collapsed="collapsed" :trigger="null" collapsible>
       <div class="logo" />
-      <a-menu v-model:selectedKeys="selectedKeys" theme="dark" mode="inline">
-        <a-menu-item key="1">
+      <pf-menu v-model:selectedKeys="selectedKeys" theme="dark" mode="inline">
+        <pf-menu-item key="1">
           <user-outlined />
           <span>nav 1</span>
-        </a-menu-item>
-        <a-menu-item key="2">
+        </pf-menu-item>
+        <pf-menu-item key="2">
           <video-camera-outlined />
           <span>nav 2</span>
-        </a-menu-item>
-        <a-menu-item key="3">
+        </pf-menu-item>
+        <pf-menu-item key="3">
           <upload-outlined />
           <span>nav 3</span>
-        </a-menu-item>
-      </a-menu>
-    </a-layout-sider>
-    <a-layout>
-      <a-layout-header style="background: #fff; padding: 0">
+        </pf-menu-item>
+      </pf-menu>
+    </pf-layout-sider>
+    <pf-layout>
+      <pf-layout-header style="background: #fff; padding: 0">
         <menu-unfold-outlined
           v-if="collapsed"
           class="trigger"
           @click="() => (collapsed = !collapsed)"
         />
         <menu-fold-outlined v-else class="trigger" @click="() => (collapsed = !collapsed)" />
-      </a-layout-header>
-      <a-layout-content
+      </pf-layout-header>
+      <pf-layout-content
         :style="{ margin: '24px 16px', padding: '24px', background: '#fff', minHeight: '280px' }"
       >
         Content
-      </a-layout-content>
-    </a-layout>
-  </a-layout>
+      </pf-layout-content>
+    </pf-layout>
+  </pf-layout>
 </template>
 <script lang="ts">
 import {

@@ -16,19 +16,19 @@ Use slot for custom action icons of files.
 </docs>
 
 <template>
-  <a-upload
+  <pf-upload
     v-model:file-list="fileList"
     action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
     :show-upload-list="{ showDownloadIcon: true, showRemoveIcon: true }"
     @change="handleChange"
   >
-    <a-button>
+    <pf-button>
       <upload-outlined></upload-outlined>
       Upload
-    </a-button>
+    </pf-button>
     <template #downloadIcon>download</template>
     <template #removeIcon><StarOutlined @click="handleClick"></StarOutlined></template>
-  </a-upload>
+  </pf-upload>
 </template>
 <script lang="ts">
 import { UploadOutlined, StarOutlined } from '@ant-design/icons-vue';

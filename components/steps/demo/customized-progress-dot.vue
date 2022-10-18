@@ -17,19 +17,19 @@ You can customize the display for Steps with progress dot style.
 
 <template>
   <div>
-    <a-steps :current="1">
+    <pf-steps :current="1">
       <template #progressDot="{ index, status, prefixCls }">
-        <a-popover>
+        <pf-popover>
           <template #content>
             <span>step {{ index }} status: {{ status }}</span>
           </template>
           <span :class="`${prefixCls}-icon-dot`" />
-        </a-popover>
+        </pf-popover>
       </template>
-      <a-step title="Finished" description="You can hover on the dot." />
-      <a-step title="In Progress" description="You can hover on the dot." />
-      <a-step title="Waiting" description="You can hover on the dot." />
-      <a-step title="Waiting" description="You can hover on the dot." />
-    </a-steps>
+      <pf-step title="Finished" description="You can hover on the dot." />
+      <pf-step title="In Progress" description="You can hover on the dot." />
+      <pf-step title="Waiting" description="You can hover on the dot." />
+      <pf-step title="Waiting" description="You can hover on the dot." />
+    </pf-steps>
   </div>
 </template>
