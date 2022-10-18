@@ -27,7 +27,7 @@ export default defineComponent({
     const success = () => {
       message.success(
         'This is a prompt message for success, and it will disappear in 10 seconds',
-        1000,
+        10,
       );
     };
     return {
