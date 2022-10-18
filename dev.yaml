@@ -5,7 +5,6 @@ metadata:
     deployment.kubernetes.io/revision: "17"
     field.cattle.io/creatorId: u-tt2coy6mmf
     field.cattle.io/publicEndpoints: '[{"addresses":["192.168.10.228"],"port":31634,"protocol":"TCP","serviceName":"dev:pf-ui-vue-nodeport","allNodes":true},{"addresses":["192.168.10.228"],"port":443,"protocol":"HTTPS","serviceName":"dev:ingress-2b94862fef402e6ce3885c7d25e987f4","ingressName":"dev:pf-ui-vue","hostname":"dev-ui-vue.pf.com","path":"/","allNodes":true}]'
-  creationTimestamp: "2022-09-14T01:45:20Z"
   generation: 27
   labels:
     cattle.io/creator: norman
@@ -117,8 +116,6 @@ metadata:
     time: "2022-10-14T07:38:42Z"
   name: pf-ui-vue
   namespace: dev
-  resourceVersion: "23458393"
-  uid: 3074240d-42e9-4709-a5df-4919aad32190
 spec:
   progressDeadlineSeconds: 600
   replicas: 1
@@ -136,7 +133,6 @@ spec:
       annotations:
         cattle.io/timestamp: "2022-10-14T07:38:30Z"
         field.cattle.io/ports: '[[{"containerPort":8082,"dnsName":"pf-ui-vue-nodeport","hostPort":0,"kind":"NodePort","name":"8082tcp01","protocol":"TCP","sourcePort":0}]]'
-      creationTimestamp: null
       labels:
         workload.user.cattle.io/workloadselector: deployment-dev-pf-ui-vue
     spec:
