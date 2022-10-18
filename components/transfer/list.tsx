@@ -1,7 +1,7 @@
 import classNames from '../_util/classNames';
 import PropTypes from '../_util/vue-types';
 import { isValidElement, splitAttrs, filterEmpty } from '../_util/props-util';
-import DownOutlined from '@ant-design/icons-vue/DownOutlined';
+import ArrowDownFilled from '@pf-ui/pf-icons-vue/ArrowDownFilled';
 import Checkbox from '../checkbox';
 import Menu from '../menu';
 import Dropdown from '../dropdown';
@@ -383,7 +383,7 @@ export default defineComponent({
 
       const dropdown = (
         <Dropdown class={`${prefixCls}-header-dropdown`} overlay={menu} disabled={disabled}>
-          <DownOutlined />
+          <ArrowDownFilled />
         </Dropdown>
       );
 

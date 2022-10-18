@@ -7,11 +7,10 @@ title:
 ---
 
 ## zh-CN
-利用 `striped` 可生成默认默认样式的表格。
-另外可以使用 `rowClassName` 来自定义带斑马纹的表格。
+利用 `striped` 可生成斑马纹样式的表格。
 
 ## en-US
-Use `rowClassName` Customize the table with Striped.
+Use `striped` Customize the table with Striped.
 
 </docs>
 
@@ -34,7 +33,6 @@ Use `rowClassName` Customize the table with Striped.
     class="ant-table-striped"
     :columns="columns"
     :data-source="data"
-    :row-class-name="(_record, index) => (index % 2 === 1 ? 'table-striped' : null)"
     bordered
   />
 </template>

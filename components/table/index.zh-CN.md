@@ -100,6 +100,9 @@ cover: https://gw.alipayobjects.com/zos/alicdn/f-SbcX2Lx/Table.svg
 | locale | 默认文案设置，目前包括排序、过滤、空数据文案 | object | filterConfirm: `确定` <br> filterReset: `重置` <br> emptyText: `暂无数据` |  |
 | pagination | 分页器，参考[配置项](#pagination)或 [pagination](/components/pagination-cn/)文档，设为 false 时不展示和进行分页 | object |  |  |
 | rowClassName | 表格行的类名 | Function(record, index):string | - |  |
+| line2 | 表格行是否设置两行  | boolean | false | |
+| line3 | 表格行是否设置三行 | boolean | false | |
+| bodyNoPadding | 表格是否设置padding  | boolean | false |
 | rowExpandable | 设置是否允许行展开 | (record) => boolean | - |  |
 | rowKey | 表格行 key 的取值，可以是字符串或一个函数 | string\|Function(record):string | 'key' |  |
 | rowSelection | 列表项是否可选择，[配置项](#rowSelection) | object | null |  |

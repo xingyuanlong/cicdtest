@@ -111,7 +111,7 @@ export interface TableProps<RecordType = DefaultRecordType>
 
 // @ts-ignore
 const defaultRowClassName = (record, index) => {
-  return (index % 2 === 1 ? 'ant-table-striped' : undefined)
+  return (index % 2 === 1 ? 'pf-table-striped' : undefined)
 }
 
 export const tableProps = () => {
