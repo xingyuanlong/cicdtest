@@ -24,8 +24,8 @@ html {
 
   --@{ant-prefix}-primary-1: var(--wj-A1_4, @A1_4);
   --@{ant-prefix}-primary-2: color(~`colorPalette('@{base-primary}', 2) `);
-  --@{ant-prefix}-primary-3: color(~`colorPalette('@{base-primary}', 3) `);
-  --@{ant-prefix}-primary-4: color(~`colorPalette('@{base-primary}', 4) `);
+  --@{ant-prefix}-primary-3: var(--wj-A1_1, @A1_1);
+  --@{ant-prefix}-primary-4: var(--wj-A1_2, @A1_2);
   --@{ant-prefix}-primary-5: color(~`colorPalette('@{base-primary}', 5) `);
   --@{ant-prefix}-primary-6: @base-primary;
   --@{ant-prefix}-primary-7: color(~`colorPalette('@{base-primary}', 7) `);
@@ -107,8 +107,8 @@ html {
 // alert info backgrounds.
 @primary-1: ~'var(--@{ant-prefix}-primary-1)'; // replace tint(@primary-color, 90%)
 @primary-2: ~'var(--@{ant-prefix}-primary-2)'; // replace tint(@primary-color, 80%)
-@primary-3: ~'var(--@{ant-prefix}-primary-3)'; // unused
-@primary-4: ~'var(--@{ant-prefix}-primary-4)'; // unused
+@primary-3: var(--wj-A1_1, @A1_1); // 
+@primary-4: var(--wj-A1_2, @A1_2); //
 @primary-5: var(--wj-D1, @D1); // color used to control the text color in many active and hover states, replace tint(@primary-color, 20%)
 @primary-6: ~'var(--@{ant-prefix}-primary-6)'; // color used to control the text color of active buttons, don't use, use @primary-color
 @primary-7: var(--wj-A1_2, @A1_2); // replace shade(@primary-color, 5%)
