@@ -14,6 +14,7 @@ import { GLOBAL_CONFIG } from './SymbolKey';
 import enUS from '../../components/locale/en_US';
 import zhCN from '../../components/locale/zh_CN';
 import dayjs from 'dayjs';
+import { getCurrColorObj, loadStyleString } from './colorObj';
 import 'dayjs/locale/zh-cn';
 function isZhCN(name: string) {
   return /-cn\/?$/.test(name);
@@ -31,7 +32,7 @@ export default defineComponent({
     const i18n = useI18n();
     const colSize = useMediaQuery();
     const isMobile = computed(() => colSize.value === 'sm' || colSize.value === 'xs');
-    const theme = ref(localStorage.getItem('theme') || 'default');
+    const theme = ref(localStorage.getItem('theme') || 'green');
     const responsive = computed(() => {
       if (colSize.value === 'xs') {
         return 'crowded';
@@ -86,15 +87,35 @@ export default defineComponent({
     watch(
       theme,
       () => {
-        if (theme.value === 'dark') {
-          document.getElementsByTagName('html')[0].setAttribute('data-doc-theme', 'dark');
-          document.getElementsByTagName('body')[0].setAttribute('data-theme', 'dark');
-          document.getElementsByTagName('html')[0].style.colorScheme = 'dark';
+        // if (theme.value === 'dark') {
+        //   document.getElementsByTagName('html')[0].setAttribute('data-doc-theme', 'dark');
+        //   document.getElementsByTagName('body')[0].setAttribute('data-theme', 'dark');
+        //   document.getElementsByTagName('html')[0].style.colorScheme = 'dark';
+        // } else {
+        //   document.getElementsByTagName('html')[0].setAttribute('data-doc-theme', 'light');
+        //   document.getElementsByTagName('body')[0].setAttribute('data-theme', 'light');
+        //   document.getElementsByTagName('html')[0].style.colorScheme = 'light';
+        // }
+        console.log('start', Date.now());
+        let colorObj = {};
+        let colorStr = '';
+        if (theme.value === 'green') {
+          colorObj = getCurrColorObj('#06AEA6');
         } else {
-          document.getElementsByTagName('html')[0].setAttribute('data-doc-theme', 'light');
-          document.getElementsByTagName('body')[0].setAttribute('data-theme', 'light');
-          document.getElementsByTagName('html')[0].style.colorScheme = 'light';
+          colorObj= getCurrColorObj('#198EEB');
         }
+        console.log('colorObj', colorObj);
+        const key=Object.keys(colorObj);
+        key.map((x) => {    
+          let v = colorObj[x];
+          if (v &&  typeof v === 'string' && v.startsWith("#")) {
+            colorStr += ` --wj-${x}: ${v};`;
+          }
+        });
+        colorStr=`:root {${colorStr}}`;
+        console.log('colorStr', colorStr);
+        loadStyleString(colorStr);
+        console.log('end', Date.now());
       },
       { immediate: true },
     );

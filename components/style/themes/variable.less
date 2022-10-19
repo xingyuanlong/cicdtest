@@ -10,35 +10,25 @@
 // An override for the html selector for theme prefixes
 @html-selector: html;
 
-@base-primary: @A1_1;
+@base-primary: var(--wj-A1_1, @A1_1);
 
 html {
   // ========= Primary Color =========
   --@{ant-prefix}-primary-color: @base-primary;
-  --@{ant-prefix}-primary-color-hover: @A1_2;
-  --@{ant-prefix}-primary-color-active: @A1_3;
-  --@{ant-prefix}-primary-color-outline: fade(@base-primary, @outline-fade);
+  --@{ant-prefix}-primary-color-hover: var(--wj-A1_1, @A1_2);
+  --@{ant-prefix}-primary-color-active: var(--wj-A1_1, @A1_3);
+  // --@{ant-prefix}-primary-color-outline: fade(@base-primary, @outline-fade);
 
   // Legacy
-  @legacy-primary-1: color(~`colorPalette('@{base-primary}', 1) `);
+  @legacy-primary-1: var(--wj-A1_1, @A1_1);
 
-  --@{ant-prefix}-primary-1: @legacy-primary-1;
+  --@{ant-prefix}-primary-1: var(--wj-A1_4, @A1_4);
   --@{ant-prefix}-primary-2: color(~`colorPalette('@{base-primary}', 2) `);
   --@{ant-prefix}-primary-3: color(~`colorPalette('@{base-primary}', 3) `);
   --@{ant-prefix}-primary-4: color(~`colorPalette('@{base-primary}', 4) `);
   --@{ant-prefix}-primary-5: color(~`colorPalette('@{base-primary}', 5) `);
   --@{ant-prefix}-primary-6: @base-primary;
   --@{ant-prefix}-primary-7: color(~`colorPalette('@{base-primary}', 7) `);
-
-  // Deprecated
-  --@{ant-prefix}-primary-color-deprecated-pure: ~'';
-  --@{ant-prefix}-primary-color-deprecated-l-35: lighten(@base-primary, 35%);
-  --@{ant-prefix}-primary-color-deprecated-l-20: lighten(@base-primary, 20%);
-  --@{ant-prefix}-primary-color-deprecated-t-20: tint(@base-primary, 20%);
-  --@{ant-prefix}-primary-color-deprecated-t-50: tint(@base-primary, 50%);
-  --@{ant-prefix}-primary-color-deprecated-f-12: fade(@base-primary, 12%);
-  --@{ant-prefix}-primary-color-active-deprecated-f-30: fade(@legacy-primary-1, 30%);
-  --@{ant-prefix}-primary-color-active-deprecated-d-02: darken(@legacy-primary-1, 2%);
 
   // ========= Success Color =========
   --@{ant-prefix}-success-color: @green-6;
@@ -119,7 +109,7 @@ html {
 @primary-2: ~'var(--@{ant-prefix}-primary-2)'; // replace tint(@primary-color, 80%)
 @primary-3: ~'var(--@{ant-prefix}-primary-3)'; // unused
 @primary-4: ~'var(--@{ant-prefix}-primary-4)'; // unused
-@primary-5: ~'var(--@{ant-prefix}-primary-5)'; // color used to control the text color in many active and hover states, replace tint(@primary-color, 20%)
+@primary-5: var(--wj-D1, @D1); // color used to control the text color in many active and hover states, replace tint(@primary-color, 20%)
 @primary-6: ~'var(--@{ant-prefix}-primary-6)'; // color used to control the text color of active buttons, don't use, use @primary-color
 @primary-7: ~'var(--@{ant-prefix}-primary-7)'; // replace shade(@primary-color, 5%)
 @primary-8: color(~`colorPalette('@{primary-color}', 8) `); // unused
@@ -245,7 +235,7 @@ html {
 @disabled-color-dark: fade(#fff, 35%);
 
 @btn-primary-disable-color: @C1;
-@btn-primary-disable-bg: fade(@base-primary, 30%);
+@btn-primary-disable-bg: var(--wj-A1_1, @A1_1);
 
 // Shadow
 @shadow-color: rgba(0, 0, 0, 0.15);
@@ -281,15 +271,15 @@ html {
 @btn-default-bg: @C6;
 @btn-default-border: @C9;
 
-@btn-secondary-color: @A1_1;
+@btn-secondary-color: var(--wj-A1_1, @A1_1);
 @btn-secondary-bg: @C1;
-@btn-secondary-border: @A1_1;
-@btn-secondary-hover-color: @A1_4;
+@btn-secondary-border: var(--wj-A1_1, @A1_1);
+@btn-secondary-hover-color: var(--wj-A1_4, @A1_4);
 @btn-secondary-active-color: @A1_5;
 
-@btn-secondary-disabled-color: fade(@btn-secondary-color, 30%);
-@btn-secondary-disabled-bg: fade(@btn-secondary-bg, 30%);
-@btn-secondary-disabled-border: fade(@btn-secondary-border, 30%);
+@btn-secondary-disabled-color: @btn-secondary-color;
+@btn-secondary-disabled-bg: @btn-secondary-bg;
+@btn-secondary-disabled-border: @btn-secondary-color;
 
 @btn-default-hover-color: @E2;
 @btn-default-hover-bg: @C1;
@@ -564,7 +554,7 @@ html {
 // Select
 // ---
 @select-border-color: @C7;
-@select-item-selected-color: @A1_1;
+@select-item-selected-color: var(--wj-A1_1, @A1_1);
 @select-item-selected-font-weight: 600;
 @select-dropdown-bg: @component-background;
 @select-item-selected-bg: @white;
@@ -783,7 +773,7 @@ html {
 // TimePicker
 // ---
 @picker-bg: @component-background;
-@picker-basic-cell-hover-color: @A1_4;
+@picker-basic-cell-hover-color: var(--wj-A1_4, @A1_4);
 @picker-basic-cell-active-with-range-color: @primary-color;
 @picker-basic-cell-hover-with-range-color: ~'var(--@{ant-prefix}-primary-color-deprecated-l-35)';
 @picker-basic-cell-disabled-bg: rgba(0, 0, 0, 0.04);
@@ -1014,7 +1004,7 @@ html {
 @tree-directory-selected-bg: @primary-color;
 @tree-node-hover-bg: @item-hover-bg;
 @tree-node-selected-bg: @primary-2;
-@tree-node-selected-color: @A1_1;
+@tree-node-selected-color: var(--wj-A1_1, @A1_1);
 
 // Collapse
 // ---

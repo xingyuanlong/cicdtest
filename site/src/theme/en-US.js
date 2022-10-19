@@ -1,4 +1,6 @@
 export default {
+  'app.theme.switch.green': 'green #06AEA6',
+  'app.theme.switch.blue': 'blue #198EEB',
   'app.theme.switch.default': 'Default theme',
   'app.theme.switch.dark': 'Dark theme',
   'app.theme.switch.compact': 'Compact theme',

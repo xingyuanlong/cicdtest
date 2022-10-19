@@ -62,8 +62,10 @@
                 :selected-keys="[themeMode.theme.value]"
                 @click="({ key }) => themeMode.changeTheme(key)"
               >
-                <pf-menu-item key="default">{{ $t('app.theme.switch.default') }}</pf-menu-item>
-                <pf-menu-item key="dark">{{ $t('app.theme.switch.dark') }}</pf-menu-item>
+                <!-- <pf-menu-item key="default">{{ $t('app.theme.switch.default') }}</pf-menu-item>
+                <pf-menu-item key="dark">{{ $t('app.theme.switch.dark') }}</pf-menu-item> -->
+                <pf-menu-item key="green" :style="{color: '#06AEA6'}">{{ $t('app.theme.switch.green') }}</pf-menu-item>
+                <pf-menu-item key="blue" :style="{color: '#198EEB'}">{{ $t('app.theme.switch.blue') }}</pf-menu-item>
               </pf-menu>
             </template>
             <pf-avatar class="fixed-widgets-avatar" :size="44">
@@ -130,7 +132,7 @@ export default defineComponent({
     });
 
     const themeMode = inject('themeMode', {
-      theme: ref('default'),
+      theme: ref('green'),
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
       changeTheme: (_key: any) => void 0,
     });

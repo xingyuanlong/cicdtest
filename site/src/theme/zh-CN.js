@@ -1,4 +1,6 @@
 export default {
+  'app.theme.switch.green': '绿色 #06AEA6',
+  'app.theme.switch.blue': '蓝色 #198EEB',
   'app.theme.switch.default': '默认主题',
   'app.theme.switch.dark': '暗黑主题',
   'app.theme.switch.compact': '紧凑主题',
