@@ -15,8 +15,8 @@
 html {
   // ========= Primary Color =========
   --@{ant-prefix}-primary-color: @base-primary;
-  --@{ant-prefix}-primary-color-hover: var(--wj-A1_1, @A1_2);
-  --@{ant-prefix}-primary-color-active: var(--wj-A1_1, @A1_3);
+  --@{ant-prefix}-primary-color-hover: var(--wj-A1_2, @A1_2);
+  --@{ant-prefix}-primary-color-active: var(--wj-A1_3, @A1_3);
   // --@{ant-prefix}-primary-color-outline: fade(@base-primary, @outline-fade);
 
   // Legacy
@@ -111,7 +111,7 @@ html {
 @primary-4: ~'var(--@{ant-prefix}-primary-4)'; // unused
 @primary-5: var(--wj-D1, @D1); // color used to control the text color in many active and hover states, replace tint(@primary-color, 20%)
 @primary-6: ~'var(--@{ant-prefix}-primary-6)'; // color used to control the text color of active buttons, don't use, use @primary-color
-@primary-7: ~'var(--@{ant-prefix}-primary-7)'; // replace shade(@primary-color, 5%)
+@primary-7: var(--wj-A1_2, @A1_2); // replace shade(@primary-color, 5%)
 @primary-8: color(~`colorPalette('@{primary-color}', 8) `); // unused
 @primary-9: color(~`colorPalette('@{primary-color}', 9) `); // unused
 @primary-10: color(~`colorPalette('@{primary-color}', 10) `); // unused
@@ -386,7 +386,7 @@ html {
 @radio-button-bg: @btn-default-bg;
 @radio-button-checked-bg: @btn-default-bg;
 @radio-button-color: @btn-default-color;
-@radio-button-hover-color: @primary-5;
+@radio-button-hover-color: @primary-7;
 @radio-button-active-color: @primary-7;
 @radio-button-padding-horizontal: @padding-md - 1px;
 @radio-disabled-button-checked-bg: @disabled-active-bg;
