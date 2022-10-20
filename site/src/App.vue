@@ -87,16 +87,6 @@ export default defineComponent({
     watch(
       theme,
       () => {
-        // if (theme.value === 'dark') {
-        //   document.getElementsByTagName('html')[0].setAttribute('data-doc-theme', 'dark');
-        //   document.getElementsByTagName('body')[0].setAttribute('data-theme', 'dark');
-        //   document.getElementsByTagName('html')[0].style.colorScheme = 'dark';
-        // } else {
-        //   document.getElementsByTagName('html')[0].setAttribute('data-doc-theme', 'light');
-        //   document.getElementsByTagName('body')[0].setAttribute('data-theme', 'light');
-        //   document.getElementsByTagName('html')[0].style.colorScheme = 'light';
-        // }
-        console.log('start', Date.now());
         let colorObj = {};
         let colorStr = '';
         if (theme.value === 'green') {
@@ -104,7 +94,6 @@ export default defineComponent({
         } else {
           colorObj= getCurrColorObj('#198EEB');
         }
-        console.log('colorObj', colorObj);
         const key=Object.keys(colorObj);
         key.map((x) => {    
           let v = colorObj[x];
@@ -113,9 +102,7 @@ export default defineComponent({
           }
         });
         colorStr=`:root {${colorStr}}`;
-        console.log('colorStr', colorStr);
         loadStyleString(colorStr);
-        console.log('end', Date.now());
       },
       { immediate: true },
     );
