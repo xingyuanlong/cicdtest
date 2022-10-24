@@ -18,28 +18,30 @@ The basic example.
 
 <template>
   <pf-popconfirm
-    title="Are you sure delete this task?"
+    title="Are you sure delete this task!"
     ok-text="Yes"
     cancel-text="No"
     @confirm="confirm"
     @cancel="cancel"
+    :okButtonProps="{type: 'secondary', minWidth: '90px'}"
+    :cancelButtonProps="{type: 'secondary', minWidth: '90px'}"
   >
     <a href="#">Delete</a>
   </pf-popconfirm>
-  <hr />
+
   <pf-popconfirm
     ok-text="确定"
     cancel-text="取消"
     @confirm="confirm"
     @cancel="cancel"
-    :okButtonProps="{type: 'secondary'}"
-    :cancelButtonProps="{type: 'secondary'}"
+    :okButtonProps="{type: 'primary', minWidth: '90px'}"
+    :cancelButtonProps="{type: 'secondary', minWidth: '90px'}"
   >
     <template #title>
-      <p>Are you sure delete this task?</p>
-      <p>no thank!</p>
+      <h4> Are you sure delete this task? </h4>
+      <p>删除就无法恢复，请三思！</p>
     </template>
-    <a href="#">Delete</a>
+    <a href="#" :style="{marginLeft: '10px'}">Delete</a>
   </pf-popconfirm>
 </template>
 <script lang="ts">
@@ -63,3 +65,5 @@ export default defineComponent({
   },
 });
 </script>
+<style>
+</style>
