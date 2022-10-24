@@ -4,6 +4,7 @@ import { computed, defineComponent, ref, watch } from 'vue';
 import { getTransitionGroupProps, TransitionGroup } from '../_util/transition';
 import useConfigInject from '../_util/hooks/useConfigInject';
 import collapseMotion from '../_util/collapseMotion';
+import ErrorFilled from '@pf-ui/pf-icons-vue/ErrorFilled';
 
 export interface ErrorListProps {
   errors?: VueNode[];
@@ -45,7 +46,7 @@ export default defineComponent({
               role="alert"
               class={innerStatus.value ? `${baseClassName.value}-${innerStatus.value}` : ''}
             >
-              {error}
+              <ErrorFilled style={{ marginRight: '10px', fontSize: '16px' }} /> {error}
             </div>
           ))}
         </TransitionGroup>
