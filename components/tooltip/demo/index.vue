@@ -1,6 +1,7 @@
 <template>
   <demo-sort>
     <basic />
+    <Basic2 />
     <placement />
     <arrow-point-at-center />
     <auto-adjust-overflow />
@@ -9,6 +10,7 @@
 </template>
 <script lang="ts">
 import Basic from './basic.vue';
+import Basic2 from './basic2.vue';
 import Placement from './placement.vue';
 import arrowPointAtCenter from './arrow-point-at-center.vue';
 import AutoAdjustOverflow from './auto-adjust-overflow.vue';
@@ -21,6 +23,7 @@ export default defineComponent({
   US,
   components: {
     Basic,
+    Basic2,
     Placement,
     arrowPointAtCenter,
     AutoAdjustOverflow,
