@@ -63,6 +63,6 @@ export default defineComponent({
       iconLoading,
       enterIconLoading,
     };
-  },
+  }
 });
 </script>

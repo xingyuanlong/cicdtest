@@ -2,6 +2,7 @@
   <demo-sort>
     <basic />
     <disabled />
+    <Example />
     <ghost />
     <icon />
     <loading />
@@ -12,6 +13,7 @@
   </demo-sort>
 </template>
 <script lang="ts">
+import Example from './example.vue';
 import Basic from './basic.vue';
 import Disabled from './disabled.vue';
 import Ghost from './ghost.vue';
@@ -29,6 +31,7 @@ export default defineComponent({
   CN,
   US,
   components: {
+    Example,
     Basic,
     Disabled,
     Ghost,

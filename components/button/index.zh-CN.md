@@ -48,6 +48,7 @@ cover: https://gw.alipayobjects.com/zos/alicdn/fNUKzY1sk/Button.svg
 | size | 设置按钮大小 | `large` \| `middle` \| `small` | `middle` |  |
 | target | 相当于 a 链接的 target 属性，href 存在时生效 | string | - |  |
 | type | 设置按钮类型 | `primary` \| `secondary` \| `ghost` \| `dashed` \| `link` \| `text` \| `default` | `default` |  |
+| minWidth | 设置按钮最小宽度 | string | 'initial' |
 
 ### 事件
 

@@ -42,6 +42,7 @@ export const buttonProps = () => ({
   onMousedown: {
     type: Function as PropType<(event: MouseEvent) => void>,
   },
+  minWidth: String
 });
 
 export type ButtonProps = Partial<ExtractPropTypes<ReturnType<typeof buttonProps>>>;

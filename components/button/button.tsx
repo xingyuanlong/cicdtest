@@ -148,7 +148,7 @@ export default defineComponent({
     });
 
     return () => {
-      const { icon = slots.icon?.() } = props;
+      const { icon = slots.icon?.(), minWidth } = props;
       const children = flattenChildren(slots.default?.());
 
       isNeedInserted = children.length === 1 && !icon && !isUnborderedButtonType(props.type);
@@ -158,6 +158,7 @@ export default defineComponent({
       const iconType = innerLoading.value ? 'loading' : icon;
       const buttonProps = {
         ...attrs,
+        ...(typeof minWidth === 'string' ? {style: { minWidth }} : null),
         title,
         disabled,
         class: [
@@ -166,7 +167,7 @@ export default defineComponent({
           { [`${prefixCls.value}-icon-only`]: children.length === 0 && !!iconType },
         ],
         onClick: handleClick,
-        onMousedown,
+        onMousedown
       };
       // https://github.com/vueComponent/pf-ui-vue/issues/4930
       if (!disabled) {
