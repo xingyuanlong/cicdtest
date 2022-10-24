@@ -48,14 +48,18 @@
 
       // `content` after `icon` should set marginLeft
       + .@{confirm-prefix-cls}-title + .@{confirm-prefix-cls}-content {
-        margin-left: 38px;
+        margin-left: 30px;
       }
     }
   }
 
   .@{confirm-prefix-cls}-btns {
-    text-align: center;
+    text-align: left;
     margin-top: 24px;
+    
+    .@{ant-prefix}-btn:first-child {
+      margin-left: 30px;
+    }
 
     .@{ant-prefix}-btn + .@{ant-prefix}-btn {
       margin-bottom: 0;

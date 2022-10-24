@@ -110,7 +110,13 @@ export default defineComponent({
       let closer: any;
       if (closable) {
         closer = (
-          <button type="button" onClick={onClose} aria-label="Close" class={`${prefixCls}-close`}>
+          <button 
+            type="button" 
+            onClick={onClose} 
+            aria-label="Close" 
+            class={classNames(`${prefixCls}-close`, {
+              [`${prefixCls}-close-bg`]: headerBg
+            })}>
             {closeIcon || <span class={`${prefixCls}-close-x`} />}
           </button>
         );
