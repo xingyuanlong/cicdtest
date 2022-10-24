@@ -36,11 +36,13 @@ export default defineComponent({
         icon: createVNode(ExclamationCircleOutlined),
         closable: true,
         content: createVNode('div', { style: 'color:red;' }, 'Some descriptions'),
-        cancelButtonProps: {
-          type: 'secondary'
-        },
         okButtonProps: {
-          type: 'secondary'
+          type: 'primary',
+          minWidth: '90px'
+        },
+        cancelButtonProps: {
+          type: 'secondary',
+          minWidth: '90px'
         },
         onOk() {
           console.log('OK');
@@ -60,6 +62,14 @@ export default defineComponent({
         okText: 'Yes',
         okType: 'danger',
         cancelText: 'No',
+        okButtonProps: {
+          type: 'secondary',
+          minWidth: '90px'
+        },
+        cancelButtonProps: {
+          type: 'secondary',
+          minWidth: '90px'
+        },
         onOk() {
           console.log('OK');
         },
@@ -95,6 +105,14 @@ export default defineComponent({
         icon: createVNode(ExclamationCircleOutlined),
         closable: true,
         content: 'When clicked the OK button, this dialog will be closed after 1 second',
+        okButtonProps: {
+          type: 'secondary',
+          minWidth: '90px'
+        },
+        cancelButtonProps: {
+          type: 'secondary',
+          minWidth: '90px'
+        },
         async onOk() {
           try {
             return await new Promise((resolve, reject) => {

@@ -19,7 +19,7 @@ Basic modal.
 <template>
   <div>
     <pf-button type="primary" @click="showModal">Open Modal</pf-button>
-    <pf-modal v-model:visible="visible" title="Basic Modal" @ok="handleOk">
+    <pf-modal v-model:visible="visible" title="Basic Modal" @ok="handleOk" headerBg>
       <p>Some contents...</p>
       <p>Some contents...</p>
       <p>Some contents...</p>
