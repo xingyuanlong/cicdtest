@@ -395,4 +395,10 @@ export default {
   //   type: 'Data Entry',
   //   title: 'ColorPicker (Beta)',
   // },
+  space: {
+    category: 'Components',
+    subtitle: '水印',
+    type: 'Data Display',
+    title: 'Watermark',
+  },
 };
