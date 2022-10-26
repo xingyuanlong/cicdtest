@@ -26,3 +26,7 @@ export interface InnerSelectorProps {
   onInputCompositionStart: EventHandler;
   onInputCompositionEnd: EventHandler;
 }
+
+export enum RestDefault {
+  DEFAULT='DEFAULT'
+}

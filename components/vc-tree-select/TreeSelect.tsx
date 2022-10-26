@@ -227,7 +227,6 @@ export default defineComponent({
         warningProps(props);
       });
     }
-
     // ========================= FieldNames =========================
     const mergedFieldNames = computed<InternalFieldName>(() => fillFieldNames(props.fieldNames));
 

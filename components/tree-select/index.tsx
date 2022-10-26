@@ -23,6 +23,8 @@ import { warning } from '../vc-util/warning';
 import { flattenChildren } from '../_util/props-util';
 import { useInjectFormItemContext } from '../form/FormItemContext';
 import type { BaseSelectRef } from '../vc-select';
+import FolderFilled from '@pf-ui/pf-icons-vue/FolderFilled'
+import FolderOpenFilled from '@pf-ui/pf-icons-vue/FolderOpenFilled'
 import type { BaseOptionType, DefaultOptionType } from '../vc-tree-select/TreeSelect';
 import type { TreeProps } from '../tree';
 
@@ -32,6 +34,17 @@ const getTransitionName = (rootPrefixCls: string, motion: string, transitionName
   }
   return `${rootPrefixCls}-${motion}`;
 };
+
+const default_icon = ({isLeaf, expanded}) => {
+  const styleObj = {
+    color: '#FFE28B'
+  }
+  if(isLeaf || !expanded) {
+    return <FolderFilled style={styleObj} />
+  }
+
+  return <FolderOpenFilled style={styleObj} />
+}
 
 type RawValue = string | number;
 
@@ -76,7 +89,7 @@ const TreeSelect = defineComponent({
   props: initDefaultProps(treeSelectProps(), {
     choiceTransitionName: '',
     listHeight: 256,
-    treeIcon: false,
+    treeIcon: true,
     listItemHeight: 26,
     bordered: true,
   }),
@@ -174,10 +187,11 @@ const TreeSelect = defineComponent({
         multiple,
         treeIcon,
         treeLine,
-        switcherIcon = slots.switcherIcon?.(),
+        switcherIcon = slots.switcherIcon,
         fieldNames = props.replaceFields,
         id = formItemContext.id.value,
       } = props;
+
       // ===================== Icons =====================
       const { suffixIcon, removeIcon, clearIcon } = getIcons(
         {
@@ -244,6 +258,7 @@ const TreeSelect = defineComponent({
             renderSwitcherIcon(treePrefixCls.value, switcherIcon, treeLine, nodeProps)
           }
           showTreeIcon={treeIcon as any}
+          treeIcon={slots.treeIcon || default_icon}
           notFoundContent={mergedNotFound}
           getPopupContainer={getPopupContainer.value}
           treeMotion={null}

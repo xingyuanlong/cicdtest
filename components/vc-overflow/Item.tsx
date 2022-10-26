@@ -20,6 +20,7 @@ export default defineComponent({
     order: Number,
     component: PropTypes.any,
     invalidate: Boolean,
+    onClick: Function
   },
   setup(props, { slots, expose }) {
     const mergedHidden = computed(() => props.responsive && !props.display);

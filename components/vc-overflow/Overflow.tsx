@@ -1,5 +1,6 @@
 import type { CSSProperties, ExtractPropTypes, HTMLAttributes, PropType } from 'vue';
 import { computed, defineComponent, ref, watch } from 'vue';
+import CollapseFilled from  '@pf-ui/pf-icons-vue/CollapseFilled'
 import ResizeObserver from '../vc-resize-observer';
 import classNames from '../_util/classNames';
 import type { MouseEventHandler } from '../_util/EventInterface';
@@ -39,6 +40,7 @@ const overflowProps = () => {
     /** When set to `full`, ssr will render full items by default and remove at client side */
     ssr: String as PropType<'full'>,
     onMousedown: Function as PropType<MouseEventHandler>,
+    open: Boolean
   };
 };
 type InterOverflowProps = Partial<ExtractPropTypes<ReturnType<typeof overflowProps>>>;
@@ -69,6 +71,7 @@ const Overflow = defineComponent<OverflowProps>({
     });
 
     const restReady = ref(false);
+    const showAllTags = ref(false) // 显示全部标签
 
     const itemPrefixCls = computed(() => `${props.prefixCls}-item`);
 
@@ -84,13 +87,12 @@ const Overflow = defineComponent<OverflowProps>({
      */
     const showRest = computed(
       () =>
-        isResponsive.value ||
+      isResponsive.value ||
         (typeof props.maxCount === 'number' && props.data.length > props.maxCount),
     );
 
     const mergedData = computed(() => {
       let items = props.data;
-
       if (isResponsive.value) {
         if (containerWidth.value === null && fullySSR.value) {
           items = props.data;
@@ -100,6 +102,8 @@ const Overflow = defineComponent<OverflowProps>({
             Math.min(props.data.length, mergedContainerWidth.value / props.itemWidth),
           );
         }
+      } else if(showAllTags.value) {
+        items = props.data
       } else if (typeof props.maxCount === 'number') {
         items = props.data.slice(0, props.maxCount);
       }
@@ -162,6 +166,12 @@ const Overflow = defineComponent<OverflowProps>({
     const getItemWidth = (index: number) => {
       return itemWidths.value.get(getKey(mergedData.value[index], index));
     };
+
+    watch(() => props.open, (newVal) => {
+      if(!newVal) {
+        showAllTags.value = false;
+      }
+    })
 
     watch(
       [mergedContainerWidth, itemWidths, restWidth, suffixWidth, () => props.itemKey, mergedData],
@@ -299,19 +309,21 @@ const Overflow = defineComponent<OverflowProps>({
       if (!renderRawRest) {
         const mergedRenderRest = renderRest || defaultRenderRest;
 
-        restNode = () => (
+        restNode = () => !showAllTags.value ? (
           <Item
             {...itemSharedProps}
             // When not show, order should be the last
             {...restContextProps}
+            onClick={() => showAllTags.value = true}
             v-slots={{
-              default: () =>
+              default: () => (
                 typeof mergedRenderRest === 'function'
                   ? mergedRenderRest(omittedItems.value)
-                  : mergedRenderRest,
+                  : mergedRenderRest
+              )
             }}
           ></Item>
-        );
+        ) : null;
       } else if (renderRawRest) {
         restNode = () => (
           <OverflowContextProvider

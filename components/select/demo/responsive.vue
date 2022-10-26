@@ -34,6 +34,7 @@ Set a number and automatically fold after exceeding.
       placeholder="Select Item..."
       :max-tag-count="maxTagCount"
       :options="options"
+      showArrow
     >
       <template #maxTagPlaceholder="omittedValues">
         <span style="color: red">+ {{ omittedValues.length }} ...</span>
@@ -47,6 +48,7 @@ Set a number and automatically fold after exceeding.
       placeholder="Select Item..."
       max-tag-count="responsive"
       :options="options"
+      showArrow
     ></pf-select>
     <pf-space>
       <pf-button type="primary" @click="maxTagTextLength++">maxTagTextLength++</pf-button>
@@ -60,6 +62,7 @@ Set a number and automatically fold after exceeding.
       placeholder="Select Item..."
       :max-tag-text-length="maxTagTextLength"
       :options="options"
+      showArrow
     ></pf-select>
   </pf-space>
 </template>

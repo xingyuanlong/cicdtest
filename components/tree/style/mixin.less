@@ -58,7 +58,7 @@
 
   // =================== Virtual List ===================
   &-list-holder-inner {
-    align-items: flex-start;
+    // align-items: flex-start;
   }
 
   &.@{custom-tree-prefix-cls}-block-node {
@@ -109,6 +109,10 @@
           background: transparent;
         }
       }
+    }
+
+    &:hover, &-selected {
+      background-color: @tree-node-hover-bg;
     }
 
     &-active .@{custom-tree-prefix-cls}-node-content-wrapper {
@@ -223,10 +227,6 @@
     cursor: pointer;
     transition: all 0.3s, border 0s, line-height 0s, box-shadow 0s;
 
-    &:hover {
-      background-color: @tree-node-hover-bg;
-    }
-
     &.@{custom-tree-prefix-cls}-node-selected {
       //background-color: @tree-node-selected-bg;
       color: @tree-node-selected-color;
@@ -293,7 +293,7 @@
 
     // ============== Cover Background ==============
     .@{custom-tree-prefix-cls}-switcher {
-      background: @component-background;
+      background: transparent; // @component-background;
 
       &-line-icon {
         // https://github.com/ant-design/ant-design/issues/32813

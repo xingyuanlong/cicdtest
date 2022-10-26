@@ -11,6 +11,7 @@ import Overflow from '../../vc-overflow';
 import type { DisplayValueType, RenderNode, CustomTagProps, RawValueType } from '../BaseSelect';
 import type { BaseOptionType } from '../Select';
 import useInjectLegacySelectContext from '../../vc-tree-select/LegacyContext';
+// import { RestDefault } from './interface'
 
 type SelectorProps = InnerSelectorProps & {
   // Icon
@@ -272,6 +273,7 @@ const SelectSelector = defineComponent<SelectorProps>({
           itemKey="key"
           maxCount={props.maxTagCount}
           key="overflow"
+          open={open}
         />
       );
       return (
