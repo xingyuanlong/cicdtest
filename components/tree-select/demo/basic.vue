@@ -36,6 +36,7 @@ The most basic usage.
 <script lang="ts">
 import type { TreeSelectProps } from 'pf-ui-vue';
 import { defineComponent, ref, watch } from 'vue';
+
 export default defineComponent({
   setup() {
     const value = ref<string>();
@@ -72,6 +73,6 @@ export default defineComponent({
       value,
       treeData,
     };
-  },
+  }
 });
 </script>

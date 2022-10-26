@@ -22,6 +22,7 @@ Multiple and checkable.
     :tree-data="treeData"
     tree-checkable
     allow-clear
+    :treeIcon='false'
     :show-checked-strategy="SHOW_PARENT"
     placeholder="Please select"
   />

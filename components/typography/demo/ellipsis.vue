@@ -15,6 +15,7 @@ title:
 Multiple line ellipsis support. You can use `tooltip` to config ellipsis tooltip. Recommend `expandable` when have lots of content.
 </docs>
 <template>
+  <pf-typography-title :level="5">可自定义文本省略</pf-typography-title>
   <pf-switch v-model:checked="ellipsis" />
   <pf-typography-paragraph
     :ellipsis="ellipsis"

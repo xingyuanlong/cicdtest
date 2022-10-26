@@ -39,6 +39,7 @@ const overflowProps = () => {
     /** When set to `full`, ssr will render full items by default and remove at client side */
     ssr: String as PropType<'full'>,
     onMousedown: Function as PropType<MouseEventHandler>,
+    open: Boolean
   };
 };
 type InterOverflowProps = Partial<ExtractPropTypes<ReturnType<typeof overflowProps>>>;
@@ -69,6 +70,7 @@ const Overflow = defineComponent<OverflowProps>({
     });
 
     const restReady = ref(false);
+    const showAllTags = ref(false) // 显示全部标签
 
     const itemPrefixCls = computed(() => `${props.prefixCls}-item`);
 
@@ -84,14 +86,15 @@ const Overflow = defineComponent<OverflowProps>({
      */
     const showRest = computed(
       () =>
-        isResponsive.value ||
+      isResponsive.value ||
         (typeof props.maxCount === 'number' && props.data.length > props.maxCount),
     );
 
     const mergedData = computed(() => {
       let items = props.data;
-
-      if (isResponsive.value) {
+      if(showAllTags.value) {
+        items = props.data
+      } else if (!showAllTags.value && isResponsive.value) {
         if (containerWidth.value === null && fullySSR.value) {
           items = props.data;
         } else {
@@ -163,10 +166,17 @@ const Overflow = defineComponent<OverflowProps>({
       return itemWidths.value.get(getKey(mergedData.value[index], index));
     };
 
+    watch(() => props.open, (newVal) => {
+      if(!newVal) {
+        showAllTags.value = false;
+      }
+    })
+
     watch(
       [mergedContainerWidth, itemWidths, restWidth, suffixWidth, () => props.itemKey, mergedData],
       () => {
         if (mergedContainerWidth.value && mergedRestWidth.value && mergedData.value) {
+
           let totalWidth = suffixWidth.value;
 
           const len = mergedData.value.length;
@@ -175,6 +185,12 @@ const Overflow = defineComponent<OverflowProps>({
           // When data count change to 0, reset this since not loop will reach
           if (!len) {
             updateDisplayCount(0);
+            suffixFixedStart.value = null;
+            return;
+          }
+
+          if( showAllTags.value) {
+            updateDisplayCount(lastIndex)
             suffixFixedStart.value = null;
             return;
           }
@@ -299,19 +315,21 @@ const Overflow = defineComponent<OverflowProps>({
       if (!renderRawRest) {
         const mergedRenderRest = renderRest || defaultRenderRest;
 
-        restNode = () => (
+        restNode = () => !showAllTags.value ? (
           <Item
             {...itemSharedProps}
             // When not show, order should be the last
             {...restContextProps}
+            onClick={() => showAllTags.value = true}
             v-slots={{
-              default: () =>
+              default: () => (
                 typeof mergedRenderRest === 'function'
                   ? mergedRenderRest(omittedItems.value)
-                  : mergedRenderRest,
+                  : mergedRenderRest
+              )
             }}
           ></Item>
-        );
+        ) : null;
       } else if (renderRawRest) {
         restNode = () => (
           <OverflowContextProvider
@@ -324,6 +342,7 @@ const Overflow = defineComponent<OverflowProps>({
           </OverflowContextProvider>
         );
       }
+
 
       const overflowNode = () => (
         <Component

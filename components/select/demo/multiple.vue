@@ -22,6 +22,7 @@ Multiple selection, selecting from existing items (scroll the menu).
     mode="multiple"
     style="width: 100%"
     placeholder="Please select"
+    showArrow
     :options="[...Array(25)].map((_, i) => ({ value: (i + 10).toString(36) + (i + 1) }))"
     @change="handleChange"
   ></pf-select>
