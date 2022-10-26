@@ -3,7 +3,7 @@ category: Components
 subtitle: 水印
 type: 数据展示
 title: Watermark
-cover: https://gw.alipayobjects.com/zos/alicdn/HZ3meFc6W/Silder.svg
+cover: https://gw.alipayobjects.com/zos/alicdn/KpcciCJgv/Skeleton.svg
 ---
 
 水印。
