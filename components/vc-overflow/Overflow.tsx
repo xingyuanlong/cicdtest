@@ -1,6 +1,5 @@
 import type { CSSProperties, ExtractPropTypes, HTMLAttributes, PropType } from 'vue';
 import { computed, defineComponent, ref, watch } from 'vue';
-import CollapseFilled from  '@pf-ui/pf-icons-vue/CollapseFilled'
 import ResizeObserver from '../vc-resize-observer';
 import classNames from '../_util/classNames';
 import type { MouseEventHandler } from '../_util/EventInterface';
@@ -93,7 +92,9 @@ const Overflow = defineComponent<OverflowProps>({
 
     const mergedData = computed(() => {
       let items = props.data;
-      if (isResponsive.value) {
+      if(showAllTags.value) {
+        items = props.data
+      } else if (!showAllTags.value && isResponsive.value) {
         if (containerWidth.value === null && fullySSR.value) {
           items = props.data;
         } else {
@@ -102,8 +103,6 @@ const Overflow = defineComponent<OverflowProps>({
             Math.min(props.data.length, mergedContainerWidth.value / props.itemWidth),
           );
         }
-      } else if(showAllTags.value) {
-        items = props.data
       } else if (typeof props.maxCount === 'number') {
         items = props.data.slice(0, props.maxCount);
       }
@@ -177,6 +176,7 @@ const Overflow = defineComponent<OverflowProps>({
       [mergedContainerWidth, itemWidths, restWidth, suffixWidth, () => props.itemKey, mergedData],
       () => {
         if (mergedContainerWidth.value && mergedRestWidth.value && mergedData.value) {
+
           let totalWidth = suffixWidth.value;
 
           const len = mergedData.value.length;
@@ -185,6 +185,12 @@ const Overflow = defineComponent<OverflowProps>({
           // When data count change to 0, reset this since not loop will reach
           if (!len) {
             updateDisplayCount(0);
+            suffixFixedStart.value = null;
+            return;
+          }
+
+          if( showAllTags.value) {
+            updateDisplayCount(lastIndex)
             suffixFixedStart.value = null;
             return;
           }
@@ -336,6 +342,7 @@ const Overflow = defineComponent<OverflowProps>({
           </OverflowContextProvider>
         );
       }
+
 
       const overflowNode = () => (
         <Component
