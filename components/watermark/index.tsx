@@ -1,7 +1,7 @@
 import type { App } from 'vue';
 import Watermark from './watermark';
-// TODO: 未知问题 导出失败
-// export { WatermarkProps } from './watermark';
+export { watermarkProps } from './watermark';
+export type { WatermarkProps } from './watermark';
 
 /* istanbul ignore next */
 Watermark.install = function (app: App) {

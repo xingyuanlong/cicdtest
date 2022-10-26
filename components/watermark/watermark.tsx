@@ -1,7 +1,8 @@
-import type { PropType, ExtractPropTypes } from 'vue';
+import type { PropType, ExtractPropTypes, CSSProperties } from 'vue';
 import { defineComponent, watchEffect, ref } from 'vue';
 import useConfigInject from '../_util/hooks/useConfigInject';
 
+import PropTypes from '../_util/vue-types';
 function getRatio(context: any): number {
   if (!context) {
     return 1;
@@ -18,8 +19,8 @@ function getRatio(context: any): number {
 }
 
 export const watermarkProps = () => ({
-  cross: Boolean,
-  fullscreen: Boolean,
+  cross: { type: Boolean, default: false },
+  fullscreen: { type: Boolean, default: false },
   width: {
     type: Number,
     default: 32,
@@ -52,11 +53,12 @@ export const watermarkProps = () => ({
     type: Number,
     default: 0,
   },
-  image: String,
+  image: { type: String, default: undefined },
   imageOpacity: { type: Number, default: 1 },
-  imageHeight: Number,
-  imageWidth: Number,
-  content: String,
+  imageHeight: { type: Number, default: undefined },
+  imageWidth: { type: Number, default: undefined },
+  content: { type: String, default: undefined },
+  class: { type: String, default: undefined },
   selectable: {
     type: Boolean,
     default: true,
@@ -98,11 +100,11 @@ export const watermarkProps = () => ({
 
 export type WatermarkProps = Partial<ExtractPropTypes<ReturnType<typeof watermarkProps>>>;
 
+
 const Watermark = defineComponent({
   name: 'PfWatermark',
   props: watermarkProps(),
   setup(props, { slots }) {
-    console.error('\n\nPFWatermark\n\n');
     const base64UrlRef = ref('');
     const canvas = window?.innerHeight ? document.createElement('canvas') : null;
     const ctx = canvas ? canvas.getContext('2d') : null;
@@ -173,7 +175,7 @@ const Watermark = defineComponent({
       }
     });
     return () => {
-      const { globalRotate, fullscreen, zIndex } = props;
+      const { globalRotate, fullscreen, zIndex, class: propsClass } = props;
       const { prefixCls } = useConfigInject('watermark', props);
       const mergedClsPrefix = prefixCls.value;
       const isFullScreenGlobalRotate = globalRotate !== 0 && fullscreen;
@@ -184,6 +186,7 @@ const Watermark = defineComponent({
             `${mergedClsPrefix}`,
             globalRotate !== 0 && `${mergedClsPrefix}-global-rotate`,
             fullscreen && `${mergedClsPrefix}-fullscreen`,
+            `${propsClass}`,
           ]}
           style={{
             transform: globalRotate
@@ -209,9 +212,7 @@ const Watermark = defineComponent({
           }}
         />
       );
-      console.error('watermarkNode', watermarkNode);
       if (props.fullscreen && !globalRotate) return watermarkNode;
-      console.error('fullscreen', fullscreen);
       return (
         <div
           class={[
