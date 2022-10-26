@@ -8,6 +8,7 @@ import defaultLocale from '../locale/default';
 import classNames from '../_util/classNames';
 import type { VueNode } from '../_util/type';
 import type { FunctionalComponent, HTMLAttributes } from 'vue';
+import RequireFilled from '@pf-ui/pf-icons-vue/RequireFilled';
 
 export interface FormItemLabelProps {
   colon?: boolean;
@@ -82,6 +83,7 @@ const FormItemLabel: FunctionalComponent<FormItemLabelProps> = (props, { slots, 
     [`${prefixCls}-item-required-mark-optional`]: requiredMark === 'optional',
     [`${prefixCls}-item-no-colon`]: !computedColon,
   });
+
   return (
     <Col {...mergedLabelCol} class={labelColClassName}>
       <label
@@ -90,6 +92,7 @@ const FormItemLabel: FunctionalComponent<FormItemLabelProps> = (props, { slots, 
         title={typeof label === 'string' ? label : ''}
         onClick={e => emit('click', e)}
       >
+        {required && requiredMark && <RequireFilled style={{ color: '#EA2C43', fontSize: '8px', marginRight: '4px' }} />}
         {labelChildren}
       </label>
     </Col>

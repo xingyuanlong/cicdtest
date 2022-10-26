@@ -61,4 +61,5 @@ import './form/style';
 import './space/style';
 import './image/style';
 import './typography/style';
+import './watermark/style';
 // import './color-picker/style';

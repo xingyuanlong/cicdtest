@@ -87,7 +87,7 @@ export default defineComponent({
       return mergeValidateInfo(toArray(validateInfos));
     });
     return {
-      labelCol: { span: 4 },
+      labelCol: { span: 6 },
       wrapperCol: { span: 14 },
       validateInfos,
       resetFields,

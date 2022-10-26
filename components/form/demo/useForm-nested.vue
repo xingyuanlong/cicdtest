@@ -72,7 +72,7 @@ export default defineComponent({
       resetFields();
     };
     return {
-      labelCol: { span: 4 },
+      labelCol: { span: 6 },
       wrapperCol: { span: 14 },
       validateInfos,
       reset,
