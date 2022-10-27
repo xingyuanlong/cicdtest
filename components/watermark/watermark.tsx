@@ -1,8 +1,7 @@
-import type { PropType, ExtractPropTypes, CSSProperties } from 'vue';
+import type { PropType, ExtractPropTypes } from 'vue';
 import { defineComponent, watchEffect, ref } from 'vue';
 import useConfigInject from '../_util/hooks/useConfigInject';
 
-import PropTypes from '../_util/vue-types';
 function getRatio(context: any): number {
   if (!context) {
     return 1;
