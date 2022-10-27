@@ -5,11 +5,11 @@ import { asyncExpect, sleep } from '../../../tests/utils';
 describe('click wave effect', () => {
   async function clickButton(wrapper) {
     await asyncExpect(() => {
-      wrapper.find('.ant-btn').trigger('click');
+      wrapper.find('.pf-btn').trigger('click');
     });
-    wrapper.find('.ant-btn').element.dispatchEvent(new Event('transitionstart'));
+    wrapper.find('.pf-btn').element.dispatchEvent(new Event('transitionstart'));
     await sleep(20);
-    wrapper.find('.ant-btn').element.dispatchEvent(new Event('animationend'));
+    wrapper.find('.pf-btn').element.dispatchEvent(new Event('animationend'));
     await sleep(20);
   }
 
@@ -20,7 +20,7 @@ describe('click wave effect', () => {
       },
     });
     await clickButton(wrapper);
-    expect(wrapper.find('.ant-btn').attributes('ant-click-animating-without-extra-node')).toBe(
+    expect(wrapper.find('.pf-btn').attributes('ant-click-animating-without-extra-node')).toBe(
       'true',
     );
   });
@@ -32,7 +32,7 @@ describe('click wave effect', () => {
       },
     });
     await clickButton(wrapper);
-    expect(wrapper.find('.ant-btn').attributes('ant-click-animating-without-extra-node')).toBe(
+    expect(wrapper.find('.pf-btn').attributes('ant-click-animating-without-extra-node')).toBe(
       'true',
     );
   });
@@ -44,7 +44,7 @@ describe('click wave effect', () => {
       },
     });
     await clickButton(wrapper);
-    expect(wrapper.find('.ant-btn').attributes('ant-click-animating-without-extra-node')).toBe(
+    expect(wrapper.find('.pf-btn').attributes('ant-click-animating-without-extra-node')).toBe(
       undefined,
     );
   });
@@ -56,7 +56,7 @@ describe('click wave effect', () => {
       },
     });
     await clickButton(wrapper);
-    expect(wrapper.find('.ant-btn').attributes('ant-click-animating-without-extra-node')).toBe(
+    expect(wrapper.find('.pf-btn').attributes('ant-click-animating-without-extra-node')).toBe(
       undefined,
     );
   });
@@ -68,9 +68,9 @@ describe('click wave effect', () => {
       },
     });
     await clickButton(wrapper);
-    const buttonNode = wrapper.find('.ant-btn').element;
+    const buttonNode = wrapper.find('.pf-btn').element;
     buttonNode.dispatchEvent(new Event('transitionstart'));
-    expect(wrapper.find('.ant-btn').attributes('ant-click-animating-without-extra-node')).toBe(
+    expect(wrapper.find('.pf-btn').attributes('ant-click-animating-without-extra-node')).toBe(
       'true',
     );
     wrapper.unmount();

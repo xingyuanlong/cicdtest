@@ -538,7 +538,7 @@ exports[`RangePicker show month panel according to value 1`] = `
             <!---->
             <ul class="ant-picker-ranges">
               <!---->
-              <li class="ant-picker-ok"><button class="ant-btn ant-btn-primary ant-btn-sm" type="button">
+              <li class="ant-picker-ok"><button class="pf-btn pf-btn-primary pf-btn-sm" type="button">
                   <!----><span>Ok</span>
                 </button></li>
             </ul>

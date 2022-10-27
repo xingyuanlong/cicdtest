@@ -41,7 +41,7 @@ export default defineComponent({
 });
 </script>
 <style scoped>
-.code-box-demo .ant-slider {
+.code-box-demo .pf-slider {
   margin-bottom: 16px;
 }
 </style>

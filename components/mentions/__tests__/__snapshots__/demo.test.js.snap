@@ -52,9 +52,9 @@ exports[`renders ./components/mentions/demo/form.vue correctly 1`] = `
     <!---->
     <div class="ant-col ant-col-12 ant-col-offset-5 ant-form-item-control">
       <div class="ant-form-item-control-input">
-        <div class="ant-form-item-control-input-content"><button class="ant-btn ant-btn-primary" type="button">
+        <div class="ant-form-item-control-input-content"><button class="pf-btn pf-btn-primary" type="button">
             <!----><span>Submit</span>
-          </button><button style="margin-left: 8px;" class="ant-btn" type="button">
+          </button><button style="margin-left: 8px;" class="pf-btn" type="button">
             <!----><span>Reset</span>
           </button></div>
         <!---->

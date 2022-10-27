@@ -44,7 +44,7 @@ export default defineComponent({
 });
 </script>
 <style>
-[id^='components-alert-demo'] .ant-alert {
+[id^='components-alert-demo'] .pf-alert {
   margin-bottom: 16px;
 }
 </style>

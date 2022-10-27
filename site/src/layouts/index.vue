@@ -249,30 +249,30 @@ export default defineComponent({
 });
 </script>
 <style lang="less" scoped>
-.toc-affix :deep(.ant-anchor) {
+.toc-affix :deep(.pf-anchor) {
   font-size: 12px;
   max-width: 110px;
-  .ant-anchor-link {
+  .pf-anchor-link {
     border-left: 2px solid #f0f0f0;
     padding: 4px 0 4px 16px;
   }
 
-  .ant-anchor-link-active {
+  .pf-anchor-link-active {
     border-left: 2px solid #1890ff;
   }
-  .ant-anchor-ink::before {
+  .pf-anchor-ink::before {
     display: none;
   }
-  .ant-anchor-ink-ball {
+  .pf-anchor-ink-ball {
     display: none;
   }
 }
 
-[data-theme='dark'] .toc-affix :deep(.ant-anchor) {
-  .ant-anchor-link {
+[data-theme='dark'] .toc-affix :deep(.pf-anchor) {
+  .pf-anchor-link {
     border-left: 2px solid #303030;
   }
-  .ant-anchor-link-active {
+  .pf-anchor-link-active {
     border-left: 2px solid #177ddc;
   }
 }

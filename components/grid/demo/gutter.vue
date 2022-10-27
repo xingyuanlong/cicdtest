@@ -47,7 +47,7 @@ You can use an array to set vertical spacing, `[horizontal, vertical]` `[16, { x
   </div>
 </template>
 <style scoped>
-.gutter-example :deep(.ant-row > div) {
+.gutter-example :deep(.pf-row > div) {
   background: transparent;
   border: 0;
 }

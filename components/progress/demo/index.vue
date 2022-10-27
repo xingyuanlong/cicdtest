@@ -54,7 +54,7 @@ export default defineComponent({
 });
 </script>
 <style>
-[id^='components-progress-demo-'] .ant-progress {
+[id^='components-progress-demo-'] .pf-progress {
   margin-right: 8px;
   margin-bottom: 8px;
 }

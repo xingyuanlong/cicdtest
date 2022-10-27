@@ -491,7 +491,7 @@ exports[`renders ./components/table/demo/custom-filter-panel.vue correctly 1`] =
 `;
 
 exports[`renders ./components/table/demo/edit-cell.vue correctly 1`] = `
-<button class="ant-btn editable-add-btn" style="margin-bottom: 8px;" type="button">
+<button class="pf-btn editable-add-btn" style="margin-bottom: 8px;" type="button">
   <!----><span>Add</span>
 </button>
 <div class="ant-table-wrapper">
@@ -4194,11 +4194,11 @@ exports[`renders ./components/table/demo/order-column.vue correctly 1`] = `
 
 exports[`renders ./components/table/demo/reset-filter.vue correctly 1`] = `
 <div>
-  <div class="table-operations"><button class="ant-btn" type="button">
+  <div class="table-operations"><button class="pf-btn" type="button">
       <!----><span>Sort age</span>
-    </button><button class="ant-btn" type="button">
+    </button><button class="pf-btn" type="button">
       <!----><span>Clear filters</span>
-    </button><button class="ant-btn" type="button">
+    </button><button class="pf-btn" type="button">
       <!----><span>Clear filters and sorters</span>
     </button></div>
   <div class="ant-table-wrapper">
@@ -4640,7 +4640,7 @@ exports[`renders ./components/table/demo/row-selection.vue correctly 1`] = `
 
 exports[`renders ./components/table/demo/row-selection-and-operation.vue correctly 1`] = `
 <div>
-  <div style="margin-bottom: 16px;"><button disabled="" class="ant-btn ant-btn-primary" type="button">
+  <div style="margin-bottom: 16px;"><button disabled="" class="pf-btn pf-btn-primary" type="button">
       <!----><span>Reload</span>
     </button><span style="margin-left: 8px;"><!--v-if--></span></div>
   <div class="ant-table-wrapper">

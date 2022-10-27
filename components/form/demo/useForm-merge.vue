@@ -99,7 +99,7 @@ export default defineComponent({
 });
 </script>
 <style scoped>
-.error-infos :deep(.ant-form-explain) {
+.error-infos :deep(.pf-form-explain) {
   white-space: pre-line;
 }
 </style>

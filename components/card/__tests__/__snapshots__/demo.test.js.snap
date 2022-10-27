@@ -250,7 +250,7 @@ exports[`renders ./components/card/demo/loading.vue correctly 1`] = `
   </div>
   <!---->
 </div>
-<button style="margin-top: 16px;" class="ant-btn" type="button">
+<button style="margin-top: 16px;" class="pf-btn" type="button">
   <!----><span>Toggle loading</span>
 </button>
 `;

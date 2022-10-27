@@ -67,7 +67,7 @@ exports[`renders ./components/page-header/demo/actions.vue correctly 1`] = `
       >
         
         <button
-          class="ant-btn"
+          class="pf-btn"
           type="button"
         >
           <!---->
@@ -78,7 +78,7 @@ exports[`renders ./components/page-header/demo/actions.vue correctly 1`] = `
           
         </button>
         <button
-          class="ant-btn"
+          class="pf-btn"
           type="button"
         >
           <!---->
@@ -89,7 +89,7 @@ exports[`renders ./components/page-header/demo/actions.vue correctly 1`] = `
           
         </button>
         <button
-          class="ant-btn ant-btn-primary"
+          class="pf-btn pf-btn-primary"
           type="button"
         >
           <!---->
@@ -322,7 +322,7 @@ exports[`renders ./components/page-header/demo/actions.vue correctly 1`] = `
       >
         
         <button
-          class="ant-btn"
+          class="pf-btn"
           type="button"
         >
           <!---->
@@ -333,7 +333,7 @@ exports[`renders ./components/page-header/demo/actions.vue correctly 1`] = `
           
         </button>
         <button
-          class="ant-btn"
+          class="pf-btn"
           type="button"
         >
           <!---->
@@ -344,7 +344,7 @@ exports[`renders ./components/page-header/demo/actions.vue correctly 1`] = `
           
         </button>
         <button
-          class="ant-btn ant-btn-primary"
+          class="pf-btn pf-btn-primary"
           type="button"
         >
           <!---->
@@ -745,7 +745,7 @@ exports[`renders ./components/page-header/demo/content.vue correctly 1`] = `
       >
         
         <button
-          class="ant-btn"
+          class="pf-btn"
           type="button"
         >
           <!---->
@@ -756,7 +756,7 @@ exports[`renders ./components/page-header/demo/content.vue correctly 1`] = `
           
         </button>
         <button
-          class="ant-btn"
+          class="pf-btn"
           type="button"
         >
           <!---->
@@ -767,7 +767,7 @@ exports[`renders ./components/page-header/demo/content.vue correctly 1`] = `
           
         </button>
         <button
-          class="ant-btn ant-btn-primary"
+          class="pf-btn pf-btn-primary"
           type="button"
         >
           <!---->
@@ -780,7 +780,7 @@ exports[`renders ./components/page-header/demo/content.vue correctly 1`] = `
         
         <!---->
         <button
-          class="ant-btn ant-dropdown-trigger"
+          class="pf-btn ant-dropdown-trigger"
           style="padding: 0px;"
           type="button"
         >
@@ -952,7 +952,7 @@ exports[`renders ./components/page-header/demo/ghost.vue correctly 1`] = `
       >
         
         <button
-          class="ant-btn"
+          class="pf-btn"
           type="button"
         >
           <!---->
@@ -963,7 +963,7 @@ exports[`renders ./components/page-header/demo/ghost.vue correctly 1`] = `
           
         </button>
         <button
-          class="ant-btn"
+          class="pf-btn"
           type="button"
         >
           <!---->
@@ -974,7 +974,7 @@ exports[`renders ./components/page-header/demo/ghost.vue correctly 1`] = `
           
         </button>
         <button
-          class="ant-btn ant-btn-primary"
+          class="pf-btn pf-btn-primary"
           type="button"
         >
           <!---->
@@ -1201,7 +1201,7 @@ exports[`renders ./components/page-header/demo/responsive.vue correctly 1`] = `
       >
         
         <button
-          class="ant-btn"
+          class="pf-btn"
           type="button"
         >
           <!---->
@@ -1212,7 +1212,7 @@ exports[`renders ./components/page-header/demo/responsive.vue correctly 1`] = `
           
         </button>
         <button
-          class="ant-btn"
+          class="pf-btn"
           type="button"
         >
           <!---->
@@ -1223,7 +1223,7 @@ exports[`renders ./components/page-header/demo/responsive.vue correctly 1`] = `
           
         </button>
         <button
-          class="ant-btn ant-btn-primary"
+          class="pf-btn pf-btn-primary"
           type="button"
         >
           <!---->

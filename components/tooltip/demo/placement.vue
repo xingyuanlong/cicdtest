@@ -111,7 +111,7 @@ export default defineComponent({
 });
 </script>
 <style scoped>
-#components-pf-tooltip-demo-placement .ant-btn {
+#components-pf-tooltip-demo-placement .pf-btn {
   width: 70px;
   text-align: center;
   padding: 0;

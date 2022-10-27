@@ -12,9 +12,9 @@ exports[`renders ./components/checkbox/demo/check-all.vue correctly 1`] = `
 
 exports[`renders ./components/checkbox/demo/controller.vue correctly 1`] = `
 <p style="margin-bottom: 20px;"><label class="ant-checkbox-wrapper"><span class="ant-checkbox"><input type="checkbox" class="ant-checkbox-input"><span class="ant-checkbox-inner"></span></span><span>Unchecked-Enabled</span></label></p>
-<p><button class="ant-btn ant-btn-primary ant-btn-sm" type="button">
+<p><button class="pf-btn pf-btn-primary pf-btn-sm" type="button">
     <!----><span>Check</span>
-  </button><button style="margin-left: 10px;" class="ant-btn ant-btn-primary ant-btn-sm" type="button">
+  </button><button style="margin-left: 10px;" class="pf-btn pf-btn-primary pf-btn-sm" type="button">
     <!----><span>Disable</span>
   </button></p>
 `;

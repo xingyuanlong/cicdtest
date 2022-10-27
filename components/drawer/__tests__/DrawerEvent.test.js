@@ -56,7 +56,7 @@ describe('Drawer', () => {
     await asyncExpect(() => {
       const body = wrapper.find('.ant-drawer-body').exists();
       expect(body).toBe(true);
-      wrapper.find('.ant-btn').trigger('click');
+      wrapper.find('.pf-btn').trigger('click');
       const content = wrapper.find('.ant-drawer-body').element.innerHTML;
       expect(content).toBe('Here is content of Drawer');
 
@@ -70,7 +70,7 @@ describe('Drawer', () => {
     });
 
     await asyncExpect(() => {
-      wrapper.find('button.ant-btn').trigger('click');
+      wrapper.find('button.pf-btn').trigger('click');
       expect(wrapper.vm.visible).toBe(true);
 
       wrapper.find('.ant-drawer-mask').trigger('click');
@@ -83,7 +83,7 @@ describe('Drawer', () => {
       sync: false,
     });
     await asyncExpect(() => {
-      wrapper.find('button.ant-btn').trigger('click');
+      wrapper.find('button.pf-btn').trigger('click');
       expect(wrapper.vm.visible).toBe(true);
 
       wrapper.find('.ant-drawer-close').trigger('click');
@@ -99,7 +99,7 @@ describe('Drawer', () => {
       sync: false,
     });
     await asyncExpect(() => {
-      wrapper.find('button.ant-btn').trigger('click');
+      wrapper.find('button.pf-btn').trigger('click');
       expect(wrapper.vm.visible).toBe(true);
 
       wrapper.find('.ant-drawer-mask').trigger('click');
@@ -115,7 +115,7 @@ describe('Drawer', () => {
       sync: false,
     });
     await asyncExpect(() => {
-      wrapper.find('button.ant-btn').trigger('click');
+      wrapper.find('button.pf-btn').trigger('click');
       expect(wrapper.find('.ant-drawer-wrapper-body').exists()).toBe(true);
 
       wrapper.vm.visible = false;
@@ -134,7 +134,7 @@ describe('Drawer', () => {
       sync: false,
     });
     await asyncExpect(() => {
-      wrapper.find('button.ant-btn').trigger('click');
+      wrapper.find('button.pf-btn').trigger('click');
       expect(wrapper.vm.visible).toBe(true);
 
       wrapper.find('.ant-drawer-close').trigger('click');

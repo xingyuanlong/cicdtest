@@ -116,7 +116,7 @@ export default defineComponent({
 });
 </script>
 <style scoped>
-.tree-transfer .ant-transfer-list:first-child {
+.tree-transfer .pf-transfer-list:first-child {
   width: 50%;
   flex: none;
 }

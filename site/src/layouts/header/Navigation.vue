@@ -89,11 +89,11 @@ export default defineComponent({
   font-family: Avenir, @font-family, sans-serif;
   border: 0;
 
-  &.ant-menu-horizontal {
+  &.pf-menu-horizontal {
     border-bottom: none;
 
-    & > .ant-menu-item,
-    & > .ant-menu-submenu {
+    & > .pf-menu-item,
+    & > .pf-menu-submenu {
       min-width: (40px + 12px * 2);
       height: @header-height;
       padding-right: 12px;
@@ -109,13 +109,13 @@ export default defineComponent({
       }
     }
 
-    & .ant-menu-submenu-title .anticon {
+    & .pf-menu-submenu-title .anticon {
       margin: 0;
     }
   }
 
-  & > .ant-menu-item,
-  & > .ant-menu-submenu {
+  & > .pf-menu-item,
+  & > .pf-menu-submenu {
     text-align: center;
   }
 }
@@ -124,7 +124,7 @@ export default defineComponent({
   color: @site-text-color;
 }
 
-.ant-menu-item-active .header-link {
+.pf-menu-item-active .header-link {
   color: @primary-color;
 }
 
@@ -132,24 +132,24 @@ export default defineComponent({
 .popover-menu {
   width: 300px;
 
-  .ant-popover-inner-content {
+  .pf-popover-inner-content {
     padding: 0;
 
     #nav {
-      .ant-menu-item,
-      .ant-menu-submenu {
+      .pf-menu-item,
+      .pf-menu-submenu {
         text-align: left;
       }
 
-      .ant-menu-item-group-title {
+      .pf-menu-item-group-title {
         padding-left: 24px;
       }
 
-      .ant-menu-item-group-list {
+      .pf-menu-item-group-list {
         padding: 0 16px;
       }
 
-      .ant-menu-item,
+      .pf-menu-item,
       a {
         color: #333;
       }

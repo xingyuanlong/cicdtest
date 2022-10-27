@@ -46,7 +46,7 @@ Descriptions with border and background color.
   </pf-descriptions>
 </template>
 <style scoped>
-  .ant-descriptions-item-label {
+  .pf-descriptions-item-label {
     text-align: start;
   }
 </style>

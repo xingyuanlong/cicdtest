@@ -42,7 +42,7 @@ export default defineComponent({
 });
 </script>
 <style>
-[id^='components-notification-demo-'] .ant-btn {
+[id^='components-notification-demo-'] .pf-btn {
   margin-right: 8px;
 }
 </style>

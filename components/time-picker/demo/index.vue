@@ -45,7 +45,7 @@ export default {
 };
 </script>
 <style>
-[id^='components-time-picker-demo'] .ant-time-picker {
+[id^='components-time-picker-demo'] .pf-time-picker {
   margin: 0 8px 12px 0;
 }
 </style>

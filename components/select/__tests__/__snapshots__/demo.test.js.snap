@@ -320,11 +320,11 @@ exports[`renders ./components/select/demo/responsive.vue correctly 1`] = `
 <div class="ant-space ant-space-vertical" style="width: 100%;">
   <div class="ant-space-item" style="margin-bottom: 8px;">
     <div class="ant-space ant-space-horizontal ant-space-align-center">
-      <div class="ant-space-item" style="margin-right: 8px;"><button class="ant-btn ant-btn-primary" type="button">
+      <div class="ant-space-item" style="margin-right: 8px;"><button class="pf-btn pf-btn-primary" type="button">
           <!----><span>maxTagCount++</span>
         </button></div>
       <!---->
-      <div class="ant-space-item"><button class="ant-btn ant-btn-primary" type="button">
+      <div class="ant-space-item"><button class="pf-btn pf-btn-primary" type="button">
           <!----><span>maxTagCount--</span>
         </button></div>
       <!---->
@@ -385,11 +385,11 @@ exports[`renders ./components/select/demo/responsive.vue correctly 1`] = `
   <!---->
   <div class="ant-space-item" style="margin-bottom: 8px;">
     <div class="ant-space ant-space-horizontal ant-space-align-center">
-      <div class="ant-space-item" style="margin-right: 8px;"><button class="ant-btn ant-btn-primary" type="button">
+      <div class="ant-space-item" style="margin-right: 8px;"><button class="pf-btn pf-btn-primary" type="button">
           <!----><span>maxTagTextLength++</span>
         </button></div>
       <!---->
-      <div class="ant-space-item"><button class="ant-btn ant-btn-primary" type="button">
+      <div class="ant-space-item"><button class="pf-btn pf-btn-primary" type="button">
           <!----><span>maxTagTextLength--</span>
         </button></div>
       <!---->

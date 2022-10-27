@@ -193,11 +193,11 @@ title:
     color: #F36969;
     font-size: 20px;
   }
-  .certificate-uploader .ant-upload, .certificate-uploader .ant-upload-list-picture-card-container {
+  .certificate-uploader .pf-upload, .certificate-uploader .pf-upload-list-picture-card-container {
     width: 302px;
     height: 202px;
   }
-  .ant-upload-select-picture-card i {
+  .pf-upload-select-picture-card i {
     font-size: 32px;
     color: #999;
   }

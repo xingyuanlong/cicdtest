@@ -212,7 +212,7 @@ exports[`renders ./components/descriptions/demo/size.vue correctly 1`] = `
   <div class="ant-descriptions ant-descriptions-bordered">
     <div class="ant-descriptions-header">
       <div class="ant-descriptions-title">Custom Size</div>
-      <div class="ant-descriptions-extra"><button class="ant-btn ant-btn-primary" type="button">
+      <div class="ant-descriptions-extra"><button class="pf-btn pf-btn-primary" type="button">
           <!----><span>Edit</span>
         </button></div>
     </div>
@@ -282,7 +282,7 @@ exports[`renders ./components/descriptions/demo/size.vue correctly 1`] = `
   <div class="ant-descriptions">
     <div class="ant-descriptions-header">
       <div class="ant-descriptions-title">Custom Size</div>
-      <div class="ant-descriptions-extra"><button class="ant-btn ant-btn-primary" type="button">
+      <div class="ant-descriptions-extra"><button class="pf-btn pf-btn-primary" type="button">
           <!----><span>Edit</span>
         </button></div>
     </div>

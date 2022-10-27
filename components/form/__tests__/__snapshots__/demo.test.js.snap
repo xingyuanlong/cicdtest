@@ -156,9 +156,9 @@ exports[`renders ./components/form/demo/advanced-search.vue correctly 1`] = `
       </div>
     </div>
     <div class="ant-row">
-      <div class="ant-col ant-col-24" style="text-align: right;"><button class="ant-btn ant-btn-primary" type="submit">
+      <div class="ant-col ant-col-24" style="text-align: right;"><button class="pf-btn pf-btn-primary" type="submit">
           <!----><span>Search</span>
-        </button><button style="margin: 0px 8px;" class="ant-btn" type="button">
+        </button><button style="margin: 0px 8px;" class="pf-btn" type="button">
           <!----><span>Clear</span>
         </button><a style="font-size: 12px;"><span role="img" aria-label="down" class="anticon anticon-down"><svg focusable="false" class="" data-icon="down" width="1em" height="1em" fill="currentColor" aria-hidden="true" viewBox="64 64 896 896"><path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path></svg></span> Collapse </a></div>
     </div>
@@ -210,7 +210,7 @@ exports[`renders ./components/form/demo/basic.vue correctly 1`] = `
     <!---->
     <div class="ant-col ant-col-16 ant-col-offset-8 ant-form-item-control">
       <div class="ant-form-item-control-input">
-        <div class="ant-form-item-control-input-content"><button class="ant-btn ant-btn-primary" type="submit">
+        <div class="ant-form-item-control-input-content"><button class="pf-btn pf-btn-primary" type="submit">
             <!----><span>Submit</span>
           </button></div>
         <!---->
@@ -272,9 +272,9 @@ exports[`renders ./components/form/demo/custom-validation.vue correctly 1`] = `
     <!---->
     <div class="ant-col ant-col-14 ant-col-offset-4 ant-form-item-control">
       <div class="ant-form-item-control-input">
-        <div class="ant-form-item-control-input-content"><button class="ant-btn ant-btn-primary" type="submit">
+        <div class="ant-form-item-control-input-content"><button class="pf-btn pf-btn-primary" type="submit">
             <!----><span>Submit</span>
-          </button><button style="margin-left: 10px;" class="ant-btn" type="button">
+          </button><button style="margin-left: 10px;" class="pf-btn" type="button">
             <!----><span>Reset</span>
           </button></div>
         <!---->
@@ -310,7 +310,7 @@ exports[`renders ./components/form/demo/customized-form-controls.vue correctly 1
     <!---->
     <div class="ant-col ant-form-item-control">
       <div class="ant-form-item-control-input">
-        <div class="ant-form-item-control-input-content"><button class="ant-btn ant-btn-primary" type="submit">
+        <div class="ant-form-item-control-input-content"><button class="pf-btn pf-btn-primary" type="submit">
             <!----><span>Submit</span>
           </button></div>
         <!---->
@@ -328,7 +328,7 @@ exports[`renders ./components/form/demo/dynamic-form-item.vue correctly 1`] = `
     <!---->
     <div class="ant-col ant-col-xs-24 ant-col-xs-offset-0 ant-col-sm-20 ant-col-sm-offset-4 ant-form-item-control">
       <div class="ant-form-item-control-input">
-        <div class="ant-form-item-control-input-content"><button style="width: 60%;" class="ant-btn ant-btn-dashed" type="button">
+        <div class="ant-form-item-control-input-content"><button style="width: 60%;" class="pf-btn pf-btn-dashed" type="button">
             <!----><span role="img" aria-label="plus" class="anticon anticon-plus"><svg focusable="false" class="" data-icon="plus" width="1em" height="1em" fill="currentColor" aria-hidden="true" viewBox="64 64 896 896"><defs><style></style></defs><path d="M482 152h60q8 0 8 8v704q0 8-8 8h-60q-8 0-8-8V160q0-8 8-8z"></path><path d="M176 474h672q8 0 8 8v60q0 8-8 8H176q-8 0-8-8v-60q0-8 8-8z"></path></svg></span><span>Add field</span>
           </button></div>
         <!---->
@@ -341,9 +341,9 @@ exports[`renders ./components/form/demo/dynamic-form-item.vue correctly 1`] = `
     <!---->
     <div class="ant-col ant-col-xs-24 ant-col-xs-offset-0 ant-col-sm-20 ant-col-sm-offset-4 ant-form-item-control">
       <div class="ant-form-item-control-input">
-        <div class="ant-form-item-control-input-content"><button class="ant-btn ant-btn-primary" type="submit">
+        <div class="ant-form-item-control-input-content"><button class="pf-btn pf-btn-primary" type="submit">
             <!----><span>Submit</span>
-          </button><button style="margin-left: 10px;" class="ant-btn" type="button">
+          </button><button style="margin-left: 10px;" class="pf-btn" type="button">
             <!----><span>Reset</span>
           </button></div>
         <!---->
@@ -361,7 +361,7 @@ exports[`renders ./components/form/demo/dynamic-form-items.vue correctly 1`] = `
     <!---->
     <div class="ant-col ant-form-item-control">
       <div class="ant-form-item-control-input">
-        <div class="ant-form-item-control-input-content"><button class="ant-btn ant-btn-dashed ant-btn-block" type="button">
+        <div class="ant-form-item-control-input-content"><button class="pf-btn pf-btn-dashed pf-btn-block" type="button">
             <!----><span role="img" aria-label="plus" class="anticon anticon-plus"><svg focusable="false" class="" data-icon="plus" width="1em" height="1em" fill="currentColor" aria-hidden="true" viewBox="64 64 896 896"><defs><style></style></defs><path d="M482 152h60q8 0 8 8v704q0 8-8 8h-60q-8 0-8-8V160q0-8 8-8z"></path><path d="M176 474h672q8 0 8 8v60q0 8-8 8H176q-8 0-8-8v-60q0-8 8-8z"></path></svg></span><span>Add user</span>
           </button></div>
         <!---->
@@ -374,7 +374,7 @@ exports[`renders ./components/form/demo/dynamic-form-items.vue correctly 1`] = `
     <!---->
     <div class="ant-col ant-form-item-control">
       <div class="ant-form-item-control-input">
-        <div class="ant-form-item-control-input-content"><button class="ant-btn ant-btn-primary" type="submit">
+        <div class="ant-form-item-control-input-content"><button class="pf-btn pf-btn-primary" type="submit">
             <!----><span>Submit</span>
           </button></div>
         <!---->
@@ -414,7 +414,7 @@ exports[`renders ./components/form/demo/dynamic-form-items-complex.vue correctly
     <!---->
     <div class="ant-col ant-form-item-control">
       <div class="ant-form-item-control-input">
-        <div class="ant-form-item-control-input-content"><button class="ant-btn ant-btn-dashed ant-btn-block" type="button">
+        <div class="ant-form-item-control-input-content"><button class="pf-btn pf-btn-dashed pf-btn-block" type="button">
             <!----><span role="img" aria-label="plus" class="anticon anticon-plus"><svg focusable="false" class="" data-icon="plus" width="1em" height="1em" fill="currentColor" aria-hidden="true" viewBox="64 64 896 896"><defs><style></style></defs><path d="M482 152h60q8 0 8 8v704q0 8-8 8h-60q-8 0-8-8V160q0-8 8-8z"></path><path d="M176 474h672q8 0 8 8v60q0 8-8 8H176q-8 0-8-8v-60q0-8 8-8z"></path></svg></span><span>Add sights</span>
           </button></div>
         <!---->
@@ -427,7 +427,7 @@ exports[`renders ./components/form/demo/dynamic-form-items-complex.vue correctly
     <!---->
     <div class="ant-col ant-form-item-control">
       <div class="ant-form-item-control-input">
-        <div class="ant-form-item-control-input-content"><button class="ant-btn ant-btn-primary" type="submit">
+        <div class="ant-form-item-control-input-content"><button class="pf-btn pf-btn-primary" type="submit">
             <!----><span>Submit</span>
           </button></div>
         <!---->
@@ -482,7 +482,7 @@ exports[`renders ./components/form/demo/dynamic-rule.vue correctly 1`] = `
     <!---->
     <div class="ant-col ant-col-8 ant-col-offset-4 ant-form-item-control">
       <div class="ant-form-item-control-input">
-        <div class="ant-form-item-control-input-content"><button class="ant-btn ant-btn-primary" type="button">
+        <div class="ant-form-item-control-input-content"><button class="pf-btn pf-btn-primary" type="button">
             <!----><span>Check</span>
           </button></div>
         <!---->
@@ -528,9 +528,9 @@ exports[`renders ./components/form/demo/form-context.vue correctly 1`] = `
     <!---->
     <div class="ant-col ant-col-16 ant-col-offset-8 ant-form-item-control">
       <div class="ant-form-item-control-input">
-        <div class="ant-form-item-control-input-content"><button class="ant-btn ant-btn-primary" type="submit">
+        <div class="ant-form-item-control-input-content"><button class="pf-btn pf-btn-primary" type="submit">
             <!----><span>Submit</span>
-          </button><button style="margin: 0px 8px;" class="ant-btn" type="button">
+          </button><button style="margin: 0px 8px;" class="pf-btn" type="button">
             <!----><span>Add User</span>
           </button></div>
         <!---->
@@ -543,7 +543,7 @@ exports[`renders ./components/form/demo/form-context.vue correctly 1`] = `
 `;
 
 exports[`renders ./components/form/demo/form-in-modal.vue correctly 1`] = `
-<div><button class="ant-btn ant-btn-primary" type="button">
+<div><button class="pf-btn pf-btn-primary" type="button">
     <!----><span>New Collection</span>
   </button>
   <!---->
@@ -578,7 +578,7 @@ exports[`renders ./components/form/demo/horizontal-login.vue correctly 1`] = `
     <!---->
     <div class="ant-col ant-form-item-control">
       <div class="ant-form-item-control-input">
-        <div class="ant-form-item-control-input-content"><button disabled="" class="ant-btn ant-btn-primary" type="submit">
+        <div class="ant-form-item-control-input-content"><button disabled="" class="pf-btn pf-btn-primary" type="submit">
             <!----><span>Log in</span>
           </button></div>
         <!---->
@@ -622,7 +622,7 @@ exports[`renders ./components/form/demo/inline-login.vue correctly 1`] = `
     <!---->
     <div class="ant-col ant-form-item-control">
       <div class="ant-form-item-control-input">
-        <div class="ant-form-item-control-input-content"><button disabled="" class="ant-btn ant-btn-primary" type="submit">
+        <div class="ant-form-item-control-input-content"><button disabled="" class="pf-btn pf-btn-primary" type="submit">
             <!----><span>Log in</span>
           </button></div>
         <!---->
@@ -713,9 +713,9 @@ exports[`renders ./components/form/demo/lable-width.vue correctly 1`] = `
     <!---->
     <div class="ant-col ant-col-14 ant-col-offset-4 ant-form-item-control">
       <div class="ant-form-item-control-input">
-        <div class="ant-form-item-control-input-content"><button class="ant-btn ant-btn-primary" type="button">
+        <div class="ant-form-item-control-input-content"><button class="pf-btn pf-btn-primary" type="button">
             <!----><span>Create</span>
-          </button><button style="margin-left: 10px;" class="ant-btn" type="button">
+          </button><button style="margin-left: 10px;" class="pf-btn" type="button">
             <!----><span>Cancel</span>
           </button></div>
         <!---->
@@ -774,7 +774,7 @@ exports[`renders ./components/form/demo/layout.vue correctly 1`] = `
     <!---->
     <div class="ant-col ant-col-14 ant-col-offset-4 ant-form-item-control">
       <div class="ant-form-item-control-input">
-        <div class="ant-form-item-control-input-content"><button class="ant-btn ant-btn-primary" type="button">
+        <div class="ant-form-item-control-input-content"><button class="pf-btn pf-btn-primary" type="button">
             <!----><span>Submit</span>
           </button></div>
         <!---->
@@ -862,7 +862,7 @@ exports[`renders ./components/form/demo/nest-messages.vue correctly 1`] = `
     <!---->
     <div class="ant-col ant-col-16 ant-col-offset-8 ant-form-item-control">
       <div class="ant-form-item-control-input">
-        <div class="ant-form-item-control-input-content"><button class="ant-btn ant-btn-primary" type="submit">
+        <div class="ant-form-item-control-input-content"><button class="pf-btn pf-btn-primary" type="submit">
             <!----><span>Submit</span>
           </button></div>
         <!---->
@@ -917,7 +917,7 @@ exports[`renders ./components/form/demo/normal-login.vue correctly 1`] = `
     <!---->
     <div class="ant-col ant-form-item-control">
       <div class="ant-form-item-control-input">
-        <div class="ant-form-item-control-input-content"><button class="ant-btn ant-btn-primary login-form-button" disabled="" type="submit">
+        <div class="ant-form-item-control-input-content"><button class="pf-btn pf-btn-primary login-form-button" disabled="" type="submit">
             <!----><span>Log in</span>
           </button> Or <a href="">register now!</a></div>
         <!---->
@@ -1059,7 +1059,7 @@ exports[`renders ./components/form/demo/time-related-controls.vue correctly 1`] 
     <!---->
     <div class="ant-col ant-col-xs-24 ant-col-xs-offset-0 ant-col-sm-16 ant-col-sm-offset-8 ant-form-item-control">
       <div class="ant-form-item-control-input">
-        <div class="ant-form-item-control-input-content"><button class="ant-btn ant-btn-primary" type="submit">
+        <div class="ant-form-item-control-input-content"><button class="pf-btn pf-btn-primary" type="submit">
             <!----><span>Submit</span>
           </button></div>
         <!---->
@@ -1127,9 +1127,9 @@ exports[`renders ./components/form/demo/useForm-basic.vue correctly 1`] = `
     <!---->
     <div class="ant-col ant-col-14 ant-col-offset-4 ant-form-item-control">
       <div class="ant-form-item-control-input">
-        <div class="ant-form-item-control-input-content"><button class="ant-btn ant-btn-primary" type="button">
+        <div class="ant-form-item-control-input-content"><button class="pf-btn pf-btn-primary" type="button">
             <!----><span>Create</span>
-          </button><button style="margin-left: 10px;" class="ant-btn" type="button">
+          </button><button style="margin-left: 10px;" class="pf-btn" type="button">
             <!----><span>Reset</span>
           </button></div>
         <!---->
@@ -1197,9 +1197,9 @@ exports[`renders ./components/form/demo/useForm-merge.vue correctly 1`] = `
     <!---->
     <div class="ant-col ant-col-14 ant-col-offset-4 ant-form-item-control">
       <div class="ant-form-item-control-input">
-        <div class="ant-form-item-control-input-content"><button class="ant-btn ant-btn-primary" type="button">
+        <div class="ant-form-item-control-input-content"><button class="pf-btn pf-btn-primary" type="button">
             <!----><span>Create</span>
-          </button><button style="margin-left: 10px;" class="ant-btn" type="button">
+          </button><button style="margin-left: 10px;" class="pf-btn" type="button">
             <!----><span>Reset</span>
           </button></div>
         <!---->
@@ -1243,9 +1243,9 @@ exports[`renders ./components/form/demo/useForm-nested.vue correctly 1`] = `
     <!---->
     <div class="ant-col ant-col-14 ant-col-offset-4 ant-form-item-control">
       <div class="ant-form-item-control-input">
-        <div class="ant-form-item-control-input-content"><button class="ant-btn ant-btn-primary" type="button">
+        <div class="ant-form-item-control-input-content"><button class="pf-btn pf-btn-primary" type="button">
             <!----><span>Create</span>
-          </button><button style="margin-left: 10px;" class="ant-btn" type="button">
+          </button><button style="margin-left: 10px;" class="pf-btn" type="button">
             <!----><span>Reset</span>
           </button></div>
         <!---->
@@ -1298,9 +1298,9 @@ exports[`renders ./components/form/demo/useForm-trigger.vue correctly 1`] = `
     <!---->
     <div class="ant-col ant-col-14 ant-col-offset-4 ant-form-item-control">
       <div class="ant-form-item-control-input">
-        <div class="ant-form-item-control-input-content"><button class="ant-btn ant-btn-primary" type="button">
+        <div class="ant-form-item-control-input-content"><button class="pf-btn pf-btn-primary" type="button">
             <!----><span>Create</span>
-          </button><button style="margin-left: 10px;" class="ant-btn" type="button">
+          </button><button style="margin-left: 10px;" class="pf-btn" type="button">
             <!----><span>Reset</span>
           </button></div>
         <!---->
@@ -1541,7 +1541,7 @@ exports[`renders ./components/form/demo/validate-other.vue correctly 1`] = `
       </label></div>
     <div class="ant-col ant-col-14 ant-form-item-control">
       <div class="ant-form-item-control-input">
-        <div class="ant-form-item-control-input-content"><span><div class="ant-upload ant-upload-select ant-upload-select-picture"><span tabindex="0" class="ant-upload" role="button"><input id="validate_other_upload" type="file" style="display: none;" accept="" capture="false"><button class="ant-btn" type="button"><span role="img" aria-label="upload" class="anticon anticon-upload"><svg focusable="false" class="" data-icon="upload" width="1em" height="1em" fill="currentColor" aria-hidden="true" viewBox="64 64 896 896"><path d="M400 317.7h73.9V656c0 4.4 3.6 8 8 8h60c4.4 0 8-3.6 8-8V317.7H624c6.7 0 10.4-7.7 6.3-12.9L518.3 163a8 8 0 00-12.6 0l-112 141.7c-4.1 5.3-.4 13 6.3 13zM878 626h-60c-4.4 0-8 3.6-8 8v154H214V634c0-4.4-3.6-8-8-8h-60c-4.4 0-8 3.6-8 8v198c0 17.7 14.3 32 32 32h684c17.7 0 32-14.3 32-32V634c0-4.4-3.6-8-8-8z"></path></svg></span><span>Click to upload</span></button></span></div>
+        <div class="ant-form-item-control-input-content"><span><div class="ant-upload ant-upload-select ant-upload-select-picture"><span tabindex="0" class="ant-upload" role="button"><input id="validate_other_upload" type="file" style="display: none;" accept="" capture="false"><button class="pf-btn" type="button"><span role="img" aria-label="upload" class="anticon anticon-upload"><svg focusable="false" class="" data-icon="upload" width="1em" height="1em" fill="currentColor" aria-hidden="true" viewBox="64 64 896 896"><path d="M400 317.7h73.9V656c0 4.4 3.6 8 8 8h60c4.4 0 8-3.6 8-8V317.7H624c6.7 0 10.4-7.7 6.3-12.9L518.3 163a8 8 0 00-12.6 0l-112 141.7c-4.1 5.3-.4 13 6.3 13zM878 626h-60c-4.4 0-8 3.6-8 8v154H214V634c0-4.4-3.6-8-8-8h-60c-4.4 0-8 3.6-8 8v198c0 17.7 14.3 32 32 32h684c17.7 0 32-14.3 32-32V634c0-4.4-3.6-8-8-8z"></path></svg></span><span>Click to upload</span></button></span></div>
         <div class="ant-upload-list ant-upload-list-picture"></div></span>
       </div>
       <!---->
@@ -1572,7 +1572,7 @@ exports[`renders ./components/form/demo/validate-other.vue correctly 1`] = `
     <!---->
     <div class="ant-col ant-col-12 ant-col-offset-6 ant-form-item-control">
       <div class="ant-form-item-control-input">
-        <div class="ant-form-item-control-input-content"><button class="ant-btn ant-btn-primary" type="submit">
+        <div class="ant-form-item-control-input-content"><button class="pf-btn pf-btn-primary" type="submit">
             <!----><span>Submit</span>
           </button></div>
         <!---->
@@ -1705,9 +1705,9 @@ exports[`renders ./components/form/demo/validation.vue correctly 1`] = `
     <!---->
     <div class="ant-col ant-col-14 ant-col-offset-4 ant-form-item-control">
       <div class="ant-form-item-control-input">
-        <div class="ant-form-item-control-input-content"><button class="ant-btn ant-btn-primary" type="button">
+        <div class="ant-form-item-control-input-content"><button class="pf-btn pf-btn-primary" type="button">
             <!----><span>Create</span>
-          </button><button style="margin-left: 10px;" class="ant-btn" type="button">
+          </button><button style="margin-left: 10px;" class="pf-btn" type="button">
             <!----><span>Reset</span>
           </button></div>
         <!---->

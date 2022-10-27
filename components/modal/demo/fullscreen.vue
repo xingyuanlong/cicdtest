@@ -56,18 +56,18 @@ export default defineComponent({
 </script>
 <style lang="less">
 .full-modal {
-  .ant-modal {
+  .pf-modal {
     max-width: 100%;
     top: 0;
     padding-bottom: 0;
     margin: 0;
   }
-  .ant-modal-content {
+  .pf-modal-content {
     display: flex;
     flex-direction: column;
     height: calc(100vh);
   }
-  .ant-modal-body {
+  .pf-modal-body {
     flex: 1;
   }
 }

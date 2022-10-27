@@ -137,11 +137,11 @@ export default defineComponent({
   margin-bottom: 8px;
 }
 
-#components-form-demo-form-context .user .ant-avatar {
+#components-form-demo-form-context .user .pf-avatar {
   margin-right: 8px;
 }
 
-.ant-row-rtl #components-form-demo-form-context .user .ant-avatar {
+.pf-row-rtl #components-form-demo-form-context .user .pf-avatar {
   margin-right: 0;
   margin-left: 8px;
 }

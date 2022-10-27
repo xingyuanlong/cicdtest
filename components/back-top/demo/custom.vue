@@ -27,10 +27,10 @@ You can customize the style of the button, just note the size limit: no more tha
 </template>
 
 <style scoped>
-#components-back-top-demo-custom .ant-back-top {
+#components-back-top-demo-custom .pf-back-top {
   bottom: 100px;
 }
-#components-back-top-demo-custom .ant-back-top-inner {
+#components-back-top-demo-custom .pf-back-top-inner {
   height: 40px;
   width: 40px;
   line-height: 40px;

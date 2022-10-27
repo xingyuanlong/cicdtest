@@ -40,7 +40,7 @@ export default defineComponent({
  
 <style scoped>
  /* 建议使用时主动设置宽带,避免字体加粗,导致宽度变化. */
-  .ant-radio-button-wrapper {
+  .pf-radio-button-wrapper {
     width: 114px;
     text-align: center;
   }

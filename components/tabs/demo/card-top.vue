@@ -51,24 +51,24 @@ export default defineComponent({
 .card-container p {
   margin: 0;
 }
-.card-container > .ant-tabs-card .ant-tabs-content {
+.card-container > .pf-tabs-card .pf-tabs-content {
   height: 120px;
   margin-top: -16px;
 }
-.card-container > .ant-tabs-card .ant-tabs-content > .ant-tabs-tabpane {
+.card-container > .pf-tabs-card .pf-tabs-content > .pf-tabs-tabpane {
   padding: 16px;
   background: #fff;
 }
-.card-container > .ant-tabs-card > .ant-tabs-nav::before {
+.card-container > .pf-tabs-card > .pf-tabs-nav::before {
   display: none;
 }
-.card-container > .ant-tabs-card .ant-tabs-tab,
-[data-theme='compact'] .card-container > .ant-tabs-card .ant-tabs-tab {
+.card-container > .pf-tabs-card .pf-tabs-tab,
+[data-theme='compact'] .card-container > .pf-tabs-card .pf-tabs-tab {
   background: transparent;
   border-color: transparent;
 }
-.card-container > .ant-tabs-card .ant-tabs-tab-active,
-[data-theme='compact'] .card-container > .ant-tabs-card .ant-tabs-tab-active {
+.card-container > .pf-tabs-card .pf-tabs-tab-active,
+[data-theme='compact'] .card-container > .pf-tabs-card .pf-tabs-tab-active {
   background: #fff;
   border-color: #fff;
 }
@@ -77,21 +77,21 @@ export default defineComponent({
   overflow: hidden;
   background: #f5f5f5;
 }
-[data-theme='compact'] .card-container > .ant-tabs-card .ant-tabs-content {
+[data-theme='compact'] .card-container > .pf-tabs-card .pf-tabs-content {
   height: 120px;
   margin-top: -8px;
 }
-[data-theme='dark'] .card-container > .ant-tabs-card .ant-tabs-tab {
+[data-theme='dark'] .card-container > .pf-tabs-card .pf-tabs-tab {
   background: transparent;
   border-color: transparent;
 }
 [data-theme='dark'] #components-tabs-demo-card-top .code-box-demo {
   background: #000;
 }
-[data-theme='dark'] .card-container > .ant-tabs-card .ant-tabs-content > .ant-tabs-tabpane {
+[data-theme='dark'] .card-container > .pf-tabs-card .pf-tabs-content > .pf-tabs-tabpane {
   background: #141414;
 }
-[data-theme='dark'] .card-container > .ant-tabs-card .ant-tabs-tab-active {
+[data-theme='dark'] .card-container > .pf-tabs-card .pf-tabs-tab-active {
   background: #141414;
   border-color: #141414;
 }

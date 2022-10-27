@@ -133,7 +133,7 @@ export default defineComponent({
 });
 </script>
 <style scoped>
-#components-pf-popconfirm-demo-placement .ant-btn {
+#components-pf-popconfirm-demo-placement .pf-btn {
   width: 70px;
   text-align: center;
   padding: 0;

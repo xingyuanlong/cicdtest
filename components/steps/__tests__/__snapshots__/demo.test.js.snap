@@ -756,7 +756,7 @@ exports[`renders ./components/steps/demo/step-next.vue correctly 1`] = `
     </div>
   </div>
   <div class="steps-content">First-content</div>
-  <div class="steps-action"><button class="ant-btn ant-btn-primary" type="button">
+  <div class="steps-action"><button class="pf-btn pf-btn-primary" type="button">
       <!----><span>Next</span>
     </button>
     <!--v-if-->

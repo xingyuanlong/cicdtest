@@ -541,13 +541,13 @@ export default defineComponent({
 </script>
 <style lang="less">
 .direction-components {
-  .button-demo .ant-btn,
-  .button-demo .ant-btn-group {
+  .button-demo .pf-btn,
+  .button-demo .pf-btn-group {
     margin-right: 8px;
     margin-bottom: 12px;
   }
-  .button-demo .ant-btn-group > .ant-btn,
-  .button-demo .ant-btn-group > span > .ant-btn {
+  .button-demo .pf-btn-group > .pf-btn,
+  .button-demo .pf-btn-group > span > .pf-btn {
     margin-right: 0;
     margin-left: 0;
   }
@@ -561,10 +561,10 @@ export default defineComponent({
     border-radius: 4px;
   }
 
-  .ant-badge:not(.ant-badge-not-a-wrapper) {
+  .pf-badge:not(.pf-badge-not-a-wrapper) {
     margin-right: 20px;
   }
-  .ant-badge-rtl:not(.ant-badge-not-a-wrapper) {
+  .pf-badge-rtl:not(.pf-badge-not-a-wrapper) {
     margin-right: 0;
     margin-left: 20px;
   }

@@ -112,7 +112,7 @@ describe('Transfer', () => {
       },
     );
     Vue.nextTick(() => {
-      wrapper.findAll('.ant-btn')[0].trigger('click'); // move selected keys to right list
+      wrapper.findAll('.pf-btn')[0].trigger('click'); // move selected keys to right list
       expect(handleChange).toHaveBeenCalledWith(['a', 'b'], 'right', ['a']);
       done();
     });
@@ -130,7 +130,7 @@ describe('Transfer', () => {
       },
     );
     Vue.nextTick(() => {
-      wrapper.findAll('.ant-btn')[0].trigger('click');
+      wrapper.findAll('.pf-btn')[0].trigger('click');
       expect(handleChange).toHaveBeenCalledWith(['b'], 'right', ['b']);
       done();
     });
@@ -383,7 +383,7 @@ describe('Transfer', () => {
           })
           .trigger('change');
         Vue.nextTick(() => {
-          wrapper.findAll('.ant-btn')[0].trigger('click');
+          wrapper.findAll('.pf-btn')[0].trigger('click');
           expect(handleChange).toHaveBeenCalledWith(['1', '3', '4'], 'right', ['1']);
           done();
         });

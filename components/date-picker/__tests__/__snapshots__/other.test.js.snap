@@ -806,7 +806,7 @@ exports[`Picker format by locale dateTime 1`] = `
             <!---->
             <ul class="ant-picker-ranges">
               <li class="ant-picker-now"><a class="ant-picker-now-btn">此刻</a></li>
-              <li class="ant-picker-ok"><button class="ant-btn ant-btn-primary ant-btn-sm" type="button">
+              <li class="ant-picker-ok"><button class="pf-btn pf-btn-primary pf-btn-sm" type="button">
                   <!----><span>确 定</span>
                 </button></li>
             </ul>

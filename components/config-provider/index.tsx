@@ -18,7 +18,7 @@ import type { ConfigProviderProps, Theme } from './context';
 import { configProviderProps, useProvideGlobalForm } from './context';
 
 export type { ConfigProviderProps, Theme, SizeType, Direction, CSPConfig } from './context';
-export const defaultPrefixCls = 'ant';
+export const defaultPrefixCls = 'pf';
 function getGlobalPrefixCls() {
   return globalConfigForApi.prefixCls || defaultPrefixCls;
 }
@@ -110,7 +110,7 @@ const ConfigProvider = defineComponent({
   props: configProviderProps(),
   setup(props, { slots }) {
     const getPrefixCls = (suffixCls?: string, customizePrefixCls?: string) => {
-      const { prefixCls = 'ant' } = props;
+      const { prefixCls = 'pf' } = props;
       if (customizePrefixCls) return customizePrefixCls;
       return suffixCls ? `${prefixCls}-${suffixCls}` : prefixCls;
     };
@@ -197,7 +197,7 @@ const ConfigProvider = defineComponent({
 export const defaultConfigProvider: UnwrapRef<ConfigProviderProps> = reactive({
   getPrefixCls: (suffixCls: string, customizePrefixCls?: string) => {
     if (customizePrefixCls) return customizePrefixCls;
-    return suffixCls ? `ant-${suffixCls}` : 'ant';
+    return suffixCls ? `pf-${suffixCls}` : 'pf';
   },
   renderEmpty: defaultRenderEmpty,
   direction: 'ltr',

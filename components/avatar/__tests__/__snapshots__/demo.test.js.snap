@@ -21,7 +21,7 @@ exports[`renders ./components/avatar/demo/basic.vue correctly 1`] = `
 
 exports[`renders ./components/avatar/demo/dynamic.vue correctly 1`] = `
 <span style="background-color: rgb(245, 106, 0); vertical-align: middle;" class="ant-avatar ant-avatar-lg ant-avatar-square"><span class="ant-avatar-string" style="transform: scale(1) translateX(-50%);">U</span></span>
-<button style="margin-left: 16px; vertical-align: middle;" class="ant-btn ant-btn-sm" type="button">
+<button style="margin-left: 16px; vertical-align: middle;" class="pf-btn pf-btn-sm" type="button">
   <!----><span>改 变</span>
 </button>
 `;

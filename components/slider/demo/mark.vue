@@ -103,7 +103,7 @@ export default defineComponent({
 #components-slider-demo-mark h4 {
   margin: 0 0 16px;
 }
-#components-slider-demo-mark .ant-slider-with-marks {
+#components-slider-demo-mark .pf-slider-with-marks {
   margin-bottom: 44px;
 }
 </style>

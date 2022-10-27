@@ -10,7 +10,7 @@ exports[`renders ./components/image/demo/basic.vue correctly 1`] = `
 `;
 
 exports[`renders ./components/image/demo/controlled-preview.vue correctly 1`] = `
-<div><button class="ant-btn ant-btn-primary" type="button">
+<div><button class="pf-btn pf-btn-primary" type="button">
     <!----><span>show image preview</span>
   </button>
   <div class="ant-image" style="width: 200px;"><img class="ant-image-img" style="display: none;" src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png">
@@ -50,7 +50,7 @@ exports[`renders ./components/image/demo/placeholder.vue correctly 1`] = `
     <!---->
   </div>
   <!---->
-  <div class="ant-space-item"><button class="ant-btn ant-btn-primary" type="button">
+  <div class="ant-space-item"><button class="pf-btn pf-btn-primary" type="button">
       <!----><span>reload</span>
     </button></div>
   <!---->

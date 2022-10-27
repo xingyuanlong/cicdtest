@@ -159,7 +159,7 @@ export default defineComponent({
 });
 </script>
 <style>
-#components-popover-demo-placement .ant-btn {
+#components-popover-demo-placement .pf-btn {
   width: 70px;
   text-align: center;
   padding: 0;

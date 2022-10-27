@@ -41,7 +41,7 @@ export default defineComponent({
     font-size: 64px;
   }
 
-  .ant-row-rtl & {
+  .pf-row-rtl & {
     float: right;
     padding-right: 40px;
     padding-left: 0;
@@ -52,7 +52,7 @@ export default defineComponent({
     height: 32px;
     margin-right: 16px;
 
-    .ant-row-rtl & {
+    .pf-row-rtl & {
       margin-right: 0;
       margin-left: 16px;
     }

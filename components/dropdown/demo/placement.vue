@@ -64,7 +64,7 @@ export default defineComponent({
 });
 </script>
 <style>
-#components-dropdown-demo-placement .ant-btn {
+#components-dropdown-demo-placement .pf-btn {
   margin-right: 8px;
   margin-bottom: 8px;
 }

@@ -138,7 +138,7 @@ export default defineComponent({
                 onClick={go}
                 onKeyup={go}
                 disabled={disabled}
-                class={`ant-btn ${prefixCls}-quick-jumper-button`}
+                class={`pf-btn ${prefixCls}-quick-jumper-button`}
               >
                 {locale.jump_to_confirm}
               </button>

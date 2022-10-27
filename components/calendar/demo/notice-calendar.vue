@@ -92,7 +92,7 @@ export default defineComponent({
   margin: 0;
   padding: 0;
 }
-.events .ant-badge-status {
+.events .pf-badge-status {
   overflow: hidden;
   white-space: nowrap;
   width: 100%;

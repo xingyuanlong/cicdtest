@@ -34,7 +34,7 @@ export default defineComponent({
 });
 </script>
 <style scoped>
-.components-input-demo-size .ant-input {
+.components-input-demo-size .pf-input {
   width: 200px;
   margin: 0 8px 8px 0;
 }

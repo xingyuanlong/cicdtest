@@ -559,7 +559,7 @@ describe('Table.rowSelection', () => {
           .findAll('.ant-dropdown-menu-item .ant-checkbox-wrapper')
           [index].trigger('click');
       });
-      dropdownWrapper.find('.ant-table-filter-dropdown-btns .ant-btn-primary').trigger('click');
+      dropdownWrapper.find('.ant-table-filter-dropdown-btns .pf-btn-primary').trigger('click');
     }
 
     function clickItem() {

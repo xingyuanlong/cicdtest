@@ -13,7 +13,7 @@ exports[`renders ./components/switch/demo/disabled.vue correctly 1`] = `
     <div class="ant-switch-handle">
       <!---->
     </div><span class="ant-switch-inner"><!----></span>
-  </button><br><button class="ant-btn ant-btn-primary" type="button">
+  </button><br><button class="pf-btn pf-btn-primary" type="button">
     <!----><span>Toggle disabled</span>
   </button></div>
 `;

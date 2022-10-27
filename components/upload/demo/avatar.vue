@@ -100,16 +100,16 @@ export default defineComponent({
 });
 </script>
 <style>
-.avatar-uploader > .ant-upload {
+.avatar-uploader > .pf-upload {
   width: 128px;
   height: 128px;
 }
-.ant-upload-select-picture-card i {
+.pf-upload-select-picture-card i {
   font-size: 32px;
   color: #999;
 }
 
-.ant-upload-select-picture-card .ant-upload-text {
+.pf-upload-select-picture-card .pf-upload-text {
   margin-top: 8px;
   color: #666;
 }

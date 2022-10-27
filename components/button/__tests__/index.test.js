@@ -24,7 +24,7 @@ describe('Button', () => {
         return <Button type="primary">按钮</Button>;
       },
     });
-    expect(wrapper.find('.ant-btn-primary').exists()).toBe(true);
+    expect(wrapper.find('.pf-btn-primary').exists()).toBe(true);
   });
 
   it('renders Chinese characters correctly', done => {
@@ -100,7 +100,7 @@ describe('Button', () => {
       },
     });
     nextTick(() => {
-      // expect(wrapper6.find('.ant-btn-two-chinese-chars').exists()).toBe(true);
+      // expect(wrapper6.find('.pf-btn-two-chinese-chars').exists()).toBe(true);
       expect(wrapper6.html()).toMatchSnapshot();
       done();
     });
@@ -131,7 +131,7 @@ describe('Button', () => {
       wrapper.trigger('click');
     });
     await asyncExpect(() => {
-      expect(wrapper.findAll('.ant-btn-loading').length).toBe(1);
+      expect(wrapper.findAll('.pf-btn-loading').length).toBe(1);
     });
   });
 
@@ -161,7 +161,7 @@ describe('Button', () => {
       wrapper.trigger('click');
     });
     await asyncExpect(() => {
-      expect(wrapper.find('.ant-btn-loading').exists()).toBe(false);
+      expect(wrapper.find('.pf-btn-loading').exists()).toBe(false);
     });
   });
   it('should not clickable when button is loading', () => {
@@ -231,18 +231,18 @@ describe('Button', () => {
     const wrapper = mount(Button);
     wrapper.setProps({ loading: true });
     await sleep();
-    expect(wrapper.findAll('.ant-btn-loading').length).toBe(1);
+    expect(wrapper.findAll('.pf-btn-loading').length).toBe(1);
     wrapper.setProps({ loading: false });
     await sleep();
-    expect(wrapper.findAll('.ant-btn-loading').length).toBe(0);
+    expect(wrapper.findAll('.pf-btn-loading').length).toBe(0);
     wrapper.setProps({ loading: { delay: 50 } });
     await sleep();
-    expect(wrapper.findAll('.ant-btn-loading').length).toBe(0);
+    expect(wrapper.findAll('.pf-btn-loading').length).toBe(0);
     await sleep(50);
-    expect(wrapper.findAll('.ant-btn-loading').length).toBe(1);
+    expect(wrapper.findAll('.pf-btn-loading').length).toBe(1);
     wrapper.setProps({ loading: false });
     await sleep(50);
-    expect(wrapper.findAll('.ant-btn-loading').length).toBe(0);
+    expect(wrapper.findAll('.pf-btn-loading').length).toBe(0);
     expect(() => {
       wrapper.unmount();
     }).not.toThrow();

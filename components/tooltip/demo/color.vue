@@ -62,7 +62,7 @@ export default defineComponent({
 </script>
 
 <style scoped>
-#components-pf-tooltip-demo-color .ant-btn {
+#components-pf-tooltip-demo-color .pf-btn {
   margin-right: 8px;
   margin-bottom: 8px;
 }

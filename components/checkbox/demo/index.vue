@@ -36,16 +36,16 @@ export default defineComponent({
 });
 </script>
 <style>
-[id^='components-button-demo-'] .ant-btn {
+[id^='components-button-demo-'] .pf-btn {
   margin-right: 8px;
   margin-bottom: 12px;
 }
-[id^='components-button-demo-'] .ant-btn-rtl {
+[id^='components-button-demo-'] .pf-btn-rtl {
   margin-right: 0;
   margin-left: 8px;
 }
-[id^='components-button-demo-'] .ant-btn-group > .ant-btn,
-[id^='components-button-demo-'] .ant-btn-group > span > .ant-btn {
+[id^='components-button-demo-'] .pf-btn-group > .pf-btn,
+[id^='components-button-demo-'] .pf-btn-group > span > .pf-btn {
   margin-right: 0;
 }
 [data-theme='dark'] .site-button-ghost-wrapper {

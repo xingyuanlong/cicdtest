@@ -88,7 +88,7 @@ export default defineComponent({
 </script>
 
 <style>
-#components-form-demo-advanced-search .ant-form {
+#components-form-demo-advanced-search .pf-form {
   max-width: none;
 }
 #components-form-demo-advanced-search .search-result-list {
@@ -100,7 +100,7 @@ export default defineComponent({
   text-align: center;
   padding-top: 80px;
 }
-[data-theme='dark'] .ant-advanced-search-form {
+[data-theme='dark'] .pf-advanced-search-form {
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid #434343;
   padding: 24px;

@@ -24,11 +24,11 @@ The simplest usage.
 </template>
 
 <style>
-.tooltip-other-color .ant-tooltip-inner{
+.tooltip-other-color .pf-tooltip-inner{
     background: #fff;
     color: #333;
 }
-.tooltip-other-color  .ant-tooltip-arrow-content {
+.tooltip-other-color  .pf-tooltip-arrow-content {
     background: #fff;
 }
 </style>

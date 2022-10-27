@@ -43,7 +43,7 @@ export default defineComponent({
 </script>
 
 <style>
-#components-avatar-demo-badge .ant-avatar {
+#components-avatar-demo-badge .pf-avatar {
   margin-top: 0;
   margin-right: 0;
 }

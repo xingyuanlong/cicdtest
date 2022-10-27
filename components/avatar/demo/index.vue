@@ -38,7 +38,7 @@ export default defineComponent({
 </script>
 
 <style>
-[id^='components-avatar-demo-'] .ant-avatar {
+[id^='components-avatar-demo-'] .pf-avatar {
   margin-top: 16px;
   margin-right: 16px;
 }

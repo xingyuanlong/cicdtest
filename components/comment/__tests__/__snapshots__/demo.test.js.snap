@@ -46,7 +46,7 @@ exports[`renders ./components/comment/demo/editor.vue correctly 1`] = `
           <!---->
           <div class="ant-col ant-form-item-control">
             <div class="ant-form-item-control-input">
-              <div class="ant-form-item-control-input-content"><button class="ant-btn ant-btn-primary" type="submit">
+              <div class="ant-form-item-control-input-content"><button class="pf-btn pf-btn-primary" type="submit">
                   <!----><span>Add Comment</span>
                 </button></div>
               <!---->

@@ -84,7 +84,7 @@ export default defineComponent({
 });
 </script>
 <style>
-.code-box-demo .ant-form:not(.ant-form-inline):not(.ant-form-vertical) {
+.code-box-demo .pf-form:not(.pf-form-inline):not(.pf-form-vertical) {
   max-width: 600px;
 }
 .markdown.api-container table td:nth-of-type(4) {

@@ -104,7 +104,7 @@ describe('Comment', () => {
       wrapper.find('textarea').trigger('input');
     });
     await asyncExpect(() => {
-      wrapper.find('.ant-btn').trigger('click');
+      wrapper.find('.pf-btn').trigger('click');
     });
 
     await asyncExpect(() => {
