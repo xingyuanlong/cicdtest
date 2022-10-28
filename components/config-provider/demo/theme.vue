@@ -468,7 +468,7 @@ Modify global theme color by css variable. Css variable depends on the design, i
 </template>
 <script lang="ts">
 import { defineComponent, h, reactive, ref } from 'vue';
-import { ConfigProvider, Space, Divider } from 'pf-ui-vue';
+import { PfConfigProvider, PfSpace, PfDivider } from 'pf-ui-vue';
 import type { TreeSelectProps } from 'pf-ui-vue';
 import {
   DownOutlined,
@@ -483,7 +483,7 @@ export default defineComponent({
     SettingOutlined,
     ClockCircleOutlined,
     SplitSpace: (props, { slots }) =>
-      h(Space, { size: 4, ...props }, { ...slots, split: () => h(Divider, { type: 'vertical' }) }),
+      h(PfSpace, { size: 4, ...props }, { ...slots, split: () => h(PfDivider, { type: 'vertical' }) }),
   },
   setup() {
     const inputProps = {
@@ -554,7 +554,7 @@ export default defineComponent({
 
     const onColorChange = (type: string, e: any) => {
       Object.assign(colorState, { [type]: e.target.value });
-      ConfigProvider.config({
+      PfConfigProvider.config({
         theme: colorState,
       });
     };

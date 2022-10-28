@@ -22,13 +22,13 @@ title:
 <script lang="ts">
 import { ExclamationCircleOutlined } from '@ant-design/icons-vue';
 import { createVNode, defineComponent } from 'vue';
-import { Modal } from 'pf-ui-vue';
+import { PfModal } from 'pf-ui-vue';
 export default defineComponent({
   setup() {
     const showConfirm = () => {
       for (let i = 0; i < 3; i += 1) {
         setTimeout(() => {
-          Modal.confirm({
+          PfModal.confirm({
             content: 'destroy all',
             icon: createVNode(ExclamationCircleOutlined),
             onOk() {
@@ -38,7 +38,7 @@ export default defineComponent({
             },
             cancelText: 'Click to destroy all',
             onCancel() {
-              Modal.destroyAll();
+              PfModal.destroyAll();
             },
           });
         }, i * 500);

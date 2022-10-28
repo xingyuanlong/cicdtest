@@ -12,14 +12,14 @@ export const install = function (app: App) {
     }
   });
 
-  app.config.globalProperties.$message = components.message;
+  app.config.globalProperties.$message = components.Pfmessage;
   app.config.globalProperties.$notification = components.notification;
-  app.config.globalProperties.$info = components.Modal.info;
-  app.config.globalProperties.$success = components.Modal.success;
-  app.config.globalProperties.$error = components.Modal.error;
-  app.config.globalProperties.$warning = components.Modal.warning;
-  app.config.globalProperties.$confirm = components.Modal.confirm;
-  app.config.globalProperties.$destroyAll = components.Modal.destroyAll;
+  app.config.globalProperties.$info = components.PfModal.info;
+  app.config.globalProperties.$success = components.PfModal.success;
+  app.config.globalProperties.$error = components.PfModal.error;
+  app.config.globalProperties.$warning = components.PfModal.warning;
+  app.config.globalProperties.$confirm = components.PfModal.confirm;
+  app.config.globalProperties.$destroyAll = components.PfModal.destroyAll;
   return app;
 };
 

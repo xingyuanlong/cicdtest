@@ -40,7 +40,7 @@ Click to upload user's avatar, and validate size and format of picture with `bef
 </template>
 <script lang="ts">
 import { PlusOutlined, LoadingOutlined } from '@ant-design/icons-vue';
-import { message } from 'pf-ui-vue';
+import { Pfmessage } from 'pf-ui-vue';
 import { defineComponent, ref } from 'vue';
 import type { UploadChangeParam, UploadProps } from 'pf-ui-vue';
 
@@ -73,18 +73,18 @@ export default defineComponent({
       }
       if (info.file.status === 'error') {
         loading.value = false;
-        message.error('upload error');
+        Pfmessage.error('upload error');
       }
     };
 
     const beforeUpload = (file: UploadProps['fileList'][number]) => {
       const isJpgOrPng = file.type === 'image/jpeg' || file.type === 'image/png';
       if (!isJpgOrPng) {
-        message.error('You can only upload JPG file!');
+        Pfmessage.error('You can only upload JPG file!');
       }
       const isLt2M = file.size / 1024 / 1024 < 2;
       if (!isLt2M) {
-        message.error('Image must smaller than 2MB!');
+        Pfmessage.error('Image must smaller than 2MB!');
       }
       return isJpgOrPng && isLt2M;
     };

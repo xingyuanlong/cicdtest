@@ -20,13 +20,13 @@ Manually updating and destroying a modal from `Modal.method`.
   <pf-button @click="countDown">Open modal to close in 5s</pf-button>
 </template>
 <script lang="ts">
-import { Modal } from 'pf-ui-vue';
+import { PfModal } from 'pf-ui-vue';
 import { defineComponent } from 'vue';
 export default defineComponent({
   setup() {
     const countDown = () => {
       let secondsToGo = 5;
-      const modal = Modal.success({
+      const modal = PfModal.success({
         title: 'This is a notification message',
         content: `This modal will be destroyed after ${secondsToGo} second.`,
       });

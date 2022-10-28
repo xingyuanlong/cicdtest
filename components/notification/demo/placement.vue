@@ -44,7 +44,7 @@ import {
   RadiusBottomleftOutlined,
   RadiusBottomrightOutlined,
 } from '@ant-design/icons-vue';
-import { notification } from 'pf-ui-vue';
+import { Pfnotification } from 'pf-ui-vue';
 import { defineComponent } from 'vue';
 import type { NotificationPlacement } from 'pf-ui-vue';
 export default defineComponent({
@@ -56,7 +56,7 @@ export default defineComponent({
   },
   setup() {
     const openNotification = (placement: NotificationPlacement) => {
-      notification.open({
+      Pfnotification.open({
         message: `Notification ${placement}`,
         description:
           'This is the content of the notification. This is the content of the notification. This is the content of the notification.',

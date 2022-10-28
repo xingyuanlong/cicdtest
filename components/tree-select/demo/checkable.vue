@@ -30,8 +30,8 @@ Multiple and checkable.
 <script lang="ts">
 import type { TreeSelectProps } from 'pf-ui-vue';
 import { defineComponent, ref, watch } from 'vue';
-import { TreeSelect } from 'pf-ui-vue';
-const SHOW_PARENT = TreeSelect.SHOW_PARENT;
+import { PfTreeSelect } from 'pf-ui-vue';
+const SHOW_PARENT = PfTreeSelect.SHOW_PARENT;
 
 const treeData: TreeSelectProps['treeData'] = [
   {

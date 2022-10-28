@@ -20,12 +20,12 @@ Normal message for information.
   <pf-button type="primary" @click="info">Display normal message</pf-button>
 </template>
 <script lang="ts">
-import { message } from 'pf-ui-vue';
+import { Pfmessage } from 'pf-ui-vue';
 import { defineComponent } from 'vue';
 export default defineComponent({
   setup() {
     const info = () => {
-      message.info('This is a normal message');
+      Pfmessage.info('This is a normal message');
     };
     return {
       info,

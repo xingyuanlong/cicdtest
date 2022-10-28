@@ -1,7 +1,7 @@
 import Icon, * as AntdIcons from '@pf-ui/pf-icons-vue';
 import { FilledIcon, OutlinedIcon, TwoToneIcon } from './themeIcons';
 import Category from './Category';
-import { Radio } from 'pf-ui-vue';
+import { PfRadio } from 'pf-ui-vue';
 import { defineComponent } from 'vue';
 
 const ThemeType = {
@@ -14,9 +14,9 @@ const allIcons = AntdIcons;
 
 const IconDisplay = defineComponent({
   components: {
-    ARadio: Radio,
-    ARadioGroup: Radio.Group,
-    ARadioButton: Radio.Button,
+    ARadio: PfRadio,
+    ARadioGroup: PfRadio.Group,
+    ARadioButton: PfRadio.Button,
   },
   newIconNames: [],
   data() {

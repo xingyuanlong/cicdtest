@@ -1,4 +1,4 @@
-import { message } from 'pf-ui-vue';
+import { Pfmessage } from 'pf-ui-vue';
 import { defineComponent } from 'vue';
 import CopyableIcon from './CopyableIcon.vue';
 
@@ -11,7 +11,7 @@ const Category = defineComponent({
   },
   methods: {
     onCopied(type, text) {
-      message.success(
+      Pfmessage.success(
         <span>
           <code class="copied-code">{text}</code> copied 🎉
         </span>,

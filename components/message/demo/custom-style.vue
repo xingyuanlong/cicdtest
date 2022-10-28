@@ -20,12 +20,12 @@ The `style` and `class` are available to customize Message.
   <pf-button @click="success">Customized style</pf-button>
 </template>
 <script lang="ts">
-import { message } from 'pf-ui-vue';
+import { Pfmessage } from 'pf-ui-vue';
 import { defineComponent } from 'vue';
 export default defineComponent({
   setup() {
     const success = () => {
-      message.success({
+      Pfmessage.success({
         content: () => 'This is a prompt message with custom className and style',
         class: 'custom-class',
         style: {

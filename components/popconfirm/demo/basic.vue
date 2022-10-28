@@ -46,17 +46,17 @@ The basic example.
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { message } from 'pf-ui-vue';
+import { Pfmessage } from 'pf-ui-vue';
 export default defineComponent({
   setup() {
     const confirm = (e: MouseEvent) => {
       console.log(e);
-      message.success('Click on Yes');
+      Pfmessage.success('Click on Yes');
     };
 
     const cancel = (e: MouseEvent) => {
       console.log(e);
-      message.error('Click on No');
+      Pfmessage.error('Click on No');
     };
     return {
       confirm,

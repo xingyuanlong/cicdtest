@@ -54,11 +54,11 @@ to work with `Form`.
   </pf-form>
 </template>
 <script>
-import { Mentions, Form } from 'pf-ui-vue';
+import { PfMentions, PfForm } from 'pf-ui-vue';
 import { defineComponent, reactive } from 'vue';
 
-const useForm = Form.useForm;
-const { getMentions } = Mentions;
+const useForm = PfForm.useForm;
+const { getMentions } = PfMentions;
 export default defineComponent({
   setup() {
     const checkMention = async (rule, value) => {

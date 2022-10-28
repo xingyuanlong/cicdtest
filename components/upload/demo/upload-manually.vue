@@ -37,7 +37,7 @@ Upload files manually after `beforeUpload` returns `false`.
 <script lang="ts">
 import request from 'umi-request';
 import { UploadOutlined } from '@ant-design/icons-vue';
-import { message } from 'pf-ui-vue';
+import { Pfmessage } from 'pf-ui-vue';
 import { defineComponent, ref } from 'vue';
 import type { UploadProps } from 'pf-ui-vue';
 
@@ -76,11 +76,11 @@ export default defineComponent({
         .then(() => {
           fileList.value = [];
           uploading.value = false;
-          message.success('upload successfully.');
+          Pfmessage.success('upload successfully.');
         })
         .catch(() => {
           uploading.value = false;
-          message.error('upload failed.');
+          Pfmessage.error('upload failed.');
         });
     };
 

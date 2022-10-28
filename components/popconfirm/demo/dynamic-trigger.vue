@@ -36,7 +36,7 @@ Make it pop up under some conditions.
   </div>
 </template>
 <script lang="ts">
-import { message } from 'pf-ui-vue';
+import { Pfmessage } from 'pf-ui-vue';
 import { ref, defineComponent } from 'vue';
 export default defineComponent({
   setup() {
@@ -45,12 +45,12 @@ export default defineComponent({
 
     const confirm = () => {
       visible.value = false;
-      message.success('Next step.');
+      Pfmessage.success('Next step.');
     };
 
     const cancel = () => {
       visible.value = false;
-      message.error('Click on cancel.');
+      Pfmessage.error('Click on cancel.');
     };
 
     const handleVisibleChange = (bool: boolean) => {

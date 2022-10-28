@@ -23,11 +23,11 @@ delay closing the dialog.
 <script lang="ts">
 import { ExclamationCircleOutlined } from '@ant-design/icons-vue';
 import { createVNode, defineComponent } from 'vue';
-import { Modal } from 'pf-ui-vue';
+import { PfModal } from 'pf-ui-vue';
 export default defineComponent({
   setup() {
     const showConfirm = () => {
-      Modal.confirm({
+      PfModal.confirm({
         title: 'Do you want to delete these items?',
         icon: createVNode(ExclamationCircleOutlined),
         content: 'When clicked the OK button, this dialog will be closed after 1 second',

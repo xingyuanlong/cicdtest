@@ -30,7 +30,7 @@ Classic mode. File selection dialog pops up when upload button is clicked.
   </pf-upload>
 </template>
 <script lang="ts">
-import { message } from 'pf-ui-vue';
+import { Pfmessage } from 'pf-ui-vue';
 import { UploadOutlined } from '@ant-design/icons-vue';
 import { defineComponent, ref } from 'vue';
 import type { UploadChangeParam } from 'pf-ui-vue';
@@ -45,9 +45,9 @@ export default defineComponent({
         console.log(info.file, info.fileList);
       }
       if (info.file.status === 'done') {
-        message.success(`${info.file.name} file uploaded successfully`);
+        Pfmessage.success(`${info.file.name} file uploaded successfully`);
       } else if (info.file.status === 'error') {
-        message.error(`${info.file.name} file upload failed.`);
+        Pfmessage.error(`${info.file.name} file upload failed.`);
       }
     };
 

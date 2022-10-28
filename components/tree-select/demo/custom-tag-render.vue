@@ -43,8 +43,8 @@ Allows for custom rendering of tags.
 <script lang="ts">
 import type { TreeSelectProps } from 'pf-ui-vue';
 import { defineComponent, ref, watch } from 'vue';
-import { TreeSelect } from 'pf-ui-vue';
-const SHOW_ALL = TreeSelect.SHOW_ALL;
+import { PfTreeSelect } from 'pf-ui-vue';
+const SHOW_ALL = PfTreeSelect.SHOW_ALL;
 export default defineComponent({
   setup() {
     const value = ref<string[]>(['parent 1', 'parent 1-0', 'leaf1']);

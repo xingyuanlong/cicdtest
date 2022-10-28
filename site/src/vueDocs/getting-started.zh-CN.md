@@ -53,15 +53,15 @@ app.use(PfUiVue).mount('#app');
 
 ```jsx
 import { createApp } from 'vue';
-import { Button, message } from '@pf-ui/pf-ui-vue';
+import { PfButton, Pfmessage } from '@pf-ui/pf-ui-vue';
 import App from './App';
 
 const app = createApp(App);
 
 /* 会自动注册 Button 下的子组件, 例如 Button.Group */
-app.use(Button).mount('#app');
+app.use(PfButton).mount('#app');
 
-app.config.globalProperties.$message = message;
+app.config.globalProperties.$message = Pfmessage;
 ```
 
 **局部注册组件**

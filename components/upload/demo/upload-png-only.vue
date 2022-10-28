@@ -33,7 +33,7 @@ title:
 import { UploadOutlined } from '@ant-design/icons-vue';
 import { defineComponent, ref } from 'vue';
 import type { UploadChangeParam, UploadProps } from 'pf-ui-vue';
-import { message, Upload } from 'pf-ui-vue';
+import { Pfmessage, PfUpload } from 'pf-ui-vue';
 
 export default defineComponent({
   components: {
@@ -71,9 +71,9 @@ export default defineComponent({
     const beforeUpload: UploadProps['beforeUpload'] = file => {
       const isPNG = file.type === 'image/png';
       if (!isPNG) {
-        message.error(`${file.name} is not a png file`);
+        Pfmessage.error(`${file.name} is not a png file`);
       }
-      return isPNG || Upload.LIST_IGNORE;
+      return isPNG || PfUpload.LIST_IGNORE;
     };
     return {
       fileList,

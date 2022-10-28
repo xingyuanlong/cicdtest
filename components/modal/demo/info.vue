@@ -25,12 +25,12 @@ In the various types of information modal dialog, only one button to close dialo
   </pf-space>
 </template>
 <script lang="ts">
-import { Modal } from 'pf-ui-vue';
+import { PfModal } from 'pf-ui-vue';
 import { defineComponent, h } from 'vue';
 export default defineComponent({
   setup() {
     const info = () => {
-      Modal.info({
+      PfModal.info({
         title: 'This is a notification message',
         content: h('div', {}, [
           h('p', 'some messages...some messages...'),
@@ -42,7 +42,7 @@ export default defineComponent({
       });
     };
     const success = () => {
-      Modal.success({
+      PfModal.success({
         title: 'This is a success message',
         content: h('div', {}, [
           h('p', 'some messages...some messages...'),
@@ -52,14 +52,14 @@ export default defineComponent({
     };
 
     const error = () => {
-      Modal.error({
+      PfModal.error({
         title: 'This is an error message',
         content: 'some messages...some messages...',
       });
     };
 
     const warning = () => {
-      Modal.warning({
+      PfModal.warning({
         title: 'This is a warning message',
         content: 'some messages...some messages...',
       });

@@ -24,7 +24,7 @@ Asynchronously close a popconfirm when the OK button is pressed. For example, yo
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { message } from 'pf-ui-vue';
+import { Pfmessage } from 'pf-ui-vue';
 export default defineComponent({
   setup() {
     const confirm = (e: MouseEvent) => {
@@ -36,7 +36,7 @@ export default defineComponent({
 
     const cancel = (e: MouseEvent) => {
       console.log(e);
-      message.error('Click on No');
+      Pfmessage.error('Click on No');
     };
     return {
       confirm,

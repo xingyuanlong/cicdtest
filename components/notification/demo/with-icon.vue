@@ -25,13 +25,13 @@ A notification box with a icon at the left side.
   </div>
 </template>
 <script lang="ts">
-import { notification } from 'pf-ui-vue';
+import { Pfnotification } from 'pf-ui-vue';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
   setup() {
     const openNotificationWithIcon = (type: string) => {
-      notification[type]({
+      Pfnotification[type]({
         message: 'Notification Title',
         description:
           'This is the content of the notification. This is the content of the notification. This is the content of the notification.',

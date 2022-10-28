@@ -21,7 +21,7 @@ To customize the style or font of the close button.
 </template>
 
 <script lang="ts">
-import { notification, Button } from 'pf-ui-vue';
+import { notification, PfButton } from 'pf-ui-vue';
 import { h, defineComponent } from 'vue';
 
 const close = () => {
@@ -39,7 +39,7 @@ export default defineComponent({
           'A function will be be called after the notification is closed (automatically after the "duration" time of manually).',
         btn: () =>
           h(
-            Button,
+            PfButton,
             {
               type: 'primary',
               size: 'small',

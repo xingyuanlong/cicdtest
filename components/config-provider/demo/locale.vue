@@ -61,7 +61,7 @@ Components which need localization support are listed here, you can toggle the l
   </pf-config-provider>
 </template>
 <script>
-import { Modal } from 'pf-ui-vue';
+import { PfModal } from 'pf-ui-vue';
 import enUS from 'pf-ui-vue/es/locale/en_US';
 import zhCN from 'pf-ui-vue/es/locale/zh_CN';
 import dayjs from 'dayjs';
@@ -94,13 +94,13 @@ export default defineComponent({
       dayjs.locale(val);
     });
     const info = () => {
-      Modal.info({
+      PfModal.info({
         title: 'some info',
         content: 'some info',
       });
     };
     const confirm = () => {
-      Modal.confirm({
+      PfModal.confirm({
         title: 'some info',
         content: 'some info',
       });

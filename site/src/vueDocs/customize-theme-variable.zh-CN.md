@@ -52,8 +52,8 @@ ConfigProvider.config({
 通过静态方法设置主题色以及对应 `prefixCls`：
 
 ```ts
-import { ConfigProvider } from '@pf-ui/pf-ui-vue';
-ConfigProvider.config({
+import { PfConfigProvider } from '@pf-ui/pf-ui-vue';
+PfConfigProvider.config({
   prefixCls: 'custom',
   theme: {
     primaryColor: '#25b864',

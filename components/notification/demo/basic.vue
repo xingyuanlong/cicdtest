@@ -20,13 +20,13 @@ The simplest usage that close the notification box after 4.5s.
   <pf-button type="primary" @click="openNotification">Open the notification box</pf-button>
 </template>
 <script lang="ts">
-import { notification } from 'pf-ui-vue';
+import { Pfnotification } from 'pf-ui-vue';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
   setup() {
     const openNotification = () => {
-      notification.open({
+      Pfnotification.open({
         message: 'Notification Title',
         description:
           'This is the content of the notification. This is the content of the notification. This is the content of the notification.',

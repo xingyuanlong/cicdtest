@@ -34,9 +34,9 @@ Use virtual list through `height` prop.
 </template>
 <script lang="ts">
 import type { TreeSelectProps } from 'pf-ui-vue';
-import { TreeSelect } from 'pf-ui-vue';
+import { PfTreeSelect } from 'pf-ui-vue';
 import { defineComponent, ref, watch } from 'vue';
-const SHOW_PARENT = TreeSelect.SHOW_PARENT;
+const SHOW_PARENT = PfTreeSelect.SHOW_PARENT;
 
 function dig(path = '0', level = 3) {
   const list: TreeSelectProps['treeData'] = [];

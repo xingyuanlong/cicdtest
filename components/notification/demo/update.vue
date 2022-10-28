@@ -27,19 +27,19 @@ Update content with unique key, or use reactive data.
   </pf-button>
 </template>
 <script lang="ts">
-import { notification } from 'pf-ui-vue';
+import { Pfnotification } from 'pf-ui-vue';
 import { defineComponent, ref } from 'vue';
 const key = 'updatable';
 export default defineComponent({
   setup() {
     const openNotification = () => {
-      notification.open({
+      Pfnotification.open({
         key,
         message: 'Notification Title',
         description: 'description.',
       });
       setTimeout(() => {
-        notification.open({
+        Pfnotification.open({
           key,
           message: 'New Title',
           description: 'New description.',
@@ -50,7 +50,7 @@ export default defineComponent({
     const description = ref('description');
     const openNotification2 = () => {
       // content must use function
-      notification.open({
+      Pfnotification.open({
         message: () => message.value,
         description: () => description.value,
       });

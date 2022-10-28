@@ -113,7 +113,7 @@ There are 12 `placement` options available. Use `arrowPointAtCenter` if you want
   </div>
 </template>
 <script>
-import { message } from 'pf-ui-vue';
+import { Pfmessage } from 'pf-ui-vue';
 import { defineComponent } from 'vue';
 export default defineComponent({
   setup() {
@@ -122,7 +122,7 @@ export default defineComponent({
     const text = 'Are you sure to delete this task?';
 
     const confirm = () => {
-      message.info('Clicked on Yes.');
+      Pfmessage.info('Clicked on Yes.');
     };
     return {
       buttonWidth,

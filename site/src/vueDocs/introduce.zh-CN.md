@@ -54,8 +54,8 @@ $ yarn add @pf-ui/pf-ui-vue
 ## 示例
 
 ```jsx
-import { DatePicker } from '@pf-ui/pf-ui-vue';
-app.use(DatePicker);
+import { PfDatePicker } from '@pf-ui/pf-ui-vue';
+app.use(PfDatePicker);
 ```
 
 引入样式：
@@ -85,7 +85,7 @@ import '@pf-ui/pf-ui-vue/dist/antd.variable.css'; // or '@pf-ui/pf-ui-vue/dist/a
 
   ```jsx
   // babel-plugin-import 会帮助你加载 JS 和 CSS
-  import { DatePicker } from '@pf-ui/pf-ui-vue';
+  import { PfDatePicker } from '@pf-ui/pf-ui-vue';
   ```
 
 - 手动引入

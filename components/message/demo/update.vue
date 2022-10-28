@@ -25,21 +25,21 @@ Update message content with unique `key`，or use reactive data.
   </pf-button>
 </template>
 <script lang="ts">
-import { message } from 'pf-ui-vue';
+import { Pfmessage } from 'pf-ui-vue';
 import { defineComponent, ref } from 'vue';
 const key = 'updatable';
 export default defineComponent({
   setup() {
     const openMessage = () => {
-      message.loading({ content: 'Loading...', key });
+      Pfmessage.loading({ content: 'Loading...', key });
       setTimeout(() => {
-        message.success({ content: 'Loaded!', key, duration: 2 });
+        Pfmessage.success({ content: 'Loaded!', key, duration: 2 });
       }, 1000);
     };
     const content = ref('Loading...');
     const openMessage2 = () => {
       // content must use function
-      message.loading({ content: () => content.value });
+      Pfmessage.loading({ content: () => content.value });
       setTimeout(() => {
         content.value = 'Loaded!';
       }, 1000);

@@ -28,15 +28,15 @@ You can control the order of the expand and select columns by using `Table.EXPAN
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { Table } from 'pf-ui-vue';
+import { PfTable } from 'pf-ui-vue';
 
 export default defineComponent({
   setup() {
     const columns = [
       { title: 'Name', dataIndex: 'name', key: 'name' },
-      Table.EXPAND_COLUMN,
+      PfTable.EXPAND_COLUMN,
       { title: 'Age', dataIndex: 'age', key: 'age' },
-      Table.SELECTION_COLUMN,
+      PfTable.SELECTION_COLUMN,
       { title: 'Address', dataIndex: 'address', key: 'address' },
     ];
 

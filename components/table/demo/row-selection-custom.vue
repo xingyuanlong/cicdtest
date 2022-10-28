@@ -19,7 +19,7 @@ Use `rowSelection.selections` custom selections, default no select dropdown, sho
 </template>
 <script lang="ts">
 import { defineComponent, computed, ref, unref } from 'vue';
-import { Table } from 'pf-ui-vue';
+import { PfTable } from 'pf-ui-vue';
 
 interface DataType {
   key: string | number;
@@ -68,9 +68,9 @@ export default defineComponent({
         onChange: onSelectChange,
         hideDefaultSelections: true,
         selections: [
-          Table.SELECTION_ALL,
-          Table.SELECTION_INVERT,
-          Table.SELECTION_NONE,
+          PfTable.SELECTION_ALL,
+          PfTable.SELECTION_INVERT,
+          PfTable.SELECTION_NONE,
           {
             key: 'odd',
             text: 'Select Odd Row',

@@ -36,7 +36,7 @@ To customize the text of the buttons, you need to set `okText` and `cancelText` 
 <script lang="ts">
 import { ExclamationCircleOutlined } from '@ant-design/icons-vue';
 import { defineComponent, ref, createVNode } from 'vue';
-import { Modal } from 'pf-ui-vue';
+import { PfModal } from 'pf-ui-vue';
 export default defineComponent({
   setup() {
     const visible = ref<boolean>(false);
@@ -49,7 +49,7 @@ export default defineComponent({
     };
 
     const confirm = () => {
-      Modal.confirm({
+      PfModal.confirm({
         title: 'Confirm',
         icon: createVNode(ExclamationCircleOutlined),
         content: 'Bla bla ...',

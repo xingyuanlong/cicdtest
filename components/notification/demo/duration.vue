@@ -22,13 +22,13 @@ the notification box will never close automatically.
   <pf-button type="primary" @click="openNotification">Open the notification box</pf-button>
 </template>
 <script lang="ts">
-import { notification } from 'pf-ui-vue';
+import { Pfnotification } from 'pf-ui-vue';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
   setup() {
     const openNotification = () => {
-      notification.open({
+      Pfnotification.open({
         message: 'Notification Title',
         description:
           'I will never close automatically. I will be close automatically. I will never close automatically.',

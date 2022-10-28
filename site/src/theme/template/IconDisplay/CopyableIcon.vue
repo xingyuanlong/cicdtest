@@ -14,7 +14,7 @@
 </template>
 <script>
 import * as AntdIcons from '@pf-ui/pf-icons-vue';
-import { Badge } from 'pf-ui-vue';
+import { PfBadge } from 'pf-ui-vue';
 import { defineComponent } from 'vue';
 
 const allIcons = AntdIcons;
@@ -28,7 +28,7 @@ const kebabCase = function kebabCase(str) {
 
 export default defineComponent({
   components: {
-    'pf-badge': Badge,
+    'pf-badge': PfBadge,
   },
   props: ['name', 'type', 'isNew', 'justCopied'],
   data() {

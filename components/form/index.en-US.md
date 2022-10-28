@@ -127,11 +127,11 @@ The second way is to wrap it with a custom component and call `useInjectFormItem
 ```html
 <script>
   // custom component
-  import { Form } from 'pf-ui-vue';
+  import { PfForm } from 'pf-ui-vue';
   export default {
     name: 'custom-name',
     setup() {
-      const formItemContext = Form.useInjectFormItemContext();
+      const formItemContext = PfForm.useInjectFormItemContext();
     },
   };
 </script>
@@ -201,8 +201,8 @@ See more advanced usage at [async-validator](https://github.com/yiminghe/async-v
 The following versions need to be provided separately by `@pf-ui-vue/use` library, it is not recommended to continue to use, you should upgrade to version 2.2+ as soon as possible
 
 ```ts
-import { Form } from 'pf-ui-vue';
-const useForm = Form.useForm;
+import { PfForm } from 'pf-ui-vue';
+const useForm = PfForm.useForm;
 
 useForm(modelRef, ruleRef, [options]);
 ```

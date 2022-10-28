@@ -27,11 +27,11 @@ To use `confirm()` to show a confirmation modal dialog.
 <script lang="ts">
 import { ExclamationCircleOutlined } from '@ant-design/icons-vue';
 import { createVNode, defineComponent } from 'vue';
-import { Modal } from 'pf-ui-vue';
+import { PfModal } from 'pf-ui-vue';
 export default defineComponent({
   setup() {
     const showConfirm = () => {
-      Modal.confirm({
+      PfModal.confirm({
         title: 'Do you Want to delete these items?',
         icon: createVNode(ExclamationCircleOutlined),
         closable: true,
@@ -54,7 +54,7 @@ export default defineComponent({
       });
     };
     const showDeleteConfirm = () => {
-      Modal.confirm({
+      PfModal.confirm({
         title: 'Are you sure delete this task?',
         icon: createVNode(ExclamationCircleOutlined),
         closable: true,
@@ -79,7 +79,7 @@ export default defineComponent({
       });
     };
     const showPropsConfirm = () => {
-      Modal.confirm({
+      PfModal.confirm({
         title: 'Are you sure delete this task?',
         icon: createVNode(ExclamationCircleOutlined),
         closable: true,
@@ -100,7 +100,7 @@ export default defineComponent({
     };
 
     function showPromiseConfirm() {
-      Modal.confirm({
+      PfModal.confirm({
         title: 'Do you want to delete these items?',
         icon: createVNode(ExclamationCircleOutlined),
         closable: true,

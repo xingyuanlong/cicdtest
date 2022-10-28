@@ -20,11 +20,11 @@ You can choose another style of `image` by setting image to `Empty.PRESENTED_IMA
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { Empty } from 'pf-ui-vue';
+import { PfEmpty } from 'pf-ui-vue';
 export default defineComponent({
   setup() {
     return {
-      infoImage: Empty.PRESENTED_IMAGE_INFO,
+      infoImage: PfEmpty.PRESENTED_IMAGE_INFO,
     };
   },
 });

@@ -16,7 +16,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import type { PropType } from 'vue';
-import { Form } from 'pf-ui-vue';
+import { PfForm } from 'pf-ui-vue';
 
 export type Currency = 'rmb' | 'dollar';
 
@@ -30,7 +30,7 @@ export default defineComponent({
   },
   emits: ['update:value'],
   setup(props, { emit }) {
-    const formItemContext = Form.useInjectFormItemContext();
+    const formItemContext = PfForm.useInjectFormItemContext();
     const triggerChange = (changedValue: { number?: number; currency?: Currency }) => {
       emit('update:value', { ...props.value, ...changedValue });
       formItemContext.onFieldChange();
