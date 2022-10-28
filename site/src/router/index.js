@@ -69,6 +69,16 @@ const routes = [
         component: () => import('../vueDocs/getting-started.en-US.md'),
       },
       {
+        path: 'vue/qa-cn',
+        meta: { enTitle: '常见问题', title: '常见问题', category: 'docs' },
+        component: () => import('../vueDocs/qa.zh-CN.md'),
+      },
+      {
+        path: 'vue/qa',
+        meta: { enTitle: '常见问题', title: '常见问题', category: 'docs' },
+        component: () => import('../vueDocs/qa.zh-CN.md'),
+      },
+      {
         path: 'vue/customize-theme-cn',
         meta: { enTitle: 'Customize Theme', title: '定制主题', category: 'docs' },
         component: () => import('../vueDocs/customize-theme.zh-CN.md'),
