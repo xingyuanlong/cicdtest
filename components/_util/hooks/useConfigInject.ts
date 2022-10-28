@@ -1,6 +1,6 @@
 import type { RequiredMark } from '../../form/Form';
 import type { ComputedRef, UnwrapRef } from 'vue';
-import { computed, inject } from 'vue';
+import { computed, inject, ref } from 'vue';
 import type { ConfigProviderProps, CSPConfig, Direction, SizeType } from '../../config-provider';
 import { defaultConfigProvider } from '../../config-provider';
 import type { VueNode } from '../type';
@@ -36,9 +36,11 @@ export default (
     'configProvider',
     defaultConfigProvider,
   );
-  const prefixCls = computed(() => configProvider.getPrefixCls(name, props.prefixCls));
+  // const prefixCls = computed(() => configProvider.getPrefixCls(name, props.prefixCls));
+  const prefixCls = computed(() => defaultConfigProvider.getPrefixCls(name, props.prefixCls));
   const direction = computed(() => props.direction ?? configProvider.direction);
-  const rootPrefixCls = computed(() => configProvider.getPrefixCls());
+  // const rootPrefixCls = computed(() => configProvider.getPrefixCls());
+  const rootPrefixCls =  computed(() => defaultConfigProvider.getPrefixCls());
   const autoInsertSpaceInButton = computed(() => configProvider.autoInsertSpaceInButton);
   const renderEmpty = computed(() => configProvider.renderEmpty);
   const space = computed(() => configProvider.space);

@@ -272,6 +272,7 @@
     "@ctrl/tinycolor": "^3.4.0",
     "@pf-ui/pf-icons-vue": "1.1.21",
     "@simonwep/pickr": "~1.8.0",
+    "ant-design-vue": "^3.2.13",
     "array-tree-filter": "^2.1.0",
     "async-validator": "^4.0.0",
     "dayjs": "^1.10.5",

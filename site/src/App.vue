@@ -1,11 +1,15 @@
 <template>
-  <pf-config-provider :locale="locale">
-    <router-view />
-  </pf-config-provider>
+  <!-- <pf-config-provider :locale="locale"> -->
+    <a-config-provider :locale="locale">
+      <router-view />
+    </a-config-provider>
+  <!-- </pf-config-provider> -->
 </template>
 
 <script lang="ts">
 import { computed, defineComponent, provide, watch, ref } from 'vue';
+import { ConfigProvider } from 'ant-design-vue';
+
 import type { Ref } from 'vue';
 import { useRoute } from 'vue-router';
 import { useI18n } from 'vue-i18n';
@@ -16,6 +20,8 @@ import zhCN from '../../components/locale/zh_CN';
 import dayjs from 'dayjs';
 import { getCurrColorObj, loadStyleString } from './colorObj';
 import 'dayjs/locale/zh-cn';
+import 'ant-design-vue/dist/antd.css';
+
 function isZhCN(name: string) {
   return /-cn\/?$/.test(name);
 }
@@ -27,6 +33,9 @@ export interface GlobalConfig {
   blocked: Ref<boolean>;
 }
 export default defineComponent({
+  components: {
+    ConfigProvider,
+  },
   setup() {
     const route = useRoute();
     const i18n = useI18n();
@@ -108,5 +117,6 @@ export default defineComponent({
     );
     return { globalConfig, locale };
   },
+  
 });
 </script>
