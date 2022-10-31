@@ -37,11 +37,3 @@ export default defineComponent({
   },
 });
 </script>
- 
-<style scoped>
- /* 建议使用时主动设置宽带,避免字体加粗,导致宽度变化. */
-  .pf-radio-button-wrapper {
-    width: 114px;
-    text-align: center;
-  }
-</style>

@@ -16,7 +16,7 @@ Nested inside a container element for rendering in limited space.
 </docs>
 
 <template>
-  <div :style="{ width: '300px', border: '1px solid #d9d9d9', borderRadius: '4px' }">
+  <div :style="{ width: '310px', border: '1px solid #d9d9d9', borderRadius: '4px' }">
     <pf-calendar v-model:value="value" :fullscreen="false" @panelChange="onPanelChange" />
   </div>
 </template>

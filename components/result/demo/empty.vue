@@ -19,7 +19,7 @@ The server is wrong.
 <template>
   <pf-result status="empty">
     <template #extra>
-      <pf-button type="primary">新增</pf-button>
+      <pf-button type="secondary">新增</pf-button>
     </template>
   </pf-result>
 </template>

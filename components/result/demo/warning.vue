@@ -19,7 +19,7 @@ The result of the warning.
 <template>
   <pf-result status="warning" title="There are some problems with your operation.">
     <template #extra>
-      <pf-button key="console" type="primary">Go Console</pf-button>
+      <pf-button key="console" type="secondary">Go Console</pf-button>
     </template>
   </pf-result>
 </template>

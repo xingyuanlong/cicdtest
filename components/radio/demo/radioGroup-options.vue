@@ -26,14 +26,14 @@ Render radios by configuring `options`.
 </template>
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
-import { PfRadioGroupProps } from 'pf-ui-vue';
+import { RadioGroupProps } from 'pf-ui-vue';
 const plainOptions = ['Apple', 'Pear', 'Orange'];
 const options = [
   { label: 'Apple', value: 'Apple' },
   { label: 'Pear', value: 'Pear' },
   { label: 'Orange', value: 'Orange' },
 ];
-const optionsWithDisabled: PfRadioGroupProps['options'] = [
+const optionsWithDisabled: RadioGroupProps['options'] = [
   { label: 'Apple', value: 'Apple' },
   { label: 'Pear', value: 'Pear' },
   { label: 'Orange', value: 'Orange', disabled: true },

@@ -46,10 +46,10 @@ title:
           class="certificate-img"
         />
         <div class="certificate-img-mask">
-          <pf-tooltip title="替换图片" placement="bottom" overlay-class-name="ant-tooltip-image-operation">
+          <pf-tooltip title="替换图片" placement="bottom" overlay-class-name="pf-tooltip-image-operation">
             <replace-filled  class="certificate-img-icon certificate-img-icon-replace" @click="handleReplace" />
           </pf-tooltip>
-          <pf-tooltip title="预览" placement="bottom" overlay-class-name="ant-tooltip-image-operation">
+          <pf-tooltip title="预览" placement="bottom" overlay-class-name="pf-tooltip-image-operation">
             <zoom-filled  class="certificate-img-icon" @click="handlePreview" />
           </pf-tooltip>
           <error-filled class="certificate-img-icon certificate-img-icon-delete" @click="handleRemove" />

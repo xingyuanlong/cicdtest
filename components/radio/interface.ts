@@ -16,6 +16,8 @@ export interface RadioChangeEvent {
 
 export interface RadioGroupContext {
   stateValue: Ref;
-  props: RadioProps;
+  props: RadioProps & { aequilate: boolean };
   onRadioChange: (e: RadioChangeEvent) => void;
+  childWidths: Ref<number[]>;
+  childMaxWidth: Ref<number | null>;
 }

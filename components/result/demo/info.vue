@@ -19,7 +19,7 @@ Show processing results.
 <template>
   <pf-result title="Your operation has been executed">
     <template #extra>
-      <pf-button key="console" type="primary">Go Console</pf-button>
+      <pf-button key="console" type="secondary">Go Console</pf-button>
     </template>
   </pf-result>
 </template>
