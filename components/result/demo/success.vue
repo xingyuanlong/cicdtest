@@ -23,7 +23,7 @@ Show successful results.
     sub-title="Order number: 2017182818828182881 Cloud server configuration takes 1-5 minutes, please wait."
   >
     <template #extra>
-      <pf-button key="console" type="primary">Go Console</pf-button>
+      <pf-button key="console" type="secondary">Go Console</pf-button>
       <pf-button key="buy">Buy Again</pf-button>
     </template>
   </pf-result>

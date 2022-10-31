@@ -21,7 +21,7 @@ export const icons = {
 };
 
 const InternalPreviewGroup = defineComponent({
-  name: 'AImagePreviewGroup',
+  name: 'PfImagePreviewGroup',
   inheritAttrs: false,
   props: { previewPrefixCls: String },
   setup(props, { attrs, slots }) {

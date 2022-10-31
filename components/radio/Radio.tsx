@@ -1,5 +1,5 @@
 import type { ExtractPropTypes, PropType } from 'vue';
-import { defineComponent, inject, ref } from 'vue';
+import { defineComponent, inject, ref, onMounted, computed } from 'vue';
 import PropTypes from '../_util/vue-types';
 import VcCheckbox from '../vc-checkbox/Checkbox';
 import classNames from '../_util/classNames';
@@ -37,6 +37,13 @@ export default defineComponent({
     const vcCheckbox = ref<HTMLElement>();
     const radioGroupContext = inject<RadioGroupContext>('radioGroupContext', undefined);
     const { prefixCls, direction } = useConfigInject('radio', props);
+
+    const radioButton = ref();
+    const radioBtnWidth = computed(() => radioGroupContext && radioGroupContext.childMaxWidth.value && radioGroupContext.props.aequilate ? `${radioGroupContext.childMaxWidth.value}px` : 'auto');
+
+    onMounted(() => {
+      radioGroupContext && radioGroupContext.childWidths.value.push(radioButton.value.offsetWidth);
+    });
 
     const focus = () => {
       vcCheckbox.value.focus();
@@ -89,7 +96,7 @@ export default defineComponent({
       });
 
       return (
-        <label class={wrapperClassString}>
+        <label class={wrapperClassString} ref={radioButton} style={{ width: radioBtnWidth.value }} >
           <VcCheckbox {...rProps} type="radio" ref={vcCheckbox} />
           {slots.default && <span>{slots.default()}</span>}
         </label>

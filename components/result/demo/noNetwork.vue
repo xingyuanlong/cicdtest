@@ -19,7 +19,7 @@ The server is wrong.
 <template>
   <pf-result status="noNetwork">
     <template #extra>
-      <pf-button type="primary">刷新页面</pf-button>
+      <pf-button type="secondary">刷新页面</pf-button>
     </template>
   </pf-result>
 </template>

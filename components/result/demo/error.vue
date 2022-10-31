@@ -23,7 +23,7 @@ Complex error feedback.
     sub-title="Please check and modify the following information before resubmitting."
   >
     <template #extra>
-      <pf-button key="console" type="primary">Go Console</pf-button>
+      <pf-button key="console" type="secondary">Go Console</pf-button>
       <pf-button key="buy">Buy Again</pf-button>
     </template>
 
