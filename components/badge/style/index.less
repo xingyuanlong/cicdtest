@@ -95,6 +95,7 @@
     &-processing {
       position: relative;
       background-color: @processing-color;
+      color:  @processing-color;
 
       &::after {
         position: absolute;
@@ -106,6 +107,8 @@
         border-radius: 50%;
         animation: antStatusProcessing 1.2s infinite ease-in-out;
         content: '';
+        color: inherit;
+        border-color: currentColor;
       }
     }
 
