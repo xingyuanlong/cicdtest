@@ -48,18 +48,13 @@ Simple table with actions.
           <a>Invite 一 {{ record.name }}</a>
           <pf-divider type="vertical" />
           <a>Delete</a>
-          <pf-divider type="vertical" />
-          <a class="ant-dropdown-link">
-            More actions
-            <down-outlined />
-          </a>
         </span>
       </template>
     </template>
   </pf-table>
 </template>
 <script lang="ts">
-import { SmileOutlined, DownOutlined } from '@ant-design/icons-vue';
+import { SmileOutlined } from '@ant-design/icons-vue';
 import { defineComponent } from 'vue';
 const columns = [
   {
@@ -114,8 +109,7 @@ const data = [
 
 export default defineComponent({
   components: {
-    SmileOutlined,
-    DownOutlined,
+    SmileOutlined
   },
   setup() {
     return {

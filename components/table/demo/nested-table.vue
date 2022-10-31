@@ -57,7 +57,7 @@ Showing more detailed info of every row.
   </pf-table>
 </template>
 <script lang="ts">
-import { DownOutlined } from '@ant-design/icons-vue';
+import ArrowDownFilled from '@pf-ui/pf-icons-vue/ArrowDownFilled';
 import { defineComponent } from 'vue';
 
 const columns = [
@@ -124,7 +124,7 @@ for (let i = 0; i < 3; ++i) {
 
 export default defineComponent({
   components: {
-    DownOutlined,
+    DownOutlined: ArrowDownFilled
   },
   setup() {
     return {

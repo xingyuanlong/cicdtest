@@ -24,6 +24,11 @@ Ellipsis cell content via setting `column.ellipsis`.
       <template v-if="column.dataIndex === 'name'">
         <a>{{ text }}</a>
       </template>
+      <template v-if="column.ellipsis">
+        <pf-tooltip :title="text" placement="topLeft" overlayClassName="tooltip-other-color">
+          {{ text }}
+        </pf-tooltip>
+      </template>
     </template>
   </pf-table>
 </template>
@@ -48,13 +53,13 @@ const columns = [
     ellipsis: true,
   },
   {
-    title: 'Long Column Long Column Long Column',
+    title: 'Long Column Long',
     dataIndex: 'address',
     key: 'address 2',
     ellipsis: true,
   },
   {
-    title: 'Long Column Long Column',
+    title: 'Long Column2',
     dataIndex: 'address',
     key: 'address 3',
     ellipsis: true,
@@ -100,3 +105,13 @@ export default defineComponent({
   },
 });
 </script>
+
+<style scope>
+.tooltip-other-color .pf-tooltip-inner{
+    background: #fff;
+    color: #333;
+}
+.tooltip-other-color  .pf-tooltip-arrow-content {
+    background: #fff;
+}
+</style>

@@ -77,6 +77,26 @@
           }
         }
       }
+      
+      > table > tbody > tr {
+        &.line2 {
+          td {
+            padding: 4px @table-padding-horizontal;
+          }
+        }
+  
+        &.line3 {
+          td {
+            padding: 3px @table-padding-horizontal;
+          }
+        }
+  
+        &.bodyNoPadding {
+          td {
+            padding: 0px;
+          }
+        }
+      }
     }
 
     > .@{table-prefix-cls}-content,
