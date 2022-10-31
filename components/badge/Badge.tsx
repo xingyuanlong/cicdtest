@@ -101,7 +101,7 @@ export default defineComponent({
 
     const statusStyle = computed(() => {
       if (props.color && !isPresetColor(props.color)) {
-        return { background: props.color };
+        return { background: props.color, color: props.color, };
       } else {
         return {};
       }

@@ -19,7 +19,7 @@ The server is wrong.
 <template>
   <pf-result status="500">
     <template #extra>
-      <pf-button type="primary">回到首页</pf-button>
+      <pf-button type="secondary">回到首页</pf-button>
     </template>
   </pf-result>
 </template>

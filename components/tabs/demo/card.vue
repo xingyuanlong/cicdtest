@@ -18,7 +18,7 @@ Another type Tabs, which doesn't support vertical mode.
 
 <template>
   <pf-tabs v-model:activeKey="activeKey" type="card">
-    <pf-tab-pane key="1" tab="Tab 1">Content of Tab Pane 1</pf-tab-pane>
+    <pf-tab-pane key="1" tab="Tab 1" disabled>Content of Tab Pane 1</pf-tab-pane>
     <pf-tab-pane key="2" tab="Tab 2">Content of Tab Pane 2</pf-tab-pane>
     <pf-tab-pane key="3" tab="Tab 3">Content of Tab Pane 3</pf-tab-pane>
   </pf-tabs>

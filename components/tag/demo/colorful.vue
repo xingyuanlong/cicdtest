@@ -29,9 +29,11 @@ We preset a series of colorful tag styles for use in different situations. You c
   </div>
   <h4 style="margin: '16px 0'">Custom:</h4>
   <div>
-    <pf-tag color="#f50">#f50</pf-tag>
-    <pf-tag color="#2db7f5">#2db7f5</pf-tag>
-    <pf-tag color="#87d068">#87d068</pf-tag>
-    <pf-tag color="#108ee9">#108ee9</pf-tag>
+    <pf-tag>离职</pf-tag>
+    <pf-tag color="#feb034">在职</pf-tag>
+    <pf-tag color="#4acfb1">审批完成</pf-tag>
+    <pf-tag color="#f36969">审批驳回</pf-tag>
+    <pf-tag color="#45a8e6">测试中</pf-tag>
+    <pf-tag color="#a5b8d1">临时</pf-tag>
   </div>
 </template>

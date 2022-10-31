@@ -1,4 +1,4 @@
-import { provide, nextTick, defineComponent, ref, watch } from 'vue';
+import { provide, nextTick, defineComponent, ref, watch, onMounted } from 'vue';
 import type { PropType, ExtractPropTypes } from 'vue';
 import classNames from '../_util/classNames';
 import PropTypes from '../_util/vue-types';
@@ -34,6 +34,7 @@ export const radioGroupProps = () => ({
   optionType: { type: String as PropType<RadioGroupOptionType>, default: 'default' },
   onChange: Function as PropType<(e: RadioChangeEvent) => void>,
   'onUpdate:value': Function as PropType<(val: any) => void>,
+  aequilate: { type: Boolean, default: true }
 });
 
 export type RadioGroupProps = Partial<ExtractPropTypes<ReturnType<typeof radioGroupProps>>>;
@@ -74,10 +75,21 @@ export default defineComponent({
       });
     };
 
+    const childWidths = ref<number[]>([]);
+    const childMaxWidth = ref<number | null>(null);
+
     provide('radioGroupContext', {
       onRadioChange,
       stateValue,
       props,
+      childWidths,
+      childMaxWidth
+    });
+    
+    onMounted(() => {
+      if (childWidths.value.length > 0) {
+        childMaxWidth.value = Math.max(...childWidths.value)
+      }
     });
 
     return () => {

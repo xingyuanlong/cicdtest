@@ -190,6 +190,7 @@ span.@{radio-prefix-cls} + * {
   border-top-width: @border-width-base + 0.02px;
   border-left-width: 0;
   cursor: pointer;
+  text-align: center;
   // transition: color 0.3s, background 0.3s, border-color 0.3s, box-shadow 0.3s;
 
   a {
@@ -213,7 +214,7 @@ span.@{radio-prefix-cls} + * {
 
   .@{radio-group-prefix-cls}-small & {
     height: @radio-button-sm-height;
-    padding: 0 @control-padding-horizontal-sm - 1px;
+    padding: 0 @radio-button-small-padding-horizontal;
     line-height: @radio-button-sm-height - 2px;
     font-size: @radio-button-sm-height - 14px;
   }

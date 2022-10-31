@@ -22,7 +22,7 @@ Custom icon.
       <smile-twoTone />
     </template>
     <template #extra>
-      <pf-button type="primary">Next</pf-button>
+      <pf-button type="secondary">Next</pf-button>
     </template>
   </pf-result>
 </template>

@@ -140,8 +140,12 @@
 
     .@{checkbox-inner-prefix-cls} {
       background-color: @disabled-bg-color;
-      border-color: @border-color-base !important;
+      border-color: @checkbox-border-color !important;
 
+      svg {
+        color: @checkbox-border-color;
+      }
+      
       &::after {
         border-color: @input-disabled-bg;
         border-collapse: separate;
