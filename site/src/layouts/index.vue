@@ -55,7 +55,7 @@
             </pf-anchor>
           </pf-affix>
         </section>
-        <div class="fixed-widgets" :style="isZhCN ? { bottom: '175px' } : {}">
+        <div class="fixed-widgets" :style="isZhCN ? { bottom: '275px' } : {}">
           <pf-dropdown placement="top">
             <template #overlay>
               <pf-menu
