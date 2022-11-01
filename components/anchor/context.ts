@@ -7,6 +7,7 @@ export interface AnchorContext {
   activeLink: Ref<string>;
   scrollTo: (link: string) => void;
   handleClick: (e: Event, info: { title: any; href: string }) => void;
+  type: 'tab-left' | 'tab-right' | 'default';
 }
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -25,6 +26,7 @@ const useInjectAnchor = () => {
     scrollTo: noop,
     activeLink: computed(() => ''),
     handleClick: noop,
+    type: 'default'
   } as AnchorContext);
 };
 

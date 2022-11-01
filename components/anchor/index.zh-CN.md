@@ -29,6 +29,7 @@ cover: https://gw.alipayobjects.com/zos/alicdn/_1-C1JwsC/Anchor.svg
 | targetOffset | 锚点滚动偏移量，默认与 offsetTop 相同，[例子](#components-anchor-demo-targetOffset) | number | `offsetTop` | 1.5.0 |
 | wrapperClass | 容器的类名 | string | - |  |
 | wrapperStyle | 容器样式 | object | - |  |
+| type | 锚点风格，使用tab风格时不能设置子锚点 | `default` \| `tab-left`\| `tab-right` | `default` | |
 
 ### 事件
 
