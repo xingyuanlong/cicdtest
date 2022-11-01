@@ -46,6 +46,8 @@ type Section = {
   top: number;
 };
 
+type Type = 'tab-left' | 'tab-right' | 'default';
+
 export type AnchorContainer = HTMLElement | Window;
 
 export const anchorProps = () => ({
@@ -61,6 +63,7 @@ export const anchorProps = () => ({
   targetOffset: Number,
   onChange: Function as PropType<(currentActiveLink: string) => void>,
   onClick: Function as PropType<(e: MouseEvent, link: { title: any; href: string }) => void>,
+  type: { type: String as PropType<Type>, default: 'default' }
 });
 
 export type AnchorProps = Partial<ExtractPropTypes<ReturnType<typeof anchorProps>>>;
@@ -196,6 +199,7 @@ export default defineComponent({
       handleClick: (e, info) => {
         emit('click', e, info);
       },
+      type: props.type
     });
 
     onMounted(() => {
@@ -232,7 +236,10 @@ export default defineComponent({
       });
 
       const wrapperClass = classNames(props.wrapperClass, `${pre}-wrapper`, {
-        [`${pre}-rtl`]: direction.value === 'rtl',
+        [`${pre}-rtl`]: direction.value === 'rtl' && props.type === 'default',
+        [`${pre}-tab`]: props.type === 'tab-left' || props.type === 'tab-right',
+        [`${pre}-tab-left`]: props.type === 'tab-left',
+        [`${pre}-tab-right`]: props.type === 'tab-right'
       });
 
       const anchorClass = classNames(pre, {

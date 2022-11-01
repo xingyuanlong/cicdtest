@@ -10,7 +10,8 @@ import {
   watch,
   onDeactivated,
 } from 'vue';
-import TopFilled from '@pf-ui/pf-icons-vue/TopFilled'
+import TopFilled from '@pf-ui/pf-icons-vue/TopFilled';
+import TopHoverFilled from '@pf-ui/pf-icons-vue/TopHoverFilled';
 import addEventListener from '../vc-util/Dom/addEventListener';
 import getScroll from '../_util/getScroll';
 import { getTransitionProps, Transition } from '../_util/transition';
@@ -116,6 +117,7 @@ const BackTop = defineComponent({
         <div class={`${prefixCls.value}-content`}>
           <div class={`${prefixCls.value}-icon`}>
             <TopFilled />
+            <TopHoverFilled class={`${prefixCls.value}-icon-default-hover`} />
           </div>
         </div>
       );

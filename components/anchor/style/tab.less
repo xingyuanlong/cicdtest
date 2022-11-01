@@ -1,0 +1,84 @@
+@anchor-prefix: ~'@{ant-prefix}-anchor';
+
+.@{anchor-prefix}-tab {
+
+  .@{anchor-prefix}-ink-ball {
+    display: none;
+  }
+
+  .@{anchor-prefix}-link {
+    padding: @anchor-tab-link-padding-vertical 0;
+  }
+
+  .@{anchor-prefix}-link-title {
+    font-size: @anchor-tab-link-font-size;
+    line-height: @anchor-tab-link-font-size;
+  }
+
+  .@{anchor-prefix}-ink {
+    &::before {
+      width: 1px;
+      background-color: @C5;
+    }
+  }
+
+  .@{anchor-prefix}-link-active {
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 2px;
+      top: 9px;
+      bottom: 9px;
+      background: @primary-color;
+    }
+  }
+
+  &-left {
+    .@{anchor-prefix} {
+      padding-left: 1px;
+    }
+
+    .@{anchor-prefix}-link {
+      padding-left: @anchor-tab-link-padding-horizontal - 0.5px;
+    }
+
+    &.@{anchor-prefix}-wrapper {
+      margin-left: -2px;
+      padding-left: 2px;
+    }
+
+    .@{anchor-prefix}-link-active::before {
+      left: -1.5px;
+    }
+  }
+
+  &-right {
+
+    .@{anchor-prefix} {
+      padding-left: 0;
+      padding-right: 1px;
+    }
+
+    .@{anchor-prefix}-link {
+      padding-right: @anchor-tab-link-padding-horizontal - 0.5px;
+      text-align: right;
+    }
+
+    &.@{anchor-prefix}-wrapper {
+      margin-left: 0;
+      padding-left: 0;
+      margin-right: -2px;
+      padding-right: 2px;
+    }
+
+    .@{anchor-prefix}-ink {
+      left: auto;
+      right: 0;
+    }
+
+    .@{anchor-prefix}-link-active::before {
+      right: -1.5px;
+    }
+  }
+}
