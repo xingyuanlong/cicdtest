@@ -1,9 +1,10 @@
 import isEqual from 'lodash-es/isEqual';
 import CaretDownOutlined from '@ant-design/icons-vue/CaretDownOutlined';
-import Button from '../../../button';
+import Right2Filled from '@pf-ui/pf-icons-vue/Right2Filled'
+// import Button from '../../../button';
 import Menu from '../../../menu';
 import Checkbox from '../../../checkbox';
-import Radio from '../../../radio';
+// import Radio from '../../../radio';
 import Dropdown from '../../../dropdown';
 import Empty from '../../../empty';
 import type {
@@ -51,7 +52,7 @@ function renderFilterItems({
   filteredKeys,
   filterMultiple,
   searchValue,
-  filterSearch,
+  filterSearch
 }: {
   filters: ColumnFilterItem[];
   prefixCls: string;
@@ -63,31 +64,34 @@ function renderFilterItems({
   return filters.map((filter, index) => {
     const key = String(filter.value);
 
-    if (filter.children) {
-      return (
-        <SubMenu
-          key={key || index}
-          title={filter.text}
-          popupClassName={`${prefixCls}-dropdown-submenu`}
-        >
-          {renderFilterItems({
-            filters: filter.children,
-            prefixCls,
-            filteredKeys,
-            filterMultiple,
-            searchValue,
-            filterSearch,
-          })}
-        </SubMenu>
-      );
-    }
-
-    const Component = filterMultiple ? Checkbox : Radio;
+    // if (filter.children) {
+    //   return (
+    //     <SubMenu
+    //       key={key || index}
+    //       title={filter.text}
+    //       popupClassName={`${prefixCls}-dropdown-submenu`}
+    //     >
+    //       {renderFilterItems({
+    //         filters: filter.children,
+    //         prefixCls,
+    //         filteredKeys,
+    //         filterMultiple,
+    //         searchValue,
+    //         filterSearch
+    //       })}
+    //     </SubMenu>
+    //   );
+    // }
+    // const Component = filterMultiple ? Checkbox : Radio;
 
     const item = (
-      <MenuItem key={filter.value !== undefined ? key : index}>
-        <Component checked={filteredKeys.includes(key)} />
-        <span>{filter.text}</span>
+      <MenuItem
+        class={classNames(`${prefixCls}-menu-item`)}
+        key={filter.value !== undefined ? key : index}
+      >
+        {/* <Component checked={filteredKeys.includes(key)} /> */}
+        <div class={classNames(`${prefixCls}-menu-item-text`)}>{filter.text}</div>
+        {filteredKeys.includes(key) ? <Right2Filled /> : null}
       </MenuItem>
     );
     if (searchValue.trim()) {
@@ -180,6 +184,7 @@ export default defineComponent<FilterDropdownProps<any>>({
 
     const onSelectKeys = ({ selectedKeys }: { selectedKeys?: Key[] }) => {
       filteredKeys.value = selectedKeys;
+      onConfirm();
     };
 
     const onCheck = (keys: Key[], { node, checked }: { node: EventDataNode; checked: boolean }) => {
@@ -453,11 +458,11 @@ export default defineComponent<FilterDropdownProps<any>>({
       } else if (filterDropdownRef.value) {
         dropdownContent = filterDropdownRef.value;
       } else {
-        const selectedKeys = filteredKeys.value as any;
+        // const selectedKeys = filteredKeys.value as any;
         dropdownContent = (
           <>
             {getFilterComponent()}
-            <div class={`${prefixCls}-dropdown-btns`}>
+            {/* <div class={`${prefixCls}-dropdown-btns`}>
               <Button
                 type="link"
                 size="small"
@@ -469,7 +474,7 @@ export default defineComponent<FilterDropdownProps<any>>({
               <Button type="primary" size="small" onClick={onConfirm}>
                 {locale.filterConfirm}
               </Button>
-            </div>
+            </div> */}
           </>
         );
       }

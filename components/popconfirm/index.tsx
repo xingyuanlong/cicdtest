@@ -6,7 +6,7 @@ import PropTypes from '../_util/vue-types';
 import { initDefaultProps } from '../_util/props-util';
 import type { ButtonProps, LegacyButtonType } from '../button/buttonTypes';
 import { convertLegacyProps } from '../button/buttonTypes';
-import ExclamationCircleFilled from '@ant-design/icons-vue/ExclamationCircleFilled';
+import AlertOutlined from '@pf-ui/pf-icons-vue/AlertOutlined'
 import Button from '../button';
 import { useLocaleReceiver } from '../locale-provider/LocaleReceiver';
 import defaultLocale from '../locale-provider/default';
@@ -139,6 +139,7 @@ const Popconfirm = defineComponent({
         okText = slots.okText?.(),
         okType,
         icon = slots.icon?.(),
+        content = slots.content?.(),
         showCancel = true,
       } = props;
       const { cancelButton, okButton } = slots;
@@ -156,8 +157,9 @@ const Popconfirm = defineComponent({
       return (
         <div class={`${popoverPrefixCls.value}-inner-content`}>
           <div class={`${popoverPrefixCls.value}-message`}>
-            {icon || <ExclamationCircleFilled />}
+            {icon || <AlertOutlined />}
             <div class={`${popoverPrefixCls.value}-message-title`}>{title}</div>
+            <div class={`${popoverPrefixCls.value}-message-content`}>{content}</div>
           </div>
           <div class={`${popoverPrefixCls.value}-buttons`}>
             {okButton ? (

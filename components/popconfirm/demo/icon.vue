@@ -17,7 +17,11 @@ Set `icon` props to customize the icon.
 </docs>
 
 <template>
-  <pf-popconfirm title="Are you sure？">
+  <pf-popconfirm 
+    title="Are you sure？"
+    :okButtonProps="{type: 'primary', minWidth: '90px'}"
+    :cancelButtonProps="{type: 'secondary', minWidth: '90px'}"
+  >
     <template #icon><question-circle-outlined style="color: red" /></template>
     <a href="#">Delete</a>
   </pf-popconfirm>

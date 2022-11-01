@@ -40,6 +40,15 @@ export default defineComponent({
             onCancel() {
               PfModal.destroyAll();
             },
+            okButtonProps: {
+              minWidth: '90px',
+              size: 'small'
+            },
+            cancelButtonProps: {
+              type: 'secondary',
+              minWidth: '90px',
+              size: 'small'
+            },
           });
         }, i * 500);
       }

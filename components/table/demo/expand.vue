@@ -24,7 +24,7 @@ When there's too much information to show and the table can't display all at onc
       </template>
     </template>
     <template #expandedRowRender="{ record }">
-      <p style="margin: 0">
+      <p style="margin: 10px 0">
         {{ record.description }}
       </p>
     </template>
