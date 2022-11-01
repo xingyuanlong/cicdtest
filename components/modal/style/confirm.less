@@ -29,16 +29,16 @@
       // create BFC to avoid
       // https://user-images.githubusercontent.com/507615/37702510-ba844e06-2d2d-11e8-9b67-8e19be57f445.png
       overflow: hidden;
-      color: @heading-color;
+      color: @modal-confirm-title-color;
       font-weight: 500;
-      font-size: @modal-confirm-title-font-size;
+      font-size: 14px;
       line-height: 1.4;
     }
 
     .@{confirm-prefix-cls}-content {
       margin-top: 8px;
-      color: @text-color;
-      font-size: @font-size-base;
+      color: @modal-confirm-content-color;
+      font-size: 12px;
     }
 
     > .@{iconfont-css-prefix} {
@@ -55,7 +55,7 @@
 
   .@{confirm-prefix-cls}-btns {
     text-align: left;
-    margin-top: 24px;
+    margin-top: 15px;
     
     .@{ant-prefix}-btn:first-child {
       margin-left: 30px;

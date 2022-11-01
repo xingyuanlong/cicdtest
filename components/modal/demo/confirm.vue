@@ -38,11 +38,13 @@ export default defineComponent({
         content: createVNode('div', { style: 'color:red;' }, 'Some descriptions'),
         okButtonProps: {
           type: 'primary',
-          minWidth: '90px'
+          minWidth: '90px',
+          size: 'small'
         },
         cancelButtonProps: {
           type: 'secondary',
-          minWidth: '90px'
+          minWidth: '90px',
+          size: 'small'
         },
         onOk() {
           console.log('OK');
@@ -64,11 +66,13 @@ export default defineComponent({
         cancelText: 'No',
         okButtonProps: {
           type: 'secondary',
-          minWidth: '90px'
+          minWidth: '90px',
+          size: 'small'
         },
         cancelButtonProps: {
           type: 'secondary',
-          minWidth: '90px'
+          minWidth: '90px',
+          size: 'small'
         },
         onOk() {
           console.log('OK');
@@ -85,11 +89,16 @@ export default defineComponent({
         closable: true,
         content: 'Some descriptions',
         okText: 'Yes',
-        okType: 'danger',
         okButtonProps: {
-          disabled: true,
+          minWidth: '90px',
+          size: 'small'
         },
         cancelText: 'No',
+        cancelButtonProps: {
+          type: 'secondary',
+          minWidth: '90px',
+          size: 'small'
+        },
         onOk() {
           console.log('OK');
         },
@@ -107,11 +116,13 @@ export default defineComponent({
         content: 'When clicked the OK button, this dialog will be closed after 1 second',
         okButtonProps: {
           type: 'secondary',
-          minWidth: '90px'
+          minWidth: '90px',
+          size: 'small'
         },
         cancelButtonProps: {
           type: 'secondary',
-          minWidth: '90px'
+          minWidth: '90px',
+          size: 'small'
         },
         async onOk() {
           try {

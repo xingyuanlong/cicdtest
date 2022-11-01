@@ -29,6 +29,15 @@ export default defineComponent({
       const modal = PfModal.success({
         title: 'This is a notification message',
         content: `This modal will be destroyed after ${secondsToGo} second.`,
+        okButtonProps: {
+          minWidth: '90px',
+          size: 'small'
+        },
+        cancelButtonProps: {
+          type: 'secondary',
+          minWidth: '90px',
+          size: 'small'
+        },
       });
       const interval = setInterval(() => {
         secondsToGo -= 1;
