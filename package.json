@@ -35,7 +35,7 @@
     "pretest": "npm run version",
     "predist": "npm run version",
     "presite": "npm run version",
-    "dev": "npm run predev && npm run routes && vite serve site",
+    "dev": "rm -rf node_modules/.vite && npm run predev && npm run routes && vite serve site",
     "test": "cross-env NODE_ENV=test jest --config .jest.js",
     "compile": "node antd-tools/cli/run.js compile",
     "generator-webtypes": "tsc -p antd-tools/generator-types/tsconfig.json && node antd-tools/generator-types/index.js",
