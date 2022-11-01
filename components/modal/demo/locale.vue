@@ -54,7 +54,17 @@ export default defineComponent({
         icon: createVNode(ExclamationCircleOutlined),
         content: 'Bla bla ...',
         okText: '确认',
+        closable: true,
         cancelText: '取消',
+        okButtonProps: {
+          minWidth: '90px',
+          size: 'small'
+        },
+        cancelButtonProps: {
+          type: 'secondary',
+          minWidth: '90px',
+          size: 'small'
+        },
       });
     };
 

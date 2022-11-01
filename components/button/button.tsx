@@ -158,7 +158,7 @@ export default defineComponent({
       const iconType = innerLoading.value ? 'loading' : icon;
       const buttonProps = {
         ...attrs,
-        ...(typeof minWidth === 'string' ? {style: { minWidth }} : null),
+        ...(typeof minWidth === 'string' ? {style: { ...attrs.style as object, minWidth }} : attrs.style as object),
         title,
         disabled,
         class: [

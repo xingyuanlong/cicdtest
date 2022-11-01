@@ -51,6 +51,7 @@ Example of creating a search box by grouping a standard input with a search butt
       v-model:value="value"
       placeholder="input search text"
       @search="onSearch" 
+      @change="onChange"
     />
   </pf-space>
 </template>
@@ -65,10 +66,14 @@ export default defineComponent({
       console.log('use value', searchValue);
       console.log('or use this.value', value.value);
     };
+    const onChange = e => {
+      console.log('e',e);
+    };
 
     return {
       value,
       onSearch,
+      onChange,
     };
   },
 });

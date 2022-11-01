@@ -43,4 +43,65 @@ Standalone badge with status.
   <br />
   <pf-badge status="" text="离职" color="#CCCCCC"/>
   <br />
+  小提示标签:
+  <br/>
+  <pf-badge
+    count="离"
+    :number-style="{
+      backgroundColor: '#cccccc',
+      color: '#fff',
+      border: 'none',
+      padding: 0,
+    }"
+  />
+  <br/>
+  <pf-badge
+    count="在"
+    :number-style="{
+      backgroundColor: '#feb034',
+      color: '#fff',
+      border: 'none',
+      padding: 0,
+    }"
+  />
+  <br />
+  <pf-badge
+    count="完"
+    :number-style="{
+      backgroundColor: '#4acfb1',
+      color: '#fff',
+      border: 'none',
+      padding: 0,
+    }"
+  />
+  <br />
+  <pf-badge
+    count="驳"
+    :number-style="{
+      backgroundColor: '#f36969',
+      color: '#fff',
+      border: 'none',
+      padding: 0,
+    }"
+  />
+  <br />
+  <pf-badge
+    count="测"
+    :number-style="{
+      backgroundColor: '#45a8e6',
+      color: '#fff',
+      border: 'none',
+      padding: 0,
+    }"
+  />
+  <br />
+  <pf-badge
+    count="临"
+    :number-style="{
+      backgroundColor: '#a5b8d1',
+      color: '#fff',
+      border: 'none',
+      padding: 0,
+    }"
+  />
 </template>

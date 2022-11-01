@@ -55,7 +55,7 @@
             </pf-anchor>
           </pf-affix>
         </section>
-        <div class="fixed-widgets" :style="isZhCN ? { bottom: '175px' } : {}">
+        <div class="fixed-widgets" :style="isZhCN ? { bottom: '275px' } : {}">
           <pf-dropdown placement="top">
             <template #overlay>
               <pf-menu
@@ -258,7 +258,10 @@ export default defineComponent({
   }
 
   .pf-anchor-link-active {
-    border-left: 2px solid #1890ff;
+    border-left: 2px solid var(--wj-A1_2);
+  }
+  .pf-anchor-link-title:hover {
+    color: var(--wj-A1_2);
   }
   .pf-anchor-ink::before {
     display: none;
@@ -273,7 +276,7 @@ export default defineComponent({
     border-left: 2px solid #303030;
   }
   .pf-anchor-link-active {
-    border-left: 2px solid #177ddc;
+    border-left: 2px solid var(--wj-A1_2);
   }
 }
 </style>

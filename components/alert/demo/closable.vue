@@ -18,7 +18,7 @@ To show close button.
 
 <template>
   <pf-alert
-    message="Warning Text Warning Text Warning TextW arning Text Warning Text Warning TextWarning Text"
+    message="Warning Text Warning Text Warning TextW arning Text"
     type="warning"
     closable
     @close="onClose"

@@ -416,6 +416,18 @@
         text-align: center;
         content: 'Not Found';
       }
+
+      &-item {
+        & > .@{dropdown-prefix-cls}-menu-title-content {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .@{table-prefix-cls}-filter-menu-item-text {
+          margin-right: 10px;
+        }
+      }
     }
 
     &-tree {

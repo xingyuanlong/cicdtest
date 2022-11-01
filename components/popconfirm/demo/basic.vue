@@ -23,6 +23,7 @@ The basic example.
     cancel-text="No"
     @confirm="confirm"
     @cancel="cancel"
+    content="删除就无法恢复，请三思!"
     :okButtonProps="{type: 'secondary', minWidth: '90px'}"
     :cancelButtonProps="{type: 'secondary', minWidth: '90px'}"
   >
@@ -38,8 +39,10 @@ The basic example.
     :cancelButtonProps="{type: 'secondary', minWidth: '90px'}"
   >
     <template #title>
-      <h4> Are you sure delete this task? </h4>
-      <p>删除就无法恢复，请三思！</p>
+      Are you sure delete this task?
+    </template>
+    <template #content>
+      删除就无法恢复，请三思！
     </template>
     <a href="#" :style="{marginLeft: '10px'}">Delete</a>
   </pf-popconfirm>

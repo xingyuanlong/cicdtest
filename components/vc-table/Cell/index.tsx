@@ -310,18 +310,18 @@ export default defineComponent<CellProps>({
       }
 
       // ====================== Render ======================
-      let title: string;
-      const ellipsisConfig: CellEllipsisType = ellipsis === true ? { showTitle: true } : ellipsis;
-      if (ellipsisConfig && (ellipsisConfig.showTitle || rowType === 'header')) {
-        if (typeof childNode === 'string' || typeof childNode === 'number') {
-          title = childNode.toString();
-        } else if (isVNode(childNode)) {
-          title = getTitle([childNode]);
-        }
-      }
+      // let title: string;
+      // const ellipsisConfig: CellEllipsisType = ellipsis === true ? { showTitle: true } : ellipsis;
+      // if (ellipsisConfig && (ellipsisConfig.showTitle || rowType === 'header')) {
+      //   if (typeof childNode === 'string' || typeof childNode === 'number') {
+      //     title = childNode.toString();
+      //   } else if (isVNode(childNode)) {
+      //     title = getTitle([childNode]);
+      //   }
+      // }
 
       const componentProps = {
-        title,
+        // title,
         ...restCellProps,
         ...additionalProps,
         colSpan: mergedColSpan !== 1 ? mergedColSpan : null,

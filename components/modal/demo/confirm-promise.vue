@@ -36,6 +36,15 @@ export default defineComponent({
             setTimeout(Math.random() > 0.5 ? resolve : reject, 1000);
           }).catch(() => console.log('Oops errors!'));
         },
+        okButtonProps: {
+          minWidth: '90px',
+          size: 'small'
+        },
+        cancelButtonProps: {
+          type: 'secondary',
+          minWidth: '90px',
+          size: 'small'
+        },
         // eslint-disable-next-line @typescript-eslint/no-empty-function
         onCancel() {},
       });

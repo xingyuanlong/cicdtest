@@ -22,7 +22,7 @@
     <RowSelectionCustom />
     <RowSelection />
     <Sticky />
-    <ResizableColumn />
+    <!-- <ResizableColumn /> -->
     <Size />
     <Stripe />
     <Summary />

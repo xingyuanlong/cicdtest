@@ -57,10 +57,13 @@ export default defineComponent({
   setup() {
     const openNotification = (placement: NotificationPlacement) => {
       Pfnotification.open({
-        message: `Notification ${placement}`,
-        description:
-          'This is the content of the notification. This is the content of the notification. This is the content of the notification.',
+        message: `预警信息(1/10)${placement}`,
+        description: '病人柳石(床号：A03)检验血常规(五分类)(病房)中，血小板计数有预警值！',
         placement,
+        duration: null,
+        key: Math.round(Math.random() * 9).toString(),
+        class: 'notice-height-205',
+        bottom: '14px',
       });
     };
     return {
@@ -69,3 +72,10 @@ export default defineComponent({
   },
 });
 </script>
+<style>
+.notice-height-205 {
+  height: 205px;
+}
+</style>
+
+

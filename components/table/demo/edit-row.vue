@@ -16,22 +16,22 @@ Table with editable rows.
 </docs>
 
 <template>
-  <pf-table :columns="columns" :data-source="dataSource" bordered>
+  <pf-table :columns="columns" :data-source="dataSource" bordered bodyNoPadding>
     <template #bodyCell="{ column, text, record }">
       <template v-if="['name', 'age', 'address'].includes(column.dataIndex)">
-        <div>
+        <div class="edit-row">
           <pf-input
             v-if="editableData[record.key]"
             v-model:value="editableData[record.key][column.dataIndex]"
-            style="margin: -5px 0"
+            style="height: 26px"
           />
-          <template v-else>
+          <div v-else>
             {{ text }}
-          </template>
+          </div>
         </div>
       </template>
       <template v-else-if="column.dataIndex === 'operation'">
-        <div class="editable-row-operations">
+        <div class="edit-row editable-row-operations">
           <span v-if="editableData[record.key]">
             <pf-typography-link @click="save(record.key)">Save</pf-typography-link>
             <pf-popconfirm title="Sure to cancel?" @confirm="cancel(record.key)">
@@ -115,6 +115,14 @@ export default defineComponent({
 });
 </script>
 <style scoped>
+.edit-row {
+  padding: 3px 10px;
+}
+
+.edit-row div {
+  line-height: 26px;
+}
+
 .editable-row-operations a {
   margin-right: 8px;
 }

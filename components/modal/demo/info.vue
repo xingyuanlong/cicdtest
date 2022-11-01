@@ -36,6 +36,15 @@ export default defineComponent({
           h('p', 'some messages...some messages...'),
           h('p', 'some messages...some messages...'),
         ]),
+        okButtonProps: {
+          minWidth: '90px',
+          size: 'small'
+        },
+        cancelButtonProps: {
+          type: 'secondary',
+          minWidth: '90px',
+          size: 'small'
+        },
         onOk() {
           console.log('ok');
         },
@@ -44,6 +53,15 @@ export default defineComponent({
     const success = () => {
       PfModal.success({
         title: 'This is a success message',
+         okButtonProps: {
+          minWidth: '90px',
+          size: 'small'
+        },
+        cancelButtonProps: {
+          type: 'secondary',
+          minWidth: '90px',
+          size: 'small'
+        },
         content: h('div', {}, [
           h('p', 'some messages...some messages...'),
           h('p', 'some messages...some messages...'),
@@ -55,6 +73,15 @@ export default defineComponent({
       PfModal.error({
         title: 'This is an error message',
         content: 'some messages...some messages...',
+        okButtonProps: {
+          minWidth: '90px',
+          size: 'small'
+        },
+        cancelButtonProps: {
+          type: 'secondary',
+          minWidth: '90px',
+          size: 'small'
+        },
       });
     };
 
@@ -62,6 +89,15 @@ export default defineComponent({
       PfModal.warning({
         title: 'This is a warning message',
         content: 'some messages...some messages...',
+        okButtonProps: {
+          minWidth: '90px',
+          size: 'small'
+        },
+        cancelButtonProps: {
+          type: 'secondary',
+          minWidth: '90px',
+          size: 'small'
+        },
       });
     };
 

@@ -18,7 +18,13 @@ Asynchronously close a popconfirm when the OK button is pressed. For example, yo
 </docs>
 
 <template>
-  <pf-popconfirm title="Title" @confirm="confirm" @cancel="cancel">
+  <pf-popconfirm 
+    title="Title" 
+    @confirm="confirm" 
+    @cancel="cancel"
+    :okButtonProps="{type: 'primary', minWidth: '90px'}"
+    :cancelButtonProps="{type: 'secondary', minWidth: '90px'}"
+  >
     <pf-button type="primary">Open Popconfirm with Promise</pf-button>
   </pf-popconfirm>
 </template>
