@@ -42,10 +42,10 @@ Divider and disabled menu item.
 </template>
 <script lant="ts">
 import { defineComponent } from 'vue';
-import { DownOutlined } from '@ant-design/icons-vue';
+import ArrowDownFilled from '@pf-ui/pf-icons-vue/ArrowDownFilled'
 export default defineComponent({
   components: {
-    DownOutlined,
+    DownOutlined: ArrowDownFilled,
   },
 });
 </script>

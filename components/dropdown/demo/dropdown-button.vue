@@ -102,13 +102,15 @@ A button is on the left, and a related functional menu is on the right. You can 
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { UserOutlined, DownOutlined } from '@ant-design/icons-vue';
+import { UserOutlined } from '@ant-design/icons-vue';
+import ArrowDownFilled from '@pf-ui/pf-icons-vue/ArrowDownFilled'
+
 import type { MenuProps } from 'pf-ui-vue';
 
 export default defineComponent({
   components: {
     UserOutlined,
-    DownOutlined,
+    DownOutlined: ArrowDownFilled
   },
   setup() {
     const handleButtonClick = (e: Event) => {
