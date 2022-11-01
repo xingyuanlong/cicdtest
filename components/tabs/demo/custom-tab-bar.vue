@@ -22,7 +22,7 @@ Customized bar of tab.
       <pf-tab-pane key="2" tab="Tab 2" force-render>Content of Tab Pane 2</pf-tab-pane>
       <pf-tab-pane key="3" tab="Tab 3">Content of Tab Pane 3</pf-tab-pane>
       <template #renderTabBar="{ DefaultTabBar, ...props }">
-        <component :is="DefaultTabBar" v-bind="props" :style="{ opacity: 0.5 }" />
+        <component :is="DefaultTabBar" v-bind="props" :style="{ opacity: 1 }" />
       </template>
     </pf-tabs>
   </div>
