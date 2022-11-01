@@ -19,7 +19,7 @@ Support 6 placements.
 <template>
   <div id="components-dropdown-demo-placement">
     <template v-for="(placement, index) in placements" :key="placement">
-      <pf-dropdown :placement="placement">
+      <pf-dropdown :placement="placement" arrow>
         <pf-button>{{ placement }}</pf-button>
         <template #overlay>
           <pf-menu>

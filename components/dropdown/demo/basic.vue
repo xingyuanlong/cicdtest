@@ -8,7 +8,7 @@ title:
 
 ## zh-CN
 
-最简单的下拉菜单。
+最简单的下拉菜单。 arrow属性目前只支持
 
 ## en-US
 
@@ -17,10 +17,10 @@ The most basic dropdown menu.
 </docs>
 
 <template>
-  <pf-dropdown>
+  <pf-dropdown arrow>
     <a class="ant-dropdown-link" @click.prevent>
       Hover me
-      <DownOutlined />
+      <DownOutlined style="vertical-align: middle;" />
     </a>
     <template #overlay>
       <pf-menu>
@@ -39,11 +39,11 @@ The most basic dropdown menu.
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { DownOutlined } from '@ant-design/icons-vue';
+import ArrowDownFilled from '@pf-ui/pf-icons-vue/ArrowDownFilled'
 
 export default defineComponent({
   components: {
-    DownOutlined,
+    DownOutlined: ArrowDownFilled
   },
 });
 </script>

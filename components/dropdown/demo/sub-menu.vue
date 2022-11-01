@@ -20,7 +20,7 @@ The menu has multiple levels.
   <pf-dropdown>
     <a class="ant-dropdown-link" @click.prevent>
       Cascading menu
-      <DownOutlined />
+      <ArrowDownFilled />
     </a>
     <template #overlay>
       <pf-menu>
@@ -40,10 +40,10 @@ The menu has multiple levels.
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { DownOutlined } from '@ant-design/icons-vue';
+import ArrowDownFilled from '@pf-ui/pf-icons-vue/ArrowDownFilled'
 export default defineComponent({
   components: {
-    DownOutlined,
+    DownOutlined: ArrowDownFilled
   },
 });
 </script>
