@@ -18,6 +18,7 @@ To customize the style or font of the close button.
 
 <template>
   <pf-button type="primary" @click="openNotification">Open the notification box</pf-button>
+  <pf-button type="primary" @click="openNotification1">空的消息(用于自定义内容)</pf-button>
 </template>
 
 <script lang="ts">
@@ -51,10 +52,34 @@ export default defineComponent({
         onClose: close,
       });
     };
+    const openNotification1 = () => {
+      const key = `open${Date.now()}-1`;
+      notification.open({
+        message:null,
+        description:null,
+        duration: null,
+        key,
+        closeIcon: false,
+        class: 'notice-empty',
+      });
+    };
 
     return {
       openNotification,
+      openNotification1,
     };
   },
 });
 </script>
+<style>
+  .notice-empty .pf-notification-notice-close {
+    display: none;
+  }
+  .notice-empty .pf-notification-notice-message {
+    display: none;
+  }
+  .notice-empty {
+    height: 280px;
+  }
+
+</style>

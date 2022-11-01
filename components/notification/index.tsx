@@ -4,7 +4,8 @@ import CheckCircleOutlined from '@ant-design/icons-vue/CheckCircleOutlined';
 import InfoCircleOutlined from '@ant-design/icons-vue/InfoCircleOutlined';
 import CloseCircleOutlined from '@ant-design/icons-vue/CloseCircleOutlined';
 import ExclamationCircleOutlined from '@ant-design/icons-vue/ExclamationCircleOutlined';
-import CloseOutlined from '@ant-design/icons-vue/CloseOutlined';
+// import CloseOutlined from '@ant-design/icons-vue/CloseOutlined';
+import CloseFilled from '@pf-ui/pf-icons-vue/CloseFilled';
 import type { VueNode } from '../_util/type';
 import { renderHelper } from '../_util/util';
 import { globalConfig } from '../config-provider';
@@ -144,9 +145,12 @@ function getNotificationInstance(
       appContext,
       getContainer,
       closeIcon: ({ prefixCls }) => {
+        if (closeIcon === false) {
+          return null;
+        }
         const closeIconToRender = (
           <span class={`${prefixCls}-close-x`}>
-            {renderHelper(closeIcon, {}, <CloseOutlined class={`${prefixCls}-close-icon`} />)}
+            {renderHelper(closeIcon, {}, <CloseFilled class={`${prefixCls}-close-icon`} />)}
           </span>
         );
         return closeIconToRender;

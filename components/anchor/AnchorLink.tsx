@@ -27,6 +27,7 @@ export default defineComponent({
       unregisterLink,
       registerLink,
       activeLink,
+      type
     } = useInjectAnchor();
     const { prefixCls } = useConfigInject('anchor', props);
 
@@ -77,7 +78,7 @@ export default defineComponent({
           >
             {title}
           </a>
-          {slots.default?.()}
+          {type === 'tab-left' || type === 'tab-right' || slots.default?.()}
         </div>
       );
     };
