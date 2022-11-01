@@ -33,12 +33,12 @@ The default is to close the menu when you click on menu items, this feature can 
 </template>
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
-import { DownOutlined } from '@ant-design/icons-vue';
+import ArrowDownFilled from '@pf-ui/pf-icons-vue/ArrowDownFilled'
 import type { MenuProps } from 'pf-ui-vue';
 
 export default defineComponent({
   components: {
-    DownOutlined,
+    DownOutlined: ArrowDownFilled
   },
   setup() {
     const visible = ref(false);

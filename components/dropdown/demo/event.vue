@@ -33,12 +33,12 @@ An event will be triggered when you click menu items, in which you can make diff
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { DownOutlined } from '@ant-design/icons-vue';
+import ArrowDownFilled from '@pf-ui/pf-icons-vue/ArrowDownFilled'
 import type { MenuProps } from 'pf-ui-vue';
 
 export default defineComponent({
   components: {
-    DownOutlined,
+    DownOutlined: ArrowDownFilled
   },
   setup() {
     const onClick: MenuProps['onClick'] = ({ key }) => {

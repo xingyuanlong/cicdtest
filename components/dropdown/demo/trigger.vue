@@ -16,7 +16,7 @@ The default trigger mode is `hover`, you can change it to `click`.
 </docs>
 
 <template>
-  <pf-dropdown :trigger="['click']">
+  <pf-dropdown :trigger="['click']" arrow>
     <a class="ant-dropdown-link" @click.prevent>
       Click me
       <DownOutlined />
@@ -37,10 +37,10 @@ The default trigger mode is `hover`, you can change it to `click`.
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { DownOutlined } from '@ant-design/icons-vue';
+import ArrowDownFilled from '@pf-ui/pf-icons-vue/ArrowDownFilled'
 export default defineComponent({
   components: {
-    DownOutlined,
+    DownOutlined: ArrowDownFilled
   },
 });
 </script>
