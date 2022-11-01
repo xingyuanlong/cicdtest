@@ -19,94 +19,142 @@ There are 12 `placement` options available. Use `arrowPointAtCenter` if you want
 <template>
   <div id="components-pf-popconfirm-demo-placement">
     <div :style="{ marginLeft: `${buttonWidth}px`, whiteSpace: 'nowrap' }">
-      <pf-popconfirm placement="topLeft" ok-text="Yes" cancel-text="No" @confirm="confirm">
-        <template #title>
-          <p>{{ text }}</p>
-          <p>{{ text }}</p>
-        </template>
+      <pf-popconfirm 
+        placement="topLeft" 
+        ok-text="Yes" 
+        cancel-text="No" 
+        @confirm="confirm"
+        :okButtonProps="{type: 'primary', minWidth: '90px'}"
+        :cancelButtonProps="{type: 'secondary', minWidth: '90px'}"
+      >
+        <template #title>{{ text }}</template>
         <pf-button>TL</pf-button>
       </pf-popconfirm>
-      <pf-popconfirm placement="top" ok-text="Yes" cancel-text="No" @confirm="confirm">
-        <template #title>
-          <p>{{ text }}</p>
-          <p>{{ text }}</p>
-        </template>
+      <pf-popconfirm 
+        placement="top" 
+        ok-text="Yes" 
+        cancel-text="No" 
+        @confirm="confirm"
+        :okButtonProps="{type: 'primary', minWidth: '90px'}"
+        :cancelButtonProps="{type: 'secondary', minWidth: '90px'}"
+      >
+        <template #title>{{ text }}</template>
         <pf-button>Top</pf-button>
       </pf-popconfirm>
-      <pf-popconfirm placement="topRight" ok-text="Yes" cancel-text="No" @confirm="confirm">
-        <template #title>
-          <p>{{ text }}</p>
-          <p>{{ text }}</p>
-        </template>
+      <pf-popconfirm 
+        placement="topRight" 
+        ok-text="Yes" 
+        cancel-text="No" 
+        @confirm="confirm"
+        :okButtonProps="{type: 'primary', minWidth: '90px'}"
+        :cancelButtonProps="{type: 'secondary', minWidth: '90px'}"
+      >
+        <template #title>{{ text }}</template>
         <pf-button>TR</pf-button>
       </pf-popconfirm>
     </div>
     <div :style="{ width: `${buttonWidth}px`, float: 'left' }">
-      <pf-popconfirm placement="leftTop" ok-text="Yes" cancel-text="No" @confirm="confirm">
-        <template #title>
-          <p>{{ text }}</p>
-          <p>{{ text }}</p>
-        </template>
+      <pf-popconfirm 
+        placement="leftTop" 
+        ok-text="Yes" 
+        cancel-text="No" 
+        @confirm="confirm"
+        :okButtonProps="{type: 'primary', minWidth: '90px'}"
+        :cancelButtonProps="{type: 'secondary', minWidth: '90px'}"
+      >
+        <template #title>{{ text }}</template>
         <pf-button>LT</pf-button>
       </pf-popconfirm>
-      <pf-popconfirm placement="left" ok-text="Yes" cancel-text="No" @confirm="confirm">
-        <template #title>
-          <p>{{ text }}</p>
-          <p>{{ text }}</p>
-        </template>
+      <pf-popconfirm 
+        placement="left" 
+        ok-text="Yes" 
+        cancel-text="No" 
+        @confirm="confirm"
+        :okButtonProps="{type: 'primary', minWidth: '90px'}"
+        :cancelButtonProps="{type: 'secondary', minWidth: '90px'}"
+      >
+        <template #title>{{ text }}</template>
         <pf-button>Left</pf-button>
       </pf-popconfirm>
-      <pf-popconfirm placement="leftBottom" ok-text="Yes" cancel-text="No" @confirm="confirm">
-        <template #title>
-          <p>{{ text }}</p>
-          <p>{{ text }}</p>
-        </template>
+      <pf-popconfirm 
+        placement="leftBottom" 
+        ok-text="Yes" 
+        cancel-text="No" 
+        @confirm="confirm"
+        :okButtonProps="{type: 'primary', minWidth: '90px'}"
+        :cancelButtonProps="{type: 'secondary', minWidth: '90px'}"
+      >
+        <template #title>{{ text }}</template>
         <pf-button>LB</pf-button>
       </pf-popconfirm>
     </div>
     <div :style="{ width: `${buttonWidth}px`, marginLeft: `${buttonWidth * 4 + 24}px` }">
-      <pf-popconfirm placement="rightTop" ok-text="Yes" cancel-text="No" @confirm="confirm">
-        <template #title>
-          <p>{{ text }}</p>
-          <p>{{ text }}</p>
-        </template>
+      <pf-popconfirm 
+        placement="rightTop" 
+        ok-text="Yes" 
+        cancel-text="No"
+        :okButtonProps="{type: 'primary', minWidth: '90px'}"
+        :cancelButtonProps="{type: 'secondary', minWidth: '90px'}"
+        @confirm="confirm"
+      >
+        <template #title>{{ text }}</template>
         <pf-button>RT</pf-button>
       </pf-popconfirm>
-      <pf-popconfirm placement="right" ok-text="Yes" cancel-text="No" @confirm="confirm">
-        <template #title>
-          <p>{{ text }}</p>
-          <p>{{ text }}</p>
-        </template>
+      <pf-popconfirm 
+        placement="right" 
+        ok-text="Yes" 
+        cancel-text="No" 
+        @confirm="confirm"
+        :okButtonProps="{type: 'primary', minWidth: '90px'}"
+        :cancelButtonProps="{type: 'secondary', minWidth: '90px'}"
+      >
+        <template #title>{{ text }}</template>
         <pf-button>Right</pf-button>
       </pf-popconfirm>
-      <pf-popconfirm placement="rightBottom" ok-text="Yes" cancel-text="No" @confirm="confirm">
-        <template #title>
-          <p>{{ text }}</p>
-          <p>{{ text }}</p>
-        </template>
+      <pf-popconfirm 
+        placement="rightBottom" 
+        ok-text="Yes" 
+        cancel-text="No"
+        @confirm="confirm"
+        :okButtonProps="{type: 'primary', minWidth: '90px'}"
+        :cancelButtonProps="{type: 'secondary', minWidth: '90px'}"
+      >
+        <template #title>{{ text }}</template>
         <pf-button>RB</pf-button>
       </pf-popconfirm>
     </div>
     <div :style="{ marginLeft: `${buttonWidth}px`, clear: 'both', whiteSpace: 'nowrap' }">
-      <pf-popconfirm placement="bottomLeft" ok-text="Yes" cancel-text="No" @confirm="confirm">
-        <template #title>
-          <p>{{ text }}</p>
-          <p>{{ text }}</p>
-        </template>
+      <pf-popconfirm 
+        placement="bottomLeft" 
+        ok-text="Yes" 
+        cancel-text="No"
+        :okButtonProps="{type: 'primary', minWidth: '90px'}"
+        :cancelButtonProps="{type: 'secondary', minWidth: '90px'}"
+        @confirm="confirm"
+      >
+        <template #title>{{ text }}</template>
         <pf-button>BL</pf-button>
       </pf-popconfirm>
-      <pf-popconfirm placement="bottom" ok-text="Yes" cancel-text="No" @confirm="confirm">
-        <template #title>
-          <p>{{ text }}</p>
-          <p>{{ text }}</p>
-        </template>
+      <pf-popconfirm 
+        placement="bottom" 
+        ok-text="Yes" 
+        cancel-text="No" 
+        @confirm="confirm"
+        :okButtonProps="{type: 'primary', minWidth: '90px'}"
+        :cancelButtonProps="{type: 'secondary', minWidth: '90px'}"
+      >
+        <template #title>{{ text }}</template>
         <pf-button>Bottom</pf-button>
       </pf-popconfirm>
-      <pf-popconfirm placement="bottomRight" ok-text="Yes" cancel-text="No" @confirm="confirm">
-        <template #title>
-          <p>{{ text }}</p>
-          <p>{{ text }}</p>
-        </template>
+      <pf-popconfirm 
+        placement="bottomRight" 
+        ok-text="Yes" 
+        cancel-text="No" 
+        @confirm="confirm"
+        :okButtonProps="{type: 'primary', minWidth: '90px'}"
+        :cancelButtonProps="{type: 'secondary', minWidth: '90px'}"
+      >
+        <template #title>{{ text }}</template>
         <pf-button>BR</pf-button>
       </pf-popconfirm>
     </div>

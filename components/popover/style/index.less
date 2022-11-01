@@ -87,8 +87,7 @@
   }
 
   &-message {
-    
-    padding: 4px 0 18px;
+    padding: 0 0 18px;
     color: @popover-color;
     font-size: @font-size-base;
     > .@{iconfont-css-prefix} {
@@ -101,12 +100,22 @@
     }
 
     &-title {
+      color: #333;
+      font-size: 14px;
+      font-weight: 500;
+      padding-left: @font-size-base + 16px;
+    }
+
+    &-content {
+      margin-top: 6px;
+      color: #666;
+      font-size: 12px;
       padding-left: @font-size-base + 16px;
     }
   }
 
   &-buttons {
-    margin-bottom: 2px;
+    // margin-bottom: 2px;
     text-align: left;
     button:first-child {
       margin-left: 26px;
