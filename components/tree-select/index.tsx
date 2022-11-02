@@ -23,8 +23,8 @@ import { warning } from '../vc-util/warning';
 import { flattenChildren } from '../_util/props-util';
 import { useInjectFormItemContext } from '../form/FormItemContext';
 import type { BaseSelectRef } from '../vc-select';
-import FolderFilled from '@pf-ui/pf-icons-vue/FolderFilled'
-import FolderOpenFilled from '@pf-ui/pf-icons-vue/FolderOpenFilled'
+import FolderTwoTone from '@pf-ui/pf-icons-vue/FolderTwoTone';
+import FoldersopeningTwoTone from '@pf-ui/pf-icons-vue/FoldersopeningTwoTone'
 import type { BaseOptionType, DefaultOptionType } from '../vc-tree-select/TreeSelect';
 import type { TreeProps } from '../tree';
 
@@ -40,10 +40,10 @@ const default_icon = ({isLeaf, expanded}) => {
     color: '#FFE28B'
   }
   if(isLeaf || !expanded) {
-    return <FolderFilled style={styleObj} />
+    return <FolderTwoTone style={styleObj} />
   }
 
-  return <FolderOpenFilled style={styleObj} />
+  return <FoldersopeningTwoTone style={styleObj} />
 }
 
 type RawValue = string | number;
