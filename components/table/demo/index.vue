@@ -8,6 +8,7 @@
     <EditCell />
     <EditRow />
     <ExpandChildren />
+    <ExpandChildren1 />
     <Expand />
     <FixedColumnsHeader />
     <FixedColumns />
@@ -61,6 +62,7 @@ import Summary from './summary.vue';
 import Sticky from './sticky.vue';
 import ResizableColumn from './resizable-column.vue';
 import Responsive from './responsive.vue';
+import ExpandChildren1 from './expand-children1.vue'
 import CN from '../index.zh-CN.md';
 import US from '../index.en-US.md';
 import { defineComponent } from 'vue';
@@ -97,6 +99,7 @@ export default defineComponent({
     Sticky,
     ResizableColumn,
     Responsive,
+    ExpandChildren1
   },
 });
 </script>

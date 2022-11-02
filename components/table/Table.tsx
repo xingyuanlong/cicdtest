@@ -603,7 +603,7 @@ const InteralTable = defineComponent<
 
     return () => {
       const {
-        expandIcon = slots.expandIcon || renderExpandIcon(tableLocale.value),
+        expandIcon = slots.expandIcon || renderExpandIcon(tableLocale.value, !!props.rowSelection || !!props.expandedRowRender),
         pagination,
         loading,
         bordered,

@@ -135,6 +135,18 @@
   // ============================= Body =============================
   &-tbody {
     > tr {
+      &[class*='-row-level-']:not(.@{table-prefix-cls}-expanded-row) {
+        td:first-child:not(.@{table-prefix-cls}-selection-column),
+        td.@{table-prefix-cls}-selection-column ~ td:last-child {
+          padding-right: 10px;
+          padding-left: 10px;
+        }
+
+        // td.@{table-prefix-cls}-selection-column ~ td:last-child {
+        //   text-align: center;
+        // }
+      }
+
       > td {
         border-bottom: @border-width-base @border-style-base @table-border-color;
         transition: background 0.3s;
@@ -190,7 +202,42 @@
       }
 
       &.@{table-prefix-cls}-row.isChildren {
+        position: relative;
         background-color: @C6;
+
+        td {
+          border-color: #ccc;
+        }
+
+        // td:first-child,
+        td.@{table-prefix-cls}-selection-column,
+        td.@{table-prefix-cls}-selection-column ~ td:last-child  {
+          border: none;
+        }
+
+        td:first-child:not(.@{table-prefix-cls}-selection-column){
+          display: flex;
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 20px;
+          height: 100%;
+          background-color: @C6;
+        }
+        &:after {
+          content: '';
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 20px;
+          height: 100%;
+          background-color: @C6;
+        }
+        
       }
 
       // 先隐藏--2022-9-28
@@ -407,6 +454,7 @@
       overflow-x: hidden;
       border: 0;
       box-shadow: none;
+      padding: 0;
 
       &:empty::after {
         display: block;
@@ -415,6 +463,10 @@
         font-size: @font-size-sm;
         text-align: center;
         content: 'Not Found';
+      }
+
+      &-item-selected {
+        background-color: unset;
       }
 
       &-item {
@@ -501,7 +553,7 @@
 
   table tr th&-selection-column,
   table tr td&-selection-column {
-    padding-right: 0; // @padding-xs;
+    padding-right: 20px; // @padding-xs;
     padding-left: 20px;
     text-align: center;
 
@@ -509,6 +561,12 @@
       margin-right: 0;
     }
   }
+
+  table tr th&-selection-column + &-cell,
+  table tr td&-selection-column + &-cell {
+    padding-left: 0px;
+  }
+
 
   table tr th&-selection-column&-cell-fix-left {
     z-index: 3;
@@ -554,7 +612,7 @@
 
   &-row-indent {
     float: left;
-    height: 1px;
+    height: 16px;
   }
 
   &-row-expand-icon {
@@ -564,8 +622,8 @@
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    width: @expand-icon-size;
-    height: @expand-icon-size;
+    width: 14px; // @expand-icon-size;
+    height: 14px; // @expand-icon-size;
     padding: 0;
     color: inherit;
     background: transparent;
@@ -580,12 +638,17 @@
     &:focus,
     &:hover,
     &:active {
+      color: unset;
       border-color: currentcolor;
     }
 
     // Motion effect
     &-collapsed {
       transform: rotate(-180deg);
+    }
+
+    &-transform-90deg {
+      transform: rotate(-90deg);
     }
 
     &-spaced {
@@ -600,8 +663,9 @@
     }
 
     .@{table-prefix-cls}-row-indent + & {
-      margin-top: ((@font-size-base * @line-height-base - @border-width-base * 3) / 2) -
-        ceil(((@font-size-sm * 1.4 - @border-width-base * 3) / 2));
+      // margin-top: ((@font-size-base * @line-height-base - @border-width-base * 3) / 2) -
+      //   ceil(((@font-size-sm * 1.4 - @border-width-base * 3) / 2));
+      margin-top: 0;
       margin-right: @padding-xs;
     }
   }
