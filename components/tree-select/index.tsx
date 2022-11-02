@@ -23,7 +23,7 @@ import { warning } from '../vc-util/warning';
 import { flattenChildren } from '../_util/props-util';
 import { useInjectFormItemContext } from '../form/FormItemContext';
 import type { BaseSelectRef } from '../vc-select';
-import FolderTwoTone from '@pf-ui/pf-icons-vue/FolderTwoTone'
+import FolderTwoTone from '@pf-ui/pf-icons-vue/FolderTwoTone';
 import FoldersopeningTwoTone from '@pf-ui/pf-icons-vue/FoldersopeningTwoTone'
 import type { BaseOptionType, DefaultOptionType } from '../vc-tree-select/TreeSelect';
 import type { TreeProps } from '../tree';
