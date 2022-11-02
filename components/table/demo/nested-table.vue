@@ -37,7 +37,7 @@ Showing more detailed info of every row.
             <span class="table-operation">
               <a>Pause</a>
               <a>Stop</a>
-              <pf-dropdown arrow>
+              <pf-dropdown arrow placement="bottom">
                 <template #overlay>
                   <pf-menu>
                     <pf-menu-item>Action 1</pf-menu-item>

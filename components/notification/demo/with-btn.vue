@@ -18,6 +18,7 @@ To customize the style or font of the close button.
 
 <template>
   <pf-button type="primary" @click="openNotification">Open the notification box</pf-button>
+  <br />
   <pf-button type="primary" @click="openNotification1">空的消息(用于自定义内容)</pf-button>
 </template>
 
