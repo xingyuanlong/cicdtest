@@ -693,6 +693,7 @@ const InteralTable = defineComponent<
                 [`${prefixCls.value}-small`]: mergedSize.value === 'small',
                 [`${prefixCls.value}-bordered`]: bordered,
                 [`${prefixCls.value}-empty`]: rawData.value.length === 0,
+                [`${prefixCls.value}-selection-table`]: !!props.rowSelection
               })}
               data={pageData.value}
               rowKey={getRowKey.value}

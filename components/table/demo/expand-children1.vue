@@ -72,7 +72,7 @@ You can control the indent width by setting `indentSize`.
           key: 12,
           name: 'John Brown jr.',
           age: 30,
-          address: 'New York No. 3 Lake Park',
+          address: 'New York No. 3 Lake Park!',
           children: [
             {
               key: 121,

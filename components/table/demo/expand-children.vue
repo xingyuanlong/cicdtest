@@ -32,7 +32,7 @@ const columns = [
     title: '序号',
     key: 'index',
     dataIndex: 'index',
-    width: 50,
+    width: 60,
     customRender: ({record}) => {
       return record.key
     },
@@ -40,7 +40,7 @@ const columns = [
   {
     title: 'Name',
     dataIndex: 'name',
-    key: 'name',
+    key: 'name'
   },
   {
     title: 'Age',
@@ -51,6 +51,7 @@ const columns = [
   {
     title: 'Address',
     dataIndex: 'address',
+    ellipsis: true,
     width: '30%',
     key: 'address',
   },
@@ -75,7 +76,7 @@ const data: DataItem[] = [
         key: '',
         name: 'John Brown',
         age: 42,
-        address: 'New York No. 2 Lake Park',
+        address: 'New York No. 2 Lake Park! 你好的房贷首付房贷首付水电费水电费舒服',
       },
       {
         key: '',
