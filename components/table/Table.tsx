@@ -578,7 +578,8 @@ const InteralTable = defineComponent<
           line2: !!line2,
           line3: !!line3,
           bodyNoPadding: !!bodyNoPadding,
-          striped: !!striped
+          striped: !!striped,
+          [`${prefixCls.value}-row-selection`]: !!props.rowSelection
         },
         mergedRowClassName
       );

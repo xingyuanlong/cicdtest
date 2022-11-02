@@ -218,8 +218,14 @@
         td:first-child:not(.@{table-prefix-cls}-selection-column){
           display: flex;
         }
+        
+        &.@{table-prefix-cls}-row-selection {
+          .@{table-prefix-cls}-row-indent {
+            display: none;
+          }
+        }
 
-        &:before {
+        &:not(.@{table-prefix-cls}-row-selection)::before {
           content: '';
           position: absolute;
           left: 0;
@@ -228,7 +234,8 @@
           height: 100%;
           background-color: @C6;
         }
-        &:after {
+
+        &:not(.@{table-prefix-cls}-row-selection)::after {
           content: '';
           position: absolute;
           right: 0;
@@ -237,7 +244,11 @@
           height: 100%;
           background-color: @C6;
         }
-        
+
+        // &:hover::before,
+        // &:hover::after {
+        //   background: @table-row-hover-bg;
+        // }
       }
 
       // 先隐藏--2022-9-28
