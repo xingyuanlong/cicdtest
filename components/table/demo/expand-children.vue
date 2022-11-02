@@ -29,6 +29,15 @@ You can control the indent width by setting `indentSize`.
 import { defineComponent, ref } from 'vue';
 const columns = [
   {
+    title: '序号',
+    key: 'index',
+    dataIndex: 'index',
+    width: 50,
+    customRender: ({record}) => {
+      return record.key
+    },
+  },
+  {
     title: 'Name',
     dataIndex: 'name',
     key: 'name',
@@ -48,7 +57,7 @@ const columns = [
 ];
 
 interface DataItem {
-  key: number;
+  key: any;
   name: string;
   age: number;
   address: string;
@@ -57,25 +66,25 @@ interface DataItem {
 
 const data: DataItem[] = [
   {
-    key: 1,
+    key: '1',
     name: 'John Brown sr.',
     age: 60,
     address: 'New York No. 1 Lake Park',
     children: [
       {
-        key: 11,
+        key: '',
         name: 'John Brown',
         age: 42,
         address: 'New York No. 2 Lake Park',
       },
       {
-        key: 12,
+        key: '',
         name: 'John Brown jr.',
         age: 30,
         address: 'New York No. 3 Lake Park',
         children: [
           {
-            key: 121,
+            key: '',
             name: 'Jimmy Brown',
             age: 16,
             address: 'New York No. 3 Lake Park',
@@ -83,25 +92,25 @@ const data: DataItem[] = [
         ],
       },
       {
-        key: 13,
+        key: '',
         name: 'Jim Green sr.',
         age: 72,
         address: 'London No. 1 Lake Park',
         children: [
           {
-            key: 131,
+            key: '',
             name: 'Jim Green',
             age: 42,
             address: 'London No. 2 Lake Park',
             children: [
               {
-                key: 1311,
+                key: '',
                 name: 'Jim Green jr.',
                 age: 25,
                 address: 'London No. 3 Lake Park',
               },
               {
-                key: 1312,
+                key: '',
                 name: 'Jimmy Green sr.',
                 age: 18,
                 address: 'London No. 4 Lake Park',

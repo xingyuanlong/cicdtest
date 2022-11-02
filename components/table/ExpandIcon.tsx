@@ -1,6 +1,7 @@
 import classNames from '../_util/classNames';
 import type { TableLocale } from './interface';
 import CollapseFilled from '@pf-ui/pf-icons-vue/CollapseFilled'
+import ArrowDownFilled from '@pf-ui/pf-icons-vue/ArrowDownFilled'
 
 interface DefaultExpandIconProps<RecordType> {
   prefixCls: string;
@@ -10,13 +11,13 @@ interface DefaultExpandIconProps<RecordType> {
   expandable: boolean;
 }
 
-function renderExpandIcon(locale: TableLocale) {
+function renderExpandIcon(locale: TableLocale, showCollapse: boolean) {
   return function expandIcon<RecordType>({
     prefixCls,
     onExpand,
     record,
     expanded,
-    expandable,
+    expandable
   }: DefaultExpandIconProps<RecordType>) {
     const iconPrefix = `${prefixCls}-row-expand-icon`;
 
@@ -29,12 +30,13 @@ function renderExpandIcon(locale: TableLocale) {
         }}
         class={classNames(iconPrefix, {
           [`${iconPrefix}-spaced`]: !expandable,
-          [`${iconPrefix}-expanded`]: expandable && expanded,
+          [`${iconPrefix}-expanded`]: expandable && expanded && showCollapse,
           [`${iconPrefix}-collapsed`]: expandable && !expanded,
+          [`${iconPrefix}-transform-90deg`]: expandable && expanded && !showCollapse,
         })}
         aria-label={expanded ? locale.collapse : locale.expand}
       >
-        <CollapseFilled />
+        {showCollapse ? <CollapseFilled /> : <ArrowDownFilled rotate={90} /> }
       </button>
     );
   };
