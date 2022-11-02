@@ -28,7 +28,7 @@ export default function getIcons(props: any, slots: any = {}) {
     const iconCls = `${prefixCls}-suffix`;
     mergedSuffixIcon = ({ open, showSearch }: { open: boolean; showSearch: boolean }) => {
       if (open && showSearch) {
-        return <SearchOutlined class={iconCls} />;
+        return <SearchOutlined class={iconCls} style={{ fontSize: '16px !important', marginTop: '-2px' }} />;
       }
       return <CaretDownOutlined class={iconCls} />;
     };
