@@ -506,7 +506,7 @@ export default defineComponent<FilterDropdownProps<any>>({
             visible={mergedVisible.value}
             onVisibleChange={onVisibleChange}
             getPopupContainer={getPopupContainer}
-            placement={direction.value === 'rtl' ? 'bottomLeft' : 'bottomRight'}
+            placement={direction.value === 'rtl' ? 'bottomLeft' : 'bottom'}
           >
             <span
               role="button"

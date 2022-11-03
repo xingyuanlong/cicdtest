@@ -673,6 +673,7 @@ const InteralTable = defineComponent<
         attrs.class,
       );
       const tableProps = omit(props, ['columns']);
+      const hasMultiHeader = mergedColumns.value.some(item => item.hasOwnProperty('children'))
       return (
         <div class={wrapperClassNames} style={attrs.style as CSSProperties}>
           <Spin spinning={false} {...spinProps}>
@@ -693,7 +694,8 @@ const InteralTable = defineComponent<
                 [`${prefixCls.value}-small`]: mergedSize.value === 'small',
                 [`${prefixCls.value}-bordered`]: bordered,
                 [`${prefixCls.value}-empty`]: rawData.value.length === 0,
-                [`${prefixCls.value}-selection-table`]: !!props.rowSelection
+                [`${prefixCls.value}-selection-table`]: !!props.rowSelection,
+                [`${prefixCls.value}-multi-header`]: hasMultiHeader
               })}
               data={pageData.value}
               rowKey={getRowKey.value}
