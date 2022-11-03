@@ -80,7 +80,7 @@ export default defineComponent<ConfirmDialogProps>({
         okButtonProps,
         cancelButtonProps,
         okCancel = true,
-        width = 416,
+        width = 300,
         mask = true,
         maskClosable = false,
         type,

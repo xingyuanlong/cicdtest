@@ -88,7 +88,7 @@ cover: https://gw.alipayobjects.com/zos/alicdn/3StSdUlSH/Modal.svg
 | okText | 确认按钮文字 | string | 确定 |  |
 | okType | 确认按钮类型 | string | primary |  |
 | title | 标题 | string\|VNode \|function(h) | 无 |  |
-| width | 宽度 | string\|number | 416 |  |
+| width | 宽度 | string\|number | 300 |  |
 | wrapClassName | 对话框外层容器的类名 | string | - | 3.2.3 |
 | zIndex | 设置 Modal 的 `z-index` | number | 1000 |  |
 | onCancel | 取消回调，参数为关闭函数，返回 promise 时 resolve 后自动关闭 | function | 无 |  |
