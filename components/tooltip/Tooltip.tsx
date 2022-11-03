@@ -217,7 +217,7 @@ export default defineComponent({
     };
 
     return () => {
-      const { openClassName, color, overlayClassName } = props;
+      const { openClassName, color, overlayClassName, overlayStyle, theme } = props;
       let children = filterEmpty(slots.default?.()) ?? null;
       children = children.length === 1 ? children[0] : children;
 
@@ -238,6 +238,7 @@ export default defineComponent({
       });
       const customOverlayClassName = classNames(overlayClassName, {
         [`${prefixCls.value}-${color}`]: color && PresetColorRegex.test(color),
+        [`${prefixCls.value}-theme-white`]: theme === 'white'
       });
       let formattedOverlayInnerStyle: CSSProperties;
       let arrowContentStyle: CSSProperties;
@@ -245,6 +246,9 @@ export default defineComponent({
         formattedOverlayInnerStyle = { backgroundColor: color };
         arrowContentStyle = { backgroundColor: color };
       }
+      console.log({...formattedOverlayInnerStyle, ...overlayStyle}, '--overlayStyle--')
+      
+
       const vcTooltipProps = {
         ...attrs,
         ...(props as TooltipProps),
@@ -254,7 +258,7 @@ export default defineComponent({
         visible: tempVisible,
         ref: tooltip,
         overlayClassName: customOverlayClassName,
-        overlayInnerStyle: formattedOverlayInnerStyle,
+        overlayInnerStyle: {...formattedOverlayInnerStyle, ...overlayStyle},
         onVisibleChange: handleVisibleChange,
         onPopupAlign,
       };

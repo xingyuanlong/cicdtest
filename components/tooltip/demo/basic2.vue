@@ -8,27 +8,17 @@ title:
 
 ## zh-CN
 
-最简单的用法。
+添加白色主题，显示白底黑字。
 
 ## en-US
 
-The simplest usage.
+add the attribute theme.
 
 </docs>
 
 <template>
-    <pf-tooltip overlayClassName="tooltip-other-color">
-      <template #title>白底黑字</template>
+    <pf-tooltip overlayClassName="tooltip-other-color" theme="white" :overlayStyle="{'max-width': '300px'}">
+      <template #title>白底黑字,你还想赖账！</template>
       Tooltip will show when mouse enter.
     </pf-tooltip>
 </template>
-
-<style>
-.tooltip-other-color .pf-tooltip-inner{
-    background: #fff;
-    color: #333;
-}
-.tooltip-other-color  .pf-tooltip-arrow-content {
-    background: #fff;
-}
-</style>

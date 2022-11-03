@@ -48,4 +48,5 @@ export default () => ({
   children: Array,
   onVisibleChange: Function as PropType<(vis: boolean) => void>,
   'onUpdate:visible': Function as PropType<(vis: boolean) => void>,
+  theme: String
 });

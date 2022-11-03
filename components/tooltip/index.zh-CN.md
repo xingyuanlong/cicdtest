@@ -39,6 +39,7 @@ cover: https://gw.alipayobjects.com/zos/alicdn/Vyyeu8jq2/Tooltp.svg
 | placement | 气泡框位置，可选 `top` `left` `right` `bottom` `topLeft` `topRight` `bottomLeft` `bottomRight` `leftTop` `leftBottom` `rightTop` `rightBottom` | string | top |
 | trigger | 触发行为，可选 `hover/focus/click/contextmenu` | string | hover |
 | visible(v-model) | 用于手动控制浮层显隐 | boolean | false |
+| theme | 主题色 | string | 目前只支持 "white"
 
 ### 事件
 
