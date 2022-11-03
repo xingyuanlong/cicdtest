@@ -33,7 +33,7 @@ interface FilterRestProps {
   closeDropdown?: Boolean;
 }
 
-const { SubMenu, Item: MenuItem } = Menu;
+const { Item: MenuItem } = Menu;
 
 function hasSubMenu(filters: ColumnFilterItem[]) {
   return filters.some(({ children }) => children && children.length > 0);
@@ -50,7 +50,6 @@ function renderFilterItems({
   filters,
   prefixCls,
   filteredKeys,
-  filterMultiple,
   searchValue,
   filterSearch
 }: {
@@ -439,7 +438,7 @@ export default defineComponent<FilterDropdownProps<any>>({
     };
 
     return () => {
-      const { tablePrefixCls, prefixCls, column, dropdownPrefixCls, locale, getPopupContainer } =
+      const { tablePrefixCls, prefixCls, column, dropdownPrefixCls, getPopupContainer } =
         props;
 
       let dropdownContent;

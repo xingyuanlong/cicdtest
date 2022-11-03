@@ -181,7 +181,6 @@ export default defineComponent<CellProps>({
         additionalProps = {},
         ellipsis,
         align,
-        rowType,
         isSticky,
         column = {},
         cellType,

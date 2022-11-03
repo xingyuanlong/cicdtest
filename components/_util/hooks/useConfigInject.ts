@@ -1,6 +1,6 @@
 import type { RequiredMark } from '../../form/Form';
 import type { ComputedRef, UnwrapRef } from 'vue';
-import { computed, inject, ref } from 'vue';
+import { computed, inject } from 'vue';
 import type { ConfigProviderProps, CSPConfig, Direction, SizeType } from '../../config-provider';
 import { defaultConfigProvider } from '../../config-provider';
 import type { VueNode } from '../type';
