@@ -246,7 +246,6 @@ export default defineComponent({
         formattedOverlayInnerStyle = { backgroundColor: color };
         arrowContentStyle = { backgroundColor: color };
       }
-      console.log({...formattedOverlayInnerStyle, ...overlayStyle}, '--overlayStyle--')
       
 
       const vcTooltipProps = {
