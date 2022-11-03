@@ -29,6 +29,7 @@ cover: https://gw.alipayobjects.com/zos/alicdn/fjMCD9xRq/Popconfirm.svg
 | title | 确认框的标题 | string\|slot | 无 |  |
 | content | 确认框的内容 | string\|slot | 无 | |
 | visible (v-model) | 是否显示 | boolean | - |  |
+| overlayStyle | 确认框自定义样式 | object  | 无 |
 
 ### 事件
 

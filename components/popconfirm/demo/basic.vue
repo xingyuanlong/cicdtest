@@ -26,6 +26,7 @@ The basic example.
     content="删除就无法恢复，请三思!"
     :okButtonProps="{type: 'secondary', minWidth: '90px'}"
     :cancelButtonProps="{type: 'secondary', minWidth: '90px'}"
+    :overlayStyle="{width: '300px'}"
   >
     <a href="#">Delete</a>
   </pf-popconfirm>
