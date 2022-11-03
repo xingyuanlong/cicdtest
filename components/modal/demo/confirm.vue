@@ -32,7 +32,7 @@ export default defineComponent({
   setup() {
     const showConfirm = () => {
       PfModal.confirm({
-        title: 'Do you Want to delete these items?',
+        title: 'Do you Want to delete?',
         icon: createVNode(ExclamationCircleOutlined),
         closable: true,
         content: createVNode('div', { style: 'color:red;' }, 'Some descriptions'),
@@ -110,7 +110,7 @@ export default defineComponent({
 
     function showPromiseConfirm() {
       PfModal.confirm({
-        title: 'Do you want to delete these items?',
+        title: 'Do you want to delete?',
         icon: createVNode(ExclamationCircleOutlined),
         closable: true,
         content: 'When clicked the OK button, this dialog will be closed after 1 second',
