@@ -176,6 +176,7 @@ export default defineComponent({
     right: 10px;
     cursor: pointer;
     font-size: 16px;
+    color: #999999;
   }
 
   .editable-cell-icon:hover,
