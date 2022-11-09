@@ -30,6 +30,7 @@ build:
   script: 
     - npm config set registry https://maven-hz.rubikstack.com/repository/npm-public
     - npm install
+    - rm -rf ./site/dist
     - npm run site
     - cp  ./Dockerfile ./site/dist
     - cp  ./nginx.conf ./site/dist
