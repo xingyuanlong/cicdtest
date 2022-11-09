@@ -32,11 +32,11 @@ Table with editable cells.
         <div class="editable-cell edit-row">
           <div v-if="editableData[record.key]" class="editable-cell-input-wrapper">
             <pf-input v-model:value="editableData[record.key].name" @pressEnter="save(record.key)" style="height: 26px" />
-            <check-outlined class="editable-cell-icon-check" @click="save(record.key)" />
+            <right-filled class="editable-cell-icon-check" @click="save(record.key)" />
           </div>
           <div v-else class="editable-cell-text-wrapper">
             {{ text || ' ' }}
-            <edit-outlined class="editable-cell-icon" @click="edit(record.key)" />
+            <edit2-filled class="editable-cell-icon" @click="edit(record.key)" />
           </div>
         </div>
       </template>
@@ -60,7 +60,8 @@ Table with editable cells.
 <script lang="ts">
 import { computed, defineComponent, reactive, ref } from 'vue';
 import type { Ref, UnwrapRef } from 'vue';
-import { CheckOutlined, EditOutlined } from '@ant-design/icons-vue';
+import Edit2Filled from '@pf-ui/pf-icons-vue/Edit2Filled';
+import RightFilled from '@pf-ui/pf-icons-vue/RightFilled';
 import { cloneDeep } from 'lodash-es';
 
 interface DataItem {
@@ -72,8 +73,8 @@ interface DataItem {
 
 export default defineComponent({
   components: {
-    CheckOutlined,
-    EditOutlined,
+    Edit2Filled,
+    RightFilled,
   },
   setup() {
     const columns = [
@@ -172,9 +173,9 @@ export default defineComponent({
   .editable-cell-icon,
   .editable-cell-icon-check {
     position: absolute;
-    right: 0;
-    width: 20px;
+    right: 10px;
     cursor: pointer;
+    font-size: 16px;
   }
 
   .editable-cell-icon:hover,

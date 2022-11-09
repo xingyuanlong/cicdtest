@@ -61,7 +61,7 @@ import ArrowDownFilled from '@pf-ui/pf-icons-vue/ArrowDownFilled';
 import { defineComponent } from 'vue';
 
 const columns = [
-  { title: 'Name', dataIndex: 'name', key: 'name', align: 'left' },
+  { title: 'Name', dataIndex: 'name', key: 'name' },
   { title: 'Platform', dataIndex: 'platform', key: 'platform' },
   { title: 'Version', dataIndex: 'version', key: 'version' },
   { title: 'Upgraded', dataIndex: 'upgradeNum', key: 'upgradeNum' },
