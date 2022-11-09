@@ -25,7 +25,7 @@ Showing more detailed info of every row.
       </template>
     </template>
     <template #expandedRowRender>
-      <pf-table :columns="innerColumns" :data-source="innerData" :pagination="false">
+      <pf-table :columns="innerColumns" :data-source="innerData" :pagination="false" class="inner-table">
         <template #bodyCell="{ column }">
           <template v-if="column.key === 'state'">
             <span>
@@ -61,7 +61,7 @@ import ArrowDownFilled from '@pf-ui/pf-icons-vue/ArrowDownFilled';
 import { defineComponent } from 'vue';
 
 const columns = [
-  { title: 'Name', dataIndex: 'name', key: 'name' },
+  { title: 'Name', dataIndex: 'name', key: 'name', align: 'left' },
   { title: 'Platform', dataIndex: 'platform', key: 'platform' },
   { title: 'Version', dataIndex: 'version', key: 'version' },
   { title: 'Upgraded', dataIndex: 'upgradeNum', key: 'upgradeNum' },
@@ -136,3 +136,9 @@ export default defineComponent({
   },
 });
 </script>
+<style>
+.inner-table {
+  padding: 0 20px;
+  background-color: #f5f5f5;
+}
+</style>

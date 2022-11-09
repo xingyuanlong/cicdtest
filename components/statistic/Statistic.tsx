@@ -44,16 +44,21 @@ export default defineComponent({
       const prefix = props.prefix ?? slots.prefix?.();
       const suffix = props.suffix ?? slots.suffix?.();
       const formatter = props.formatter ?? slots.formatter;
+      let valueNode;
       // data-for-update just for update component
       // https://github.com/vueComponent/pf-ui-vue/pull/3170
-      let valueNode = (
-        <StatisticNumber
-          data-for-update={Date.now()}
-          {...{ ...props, prefixCls: pre, value, formatter }}
-        />
-      );
-      if (valueRender) {
-        valueNode = valueRender(valueNode);
+      if (slots.value) {
+        valueNode = slots.value?.();
+      } else {
+        valueNode = (
+          <StatisticNumber
+            data-for-update={Date.now()}
+            {...{ ...props, prefixCls: pre, value, formatter }}
+          />
+        );
+        if (valueRender) {
+          valueNode = valueRender(valueNode);
+        }
       }
       return (
         <div class={[pre, { [`${pre}-rtl`]: direction.value === 'rtl' }]}>

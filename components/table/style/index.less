@@ -136,7 +136,7 @@
   &-tbody {
     > tr {
       &[class*='-row-level-']:not(.@{table-prefix-cls}-expanded-row) {
-        td:first-child:not(.@{table-prefix-cls}-selection-column),
+        td:first-child.@{table-prefix-cls}-cell-with-append:not(.@{table-prefix-cls}-selection-column),
         td.@{table-prefix-cls}-selection-column ~ td:last-child {
           padding-right: 10px;
           padding-left: 10px;
@@ -455,7 +455,19 @@
     min-width: 120px;
     background-color: @table-filter-dropdown-bg;
     border-radius: @border-radius-base;
-    box-shadow: @box-shadow-base;
+    // box-shadow: @box-shadow-base;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      border: 1px solid @C7;
+      border-radius: @border-radius-base;
+    }
 
     // Reset menu
     .@{dropdown-prefix-cls}-menu {

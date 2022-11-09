@@ -268,3 +268,6 @@ export { default as PfLocaleProvider } from './locale-provider';
 
 export { default as PfWatermark } from './watermark';
 export type { WatermarkProps } from './watermark';
+
+export type { NumberAnimationProps, NumberAnimationInst } from './number-animation';
+export { default as PfNumberAnimation } from './number-animation';

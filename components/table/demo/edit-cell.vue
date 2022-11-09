@@ -26,23 +26,33 @@ Table with editable cells.
   >
     新增
   </pf-button>
-  <pf-table bordered :data-source="dataSource" :columns="columns">
+  <pf-table bordered :data-source="dataSource" :columns="columns" bodyNoPadding>
     <template #bodyCell="{ column, text, record }">
       <template v-if="column.dataIndex === 'name'">
-        <div class="editable-cell">
-          <div class="editable-cell-text-wrapper">
+        <div class="editable-cell edit-row">
+          <div v-if="editableData[record.key]" class="editable-cell-input-wrapper">
+            <pf-input v-model:value="editableData[record.key].name" @pressEnter="save(record.key)" style="height: 26px" />
+            <check-outlined class="editable-cell-icon-check" @click="save(record.key)" />
+          </div>
+          <div v-else class="editable-cell-text-wrapper">
             {{ text || ' ' }}
+            <edit-outlined class="editable-cell-icon" @click="edit(record.key)" />
           </div>
         </div>
       </template>
       <template v-else-if="column.dataIndex === 'operation'">
-        <pf-popconfirm
-          v-if="dataSource.length"
-          title="Sure to delete?"
-          @confirm="onDelete(record.key)"
-        >
-          <a>Delete</a>
-        </pf-popconfirm>
+        <div class="static-row">
+          <pf-popconfirm
+            v-if="dataSource.length"
+            title="Sure to delete?"
+            @confirm="onDelete(record.key)"
+          >
+            <a>Delete</a>
+          </pf-popconfirm>
+        </div>
+      </template>
+      <template v-else>
+        <div class="static-row">{{ text }}</div>
       </template>
     </template>
   </pf-table>
@@ -137,10 +147,25 @@ export default defineComponent({
 });
 </script>
 <style lang="less">
+
+.edit-row {
+  padding: 3px 10px;
+}
+
+.static-row {
+  padding: 7.5px 10px;
+}
+
+.edit-row div {
+  line-height: 26px;
+}
+
 .editable-cell {
   position: relative;
   .editable-cell-input-wrapper,
   .editable-cell-text-wrapper {
+    display: flex;
+    align-items: center;
     padding-right: 24px;
   }
 
@@ -150,15 +175,6 @@ export default defineComponent({
     right: 0;
     width: 20px;
     cursor: pointer;
-  }
-
-  .editable-cell-icon {
-    margin-top: 4px;
-    display: none;
-  }
-
-  .editable-cell-icon-check {
-    line-height: 28px;
   }
 
   .editable-cell-icon:hover,

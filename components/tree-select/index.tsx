@@ -37,7 +37,8 @@ const getTransitionName = (rootPrefixCls: string, motion: string, transitionName
 
 const default_icon = ({isLeaf, expanded}) => {
   const styleObj = {
-    color: '#FFE28B'
+    color: '#FFE28B',
+    fontSize: '16px'
   }
   if(isLeaf || !expanded) {
     return <FolderTwoTone style={styleObj} />
