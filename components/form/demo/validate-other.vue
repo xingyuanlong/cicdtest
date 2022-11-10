@@ -127,6 +127,24 @@ Demonstration of validation configuration for form controls which are not shown 
       <pf-rate v-model:value="formState.rate" allow-half />
     </pf-form-item>
 
+    <pf-form-item name="searchInput" label="searchInput">
+      <pf-search-input
+        placeholder="input search text"
+      />
+    </pf-form-item>
+
+    <pf-form-item name="rate" label="Rate">
+      <pf-textarea :rows="4" placeholder="maxLength is 6" :maxlength="6" showCount/>
+    </pf-form-item>
+
+    <pf-form-item name="searchInput" label="searchInput">
+      <pf-input-search
+        placeholder="input search text"
+        enter-button
+        allowClear
+      />
+    </pf-form-item>
+
     <pf-form-item name="upload" label="Upload" extra="longgggggggggggggggggggggggggggggggggg">
       <pf-upload
         v-model:fileList="formState.upload"
