@@ -37,7 +37,7 @@ cover: https://gw.alipayobjects.com/zos/alicdn/8cYb5seNB/Radio.svg
 | optionType | 用于设置 Radio `options` 类型 | `default` \| `button` | `default` | 3.0.0 |
 | size | 大小，只对按钮样式生效 | `large` \| `default` \| `small` | `default` |  |
 | value(v-model) | 用于设置当前选中的值 | any | - |  |
-| aequilate | 子元素是否等宽（取最宽元素的宽度），只对按钮样式生效，最大宽度mounted后不可变 | boolean | `true` |  |
+| aequilate | 子元素是否等宽（取最宽子元素的宽度），只对按钮样式生效，最大宽度mounted后不可变，动态内容或因字体导致宽度不够的情况请自行设置宽度 | boolean | `true` |  |
 
 ### RadioGroup 事件
 

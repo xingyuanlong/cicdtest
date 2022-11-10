@@ -88,7 +88,9 @@ export default defineComponent({
     
     onMounted(() => {
       if (childWidths.value.length > 0) {
-        childMaxWidth.value = Math.max(...childWidths.value)
+        const max = Math.max(...childWidths.value)
+        // 防止因字体关系导致长度不足
+        childMaxWidth.value = Math.ceil(1.1 * max)
       }
     });
 
