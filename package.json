@@ -1,6 +1,6 @@
 {
   "name": "@pf-ui/pf-ui-vue",
-  "version": "1.0.0-bate.7",
+  "version": "1.0.0-bate.8",
   "title": "pf-ui-vue",
   "description": "An enterprise-class UI design language and Vue-based implementation",
   "keywords": [
@@ -270,7 +270,7 @@
     "@ant-design/icons-vue": "^6.1.0",
     "@babel/runtime": "^7.10.5",
     "@ctrl/tinycolor": "^3.4.0",
-    "@pf-ui/pf-icons-vue": "1.1.28",
+    "@pf-ui/pf-icons-vue": "^1.1.28",
     "@simonwep/pickr": "~1.8.0",
     "ant-design-vue": "^3.2.13",
     "array-tree-filter": "^2.1.0",

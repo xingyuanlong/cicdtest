@@ -79,7 +79,7 @@ export default (
     virtual,
     dropdownMatchSelectWidth,
     rootPrefixCls,
-    getPrefixCls: configProvider.getPrefixCls,
+    getPrefixCls: defaultConfigProvider.getPrefixCls,
     autocomplete,
     csp,
   };
