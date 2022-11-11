@@ -93,23 +93,6 @@ export default defineComponent({
         })
         .filter(i => i.children.length)
         .concat([
-          {
-            children: [
-              {
-                category: 'Components',
-                cols: 1,
-                cover: 'https://gw.alipayobjects.com/zos/alicdn/f-SbcX2Lx/Table.svg',
-                path: 'https://surely.cool/',
-                subtitle: '更强大的表格',
-                title: 'Powerful Table',
-                type: 'Advanced And Powerful',
-                target: '_blank',
-              },
-            ],
-            enTitle: 'Advanced And Powerful',
-            title: '更强大',
-            order: 0,
-          },
         ]);
     });
     onMounted(() => {
