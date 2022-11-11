@@ -7,7 +7,7 @@
       trigger="click"
       arrow-point-at-center
     >
-      <UnorderedListOutlined class="nav-phone-icon" />
+      <UnorderedListOutlined class="nav-phone-icon" v-show="isMobile" />
       <template #content>
         <Menu :is-mobile="isMobile" />
       </template>
