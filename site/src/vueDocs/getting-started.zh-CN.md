@@ -40,7 +40,7 @@ $ npm i --save @pf-ui/pf-ui-vue
 import { createApp } from 'vue';
 import PfUiVue from '@pf-ui/pf-ui-vue';
 import App from './App';
-import '@pf-ui/pf-ui-vue/dist/antd.css';
+import '@pf-ui/pf-ui-vue/dist/antd.variable.css';
 
 const app = createApp(App);
 
