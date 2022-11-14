@@ -3,12 +3,14 @@ import { provide, defineComponent, reactive, watch } from 'vue';
 import type { ModalLocale } from '../modal/locale';
 import warning from '../_util/warning';
 import { withInstall } from '../_util/type';
+import { localeDataSymbol } from '../_util/globalSymbol';
 import type { ValidateMessages } from '../form/interface';
 import type { TransferLocale } from '../transfer';
 import type { PickerLocale as DatePickerLocale } from '../date-picker/generatePicker';
 import type { PaginationLocale } from '../pagination/Pagination';
 import type { TableLocale } from '../table/interface';
 import type { UploadLocale } from '../upload/interface';
+
 
 interface TransferLocaleForEmpty {
   description: string;
@@ -73,7 +75,7 @@ const LocaleProvider = defineComponent({
       },
       ANT_MARK__: ANT_MARK,
     });
-    provide('localeData', state);
+    provide(localeDataSymbol, state);
     watch(
       () => props.locale,
       () => {

@@ -44,6 +44,7 @@ export default {
     };
   },
   watch: {
+    // configProvider已改成symbol，已无法使用这种形式watch，需改成组合式
     'configProvider.locale.ColorPicker': {
       handler(val) {
         if (this.locale) return;

@@ -113,7 +113,7 @@ function finalizeDist() {
       `
 function getThemeVariables(options = {}) {
   let themeVar = {
-    'hack': \`true;@import "\${require.resolve('ant-design-vue/lib/style/color/colorPalette.less')}";\`,
+    'hack': \`true;@import "\${require.resolve('@pf-ui/pf-ui-vue/lib/style/color/colorPalette.less')}";\`,
     ...defaultTheme
   };
   if(options.dark) {

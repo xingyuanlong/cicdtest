@@ -2,12 +2,13 @@ import type { ComputedRef, UnwrapRef } from 'vue';
 import { computed, inject, provide } from 'vue';
 import type { ConfigProviderProps, SizeType } from '../../config-provider';
 import { defaultConfigProvider } from '../../config-provider';
+import { configProviderSymbol } from '../globalSymbol';
 
 const sizeProvider = Symbol('SizeProvider');
 
 const useProvideSize = <T = SizeType>(props: Record<any, any>): ComputedRef<T> => {
   const configProvider = inject<UnwrapRef<ConfigProviderProps>>(
-    'configProvider',
+    configProviderSymbol,
     defaultConfigProvider,
   );
   const size = computed<T>(() => props.size || configProvider.componentSize);

@@ -90,7 +90,7 @@ export default defineComponent({
       if (childWidths.value.length > 0) {
         const max = Math.max(...childWidths.value)
         // 防止因字体关系导致长度不足
-        childMaxWidth.value = Math.ceil(1.1 * max)
+        childMaxWidth.value = Math.ceil(1.05 * max)
       }
     });
 

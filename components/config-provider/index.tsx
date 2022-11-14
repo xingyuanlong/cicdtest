@@ -17,6 +17,8 @@ import type { ValidateMessages } from '../form/interface';
 import type { ConfigProviderProps, Theme } from './context';
 import { configProviderProps, useProvideGlobalForm } from './context';
 
+import { configProviderSymbol } from '../_util/globalSymbol';
+
 export type { ConfigProviderProps, Theme, SizeType, Direction, CSPConfig } from './context';
 export const defaultPrefixCls = 'pf';
 function getGlobalPrefixCls() {
@@ -167,7 +169,7 @@ const ConfigProvider = defineComponent({
       return validateMessages;
     });
     useProvideGlobalForm({ validateMessages: validateMessagesRef });
-    provide('configProvider', configProvider);
+    provide(configProviderSymbol, configProvider);
 
     const renderProvider = (legacyLocale: Locale) => {
       return (

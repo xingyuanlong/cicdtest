@@ -43,9 +43,9 @@ Modify `prefixCls` on the root of ConfigProvider:
 
 ```html
 <template>
-  <a-@pf-ui/pf-ui-vue-provider prefix-cls="custom">
+  <pf-config-provider prefix-cls="custom">
     <my-app />
-  </a-@pf-ui/pf-ui-vue-provider>
+  </pf-config-provider>
 </template>
 ```
 

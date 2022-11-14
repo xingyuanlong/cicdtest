@@ -5,6 +5,7 @@ import type { ConfigProviderProps, CSPConfig, Direction, SizeType } from '../../
 import { defaultConfigProvider } from '../../config-provider';
 import type { VueNode } from '../type';
 import type { ValidateMessages } from '../../form/interface';
+import { configProviderSymbol } from '../../_util/globalSymbol';
 
 export default (
   name: string,
@@ -33,14 +34,14 @@ export default (
   csp: ComputedRef<CSPConfig>;
 } => {
   const configProvider = inject<UnwrapRef<ConfigProviderProps>>(
-    'configProvider',
+    configProviderSymbol,
     defaultConfigProvider,
   );
-  // const prefixCls = computed(() => configProvider.getPrefixCls(name, props.prefixCls));
-  const prefixCls = computed(() => defaultConfigProvider.getPrefixCls(name, props.prefixCls));
+  const prefixCls = computed(() => configProvider.getPrefixCls(name, props.prefixCls));
+  // const prefixCls = computed(() => defaultConfigProvider.getPrefixCls(name, props.prefixCls));
   const direction = computed(() => props.direction ?? configProvider.direction);
-  // const rootPrefixCls = computed(() => configProvider.getPrefixCls());
-  const rootPrefixCls =  computed(() => defaultConfigProvider.getPrefixCls());
+  const rootPrefixCls = computed(() => configProvider.getPrefixCls());
+  // const rootPrefixCls =  computed(() => defaultConfigProvider.getPrefixCls());
   const autoInsertSpaceInButton = computed(() => configProvider.autoInsertSpaceInButton);
   const renderEmpty = computed(() => configProvider.renderEmpty);
   const space = computed(() => configProvider.space);
@@ -79,7 +80,7 @@ export default (
     virtual,
     dropdownMatchSelectWidth,
     rootPrefixCls,
-    getPrefixCls: defaultConfigProvider.getPrefixCls,
+    getPrefixCls: configProvider.getPrefixCls,
     autocomplete,
     csp,
   };

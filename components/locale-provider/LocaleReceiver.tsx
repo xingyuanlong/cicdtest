@@ -1,6 +1,7 @@
 import type { VNodeTypes, PropType, ComputedRef, Ref } from 'vue';
 import { unref, inject, defineComponent, computed } from 'vue';
 import defaultLocaleData from './default';
+import { localeDataSymbol } from '../_util/globalSymbol';
 import type { Locale } from '.';
 export type LocaleComponentName = Exclude<keyof Locale, 'locale'>;
 
@@ -32,7 +33,7 @@ export default defineComponent({
     },
   },
   setup(props, { slots }) {
-    const localeData = inject<LocaleReceiverContext>('localeData', {});
+    const localeData = inject<LocaleReceiverContext>(localeDataSymbol, {});
     const locale = computed(() => {
       const { componentName = 'global', defaultLocale } = props;
       const locale =
@@ -67,7 +68,7 @@ export function useLocaleReceiver<T extends LocaleComponentName>(
   defaultLocale?: Locale[T] | Function | ComputedRef<Locale[T] | Function>,
   propsLocale?: Ref<Locale[T]>,
 ): [ComputedRef<Locale[T]>] {
-  const localeData = inject<LocaleReceiverContext>('localeData', {} as LocaleReceiverContext);
+  const localeData = inject<LocaleReceiverContext>(localeDataSymbol, {} as LocaleReceiverContext);
   const componentLocale = computed<Locale[T]>(() => {
     const { antLocale } = localeData;
     const locale =

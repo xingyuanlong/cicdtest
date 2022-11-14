@@ -44,7 +44,7 @@ Config component default size.
       <pf-select style="width: 100px" placeholder="select value" :options="[{ value: 'demo' }]" />
     </div>
     <div class="example">
-      <a-datePicker />
+      <pf-datePicker />
     </div>
     <div class="example">
       <pf-range-picker />

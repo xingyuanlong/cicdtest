@@ -32,7 +32,7 @@
               <div>
                 <pf-tooltip title="发送邮件到：antdv@foxmail.com">
                   <a :href="`mailto:antdv@foxmail.com?subject=应聘 ${item.id} 职位`">
-                    <a-icon type="link" style="margin-right: 8px" />
+                    <pf-icon type="link" style="margin-right: 8px" />
                     立刻申请
                   </a>
                 </pf-tooltip>
