@@ -1,8 +1,8 @@
 ---
-# category: Components
-# type: 数据展示
-# title: NumberAnimation
-# subtitle: 数值动画
+category: Components
+type: 数据展示
+title: NumberAnimation
+subtitle: 数值动画
 ---
 
 为数值添加动画效果。
