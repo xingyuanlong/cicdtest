@@ -34,7 +34,8 @@ build:
     - npm run site
     - cp  ./Dockerfile ./site/dist
     - cp  ./nginx.conf ./site/dist
-  # artifacts:
+  artifacts:
+    expire_in: 8 mins
   #   paths:
   #     - /site/dist
 
