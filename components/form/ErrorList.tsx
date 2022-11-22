@@ -46,7 +46,7 @@ export default defineComponent({
               role="alert"
               class={innerStatus.value ? `${baseClassName.value}-${innerStatus.value}` : ''}
             >
-              <ErrorFilled style={{ marginRight: '10px', fontSize: '16px' }} /> {error}
+              <ErrorFilled style={{ marginRight: '8px', fontSize: '16px' }} /> {error}
             </div>
           ))}
         </TransitionGroup>
