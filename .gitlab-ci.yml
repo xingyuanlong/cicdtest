@@ -47,7 +47,7 @@ docker:
   image: docker:stable
   only:
     - tags  
-  dependencies: 
+  dependencies:
     - build
   before_script:
   - mkdir -p $HOME/.docker
