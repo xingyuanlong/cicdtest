@@ -38,9 +38,9 @@ build:
     - cp  ./Dockerfile ./site/dist
     - cp  ./nginx.conf ./site/dist
   artifacts:
-    expire_in: 8 mins
-  #   paths:
-  #     - /site/dist
+    expire_in: 10 mins
+    paths:
+      - ./site/dist
 
 docker: 
   stage:  docker
