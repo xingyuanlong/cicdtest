@@ -30,7 +30,9 @@ build:
   script: 
     # - npm config set registry https://maven-hz.rubikstack.com/repository/npm-public
     - npm config set registry http://192.168.10.247:4873
+    - echo installStart $(date +"%Y-%m-%d %H:%M:%S")
     - npm install
+    - echo tsc $(date +"%Y-%m-%d %H:%M:%S")
     - rm -rf ./site/dist
     - npm run site
     - cp  ./Dockerfile ./site/dist
