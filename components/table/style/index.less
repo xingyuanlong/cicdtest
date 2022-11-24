@@ -179,14 +179,13 @@
       &.@{table-prefix-cls}-row.striped {
         td {
           padding: @table-padding-vertical @table-padding-horizontal;
-          border-bottom: none;
         }
 
-        &.pf-table-striped {
+        &.@{ant-prefix}-table-striped {
           background-color: @table-striped-color;
         }
 
-        &:last-of-type:not(.pf-table-striped) {
+        &:last-of-type:not(.@{ant-prefix}-table-striped) {
           td {
             padding-top: @table-padding-vertical - 0.5;
             padding-bottom: @table-padding-vertical - 0.5;
@@ -206,7 +205,7 @@
         background-color: @C6;
 
         td {
-          border-color: #ccc;
+          border-color: #D1D1D1;
         }
 
         // td:first-child,

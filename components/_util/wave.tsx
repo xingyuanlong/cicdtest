@@ -90,7 +90,7 @@ export default defineComponent({
         extraNode.style.borderColor = waveColor;
         styleForPesudo.innerHTML = `
         [${prefixCls.value}-click-animating-without-extra-node='true']::after, .${prefixCls.value}-click-animating-node {
-          --antd-wave-shadow-color: ${waveColor};
+          --${prefixCls.value}-wave-shadow-color: ${waveColor};
         }`;
         if (!document.body.contains(styleForPesudo)) {
           document.body.appendChild(styleForPesudo);

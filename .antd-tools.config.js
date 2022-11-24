@@ -167,7 +167,7 @@ module.exports = {
           indexLessFile.contents = Buffer.from(
             [
               // Inject variable
-              '@root-entry-name: default;',
+              '@root-entry-name: variable;',
               // Point to origin file
               "@import './index-pure.less';",
             ].join('\n\n'),
@@ -182,7 +182,7 @@ module.exports = {
     },
     lessConfig: {
       modifyVars: {
-        'root-entry-name': 'default',
+        'root-entry-name': 'variable',
       },
     },
     finalize: finalizeCompile,

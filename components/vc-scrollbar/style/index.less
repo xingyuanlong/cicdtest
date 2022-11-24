@@ -1,0 +1,139 @@
+@import '../../style/themes/index';
+@import '../../style/mixins/index';
+
+@scrollbar-prefix-cls: ~'@{ant-prefix}-scrollbar';
+
+.@{scrollbar-prefix-cls} {
+  overflow: hidden;
+  position: relative;
+  z-index: auto;
+  height: 100%;
+  width: 100%;
+
+  & > .@{scrollbar-prefix-cls}-container {
+    width: 100%;
+    overflow: scroll;
+    height: 100%;
+    max-height: inherit;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar, &::-webkit-scrollbar-track-piece, &::-webkit-scrollbar-thumb {
+      width: 0;
+      height: 0;
+      display: none;
+    }
+
+    & > .@{scrollbar-prefix-cls}-content {
+      box-sizing: border-box;
+      min-width: 100%;
+    }
+  }
+
+  & > .@{scrollbar-prefix-cls}-rail, & + .@{scrollbar-prefix-cls}-rail {
+    position: absolute;
+    pointer-events: none;
+    user-select: none;
+    box-sizing: content-box;
+    -webkit-user-select: none;
+
+    &.@{scrollbar-prefix-cls}-rail--horizontal {
+      left: 2px;
+      right: 2px;
+      bottom: 0;
+      height: @scrollbar-hover-height;
+
+      & > .@{scrollbar-prefix-cls}-rail__scrollbar {
+        height: @scrollbar-height;
+        border-radius: @scrollbar-border-radius;
+        bottom: 2px;
+        right: 0;
+      }
+
+      & >:hover {
+        bottom: 0;
+        height: @scrollbar-hover-height;
+        border-radius: @scrollbar-border-hover-radius;
+      }
+
+      & >:active {
+        bottom: 0;
+        height: @scrollbar-hover-height;
+        border-radius: @scrollbar-border-hover-radius;
+      }
+    }
+
+    &.@{scrollbar-prefix-cls}-rail--horizontalBg {
+      background: #FAFAFA; 
+      border-top: 1px solid #DCDCDC;
+      border-bottom: 1px solid #DCDCDC;
+    }
+
+    &.@{scrollbar-prefix-cls}-rail--vertical {
+      right: 0;
+      top: 2px;
+      bottom: 2px;
+      width: @scrollbar-hover-width;
+
+      & > .@{scrollbar-prefix-cls}-rail__scrollbar {
+        width: @scrollbar-width;
+        border-radius: @scrollbar-border-radius;
+        bottom: 0;
+        right: 2px;
+      }
+
+      & >:hover {
+        right: 0;
+        width: @scrollbar-hover-width;
+        border-radius: @scrollbar-border-hover-radius;
+      }
+
+      & >:active {
+        right: 0;
+        width: @scrollbar-hover-width;
+        border-radius: @scrollbar-border-hover-radius;
+      }
+    }
+
+    &.@{scrollbar-prefix-cls}-rail--verticalBg {
+      background: #FAFAFA; 
+      border-left: 1px solid #DCDCDC;
+      border-right: 1px solid #DCDCDC;
+    }
+
+    &.@{scrollbar-prefix-cls}-rail--disabled {
+      & > .@{scrollbar-prefix-cls}-rail__scrollbar {
+        pointer-events: none;
+      }
+    }
+
+    & > .@{scrollbar-prefix-cls}-rail__scrollbar {
+      position: absolute;
+      cursor: pointer;
+      pointer-events: all;
+      background-color: @scrollbar-color;
+      transition: background-color .2s @scrollbar-bezier;
+
+      &.fade-in-transition-enter-active {
+        transition: all 0.2s cubic-bezier(.4, 0, .2, 1) !important;
+      }
+
+      &.fade-in-transition-leave-active {
+        transition: all 0.2s cubic-bezier(.4, 0, .2, 1) !important;
+      }
+
+      &.fade-in-transition-enter-from,
+      &.fade-in-transition-leave-to {
+        opacity: 0;
+      }
+
+      &.fade-in-transition-leave-from,
+      &.fade-in-transition-enter-to {
+        opacity: 1;
+      }
+
+      &:hover {
+        background-color: @scrollbar-color-hover;
+      }
+    }
+  }
+}

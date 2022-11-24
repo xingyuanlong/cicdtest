@@ -79,4 +79,8 @@ export function renderHelper<T = Record<string, any>>(
   return v ?? defaultV;
 }
 
+export function getPreciseEventTarget(event: Event) {
+  return event.composedPath()[0] || null;
+}
+
 export { isOn, cacheStringFunction, camelize, hyphenate, capitalize, resolvePropValue };

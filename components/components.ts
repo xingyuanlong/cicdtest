@@ -445,3 +445,6 @@ export type { WatermarkProps } from './watermark';
 
 export type { NumberAnimationProps, NumberAnimationInst } from './number-animation';
 export { default as PfNumberAnimation, default as NumberAnimation } from './number-animation';
+
+export { default as PfScrollbar, default as Scrollbar } from './scrollbar'
+export type { ScrollbarInst, ScrollbarProps } from './scrollbar'

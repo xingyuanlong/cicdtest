@@ -141,4 +141,7 @@ export default defineComponent({
   padding: 0 20px;
   background-color: #f5f5f5;
 }
+.inner-table .pf-table-tbody > tr > td {
+  border-bottom: 1px solid #d1d1d1;
+}
 </style>
