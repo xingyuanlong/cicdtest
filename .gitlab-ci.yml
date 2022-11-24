@@ -28,22 +28,26 @@ build:
   only:
     - tags
   script: 
-    - npm config set registry https://maven-hz.rubikstack.com/repository/npm-public
+    # - npm config set registry https://maven-hz.rubikstack.com/repository/npm-public
+    - npm config set registry http://192.168.10.247:4873
+    - echo installStart $(date +"%Y-%m-%d %H:%M:%S")
     - npm install
+    - echo tsc $(date +"%Y-%m-%d %H:%M:%S")
     - rm -rf ./site/dist
     - npm run site
     - cp  ./Dockerfile ./site/dist
     - cp  ./nginx.conf ./site/dist
-  # artifacts:
-  #   paths:
-  #     - /site/dist
+  artifacts:
+    expire_in: 10 mins
+    paths:
+      - ./site/dist
 
 docker: 
   stage:  docker
   image: docker:stable
   only:
     - tags  
-  dependencies: 
+  dependencies:
     - build
   before_script:
   - mkdir -p $HOME/.docker
