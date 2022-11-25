@@ -2,6 +2,8 @@
 @import '../../style/mixins/index';
 
 @scrollbar-prefix-cls: ~'@{ant-prefix}-scrollbar';
+@scrollbar-inset: 0px;
+@scrollbar-total-width: calc(@scrollbar-hover-width + 2px - @scrollbar-inset);
 
 .@{scrollbar-prefix-cls} {
   overflow: hidden;
@@ -37,8 +39,8 @@
     -webkit-user-select: none;
 
     &.@{scrollbar-prefix-cls}-rail--horizontal {
-      left: 2px;
-      right: 2px;
+      left: @scrollbar-inset;
+      right: @scrollbar-inset;
       bottom: 0;
       height: @scrollbar-hover-height;
 
@@ -62,6 +64,10 @@
       }
     }
 
+    &.@{scrollbar-prefix-cls}-rail--horizontal_vertical {
+      margin-right: @scrollbar-total-width;
+    }
+
     &.@{scrollbar-prefix-cls}-rail--horizontalBg {
       background: @scrollbar-background-color; 
       border-top: 1px solid @border-color-base;
@@ -70,8 +76,8 @@
 
     &.@{scrollbar-prefix-cls}-rail--vertical {
       right: 0;
-      top: 2px;
-      bottom: 2px;
+      top: @scrollbar-inset;
+      bottom: @scrollbar-inset;
       width: @scrollbar-hover-width;
 
       & > .@{scrollbar-prefix-cls}-rail__scrollbar {
@@ -92,6 +98,10 @@
         width: @scrollbar-hover-width;
         border-radius: @scrollbar-border-hover-radius;
       }
+    }
+
+    &.@{scrollbar-prefix-cls}-rail--vertical_horizontal {
+      margin-bottom: @scrollbar-total-width;
     }
 
     &.@{scrollbar-prefix-cls}-rail--verticalBg {
@@ -135,5 +145,16 @@
         background-color: @scrollbar-color-hover;
       }
     }
+  }
+
+  &-corner {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: @scrollbar-total-width;
+    width: @scrollbar-total-width;
+    border: 1px solid @border-color-base;
+    border-left: none;
+    background: @scrollbar-background-color; 
   }
 }

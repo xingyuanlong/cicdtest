@@ -698,7 +698,8 @@ export const Scrollbar = defineComponent({
             `${mergedClsPrefix}-rail--vertical`,
             `${this.needYBar && this.isShowYBar && !this.isIos
               ? `${mergedClsPrefix}-rail--verticalBg`
-              : ''}`
+              : ''}`,
+              this.needXBar && this.isShowXBar && !this.isIos ? `${mergedClsPrefix}-rail--vertical_horizontal` : ''
           ]}
           data-scrollbar-rail
           style={this.verticalRailStyle}
@@ -794,7 +795,8 @@ export const Scrollbar = defineComponent({
                 `${mergedClsPrefix}-rail--horizontal`,
                 `${this.needXBar && this.isShowXBar && !this.isIos
                   ? `${mergedClsPrefix}-rail--horizontalBg`
-                  : ''}`
+                  : ''}`,
+                this.needYBar && this.isShowYBar && !this.isIos ? `${mergedClsPrefix}-rail--horizontal_vertical` : ''
               ]}
               style={this.horizontalRailStyle}
               data-scrollbar-rail
@@ -819,6 +821,9 @@ export const Scrollbar = defineComponent({
                 }
               )}
             </div>
+          ),
+          this.needYBar && this.isShowYBar && this.needXBar && this.isShowXBar && !this.isIos && this.xScrollable && (
+            <div class={`${mergedClsPrefix}-corner`}></div>
           )
         ]
       )
