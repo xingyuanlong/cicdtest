@@ -401,4 +401,10 @@ export default {
     type: 'Data Display',
     title: 'Watermark',
   },
+  space: {
+    category: 'Components',
+    subtitle: '滚动条',
+    type: 'Data Display',
+    title: 'Scrollbar',
+  },
 };

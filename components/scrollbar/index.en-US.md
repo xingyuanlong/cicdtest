@@ -1,8 +1,8 @@
 ---
 category: Components
-type: 反馈
+type: 数据展示
 title: Progress
-subtitle: 进度条
+subtitle: 滚动条
 cover: https://gw.alipayobjects.com/zos/alicdn/xqsDu4ZyR/Progress.svg
 ---
 

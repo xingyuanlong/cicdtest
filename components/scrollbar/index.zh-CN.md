@@ -1,6 +1,6 @@
 ---
 category: Components
-type: 其他
+type: 数据展示
 title: Scrollbar
 subtitle: 滚动条
 ---
