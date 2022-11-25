@@ -8,11 +8,11 @@ title:
 
 ## zh-CN
 
-你可以设定不同的触发方式，`trigger="none"` 会让滚动条一直显示，`trigger="hover"` 会让滚动条在鼠标悬浮的时候显示。
+`trigger="none"` 时滚动条一直显示，`trigger="hover"` 时滚动条在鼠标悬浮时显示。
 
 ## en-US
 
-You can set different scrollbar trigger. Setting `trigger="none"` will make scrollbar always shown. Setting `trigger="hover"` will make scrollbar shown on mouse hover.
+Setting `trigger="none"` will make scrollbar always shown. Setting `trigger="hover"` will make scrollbar shown on mouse hover.
 
 </docs>
 

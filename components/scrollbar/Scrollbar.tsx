@@ -1,9 +1,9 @@
 import { defineComponent, PropType, ref } from 'vue'
 import {
-  Scrollbar as NScrollbar,
+  Scrollbar as BaseScrollbar,
   ScrollbarInst as InternalScrollbarInst,
   ExtractPublicPropTypes
-} from '../vc-scrollbar'
+} from './BaseScrollbar'
 
 export interface ScrollTo {
   (x: number, y: number): void
@@ -45,7 +45,7 @@ const Scrollbar = defineComponent({
   },
   render () {
     return (
-      <NScrollbar ref="scrollbarInstRef" {...this.$props} v-slots={this.$slots} />
+      <BaseScrollbar ref="scrollbarInstRef" {...this.$props} v-slots={this.$slots} />
     )
   }
 })

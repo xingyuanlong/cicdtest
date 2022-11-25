@@ -129,8 +129,8 @@ const Wrapper = defineComponent({
   }
 })
 
-const Scrollbar = defineComponent({
-  name: 'Scrollbar',
+export const Scrollbar = defineComponent({
+  name: 'PfBaseScrollbar',
   props: scrollbarProps,
   inheritAttrs: false,
   setup (props) {
