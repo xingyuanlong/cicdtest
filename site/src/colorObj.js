@@ -19,7 +19,7 @@ const ColorObjArr = [
     C4: '#F4F5F6',
     C5: '#EEEEEE',
     C6: '#F5F5F5',
-    C7: '#DCDCDC',
+    C7: '#D1D1D1',
     C8: '#C1C1C1',
     C9: '#DBDBDB',
     C10: '#979797',
