@@ -48,10 +48,7 @@ export const affixProps = () => ({
   /** 距离窗口底部达到指定偏移量后触发 */
   offsetBottom: Number,
   /** 设置 Affix 需要监听其滚动事件的元素，值为一个返回对应 DOM 元素的函数 */
-  target: {
-    type: Function as PropType<() => Window | HTMLElement | null>,
-    default: getDefaultTarget,
-  },
+  target: Function as PropType<() => Window | HTMLElement | null>,
   prefixCls: String,
   /** 固定状态改变时触发的回调函数 */
   onChange: Function as PropType<AffixEmits['change']>,
@@ -87,6 +84,13 @@ const Affix = defineComponent({
     });
     const currentInstance = getCurrentInstance();
 
+    const { prefixCls, getTargetContainer } = useConfigInject('affix', props);
+
+    const getContainer = computed(() => {
+      const { target } = props;
+      return target || getTargetContainer.value || getDefaultTarget;
+    });
+
     const offsetTop = computed(() => {
       return props.offsetBottom === undefined && props.offsetTop === undefined
         ? 0
@@ -95,12 +99,11 @@ const Affix = defineComponent({
     const offsetBottom = computed(() => props.offsetBottom);
     const measure = () => {
       const { status, lastAffix } = state;
-      const { target } = props;
-      if (status !== AffixStatus.Prepare || !fixedNode.value || !placeholderNode.value || !target) {
+      if (status !== AffixStatus.Prepare || !fixedNode.value || !placeholderNode.value || !getContainer.value) {
         return;
       }
 
-      const targetNode = target();
+      const targetNode = getContainer.value();
       if (!targetNode) {
         return;
       }
@@ -160,12 +163,11 @@ const Affix = defineComponent({
       prepareMeasure();
     });
     const lazyUpdatePosition = throttleByAnimationFrame(() => {
-      const { target } = props;
       const { affixStyle } = state;
 
       // Check position change before measure to make Safari smooth
-      if (target && affixStyle) {
-        const targetNode = target();
+      if (getContainer.value && affixStyle) {
+        const targetNode = getContainer.value();
         if (targetNode && placeholderNode.value) {
           const targetRect = getTargetRect(targetNode);
           const placeholderReact = getTargetRect(placeholderNode.value as HTMLElement);
@@ -188,7 +190,7 @@ const Affix = defineComponent({
       lazyUpdatePosition,
     });
     watch(
-      () => props.target,
+      () => getContainer.value,
       val => {
         const newTarget = val?.() || null;
         if (state.prevTarget !== newTarget) {
@@ -204,12 +206,11 @@ const Affix = defineComponent({
     );
     watch(() => [props.offsetTop, props.offsetBottom], updatePosition);
     onMounted(() => {
-      const { target } = props;
-      if (target) {
+      if (getContainer.value) {
         // [Legacy] Wait for parent component ref has its value.
         // We should use target as directly element instead of function which makes element check hard.
         state.timeout = setTimeout(() => {
-          addObserveTarget(target(), currentInstance);
+          addObserveTarget(getContainer.value(), currentInstance);
           // Mock Event object.
           updatePosition();
         });
@@ -225,8 +226,6 @@ const Affix = defineComponent({
       // https://github.com/ant-design/ant-design/issues/22683
       (lazyUpdatePosition as any).cancel();
     });
-
-    const { prefixCls } = useConfigInject('affix', props);
 
     return () => {
       const { affixStyle, placeholderStyle } = state;

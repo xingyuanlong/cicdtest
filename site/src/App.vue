@@ -1,6 +1,8 @@
 <template>
-  <pf-config-provider :locale="locale">
-    <router-view />
+  <pf-config-provider :locale="locale" :getTargetContainer="getTargetContainer">
+    <pf-scrollbar ref="globalScrollRef" verticalRailStyle="z-index: 9999;">
+      <router-view />
+    </pf-scrollbar>
   </pf-config-provider>
 </template>
 
@@ -35,6 +37,7 @@ export default defineComponent({
     const colSize = useMediaQuery();
     const isMobile = computed(() => colSize.value === 'sm' || colSize.value === 'xs');
     const theme = ref(localStorage.getItem('theme') || 'green');
+    const globalScrollRef = ref(null);
     const responsive = computed(() => {
       if (colSize.value === 'xs') {
         return 'crowded';
@@ -108,7 +111,8 @@ export default defineComponent({
       },
       { immediate: true },
     );
-    return { globalConfig, locale };
+    const getTargetContainer = () => globalScrollRef.value?.scrollContainer
+    return { globalConfig, locale, globalScrollRef, getTargetContainer };
   },
   
 });

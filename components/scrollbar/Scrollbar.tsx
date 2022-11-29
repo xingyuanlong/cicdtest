@@ -1,4 +1,4 @@
-import { defineComponent, PropType, ref } from 'vue'
+import { defineComponent, PropType, ref, computed } from 'vue'
 import {
   Scrollbar as BaseScrollbar,
   ScrollbarInst as InternalScrollbarInst,
@@ -30,6 +30,7 @@ const Scrollbar = defineComponent({
   props: scrollbarProps,
   setup () {
     const scrollbarInstRef = ref<InternalScrollbarInst | null>(null)
+    const scrollContainer = computed(() => scrollbarInstRef.value?.containerRef)
     const exposedMethods: ScrollbarInst = {
       scrollTo: (...args: any[]) => {
         scrollbarInstRef.value?.scrollTo(args[0], args[1])
@@ -40,7 +41,8 @@ const Scrollbar = defineComponent({
     }
     return {
       ...exposedMethods,
-      scrollbarInstRef
+      scrollbarInstRef,
+      scrollContainer
     }
   },
   render () {
