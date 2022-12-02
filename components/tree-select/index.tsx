@@ -23,7 +23,7 @@ import { warning } from '../vc-util/warning';
 import { flattenChildren } from '../_util/props-util';
 import { useInjectFormItemContext } from '../form/FormItemContext';
 import type { BaseSelectRef } from '../vc-select';
-import FolderTwoTone from '@pf-ui/pf-icons-vue/FolderTwoTone';
+import FolderClosedTwoTone from '@pf-ui/pf-icons-vue/FolderClosedTwoTone';
 import FoldersopeningTwoTone from '@pf-ui/pf-icons-vue/FoldersopeningTwoTone'
 import type { BaseOptionType, DefaultOptionType } from '../vc-tree-select/TreeSelect';
 import type { TreeProps } from '../tree';
@@ -41,7 +41,7 @@ const default_icon = ({isLeaf, expanded}) => {
     fontSize: '16px'
   }
   if(isLeaf || !expanded) {
-    return <FolderTwoTone style={styleObj} />
+    return <FolderClosedTwoTone style={styleObj} />
   }
 
   return <FoldersopeningTwoTone style={styleObj} />
