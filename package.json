@@ -310,6 +310,6 @@
   "web-types": "vetur/web-types.json",
   "publishConfig": {
     "access": "public",
-    "registry": "https://maven-hz.rubikstack.com/repository/npm-public/"
+    "registry": "https://registry.npmjs.org/"
   }
 }
