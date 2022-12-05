@@ -112,10 +112,10 @@ module.exports = {
 
 ### Customize in less file
 
-Another approach to customize theme is creating a `less` file within variables to override `antd.less`.
+Another approach to customize theme is creating a `less` file within variables to override `pf.less`.
 
 ```css
-@import '~@pf-ui/pf-ui-vue/dist/antd.less'; // Import @pf-ui/pf-ui-vue styles by less entry
+@import '~@pf-ui/pf-ui-vue/dist/pf.less'; // Import @pf-ui/pf-ui-vue styles by less entry
 @import 'your-theme-file.less'; // variables to override above
 ```
 
@@ -152,7 +152,7 @@ See an example of usage with gulp and [postcss-prefixwrap](https://github.com/db
 You must import styles as less format. A common mistake would be importing multiple copied of styles that some of them are css format to override the less styles.
 
 - If you import styles by specifying the `style` option of [babel-plugin-import](https://github.com/ant-design/babel-plugin-import), change it from `'css'` to `true`, which will import the `less` version of antd.
-- If you import styles from `'@pf-ui/pf-ui-vue/dist/antd.css'`, change it to `@pf-ui/pf-ui-vue/dist/antd.less`.
+- If you import styles from `'@pf-ui/pf-ui-vue/dist/pf.css'`, change it to `@pf-ui/pf-ui-vue/dist/pf.less`.
 
 ## Use dark theme
 
@@ -168,7 +168,7 @@ If the project does not use Less, you can import [antd.dark.css](https://unpkg.c
 @import '~@pf-ui/pf-ui-vue/dist/antd.dark.css';
 ```
 
-> Note that you don't need to import `@pf-ui/pf-ui-vue/dist/antd.less` or `@pf-ui/pf-ui-vue/dist/antd.css` anymore, please remove it, and remove babel-plugin-import `style` config too. You can't enable two or more theme at the same time by this method.
+> Note that you don't need to import `@pf-ui/pf-ui-vue/dist/pf.less` or `@pf-ui/pf-ui-vue/dist/pf.css` anymore, please remove it, and remove babel-plugin-import `style` config too. You can't enable two or more theme at the same time by this method.
 
 Method 3: using [less-loader](https://github.com/webpack-contrib/less-loader) in `webpack.config.js` to introduce as needed:
 

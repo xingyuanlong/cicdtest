@@ -55,7 +55,7 @@ app.use(DatePicker);
 And import stylesheets manually:
 
 ```jsx
-import '@pf-ui/pf-ui-vue/dist/antd.variable.css'; // or '@pf-ui/pf-ui-vue/dist/antd.less'
+import '@pf-ui/pf-ui-vue/dist/pf.variable.css'; // or '@pf-ui/pf-ui-vue/dist/pf.less'
 ```
 
 ### Use modularized antd

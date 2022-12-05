@@ -38,7 +38,7 @@ If you use Vue's default template syntax, you need to register components before
 import { createApp } from 'vue';
 import PfUiVue from '@pf-ui/pf-ui-vue';
 import App from './App';
-import '@pf-ui/pf-ui-vue/dist/antd.css';
+import '@pf-ui/pf-ui-vue/dist/pf.css';
 
 const app = createApp(App);
 
@@ -100,7 +100,7 @@ import { Button } from '@pf-ui/pf-ui-vue';
 
 And this plugin can load styles too, read [usage](https://github.com/ant-design/babel-plugin-import#usage) for more details.
 
-> FYI, babel-plugin-import's `style` option will importing some global reset styles, don't use it if you don't need those styles. You can import styles manually via `import '@pf-ui/pf-ui-vue/dist/antd.css'` and override the global reset styles.
+> FYI, babel-plugin-import's `style` option will importing some global reset styles, don't use it if you don't need those styles. You can import styles manually via `import '@pf-ui/pf-ui-vue/dist/pf.css'` and override the global reset styles.
 
 If you use Vite, you can use [unplugin-vue-components](https://github.com/antfu/unplugin-vue-components) to load on demand. However, this plugin can only deal with components. Others such as message should be loaded manually:
 

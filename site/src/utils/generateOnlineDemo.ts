@@ -35,7 +35,7 @@ components: {
 const mainJs = `import { createApp } from "vue";
 import App from "./App.vue";
 import Antd from 'pf-ui-vue';
-import 'pf-ui-vue/dist/antd.css';
+import 'pf-ui-vue/dist/pf.css';
 
 const app = createApp(App).use(Antd);
 app.mount("#app");

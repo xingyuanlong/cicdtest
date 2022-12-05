@@ -171,10 +171,10 @@ export default defineConfig({
 
 ### 配置 less 变量文件
 
-另外一种方式是**建立一个单独的 `less` 变量文件**，引入这个文件覆盖 `antd.less` 里的变量。
+另外一种方式是**建立一个单独的 `less` 变量文件**，引入这个文件覆盖 `pf.less` 里的变量。
 
 ```css
-@import '~@pf-ui/pf-ui-vue/dist/antd.less'; // 引入官方提供的 less 样式入口文件
+@import '~@pf-ui/pf-ui-vue/dist/pf.less'; // 引入官方提供的 less 样式入口文件
 @import 'your-theme-file.less'; // 用于覆盖上面定义的变量
 ```
 
@@ -189,7 +189,7 @@ export default defineConfig({
 注意样式必须加载 less 格式，一个常见的问题就是引入了多份样式，less 的样式被 css 的样式覆盖了。
 
 - 如果你在使用 [babel-plugin-import](https://github.com/ant-design/babel-plugin-import) 的 `style` 配置来引入样式，需要将配置值从 `'css'` 改为 `true`，这样会引入 less 文件。
-- 如果你是通过 `'@pf-ui/pf-ui-vue/dist/antd.css'` 引入样式的，改为 `@pf-ui/pf-ui-vue/dist/antd.less`。
+- 如果你是通过 `'@pf-ui/pf-ui-vue/dist/pf.css'` 引入样式的，改为 `@pf-ui/pf-ui-vue/dist/pf.less`。
 
 <!-- ## 使用暗黑主题
 
@@ -205,7 +205,7 @@ export default defineConfig({
 @import '~@pf-ui/pf-ui-vue/dist/antd.dark.css';
 ```
 
-> 注意这种方式下你不需要再引入 `@pf-ui/pf-ui-vue/dist/antd.less` 或 `@pf-ui/pf-ui-vue/dist/antd.css` 了，可以安全移除掉。也不需要开启 babel-plugin-import 的 `style` 配置。通过此方式不能同时配置两种及以上主题。
+> 注意这种方式下你不需要再引入 `@pf-ui/pf-ui-vue/dist/pf.less` 或 `@pf-ui/pf-ui-vue/dist/pf.css` 了，可以安全移除掉。也不需要开启 babel-plugin-import 的 `style` 配置。通过此方式不能同时配置两种及以上主题。
 
 方式二：是用在 `webpack.config.js` 使用 [less-loader](https://github.com/webpack-contrib/less-loader) 按需引入：
 
