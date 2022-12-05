@@ -68,7 +68,7 @@ module.exports = {
 
 注意 less-loader 的处理范围不要过滤掉 `node_modules` 下的 antd 包。
 
-### 在 vue cli 2 中定制主题
+<!-- ### 在 vue cli 2 中定制主题
 
 修改`build/utils.js`文件
 
@@ -84,7 +84,7 @@ module.exports = {
 +   javascriptEnabled: true,
 + }),
 
-```
+``` -->
 
 ### 在 vue cli 3 中定制主题
 
@@ -112,7 +112,7 @@ module.exports = {
 
 ### 配置 less 变量文件
 
-另外一种方式是建立一个单独的 `less` 变量文件，引入这个文件覆盖 `antd.less` 里的变量。
+另外一种方式是**建立一个单独的 `less` 变量文件**，引入这个文件覆盖 `antd.less` 里的变量。
 
 ```css
 @import '~@pf-ui/pf-ui-vue/dist/antd.less'; // 引入官方提供的 less 样式入口文件
@@ -132,7 +132,7 @@ module.exports = {
 - 如果你在使用 [babel-plugin-import](https://github.com/ant-design/babel-plugin-import) 的 `style` 配置来引入样式，需要将配置值从 `'css'` 改为 `true`，这样会引入 less 文件。
 - 如果你是通过 `'@pf-ui/pf-ui-vue/dist/antd.css'` 引入样式的，改为 `@pf-ui/pf-ui-vue/dist/antd.less`。
 
-## 使用暗黑主题
+<!-- ## 使用暗黑主题
 
 方式一：在样式文件全量引入 [antd.dark.less](https://unpkg.com/browse/@pf-ui/pf-ui-vue@2.0.0/dist/antd.dark.less)。
 
@@ -174,4 +174,4 @@ module.exports = {
     }],
   }],
 };
-```
+``` -->
