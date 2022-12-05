@@ -34,9 +34,9 @@ antd 的样式使用了 [Less](http://lesscss.org/) 作为开发语言，并定�
 
 我们使用 [modifyVars](http://lesscss.org/usage/#using-less-in-the-browser-modify-variables) 的方式来进行覆盖变量。下面将针对不同的场景提供一些常用的定制方式。
 
-### 在 webpack 中定制主题
+### 在 webpack@4 中定制主题
 
-我们以 webpack@4 为例进行说明，以下是一个 `webpack.config.js` 的典型例子，对 [less-loader](https://github.com/webpack-contrib/less-loader) 的 options 属性进行相应配置。
+以下是一个 `webpack.config.js` 的典型例子，对 [less-loader](https://github.com/webpack-contrib/less-loader) 的 options 属性进行相应配置。
 
 ```diff
 // webpack.config.js
@@ -67,6 +67,44 @@ module.exports = {
 ```
 
 注意 less-loader 的处理范围不要过滤掉 `node_modules` 下的 antd 包。
+
+### 在 webpack@5 中定制主题
+
+修改 `webpack.config.js` 文件
+
+```diff
+// webpack.config.js
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.less$/i,
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+          },
+          {
+            loader: 'less-loader',
++           options: {
++           lessOptions: {
++             modifyVars: {
++               'primary-color': '#1DA57A',
++               'link-color': '#1DA57A',
++               'border-radius-base': '2px',
++             },
++             javascriptEnabled: true,
++            },
++           },
+          },
+        ],
+      },
+    ],
+  },
+};
+```
 
 <!-- ### 在 vue cli 2 中定制主题
 
@@ -108,6 +146,27 @@ module.exports = {
     },
   },
 };
+```
+
+### 在 vite 3 中定制主题
+
+项目根目录下新建文件`vite.config.js`
+
+```js
+export default defineConfig({
+  css: {
+    preprocessorOptions: {
+      less: {
+        modifyVars: {
+          'primary-color': '#1DA57A',
+          'link-color': '#1DA57A',
+          'border-radius-base': '2px',
+        },
+        javascriptEnabled: true,
+      }
+    }
+  }
+})
 ```
 
 ### 配置 less 变量文件
