@@ -41,11 +41,11 @@ function buildThemeFile(theme, vars) {
   // Build less entry file: dist/antd.${theme}.less
   if (theme !== 'default') {
     fs.writeFileSync(
-      path.join(process.cwd(), 'dist', `antd.${theme}.less`),
+      path.join(process.cwd(), 'dist', `pf.${theme}.less`),
       `@import "../lib/style/${theme}.less";\n@import "../lib/style/components.less";`,
     );
     // eslint-disable-next-line no-console
-    console.log(`Built a entry less file to dist/antd.${theme}.less`);
+    console.log(`Built a entry less file to dist/pf.${theme}.less`);
   } else {
     fs.writeFileSync(
       path.join(process.cwd(), 'dist', `default-theme.js`),
@@ -77,7 +77,7 @@ function finalizeDist() {
   if (fs.existsSync(path.join(__dirname, './dist'))) {
     // Build less entry file: dist/antd.less
     fs.writeFileSync(
-      path.join(process.cwd(), 'dist', 'antd.less'),
+      path.join(process.cwd(), 'dist', 'pf.less'),
       '@import "../lib/style/default.less";\n@import "../lib/style/components.less";',
     );
     // eslint-disable-next-line no-console
@@ -86,7 +86,7 @@ function finalizeDist() {
       `const defaultTheme = require('./default-theme.js');\n`,
     );
     // eslint-disable-next-line no-console
-    console.log('Built a entry less file to dist/antd.less');
+    console.log('Built a entry less file to dist/pf.less');
     buildThemeFile('default', defaultVars);
     buildThemeFile('dark', darkVars);
     buildThemeFile('compact', compactVars);

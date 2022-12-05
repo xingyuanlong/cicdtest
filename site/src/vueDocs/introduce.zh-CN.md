@@ -58,7 +58,7 @@ import { PfDatePicker } from '@pf-ui/pf-ui-vue';
 app.use(PfDatePicker);
 ```
 
-引入样式：
+引入样式(**推荐**)：
 
 ```jsx
 import '@pf-ui/pf-ui-vue/dist/antd.variable.css'; // or '@pf-ui/pf-ui-vue/dist/antd.variable.less'
