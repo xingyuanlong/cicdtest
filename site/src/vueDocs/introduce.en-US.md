@@ -88,20 +88,3 @@ import '@pf-ui/pf-ui-vue/dist/pf.variable.css'; // or '@pf-ui/pf-ui-vue/dist/pf.
   // import '@pf-ui/pf-ui-vue/lib/date-picker/style';         // that will import less
   ```
 
-- For Vite
-
-  ```js
-  // vite.config.js
-  import Components from 'unplugin-vue-components/vite';
-  import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers';
-
-  export default {
-    plugins: [
-      /* ... */
-      Components({
-        resolvers: [AntDesignVueResolver()],
-      }),
-    ],
-  };
-  ```
-

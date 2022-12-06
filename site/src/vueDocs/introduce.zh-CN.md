@@ -28,7 +28,7 @@
 
 ## 支持环境
 
-- 现代浏览器, 如果需要支持 IE9，你可以选择使用 [1.x 版本](https://1x.antdv.com/)。
+- 现代浏览器, 不支持 IE9。
 - 支持服务端渲染。
 - [Electron](https://electronjs.org/)
 
@@ -66,7 +66,35 @@ import '@pf-ui/pf-ui-vue/dist/pf.variable.css'; // or '@pf-ui/pf-ui-vue/dist/pf.
 
 ### 按需加载
 
-下面两种方式都可以只加载用到的组件。
+`pf-ui` 的 JS 代码默认支持基于 ES modules 的 tree shaking，但是组件样式需要单独引入。
+
+  ```jsx
+  import { PfDatePicker } from '@pf-ui/pf-ui-vue'; // 加载 JS
+  import '@pf-ui/pf-ui-vue/lib/date-picker/style/css'; // 加载 CSS
+  // import '@pf-ui/pf-ui-vue/lib/date-picker/style'; // 加载 LESS
+  ```
+
+你也可以使用 [babel-plugin-import](https://github.com/ant-design/babel-plugin-import)。
+
+  ```jsx
+  // .babelrc or babel-loader option
+  {
+    "plugins": [
+      ["import", { "libraryName": "@pf-ui/pf-ui-vue", "libraryDirectory": "es", "style": "css" }] // `style: true` 会加载 less 文件
+    ]
+  }
+  ```
+
+  > 注意：webpack 1 无需设置 `libraryDirectory`。
+
+  然后只需从 @pf-ui/pf-ui-vue 引入模块即可，无需单独引入样式，等同于下面手动引入的方式。
+
+  ```jsx
+  // babel-plugin-import 会帮助你加载 JS 和 CSS
+  import { DatePicker } from '@pf-ui/pf-ui-vue';
+  ```
+
+<!-- 下面两种方式都可以只加载用到的组件。
 
 - 使用 [babel-plugin-import](https://github.com/ant-design/babel-plugin-import)（推荐）。
 
@@ -94,21 +122,4 @@ import '@pf-ui/pf-ui-vue/dist/pf.variable.css'; // or '@pf-ui/pf-ui-vue/dist/pf.
   import DatePicker from '@pf-ui/pf-ui-vue/lib/date-picker'; // 加载 JS
   import '@pf-ui/pf-ui-vue/lib/date-picker/style/css'; // 加载 CSS
   // import '@pf-ui/pf-ui-vue/lib/date-picker/style';         // 加载 LESS
-  ```
-
-- Vite 按需
-
-  ```js
-  // vite.config.js
-  import Components from 'unplugin-vue-components/vite';
-  import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers';
-
-  export default {
-    plugins: [
-      /* ... */
-      Components({
-        resolvers: [AntDesignVueResolver()],
-      }),
-    ],
-  };
-  ```
+  ``` -->
