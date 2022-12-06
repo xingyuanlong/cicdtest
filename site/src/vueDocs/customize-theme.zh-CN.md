@@ -174,7 +174,7 @@ export default defineConfig({
 另外一种方式是**建立一个单独的 `less` 变量文件**，引入这个文件覆盖 `pf.less` 里的变量。
 
 ```css
-@import '~@pf-ui/pf-ui-vue/dist/pf.less'; // 引入官方提供的 less 样式入口文件
+@import '~@pf-ui/pf-ui-vue/dist/pf.variable.less'; // 引入官方提供的 less 样式入口文件
 @import 'your-theme-file.less'; // 用于覆盖上面定义的变量
 ```
 

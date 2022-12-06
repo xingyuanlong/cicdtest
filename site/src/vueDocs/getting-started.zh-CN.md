@@ -15,7 +15,7 @@ $ yarn global add @vue/cli
 使用命令行进行初始化。
 
 ```bash
-$ vue create antd-demo
+$ vue create pf-demo
 ```
 
 并配置项目。
@@ -47,7 +47,7 @@ const app = createApp(App);
 app.use(PfUiVue).mount('#app');
 ```
 
-以上代码便完成了 Antd 的全局注册。需要注意的是，样式文件需要单独引入。
+以上代码便完成了 pf-ui 的全局注册。需要注意的是，样式文件需要单独引入。
 
 **全局部分注册**
 
