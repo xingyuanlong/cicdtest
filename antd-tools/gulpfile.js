@@ -118,7 +118,7 @@ function babelify(js, modules) {
   const stream = js.pipe(babel(babelConfig)).pipe(
     through2.obj(function z(file, encoding, next) {
       this.push(file.clone());
-      if (file.path.match(/\/style\/index\.(js|jsx|ts|tsx)$/)) {
+      if (file.path.match(/(\/|\\)style(\/|\\)index\.(js|jsx|ts|tsx)$/)) {
         const content = file.contents.toString(encoding);
         file.contents = Buffer.from(
           content
