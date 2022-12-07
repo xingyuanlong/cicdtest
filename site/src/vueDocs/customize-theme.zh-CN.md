@@ -182,7 +182,7 @@ export default defineConfig({
 
 ### 动态主题色
 
-在运行时调整主题色请[参考此处](/docs/vue/customize-theme-variable)。
+在运行时调整主题色请[参考此处](/docs/vue/customize-theme-variable-cn)。
 
 ## 没有生效？
 

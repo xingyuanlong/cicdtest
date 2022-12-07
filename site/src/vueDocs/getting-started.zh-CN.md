@@ -73,13 +73,13 @@ app.config.globalProperties.$message = Pfmessage;
   <pf-button>Add</pf-button>
 </template>
 <script>
-  import { Button } from '@pf-ui/pf-ui-vue';
-  const ButtonGroup = Button.Group;
+  import { PfButton } from '@pf-ui/pf-ui-vue';
+  const PfButtonGroup = PfButton.Group;
 
   export default {
     components: {
-      AButton: Button,
-      AButtonGroup: ButtonGroup,
+      PfButton,
+      PfButtonGroup
     },
   };
 </script>

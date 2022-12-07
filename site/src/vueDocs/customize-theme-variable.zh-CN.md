@@ -3,7 +3,7 @@ order: 7.1
 title: 动态主题（实验性）
 ---
 
-除了 [less 定制主题](/docs/vue/customize-theme) 外，我们还提供了 CSS Variable 版本以支持动态切换主题能力。你可以在 [ConfigProvider](/components/config-provider/#components-config-provider-demo-theme) 进行体验。
+除了 [less 定制主题](/docs/vue/customize-theme-cn) 外，我们还提供了 CSS Variable 版本以支持动态切换主题能力。你可以在 [ConfigProvider](/components/config-provider-cn/#components-config-provider-demo-theme) 进行体验。
 
 
 ## 如何使用
