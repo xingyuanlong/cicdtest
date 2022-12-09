@@ -298,7 +298,7 @@ export default defineComponent<CellProps>({
       }
       if (isFixRight) {
         fixedStyle.position = 'sticky';
-        console.log('fixRight', fixRight)
+
         fixedStyle.right = `${fixRight}px`;
       }
 
