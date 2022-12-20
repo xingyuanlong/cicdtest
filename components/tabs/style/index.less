@@ -168,13 +168,16 @@
       cursor: pointer;
       transition: all @animation-duration-slow;
 
-      &:hover {
-        color: @heading-color;
-      }
+      // &:hover {
+      //   color: @tabs-active-color;
+      // }
     }
 
     &:hover {
       color: @tabs-hover-color;
+      button {
+        color: @tabs-hover-color;
+      }
     }
 
     &&-active &-btn {

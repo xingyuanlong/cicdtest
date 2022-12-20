@@ -1,4 +1,4 @@
-import CaretDownOutlined from '@ant-design/icons-vue/CaretDownOutlined';
+import ArrowDownFilled from '@pf-ui/pf-icons-vue/ArrowDownFilled';
 import LoadingOutlined from '@ant-design/icons-vue/LoadingOutlined';
 import CheckOutlined from '@ant-design/icons-vue/CheckOutlined';
 import CloseCircleFilled from '@ant-design/icons-vue/CloseCircleFilled';
@@ -17,7 +17,6 @@ export default function getIcons(props: any, slots: any = {}) {
   if (!clearIcon) {
     mergedClearIcon = <CloseCircleFilled />;
   }
-
   // Arrow item icon
   let mergedSuffixIcon = null;
   if (suffixIcon !== undefined) {
@@ -30,7 +29,7 @@ export default function getIcons(props: any, slots: any = {}) {
       if (open && showSearch) {
         return <SearchOutlined class={iconCls} style={{ fontSize: '16px !important', marginTop: '-2px' }} />;
       }
-      return <CaretDownOutlined class={iconCls} />;
+      return <ArrowDownFilled class={iconCls} />;
     };
   }
 
