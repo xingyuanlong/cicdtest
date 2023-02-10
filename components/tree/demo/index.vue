@@ -12,6 +12,7 @@
     <context-menu />
     <virtual-scroll />
     <accordion />
+    <operation />
   </demo-sort>
 </template>
 <script lang="ts">
@@ -27,6 +28,7 @@ import ReplaceFields from './replaceFields.vue';
 import ContextMenu from './context-menu.vue';
 import VirtualScroll from './virtual-scroll.vue';
 import Accordion from './accordion.vue';
+import Operation from './operation.vue'
 import CN from '../index.zh-CN.md';
 import US from '../index.en-US.md';
 import { defineComponent } from 'vue';
@@ -47,6 +49,7 @@ export default defineComponent({
     ContextMenu,
     VirtualScroll,
     Accordion,
+    Operation
   },
   setup() {
     return {};

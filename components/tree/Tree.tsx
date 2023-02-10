@@ -16,6 +16,9 @@ import dropIndicatorRender from './utils/dropIndicator';
 import devWarning from '../vc-util/devWarning';
 import { warning } from '../vc-util/warning';
 import omit from '../_util/omit';
+import MoreFilled from '@pf-ui/pf-icons-vue/MoreFilled';
+import Dropdown, { DropdownProps } from '../dropdown';
+import Menu from '../menu';
 
 export interface AntdTreeNodeAttribute {
   eventKey: string;
@@ -35,6 +38,12 @@ export interface AntdTreeNodeAttribute {
   selectable: boolean;
   disabled: boolean;
   disableCheckbox: boolean;
+}
+
+export interface TreeNodeOperation {
+  title?: string,
+  onClick?: (key: string) => void,
+  isDisabled?: (key: string) => boolean
 }
 
 export type AntTreeNodeProps = TreeNodeProps;
@@ -137,6 +146,11 @@ export const treeProps = () => {
     'onUpdate:selectedKeys': Function as PropType<(keys: Key[]) => void>,
     'onUpdate:checkedKeys': Function as PropType<(keys: Key[]) => void>,
     'onUpdate:expandedKeys': Function as PropType<(keys: Key[]) => void>,
+    /** 更多操作 */
+    operation: { type: Array as PropType<TreeNodeOperation[]> },
+    operationTrigger: { type: Array as PropType<DropdownProps['trigger']>, default: ['click'] },
+    /** 更多操作图标是否跟随tree-item一起禁止 */
+    operationDisabledWithRow: { type: Boolean, default: true }
   };
 };
 
@@ -172,6 +186,7 @@ export default defineComponent({
     const scrollTo: ScrollTo = scroll => {
       treeRef.value?.scrollTo(scroll);
     };
+    const operationVisibleKey = ref();
     expose({
       treeRef,
       onNodeExpand: (...args) => {
@@ -262,13 +277,46 @@ export default defineComponent({
           onExpand={handleExpand}
           onSelect={handleSelect}
           onDblclick={onDblclick || onDoubleclick}
+          operationVisibleKey={operationVisibleKey}
           v-slots={{
             ...slots,
             checkable: (checked) => (
               <span class={`${prefixCls.value}-checkbox-inner`}>
                 {checked ? <Right2Filled /> : null}
               </span>
-            )
+            ),
+            operation: (key: string, disabled?: boolean) => {
+              return (
+                props.operation && props.operation.length > 0 && (
+                  <Dropdown
+                    placement="bottom"
+                    arrow
+                    trigger={props.operationTrigger}
+                    disabled={disabled}
+                    getPopupContainer={triggerNode => triggerNode}
+                    visible={operationVisibleKey.value === key}
+                    onVisibleChange={v => operationVisibleKey.value = v ? key : undefined}
+                    v-slots={{
+                      overlay: () => (
+                        <Menu class={`${prefixCls.value}-operation-menu`}>
+                          {props.operation?.map(v => (
+                            <Menu.Item onClick={() => v.onClick && v.onClick(key)} disabled={v.isDisabled && v.isDisabled(key)}>
+                              {v.title}
+                            </Menu.Item>
+                          ))}
+                        </Menu>
+                      )
+                    }}
+                  >
+                    <MoreFilled class={classNames(
+                      `${prefixCls.value}-operation`,
+                      { [`${prefixCls.value}-operation-disabled`]: disabled }
+                      )}
+                    />
+                  </Dropdown>
+                )
+              )
+            }
           }}
           children={children}
         ></VcTree>

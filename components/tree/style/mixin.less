@@ -98,6 +98,7 @@
     align-items: flex-start;
     margin: 0 0 @tree-node-padding 0;
     outline: none;
+    position: relative;
     // Disabled
     &-disabled {
       // >>> Title
@@ -113,6 +114,10 @@
 
     &:hover, &-selected {
       background-color: @tree-node-hover-bg;
+
+      .@{custom-tree-prefix-cls}-operation {
+        display: initial;
+      }
     }
 
     &-active .@{custom-tree-prefix-cls}-node-content-wrapper {
@@ -219,7 +224,7 @@
     z-index: auto;
     min-height: @tree-title-height;
     margin: 0;
-    padding: 0 4px 0 0;
+    padding: 0 20px 0 0;
     color: inherit;
     line-height: @tree-title-height;
     background: transparent;
@@ -313,6 +318,29 @@
         }
       }
     }
+  }
+
+  &-operation {
+    font-size: @font-size-lg;
+    color: @text-color;
+    display: none;
+    position: absolute;
+    right: 4px;
+    top: calc(50% - @font-size-lg / 2);
+  }
+
+  &-operation-disabled {
+    color: @disabled-color;
+    cursor: not-allowed !important;
+  }
+}
+
+.@{tree-prefix-cls}-operation-menu {
+  padding: 0;
+  .@{ant-prefix}-dropdown-menu-item {
+    padding: 9px 6px;
+    min-width: 100px !important;
+    text-align: center;
   }
 }
 

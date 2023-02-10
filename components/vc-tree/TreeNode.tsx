@@ -28,7 +28,7 @@ export default defineComponent({
   inheritAttrs: false,
   props: treeNodeProps,
   isTreeNode: 1,
-  slots: ['title', 'icon', 'switcherIcon'],
+  slots: ['title', 'icon', 'switcherIcon', 'operation'],
   setup(props, { attrs, slots, expose }) {
     warning(
       !('slots' in props.data),
@@ -47,7 +47,7 @@ export default defineComponent({
       checkedKeysSet,
       halfCheckedKeysSet,
     } = useInjectKeysState();
-    const { dragOverNodeKey, dropPosition, keyEntities } = context.value;
+    const { dragOverNodeKey, dropPosition, keyEntities, operationVisibleKey } = context.value;
     const mergedTreeNodeProps = computed(() => {
       return getTreeNodeProps(props.eventKey, {
         expandedKeysSet: expandedKeysSet.value,
@@ -117,6 +117,12 @@ export default defineComponent({
       // Return false if tree or treeNode is not checkable
       if (!treeCheckable || checkable === false) return false;
       return treeCheckable;
+    });
+
+    const operationDisabled = computed(() => {
+      const { disabled, disableOperation } = props;
+      const { disabled: treeDisabled, operationDisabledWithRow } = context.value;
+      return treeDisabled || (operationDisabledWithRow && disabled) || disableOperation;
     });
 
     const isSelectable = computed(() => {
@@ -415,7 +421,7 @@ export default defineComponent({
         dragOverNodeKey,
         direction,
       } = context.value;
-      const rootDraggable = draggable !== false;
+      const rootDraggable = !!draggable !== false;
       // allowDrop is calculated in Tree.tsx, there is no need for calc it here
       const showIndicator = !disabled && rootDraggable && dragOverNodeKey === eventKey;
       return showIndicator
@@ -503,6 +509,24 @@ export default defineComponent({
         </span>
       );
     };
+
+    const renderOperation = () => {
+      const { data } = props;
+      const { slots } = context.value;
+      const $operation = slots?.operation
+        ? context.value.slots?.operation(data.key, operationDisabled.value)
+        : null;
+
+      return $operation;
+    }
+
+    const onRootMouseLeave = () => {
+      if (operationVisibleKey.value !== props.data?.key) return
+      if (!selected.value) {
+        operationVisibleKey.value = undefined
+      }
+    }
+
     return () => {
       const {
         eventKey,
@@ -534,7 +558,7 @@ export default defineComponent({
 
       const dragging = draggingNodeKey === eventKey;
       const ariaSelected = selectable !== undefined ? { 'aria-selected': !!selectable } : undefined;
-      // console.log(1);
+
       return (
         <div
           ref={domRef}
@@ -569,6 +593,7 @@ export default defineComponent({
           onDrop={mergedDraggable ? onDrop : undefined}
           onDragend={mergedDraggable ? onDragEnd : undefined}
           onMousemove={onMousemove}
+          onMouseleave={onRootMouseLeave}
           {...ariaSelected}
           {...dataOrAriaAttributeProps}
         >
@@ -577,6 +602,7 @@ export default defineComponent({
           {renderSwitcher()}
           {renderCheckbox()}
           {renderSelector()}
+          {renderOperation()}
         </div>
       );
     };

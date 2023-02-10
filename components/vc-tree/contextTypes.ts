@@ -3,7 +3,7 @@
  * When util.js imports the TreeNode for tree generate will cause treeContextTypes be empty.
  */
 
-import type { ComputedRef, InjectionKey, PropType, ShallowRef } from 'vue';
+import type { ComputedRef, InjectionKey, PropType, ShallowRef, Ref } from 'vue';
 import { shallowRef, inject, computed, defineComponent, provide } from 'vue';
 import type { VueNode } from '../_util/type';
 import type {
@@ -46,6 +46,7 @@ export interface TreeContextProps {
   customCheckable: (params: any) => any;
   checkStrictly: boolean;
   disabled: boolean;
+  operationDisabledWithRow: boolean;
   keyEntities: Record<Key, DataEntity<any>>;
   // for details see comment in Tree.state (Tree.tsx)
   dropLevelOffset?: number;
@@ -63,6 +64,7 @@ export interface TreeContextProps {
   dragOverNodeKey: Key | null;
   dragging: boolean;
   direction: Direction;
+  operationVisibleKey: Ref<any>;
 
   loadData: (treeNode: EventDataNode) => Promise<void>;
   filterTreeNode: (treeNode: EventDataNode) => boolean;

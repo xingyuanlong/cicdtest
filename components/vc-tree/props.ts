@@ -1,4 +1,4 @@
-import type { ExtractPropTypes, PropType } from 'vue';
+import type { ExtractPropTypes, PropType, Ref } from 'vue';
 import type { BasicDataNode } from '.';
 import type { EventHandler } from '../_util/EventInterface';
 import PropTypes from '../_util/vue-types';
@@ -51,6 +51,7 @@ export const treeNodeProps = {
   selectable: { type: Boolean, default: undefined },
   disabled: { type: Boolean, default: undefined },
   disableCheckbox: { type: Boolean, default: undefined },
+  disableOperation: { type: Boolean, default: undefined },
   icon: PropTypes.any,
   switcherIcon: PropTypes.any,
   domRef: { type: Function as PropType<(arg: any) => void> },
@@ -126,6 +127,7 @@ export const treeProps = () => ({
   icon: PropTypes.any,
   selectable: { type: Boolean, default: undefined },
   disabled: { type: Boolean, default: undefined },
+  operationDisabledWithRow: { type: Boolean, default: true },
   multiple: { type: Boolean, default: undefined },
   checkable: { type: Boolean, default: undefined },
   checkStrictly: { type: Boolean, default: undefined },
@@ -245,6 +247,7 @@ export const treeProps = () => ({
 
   // direction for drag logic
   direction: { type: String as PropType<Direction> },
+  operationVisibleKey: { type: Object as PropType<Ref<any>> }
 });
 
 export type TreeProps = Partial<ExtractPropTypes<ReturnType<typeof treeProps>>>;
