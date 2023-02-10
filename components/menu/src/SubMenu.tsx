@@ -9,6 +9,7 @@ import {
   useProvideForceRender,
   useInjectForceRender,
 } from './hooks/useMenuContext';
+import CollapseFilled from '@pf-ui/pf-icons-vue/CollapseFilled';
 import { getPropsSlot, isValidElement } from '../../_util/props-util';
 import classNames from '../../_util/classNames';
 import useDirectionStyle from './hooks/useDirectionStyle';
@@ -240,6 +241,7 @@ export default defineComponent({
       const icon = getPropsSlot(slots, props, 'icon');
       const expandIcon = props.expandIcon || slots.expandIcon || menuExpandIcon.value;
       const title = renderTitle(getPropsSlot(slots, props, 'title'), icon);
+      console.log('subMenuPrefixClsValue', subMenuPrefixClsValue);
       return (
         <div
           style={directionStyle.value}
@@ -261,7 +263,7 @@ export default defineComponent({
           {mode.value !== 'horizontal' && expandIcon ? (
             expandIcon({ ...props, isOpen: open.value })
           ) : (
-            <i class={`${subMenuPrefixClsValue}-arrow`} />
+            <CollapseFilled />
           )}
         </div>
       );

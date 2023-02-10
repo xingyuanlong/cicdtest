@@ -20,7 +20,7 @@ Click the menu and you will see that all the other menus gets collapsed to keep 
   <div>
     <pf-menu
       v-model:selectedKeys="selectedKeys"
-      style="width: 256px"
+      style="width: 180px"
       mode="inline"
       :open-keys="openKeys"
       @openChange="onOpenChange"

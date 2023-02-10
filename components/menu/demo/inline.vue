@@ -20,7 +20,7 @@ Vertical menu with inline submenus.
     id="dddddd"
     v-model:openKeys="openKeys"
     v-model:selectedKeys="selectedKeys"
-    style="width: 256px"
+    style="width: 180px"
     mode="inline"
     @click="handleClick"
   >
@@ -29,24 +29,16 @@ Vertical menu with inline submenus.
         <MailOutlined />
       </template>
       <template #title>Navigation One</template>
-      <pf-menu-item-group key="g1">
-        <template #icon>
-          <QqOutlined />
-        </template>
-        <template #title>Item 1</template>
-        <pf-menu-item key="1">Option 1</pf-menu-item>
-        <pf-menu-item key="2">Option 2</pf-menu-item>
-      </pf-menu-item-group>
-      <pf-menu-item-group key="g2" title="Item 2">
-        <pf-menu-item key="3">Option 3</pf-menu-item>
-        <pf-menu-item key="4">Option 4</pf-menu-item>
-      </pf-menu-item-group>
+      <pf-menu-item key="1">Option 1</pf-menu-item>
+      <pf-menu-item key="2">Option 2</pf-menu-item>
+      <pf-menu-item key="3">Option 3</pf-menu-item>
+      <pf-menu-item key="4">Option 4</pf-menu-item>
     </pf-sub-menu>
     <pf-sub-menu key="sub2" @titleClick="titleClick">
       <template #icon>
         <AppstoreOutlined />
       </template>
-      <template #title>Navigation Two</template>
+      <template #title>Two</template>
       <pf-menu-item key="5">Option 5</pf-menu-item>
       <pf-menu-item key="6">Option 6</pf-menu-item>
       <pf-sub-menu key="sub3" title="Submenu">

@@ -30,7 +30,15 @@
   .clearfix();
 
   &&-root:focus-visible {
-    .accessibility-focus();
+    .accessibility-focus(); 
+  }
+
+  &&-root{  
+    > li {
+     .@{menu-prefix-cls}-submenu-title {
+      height: 50px;
+     }
+    } 
   }
 
   ul,
@@ -76,7 +84,7 @@
   }
 
   &-submenu-selected {
-    color: @menu-highlight-color;
+    // color: @menu-highlight-color;
   }
 
   &-item:active,
@@ -98,7 +106,7 @@
     color: @menu-item-color;
 
     &:hover {
-      color: @menu-highlight-color;
+     // color: @menu-highlight-color;
     }
 
     &::before {
@@ -154,17 +162,20 @@
   }
 
   &:not(&-horizontal) &-item-selected {
-    background-color: @menu-item-active-bg;
+    // background-color: @menu-item-active-bg;
+   // background: pink;
   }
 
   &-inline,
   &-vertical,
   &-vertical-left {
-    border-right: @border-width-base @border-style-base @border-color-split;
+    // border-right: @border-width-base @border-style-base @border-color-split;
+    box-shadow: 0px 1px 4px 0px rgba(202,202,202,0.50);
   }
 
   &-vertical-right {
-    border-left: @border-width-base @border-style-base @border-color-split;
+   // border-left: @border-width-base @border-style-base @border-color-split;
+   box-shadow: 0px 1px 4px 0px rgba(202,202,202,0.50);
   }
 
   &-vertical&-sub,
@@ -220,7 +231,7 @@
 
     .@{menu-prefix-cls}-item-icon,
     .@{iconfont-css-prefix} {
-      min-width: 14px;
+      min-width: 16px;
       font-size: @menu-icon-size;
       transition: font-size @menu-animation-duration-normal @ease-out,
         margin @animation-duration-slow @ease-in-out, color @animation-duration-slow;
@@ -338,32 +349,18 @@
     }
 
     .@{menu-prefix-cls}-inline-collapsed &-arrow,
-    &-inline &-arrow {
+    &-inline .anticon-collapse {
       // ↓
-      &::before {
-        transform: rotate(-45deg) translateX(2.5px);
-      }
-
-      &::after {
-        transform: rotate(45deg) translateX(-2.5px);
-      }
+      transform: rotate(180deg);
     }
 
     &-horizontal &-arrow {
       display: none;
     }
 
-    &-open&-inline > &-title > &-arrow {
+    &-open&-inline > &-title > .anticon-collapse {
       // ↑
-      transform: translateY(-2px);
-
-      &::after {
-        transform: rotate(-45deg) translateX(-2.5px);
-      }
-
-      &::before {
-        transform: rotate(45deg) translateX(2.5px);
-      }
+      transform: rotate(0deg);
     }
   }
 
@@ -457,7 +454,7 @@
       &::after {
         position: absolute;
         top: 0;
-        right: 0;
+        left: 0;
         bottom: 0;
         border-right: @menu-item-active-border-width solid @menu-highlight-color;
         transform: scaleY(0.0001);
@@ -471,9 +468,10 @@
     .@{menu-prefix-cls}-item,
     .@{menu-prefix-cls}-submenu-title {
       height: @menu-item-height;
-      margin-top: @menu-item-vertical-margin;
-      margin-bottom: @menu-item-vertical-margin;
+      // margin-top: @menu-item-vertical-margin;
+      // margin-bottom: @menu-item-vertical-margin;
       padding: 0 16px;
+      padding-right: 14px;
       overflow: hidden;
       line-height: @menu-item-height;
       text-overflow: ellipsis;
@@ -485,7 +483,7 @@
     }
 
     .@{menu-prefix-cls}-item:not(:last-child) {
-      margin-bottom: @menu-item-boundary-margin;
+      // margin-bottom: @menu-item-boundary-margin;
     }
 
     > .@{menu-prefix-cls}-item,
@@ -507,7 +505,7 @@
     .@{menu-prefix-cls}-selected,
     .@{menu-prefix-cls}-item-selected {
       &::after {
-        transform: scaleY(1);
+        transform: scaleY(0.65);
         opacity: 1;
         transition: transform @menu-animation-duration-normal @ease-in-out,
           opacity @menu-animation-duration-normal @ease-in-out;
@@ -521,7 +519,7 @@
 
     .@{menu-prefix-cls}-item-group-list .@{menu-prefix-cls}-submenu-title,
     .@{menu-prefix-cls}-submenu-title {
-      padding-right: 34px;
+     // padding-right: 34px;
     }
 
     // Motion enhance for first level
@@ -542,6 +540,9 @@
 
         > * {
           flex: none;
+        }
+        > .anticon-collapse {
+          // transform: rotate(180deg);
         }
       }
     }
@@ -620,7 +621,7 @@
   &-root&-vertical-left,
   &-root&-vertical-right,
   &-root&-inline {
-    box-shadow: none;
+   //  box-shadow: none;
   }
 
   &-root&-inline-collapsed {
