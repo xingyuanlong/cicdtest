@@ -20,7 +20,7 @@ Click the menu and you will see that all the other menus gets collapsed to keep 
   <div>
     <pf-menu
       v-model:selectedKeys="selectedKeys"
-      style="width: 256px"
+      style="width: 180px"
       mode="inline"
       :open-keys="openKeys"
       @openChange="onOpenChange"
@@ -36,11 +36,10 @@ Click the menu and you will see that all the other menus gets collapsed to keep 
         <pf-menu-item key="4">Option 4</pf-menu-item>
       </pf-sub-menu>
       <pf-sub-menu key="sub2">
-        <template #icon></template>
-        <template #title>
-          <AppstoreOutlined />
-          Navigation Two
+        <template #icon>
+          <AppstoreOutlined />                  
         </template>
+        <template #title>Navigation Two</template>
         <pf-menu-item key="5">Option 5</pf-menu-item>
         <pf-menu-item key="6">Option 6</pf-menu-item>
         <pf-sub-menu key="sub3" title="Submenu">

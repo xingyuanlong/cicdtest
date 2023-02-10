@@ -1,11 +1,11 @@
 <template>
   <demo-sort :cols="1">
-    <horizontal />
     <inline />
-    <inline-collapsed />
     <sider-current />
+    <inline-collapsed />  
     <switch-mode />
     <theme />
+    <horizontal />
     <vertical />
     <TemplateSingleFile />
   </demo-sort>

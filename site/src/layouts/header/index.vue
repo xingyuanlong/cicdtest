@@ -91,6 +91,7 @@ export default defineComponent({
         localStorage.setItem('v3', version);
       }
     });
+    
     return {
       isZhCN: globalConfig.isZhCN,
       isMobile: globalConfig.isMobile,

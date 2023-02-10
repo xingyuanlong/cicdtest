@@ -4,9 +4,29 @@
     .@{menu-prefix-cls}-item:hover,
     .@{menu-prefix-cls}-item-active,
     .@{menu-prefix-cls}:not(.@{menu-prefix-cls}-inline) .@{menu-prefix-cls}-submenu-open,
-    .@{menu-prefix-cls}-submenu-active,
     .@{menu-prefix-cls}-submenu-title:hover {
-      color: @menu-highlight-color;
+      background-color: @menu-item-hover-bg;
     }
+  }
+}
+
+.@{menu-prefix-cls} {
+  // light theme
+  &-light {
+   > li > ul > li > ul > li {
+    // background: pink;
+    &::before {
+      content: "";
+      width: 4px;
+      height: 4px;
+      background: black;
+      border-radius: 50%;
+      margin-right: 11px;
+    }
+   }
+
+   >li > .@{menu-prefix-cls}-submenu-title > .@{menu-prefix-cls}-title-content {
+    font-weight: 500;
+   }
   }
 }

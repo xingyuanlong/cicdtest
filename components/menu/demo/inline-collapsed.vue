@@ -21,7 +21,7 @@ Here is [a complete demo](/components/layout/#components-layout-demo-side) with 
 </docs>
 
 <template>
-  <div style="width: 256px">
+  <div style="width: 180px">
     <pf-button type="primary" style="margin-bottom: 16px" @click="toggleCollapsed">
       <MenuUnfoldOutlined v-if="collapsed" />
       <MenuFoldOutlined v-else />
