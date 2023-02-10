@@ -54,7 +54,7 @@ export type DraggableConfig = {
 export default defineComponent({
   name: 'Tree',
   inheritAttrs: false,
-  slots: ['checkable', 'title', 'icon', 'titleRender'],
+  slots: ['checkable', 'title', 'icon', 'titleRender', 'operation'],
   props: initDefaultProps(treeProps(), {
     prefixCls: 'vc-tree',
     showLine: false,
@@ -63,6 +63,7 @@ export default defineComponent({
     multiple: false,
     checkable: false,
     disabled: false,
+    operationDisabledWithRow: true,
     checkStrictly: false,
     draggable: false,
     defaultExpandParent: true,
@@ -1097,6 +1098,7 @@ export default defineComponent({
         checkable,
         checkStrictly,
         disabled,
+        operationDisabledWithRow,
         motion,
         loadData,
         filterTreeNode,
@@ -1107,6 +1109,7 @@ export default defineComponent({
         onContextmenu,
         onScroll,
         direction,
+        operationVisibleKey
       } = props;
 
       const { class: className, style } = attrs;
@@ -1145,6 +1148,7 @@ export default defineComponent({
             customCheckable: slots.checkable,
             checkStrictly,
             disabled,
+            operationDisabledWithRow,
             keyEntities: keyEntities.value,
             dropLevelOffset,
             dropContainerKey,
@@ -1154,6 +1158,7 @@ export default defineComponent({
             dragging: draggingNodeKey !== null,
             indent: indent.value,
             direction,
+            operationVisibleKey,
             dropIndicatorRender,
 
             loadData,

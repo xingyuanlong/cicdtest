@@ -39,6 +39,9 @@ Almost anything can be represented in a tree structure. Examples include directo
 | title | custom title | slot |  | 2.0.0 |
 | treeData | treeNode of tree, please use `treeNodes` before v1.1.4 | [TreeNode\[\]](#TreeNode) | - |  |
 | virtual | Disable virtual scroll when set to false | boolean | true |  |
+| operation | extra operation | [TreeNodeOperation\[\]](#TreeNodeOperation) | - | 1.0.18 |
+| operationTrigger | the trigger mode which executes the drop-down action | Array<click\|hover\|contextmenu> | ['hover'] | 1.0.18 |
+| operationDisabledWithRow | whether the extra operation is disabled with the current tree node | boolean | false | 1.0.18 |
 
 ### Events
 
@@ -76,6 +79,14 @@ Almost anything can be represented in a tree structure. Examples include directo
 | selectable | Set whether the treeNode can be selected | boolean | true |  |
 | style | style | string\|object | - |  |
 | title | Title | string | '---' |  |
+
+### TreeNodeOperation
+
+| Property | Description | Type | Default | Version |
+| --- | --- | --- | --- | --- |
+| title | Operation title | string | - | 1.0.18 |
+| onClick | Callback function for when the user clicks operation  | () => void | - | 1.0.18 |
+| isDisabled | whether disabled the operation | (key: string) => boolean | - | 1.0.18 |
 
 ### DirectoryTree props
 

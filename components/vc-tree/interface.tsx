@@ -7,6 +7,7 @@ export interface BasicDataNode {
   checkable?: boolean;
   disabled?: boolean;
   disableCheckbox?: boolean;
+  disableOperation?: boolean;
   icon?: IconType;
   isLeaf?: boolean;
   selectable?: boolean;
