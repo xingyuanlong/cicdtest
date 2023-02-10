@@ -10,6 +10,6 @@ export default function useDirectionStyle(level: ComputedRef<number>): ComputedR
       ? null
       : rtl.value
       ? { paddingRight: `${level.value * inlineIndent.value}px` }
-      : { paddingLeft: `${level.value * inlineIndent.value}px` },
+      : { paddingLeft: `${level.value > 1 ? (2 * inlineIndent.value + 14) : inlineIndent.value}px` },
   );
 }
