@@ -34,7 +34,7 @@ Use `label` show time alone.
 </template>
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
-import type { TimelineProps } from 'pf-ui-vue';
+import type { TimelineProps } from '@pf-ui/pf-ui-vue';
 export default defineComponent({
   setup() {
     return {

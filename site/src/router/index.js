@@ -50,12 +50,12 @@ const routes = [
     children: [
       {
         path: 'vue/introduce-cn',
-        meta: { enTitle: 'pf-ui-vue', title: 'pf-ui-vue', category: 'docs' },
+        meta: { enTitle: '@pf-ui/pf-ui-vue', title: '@pf-ui/pf-ui-vue', category: 'docs' },
         component: () => import('../vueDocs/introduce.zh-CN.md'),
       },
       {
         path: 'vue/introduce',
-        meta: { enTitle: 'pf-ui-vue', title: 'pf-ui-vue', category: 'docs' },
+        meta: { enTitle: '@pf-ui/pf-ui-vue', title: '@pf-ui/pf-ui-vue', category: 'docs' },
         component: () => import('../vueDocs/introduce.en-US.md'),
       },
       {

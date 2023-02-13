@@ -20,7 +20,7 @@ Display a global loading indicator, which is dismissed by itself asynchronously.
   <pf-button @click="success">Display a loading indicator</pf-button>
 </template>
 <script lang="ts">
-import { Pfmessage } from 'pf-ui-vue';
+import { Pfmessage } from '@pf-ui/pf-ui-vue';
 import { defineComponent } from 'vue';
 export default defineComponent({
   setup() {

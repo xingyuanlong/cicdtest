@@ -59,9 +59,9 @@ title:
   </template>
   <script lang="ts">
   import { PlusOutlined, LoadingOutlined } from '@ant-design/icons-vue';
-  import { Pfmessage } from 'pf-ui-vue';
+  import { Pfmessage } from '@pf-ui/pf-ui-vue';
   import { defineComponent, ref } from 'vue';
-  import type { UploadChangeParam, UploadProps } from 'pf-ui-vue';
+  import type { UploadChangeParam, UploadProps } from '@pf-ui/pf-ui-vue';
   import ErrorFilled from '@pf-ui/pf-icons-vue/ErrorFilled';
   import ReplaceFilled from '@pf-ui/pf-icons-vue/ReplaceFilled';
   import ZoomFilled from '@pf-ui/pf-icons-vue/ZoomFilled';

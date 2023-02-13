@@ -14,7 +14,7 @@
 </template>
 <script>
 import * as AntdIcons from '@pf-ui/pf-icons-vue';
-import { PfBadge } from 'pf-ui-vue';
+import { PfBadge } from '@pf-ui/pf-ui-vue';
 import { defineComponent } from 'vue';
 
 const allIcons = AntdIcons;

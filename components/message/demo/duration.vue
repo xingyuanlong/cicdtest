@@ -20,7 +20,7 @@ Customize message display duration from default `3s` to `10s`.
   <pf-button @click="success">Customized display duration</pf-button>
 </template>
 <script lang="ts">
-import { Pfmessage } from 'pf-ui-vue';
+import { Pfmessage } from '@pf-ui/pf-ui-vue';
 import { defineComponent } from 'vue';
 export default defineComponent({
   setup() {

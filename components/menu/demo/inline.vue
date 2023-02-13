@@ -61,7 +61,7 @@ Vertical menu with inline submenus.
 <script lang="ts">
 import { defineComponent, ref, watch } from 'vue';
 import { MailOutlined, QqOutlined, AppstoreOutlined, SettingOutlined } from '@ant-design/icons-vue';
-import type { MenuProps } from 'pf-ui-vue';
+import type { MenuProps } from '@pf-ui/pf-ui-vue';
 export default defineComponent({
   components: {
     MailOutlined,

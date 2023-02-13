@@ -20,7 +20,7 @@ title:
   <pf-button @click="success">Display a sequence of message</pf-button>
 </template>
 <script lang="ts">
-import { Pfmessage } from 'pf-ui-vue';
+import { Pfmessage } from '@pf-ui/pf-ui-vue';
 import { defineComponent } from 'vue';
 export default defineComponent({
   setup() {

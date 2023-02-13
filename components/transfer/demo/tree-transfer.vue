@@ -51,7 +51,7 @@ Customize render list with Tree component.
 </template>
 <script lang="ts">
 import { computed, defineComponent, ref } from 'vue';
-import type { TransferProps, TreeProps } from 'pf-ui-vue';
+import type { TransferProps, TreeProps } from '@pf-ui/pf-ui-vue';
 const tData: TransferProps['dataSource'] = [
   { key: '0-0', title: '0-0' },
   {

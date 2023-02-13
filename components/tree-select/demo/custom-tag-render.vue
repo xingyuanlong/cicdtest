@@ -41,9 +41,9 @@ Allows for custom rendering of tags.
   </pf-tree-select>
 </template>
 <script lang="ts">
-import type { TreeSelectProps } from 'pf-ui-vue';
+import type { TreeSelectProps } from '@pf-ui/pf-ui-vue';
 import { defineComponent, ref, watch } from 'vue';
-import { PfTreeSelect } from 'pf-ui-vue';
+import { PfTreeSelect } from '@pf-ui/pf-ui-vue';
 const SHOW_ALL = PfTreeSelect.SHOW_ALL;
 export default defineComponent({
   setup() {

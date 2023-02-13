@@ -47,7 +47,7 @@ Support 6 placements.
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
-import type { DropdownProps } from 'pf-ui-vue';
+import type { DropdownProps } from '@pf-ui/pf-ui-vue';
 export default defineComponent({
   setup() {
     return {

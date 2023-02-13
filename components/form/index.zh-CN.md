@@ -126,7 +126,7 @@ cover: https://gw.alipayobjects.com/zos/alicdn/ORmcdeaoO/Form.svg
 ```html
 <script>
   // 自定义组件
-  import { PfForm } from 'pf-ui-vue';
+  import { PfForm } from '@pf-ui/pf-ui-vue';
   export default {
     setup() {
       const formItemContext = PfForm.useInjectFormItemContext();
@@ -199,7 +199,7 @@ Form.Item 会对唯一子元素进行劫持，并监听 `blur` 和 `change` 事�
 2.2 以下版本需要需要 @pf-ui-vue/use 库单独提供，不建议继续使用，你应该尽快升级到 2.2+ 版本
 
 ```ts
-import { PfForm } from 'pf-ui-vue';
+import { PfForm } from '@pf-ui/pf-ui-vue';
 const useForm = PfForm.useForm;
 
 useForm(modelRef, ruleRef, [options]);

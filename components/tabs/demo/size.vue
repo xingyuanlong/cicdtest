@@ -31,7 +31,7 @@ Large size tabs are usally used in page header, and small size could be used in 
 </template>
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
-import type { TabsProps } from 'pf-ui-vue';
+import type { TabsProps } from '@pf-ui/pf-ui-vue';
 
 export default defineComponent({
   setup() {

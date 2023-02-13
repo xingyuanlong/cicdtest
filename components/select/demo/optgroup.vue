@@ -45,7 +45,7 @@ Using `OptGroup` or `options.options` to group the options.
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
 import { UserOutlined } from '@ant-design/icons-vue';
-import type { SelectProps } from 'pf-ui-vue';
+import type { SelectProps } from '@pf-ui/pf-ui-vue';
 export default defineComponent({
   components: {
     UserOutlined,

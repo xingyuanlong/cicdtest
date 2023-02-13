@@ -33,8 +33,8 @@ Use virtual list through `height` prop.
   </pf-tree-select>
 </template>
 <script lang="ts">
-import type { TreeSelectProps } from 'pf-ui-vue';
-import { PfTreeSelect } from 'pf-ui-vue';
+import type { TreeSelectProps } from '@pf-ui/pf-ui-vue';
+import { PfTreeSelect } from '@pf-ui/pf-ui-vue';
 import { defineComponent, ref, watch } from 'vue';
 const SHOW_PARENT = PfTreeSelect.SHOW_PARENT;
 

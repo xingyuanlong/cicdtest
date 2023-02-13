@@ -39,7 +39,7 @@ You can gain full control over filelist by configuring `fileList`. You can accom
 <script lang="ts">
 import { UploadOutlined } from '@ant-design/icons-vue';
 import { defineComponent, ref } from 'vue';
-import type { UploadChangeParam, UploadProps } from 'pf-ui-vue';
+import type { UploadChangeParam, UploadProps } from '@pf-ui/pf-ui-vue';
 
 export default defineComponent({
   components: {

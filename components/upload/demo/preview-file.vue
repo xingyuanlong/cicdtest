@@ -33,7 +33,7 @@ Customize local preview. Can handle with non-image format files such as video.
 <script lang="ts">
 import { UploadOutlined } from '@ant-design/icons-vue';
 import { defineComponent, ref } from 'vue';
-import type { UploadProps } from 'pf-ui-vue';
+import type { UploadProps } from '@pf-ui/pf-ui-vue';
 
 export default defineComponent({
   components: {

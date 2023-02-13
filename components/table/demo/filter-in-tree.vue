@@ -26,7 +26,7 @@ You can use `filterMode` to change default filter interface, options: `menu`(def
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
-import type { TableProps } from 'pf-ui-vue';
+import type { TableProps } from '@pf-ui/pf-ui-vue';
 
 export default defineComponent({
   setup() {

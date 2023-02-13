@@ -33,7 +33,7 @@ A Solution for displaying large amounts of data with long columns.
   </pf-table>
 </template>
 <script lang="ts">
-import type { TableColumnsType } from 'pf-ui-vue';
+import type { TableColumnsType } from '@pf-ui/pf-ui-vue';
 import { defineComponent } from 'vue';
 
 const columns: TableColumnsType = [

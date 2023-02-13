@@ -28,7 +28,7 @@ The label of the selected item will be packed as an object for passing to the on
   ></pf-select>
 </template>
 <script lang="ts">
-import type { SelectProps } from 'pf-ui-vue';
+import type { SelectProps } from '@pf-ui/pf-ui-vue';
 import { defineComponent, ref } from 'vue';
 
 export default defineComponent({

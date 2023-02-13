@@ -105,7 +105,7 @@ import { defineComponent } from 'vue';
 import { UserOutlined } from '@ant-design/icons-vue';
 import ArrowDownFilled from '@pf-ui/pf-icons-vue/ArrowDownFilled'
 
-import type { MenuProps } from 'pf-ui-vue';
+import type { MenuProps } from '@pf-ui/pf-ui-vue';
 
 export default defineComponent({
   components: {

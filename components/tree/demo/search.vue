@@ -39,7 +39,7 @@ Searchable Tree.
 
 <script lang="ts">
 import { defineComponent, ref, watch } from 'vue';
-import type { TreeProps } from 'pf-ui-vue';
+import type { TreeProps } from '@pf-ui/pf-ui-vue';
 
 const x = 3;
 const y = 2;

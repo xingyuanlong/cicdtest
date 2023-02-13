@@ -25,7 +25,7 @@ Built-in directory tree. `multiple` support `ctrl(Windows)` / `command(Mac)` sel
   ></pf-directory-tree>
 </template>
 <script lang="ts">
-import type { TreeProps } from 'pf-ui-vue';
+import type { TreeProps } from '@pf-ui/pf-ui-vue';
 import { defineComponent, ref } from 'vue';
 
 export default defineComponent({

@@ -32,7 +32,7 @@ Only options passing is supported, pf-select-option construction node is not sup
   ></pf-select>
 </template>
 <script lang="ts">
-import type { SelectProps } from 'pf-ui-vue';
+import type { SelectProps } from '@pf-ui/pf-ui-vue';
 import { defineComponent, ref } from 'vue';
 export default defineComponent({
   setup() {

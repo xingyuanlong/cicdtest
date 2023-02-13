@@ -25,7 +25,7 @@ In the various types of information modal dialog, only one button to close dialo
   </pf-space>
 </template>
 <script lang="ts">
-import { PfModal } from 'pf-ui-vue';
+import { PfModal } from '@pf-ui/pf-ui-vue';
 import { defineComponent, h } from 'vue';
 export default defineComponent({
   setup() {

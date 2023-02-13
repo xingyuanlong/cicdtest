@@ -1,4 +1,4 @@
-import { Pfmessage } from 'pf-ui-vue';
+import { Pfmessage } from '@pf-ui/pf-ui-vue';
 import { defineComponent } from 'vue';
 import CopyableIcon from './CopyableIcon.vue';
 
