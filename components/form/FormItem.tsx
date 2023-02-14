@@ -27,7 +27,7 @@ import { toArray } from './utils/typeUtil';
 import { warning } from '../vc-util/warning';
 import find from 'lodash-es/find';
 import { tuple } from '../_util/type';
-import type { InternalNamePath, Rule, RuleError, RuleObject, ValidateOptions } from './interface';
+import type { InternalNamePath, Rule, RuleError, RuleObject, ValidateOptions, FormLabelAlign } from './interface';
 import useConfigInject from '../_util/hooks/useConfigInject';
 import { useInjectForm } from './context';
 import FormItemLabel from './FormItemLabel';
@@ -91,7 +91,7 @@ export const formItemProps = () => ({
   wrapperCol: { type: Object as PropType<ColProps & HTMLAttributes> },
   hasFeedback: { type: Boolean, default: false },
   colon: { type: Boolean, default: undefined },
-  labelAlign: PropTypes.oneOf(tuple('left', 'right')),
+  labelAlign: PropTypes.oneOf(tuple<[FormLabelAlign, FormLabelAlign]>('left', 'right')),
   prop: { type: [String, Number, Array] as PropType<string | number | Array<string | number>> },
   name: { type: [String, Number, Array] as PropType<string | number | Array<string | number>> },
   rules: [Array, Object] as PropType<Rule[] | Rule>,

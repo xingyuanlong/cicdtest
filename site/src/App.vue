@@ -1,5 +1,9 @@
 <template>
-  <pf-config-provider :locale="locale" :getTargetContainer="getTargetContainer">
+  <pf-config-provider
+    :locale="locale"
+    :getTargetContainer="getTargetContainer"
+    :getPopupContainer="getPopupContainer"
+  >
     <pf-scrollbar ref="globalScrollRef" verticalRailStyle="z-index: 9999;">
       <router-view />
     </pf-scrollbar>
@@ -10,7 +14,7 @@
 import { computed, defineComponent, provide, watch, ref } from 'vue';
 
 import type { Ref } from 'vue';
-import { useRoute } from 'vue-router';
+import { useRoute, useRouter } from 'vue-router';
 import { useI18n } from 'vue-i18n';
 import useMediaQuery from './hooks/useMediaQuery';
 import { GLOBAL_CONFIG } from './SymbolKey';
@@ -30,9 +34,15 @@ export interface GlobalConfig {
   responsive: Ref<null | 'narrow' | 'crowded'>;
   blocked: Ref<boolean>;
 }
+const deleteHrefHash = (href?: string, hash?: string) => {
+  if (!href) return undefined;
+  if (!hash) return href;
+  return href.split(hash)[0];
+}
 export default defineComponent({
   setup() {
     const route = useRoute();
+    const router = useRouter();
     const i18n = useI18n();
     const colSize = useMediaQuery();
     const isMobile = computed(() => colSize.value === 'sm' || colSize.value === 'xs');
@@ -111,8 +121,26 @@ export default defineComponent({
       },
       { immediate: true },
     );
-    const getTargetContainer = () => globalScrollRef.value?.scrollContainer
-    return { globalConfig, locale, globalScrollRef, getTargetContainer };
+    const getTargetContainer = () => globalScrollRef.value?.scrollContainer;
+    const getPopupContainer = triggerNode => triggerNode?.parentNode || document.body;
+
+    router.afterEach((to, from) => {
+      if (to && from) {
+        const toPath = deleteHrefHash(to.fullPath, to.hash);
+        const fromPath = deleteHrefHash(from.fullPath, from.hash);
+        if (toPath && fromPath && toPath !== fromPath) {
+          globalScrollRef.value?.scrollTo && globalScrollRef.value?.scrollTo(0, 0);
+        }
+      }
+    });
+
+    return {
+      globalConfig,
+      locale,
+      globalScrollRef,
+      getTargetContainer,
+      getPopupContainer
+    };
   },
   
 });

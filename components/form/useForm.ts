@@ -99,6 +99,7 @@ function useForm(
     validateOnRuleChange?: boolean;
     debounce?: DebounceSettings;
     onValidate?: Callbacks['onValidate'];
+    validateFirstName?: string | string[] | boolean
   },
 ): {
   modelRef: Props | Ref<Props>;
@@ -232,6 +233,13 @@ function useForm(
     rules: Record<string, unknown>[],
     option: validateOptions = {},
   ): Promise<RuleError[]> => {
+    const { validateFirst } = option
+    const { validateFirstName } = options || {}
+    const _validateFirst = typeof validateFirst === 'boolean'
+      ? validateFirst
+      : typeof validateFirstName === 'boolean'
+        ? validateFirstName
+        : toArray(validateFirstName).includes(name)
     const promise = validateRules(
       [name],
       value,
@@ -240,7 +248,7 @@ function useForm(
         validateMessages: defaultValidateMessages,
         ...option,
       },
-      !!option.validateFirst,
+      _validateFirst,
     );
     if (!validateInfos[name]) {
       return promise.catch((e: any) => e);

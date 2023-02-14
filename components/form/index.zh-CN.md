@@ -192,11 +192,15 @@ Form.Item 会对唯一子元素进行劫持，并监听 `blur` 和 `change` 事�
 
 更多高级用法可研究 [async-validator](https://github.com/yiminghe/async-validator)。
 
-### useForm (v2.2)
+### useForm
 
-`useForm` 是一个可以独立 Form 组件运行的方法，它使用 Vue 响应式机制进行数据的监听和校验，并将校验结果返回，你可以将校验结果绑定到任何组件上，`Form.Item` 也仅仅是将结果展示。
+`useForm` 是一个可以独立 `Form` 组件运行的方法，它使用 Vue 响应式机制进行数据的监听和校验，并将校验结果返回，你可以将校验结果绑定到任何组件上，`Form.Item` 也仅仅是将结果展示。
 
-2.2 以下版本需要需要 @pf-ui-vue/use 库单独提供，不建议继续使用，你应该尽快升级到 2.2+ 版本
+
+为保持`useForm`独立于 `Form` 组件，请将`useForm`返回值中的`validateInfos`绑定在`FormItem`组件上，并且不要将`FormItem`组件的`autoLink`配置为`true`。
+
+
+使用`useForm`时，`Form`及`FormItem`组件与数据逻辑、校验相关的属性会失效，如`validateFirst`，`validateTrigger`。`validateFirst`需要在`useForm`的`options`中配置`validateFirstName`或者在调用`validate`、`validateField`时传入`validateFirst`，`validate`、`validateField`中的`validateFirst`优先级大于`validateFirstName`。使用`blur`作为trigger时需在控件上绑定方法触发校验，参考[`useForm 自定义触发时机`](#components-form-demo-useForm-trigger)
 
 ```ts
 import { PfForm } from 'pf-ui-vue';
@@ -215,34 +219,58 @@ useForm(modelRef, ruleRef, [options]);
 interface Props {
   [key: string]: any;
 }
+interface ValidateInfo {
+  autoLink?: boolean;
+  required?: boolean;
+  validateStatus?: "" | "success" | "warning" | "error" | "validating";
+  help?: any;
+}
+interface validateOptions {
+  validateFirst?: boolean;
+  validateMessages?: ValidateMessages;
+  trigger?: 'change' | 'blur' | string | string[];
+}
+interface ValidateInfo {
+  autoLink?: boolean;
+  required?: boolean;
+  validateStatus?: ValidateStatus;
+  help?: any;
+}
 function useForm(
   modelRef: Props | Ref<Props>,
-  rulesRef?: Props | Ref<Props>,
+  rulesRef: Props | Ref<Props> = ref({}),
   options?: {
     immediate?: boolean;
     deep?: boolean;
     validateOnRuleChange?: boolean;
-    debounce?: DebounceSettings;
+    debounce?: {
+      leading?: boolean;
+      wait?: number;
+      trailing?: boolean;
+    };
+    onValidate?: (
+      name: string | number | string[] | number[],
+      status: boolean,
+      errors: string[] | null,
+    ) => void;
+    validateFirstName?: string | string[] | boolean
   },
 ): {
   modelRef: Props | Ref<Props>;
   rulesRef: Props | Ref<Props>;
   initialModel: Props;
-  validateInfos: validateInfos;
+  validateInfos: {
+    [key: string]: ValidateInfo;
+  };
   resetFields: (newValues?: Props) => void;
-  validate: <T = any>(names?: namesType, option?: validateOptions) => Promise<T>;
-  validateField: (
-    name?: string,
-    value?: any,
-    rules?: [Record<string, unknown>],
+  validate: <T = any>(names?: string | string[], option?: validateOptions) => Promise<T>;
+  validateField:( 
+    name: string,
+    value: any,
+    rules: Record<string, unknown>[],
     option?: validateOptions,
   ) => Promise<RuleError[]>;
   mergeValidateInfo: (items: ValidateInfo | ValidateInfo[]) => ValidateInfo;
   clearValidate: (names?: namesType) => void;
-  onValidate?: (
-    name: string | number | string[] | number[],
-    status: boolean,
-    errorMsgs: string[] | null,
-  ) => void;
 };
 ```

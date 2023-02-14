@@ -23,6 +23,7 @@
     <UseFormNested />
     <UseFormTrigger />
     <UseFormMerge />
+    <UseFormValidateFirst />
   </demo-sort>
 </template>
 <script lang="ts">
@@ -47,6 +48,7 @@ import UseFormBasic from './useForm-basic.vue';
 import UseFormNested from './useForm-nested.vue';
 import UseFormTrigger from './useForm-trigger.vue';
 import UseFormMerge from './useForm-merge.vue';
+import UseFormValidateFirst from './useForm-validate-first.vue'
 import CustomizedFormControls from './customized-form-controls.vue';
 import timeRelatedControlsVue from './time-related-controls.vue';
 import validateOtherVue from './validate-other.vue';
@@ -70,6 +72,7 @@ export default defineComponent({
     UseFormNested,
     UseFormTrigger,
     UseFormMerge,
+    UseFormValidateFirst,
     LableWidth,
     CustomizedFormControls,
     advancedSearchVue,

@@ -194,11 +194,9 @@ If the form field to be monitored does not meet the conditions of automatic moni
 
 See more advanced usage at [async-validator](https://github.com/yiminghe/async-validator).
 
-### useForm (v2.2)
+### useForm
 
 `useForm` is a method that can run independently of the Form component. It uses the Vue response mechanism to monitor and verify data, and returns the verification result. You can bind the verification result to any component, `Form. Item` only displays the results.
-
-The following versions need to be provided separately by `@pf-ui-vue/use` library, it is not recommended to continue to use, you should upgrade to version 2.2+ as soon as possible
 
 ```ts
 import { PfForm } from 'pf-ui-vue';
@@ -217,34 +215,58 @@ useForm(modelRef, ruleRef, [options]);
 interface Props {
   [key: string]: any;
 }
+interface ValidateInfo {
+  autoLink?: boolean;
+  required?: boolean;
+  validateStatus?: "" | "success" | "warning" | "error" | "validating";
+  help?: any;
+}
+interface validateOptions {
+  validateFirst?: boolean;
+  validateMessages?: ValidateMessages;
+  trigger?: 'change' | 'blur' | string | string[];
+}
+interface ValidateInfo {
+  autoLink?: boolean;
+  required?: boolean;
+  validateStatus?: ValidateStatus;
+  help?: any;
+}
 function useForm(
   modelRef: Props | Ref<Props>,
-  rulesRef?: Props | Ref<Props>,
+  rulesRef: Props | Ref<Props> = ref({}),
   options?: {
     immediate?: boolean;
     deep?: boolean;
     validateOnRuleChange?: boolean;
-    debounce?: DebounceSettings;
+    debounce?: {
+      leading?: boolean;
+      wait?: number;
+      trailing?: boolean;
+    };
+    onValidate?: (
+      name: string | number | string[] | number[],
+      status: boolean,
+      errors: string[] | null,
+    ) => void;
+    validateFirstName?: string | string[] | boolean
   },
 ): {
   modelRef: Props | Ref<Props>;
   rulesRef: Props | Ref<Props>;
   initialModel: Props;
-  validateInfos: validateInfos;
+  validateInfos: {
+    [key: string]: ValidateInfo;
+  };
   resetFields: (newValues?: Props) => void;
-  validate: <T = any>(names?: namesType, option?: validateOptions) => Promise<T>;
-  validateField: (
-    name?: string,
-    value?: any,
-    rules?: [Record<string, unknown>],
+  validate: <T = any>(names?: string | string[], option?: validateOptions) => Promise<T>;
+  validateField:( 
+    name: string,
+    value: any,
+    rules: Record<string, unknown>[],
     option?: validateOptions,
   ) => Promise<RuleError[]>;
   mergeValidateInfo: (items: ValidateInfo | ValidateInfo[]) => ValidateInfo;
   clearValidate: (names?: namesType) => void;
-  onValidate?: (
-    name: string | number | string[] | number[],
-    status: boolean,
-    errorMsgs: string[] | null,
-  ) => void;
 };
 ```
