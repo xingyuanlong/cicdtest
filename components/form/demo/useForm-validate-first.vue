@@ -44,7 +44,7 @@ validateFirst.
 </template>
 <script lang="ts">
 import { defineComponent, reactive, toRaw } from 'vue';
-import { PfForm } from 'pf-ui-vue';
+import { PfForm } from '@pf-ui/pf-ui-vue';
 
 const useForm = PfForm.useForm;
 export default defineComponent({
