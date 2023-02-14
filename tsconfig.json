@@ -2,8 +2,8 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "pf-ui-vue": ["components/index.ts"],
-      "pf-ui-vue/es/*": ["components/*"]
+      "@pf-ui/pf-ui-vue": ["components/index.ts"],
+      "@pf-ui/pf-ui-vue/es/*": ["components/*"]
     },
     "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "strictNullChecks": false,
