@@ -54,7 +54,7 @@ to work with `Form`.
   </pf-form>
 </template>
 <script>
-import { PfMentions, PfForm } from 'pf-ui-vue';
+import { PfMentions, PfForm } from '@pf-ui/pf-ui-vue';
 import { defineComponent, reactive } from 'vue';
 
 const useForm = PfForm.useForm;

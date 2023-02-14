@@ -57,7 +57,7 @@ set resizable for drag column
 </template>
 <script lang="ts">
 import { SmileOutlined } from '@ant-design/icons-vue';
-import type { TableColumnsType } from 'pf-ui-vue';
+import type { TableColumnsType } from '@pf-ui/pf-ui-vue';
 import { defineComponent, ref } from 'vue';
 
 const data = [

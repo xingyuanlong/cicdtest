@@ -32,10 +32,10 @@ Use `progress` for customize progress bar.
   </pf-upload>
 </template>
 <script lang="ts">
-import { Pfmessage } from 'pf-ui-vue';
+import { Pfmessage } from '@pf-ui/pf-ui-vue';
 import { UploadOutlined } from '@ant-design/icons-vue';
 import { defineComponent, ref } from 'vue';
-import type { UploadChangeParam, UploadProps } from 'pf-ui-vue';
+import type { UploadChangeParam, UploadProps } from '@pf-ui/pf-ui-vue';
 
 export default defineComponent({
   components: {

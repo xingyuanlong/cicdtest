@@ -34,7 +34,7 @@ The default is to close the menu when you click on menu items, this feature can 
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
 import ArrowDownFilled from '@pf-ui/pf-icons-vue/ArrowDownFilled'
-import type { MenuProps } from 'pf-ui-vue';
+import type { MenuProps } from '@pf-ui/pf-ui-vue';
 
 export default defineComponent({
   components: {

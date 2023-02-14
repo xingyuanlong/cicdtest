@@ -67,7 +67,7 @@ Set a number and automatically fold after exceeding.
   </pf-space>
 </template>
 <script lang="ts">
-import type { SelectProps } from 'pf-ui-vue';
+import type { SelectProps } from '@pf-ui/pf-ui-vue';
 import { defineComponent, ref } from 'vue';
 export default defineComponent({
   setup() {

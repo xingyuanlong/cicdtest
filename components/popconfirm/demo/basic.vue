@@ -50,7 +50,7 @@ The basic example.
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { Pfmessage } from 'pf-ui-vue';
+import { Pfmessage } from '@pf-ui/pf-ui-vue';
 export default defineComponent({
   setup() {
     const confirm = (e: MouseEvent) => {

@@ -16,7 +16,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import type { PropType } from 'vue';
-import { PfForm } from 'pf-ui-vue';
+import { PfForm } from '@pf-ui/pf-ui-vue';
 
 export type Currency = 'rmb' | 'dollar';
 

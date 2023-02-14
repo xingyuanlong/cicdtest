@@ -103,7 +103,9 @@ export default defineComponent<ConfirmDialogProps>({
         (okCancel ? locale.value.okText : locale.value.justOkText);
       const cancelText = renderSomeContent(props.cancelText) || locale.value.cancelText;
       const autoFocusButton =
-        props.autoFocusButton === null ? false : props.autoFocusButton || 'ok';
+        props.autoFocusButton === null || props.autoFocusButton === undefined
+          ? false
+          : props.autoFocusButton || 'ok';
 
       const classString = classNames(
         contentPrefixCls,
@@ -124,7 +126,6 @@ export default defineComponent<ConfirmDialogProps>({
           {cancelText}
         </ActionButton>
       );
-
       return (
         <Dialog
           prefixCls={prefixCls}

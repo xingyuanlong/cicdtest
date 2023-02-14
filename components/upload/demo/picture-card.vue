@@ -36,7 +36,7 @@ After users upload picture, the thumbnail will be shown in list. The upload butt
 <script lang="ts">
 import { PlusOutlined } from '@ant-design/icons-vue';
 import { defineComponent, ref } from 'vue';
-import type { UploadProps } from 'pf-ui-vue';
+import type { UploadProps } from '@pf-ui/pf-ui-vue';
 
 function getBase64(file: File) {
   return new Promise((resolve, reject) => {

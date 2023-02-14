@@ -28,7 +28,7 @@ Clicking on an anchor does not record history.
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import type { AnchorProps } from 'pf-ui-vue';
+import type { AnchorProps } from '@pf-ui/pf-ui-vue';
 
 export default defineComponent({
   setup() {

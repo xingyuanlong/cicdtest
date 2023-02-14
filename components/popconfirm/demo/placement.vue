@@ -161,7 +161,7 @@ There are 12 `placement` options available. Use `arrowPointAtCenter` if you want
   </div>
 </template>
 <script>
-import { Pfmessage } from 'pf-ui-vue';
+import { Pfmessage } from '@pf-ui/pf-ui-vue';
 import { defineComponent } from 'vue';
 export default defineComponent({
   setup() {

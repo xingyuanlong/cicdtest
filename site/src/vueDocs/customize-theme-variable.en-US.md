@@ -24,7 +24,7 @@ Note: You need remove `babel-plugin-import` for the dynamic theme.
 Call ConfigProvider static function to modify theme color:
 
 ```ts
-import { PfConfigProvider } from 'pf-ui-vue';
+import { PfConfigProvider } from '@pf-ui/pf-ui-vue';
 
 PfConfigProvider.@pf-ui/pf-ui-vue({
   theme: {
@@ -52,7 +52,7 @@ Modify `prefixCls` on the root of ConfigProvider:
 Also need call the static function to modify `prefixCls`:
 
 ```ts
-import { PfConfigProvider } from 'pf-ui-vue';
+import { PfConfigProvider } from '@pf-ui/pf-ui-vue';
 PfConfigProvider.@pf-ui/pf-ui-vue({
   prefixCls: 'custom',
   theme: {

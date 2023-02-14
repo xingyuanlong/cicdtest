@@ -126,7 +126,7 @@ cover: https://gw.alipayobjects.com/zos/alicdn/ORmcdeaoO/Form.svg
 ```html
 <script>
   // 自定义组件
-  import { PfForm } from 'pf-ui-vue';
+  import { PfForm } from '@pf-ui/pf-ui-vue';
   export default {
     setup() {
       const formItemContext = PfForm.useInjectFormItemContext();
@@ -203,7 +203,7 @@ Form.Item 会对唯一子元素进行劫持，并监听 `blur` 和 `change` 事�
 使用`useForm`时，`Form`及`FormItem`组件与数据逻辑、校验相关的属性会失效，如`validateFirst`，`validateTrigger`。`validateFirst`需要在`useForm`的`options`中配置`validateFirstName`或者在调用`validate`、`validateField`时传入`validateFirst`，`validate`、`validateField`中的`validateFirst`优先级大于`validateFirstName`。使用`blur`作为trigger时需在控件上绑定方法触发校验，参考[`useForm 自定义触发时机`](#components-form-demo-useForm-trigger)
 
 ```ts
-import { PfForm } from 'pf-ui-vue';
+import { PfForm } from '@pf-ui/pf-ui-vue';
 const useForm = PfForm.useForm;
 
 useForm(modelRef, ruleRef, [options]);

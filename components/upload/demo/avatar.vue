@@ -40,9 +40,9 @@ Click to upload user's avatar, and validate size and format of picture with `bef
 </template>
 <script lang="ts">
 import { PlusOutlined, LoadingOutlined } from '@ant-design/icons-vue';
-import { Pfmessage } from 'pf-ui-vue';
+import { Pfmessage } from '@pf-ui/pf-ui-vue';
 import { defineComponent, ref } from 'vue';
-import type { UploadChangeParam, UploadProps } from 'pf-ui-vue';
+import type { UploadChangeParam, UploadProps } from '@pf-ui/pf-ui-vue';
 
 function getBase64(img: Blob, callback: (base64Url: string) => void) {
   const reader = new FileReader();

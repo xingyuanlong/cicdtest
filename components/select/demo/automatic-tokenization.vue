@@ -29,7 +29,7 @@ Try to copy `Lucy,Jack` to the input. Only available in tags and multiple mode.
 </template>
 <script lang="ts">
 import { defineComponent, ref, watch } from 'vue';
-import type { SelectProps } from 'pf-ui-vue';
+import type { SelectProps } from '@pf-ui/pf-ui-vue';
 export default defineComponent({
   setup() {
     const options = ref<SelectProps['options']>([

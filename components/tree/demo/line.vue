@@ -50,7 +50,7 @@ Tree with connected line between nodes, turn on by `showLine`, customize the pre
 </template>
 <script lang="ts">
 import { CarryOutOutlined, SmileTwoTone } from '@ant-design/icons-vue';
-import type { TreeProps } from 'pf-ui-vue';
+import type { TreeProps } from '@pf-ui/pf-ui-vue';
 import { defineComponent, ref } from 'vue';
 export default defineComponent({
   components: {

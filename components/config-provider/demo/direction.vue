@@ -344,7 +344,7 @@ import {
   MinusOutlined,
   PlusOutlined,
 } from '@ant-design/icons-vue';
-import type { TreeProps, TreeSelectProps, CascaderProps } from 'pf-ui-vue';
+import type { TreeProps, TreeSelectProps, CascaderProps } from '@pf-ui/pf-ui-vue';
 
 export default defineComponent({
   components: {

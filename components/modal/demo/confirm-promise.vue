@@ -23,7 +23,7 @@ delay closing the dialog.
 <script lang="ts">
 import { ExclamationCircleOutlined } from '@ant-design/icons-vue';
 import { createVNode, defineComponent } from 'vue';
-import { PfModal } from 'pf-ui-vue';
+import { PfModal } from '@pf-ui/pf-ui-vue';
 export default defineComponent({
   setup() {
     const showConfirm = () => {

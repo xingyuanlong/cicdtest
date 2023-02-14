@@ -73,7 +73,7 @@ cover: https://gw.alipayobjects.com/zos/alicdn/3StSdUlSH/Modal.svg
 | 参数 | 说明 | 类型 | 默认值 | 版本 |
 | --- | --- | --- | --- | --- |
 | appContext | 弹窗的上下文，一般用于获取全局注册组件、vuex 等内容 | - | - |  |
-| autoFocusButton | 指定自动获得焦点的按钮 | `null` \| `ok` \| `cancel` | `ok` |  |
+| autoFocusButton | 指定自动获得焦点的按钮 | `null` \| `ok` \| `cancel` | `null` |  |
 | cancelButtonProps | cancel 按钮 props | [ButtonProps](/components/button) | - |  |
 | cancelText | 取消按钮文字 | string | 取消 |  |
 | centered | 垂直居中展示 Modal | boolean | `false` |  |

@@ -78,7 +78,7 @@ import {
   AppstoreOutlined,
   SettingOutlined,
 } from '@ant-design/icons-vue';
-import type { MenuMode, MenuTheme } from 'pf-ui-vue';
+import type { MenuMode, MenuTheme } from '@pf-ui/pf-ui-vue';
 export default defineComponent({
   components: {
     MailOutlined,

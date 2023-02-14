@@ -94,7 +94,7 @@ import { CheckOutlined, SnippetsOutlined, CodeSandboxOutlined } from '@ant-desig
 import { getCodeSandboxParams } from '../utils/generateOnlineDemo';
 import packageInfo from '../../../package.json';
 
-// import { Modal } from 'pf-ui-vue';
+// import { Modal } from '@pf-ui/pf-ui-vue';
 export default defineComponent({
   name: 'DemoBox',
   components: {

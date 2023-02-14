@@ -38,7 +38,7 @@ import Logo from './Logo.vue';
 import Menu from './Menu.vue';
 import { UnorderedListOutlined, CloseOutlined } from '@ant-design/icons-vue';
 import SearchBox from './SearchBox.vue';
-import { version } from 'pf-ui-vue';
+import { version } from '@pf-ui/pf-ui-vue';
 export default defineComponent({
   components: {
     Logo,

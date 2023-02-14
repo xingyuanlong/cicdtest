@@ -58,7 +58,7 @@ Set summary content by `summary` prop. Sync column fixed status with `pf-table-s
 </template>
 
 <script lang="ts">
-import type { TableColumnsType } from 'pf-ui-vue';
+import type { TableColumnsType } from '@pf-ui/pf-ui-vue';
 import { computed, defineComponent, ref } from 'vue';
 
 export default defineComponent({

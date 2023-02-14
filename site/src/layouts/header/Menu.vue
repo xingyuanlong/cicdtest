@@ -17,7 +17,7 @@
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
 import Navigation from './Navigation.vue';
-import { version } from 'pf-ui-vue';
+import { version } from '@pf-ui/pf-ui-vue';
 import { isZhCN, isLocalStorageNameSupported, getLocalizedPathname } from '../../utils/util';
 export default defineComponent({
   name: 'HeaderMenu',

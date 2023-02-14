@@ -44,9 +44,9 @@ import {
   RadiusBottomleftOutlined,
   RadiusBottomrightOutlined,
 } from '@ant-design/icons-vue';
-import { Pfnotification } from 'pf-ui-vue';
+import { Pfnotification } from '@pf-ui/pf-ui-vue';
 import { defineComponent } from 'vue';
-import type { NotificationPlacement } from 'pf-ui-vue';
+import type { NotificationPlacement } from '@pf-ui/pf-ui-vue';
 export default defineComponent({
   components: {
     RadiusUpleftOutlined,

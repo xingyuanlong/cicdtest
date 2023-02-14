@@ -20,7 +20,7 @@ Manually updating and destroying a modal from `Modal.method`.
   <pf-button @click="countDown">Open modal to close in 5s</pf-button>
 </template>
 <script lang="ts">
-import { PfModal } from 'pf-ui-vue';
+import { PfModal } from '@pf-ui/pf-ui-vue';
 import { defineComponent } from 'vue';
 export default defineComponent({
   setup() {

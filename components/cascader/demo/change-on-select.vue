@@ -25,7 +25,7 @@ Allow only select parent options.
 </template>
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
-import type { CascaderProps } from 'pf-ui-vue';
+import type { CascaderProps } from '@pf-ui/pf-ui-vue';
 const options: CascaderProps['options'] = [
   {
     value: 'zhejiang',

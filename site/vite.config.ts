@@ -12,7 +12,7 @@ export default {
     alias: {
       vue: 'vue/dist/vue.esm-bundler.js',
       'pf-ui-vue/es': path.resolve(__dirname, '../components'),
-      'pf-ui-vue': path.resolve(__dirname, '../components'),
+      '@pf-ui/pf-ui-vue': path.resolve(__dirname, '../components'),
     },
   },
   server: {

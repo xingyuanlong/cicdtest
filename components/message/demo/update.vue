@@ -25,7 +25,7 @@ Update message content with unique `key`，or use reactive data.
   </pf-button>
 </template>
 <script lang="ts">
-import { Pfmessage } from 'pf-ui-vue';
+import { Pfmessage } from '@pf-ui/pf-ui-vue';
 import { defineComponent, ref } from 'vue';
 const key = 'updatable';
 export default defineComponent({

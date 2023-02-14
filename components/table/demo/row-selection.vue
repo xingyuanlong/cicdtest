@@ -27,7 +27,7 @@ selection happens when clicking checkbox defaultly. You can see https://codesand
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
-import type { TableProps, TableColumnType } from 'pf-ui-vue';
+import type { TableProps, TableColumnType } from '@pf-ui/pf-ui-vue';
 
 interface DataType {
   key: string;

@@ -29,7 +29,7 @@ Nodes of the same level can only be expanded one
   </pf-tree>
 </template>
 <script lang="ts">
-import type { TreeProps } from 'pf-ui-vue';
+import type { TreeProps } from '@pf-ui/pf-ui-vue';
 import _ from 'lodash';
 import { defineComponent, ref, watch } from 'vue';
 

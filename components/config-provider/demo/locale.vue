@@ -61,7 +61,7 @@ Components which need localization support are listed here, you can toggle the l
   </pf-config-provider>
 </template>
 <script>
-import { PfModal } from 'pf-ui-vue';
+import { PfModal } from '@pf-ui/pf-ui-vue';
 import enUS from 'pf-ui-vue/es/locale/en_US';
 import zhCN from 'pf-ui-vue/es/locale/zh_CN';
 import dayjs from 'dayjs';

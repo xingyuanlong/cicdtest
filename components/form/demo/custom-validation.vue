@@ -47,7 +47,7 @@ See more advanced usage at [async-validator](https://github.com/yiminghe/async-v
 <script lang="ts">
 import type { Rule } from 'pf-ui-vue/es/form';
 import { defineComponent, reactive, ref } from 'vue';
-import type { FormInstance } from 'pf-ui-vue';
+import type { FormInstance } from '@pf-ui/pf-ui-vue';
 interface FormState {
   pass: string;
   checkPass: string;

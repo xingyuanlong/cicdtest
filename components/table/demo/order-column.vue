@@ -28,7 +28,7 @@ You can control the order of the expand and select columns by using `Table.EXPAN
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { PfTable } from 'pf-ui-vue';
+import { PfTable } from '@pf-ui/pf-ui-vue';
 
 export default defineComponent({
   setup() {

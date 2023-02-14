@@ -20,7 +20,7 @@ The `style` and `class` are available to customize Notification.
   <pf-button type="primary" @click="openNotification">Open the notification box</pf-button>
 </template>
 <script>
-import { Pfnotification } from 'pf-ui-vue';
+import { Pfnotification } from '@pf-ui/pf-ui-vue';
 import { defineComponent } from 'vue';
 export default defineComponent({
   setup() {

@@ -468,8 +468,8 @@ Modify global theme color by css variable. Css variable depends on the design, i
 </template>
 <script lang="ts">
 import { defineComponent, h, reactive, ref } from 'vue';
-import { PfConfigProvider, PfSpace, PfDivider } from 'pf-ui-vue';
-import type { TreeSelectProps } from 'pf-ui-vue';
+import { PfConfigProvider, PfSpace, PfDivider } from '@pf-ui/pf-ui-vue';
+import type { TreeSelectProps } from '@pf-ui/pf-ui-vue';
 import {
   DownOutlined,
   MailOutlined,

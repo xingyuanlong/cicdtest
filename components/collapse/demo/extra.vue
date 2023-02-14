@@ -41,7 +41,7 @@ More than one panel can be expanded at a time, the first panel is initialized to
 <script lang="ts">
 import { SettingOutlined } from '@ant-design/icons-vue';
 import { defineComponent, ref, watch } from 'vue';
-import type { CollapseProps } from 'pf-ui-vue';
+import type { CollapseProps } from '@pf-ui/pf-ui-vue';
 
 export default defineComponent({
   components: {

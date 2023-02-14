@@ -1,7 +1,7 @@
 import Icon, * as AntdIcons from '@pf-ui/pf-icons-vue';
 import { FilledIcon, OutlinedIcon, TwoToneIcon } from './themeIcons';
 import Category from './Category';
-import { PfRadio } from 'pf-ui-vue';
+import { PfRadio } from '@pf-ui/pf-ui-vue';
 import { defineComponent } from 'vue';
 
 const ThemeType = {

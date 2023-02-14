@@ -27,7 +27,7 @@ To load data asynchronously when click to expand a treeNode.
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
-import type { TreeProps } from 'pf-ui-vue';
+import type { TreeProps } from '@pf-ui/pf-ui-vue';
 
 export default defineComponent({
   setup() {

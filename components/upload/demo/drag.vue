@@ -40,9 +40,9 @@ We can upload serveral files at once by giving the input the `multiple` attribut
 </template>
 <script lang="ts">
 import { InboxOutlined } from '@ant-design/icons-vue';
-import { Pfmessage } from 'pf-ui-vue';
+import { Pfmessage } from '@pf-ui/pf-ui-vue';
 import { defineComponent, ref } from 'vue';
-import type { UploadChangeParam } from 'pf-ui-vue';
+import type { UploadChangeParam } from '@pf-ui/pf-ui-vue';
 
 export default defineComponent({
   components: {

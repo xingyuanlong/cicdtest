@@ -127,7 +127,7 @@ The second way is to wrap it with a custom component and call `useInjectFormItem
 ```html
 <script>
   // custom component
-  import { PfForm } from 'pf-ui-vue';
+  import { PfForm } from '@pf-ui/pf-ui-vue';
   export default {
     name: 'custom-name',
     setup() {
@@ -199,7 +199,7 @@ See more advanced usage at [async-validator](https://github.com/yiminghe/async-v
 `useForm` is a method that can run independently of the Form component. It uses the Vue response mechanism to monitor and verify data, and returns the verification result. You can bind the verification result to any component, `Form. Item` only displays the results.
 
 ```ts
-import { PfForm } from 'pf-ui-vue';
+import { PfForm } from '@pf-ui/pf-ui-vue';
 const useForm = PfForm.useForm;
 
 useForm(modelRef, ruleRef, [options]);
