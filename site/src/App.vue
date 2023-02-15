@@ -2,7 +2,6 @@
   <pf-config-provider
     :locale="locale"
     :getTargetContainer="getTargetContainer"
-    :getPopupContainer="getPopupContainer"
   >
     <pf-scrollbar ref="globalScrollRef" verticalRailStyle="z-index: 9999;">
       <router-view />

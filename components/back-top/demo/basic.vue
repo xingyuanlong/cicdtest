@@ -16,7 +16,7 @@ The simplest usage.
 </docs>
 
 <template>
-  <pf-back-top />
+  <pf-back-top target="ConfigProvider" />
   Scroll down to see the bottom-right
   <strong style="color: rgba(64, 64, 64, 0.6)">gray</strong>
   button.

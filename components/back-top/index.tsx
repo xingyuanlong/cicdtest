@@ -9,6 +9,7 @@ import {
   ref,
   watch,
   onDeactivated,
+  computed
 } from 'vue';
 import TopFilled from '@pf-ui/pf-icons-vue/TopFilled';
 import TopHoverFilled from '@pf-ui/pf-icons-vue/TopHoverFilled';
@@ -24,7 +25,7 @@ import type { MouseEventHandler } from '../_util/EventInterface';
 export const backTopProps = () => ({
   visibilityHeight: { type: Number, default: 400 },
   duration: { type: Number, default: 450 },
-  target: Function as PropType<() => HTMLElement | Window | Document>,
+  target: Function as PropType<() => HTMLElement | Window | Document> | String as PropType<'ConfigProvider'>,
   prefixCls: String,
   onClick: Function as PropType<MouseEventHandler>,
   // visible: { type: Boolean, default: undefined }, // Only for test. Don't use it.
@@ -38,7 +39,7 @@ const BackTop = defineComponent({
   props: backTopProps(),
   // emits: ['click'],
   setup(props, { slots, attrs, emit }) {
-    const { prefixCls, direction } = useConfigInject('back-top', props);
+    const { prefixCls, direction, getTargetContainer } = useConfigInject('back-top', props);
     const domRef = ref();
     const state = reactive({
       visible: false,
@@ -48,10 +49,12 @@ const BackTop = defineComponent({
     const getDefaultTarget = () =>
       domRef.value && domRef.value.ownerDocument ? domRef.value.ownerDocument : window;
 
+    const mergedTarget = computed(() => props.target === 'ConfigProvider' ? getTargetContainer.value : (props.target || getDefaultTarget));
+
     const scrollToTop = (e: Event) => {
-      const { target = getDefaultTarget, duration } = props;
+      const { duration } = props;
       scrollTo(0, {
-        getContainer: target,
+        getContainer: mergedTarget.value,
         duration,
       });
       emit('click', e);
@@ -64,9 +67,7 @@ const BackTop = defineComponent({
     });
 
     const bindScrollEvent = () => {
-      const { target } = props;
-      const getTarget = target || getDefaultTarget;
-      const container = getTarget();
+      const container = mergedTarget.value();
       state.scrollEvent = addEventListener(container, 'scroll', (e: Event) => {
         handleScroll(e);
       });

@@ -17,8 +17,8 @@ You can customize the style of the button, just note the size limit: no more tha
 
 <template>
   <div id="components-back-top-demo-custom">
-    <pf-back-top>
-      <div class="ant-back-top-inner">UP</div>
+    <pf-back-top target="ConfigProvider">
+      <div class="pf-back-top-inner">UP</div>
     </pf-back-top>
     Scroll down to see the bottom-right
     <strong style="color: #1088e9">blue</strong>

@@ -17,6 +17,8 @@ subtitle: 滚动条
 | x-scrollable | 是否可以横向滚动 | `boolean` | `false` |  |
 | on-scroll | 滚动的回调 | `(e: Event) => void` | `undefined` |  |
 
+> 注意，`Scrollbar`自定义了滚动行为，会影响内部`Select`、`Tooltip`、`Menu`、`TimePicker`、`DatePicker`、`Anchor`、`BackTop`、`Affix`等组件的定位，在`Scrollbar`内部使用这些组件时，请使用`ConfigProvider`或在组件自身上将父节点（getPopupContainer）配置为`triggerNode => triggerNode.parentNode`或滚动监听容器（getTargetContainer）配置为`scrollRef.value?.scrollContainer`
+
 ### Slots
 
 | 名称 | 说明 | 参数 |
