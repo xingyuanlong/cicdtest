@@ -1,5 +1,6 @@
-import { withInstall } from '../_util/type';
 import ToolTip, { tooltipProps } from './Tooltip';
+import TooltipTableEllipsis from './TooltipTableEllipsis';
+import type { App } from 'vue';
 
 export type {
   TooltipProps,
@@ -11,4 +12,10 @@ export type {
 
 export { tooltipProps };
 
-export default withInstall(ToolTip);
+export default Object.assign(ToolTip, {
+  install: (app: App) => {
+    app.component(ToolTip.name, ToolTip);
+    app.component(TooltipTableEllipsis.name, TooltipTableEllipsis);
+    return app;
+  },
+});

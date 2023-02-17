@@ -8,7 +8,7 @@ title:
 
 ## zh-CN
 
-设置 `column.ellipsis` 可以让单元格内容根据宽度自动省略。
+设置 `column.ellipsis` 可以让单元格内容根据宽度自动省略，使用`pf-tooltip-table-ellipsis`展示完整内容。
 > 列头缩略暂不支持和排序筛选一起使用。
 
 ## en-US
@@ -25,9 +25,9 @@ Ellipsis cell content via setting `column.ellipsis`.
         <a>{{ text }}</a>
       </template>
       <template v-if="column.ellipsis">
-        <pf-tooltip :title="text" placement="topLeft" overlayClassName="tooltip-other-color">
+        <pf-tooltip-table-ellipsis :title="text">
           {{ text }}
-        </pf-tooltip>
+        </pf-tooltip-table-ellipsis>
       </template>
     </template>
   </pf-table>
