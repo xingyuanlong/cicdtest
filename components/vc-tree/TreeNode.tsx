@@ -514,7 +514,7 @@ export default defineComponent({
       const { data } = props;
       const { slots } = context.value;
       const $operation = slots?.operation
-        ? context.value.slots?.operation(data.key, operationDisabled.value)
+        ? context.value.slots?.operation(data, operationDisabled.value)
         : null;
 
       return $operation;

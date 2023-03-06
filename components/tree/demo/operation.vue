@@ -58,7 +58,7 @@ const treeData = [
 const operations = [
   {
     title: '操作1',
-    onClick: () => console.log('操作1')
+    onClick: (key: string, data: any) => console.log('操作1', key, data)
   },
   {
     title: '操作2',

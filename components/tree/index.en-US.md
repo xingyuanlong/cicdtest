@@ -85,8 +85,8 @@ Almost anything can be represented in a tree structure. Examples include directo
 | Property | Description | Type | Default | Version |
 | --- | --- | --- | --- | --- |
 | title | Operation title | string | - | 1.0.18 |
-| onClick | Callback function for when the user clicks operation  | () => void | - | 1.0.18 |
-| isDisabled | whether disabled the operation | (key: string) => boolean | - | 1.0.18 |
+| onClick | Callback function for when the user clicks operation  | (key?: string \| number, record?: DataNode) => void | - | 1.0.18 |
+| isDisabled | whether disabled the operation | (key?: string \| number) => boolean | - | 1.0.18 |
 
 ### DirectoryTree props
 

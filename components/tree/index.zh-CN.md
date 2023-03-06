@@ -86,8 +86,8 @@ cover: https://gw.alipayobjects.com/zos/alicdn/Xh-oWqg9k/Tree.svg
 | 参数 | 说明 | 类型 | 默认值 | 版本 |
 | --- | --- | --- | --- | --- |
 | title | 操作标题 | string | - | 1.0.18 |
-| onClick | 点击操作 | () => void | - | 1.0.18 |
-| isDisabled | 操作禁用 | (key: string) => boolean | - | 1.0.18 |
+| onClick | 点击操作 | (key?: string \| number, record?: DataNode) => void | - | 1.0.18 |
+| isDisabled | 操作禁用 | (key?: string \| number) => boolean | - | 1.0.18 |
 
 ### DirectoryTree props
 

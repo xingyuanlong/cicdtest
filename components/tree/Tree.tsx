@@ -42,8 +42,8 @@ export interface AntdTreeNodeAttribute {
 
 export interface TreeNodeOperation {
   title?: string,
-  onClick?: (key: string) => void,
-  isDisabled?: (key: string) => boolean
+  onClick?: (key?: string | number, record?: DataNode) => void,
+  isDisabled?: (key?: string | number) => boolean
 }
 
 export type AntTreeNodeProps = TreeNodeProps;
@@ -285,7 +285,7 @@ export default defineComponent({
                 {checked ? <Right2Filled /> : null}
               </span>
             ),
-            operation: (key: string, disabled?: boolean) => {
+            operation: (data: DataNode, disabled?: boolean) => {
               return (
                 props.operation && props.operation.length > 0 && (
                   <Dropdown
@@ -294,13 +294,13 @@ export default defineComponent({
                     trigger={props.operationTrigger}
                     disabled={disabled}
                     getPopupContainer={triggerNode => triggerNode}
-                    visible={operationVisibleKey.value === key}
-                    onVisibleChange={v => operationVisibleKey.value = v ? key : undefined}
+                    visible={operationVisibleKey.value === data.key}
+                    onVisibleChange={v => operationVisibleKey.value = v ? data.key : undefined}
                     v-slots={{
                       overlay: () => (
                         <Menu class={`${prefixCls.value}-operation-menu`}>
                           {props.operation?.map(v => (
-                            <Menu.Item onClick={() => v.onClick && v.onClick(key)} disabled={v.isDisabled && v.isDisabled(key)}>
+                            <Menu.Item onClick={() => v.onClick && v.onClick(data.key, data)} disabled={v.isDisabled && v.isDisabled(data.key)}>
                               {v.title}
                             </Menu.Item>
                           ))}
