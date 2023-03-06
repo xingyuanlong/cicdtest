@@ -25,9 +25,9 @@ Ellipsis cell content via setting `column.ellipsis`.
         <a>{{ text }}</a>
       </template>
       <template v-if="column.ellipsis">
-        <pf-tooltip-table-ellipsis :title="text">
+        <pf-tooltip-ellipsis :title="text">
           {{ text }}
-        </pf-tooltip-table-ellipsis>
+        </pf-tooltip-ellipsis>
       </template>
     </template>
   </pf-table>

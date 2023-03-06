@@ -12,6 +12,7 @@ export interface BasicDataNode {
   isLeaf?: boolean;
   selectable?: boolean;
   switcherIcon?: IconType;
+  hideOperation?: boolean;
 
   /** Set style of TreeNode. This is not recommend if you don't have any force requirement */
   class?: string;

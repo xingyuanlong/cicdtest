@@ -80,6 +80,7 @@ cover: https://gw.alipayobjects.com/zos/alicdn/Xh-oWqg9k/Tree.svg
 | selectable | 设置节点是否可被选中 | boolean | true |  |
 | style | 节点的 style | string\|object | - |  |
 | title | 标题 | string | '---' |  |
+| hideOperation | 是否隐藏额外操作 | boolean | false |  |
 
 ### TreeNodeOperation
 

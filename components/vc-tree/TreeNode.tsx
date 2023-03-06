@@ -17,6 +17,7 @@ import { warning } from '../vc-util/warning';
 import type { DragNodeEvent, Key } from './interface';
 import pickAttrs from '../_util/pickAttrs';
 import eagerComputed from '../_util/eagerComputed';
+import TooltipTableEllipsis from '../tooltip/TooltipTableEllipsis'
 
 const ICON_OPEN = 'open';
 const ICON_CLOSE = 'close';
@@ -455,6 +456,7 @@ export default defineComponent({
       const disabled = isDisabled.value;
 
       const wrapClass = `${prefixCls}-node-content-wrapper`;
+      // const ellipsisClass = `${prefixCls}-node-content-ellipsis`
 
       // Icon - Still show loading icon when loading without showIcon
       let $icon;
@@ -484,7 +486,7 @@ export default defineComponent({
       }
       titleNode = titleNode === undefined ? defaultTitle : titleNode;
 
-      const $title = <span class={`${prefixCls}-title`}>{titleNode}</span>;
+      const $title = <span>{titleNode}</span>;
 
       return (
         <span
@@ -496,6 +498,7 @@ export default defineComponent({
             !disabled &&
               (selected.value || dragNodeHighlight.value) &&
               `${prefixCls}-node-selected`,
+              // `${ellipsisClass}`
           )}
           onMouseenter={onMouseEnter}
           onMouseleave={onMouseLeave}
@@ -504,7 +507,13 @@ export default defineComponent({
           onDblclick={onSelectorDoubleClick}
         >
           {$icon}
-          {$title}
+          {/* <div>
+          <div class={classNames(`${prefixCls}-node-title`, `${prefixCls}-node-title-ellipsis`)}>
+            <TooltipTableEllipsis title={$title}> */}
+              {$title}
+            {/* </TooltipTableEllipsis>
+          </div>
+          </div> */}
           {renderDropIndicator()}
         </span>
       );
@@ -513,7 +522,7 @@ export default defineComponent({
     const renderOperation = () => {
       const { data } = props;
       const { slots } = context.value;
-      const $operation = slots?.operation
+      const $operation = slots?.operation && !data?.hideOperation
         ? context.value.slots?.operation(data, operationDisabled.value)
         : null;
 

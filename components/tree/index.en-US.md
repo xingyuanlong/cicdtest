@@ -79,6 +79,8 @@ Almost anything can be represented in a tree structure. Examples include directo
 | selectable | Set whether the treeNode can be selected | boolean | true |  |
 | style | style | string\|object | - |  |
 | title | Title | string | '---' |  |
+| hideOperation | Whether hide extra operation | boolean | false |  |
+
 
 ### TreeNodeOperation
 
