@@ -21,7 +21,7 @@ import Overflow from '../../vc-overflow';
 import devWarning from '../../vc-util/devWarning';
 import isValid from '../../_util/isValid';
 import type { MouseEventHandler } from '../../_util/EventInterface';
-import type { Key } from 'pf-ui-vue/es/_util/type';
+import type { Key } from '@pf-ui/pf-ui-vue/es/_util/type';
 
 let indexGuid = 0;
 
