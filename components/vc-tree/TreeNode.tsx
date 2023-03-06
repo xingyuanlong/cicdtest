@@ -17,7 +17,7 @@ import { warning } from '../vc-util/warning';
 import type { DragNodeEvent, Key } from './interface';
 import pickAttrs from '../_util/pickAttrs';
 import eagerComputed from '../_util/eagerComputed';
-import TooltipTableEllipsis from '../tooltip/TooltipTableEllipsis'
+// import TooltipTableEllipsis from '../tooltip/TooltipTableEllipsis'
 
 const ICON_OPEN = 'open';
 const ICON_CLOSE = 'close';
