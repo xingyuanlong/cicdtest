@@ -55,6 +55,8 @@ export const treeNodeProps = {
   icon: PropTypes.any,
   switcherIcon: PropTypes.any,
   domRef: { type: Function as PropType<(arg: any) => void> },
+  ellipsis: { type: Boolean, default: undefined },
+  ellipsisTitle: { type: String, default: undefined }
 };
 
 export type TreeNodeProps = Partial<ExtractPropTypes<typeof treeNodeProps>>;
@@ -119,6 +121,7 @@ export const treeProps = () => ({
   children: PropTypes.any,
   treeData: { type: Array as PropType<DataNode[]> }, // Generate treeNode by children
   fieldNames: { type: Object as PropType<FieldNames> },
+  ellipsis: { type: Boolean, default: undefined },
   showLine: {
     type: [Boolean, Object] as PropType<boolean | { showLeafIcon: boolean }>,
     default: undefined,

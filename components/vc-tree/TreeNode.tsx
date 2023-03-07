@@ -17,7 +17,7 @@ import { warning } from '../vc-util/warning';
 import type { DragNodeEvent, Key } from './interface';
 import pickAttrs from '../_util/pickAttrs';
 import eagerComputed from '../_util/eagerComputed';
-// import TooltipTableEllipsis from '../tooltip/TooltipTableEllipsis'
+import TooltipTableEllipsis from '../tooltip/TooltipTableEllipsis'
 
 const ICON_OPEN = 'open';
 const ICON_CLOSE = 'close';
@@ -29,7 +29,7 @@ export default defineComponent({
   inheritAttrs: false,
   props: treeNodeProps,
   isTreeNode: 1,
-  slots: ['title', 'icon', 'switcherIcon', 'operation'],
+  slots: ['title', 'icon', 'switcherIcon', 'operation', 'ellipsisTitle'],
   setup(props, { attrs, slots, expose }) {
     warning(
       !('slots' in props.data),
@@ -154,6 +154,7 @@ export default defineComponent({
         loading: loading.value,
         selected: selected.value,
         halfChecked: halfChecked.value,
+        operationDisabled: operationDisabled.value
       };
     });
     const instance = getCurrentInstance();
@@ -440,12 +441,14 @@ export default defineComponent({
         icon = slots.icon,
         // loading,
         data,
+        ellipsis
       } = props;
       const title =
         slots.title ||
         context.value.slots?.[props.data?.slots?.title] ||
         context.value.slots?.title ||
         props.title;
+      const _ellipsis = data?.ellipsis || ellipsis || context.value.ellipsis;
       const {
         prefixCls,
         showIcon,
@@ -456,7 +459,6 @@ export default defineComponent({
       const disabled = isDisabled.value;
 
       const wrapClass = `${prefixCls}-node-content-wrapper`;
-      // const ellipsisClass = `${prefixCls}-node-content-ellipsis`
 
       // Icon - Still show loading icon when loading without showIcon
       let $icon;
@@ -486,19 +488,33 @@ export default defineComponent({
       }
       titleNode = titleNode === undefined ? defaultTitle : titleNode;
 
-      const $title = <span>{titleNode}</span>;
+      // todo: 弹框的提示也有可能来自slot ellipsisTitle
+      const $title = _ellipsis 
+        ? (
+          <div class={`${prefixCls}-node-title-ellipsis`}>
+            <div class={`${prefixCls}-node-title-ellipsis-container`}>
+              <TooltipTableEllipsis
+                title={data?.ellipsisTitle || titleNode}
+                getPopupContainer={triggerNode => triggerNode}
+                overlayClassName={`${prefixCls}-node-title-ellipsis-tooltip`}
+              >
+                {titleNode}
+              </TooltipTableEllipsis>
+            </div>
+          </div>
+        )
+        : <span>{titleNode}</span>;
 
       return (
         <span
           ref={selectHandle}
-          title={typeof title === 'string' ? title : ''}
+          title={typeof title === 'string' && !_ellipsis ? title : ''}
           class={classNames(
             `${wrapClass}`,
             `${wrapClass}-${nodeState.value || 'normal'}`,
             !disabled &&
               (selected.value || dragNodeHighlight.value) &&
               `${prefixCls}-node-selected`,
-              // `${ellipsisClass}`
           )}
           onMouseenter={onMouseEnter}
           onMouseleave={onMouseLeave}
@@ -507,13 +523,7 @@ export default defineComponent({
           onDblclick={onSelectorDoubleClick}
         >
           {$icon}
-          {/* <div>
-          <div class={classNames(`${prefixCls}-node-title`, `${prefixCls}-node-title-ellipsis`)}>
-            <TooltipTableEllipsis title={$title}> */}
-              {$title}
-            {/* </TooltipTableEllipsis>
-          </div>
-          </div> */}
+          {$title}
           {renderDropIndicator()}
         </span>
       );
@@ -523,7 +533,7 @@ export default defineComponent({
       const { data } = props;
       const { slots } = context.value;
       const $operation = slots?.operation && !data?.hideOperation
-        ? context.value.slots?.operation(data, operationDisabled.value)
+        ? context.value.slots?.operation(renderArgsData.value)
         : null;
 
       return $operation;

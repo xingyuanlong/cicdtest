@@ -32,6 +32,7 @@ const treeData = [
   {
     title: '0-0',
     key: '0-0',
+    hideOperation: true,
     children: [
       {
         title: '0-0-0',

@@ -65,6 +65,7 @@ export interface TreeContextProps {
   dragging: boolean;
   direction: Direction;
   operationVisibleKey: Ref<any>;
+  ellipsis?: boolean;
 
   loadData: (treeNode: EventDataNode) => Promise<void>;
   filterTreeNode: (treeNode: EventDataNode) => boolean;

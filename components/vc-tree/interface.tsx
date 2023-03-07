@@ -13,6 +13,7 @@ export interface BasicDataNode {
   selectable?: boolean;
   switcherIcon?: IconType;
   hideOperation?: boolean;
+  operationDisabled?: boolean;
 
   /** Set style of TreeNode. This is not recommend if you don't have any force requirement */
   class?: string;
@@ -25,6 +26,7 @@ export interface DataNode extends BasicDataNode {
   children?: DataNode[];
   key: string | number;
   title?: any;
+  ellipsisTitle?: any;
 }
 
 export interface EventDataNode extends DataNode {

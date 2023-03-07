@@ -16,8 +16,8 @@ import dropIndicatorRender from './utils/dropIndicator';
 import devWarning from '../vc-util/devWarning';
 import { warning } from '../vc-util/warning';
 import omit from '../_util/omit';
-import MoreFilled from '@pf-ui/pf-icons-vue/MoreFilled';
 import Dropdown, { DropdownProps } from '../dropdown';
+import TreeOperationIcon from './TreeOperationIcon'
 import Menu from '../menu';
 
 export interface AntdTreeNodeAttribute {
@@ -165,7 +165,7 @@ export default defineComponent({
     showIcon: false,
     blockNode: false,
   }),
-  slots: ['icon', 'title', 'switcherIcon', 'titleRender'],
+  slots: ['icon', 'title', 'switcherIcon', 'titleRender', 'operation'],
   // emits: [
   //   'update:selectedKeys',
   //   'update:checkedKeys',
@@ -186,7 +186,7 @@ export default defineComponent({
     const scrollTo: ScrollTo = scroll => {
       treeRef.value?.scrollTo(scroll);
     };
-    const operationVisibleKey = ref();
+    const operationVisibleKey = ref<string | number>();
     expose({
       treeRef,
       onNodeExpand: (...args) => {
@@ -251,6 +251,50 @@ export default defineComponent({
         itemHeight,
       };
       const children = slots.default ? filterEmpty(slots.default()) : undefined;
+
+      const setOperationVisibleKey = (value?: string | number) => operationVisibleKey.value = value
+
+      const renderOperation = (data: DataNode) => {
+        if (slots?.operation) return slots?.operation({
+          ...data,
+          operationVisibleKey,
+          setOperationVisibleKey
+        })
+        
+        const { operationTrigger, operation } = props
+
+        return (
+          operation && operation.length > 0 && (
+            <Dropdown
+              placement="bottom"
+              arrow
+              trigger={operationTrigger}
+              disabled={data.operationDisabled}
+              getPopupContainer={triggerNode => triggerNode}
+              visible={operationVisibleKey.value === data.key}
+              onVisibleChange={v => operationVisibleKey.value = v ? data.key : undefined}
+              v-slots={{
+                overlay: () => (
+                  <Menu class={`${prefixCls.value}-operation-menu`}>
+                    {operation?.map(v => (
+                      <Menu.Item
+                        onClick={() => v.onClick && v.onClick(data.key, data)}
+                        disabled={v.isDisabled && v.isDisabled(data.key)}
+                        key={v.title}
+                      >
+                        {v.title}
+                      </Menu.Item>
+                    ))}
+                  </Menu>
+                )
+              }}
+            >
+              <TreeOperationIcon disabled={data.operationDisabled} />
+            </Dropdown>
+          )
+        )
+      }
+
       return (
         <VcTree
           {...newProps}
@@ -285,38 +329,7 @@ export default defineComponent({
                 {checked ? <Right2Filled /> : null}
               </span>
             ),
-            operation: (data: DataNode, disabled?: boolean) => {
-              return (
-                props.operation && props.operation.length > 0 && (
-                  <Dropdown
-                    placement="bottom"
-                    arrow
-                    trigger={props.operationTrigger}
-                    disabled={disabled}
-                    getPopupContainer={triggerNode => triggerNode}
-                    visible={operationVisibleKey.value === data.key}
-                    onVisibleChange={v => operationVisibleKey.value = v ? data.key : undefined}
-                    v-slots={{
-                      overlay: () => (
-                        <Menu class={`${prefixCls.value}-operation-menu`}>
-                          {props.operation?.map(v => (
-                            <Menu.Item onClick={() => v.onClick && v.onClick(data.key, data)} disabled={v.isDisabled && v.isDisabled(data.key)}>
-                              {v.title}
-                            </Menu.Item>
-                          ))}
-                        </Menu>
-                      )
-                    }}
-                  >
-                    <MoreFilled class={classNames(
-                      `${prefixCls.value}-operation`,
-                      { [`${prefixCls.value}-operation-disabled`]: disabled }
-                      )}
-                    />
-                  </Dropdown>
-                )
-              )
-            }
+            operation: renderOperation
           }}
           children={children}
         ></VcTree>

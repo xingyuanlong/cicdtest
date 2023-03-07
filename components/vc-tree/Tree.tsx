@@ -74,6 +74,7 @@ export default defineComponent({
     defaultSelectedKeys: [],
     dropIndicatorRender: DropIndicator,
     allowDrop: () => true,
+    ellipsis: false
   }),
 
   setup(props, { attrs, slots, expose }) {
@@ -1109,7 +1110,8 @@ export default defineComponent({
         onContextmenu,
         onScroll,
         direction,
-        operationVisibleKey
+        operationVisibleKey,
+        ellipsis
       } = props;
 
       const { class: className, style } = attrs;
@@ -1141,6 +1143,7 @@ export default defineComponent({
             selectable,
             showIcon,
             icon,
+            ellipsis,
             switcherIcon,
             draggable: draggableConfig,
             draggingNodeKey,

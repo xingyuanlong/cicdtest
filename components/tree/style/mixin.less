@@ -61,6 +61,20 @@
     // align-items: flex-start;
   }
 
+  .@{custom-tree-prefix-cls}-node-title-ellipsis {
+    display: flex;
+
+    .@{custom-tree-prefix-cls}-node-title-ellipsis-container {
+      flex: 1;
+      width: 0;
+      display: flex;
+
+      .@{custom-tree-prefix-cls}-node-title-ellipsis-tooltip {
+        white-space: pre-wrap;
+      }
+    }
+  }
+
   &.@{custom-tree-prefix-cls}-block-node {
     .@{custom-tree-prefix-cls}-list-holder-inner {
       align-items: stretch;
