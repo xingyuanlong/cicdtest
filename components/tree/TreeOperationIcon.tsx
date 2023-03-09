@@ -6,6 +6,7 @@ import useConfigInject from '../_util/hooks/useConfigInject'
 
 export const treeOperationIconProps = () => ({
   disabled: { type: Boolean, default: undefined },
+  visible: { type: Boolean, default: undefined },
   prefixCls: String
 })
 
@@ -13,7 +14,8 @@ export const treeOperationIconProps = () => ({
 export default defineComponent({
   name: 'PfTreeOperationIcon',
   props: initDefaultProps(treeOperationIconProps(), {
-    disabled: false
+    disabled: false,
+    visible: false
   }),
   setup(props) {
     const { prefixCls } = useConfigInject('tree', props)
@@ -21,7 +23,8 @@ export default defineComponent({
     return () => (
       <MoreFilled class={classNames(
         `${prefixCls.value}-operation`,
-        { [`${prefixCls.value}-operation-disabled`]: props.disabled }
+        { [`${prefixCls.value}-operation-disabled`]: props.disabled },
+        {[`${prefixCls.value}-operation-visible`]: props.visible},
         )}
       />
     )

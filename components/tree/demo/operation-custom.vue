@@ -44,7 +44,7 @@ Custom Operation
           </pf-menu-item>
         </pf-menu>
       </template>
-      <pf-tree-operation-icon :disabled="operationDisabled" />
+      <pf-tree-operation-icon :disabled="operationDisabled" :visible="operationVisibleKey.value === key" />
     </pf-dropdown>
   </template>
   </pf-tree>

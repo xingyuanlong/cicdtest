@@ -130,7 +130,7 @@
       background-color: @tree-node-hover-bg;
 
       .@{custom-tree-prefix-cls}-operation {
-        display: initial;
+        display: initial !important;
       }
     }
 
@@ -245,6 +245,7 @@
     border-radius: @border-radius-base;
     cursor: pointer;
     transition: all 0.3s, border 0s, line-height 0s, box-shadow 0s;
+    flex: auto;
 
     &.@{custom-tree-prefix-cls}-node-selected {
       //background-color: @tree-node-selected-bg;
@@ -337,7 +338,7 @@
   &-operation {
     font-size: @font-size-lg;
     color: @text-color;
-    display: none;
+    display: none !important;
     position: absolute;
     right: 4px;
     top: calc(50% - @font-size-lg / 2);
@@ -346,6 +347,10 @@
   &-operation-disabled {
     color: @disabled-color;
     cursor: not-allowed !important;
+  }
+
+  &-operation-visible {
+    display: initial !important;
   }
 }
 

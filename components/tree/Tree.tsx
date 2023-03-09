@@ -263,6 +263,8 @@ export default defineComponent({
         
         const { operationTrigger, operation } = props
 
+        const dropDownVisible = operationVisibleKey.value === data.key
+
         return (
           operation && operation.length > 0 && (
             <Dropdown
@@ -271,7 +273,7 @@ export default defineComponent({
               trigger={operationTrigger}
               disabled={data.operationDisabled}
               getPopupContainer={triggerNode => triggerNode}
-              visible={operationVisibleKey.value === data.key}
+              visible={dropDownVisible}
               onVisibleChange={v => operationVisibleKey.value = v ? data.key : undefined}
               v-slots={{
                 overlay: () => (
@@ -289,7 +291,7 @@ export default defineComponent({
                 )
               }}
             >
-              <TreeOperationIcon disabled={data.operationDisabled} />
+              <TreeOperationIcon disabled={data.operationDisabled} visible={dropDownVisible} />
             </Dropdown>
           )
         )
@@ -321,7 +323,6 @@ export default defineComponent({
           onExpand={handleExpand}
           onSelect={handleSelect}
           onDblclick={onDblclick || onDoubleclick}
-          operationVisibleKey={operationVisibleKey}
           v-slots={{
             ...slots,
             checkable: (checked) => (

@@ -1110,7 +1110,6 @@ export default defineComponent({
         onContextmenu,
         onScroll,
         direction,
-        operationVisibleKey,
         ellipsis
       } = props;
 
@@ -1161,7 +1160,6 @@ export default defineComponent({
             dragging: draggingNodeKey !== null,
             indent: indent.value,
             direction,
-            operationVisibleKey,
             dropIndicatorRender,
 
             loadData,

@@ -34,6 +34,7 @@ export { DirectoryTree, TreeNode, TreeOperationIcon };
 export default Object.assign(Tree, {
   DirectoryTree,
   TreeNode,
+  TreeOperationIcon,
   install: (app: App) => {
     app.component(Tree.name, Tree);
     app.component(TreeNode.name, TreeNode);

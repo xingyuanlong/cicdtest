@@ -64,7 +64,6 @@ export interface TreeContextProps {
   dragOverNodeKey: Key | null;
   dragging: boolean;
   direction: Direction;
-  operationVisibleKey: Ref<any>;
   ellipsis?: boolean;
 
   loadData: (treeNode: EventDataNode) => Promise<void>;

@@ -249,8 +249,7 @@ export const treeProps = () => ({
   virtual: { type: Boolean, default: undefined },
 
   // direction for drag logic
-  direction: { type: String as PropType<Direction> },
-  operationVisibleKey: { type: Object as PropType<Ref<any>> }
+  direction: { type: String as PropType<Direction> }
 });
 
 export type TreeProps = Partial<ExtractPropTypes<ReturnType<typeof treeProps>>>;

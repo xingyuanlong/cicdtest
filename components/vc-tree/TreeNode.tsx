@@ -48,7 +48,7 @@ export default defineComponent({
       checkedKeysSet,
       halfCheckedKeysSet,
     } = useInjectKeysState();
-    const { dragOverNodeKey, dropPosition, keyEntities, operationVisibleKey } = context.value;
+    const { dragOverNodeKey, dropPosition, keyEntities } = context.value;
     const mergedTreeNodeProps = computed(() => {
       return getTreeNodeProps(props.eventKey, {
         expandedKeysSet: expandedKeysSet.value,
@@ -539,13 +539,6 @@ export default defineComponent({
       return $operation;
     }
 
-    const onRootMouseLeave = () => {
-      if (operationVisibleKey.value !== props.data?.key) return
-      if (!selected.value) {
-        operationVisibleKey.value = undefined
-      }
-    }
-
     return () => {
       const {
         eventKey,
@@ -612,7 +605,6 @@ export default defineComponent({
           onDrop={mergedDraggable ? onDrop : undefined}
           onDragend={mergedDraggable ? onDragEnd : undefined}
           onMousemove={onMousemove}
-          onMouseleave={onRootMouseLeave}
           {...ariaSelected}
           {...dataOrAriaAttributeProps}
         >
