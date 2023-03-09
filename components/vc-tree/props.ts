@@ -1,4 +1,4 @@
-import type { ExtractPropTypes, PropType, Ref } from 'vue';
+import type { ExtractPropTypes, PropType } from 'vue';
 import type { BasicDataNode } from '.';
 import type { EventHandler } from '../_util/EventInterface';
 import PropTypes from '../_util/vue-types';
