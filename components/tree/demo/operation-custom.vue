@@ -21,15 +21,15 @@ Custom Operation
     :tree-data="treeData"
     :multiple="true"
   >
-  <template #operation="{ key, operationDisabled, operationVisibleKey, setOperationVisibleKey, data }">
+  <template #operation="{ key, operationDisabled, data }">
     <pf-dropdown
       placement="bottom"
       arrow
       trigger="click"
       :disabled="operationDisabled"
       :getPopupContainer="triggerNode => triggerNode"
-      :visible="operationVisibleKey.value === key"
-      :onVisibleChange="v => setOperationVisibleKey(operationVisibleKey.value = v ? key : undefined)"
+      :visible="operationVisibleKey === key"
+      :onVisibleChange="handleVisibleChange(key)"
     >
       <template #overlay>
         <pf-menu class="operation-menu">
@@ -44,13 +44,18 @@ Custom Operation
           </pf-menu-item>
         </pf-menu>
       </template>
-      <pf-tree-operation-icon :disabled="operationDisabled" :visible="operationVisibleKey.value === key" />
+      <pf-tree-operation-icon :disabled="operationDisabled" :visible="operationVisibleKey === key" />
     </pf-dropdown>
   </template>
   </pf-tree>
 </template>
 
 <script lang="ts" setup>
+import { ref } from 'vue'
+
+const operationVisibleKey = ref<string>()
+
+const handleVisibleChange = (key?: string) => (value?: boolean) => operationVisibleKey.value = value ? key : undefined
 
 const treeData = [
   {
