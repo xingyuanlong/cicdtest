@@ -17,6 +17,7 @@ import { warning } from '../vc-util/warning';
 import type { DragNodeEvent, Key } from './interface';
 import pickAttrs from '../_util/pickAttrs';
 import eagerComputed from '../_util/eagerComputed';
+import TooltipTableEllipsis from '../tooltip/TooltipTableEllipsis'
 
 const ICON_OPEN = 'open';
 const ICON_CLOSE = 'close';
@@ -28,7 +29,7 @@ export default defineComponent({
   inheritAttrs: false,
   props: treeNodeProps,
   isTreeNode: 1,
-  slots: ['title', 'icon', 'switcherIcon', 'operation'],
+  slots: ['title', 'icon', 'switcherIcon', 'operation', 'ellipsisTitle'],
   setup(props, { attrs, slots, expose }) {
     warning(
       !('slots' in props.data),
@@ -47,7 +48,7 @@ export default defineComponent({
       checkedKeysSet,
       halfCheckedKeysSet,
     } = useInjectKeysState();
-    const { dragOverNodeKey, dropPosition, keyEntities, operationVisibleKey } = context.value;
+    const { dragOverNodeKey, dropPosition, keyEntities } = context.value;
     const mergedTreeNodeProps = computed(() => {
       return getTreeNodeProps(props.eventKey, {
         expandedKeysSet: expandedKeysSet.value,
@@ -153,6 +154,7 @@ export default defineComponent({
         loading: loading.value,
         selected: selected.value,
         halfChecked: halfChecked.value,
+        operationDisabled: operationDisabled.value
       };
     });
     const instance = getCurrentInstance();
@@ -439,12 +441,14 @@ export default defineComponent({
         icon = slots.icon,
         // loading,
         data,
+        ellipsis
       } = props;
       const title =
         slots.title ||
         context.value.slots?.[props.data?.slots?.title] ||
         context.value.slots?.title ||
         props.title;
+      const _ellipsis = data?.ellipsis || ellipsis || context.value.ellipsis;
       const {
         prefixCls,
         showIcon,
@@ -484,12 +488,27 @@ export default defineComponent({
       }
       titleNode = titleNode === undefined ? defaultTitle : titleNode;
 
-      const $title = <span class={`${prefixCls}-title`}>{titleNode}</span>;
+      // todo: 弹框的提示也有可能来自slot ellipsisTitle
+      const $title = _ellipsis 
+        ? (
+          <div class={`${prefixCls}-node-title-ellipsis`}>
+            <div class={`${prefixCls}-node-title-ellipsis-container`}>
+              <TooltipTableEllipsis
+                title={data?.ellipsisTitle || titleNode}
+                getPopupContainer={triggerNode => triggerNode}
+                overlayClassName={`${prefixCls}-node-title-ellipsis-tooltip`}
+              >
+                {titleNode}
+              </TooltipTableEllipsis>
+            </div>
+          </div>
+        )
+        : <span>{titleNode}</span>;
 
       return (
         <span
           ref={selectHandle}
-          title={typeof title === 'string' ? title : ''}
+          title={typeof title === 'string' && !_ellipsis ? title : ''}
           class={classNames(
             `${wrapClass}`,
             `${wrapClass}-${nodeState.value || 'normal'}`,
@@ -513,18 +532,11 @@ export default defineComponent({
     const renderOperation = () => {
       const { data } = props;
       const { slots } = context.value;
-      const $operation = slots?.operation
-        ? context.value.slots?.operation(data, operationDisabled.value)
+      const $operation = slots?.operation && !data?.hideOperation
+        ? context.value.slots?.operation(renderArgsData.value)
         : null;
 
       return $operation;
-    }
-
-    const onRootMouseLeave = () => {
-      if (operationVisibleKey.value !== props.data?.key) return
-      if (!selected.value) {
-        operationVisibleKey.value = undefined
-      }
     }
 
     return () => {
@@ -593,7 +605,6 @@ export default defineComponent({
           onDrop={mergedDraggable ? onDrop : undefined}
           onDragend={mergedDraggable ? onDragEnd : undefined}
           onMousemove={onMousemove}
-          onMouseleave={onRootMouseLeave}
           {...ariaSelected}
           {...dataOrAriaAttributeProps}
         >

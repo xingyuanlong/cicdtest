@@ -238,10 +238,13 @@
   }
 }
 
-.@{tooltip-prefix-cls}-table-ellipsis {
+.@{tooltip-prefix-cls}-ellipsis {
 
   &-container {
-    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    word-break: keep-all;
   }
 
   .@{tooltip-prefix-cls}-inner {

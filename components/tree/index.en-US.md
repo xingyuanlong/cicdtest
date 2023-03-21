@@ -79,13 +79,15 @@ Almost anything can be represented in a tree structure. Examples include directo
 | selectable | Set whether the treeNode can be selected | boolean | true |  |
 | style | style | string\|object | - |  |
 | title | Title | string | '---' |  |
+| hideOperation | Whether hide extra operation | boolean | false | 1.0.25 |
+
 
 ### TreeNodeOperation
 
 | Property | Description | Type | Default | Version |
 | --- | --- | --- | --- | --- |
 | title | Operation title | string | - | 1.0.18 |
-| onClick | Callback function for when the user clicks operation  | (key?: string \| number, record?: DataNode) => void | - | 1.0.18 |
+| onClick | Callback function for when the user clicks operation  | (key?: string \| number, record?: DataNode) => void | - | 1.0.25 |
 | isDisabled | whether disabled the operation | (key?: string \| number) => boolean | - | 1.0.18 |
 
 ### DirectoryTree props

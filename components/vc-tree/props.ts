@@ -1,4 +1,4 @@
-import type { ExtractPropTypes, PropType, Ref } from 'vue';
+import type { ExtractPropTypes, PropType } from 'vue';
 import type { BasicDataNode } from '.';
 import type { EventHandler } from '../_util/EventInterface';
 import PropTypes from '../_util/vue-types';
@@ -55,6 +55,8 @@ export const treeNodeProps = {
   icon: PropTypes.any,
   switcherIcon: PropTypes.any,
   domRef: { type: Function as PropType<(arg: any) => void> },
+  ellipsis: { type: Boolean, default: undefined },
+  ellipsisTitle: { type: String, default: undefined }
 };
 
 export type TreeNodeProps = Partial<ExtractPropTypes<typeof treeNodeProps>>;
@@ -119,6 +121,7 @@ export const treeProps = () => ({
   children: PropTypes.any,
   treeData: { type: Array as PropType<DataNode[]> }, // Generate treeNode by children
   fieldNames: { type: Object as PropType<FieldNames> },
+  ellipsis: { type: Boolean, default: undefined },
   showLine: {
     type: [Boolean, Object] as PropType<boolean | { showLeafIcon: boolean }>,
     default: undefined,
@@ -246,8 +249,7 @@ export const treeProps = () => ({
   virtual: { type: Boolean, default: undefined },
 
   // direction for drag logic
-  direction: { type: String as PropType<Direction> },
-  operationVisibleKey: { type: Object as PropType<Ref<any>> }
+  direction: { type: String as PropType<Direction> }
 });
 
 export type TreeProps = Partial<ExtractPropTypes<ReturnType<typeof treeProps>>>;

@@ -3,6 +3,7 @@
 @import './size';
 @import './bordered';
 @import './resize.less';
+@import '../../style/mixins/scrollbar';
 
 @table-prefix-cls: ~'@{ant-prefix}-table';
 @tree-prefix-cls: ~'@{ant-prefix}-tree';
@@ -782,6 +783,14 @@
       transition: box-shadow 0.3s;
       content: '';
       pointer-events: none;
+    }
+
+    > .@{table-prefix-cls}-content {
+      .scrollbar()
+    }
+
+    > .@{table-prefix-cls}-body {
+      .scrollbar()
     }
 
     &::before {
