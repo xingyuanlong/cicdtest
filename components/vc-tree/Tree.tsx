@@ -74,7 +74,8 @@ export default defineComponent({
     defaultSelectedKeys: [],
     dropIndicatorRender: DropIndicator,
     allowDrop: () => true,
-    ellipsis: false
+    ellipsis: false,
+    getEllipsisPopupContainer: triggerNode => triggerNode
   }),
 
   setup(props, { attrs, slots, expose }) {
@@ -1110,7 +1111,8 @@ export default defineComponent({
         onContextmenu,
         onScroll,
         direction,
-        ellipsis
+        ellipsis,
+        getEllipsisPopupContainer
       } = props;
 
       const { class: className, style } = attrs;
@@ -1143,6 +1145,7 @@ export default defineComponent({
             showIcon,
             icon,
             ellipsis,
+            getEllipsisPopupContainer,
             switcherIcon,
             draggable: draggableConfig,
             draggingNodeKey,

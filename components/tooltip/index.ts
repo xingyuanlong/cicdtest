@@ -1,5 +1,5 @@
 import ToolTip, { tooltipProps } from './Tooltip';
-import TooltipTableEllipsis from './TooltipTableEllipsis';
+import TooltipEllipsis from './PfTooltipEllipsis';
 import type { App } from 'vue';
 
 export type {
@@ -10,12 +10,14 @@ export type {
   TooltipPlacement,
 } from './Tooltip';
 
-export { tooltipProps };
+export { tooltipProps, TooltipEllipsis };
+
+ToolTip.TooltipEllipsis = TooltipEllipsis;
 
 export default Object.assign(ToolTip, {
   install: (app: App) => {
     app.component(ToolTip.name, ToolTip);
-    app.component(TooltipTableEllipsis.name, TooltipTableEllipsis);
+    app.component(TooltipEllipsis.name, TooltipEllipsis);
     return app;
   },
 });

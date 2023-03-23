@@ -122,6 +122,7 @@ export const treeProps = () => ({
   treeData: { type: Array as PropType<DataNode[]> }, // Generate treeNode by children
   fieldNames: { type: Object as PropType<FieldNames> },
   ellipsis: { type: Boolean, default: undefined },
+  getEllipsisPopupContainer: Function as PropType<(triggerNode: HTMLElement) => HTMLElement>,
   showLine: {
     type: [Boolean, Object] as PropType<boolean | { showLeafIcon: boolean }>,
     default: undefined,

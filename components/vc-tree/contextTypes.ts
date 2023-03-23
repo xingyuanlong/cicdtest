@@ -65,6 +65,7 @@ export interface TreeContextProps {
   dragging: boolean;
   direction: Direction;
   ellipsis?: boolean;
+  getEllipsisPopupContainer?: (triggerNode: HTMLElement) => HTMLElement;
 
   loadData: (treeNode: EventDataNode) => Promise<void>;
   filterTreeNode: (treeNode: EventDataNode) => boolean;

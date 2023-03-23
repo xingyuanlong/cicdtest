@@ -14,6 +14,7 @@
     <accordion />
     <operation />
     <CustomOperation />
+    <ComplexCustomOperation />
     <Ellipsis />
   </demo-sort>
 </template>
@@ -32,6 +33,7 @@ import VirtualScroll from './virtual-scroll.vue';
 import Accordion from './accordion.vue';
 import Operation from './operation.vue'
 import CustomOperation from './operation-custom.vue'
+import ComplexCustomOperation from './operation-custom-complex.vue'
 import Ellipsis from './ellipsis.vue';
 import CN from '../index.zh-CN.md';
 import US from '../index.en-US.md';
@@ -55,7 +57,8 @@ export default defineComponent({
     Accordion,
     Operation,
     CustomOperation,
-    Ellipsis
+    Ellipsis,
+    ComplexCustomOperation
   },
   setup() {
     return {};

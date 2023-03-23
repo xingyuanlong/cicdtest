@@ -15,7 +15,6 @@ export default defineComponent({
     return () => (
       <ToolTip
         placement="top"
-        title="1"
         {...props}
         overlayClassName={classNames(`${prefixCls.value}-ellipsis`, props.overlayClassName)}
         v-slots={{

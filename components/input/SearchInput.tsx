@@ -1,4 +1,5 @@
 import classNames from '../_util/classNames';
+import type { PropType } from 'vue';
 import { isValidElement } from '../_util/props-util';
 import { cloneElement } from '../_util/vnode';
 import Input from './Input';
@@ -25,6 +26,11 @@ export default defineComponent({
     action: { type: String, default: 'click' },
     visibilityToggle: { type: Boolean, default: true },
     iconRender: Function,
+    onSearch: {
+      type: Function as PropType<
+        (value: string, event?: ChangeEvent | MouseEvent | KeyboardEvent) => void
+      >,
+    },
   },
   setup(props, { slots, attrs, expose, emit }) {
     const visible = ref(false);

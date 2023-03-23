@@ -17,7 +17,7 @@ import { warning } from '../vc-util/warning';
 import type { DragNodeEvent, Key } from './interface';
 import pickAttrs from '../_util/pickAttrs';
 import eagerComputed from '../_util/eagerComputed';
-import TooltipTableEllipsis from '../tooltip/TooltipTableEllipsis'
+import PfTooltipEllipsis from '../tooltip/PfTooltipEllipsis'
 
 const ICON_OPEN = 'open';
 const ICON_CLOSE = 'close';
@@ -454,6 +454,7 @@ export default defineComponent({
         showIcon,
         icon: treeIcon,
         loadData,
+        getEllipsisPopupContainer,
         // slots: contextSlots,
       } = context.value;
       const disabled = isDisabled.value;
@@ -493,13 +494,13 @@ export default defineComponent({
         ? (
           <div class={`${prefixCls}-node-title-ellipsis`}>
             <div class={`${prefixCls}-node-title-ellipsis-container`}>
-              <TooltipTableEllipsis
+              <PfTooltipEllipsis
                 title={data?.ellipsisTitle || titleNode}
-                getPopupContainer={triggerNode => triggerNode}
+                getPopupContainer={getEllipsisPopupContainer}
                 overlayClassName={`${prefixCls}-node-title-ellipsis-tooltip`}
               >
                 {titleNode}
-              </TooltipTableEllipsis>
+              </PfTooltipEllipsis>
             </div>
           </div>
         )
