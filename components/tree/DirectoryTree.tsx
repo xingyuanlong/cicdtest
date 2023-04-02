@@ -25,6 +25,7 @@ export type ExpandAction = false | 'click' | 'doubleclick' | 'dblclick';
 export const directoryTreeProps = () => ({
   ...treeProps(),
   expandAction: { type: [Boolean, String] as PropType<ExpandAction> },
+  selectExpand: Boolean
 });
 
 export type DirectoryTreeProps = Partial<ExtractPropTypes<ReturnType<typeof directoryTreeProps>>>;
@@ -43,6 +44,7 @@ export default defineComponent({
   props: initDefaultProps(directoryTreeProps(), {
     showIcon: true,
     expandAction: 'click',
+    selectExpand: true
   }),
   slots: ['icon', 'title', 'switcherIcon', 'titleRender'],
   // emits: [
@@ -169,10 +171,10 @@ export default defineComponent({
     };
 
     const onClick = (event: MouseEvent, node: EventDataNode) => {
-      const { expandAction } = props;
+      const { expandAction, selectExpand } = props;
 
       // Expand the tree
-      if (expandAction === 'click') {
+      if (expandAction === 'click' && selectExpand) {
         onDebounceExpand(event, node);
       }
       emit('click', event, node);
